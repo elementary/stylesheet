@@ -382,6 +382,8 @@ style "nautilus-sidebar-title"
 	fg[PRELIGHT]	        = shade (2.00, @text_color)
 	bg[PRELIGHT]       	= shade (1.27, @selected_bg_color)
 
+	stock["gtk-close"] = {{ "Others/null.png", *, *, * }}
+
 	font_name 	                  = "Bold"
 
 	GtkExpander::expander_spacing             = 0
@@ -614,4 +616,3 @@ widget_class "*Eog*Toolbar*"              	style "eog-toolbar"
 widget_class "*Eog*Menu*"               	style "murrine-menu"
 widget_class "Eog*Statusbar*"                   style "eog-statusbar"
 widget "Eog*Statusbar*.*"                       style "eog-statusbar"
-
