@@ -1,0 +1,128 @@
+
+  ###############################################################
+  #								#
+  #		eGTK by elementary Artist Team			#
+  #		Author Daniel.P.Fore@gmail.com			#
+  #	 Participated Erno Horvath szerencsefia@gmail.com	#
+  #								#
+  ###############################################################
+
+#################### LAUNCHER FIXING ##########################
+style "launcherfix"
+{
+  xthickness = 1
+  ythickness = 1
+
+  bg_pixmap[NORMAL] = "Panel/empty.png"
+}
+#################### PANEL BACKGROUND #########################
+style "panelbg"
+{
+  xthickness = 0
+  ythickness = 0
+
+  bg_pixmap[NORMAL]		= "Panel/panel.png"
+  bg_pixmap[INSENSITIVE]	= "Panel/panel.png"
+  bg_pixmap[PRELIGHT]		= "Panel/panel.png"
+  bg_pixmap[SELECTED]		= "Panel/panel.png"
+  bg_pixmap[ACTIVE]		= "Panel/panel.png"
+}
+###############################################################
+style "panelbuttons"
+{
+  xthickness	= 2
+  ythickness	= 3
+
+  GtkWidget::focus_padding = 2
+
+  engine "pixmap"
+    {
+	image
+	{
+	function	= BOX
+	recolorable	= TRUE
+	state		= NORMAL
+	file		= "Panel/panel-menubar.png"
+	border		= { 4, 4, 4, 4 }
+	stretch		= TRUE
+	}
+	image
+	{
+	function	= BOX
+	recolorable	= TRUE
+	state		= INSENSITIVE
+	file		= "Panel/panel-menubar.png"
+	border		= { 4, 4, 4, 4 }
+	stretch		= TRUE
+	}  
+    }
+}
+###############################################################
+style "panelbar"
+{
+  fg[NORMAL]	= "#ABABAB"	# inactive text
+  fg[PRELIGHT]	= "#FFFFFF"	# hover text
+  fg[SELECTED]	= "#000000"	# selected text
+
+  engine "pixmap"
+    {
+	image
+	{
+	function	= BOX
+	state		= NORMAL
+	file		= "Panel/empty.png"
+	border		= { 1, 1, 1, 1}
+	stretch		= TRUE
+	}
+	image
+	{
+	function	= BOX
+	state		= ACTIVE
+	file		= "Panel/panel.png"
+	border		= { 1, 1, 1, 1}
+	stretch		= FALSE
+	}
+	image
+	{
+	function	= BOX
+	state		= INSENSITIVE
+	file		= "Panel/panel.png"
+	border		= { 1, 1, 1, 1}
+	stretch		= FALSE
+	}
+    }
+}
+###############################################################
+class "*Panel*" 			style "launcherfix"
+
+class "*notif*"				style "panelbg"
+class "*Notif*"				style "panelbg"
+class "*tray*"				style "panelbg"
+class "*Tray*"				style "panelbg"
+class "*net*"				style "panelbg"
+class "*Net*"				style "panelbg"
+class "*BonoboDockItem"			style "panelbg"
+class "*Panel*Applet*" 			style "panelbg"
+
+widget "*PanelApplet*"			style "panelbg"
+widget "*PanelWidget*"			style "panelbg"
+widget "*TrayIcon*"			style "panelbg"
+widget "*fast-user-switch*" 		style "panelbg"
+
+widget_class "*PanelToplevel*" 		style "panelbg"
+widget_class "*Mail*"			style "panelbg"
+widget_class "*notif*"			style "panelbg"
+widget_class "*Notif*"			style "panelbg"
+widget_class "*tray*"			style "panelbg"
+widget_class "*Tray*"			style "panelbg"
+widget_class "*BonoboDockItem"		style "panelbg"
+widget_class "*Panel*GtkButton"		style "panelbg"
+widget_class "*.Panel*Button*GtkLabel"	style "panelbg"
+widget_class "*.Panel*GtkLabel"		style "panelbg"
+widget_class "*Netstatus*"		style "panelbg"
+widget_class "*Tomboy*Tray*"		style "panelbg"
+widget_class "*PanelApplet*"		style "panelbg"
+widget_class "*PanelWidget*"		style "panelbg"
+widget_class "*Panel*MenuBar*"		style "panelbar"
+
+widget_class "*Panel*GtkToggleButton"	style "panelbuttons"
