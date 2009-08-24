@@ -127,7 +127,7 @@ style "murrine-entry" = "murrine-wider"
 {
 	xthickness = 4
 }
-style "murrine-notebook"
+style "murrine-notebook" = "murrine-default"
 {
   bg[NORMAL]	= shade (1.0615, @bg_color)		# selected tab entire
   bg[ACTIVE]	= shade (0.85, @bg_color)		# unselected tab
@@ -607,6 +607,7 @@ widget_class "*NautilusSidePane.*"              style "nautilus-sidebar-title"
 widget_class "*Nautilus*Places*Sidebar*"        style "nautilus-sidebar"
 widget_class "*Nautilus*Side*.GtkWidget"        style "nautilus-sidebar"
 widget_class "*Nautilus*Side*Title*"            style "nautilus-sidebar-title"
+widget_class "*Nautilus*Notebook"    		style "murrine-notebook"
 
 ##################################
 # EOG
