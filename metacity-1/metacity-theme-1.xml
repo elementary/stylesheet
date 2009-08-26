@@ -18,7 +18,7 @@
 	<aspect_ratio name="button" value="1.0"/>
 	<distance name="title_vertical_pad" value="0"/>
 	<border name="title_border" left="20" right="2" top="4" bottom="3"/>
-	<border name="button_border" left="1" right="1" top="4" bottom="0"/>
+	<border name="button_border" left="1" right="1" top="3" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="shaded" parent="normal" rounded_top_left="true" rounded_top_right="true" rounded_bottom_left="false" rounded_bottom_right="false"/>
