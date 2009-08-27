@@ -281,8 +281,8 @@ style "murrine-vscrollbar"
 
 style "murrine-menubar"
 {
-	bg[NORMAL]        = @bg_color
-	fg[NORMAL] = "#3E3E3E"
+	bg[NORMAL]	= @bg_color
+	fg[NORMAL] 	= @fg_color
 
 }
 
@@ -306,12 +306,12 @@ style "eog-window-base"
 	xthickness              = 0
 	ythickness              = 0
 
-	bg[NORMAL]		= shade (0.4, @bg_color)
-	fg[NORMAL]              = shade (2.0, @fg_color)
-	fg[PRELIGHT]            = shade (2.0, @fg_color)
-	fg[SELECTED]            = shade (2.0, @fg_color)
-	fg[ACTIVE]              = shade (2.0, @fg_color)
-	fg[INSENSITIVE]         = shade (2.0, @fg_color)
+	bg[NORMAL]		= "#434241"
+	fg[NORMAL]              = "#D6D6D6"
+	fg[PRELIGHT]            = "#D6D6D6"
+	fg[SELECTED]            = "#D6D6D6"
+	fg[ACTIVE]              = "#D6D6D6"
+	fg[INSENSITIVE]         = "#D6D6D6"
 
 	GtkScrolledWindow::scrollbar-spacing  = 0
 	GtkWidget::shadow_type                    = GTK_SHADOW_NONE
