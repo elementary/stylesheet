@@ -27,7 +27,7 @@
 	<!-- strip frame spacing off the normal geometry when maximised -->
 	<distance name="left_width" value="0"/>
 	<distance name="right_width" value="0"/>
-	<distance name="bottom_height" value="0"/>
+	<distance name="bottom_height" value="1"/>
 	<distance name="left_titlebar_edge" value="1"/>
 	<distance name="right_titlebar_edge" value="1"/>
 </frame_geometry>
@@ -99,11 +99,17 @@
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="height-1" x2="width" y2="height-1"/>
 </draw_ops>
 
+<draw_ops name="maxed_border">
+	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="0" x2="width" y2="0"/>
+	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="height-1" x2="width" y2="height-1"/>
+</draw_ops>
+
 <!-- ::: BEVEL ::: -->
 <draw_ops name="bevel">
 </draw_ops>
 
 <draw_ops name="bevel_maximized">
+	<include name="maxed_border"/>
 </draw_ops>
 
 <draw_ops name="round_bevel">
