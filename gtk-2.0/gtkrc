@@ -16,7 +16,7 @@ style "murrine-default"
 	GtkPaned       ::handle-size          = 6
 
 	GtkRange       ::trough-border		= 1
-	GtkRange       ::slider-width		= 13
+	GtkRange       ::slider-width		= 14
 	GtkRange       ::stepper-size		= 13
 
 	GtkScale       ::slider-length		= 15
@@ -271,6 +271,22 @@ style "murrine-scrollbar"
 
 }
 
+style "aurora-scrollbar"
+{
+	engine "aurora"
+	{
+		curvature	= 6.0
+	}
+     	ythickness              = 0
+	xthickness              = 0
+	GtkWidget::draw-border  = {0,0,0,0}
+	bg[ACTIVE]              = shade (1.3, @bg_color) #trough color
+	bg[NORMAL]              = shade(0.95, @selected_bg_color)
+	bg[PRELIGHT]            = @selected_bg_color
+	# Arrows
+	text[NORMAL]            = shade (0.4, @bg_color)
+}
+
 style "murrine-hscrollbar"
 {
 }
@@ -336,6 +352,22 @@ style "eog-statusbar"
             gradients = TRUE
             gradient_shades = {1.5,1.0,1.0,0.5}
       }	
+}
+
+style "eog-scrollbar"
+{
+	engine "aurora"
+	{
+		curvature	= 6.0
+	}
+     	ythickness              = 0
+	xthickness              = 0
+	GtkWidget::draw-border  = {0,0,0,0}
+	bg[ACTIVE]              = "#4D4B4A" #trough color
+	bg[NORMAL]              = shade(0.95, @selected_bg_color)
+	bg[PRELIGHT]            = @selected_bg_color
+	# Arrows
+	text[NORMAL]            = "#D6D6D6"
 }
 
 ############
@@ -482,7 +514,7 @@ class "GtkSpinButton"  				style "murrine-spinbutton"
 class "GtkScale"       				style "murrine-scale"
 class "GtkVScale"      				style "murrine-vscale"
 class "GtkHScale"      				style "murrine-hscale"
-class "GtkScrollbar"   				style "murrine-scrollbar"
+class "GtkScrollbar"   				style "aurora-scrollbar"
 class "GtkVScrollbar"  				style "murrine-vscrollbar"
 class "GtkHScrollbar"  				style "murrine-hscrollbar"
 
@@ -608,6 +640,7 @@ widget_class "*Nautilus*Places*Sidebar*"        style "nautilus-sidebar"
 widget_class "*Nautilus*Side*.GtkWidget"        style "nautilus-sidebar"
 widget_class "*Nautilus*Side*Title*"            style "nautilus-sidebar-title"
 widget_class "*Nautilus*Notebook"    		style "murrine-notebook"
+widget_class "*Nautilus*Scrollbar"   		style "aurora-scrollbar"
 
 ##################################
 # EOG
@@ -617,3 +650,4 @@ widget_class "*Eog*Toolbar*"              	style "eog-toolbar"
 widget_class "*Eog*Menu*"               	style "murrine-menu"
 widget_class "Eog*Statusbar*"                   style "eog-statusbar"
 widget "Eog*Statusbar*.*"                       style "eog-statusbar"
+widget_class "Eog*Scrollbar"           		style "eog-scrollbar"
