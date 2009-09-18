@@ -335,7 +335,7 @@ style "eog-window-base"
 	GtkScrolledWindow::shadow_type            = GTK_SHADOW_NONE	
 }
 
-style "eog-toolbar" = "murrine-toolbar"
+style "eog-toolbar" = "murrine-default"
 {
 	xthickness              = 2
 	ythickness              = 2
