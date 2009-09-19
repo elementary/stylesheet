@@ -99,6 +99,12 @@ style "elementary-dark"
 	fg[PRELIGHT]            = "#D6D6D6"
 }
 
+style "murrine-thin"
+{
+	xthickness = 0
+	ythickness = 0
+}
+
 style "murrine-wide" = "murrine-default"
 {
 	xthickness = 2
@@ -148,9 +154,6 @@ style "murrine-tasklist" = "murrine-wide"
 style "murrine-menu" = "murrine-wide"
 {
 
-	xthickness = 2
-	ythickness = 2
-
 	fg[PRELIGHT]		= @selected_fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
@@ -162,11 +165,8 @@ style "murrine-menu" = "murrine-wide"
 	}
 }
 
-style "murrine-menu-item" = "murrine-wider"
+style "murrine-menu-item" = "murrine-wide"
 {
-	xthickness = 2
-	ythickness = 2
-
 	fg[PRELIGHT] = @selected_fg_color
 	bg[SELECTED] = shade (0.98, @selected_bg_color)
 
@@ -218,11 +218,8 @@ style "murrine-tooltips" = "murrine-wider"
 	fg[NORMAL] = @tooltip_fg_color
 }
 
-style "murrine-progressbar"
+style "murrine-progressbar" = "murrine-thin"
 {
-	xthickness = 0
-	ythickness = 0
-
 	fg[PRELIGHT] = lighter (@selected_fg_color)
   	bg[NORMAL]   = shade (0.98, @bg_color)
 	bg[SELECTED] = @selected_bg_color
@@ -277,20 +274,17 @@ style "murrine-scrollbar"
 
 }
 
-style "aurora-scrollbar"
+style "aurora-scrollbar" = "murrine-thin"
 {
 	engine "aurora"
 	{
 		curvature	= 6.0
 	}
-     	ythickness              = 0
-	xthickness              = 0
 	GtkWidget::draw-border  = {0,0,0,0}
-	bg[ACTIVE]              = shade (1.3, @bg_color) #trough color
+	bg[ACTIVE]              = shade (1.3, @bg_color)	# Trough color
 	bg[NORMAL]              = shade(0.95, @selected_bg_color)
 	bg[PRELIGHT]            = @selected_bg_color
-	# Arrows
-	text[NORMAL]            = shade (0.4, @bg_color)
+	text[NORMAL]            = shade (0.4, @bg_color)	# Arrow Color
 }
 
 style "murrine-hscrollbar"
@@ -342,13 +336,7 @@ style "eog-statusbar"
 {
 	xthickness                    = 6
 	ythickness                    = 4
-	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE
-      engine "murrine"
-      {
-            contrast = 1.1
-            gradients = TRUE
-            gradient_shades = {1.5,1.0,1.0,0.5}
-      }	
+	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
 }
 
 style "eog-scrollbar" = "aurora-scrollbar"
@@ -401,7 +389,7 @@ style "nautilus-sidebar-title"
 	fg[PRELIGHT]	        = shade (2.00, @text_color)
 	bg[PRELIGHT]       	= shade (1.27, @selected_bg_color)
 
-	stock["gtk-close"] = {{ "Others/null.png", *, *, * }}
+	stock["gtk-close"] = {{ "Others/null.png", *, *, * }} # Get rid of the close icon
 
 	font_name 	                  = "Bold"
 
@@ -437,7 +425,7 @@ style "nautilus-sidebar-title"
                 border        = {0,0,0,0}
                 stretch       = TRUE
                 recolorable   = TRUE
-		    file		= "Others/arrow-d.png" # this has to be 9x9 pixels, arrow down
+		    file		= "Others/arrow-d.png" # this should be 9x9 pixels, arrow down
 		}
 	}
 }
