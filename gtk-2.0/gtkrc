@@ -92,12 +92,20 @@ style "murrine-default"
 	}
 }
 
-style "murrine-wide"
+style "elementary-dark"
+{
+	bg[NORMAL]		= "#434241"
+	fg[NORMAL]              = "#D6D6D6"
+	fg[PRELIGHT]            = "#D6D6D6"
+}
+
+style "murrine-wide" = "murrine-default"
 {
 	xthickness = 2
 	ythickness = 2
 
-	bg[SELECTED]	= @selected_bg_color
+	bg[NORMAL]		= @bg_color
+	bg[SELECTED]		= @selected_bg_color
 }
 
 style "murrine-wider"
@@ -105,7 +113,7 @@ style "murrine-wider"
 	xthickness = 3
 	ythickness = 3
 
-	bg[SELECTED]	= @selected_bg_color
+	bg[SELECTED]		= @selected_bg_color
 }
 
 style "murrine-button" = "murrine-wider"
@@ -137,18 +145,16 @@ style "murrine-tasklist" = "murrine-wide"
 {
 }
 
-style "murrine-menu" = "murrine-wider"
+style "murrine-menu" = "murrine-wide"
 {
 
 	xthickness = 2
 	ythickness = 2
 
-	bg[NORMAL] = shade (1.0, @bg_color)
-	fg[NORMAL]        = @fg_color
-	fg[PRELIGHT]      = @fg_color
-	fg[SELECTED]      = @selected_fg_color
-	fg[ACTIVE]        = @fg_color
-	fg[INSENSITIVE]   = darker (@bg_color)
+	fg[PRELIGHT]		= @selected_fg_color
+	fg[SELECTED]		= @selected_fg_color
+	fg[ACTIVE]		= @fg_color
+	fg[INSENSITIVE]		= darker (@bg_color)
 
 	engine "murrine" {
 		glazestyle = 0
@@ -317,14 +323,11 @@ style "murrine-radiocheck" = "murrine-default"
 # EOG (Eye of Gnome) #
 ######################
 
-style "eog-window-base"
+style "eog-window-base" = "elementary-dark"
 {
 	xthickness              = 0
 	ythickness              = 0
 
-	bg[NORMAL]		= "#434241"
-	fg[NORMAL]              = "#D6D6D6"
-	fg[PRELIGHT]            = "#D6D6D6"
 	fg[SELECTED]            = "#D6D6D6"
 	fg[ACTIVE]              = "#D6D6D6"
 	fg[INSENSITIVE]         = "#D6D6D6"
@@ -333,12 +336,6 @@ style "eog-window-base"
 	GtkWidget::shadow_type                    = GTK_SHADOW_NONE
 	GtkWidget::draw_border                    = {0,0,0,0}
 	GtkScrolledWindow::shadow_type            = GTK_SHADOW_NONE	
-}
-
-style "eog-toolbar" = "murrine-default"
-{
-	xthickness              = 2
-	ythickness              = 2
 }
 
 style "eog-statusbar"
@@ -354,20 +351,10 @@ style "eog-statusbar"
       }	
 }
 
-style "eog-scrollbar"
+style "eog-scrollbar" = "aurora-scrollbar"
 {
-	engine "aurora"
-	{
-		curvature	= 6.0
-	}
-     	ythickness              = 0
-	xthickness              = 0
-	GtkWidget::draw-border  = {0,0,0,0}
-	bg[ACTIVE]              = "#4D4B4A" #trough color
-	bg[NORMAL]              = shade(0.95, @selected_bg_color)
-	bg[PRELIGHT]            = @selected_bg_color
-	# Arrows
-	text[NORMAL]            = "#D6D6D6"
+	bg[ACTIVE]		= "#666362"	# Trough color
+	text[NORMAL]            = "#D6D6D6"	# Arrow color
 }
 
 ############
@@ -646,7 +633,7 @@ widget_class "*Nautilus*Scrollbar"   		style "aurora-scrollbar"
 # EOG
 ##################################
 widget_class "*Eog*Window*"			style "eog-window-base"
-widget_class "*Eog*Toolbar*"              	style "eog-toolbar"
+widget_class "*Eog*Toolbar*"              	style "murrine-wide"
 widget_class "*Eog*Menu*"               	style "murrine-menu"
 widget_class "Eog*Statusbar*"                   style "eog-statusbar"
 widget "Eog*Statusbar*.*"                       style "eog-statusbar"
