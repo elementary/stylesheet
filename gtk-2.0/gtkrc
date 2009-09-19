@@ -94,6 +94,7 @@ style "murrine-default"
 
 style "elementary-dark"
 {
+	base[NORMAL]		= "#434241"
 	bg[NORMAL]		= "#434241"
 	fg[NORMAL]              = "#D6D6D6"
 	fg[PRELIGHT]            = "#D6D6D6"
@@ -287,6 +288,13 @@ style "aurora-scrollbar" = "murrine-thin"
 	text[NORMAL]            = shade (0.4, @bg_color)	# Arrow Color
 }
 
+style "aurora-scrollbar-dark" = "aurora-scrollbar"
+{
+	bg[ACTIVE]		= "#666362"	# Trough color
+	text[NORMAL]            = "#D6D6D6"	# Arrow color
+}
+
+
 style "murrine-hscrollbar"
 {
 }
@@ -338,11 +346,31 @@ style "eog-statusbar"
 	ythickness                    = 4
 	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
 }
+##########
+# F-Spot #
+##########
 
-style "eog-scrollbar" = "aurora-scrollbar"
+style "fspot-query"
 {
-	bg[ACTIVE]		= "#666362"	# Trough color
-	text[NORMAL]            = "#D6D6D6"	# Arrow color
+	fg[NORMAL]		= "#ffffff"#shade (1.00, @bg_color)
+	bg[SELECTED]	= "#d9d9d9"
+	text[NORMAL]	= "#ffffff"
+}
+
+style "fspot-single-sidebar-image"
+{
+	base[NORMAL]	= shade (0.8, @bg_color)
+}
+
+style "fspot-sidebar-meta"
+{
+	bg[NORMAL]	= shade (0.8, @bg_color)
+}
+
+style "area"
+{
+	bg[NORMAL]	= "#5d5d5d"
+	#timepanel settings here
 }
 
 ############
@@ -625,4 +653,20 @@ widget_class "*Eog*Toolbar*"              	style "murrine-wide"
 widget_class "*Eog*Menu*"               	style "murrine-menu"
 widget_class "Eog*Statusbar*"                   style "eog-statusbar"
 widget "Eog*Statusbar*.*"                       style "eog-statusbar"
-widget_class "Eog*Scrollbar"           		style "eog-scrollbar"
+widget_class "Eog*Scrollbar"           		style "aurora-scrollbar-dark"
+
+##################################
+# F-SPOT
+##################################
+
+#widget	"main_window*QueryWidget"						style "fspot-query"
+#widget	"main_window*Widgets_Filmstrip"						style "fspot-query"
+widget	"main_window*ImageContainer"						style "elementary-dark"
+#widget	"main_window"								style "area"
+#widget	"FullscreenContainer*"							style "theme-dark"
+#widget	"FullscreenContainer*utton*"						style "theme-dark-button"
+#widget	"FullscreenContainer*utton*"						style "theme-dark-button-separator"
+#widget "main_window*croll?ar"       						style "aurora-scrollbar-dark"
+#widget	"*FSpot_Widgets_Sidebar*FSpot_Widgets_MetadataDisplayWidget*"		style "fspot-sidebar-meta"
+#widget	"*FSpot_Widgets_Sidebar*FSpot_Widgets_MetadataDisplayWidget*croll?ar*"	style "aurora-scrollbar-dark"
+#widget	"single_view*FSpot_Widgets_Sidebar*ImageContainer*"			style "fspot-single-sidebar-image"
