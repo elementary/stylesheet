@@ -3,7 +3,7 @@
 gtk_color_scheme = "base_color:#F7F9FA\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#f2f2f2"
 
 # Panel customization
-include "panel.rc"
+#include "panel.rc"
 
 style "murrine-default"
 {
@@ -321,9 +321,9 @@ style "murrine-radiocheck" = "murrine-default"
   base[NORMAL]	= @selected_fg_color			# enabled background
 }
 
-######################
-# EOG (Eye of Gnome) #
-######################
+
+
+################### EOG (Eye of Gnome) #################
 
 style "eog-window-base" = "elementary-dark"
 {
@@ -347,9 +347,7 @@ style "eog-statusbar"
 	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
 }
 
-############
-# Nautilus #
-############
+####################### Nautilus #######################
 
 style "nautilus-sidebar" {
 	
@@ -467,6 +465,46 @@ style "smaller-text"
 
 style "handle"
 {
+}
+
+
+###################### GNOME PANEL ######################
+
+style "panel-launcherfix"
+{
+  xthickness = 1
+  ythickness = 1
+
+  bg_pixmap[NORMAL] = "Panel/empty.png"
+}
+
+style "panel-bg" #= "elementary-dark"
+{
+  xthickness = 0
+  ythickness = 0
+
+  bg_pixmap[NORMAL]		= "Panel/panel.png"
+  bg_pixmap[INSENSITIVE]	= "Panel/panel.png"
+  bg_pixmap[PRELIGHT]		= "Panel/panel.png"
+  bg_pixmap[SELECTED]		= "Panel/panel.png"
+  bg_pixmap[ACTIVE]		= "Panel/panel.png"
+
+}
+
+style "panel-buttons"
+{
+  xthickness	= 2
+  ythickness	= 3
+
+  GtkWidget::focus_padding = 2
+}
+
+style "panel-bar"
+{
+#  fg[NORMAL]	= "#D6D6D6"	# inactive text
+  fg[PRELIGHT]	= "#FFFFFF"	# hover text
+  fg[SELECTED]	= "#FFFFFF"	# selected text
+  fg[ACTIVE]	= "#FFFFFF"	# selected text
 }
 
 ###########
@@ -634,3 +672,51 @@ widget_class "Eog*Scrollbar"           		style "aurora-scrollbar-dark"
 ##################################
 
 widget	"main_window*ImageContainer"						style "elementary-dark"
+
+##################################
+# Gnome Panel
+##################################
+
+class "*Panel*" 			style "panel-launcherfix"
+
+class "*notif*"				style "panel-bg"
+class "*Notif*"				style "panel-bg"
+class "*tray*"				style "panel-bg"
+class "*Tray*"				style "panel-bg"
+class "*net*"				style "panel-bg"
+class "*Net*"				style "panel-bg"
+class "*BonoboDockItem"			style "panel-bg"
+class "*Panel*Applet*" 			style "panel-bg"
+class "PanelApp*"			style "panel-bg"
+class "PanelToplevel*"			style "panel-bg"
+
+widget "*PanelApplet*"			style "panel-bg"
+widget "*PanelWidget*"			style "panel-bg"
+widget "*TrayIcon*"			style "panel-bg"
+widget "*fast-user-switch*" 		style "panel-bg" # Workaround for Fast User Switch applet
+widget "*TomboyTray*"			style "panel-bg" # Workaround for Tomboy
+widget "*TomboyApplet*"			style "panel-bg"
+
+widget_class "*PanelToplevel*" 		style "panel-bg"
+widget_class "*Mail*"			style "panel-bg"
+widget_class "*notif*"			style "panel-bg"
+widget_class "*Notif*"			style "panel-bg"
+widget_class "*tray*"			style "panel-bg"
+widget_class "*Tray*"			style "panel-bg"
+widget_class "*BonoboDockItem"		style "panel-bg"
+widget_class "*Panel*GtkButton"		style "panel-bg"
+widget_class "*.Panel*Button*GtkLabel"	style "panel-bg"
+widget_class "*.Panel*GtkLabel"		style "panel-bg"
+widget_class "*Netstatus*"		style "panel-bg"
+widget_class "*Tomboy*Tray*"		style "panel-bg"
+widget_class "*PanelApplet*"		style "panel-bg"
+widget_class "*PanelWidget*"		style "panel-bg"
+widget_class "*Panel*MenuBar*"		style "panel-bar"
+widget_class "*Panel*<GtkMenuBar>*"	style:highest "panel-bar"
+
+widget_class "*Panel*GtkToggleButton"	style "panel-buttons"
+
+##################################
+# XFCE Panel
+##################################
+widget_class "*Xfce*Panel*" 		style "panel-bg"
