@@ -68,7 +68,7 @@ style "murrine-default"
 	{
 		animation           = TRUE
 		colorize_scrollbar  = TRUE
-		contrast            = 1.05   # 0.8 for less contrast, more than 1.0 for more contrast on borders
+		contrast            = 1.1   # 0.8 for less contrast, more than 1.0 for more contrast on borders
 		glazestyle          = 0     # 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
 		gradient_shades     = {1.15,1.05,1.04,0.9} # default: {1.1,1.0,1.0,1.1}
 		gradients           = TRUE  # FALSE = disabled, TRUE = enabled
@@ -144,8 +144,10 @@ style "murrine-entry" = "murrine-wider"
 }
 style "murrine-notebook" = "murrine-default"
 {
-  bg[NORMAL]	= shade (1.0615, @bg_color)		# selected tab entire
-  bg[ACTIVE]	= shade (0.85, @bg_color)		# unselected tab
+	stock["gtk-close"]	= {{ "Tabs/close.png", *, *, * }}	# Prettier Close icon
+
+	bg[NORMAL]		= shade (1.0615, @bg_color)		# selected tab entire
+	bg[ACTIVE]		= shade (0.85, @bg_color)		# unselected tab
 }
 
 style "murrine-tasklist" = "murrine-wide"
@@ -323,6 +325,43 @@ style "murrine-radiocheck" = "murrine-default"
 
 
 
+
+#####################################################
+#Notebook
+####################################################
+
+style "notebook-inverse" = "murrine-notebook"
+{
+
+	xthickness = 0
+	ythickness = 0
+
+	engine "pixmap" 
+	{
+		#This is the image used for the selected tab.
+		image 
+		{
+			function 	= EXTENSION
+			state 		= NORMAL
+			gap_side 	= BOTTOM
+			file 		= "Tabs/ActiveTab.png"
+			border 		= {10,10,20,0}
+			stretch 	= TRUE
+		}
+
+		#This is the image used for tabs in the background.
+		image 
+		{
+			function 	= EXTENSION
+			state 		= ACTIVE
+			gap_side 	= BOTTOM
+			file 		= "Others/null.png"
+			border 		= {10,10,20,0}
+			stretch 	= TRUE
+		}
+	}
+}
+
 ################### EOG (Eye of Gnome) #################
 
 style "eog-window-base" = "elementary-dark"
@@ -475,7 +514,7 @@ style "panel-launcherfix"
   xthickness = 1
   ythickness = 1
 
-  bg_pixmap[NORMAL] = "Panel/empty.png"
+  bg_pixmap[NORMAL] = "Others/null.png"
 }
 
 style "panel-bg" #= "elementary-dark"
@@ -505,6 +544,32 @@ style "panel-bar"
   fg[PRELIGHT]	= "#FFFFFF"	# hover text
   fg[SELECTED]	= "#FFFFFF"	# selected text
   fg[ACTIVE]	= "#FFFFFF"	# selected text
+}
+
+######################### MIDORI ########################
+
+style "midori-main"
+{
+	bg[NORMAL]			= shade (0.85, @bg_color)
+}
+
+style "midori-notebook" = "murrine-notebook"
+{
+	xthickness			= 0
+	ythickness			= 0
+
+	bg[NORMAL]			= shade (1.0, @bg_color)		#foreground tab color
+	bg[PRELIGHT]			= shade (0.9, @bg_color)		#close tab prelight
+	bg[ACTIVE]			= shade (0.85, @bg_color)		#background tab color
+
+	engine "murrine" {
+		roundness		= 4
+	}
+}
+
+style "midori-panel-toolbar" #sidepanel toolbar
+{
+	bg[NORMAL]			= shade (0.85, @bg_color)
 }
 
 ###########
@@ -717,6 +782,14 @@ widget_class "*Panel*<GtkMenuBar>*"	style:highest "panel-bar"
 widget_class "*Panel*GtkToggleButton"	style "panel-buttons"
 
 ##################################
+# Midori
+##################################
+widget		"MidoriBrowser"							style "midori-main"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook*"	style "midori-notebook"
+widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
+
+##################################
 # XFCE Panel
 ##################################
 widget_class "*Xfce*Panel*" 		style "panel-bg"
+
