@@ -100,7 +100,7 @@
 </draw_ops>
 
 <draw_ops name="maxed_border">
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="0" x2="width" y2="0"/>
+	<line color="shade/gtk:bg[NORMAL]/1.18" x1="0" y1="0" x2="width" y2="0"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="height-1" x2="width" y2="height-1"/>
 </draw_ops>
 
