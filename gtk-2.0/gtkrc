@@ -123,24 +123,24 @@ style "murrine-wider"
 	bg[SELECTED]		= @selected_bg_color
 }
 
-style "murrine-button" = "murrine-wider"
+style "aurora-button" = "murrine-wider"
 {
 	bg[NORMAL]      = shade (1.30, @bg_color)
-	bg[PRELIGHT]    = shade (1.15, @bg_color)
+	bg[PRELIGHT]	= mix(0.93, shade (1.11,@bg_color), shade (1.04,@selected_bg_color))
 	bg[ACTIVE]      = shade (0.80, @bg_color)
 	bg[INSENSITIVE] = shade (1.055, @bg_color)
 	
-	engine "murrine" {
-		contrast = 1.3
-		lightborder_shade   = 2.00
-		gradient_shades     = {1.15,1.07,1.0185,0.885} 
-		gradients           = TRUE
+	engine "aurora" {
+		curvature	= 3.0
+		old_arrowstyle  = FALSE
 	}
 }
 
 style "murrine-entry" = "murrine-wider"
 {
 	xthickness = 4
+
+
 }
 style "murrine-notebook" = "murrine-default"
 {
@@ -245,13 +245,21 @@ style "murrine-statusbar"
 
 style "murrine-comboboxentry"
 {
+	engine "aurora" {
+		curvature	= 3.0
+		old_arrowstyle  = FALSE
+	}
 }
 
 style "murrine-spinbutton"
 {
+	engine "aurora" {
+		curvature	= 3.0
+		old_arrowstyle  = FALSE
+	}
 }
 
-style "murrine-scale" = "murrine-button"
+style "murrine-scale" = "aurora-button"
 {
 	engine "murrine" 
 	{
@@ -553,6 +561,11 @@ style "midori-main"
 	bg[NORMAL]			= shade (0.85, @bg_color)
 }
 
+style "midori-entry"
+{
+	ythickness			= 3
+}
+
 style "midori-notebook" = "murrine-notebook"
 {
 	xthickness			= 0
@@ -609,7 +622,7 @@ widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"  style "murrine-notebook"
 
-widget_class "*<GtkButton>"      		style "murrine-button"
+widget_class "*<GtkButton>"      		style "aurora-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "murrine-statusbar"
 
@@ -710,7 +723,7 @@ widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 
 widget_class "*Nautilus*Window*"                style "nautilus-window-base"
 widget_class "*Nautilus*Toolbar*"               style "murrine-toolbar"
-widget_class "*Nautilus*Toolbar*Button"      	style "murrine-button"
+widget_class "*Nautilus*Toolbar*Button"      	style "aurora-button"
 widget_class "*Nautilus*Menu*"               	style "murrine-menu"
 widget_class "*Nautilus*Statusbar*"             style "nautilus-statusbar"
 widget "*Nautilus*Splitter"                     style "nautilus-handle"
@@ -785,6 +798,7 @@ widget_class "*Panel*GtkToggleButton"	style "panel-buttons"
 # Midori
 ##################################
 widget		"MidoriBrowser"							style "midori-main"
+widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook*"	style "midori-notebook"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
 
