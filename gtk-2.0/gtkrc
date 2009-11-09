@@ -136,10 +136,14 @@ style "aurora-button" = "murrine-wider"
 	}
 }
 
-style "murrine-entry" = "murrine-wider"
+style "aurora-entry" = "murrine-wider"
 {
 	xthickness = 4
 
+	engine "aurora" {
+		curvature	= 3.0
+		old_arrowstyle  = FALSE
+	}
 
 }
 style "murrine-notebook" = "murrine-default"
@@ -243,7 +247,7 @@ style "murrine-statusbar"
 {
 }
 
-style "murrine-comboboxentry"
+style "aurora-comboboxentry"
 {
 	engine "aurora" {
 		curvature	= 3.0
@@ -251,7 +255,7 @@ style "murrine-comboboxentry"
 	}
 }
 
-style "murrine-spinbutton"
+style "aurora-spinbutton"
 {
 	engine "aurora" {
 		curvature	= 3.0
@@ -601,9 +605,9 @@ class "GtkToolbar"   				style "murrine-toolbar"
 class "GtkRange"     				style "murrine-wide"
 class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
-class "GtkEntry"     				style "murrine-entry"
+class "GtkEntry"     				style "aurora-entry"
 
-class "GtkSpinButton"  				style "murrine-spinbutton"
+class "GtkSpinButton"  				style "aurora-spinbutton"
 class "GtkScale"       				style "murrine-scale"
 class "GtkVScale"      				style "murrine-vscale"
 class "GtkHScale"      				style "murrine-hscale"
@@ -626,8 +630,8 @@ widget_class "*<GtkButton>"      		style "aurora-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "murrine-statusbar"
 
-widget_class "*<GtkComboBoxEntry>*"		style "murrine-comboboxentry"
-widget_class "*<GtkCombo>*"         		style "murrine-comboboxentry"
+widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
+widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
