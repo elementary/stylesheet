@@ -589,6 +589,16 @@ style "midori-panel-toolbar" #sidepanel toolbar
 	bg[NORMAL]			= shade (0.85, @bg_color)
 }
 
+###################### TRANSMISSION #####################
+
+style "transmission-main"
+{
+	engine "aurora"
+	{
+		curvature	= 6.0
+	}
+}
+
 ###########
 # Matches #
 ###########
@@ -805,6 +815,11 @@ widget		"MidoriBrowser"							style "midori-main"
 widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook*"	style "midori-notebook"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
+
+##################################
+# Transmission
+##################################
+widget		"Transmission*"							style "transmission-main"
 
 ##################################
 # XFCE Panel

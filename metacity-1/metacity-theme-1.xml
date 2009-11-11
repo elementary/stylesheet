@@ -4,7 +4,7 @@
   <name>elementary</name>
   <author>elementart Art Team</author>
   <copyright>GPL</copyright>
-  <date>August 2008</date>
+  <date>November 2009</date>
   <description>A pleasant theme built to adapt to many color schemes as well as be optimal for both high and low resolution displays.</description>
 </info>
 
@@ -113,7 +113,7 @@
 </draw_ops>
 
 <draw_ops name="round_bevel">
-	<gradient type="vertical" x="0" y="1" width="width" height="12">
+	<gradient type="vertical" x="0" y="1" width="width" height="22">
 		<color value="shade/gtk:bg[NORMAL]/1.06"/>
 		<color value="shade/gtk:bg[NORMAL]/1.0"/>
 	</gradient>
