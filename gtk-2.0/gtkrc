@@ -154,6 +154,11 @@ style "murrine-notebook" = "murrine-default"
 	bg[ACTIVE]		= shade (0.85, @bg_color)		# unselected tab
 }
 
+style "notebook-close"
+{
+	stock["gtk-close"]	= {{ "Tabs/close.png", *, *, * }}	# Prettier Close icon
+}
+
 style "murrine-tasklist" = "murrine-wide"
 {
 }
@@ -265,9 +270,11 @@ style "aurora-spinbutton"
 
 style "murrine-scale" = "aurora-button"
 {
+	bg[SELECTED]		= shade (1.06,@selected_bg_color)
+
 	engine "murrine" 
 	{
-		roundness 		= 6
+		roundness	= 6
 	}
 }
 
@@ -333,45 +340,6 @@ style "murrine-radiocheck" = "murrine-default"
   bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
   bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
   base[NORMAL]	= @selected_fg_color			# enabled background
-}
-
-
-
-
-#####################################################
-#Notebook
-####################################################
-
-style "notebook-inverse" = "murrine-notebook"
-{
-
-	xthickness = 0
-	ythickness = 0
-
-	engine "pixmap" 
-	{
-		#This is the image used for the selected tab.
-		image 
-		{
-			function 	= EXTENSION
-			state 		= NORMAL
-			gap_side 	= BOTTOM
-			file 		= "Tabs/ActiveTab.png"
-			border 		= {10,10,20,0}
-			stretch 	= TRUE
-		}
-
-		#This is the image used for tabs in the background.
-		image 
-		{
-			function 	= EXTENSION
-			state 		= ACTIVE
-			gap_side 	= BOTTOM
-			file 		= "Others/null.png"
-			border 		= {10,10,20,0}
-			stretch 	= TRUE
-		}
-	}
 }
 
 ################### EOG (Eye of Gnome) #################
@@ -562,7 +530,7 @@ style "panel-bar"
 
 style "midori-main"
 {
-	bg[NORMAL]			= shade (0.85, @bg_color)
+	bg[NORMAL]			= shade (0.75, @bg_color)
 }
 
 style "midori-entry"
@@ -813,7 +781,8 @@ widget_class "*Panel*GtkToggleButton"	style "panel-buttons"
 ##################################
 widget		"MidoriBrowser"							style "midori-main"
 widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
-widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook*"	style "midori-notebook"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook*"	style "notebook-close"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
 
 ##################################
