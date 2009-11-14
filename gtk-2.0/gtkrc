@@ -535,7 +535,7 @@ style "midori-main"
 
 style "midori-entry"
 {
-	ythickness			= 3
+	ythickness			= 4
 }
 
 style "midori-notebook" = "murrine-notebook"
