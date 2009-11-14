@@ -109,6 +109,10 @@
 </draw_ops>
 
 <draw_ops name="bevel_maximized">
+	<gradient type="vertical" x="0" y="1" width="width" height="22">
+		<color value="shade/gtk:bg[NORMAL]/1.06"/>
+		<color value="shade/gtk:bg[NORMAL]/1.0"/>
+	</gradient>
 	<include name="maxed_border"/>
 </draw_ops>
 
