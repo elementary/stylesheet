@@ -73,7 +73,7 @@ style "murrine-default"
 		gradient_shades     = {1.15,1.05,1.04,0.9} # default: {1.1,1.0,1.0,1.1}
 		gradients           = TRUE  # FALSE = disabled, TRUE = enabled
 		glowstyle	    = 4
-		highlight_shade     = 0.97  # set highlight amount for buttons or widgets
+		highlight_shade     = 1.0  # set highlight amount for buttons or widgets
 		lightborder_shade   = 1.2   # sets lightborder amount for buttons or widgets
 		lightborderstyle    = 0     # 0 = lightborder on top side, 1 = lightborder on all sides
 		listviewheaderstyle = 1     # 0 = flat, 1 = glassy, 2 = raised
@@ -82,7 +82,7 @@ style "murrine-default"
 		menubarstyle        = 2     # 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle       = 0     # 0 = flat, 1 = glassy, 2 = striped
 		menustyle           = 0     # 0 = no vertical menu stripe, 1 = display vertical menu stripe
-		reliefstyle	    = 1     # 0 = flat, 1 = inset, 2 = shadow
+		reliefstyle	    = 2     # 0 = flat, 1 = inset, 2 = shadow
 		rgba		    = FALSE  # FALSE = disabled, TRUE = enabled
 		roundness           = 3     # 0 = squared, 1 = old default, more will increase roundness
 		scrollbarstyle      = 0     # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
@@ -165,7 +165,6 @@ style "murrine-tasklist" = "murrine-wide"
 
 style "murrine-menu" = "murrine-wide"
 {
-
 	fg[PRELIGHT]		= @selected_fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
@@ -179,8 +178,8 @@ style "murrine-menu" = "murrine-wide"
 
 style "murrine-menu-item" = "murrine-wide"
 {
-	fg[PRELIGHT] = @selected_fg_color
-	bg[SELECTED] = shade (0.98, @selected_bg_color)
+	fg[PRELIGHT] 		= @selected_fg_color
+	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
 
 	engine "murrine" {
 		roundness = 0 
@@ -270,7 +269,6 @@ style "aurora-spinbutton"
 
 style "murrine-scale" = "aurora-button"
 {
-	bg[SELECTED]		= shade (1.06,@selected_bg_color)
 
 	engine "murrine" 
 	{
@@ -324,7 +322,7 @@ style "murrine-vscrollbar"
 {
 }
 
-style "murrine-menubar"
+style "murrine-menubar" = "murrine-default"
 {
 	bg[NORMAL]	= @bg_color
 	fg[NORMAL] 	= @fg_color
@@ -607,6 +605,8 @@ widget_class "*<GtkNotebook>*<GtkLabel>"  style "murrine-notebook"
 widget_class "*<GtkButton>"      		style "aurora-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "murrine-statusbar"
+
+widget_class "*<GtkNotebook>*"    		style "notebook-close"
 
 widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
 widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
