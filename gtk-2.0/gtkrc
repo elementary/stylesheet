@@ -782,7 +782,6 @@ widget_class "*Panel*GtkToggleButton"	style "panel-buttons"
 widget		"MidoriBrowser"							style "midori-main"
 widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
-widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook*"	style "notebook-close"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
 
 ##################################
