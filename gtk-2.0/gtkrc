@@ -1,4 +1,4 @@
-### eGTK by Daniel Fore <Daniel.P.Fore@gmail.com> ###
+### elementary GTK by Daniel Fore <Daniel.P.Fore@gmail.com> ###
 
 gtk_color_scheme = "base_color:#F7F9FA\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#f2f2f2"
 

@@ -1,0 +1,13 @@
+Source: elementary-theme
+Section: x11
+Priority: optional
+Maintainer: Michael Rooney <mrooney@ubuntu.com>
+Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 7.0.8)
+
+Package: elementary-theme
+Architecture: all
+Depends: gtk2-engines-aurora, gtk2-engines-murrine
+Suggests: elementary-icon-theme
+Description: the elementary GTK theme
+ The official elementary GTK theme, elementary-theme.

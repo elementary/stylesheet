@@ -1,14 +1,14 @@
 
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=eGTK
-Comment=elementary default theme
+Name=elementary
+Comment=elementary desktop default theme
 Encoding=UTF-8
 
-Name[en_US]=eGTK
+Name[en_US]=elementary
 
 [X-GNOME-Metatheme]
-GtkTheme=eGTK
-MetacityTheme=eGTK
+GtkTheme=elementary
+MetacityTheme=elementary
 IconTheme=elementary-monochrome
 CursorTheme=DMZ-White
