@@ -2,9 +2,6 @@
 
 gtk_color_scheme = "base_color:#F7F9FA\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#f2f2f2"
 
-# Panel customization
-#include "panel.rc"
-
 style "murrine-default"
 {
 
@@ -368,13 +365,13 @@ style "eog-statusbar"
 
 style "nautilus-sidebar" {
 	
-	bg[PRELIGHT]       	= shade (1.27, @selected_bg_color)
+	bg[PRELIGHT]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 
 	font_name 	                  = "Regular"
 
       # we want the sidebar to be light-blue all the way
-	GtkTreeView::odd_row_color    = shade (1.27, @selected_bg_color)
-	GtkTreeView::even_row_color   = shade (1.27, @selected_bg_color)
+	GtkTreeView::odd_row_color		= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
+	GtkTreeView::even_row_color		= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 	
 	GtkPaned::handle_size                     = 1
 	GtkWidget::wide_separator		  = 1
@@ -402,13 +399,13 @@ style "nautilus-view" = "murrine-default"
 
 style "nautilus-sidebar-title"
 {
-	fg[NORMAL]	        = shade (2.00, @text_color)
-	fg[PRELIGHT]	        = shade (2.00, @text_color)
-	bg[PRELIGHT]       	= shade (1.27, @selected_bg_color)
+	fg[NORMAL]	        = mix(0.50, shade (0.63,@bg_color), shade (0.63, @selected_bg_color))
+	fg[PRELIGHT]	        = shade (0.65, @selected_bg_color)
+	bg[PRELIGHT]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 
 	stock["gtk-close"] = {{ "Others/null.png", *, *, * }} # Get rid of the close icon
 
-	font_name 	                  = "Bold"
+	font_name 	                  = "SemiBold"
 
 	GtkExpander::expander_spacing             = 0
         GtkArrow::arrow-scaling                   = 0.6 # allowed: 0.1 ~ 1.0 (0.6 is an approximation to get 9 by 9 pixels arrow)
@@ -450,7 +447,7 @@ style "nautilus-sidebar-title"
 
 style "nautilus-window-base"
 {	
-	bg[NORMAL]       	= shade (1.27, @selected_bg_color)
+	bg[NORMAL]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 }
 
 style "nautilus-handle"
