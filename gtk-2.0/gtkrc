@@ -484,43 +484,27 @@ style "handle"
 
 ###################### GNOME PANEL ######################
 
-style "panel-launcherfix"
+style "elementary-panel"
 {
-  xthickness = 1
-  ythickness = 1
+	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
 
-  bg_pixmap[NORMAL] = "Others/null.png"
+
+
+	engine "murrine" {
+		roundness = 0 # This sets the roundness of panel items.
+	}
 }
 
-style "panel-bg" #= "elementary-dark"
+style "elementary-panel-light"
 {
-  xthickness = 0
-  ythickness = 0
-
-  bg_pixmap[NORMAL]		= "Panel/panel.png"
-  bg_pixmap[INSENSITIVE]	= "Panel/panel.png"
-  bg_pixmap[PRELIGHT]		= "Panel/panel.png"
-  bg_pixmap[SELECTED]		= "Panel/panel.png"
-  bg_pixmap[ACTIVE]		= "Panel/panel.png"
-
+	fg[NORMAL]	= @fg_color
 }
 
-style "panel-buttons"
+style "elementary-panel-text"
 {
-  xthickness	= 2
-  ythickness	= 3
-
-  GtkWidget::focus_padding = 2
+	fg[NORMAL]	= "#4D4D4D"
+	text[NORMAL]	= "#4D4D4D"
 }
-
-style "panel-bar"
-{
-#  fg[NORMAL]	= "#D6D6D6"	# inactive text
-  fg[PRELIGHT]	= "#FFFFFF"	# hover text
-  fg[SELECTED]	= "#FFFFFF"	# selected text
-  fg[ACTIVE]	= "#FFFFFF"	# selected text
-}
-
 ######################### MIDORI ########################
 
 style "midori-main"
@@ -734,44 +718,33 @@ widget	"main_window*ImageContainer"						style "elementary-dark"
 # Gnome Panel
 ##################################
 
-class "*Panel*" 			style "panel-launcherfix"
+widget "*PanelWidget*"		style "elementary-panel"
+widget "*PanelApplet*"		style "elementary-panel"
+widget "*fast-user-switch*"	style "elementary-panel"
+widget "*CPUFreq*Applet*"	style "elementary-panel"
+widget "*indicator-applet*"	style "elementary-panel"
+class "PanelApp*"		style "elementary-panel"
+class "PanelToplevel*"		style "elementary-panel"
+widget_class "*PanelToplevel*"	style "elementary-panel"
+widget_class "*notif*"		style "elementary-panel"
+widget_class "*Notif*"		style "elementary-panel"
+widget_class "*Tray*"		style "elementary-panel" 
+widget_class "*tray*"		style "elementary-panel"
+widget_class "*computertemp*"	style "elementary-panel"
+widget_class "*Applet*Tomboy*"	style "elementary-panel"
+widget_class "*Applet*Netstatus*"	style "elementary-panel"
 
-class "*notif*"				style "panel-bg"
-class "*Notif*"				style "panel-bg"
-class "*tray*"				style "panel-bg"
-class "*Tray*"				style "panel-bg"
-class "*net*"				style "panel-bg"
-class "*Net*"				style "panel-bg"
-class "*BonoboDockItem"			style "panel-bg"
-class "*Panel*Applet*" 			style "panel-bg"
-class "PanelApp*"			style "panel-bg"
-class "PanelToplevel*"			style "panel-bg"
+# Fixes for tooltip text in some apps.
+widget_class "*Notif*Beagle*"	style "elementary-panel-light"
+widget_class "*Notif*Brasero*"	style "elementary-panel-light"
 
-widget "*PanelApplet*"			style "panel-bg"
-widget "*PanelWidget*"			style "panel-bg"
-widget "*TrayIcon*"			style "panel-bg"
-widget "*fast-user-switch*" 		style "panel-bg" # Workaround for Fast User Switch applet
-widget "*TomboyTray*"			style "panel-bg" # Workaround for Tomboy
-widget "*TomboyApplet*"			style "panel-bg"
+# XFCE panel theming.
+widget "*Xfce*Panel*"		style "elementary-panel"
+class "*Xfce*Panel*"		style "elementary-panel"
 
-widget_class "*PanelToplevel*" 		style "panel-bg"
-widget_class "*Mail*"			style "panel-bg"
-widget_class "*notif*"			style "panel-bg"
-widget_class "*Notif*"			style "panel-bg"
-widget_class "*tray*"			style "panel-bg"
-widget_class "*Tray*"			style "panel-bg"
-widget_class "*BonoboDockItem"		style "panel-bg"
-widget_class "*Panel*GtkButton"		style "panel-bg"
-widget_class "*.Panel*Button*GtkLabel"	style "panel-bg"
-widget_class "*.Panel*GtkLabel"		style "panel-bg"
-widget_class "*Netstatus*"		style "panel-bg"
-widget_class "*Tomboy*Tray*"		style "panel-bg"
-widget_class "*PanelApplet*"		style "panel-bg"
-widget_class "*PanelWidget*"		style "panel-bg"
-widget_class "*Panel*MenuBar*"		style "panel-bar"
-widget_class "*Panel*<GtkMenuBar>*"	style:highest "panel-bar"
-
-widget_class "*Panel*GtkToggleButton"	style "panel-buttons"
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"		style "elementary-panel-text"
+widget_class "*Panel*<GtkMenuBar>*"	style:highest "elementary-panel-text"
 
 ##################################
 # Midori
