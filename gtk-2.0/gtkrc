@@ -486,9 +486,10 @@ style "handle"
 
 style "elementary-panel"
 {
+	xthickness		= 0
+	ythickness		= 0
+
 	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
-
-
 
 	engine "murrine" {
 		roundness = 0 # This sets the roundness of panel items.
