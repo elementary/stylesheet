@@ -145,8 +145,6 @@ style "aurora-entry" = "murrine-wider"
 }
 style "murrine-notebook" = "murrine-default"
 {
-	stock["gtk-close"]	= {{ "Tabs/close.png", *, *, * }}	# Prettier Close icon
-
 	bg[NORMAL]		= shade (1.0615, @bg_color)		# selected tab entire
 	bg[ACTIVE]		= shade (0.85, @bg_color)		# unselected tab
 }
@@ -160,26 +158,21 @@ style "murrine-tasklist" = "murrine-wide"
 {
 }
 
-style "murrine-menu" = "murrine-wide"
+style "murrine-menu" = "murrine-default"
 {
 	fg[PRELIGHT]		= @selected_fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
 	fg[INSENSITIVE]		= darker (@bg_color)
-
-	engine "murrine" {
-		glazestyle = 0
-		highlight_shade = 1.0
-	}
 }
 
-style "murrine-menu-item" = "murrine-wide"
+style "aurora-menu-item" = "murrine-wider"
 {
 	fg[PRELIGHT] 		= @selected_fg_color
 	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
 
-	engine "murrine" {
-		roundness = 0 
+	engine "aurora" {
+		curvature	= 0
 	}
 }
 
@@ -486,7 +479,7 @@ style "handle"
 
 style "elementary-panel"
 {
-	xthickness		= 0
+	xthickness		= 4
 	ythickness		= 0
 
 	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
@@ -504,7 +497,9 @@ style "elementary-panel-light"
 style "elementary-panel-text"
 {
 	fg[NORMAL]	= "#4D4D4D"
+	fg[PRELIGHT]	= "#4D4D4D"
 	text[NORMAL]	= "#4D4D4D"
+	text[PRELIGHT]	= "#4D4D4D"
 }
 ######################### MIDORI ########################
 
@@ -522,6 +517,8 @@ style "midori-notebook" = "murrine-notebook"
 {
 	xthickness			= 0
 	ythickness			= 0
+
+	GtkNotebook::tab-overlap	= 0
 
 	bg[NORMAL]			= shade (1.0, @bg_color)		#foreground tab color
 	bg[PRELIGHT]			= shade (0.9, @bg_color)		#close tab prelight
@@ -595,7 +592,7 @@ widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
-widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
+widget_class "*<GtkMenuItem>*"          	style "aurora-menu-item"
 widget_class "*<GtkSeparatorMenuItem>*" 	style "murrine-separator-menu-item"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
@@ -745,7 +742,9 @@ class "*Xfce*Panel*"		style "elementary-panel"
 
 # Make sure panel text color doesn't change
 widget_class "*Panel*MenuBar*"		style "elementary-panel-text"
-widget_class "*Panel*<GtkMenuBar>*"	style:highest "elementary-panel-text"
+widget_class "*Panel*<GtkMenuBar>*"	style "elementary-panel-text"
+widget "*.clock-applet-button.*"	style "elementary-panel-text"
+widget "*PanelApplet*"			style "elementary-panel-text"
 
 ##################################
 # Midori
