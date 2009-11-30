@@ -499,8 +499,16 @@ style "elementary-panel-text"
 {
 	fg[NORMAL]	= "#4D4D4D"
 	fg[PRELIGHT]	= "#4D4D4D"
+	fg[ACTIVE]	= "#ffffff"
 	text[NORMAL]	= "#4D4D4D"
 	text[PRELIGHT]	= "#4D4D4D"
+	text[ACTIVE]	= "#ffffff"
+}
+
+style "elementary-main-menu-text" = "elementary-panel-text"
+{
+	fg[PRELIGHT]	= "#ffffff"
+	text[PRELIGHT]	= "#ffffff"
 }
 ######################### MIDORI ########################
 
@@ -742,8 +750,8 @@ widget "*Xfce*Panel*"			style "elementary-panel"
 class "*Xfce*Panel*"			style "elementary-panel"
 
 # Make sure panel text color doesn't change
-widget_class "*Panel*MenuBar*"		style "elementary-panel-text"
-widget_class "*Panel*<GtkMenuBar>*"	style "elementary-panel-text"
+widget_class "*Panel*MenuBar*"		style "elementary-main-menu-text"
+widget_class "*Panel*<GtkMenuBar>*"	style "elementary-main-menu-text"
 widget "*.clock-applet-button.*"	style "elementary-panel-text"
 widget "*PanelApplet*"			style "elementary-panel-text"
 
