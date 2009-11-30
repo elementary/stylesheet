@@ -173,6 +173,7 @@ style "aurora-menu-item" = "murrine-wider"
 
 	engine "aurora" {
 		curvature	= 0
+		arrowsize	= 1
 	}
 }
 
@@ -710,35 +711,35 @@ widget_class "Eog*Scrollbar"           		style "aurora-scrollbar-dark"
 # F-SPOT
 ##################################
 
-widget	"main_window*ImageContainer"						style "elementary-dark"
+widget	"main_window*ImageContainer"		style "elementary-dark"
 
 ##################################
-# Gnome Panel
+# Panel
 ##################################
 
-widget "*PanelWidget*"		style "elementary-panel"
-widget "*PanelApplet*"		style "elementary-panel"
-widget "*fast-user-switch*"	style "elementary-panel"
-widget "*CPUFreq*Applet*"	style "elementary-panel"
-widget "*indicator-applet*"	style "elementary-panel"
-class "PanelApp*"		style "elementary-panel"
-class "PanelToplevel*"		style "elementary-panel"
-widget_class "*PanelToplevel*"	style "elementary-panel"
-widget_class "*notif*"		style "elementary-panel"
-widget_class "*Notif*"		style "elementary-panel"
-widget_class "*Tray*"		style "elementary-panel" 
-widget_class "*tray*"		style "elementary-panel"
-widget_class "*computertemp*"	style "elementary-panel"
-widget_class "*Applet*Tomboy*"	style "elementary-panel"
+widget "*PanelWidget*"			style "elementary-panel"
+widget "*PanelApplet*"			style "elementary-panel"
+widget "*fast-user-switch*"		style "elementary-panel"
+widget "*CPUFreq*Applet*"		style "elementary-panel"
+widget "*indicator-applet*"		style "elementary-panel"
+class "PanelApp*"			style "elementary-panel"
+class "PanelToplevel*"			style "elementary-panel"
+widget_class "*PanelToplevel*"		style "elementary-panel"
+widget_class "*notif*"			style "elementary-panel"
+widget_class "*Notif*"			style "elementary-panel"
+widget_class "*Tray*"			style "elementary-panel" 
+widget_class "*tray*"			style "elementary-panel"
+widget_class "*computertemp*"		style "elementary-panel"
+widget_class "*Applet*Tomboy*"		style "elementary-panel"
 widget_class "*Applet*Netstatus*"	style "elementary-panel"
 
 # Fixes for tooltip text in some apps.
-widget_class "*Notif*Beagle*"	style "elementary-panel-light"
-widget_class "*Notif*Brasero*"	style "elementary-panel-light"
+widget_class "*Notif*Beagle*"		style "elementary-panel-light"
+widget_class "*Notif*Brasero*"		style "elementary-panel-light"
 
 # XFCE panel theming.
-widget "*Xfce*Panel*"		style "elementary-panel"
-class "*Xfce*Panel*"		style "elementary-panel"
+widget "*Xfce*Panel*"			style "elementary-panel"
+class "*Xfce*Panel*"			style "elementary-panel"
 
 # Make sure panel text color doesn't change
 widget_class "*Panel*MenuBar*"		style "elementary-panel-text"
@@ -758,9 +759,4 @@ widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar
 # Transmission
 ##################################
 widget		"Transmission*"							style "transmission-main"
-
-##################################
-# XFCE Panel
-##################################
-widget_class "*Xfce*Panel*" 		style "panel-bg"
 
