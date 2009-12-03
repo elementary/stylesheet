@@ -5,30 +5,37 @@ gtk_color_scheme = "base_color:#F7F9FA\nfg_color:#4D4D4D\ntooltip_fg_color:#0000
 style "murrine-default"
 {
 
-	GtkButton      ::child-displacement-x = 1
-	GtkButton      ::child-displacement-y = 1
-	GtkButton      ::default-border       = { 0, 0, 0, 0 }
-	GtkCheckButton ::indicator-size       = 14
+	GtkButton		::child-displacement-x 			= 1
+	GtkButton		::child-displacement-y 			= 1
+	GtkButton		::default-border       			= { 0, 0, 0, 0 }
+	GtkCheckButton		::indicator-size       			= 14
 
-	GtkPaned       ::handle-size          = 6
+	GtkPaned		::handle-size          			= 6
 
-	GtkRange       ::trough-border		= 1
-	GtkRange       ::slider-width		= 14
-	GtkRange       ::stepper-size		= 13
+	GtkRange		::trough-border				= 1
+	GtkRange		::slider-width				= 14
+	GtkRange		::stepper-size				= 13
 
-	GtkScale       ::slider-length		= 15
-	GtkScale       ::slider-width		= 15
-	GtkScale       ::trough-side-details	= 1
-	GtkScrollbar   ::min-slider-length	= 30
+	GtkScale		::slider-length				= 15
+	GtkScale		::slider-width				= 15
+	GtkScale		::trough-side-details			= 1
 
-	GtkMenuBar     ::internal-padding	= 0
-	GtkExpander    ::expander-size		= 16
-	GtkToolbar     ::internal-padding	= 0
-	GtkTreeView    ::expander-size		= 14
-	GtkTreeView    ::vertical-separator	= 0
+	GtkScrollbar		::min-slider-length			= 30
+	GtkScrollbar		::has_secondary_backward_stepper	= 1
+	GtkScrollbar		::has_secondary_forward_stepper		= 0
+	GtkScrolledWindow	::scrollbar-spacing			= 0
+	GtkScrolledWindow	::scrollbars-within-bevel		= 1
 
-	GtkMenu        ::horizontal-padding	= 0
-	GtkMenu        ::vertical-padding	= 0
+	GtkMenuBar		::internal-padding			= 0
+	GtkExpander		::expander-size				= 16
+	GtkToolbar		::internal-padding			= 0
+	GtkTreeView		::expander-size				= 14
+	GtkTreeView		::vertical-separator			= 0
+
+	GtkMenu			::horizontal-padding			= 0
+	GtkMenu			::vertical-padding			= 0
+
+#	NautilusIconContainer	::highlight_alpha			= 145
 
 	# Glow the tasklist by changing the color, instead of overlaying it with a rectangle
 	#WnckTasklist   ::fade-overlay-rect    = 0
@@ -329,6 +336,16 @@ style "murrine-radiocheck" = "murrine-default"
   bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
   bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
   base[NORMAL]	= @selected_fg_color			# enabled background
+}
+
+######################## Banshee #######################
+
+
+style "banshee-main"
+{
+#	GtkStatusbar	::shadow_type	= GTK_SHADOW_NONE
+#	GtkMenubar	::shadow_type	= GTK_SHADOW_NONE
+#	GtkToolbar	::shadow_type	= GTK_SHADOW_NONE
 }
 
 ################### EOG (Eye of Gnome) #################
@@ -767,4 +784,10 @@ widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar
 # Transmission
 ##################################
 widget		"Transmission*"							style "transmission-main"
+
+##################################
+# Banshee
+##################################
+
+widget  "*gtksharp*Player*"		style "banshee-main"
 
