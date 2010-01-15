@@ -245,8 +245,11 @@ style "murrine-toolbar"
 	bg[NORMAL]        = @bg_color
 }
 
-style "murrine-statusbar"
+style "aurora-statusbar" = "murrine-default"
 {
+	engine "aurora" {
+		old_arrowstyle  = FALSE
+	}
 }
 
 style "aurora-comboboxentry"
@@ -392,7 +395,7 @@ style "nautilus-sidebar" {
 	GtkWidget::draw_border                    = {0,0,0,0}
 
       # these make the padding from left window edge a little more sane
-	GtkTreeView::vertical_separator           = 2
+	GtkTreeView::vertical_separator           = 4
 	GtkTreeView::horizontal_separator         = 15
 	GtkTreeView::indent-expanders             = 1 # 1 means TRUE
 	GtkTreeView::expander-size                = 8
@@ -416,7 +419,7 @@ style "nautilus-sidebar-title"
 
 	stock["gtk-close"] = {{ "Others/null.png", *, *, * }} # Get rid of the close icon
 
-	font_name 	                  = "SemiBold"
+	font_name 	                  = "semibold"
 
 	GtkExpander::expander_spacing             = 0
         GtkArrow::arrow-scaling                   = 0.6 # allowed: 0.1 ~ 1.0 (0.6 is an approximation to get 9 by 9 pixels arrow)
@@ -492,7 +495,6 @@ style "handle"
 {
 }
 
-
 ###################### GNOME PANEL ######################
 
 style "elementary-panel"
@@ -555,9 +557,16 @@ style "midori-notebook" = "murrine-notebook"
 	}
 }
 
-style "midori-panel-toolbar" #sidepanel toolbar
+style "midori-panel-toolbar"
 {
 	bg[NORMAL]			= shade (0.85, @bg_color)
+}
+
+########################## TOTEM ########################
+
+style "totem-main"
+{
+	TotemStatusbar	::shadow-type	= GTK_SHADOW_NONE
 }
 
 ###################### TRANSMISSION #####################
@@ -609,7 +618,7 @@ widget_class "*<GtkNotebook>*<GtkLabel>"  style "murrine-notebook"
 
 widget_class "*<GtkButton>"      		style "aurora-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
-widget_class "*<GtkStatusbar>*"  		style "murrine-statusbar"
+widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
 
 widget_class "*<GtkNotebook>*"    		style "notebook-close"
 
@@ -779,6 +788,7 @@ widget		"MidoriBrowser"							style "midori-main"
 widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
+#widget		"MidoriBrowser*GtkStatusbar*"					style "nautilus-statusbar"
 
 ##################################
 # Transmission
@@ -790,4 +800,10 @@ widget		"Transmission*"							style "transmission-main"
 ##################################
 
 widget  "*gtksharp*Player*"		style "banshee-main"
+
+##################################
+# Totem
+##################################
+
+#widget	"totem_*_window*"				style "totem-main"
 
