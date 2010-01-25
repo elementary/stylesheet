@@ -484,6 +484,8 @@ style "nautilus-handle"
 style "nautilus-statusbar" = "murrine-toolbar"
 {
 	bg[NORMAL]	                  = @bg_color
+	engine "murrine" {
+	}
 	
 }
 
