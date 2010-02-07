@@ -93,6 +93,8 @@ style "murrine-default"
 		sliderstyle         = 0     # 0 = nothing added, 1 = handles
 		stepperstyle        = 1     # 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		toolbarstyle	    = 2    # 0 = flat, 1 = glassy, 2 = gradient
+		arrowstyle          = 1
+		trough_shades       = { 0.85, 1.0 }
 	}
 }
 
@@ -125,6 +127,20 @@ style "murrine-wider"
 	ythickness = 3
 
 	bg[SELECTED]		= @selected_bg_color
+}
+
+style "murrine-button" = "murrine-wider"
+{
+	bg[NORMAL]      = shade (1.30, @bg_color)
+	bg[PRELIGHT]	= mix(0.93, shade (1.11,@bg_color), shade (1.04,@selected_bg_color))
+	bg[ACTIVE]      = shade (0.80, @bg_color)
+	bg[INSENSITIVE] = shade (1.055, @bg_color)
+	
+	engine "murrine" {
+		textstyle	= 1
+		contrast	= 1.4
+		reliefstyle	= 4
+	}
 }
 
 style "aurora-button" = "murrine-wider"
@@ -229,13 +245,14 @@ style "murrine-tooltips" = "murrine-wider"
 
 style "murrine-progressbar" = "murrine-thin"
 {
+
 	fg[PRELIGHT] = lighter (@selected_fg_color)
   	bg[NORMAL]   = shade (0.98, @bg_color)
 	bg[SELECTED] = @selected_bg_color
 
 	engine "murrine" {
-		roundness = 0
-		lightborder_shade   = 1.70
+		roundness = 1
+		lightborder_shade   = 1.5
 		lightborderstyle   = 0	
 	}
 }
@@ -286,11 +303,18 @@ style "murrine-vscale"
 
 }
 
-style "murrine-scrollbar"
+style "murrine-scrollbar" = "murrine-thin"
 {
+
+	bg[ACTIVE]              = shade (1.3, @bg_color)	# Trough color
+	bg[NORMAL]              = shade(0.95, @selected_bg_color)
+	bg[PRELIGHT]            = @selected_bg_color
+	text[NORMAL]            = shade (0.4, @bg_color)	# Arrow Color
+
 	engine "murrine" {
-		roundness		= 6
+		roundness	    = 6
 		gradient_shades     = {1.08,0.97,0.95,0.8}
+		trough_shades	    = { 0.9, 1.1 }
 	}
 
 }
@@ -507,13 +531,17 @@ style "elementary-panel"
 	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
 
 	engine "murrine" {
-		roundness = 0 # This sets the roundness of panel items.
+		textstyle = 1
 	}
 }
 
 style "elementary-panel-light"
 {
 	fg[NORMAL]	= @fg_color
+
+	engine "murrine" {
+		textstyle = 1
+	}
 }
 
 style "elementary-panel-text"
@@ -524,6 +552,10 @@ style "elementary-panel-text"
 	text[NORMAL]	= "#4D4D4D"
 	text[PRELIGHT]	= "#4D4D4D"
 	text[ACTIVE]	= "#ffffff"
+
+	engine "murrine" {
+		textstyle = 1
+	}
 }
 
 style "elementary-main-menu-text" = "elementary-panel-text"

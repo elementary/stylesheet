@@ -203,7 +203,7 @@
 
 <!-- close icon -->
 <draw_ops name="close_button_icon">
-	<image filename="close.png"
+	<image filename="close-focus.svg"
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
@@ -211,7 +211,11 @@
 </draw_ops>
 
 <draw_ops name="close_button_normal">
-	<include name="button_normal"/>
+	<image filename="close-focus-normal.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="close_button_prelight">
 	<include name="close_button_icon"/>
@@ -220,7 +224,11 @@
 	<include name="button_pressed"/>
 </draw_ops>
 <draw_ops name="close_button_unfocused">
-	<include name="button_unfocused"/>
+	<image filename="close-focus-none.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="close_button_unfocused_prelight">
 	<include name="close_button_icon"/>
@@ -231,7 +239,7 @@
 
 <!-- maximize icon -->
 <draw_ops name="maximize_button_icon">
-	<image filename="maximize.png"
+	<image filename="max-focus.svg"
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
@@ -239,16 +247,28 @@
 </draw_ops>
 
 <draw_ops name="maximize_button_normal">
-	<include name="button_normal"/>
+	<image filename="max-focus-normal.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_button_prelight">
 	<include name="maximize_button_icon"/>
 </draw_ops>
 <draw_ops name="maximize_button_pressed">
-	<include name="button_pressed"/>
+	<image filename="max-pressed.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_button_unfocused">
-	<include name="button_unfocused"/>
+	<image filename="max-focus-none.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="maximize_button_unfocused_prelight">
 	<include name="maximize_button_icon"/>
@@ -257,37 +277,9 @@
 	<include name="button_pressed"/>
 </draw_ops>
 
-<!-- restore icon -->
-<draw_ops name="restore_button_icon">
-	<image filename="maximize.png"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
-</draw_ops>
-
-<draw_ops name="restore_button_normal">
-	<include name="button_normal"/>
-</draw_ops>
-<draw_ops name="restore_button_prelight">
-	<include name="restore_button_icon"/>
-</draw_ops>
-<draw_ops name="restore_button_pressed">
-	<include name="button_pressed"/>
-</draw_ops>
-<draw_ops name="restore_button_unfocused">
-	<include name="button_unfocused"/>
-</draw_ops>
-<draw_ops name="restore_button_unfocused_prelight">
-	<include name="restore_button_icon"/>
-</draw_ops>
-<draw_ops name="restore_button_unfocused_pressed">
-	<include name="button_pressed"/>
-</draw_ops>
-
 <!-- minimize icon -->
 <draw_ops name="minimize_button_icon">
-	<image filename="minimize.png"
+	<image filename="min-focus.svg"
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
@@ -295,7 +287,11 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_normal">
-	<include name="button_normal"/>
+	<image filename="min-focus-normal.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_button_prelight">
 	<include name="minimize_button_icon"/>
@@ -304,7 +300,11 @@
 	<include name="button_pressed"/>
 </draw_ops>
 <draw_ops name="minimize_button_unfocused">
-	<include name="button_unfocused"/>
+	<image filename="min-focus-none.svg"
+		x="(width - object_width) / 2"
+		y="(height - object_height) / 2"
+		width="object_width"
+		height="object_height"/>
 </draw_ops>
 <draw_ops name="minimize_button_unfocused_prelight">
 	<include name="minimize_button_icon"/>
@@ -362,16 +362,16 @@
 
 <frame_style name="normal_maximized" geometry="normal_maximized" parent="normal">
 	<piece position="entire_background" draw_ops="bevel_maximized"/>
-	<button function="maximize" state="normal" draw_ops="restore_button_unfocused"/>
-	<button function="maximize" state="pressed" draw_ops="restore_button_unfocused_pressed"/>
-	<button function="maximize" state="prelight" draw_ops="restore_button_unfocused_prelight"/>
+	<button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
+	<button function="maximize" state="pressed" draw_ops="maximize_button_unfocused_pressed"/>
+	<button function="maximize" state="prelight" draw_ops="maximize_button_unfocused_prelight"/>
 </frame_style>
 
 <frame_style name="focused_maximized" geometry="normal_maximized" parent="focused">
 	<piece position="entire_background" draw_ops="bevel_maximized"/>
-	<button function="maximize" state="normal" draw_ops="restore_button_normal"/>
-	<button function="maximize" state="pressed" draw_ops="restore_button_pressed"/>
-	<button function="maximize" state="prelight" draw_ops="restore_button_prelight"/>
+	<button function="maximize" state="normal" draw_ops="maximize_button_normal"/>
+	<button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+	<button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
 </frame_style>
 
 <frame_style name="border" geometry="border" parent="normal">
@@ -432,7 +432,7 @@
 
 <menu_icon function="close" state="normal" draw_ops="close_button_icon_unfocused"/>
 <menu_icon function="maximize" state="normal" draw_ops="maximize_button_icon_unfocused"/>
-<menu_icon function="unmaximize" state="normal" draw_ops="restore_button_icon_unfocused"/>
+<menu_icon function="unmaximize" state="normal" draw_ops="maximize_button_icon_unfocused"/>
 <menu_icon function="minimize" state="normal" draw_ops="minimize_button_icon_unfocused"/>
 
 </metacity_theme>
