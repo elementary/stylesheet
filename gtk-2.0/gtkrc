@@ -600,7 +600,10 @@ style "midori-panel-toolbar"
 
 style "totem-main"
 {
-	TotemStatusbar	::shadow-type	= GTK_SHADOW_NONE
+	stock["gtk-media-pause"] = {{ "Icons/media-playback-pause.svg", *, *, * }}
+	stock["gtk-media-play"] = {{ "Icons/media-playback-start.svg", *, *, * }}
+	stock["gtk-media-next"] = {{ "Icons/media-skip-forward.svg", *, *, * }}
+	stock["gtk-media-previous"] = {{ "Icons/media-skip-backward.svg", *, *, * }}
 }
 
 ###################### TRANSMISSION #####################
@@ -833,11 +836,11 @@ widget		"Transmission*"							style "transmission-main"
 # Banshee
 ##################################
 
-widget  "*gtksharp*Player*"		style "banshee-main"
+widget  "*gtksharp*Player*"					style "banshee-main"
 
 ##################################
 # Totem
 ##################################
 
-#widget	"totem_*_window*"				style "totem-main"
+widget	"totem_*_window*"					style "totem-main"
 
