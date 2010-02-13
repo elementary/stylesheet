@@ -604,6 +604,8 @@ style "totem-main"
 	stock["gtk-media-play"] = {{ "Icons/media-playback-start.svg", *, *, * }}
 	stock["gtk-media-next"] = {{ "Icons/media-skip-forward.svg", *, *, * }}
 	stock["gtk-media-previous"] = {{ "Icons/media-skip-backward.svg", *, *, * }}
+
+	stock["gtk-close"] = {{ "Icons/close.png", *, *, * }}
 }
 
 ###################### TRANSMISSION #####################
