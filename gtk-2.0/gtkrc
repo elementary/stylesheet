@@ -102,13 +102,20 @@ style "murrine-default"
 
 style "elementary-dark"
 {
-	base[NORMAL]		= "#434241"
+	base[NORMAL]		= "#3B3B3B"
 
-	bg[NORMAL]		= "#434241"
+	bg[NORMAL]		= "#3B3B3B"
+	bg[ACTIVE]		= "#434241"
 	bg[PRELIGHT]		= "#4D4D4D"
 
 	fg[NORMAL]              = "#D6D6D6"
 	fg[PRELIGHT]            = "#D6D6D6"
+
+	text[NORMAL]      	= "#D6D6D6"
+	text[PRELIGHT]    	= "#D6D6D6"
+	text[ACTIVE]      	= "#D6D6D6"
+	text[SELECTED]   	= "#D6D6D6"
+	text[INSENSITIVE]	= "#4D4D4D"
 }
 
 style "murrine-thin"
@@ -409,14 +416,6 @@ style "eog-statusbar"
 }
 
 ####################### Nautilus #######################
-
-style "nautilus-extra-view-widget" = "elementary-dark"
-{
-
-	bg_pixmap[NORMAL]	= "/Others/extra-view.svg"
-
-
-}
 
 style "nautilus-sidebar" {
 	
@@ -796,7 +795,7 @@ widget_class "*Nautilus*Side*Title*"            		style "nautilus-sidebar-title"
 widget_class "*Nautilus*Notebook"    				style "murrine-notebook"
 widget_class "*Nautilus*Scrollbar"   				style "aurora-scrollbar"
 
-widget "*.nautilus-extra-view-widget*"				style:highest "nautilus-extra-view-widget"
+widget "*.nautilus-extra-view-widget*"				style:highest "elementary-dark"
 
 ##################################
 # EOG
