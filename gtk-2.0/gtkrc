@@ -103,7 +103,10 @@ style "murrine-default"
 style "elementary-dark"
 {
 	base[NORMAL]		= "#434241"
+
 	bg[NORMAL]		= "#434241"
+	bg[PRELIGHT]		= "#4D4D4D"
+
 	fg[NORMAL]              = "#D6D6D6"
 	fg[PRELIGHT]            = "#D6D6D6"
 }
@@ -258,7 +261,8 @@ style "murrine-progressbar" = "murrine-thin"
 	engine "murrine" {
 		roundness = 1
 		lightborder_shade   = 1.5
-		lightborderstyle   = 0	
+		lightborderstyle   = 0
+		textstyle = 1
 	}
 }
 
@@ -405,6 +409,14 @@ style "eog-statusbar"
 }
 
 ####################### Nautilus #######################
+
+style "nautilus-extra-view-widget" = "elementary-dark"
+{
+
+	bg_pixmap[NORMAL]	= "/Others/extra-view.svg"
+
+
+}
 
 style "nautilus-sidebar" {
 	
@@ -770,29 +782,31 @@ widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 # Order of assignment is important
 #############################################
 
-widget_class "*Nautilus*Window*"                style "nautilus-window-base"
-widget_class "*Nautilus*Toolbar*"               style "murrine-toolbar"
-widget_class "*Nautilus*Toolbar*Button"      	style "aurora-button"
-widget_class "*Nautilus*Menu*"               	style "murrine-menu"
-widget_class "*Nautilus*Statusbar*"             style "nautilus-statusbar"
-widget "*Nautilus*Splitter"                     style "nautilus-handle"
-widget_class "*Nautilus*View*"                  style "nautilus-view"
-widget_class "*NautilusSidePane.*"              style "nautilus-sidebar-title"
-widget_class "*Nautilus*Places*Sidebar*"        style "nautilus-sidebar"
-widget_class "*Nautilus*Side*.GtkWidget"        style "nautilus-sidebar"
-widget_class "*Nautilus*Side*Title*"            style "nautilus-sidebar-title"
-widget_class "*Nautilus*Notebook"    		style "murrine-notebook"
-widget_class "*Nautilus*Scrollbar"   		style "aurora-scrollbar"
+widget_class "*Nautilus*Window*"                		style "nautilus-window-base"
+widget_class "*Nautilus*Toolbar*"               		style "murrine-toolbar"
+widget_class "*Nautilus*Toolbar*Button"      			style "aurora-button"
+widget_class "*Nautilus*Menu*"               			style "murrine-menu"
+widget_class "*Nautilus*Statusbar*"             		style "nautilus-statusbar"
+widget "*Nautilus*Splitter"                     		style "nautilus-handle"
+widget_class "*Nautilus*View*"					style "nautilus-view"
+widget_class "*NautilusSidePane.*"				style "nautilus-sidebar-title"
+widget_class "*Nautilus*Places*Sidebar*"			style "nautilus-sidebar"
+widget_class "*Nautilus*Side*.GtkWidget"			style "nautilus-sidebar"
+widget_class "*Nautilus*Side*Title*"            		style "nautilus-sidebar-title"
+widget_class "*Nautilus*Notebook"    				style "murrine-notebook"
+widget_class "*Nautilus*Scrollbar"   				style "aurora-scrollbar"
+
+widget "*.nautilus-extra-view-widget*"				style:highest "nautilus-extra-view-widget"
 
 ##################################
 # EOG
 ##################################
-widget_class "*Eog*Window*"			style "eog-window-base"
-widget_class "*Eog*Toolbar*"              	style "murrine-wide"
-widget_class "*Eog*Menu*"               	style "murrine-menu"
-widget_class "Eog*Statusbar*"                   style "eog-statusbar"
-widget "Eog*Statusbar*.*"                       style "eog-statusbar"
-widget_class "Eog*Scrollbar"           		style "aurora-scrollbar-dark"
+widget_class "*Eog*Window*"					style "eog-window-base"
+widget_class "*Eog*Toolbar*"              			style "murrine-wide"
+widget_class "*Eog*Menu*"               			style "murrine-menu"
+widget_class "Eog*Statusbar*"                  			style "eog-statusbar"
+widget "Eog*Statusbar*.*"                      			style "eog-statusbar"
+widget_class "Eog*Scrollbar"           				style "aurora-scrollbar-dark"
 
 ##################################
 # F-SPOT
