@@ -412,7 +412,7 @@ style "nautilus-sidebar" {
 
 	font_name 	                  = "Regular"
 
-      # we want the sidebar to be light-blue all the way
+      	# These are the old values for the blue sidebar
 	#GtkTreeView::odd_row_color		= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 	#GtkTreeView::even_row_color		= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 
@@ -445,10 +445,13 @@ style "nautilus-view" = "murrine-default"
 
 style "nautilus-sidebar-title"
 {
-	fg[NORMAL]	        = mix(0.50, shade (0.63,@bg_color), shade (0.63, @selected_bg_color))
-	fg[PRELIGHT]	        = shade (0.65, @selected_bg_color)
+	# These are the old values for the blue sidebar
+	#fg[NORMAL]	        = mix(0.50, shade (0.63,@bg_color), shade (0.63, @selected_bg_color))
+	#fg[PRELIGHT]	        = shade (0.65, @selected_bg_color)
 	#bg[PRELIGHT]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 
+	fg[NORMAL]	        = shade (1.60, @text_color)
+	fg[PRELIGHT]	        = shade (1.25, @text_color)
 	bg[PRELIGHT]       	= @bg_color
 
 	stock["gtk-close"] = {{ "Others/null.png", *, *, * }} # Get rid of the close icon
