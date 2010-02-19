@@ -269,7 +269,6 @@ style "murrine-progressbar" = "murrine-thin"
 		roundness = 1
 		lightborder_shade   = 1.5
 		lightborderstyle   = 0
-		textstyle = 1
 	}
 }
 
@@ -556,15 +555,20 @@ style "elementary-panel"
 
 	engine "murrine" {
 		textstyle = 1
+		roundness = 0
 	}
 }
 
 style "elementary-panel-light"
 {
+	xthickness		= 4
+	ythickness		= 0
+
 	fg[NORMAL]	= @fg_color
 
 	engine "murrine" {
 		textstyle = 1
+		roundness = 0
 	}
 }
 
