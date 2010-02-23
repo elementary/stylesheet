@@ -168,7 +168,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+		colorize="shade/gtk:bg[SELECTED]/0.85"/>
 </draw_ops>
 <draw_ops name="menu_button_unfocused">
 	<image filename="menu-focus-none.svg"
@@ -202,7 +203,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+		colorize="shade/gtk:bg[SELECTED]/0.85"/>
 </draw_ops>
 
 <draw_ops name="close_button_unfocused">
@@ -236,7 +238,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+		colorize="shade/gtk:bg[SELECTED]/0.85"/>
 </draw_ops>
 
 <draw_ops name="maximize_button_unfocused">
@@ -284,7 +287,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+		colorize="shade/gtk:bg[SELECTED]/0.85"/>
 </draw_ops>
 
 <draw_ops name="minimize_button_unfocused">
