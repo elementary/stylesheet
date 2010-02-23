@@ -283,12 +283,18 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_pressed">
-	<image filename="min-pressed.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"
-		colorize="shade/gtk:bg[SELECTED]/0.85"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/0.90" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/1.00" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
 
 <draw_ops name="minimize_button_unfocused">
