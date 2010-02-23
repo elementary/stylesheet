@@ -219,15 +219,15 @@
 
 <draw_ops name="maximize_button_normal">
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.60" 
+		color="shade/gtk:bg[NORMAL]/0.63" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.65" 
+		color="shade/gtk:bg[NORMAL]/0.67" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.70" 
+		color="shade/gtk:bg[NORMAL]/0.71" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
 	<line 
@@ -239,7 +239,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 	<line 
@@ -255,26 +255,26 @@
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
 
 <draw_ops name="maximize_button_prelight">
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.47" 
+		color="shade/gtk:bg[NORMAL]/0.51" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.52" 
+		color="shade/gtk:bg[NORMAL]/0.55" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.57" 
+		color="shade/gtk:bg[NORMAL]/0.59" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/0.62" 
+		color="shade/gtk:bg[NORMAL]/0.63" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
 	<line 
@@ -282,7 +282,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 	<line 
@@ -298,7 +298,7 @@
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
@@ -325,7 +325,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 	<line 
@@ -341,7 +341,7 @@
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
@@ -368,7 +368,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.15" 
+		color="shade/gtk:bg[NORMAL]/1.10" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 	<line 
@@ -384,7 +384,7 @@
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.15" 
+		color="shade/gtk:bg[NORMAL]/1.10" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
 		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
@@ -401,7 +401,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
@@ -416,7 +416,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
@@ -431,7 +431,7 @@
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
 	<line 
-		color="shade/gtk:bg[NORMAL]/1.25" 
+		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
