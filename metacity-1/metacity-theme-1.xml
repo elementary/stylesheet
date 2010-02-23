@@ -218,36 +218,175 @@
 <!-- maximize icon -->
 
 <draw_ops name="maximize_button_normal">
-	<image filename="max-focus-normal.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.60" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.65" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.70" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.75" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.80" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.85" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.89" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.93" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
 
 <draw_ops name="maximize_button_prelight">
-	<image filename="max-focus.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.47" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.52" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.57" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.62" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.67" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.72" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.76" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.80" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
 
 <draw_ops name="maximize_button_pressed">
-	<image filename="max-pressed.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"
-		colorize="shade/gtk:bg[SELECTED]/0.85"/>
+<line 
+		color="shade/gtk:bg[SELECTED]/0.72" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/0.77" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/0.82" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/0.87" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/0.92" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/0.97" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/1.01" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
+	<line 
+		color="shade/gtk:bg[SELECTED]/1.05" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
 
 <draw_ops name="maximize_button_unfocused">
-	<image filename="max-focus-none.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
+<line 
+		color="shade/gtk:bg[NORMAL]/0.70" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.73" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.76" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.80" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.85" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.15" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.90" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.94" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.98" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.15" 
+		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
+		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
 
 <!-- minimize icon -->
