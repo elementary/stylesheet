@@ -77,7 +77,6 @@ style "murrine-default"
 		contrast            = 1.1   # 0.8 for less contrast, more than 1.0 for more contrast on borders
 		glazestyle          = 0     # 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
 		gradient_shades     = {1.15,1.05,1.04,0.9} # default: {1.1,1.0,1.0,1.1}
-		gradients           = TRUE  # FALSE = disabled, TRUE = enabled
 		glowstyle	    = 4
 		highlight_shade     = 1.0  # set highlight amount for buttons or widgets
 		lightborder_shade   = 1.2   # sets lightborder amount for buttons or widgets
@@ -275,6 +274,7 @@ style "murrine-progressbar" = "murrine-thin"
 style "murrine-toolbar" 
 {
 	bg[NORMAL]        = @bg_color
+
 }
 
 style "aurora-statusbar" = "murrine-default"
@@ -486,21 +486,16 @@ style "nautilus-sidebar-title"
 	{
 		image
 		{
-		    function	= SHADOW
+			function	= SHADOW
 		}
 		image
 		{
-		    function	= BUTTON
-		    file		= "Others/null.png" # 1x1 pixel empty, transparent
-		}
-            image
-		{
-		    function	= ARROW
-                arrow_direction = DOWN
-                border        = {0,0,0,0}
-                stretch       = TRUE
-                recolorable   = TRUE
-		    file		= "Others/arrow-d.png" # this should be 9x9 pixels, arrow down
+			function	= ARROW
+			arrow_direction = DOWN
+			border        = {0,0,0,0}
+			stretch       = TRUE
+			recolorable   = TRUE
+			file		= "Others/arrow-d.png" # this should be 9x9 pixels, arrow down
 		}
 	}
 }

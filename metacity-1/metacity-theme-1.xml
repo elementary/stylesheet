@@ -17,7 +17,7 @@
 	<distance name="right_titlebar_edge" value="6"/>
 	<aspect_ratio name="button" value="1.0"/>
 	<distance name="title_vertical_pad" value="0"/>
-	<border name="title_border" left="20" right="2" top="4" bottom="3"/>
+	<border name="title_border" left="20" right="2" top="5" bottom="2"/>
 	<border name="button_border" left="1" right="1" top="3" bottom="0"/>
 </frame_geometry>
 
@@ -250,19 +250,33 @@
 <!-- minimize icon -->
 
 <draw_ops name="minimize_button_normal">
-	<image filename="min-focus-normal.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.70" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.80" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
 
 <draw_ops name="minimize_button_prelight">
-	<image filename="min-focus.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.60" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.70" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.25" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
 
 <draw_ops name="minimize_button_pressed">
@@ -274,11 +288,18 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_unfocused">
-	<image filename="min-focus-none.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.85" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/0.90" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<line 
+		color="shade/gtk:bg[NORMAL]/1.10" 
+		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
+		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
 
 <draw_ops name="blank">
