@@ -104,33 +104,32 @@
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="height-1" x2="width" y2="height-1"/>
 </draw_ops>
 
-<!-- ::: BEVEL ::: -->
-<draw_ops name="bevel">
-</draw_ops>
+<!-- ::: TITLEBAR ::: -->
 
-<draw_ops name="bevel_maximized">
+<draw_ops name="titlebar_gradient">
 	<gradient type="vertical" x="0" y="1" width="width" height="22">
 		<color value="shade/gtk:bg[NORMAL]/1.06"/>
 		<color value="shade/gtk:bg[NORMAL]/1.0"/>
 	</gradient>
+</draw_ops>
+
+<draw_ops name="titlebar_maximized">
+	<include name="titlebar_gradient"/>
 	<include name="maxed_border"/>
 </draw_ops>
 
-<draw_ops name="round_bevel">
-	<gradient type="vertical" x="0" y="1" width="width" height="22">
-		<color value="shade/gtk:bg[NORMAL]/1.06"/>
-		<color value="shade/gtk:bg[NORMAL]/1.0"/>
-	</gradient>
+<draw_ops name="round_titlebar">
+	<include name="titlebar_gradient"/>
 	<include name="border"/>
 	<include name="corners_outline"/>
 </draw_ops>
 
-<draw_ops name="bevel_shaded">
+<draw_ops name="titlebar_shaded">
 	<include name="border"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="height-1" x2="width" y2="height-1"/>
 </draw_ops>
 
-<draw_ops name="round_bevel_shaded">
+<draw_ops name="round_titlebar_shaded">
 	<include name="border"/>
 	<include name="corners_outline"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="5" y1="height-1" x2="width-6" y2="height-1"/>
@@ -143,7 +142,7 @@
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="shade/gtk:bg[NORMAL]/1.30" x="4 `max` (width-title_width)/2+1" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/1.15" x="4 `max` (width-title_width)/2+1" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="shade/gtk:bg[NORMAL]/0.70" x="3 `max` (width-title_width)/2" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
@@ -457,7 +456,7 @@
 
 <!-- ::: FRAME STYLES ::: -->
 <frame_style name="normal" geometry="normal">
-	<piece position="entire_background" draw_ops="round_bevel"/>
+	<piece position="entire_background" draw_ops="round_titlebar"/>
 	<piece position="title" draw_ops="title_unfocused"/>
 	<button function="close" state="normal" draw_ops="close_button_unfocused"/>
 	<button function="close" state="pressed" draw_ops="close_button_pressed"/>
@@ -474,11 +473,11 @@
 </frame_style>
 
 <frame_style name="normal_shaded" geometry="shaded" parent="normal">
-	<piece position="entire_background" draw_ops="round_bevel"/>
+	<piece position="entire_background" draw_ops="round_titlebar"/>
 </frame_style>
 
 <frame_style name="focused" geometry="normal" parent="normal">
-	<piece position="entire_background" draw_ops="round_bevel"/>
+	<piece position="entire_background" draw_ops="round_titlebar"/>
 	<piece position="title" draw_ops="title"/>
 	<button function="close" state="normal" draw_ops="close_button_normal"/>
 	<button function="close" state="pressed" draw_ops="close_button_pressed"/>
@@ -495,18 +494,18 @@
 </frame_style>
 
 <frame_style name="focused_shaded" geometry="shaded" parent="focused">
-	<piece position="entire_background" draw_ops="round_bevel_shaded"/>
+	<piece position="entire_background" draw_ops="round_titlebar_shaded"/>
 </frame_style>
 
 <frame_style name="normal_maximized" geometry="normal_maximized" parent="normal">
-	<piece position="entire_background" draw_ops="bevel_maximized"/>
+	<piece position="entire_background" draw_ops="titlebar_maximized"/>
 	<button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
 	<button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
 	<button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
 </frame_style>
 
 <frame_style name="focused_maximized" geometry="normal_maximized" parent="focused">
-	<piece position="entire_background" draw_ops="bevel_maximized"/>
+	<piece position="entire_background" draw_ops="titlebar_maximized"/>
 	<button function="maximize" state="normal" draw_ops="maximize_button_normal"/>
 	<button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
 	<button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
@@ -518,13 +517,13 @@
 </frame_style>
 
 <frame_style name="utility_normal" geometry="utility" parent="normal">
-	<piece position="entire_background" draw_ops="bevel"/>
 </frame_style>
+
 <frame_style name="utility_focused" geometry="utility" parent="focused">
-	<piece position="entire_background" draw_ops="bevel"/>
 </frame_style>
+
 <frame_style name="utility_focused_shaded" geometry="utility" parent="focused_shaded">
-	<piece position="entire_background" draw_ops="bevel_shaded"/>
+	<piece position="entire_background" draw_ops="titlebar_shaded"/>
 </frame_style>
 
 <frame_style_set name="normal">
