@@ -17,7 +17,7 @@
 	<distance name="right_titlebar_edge" value="6"/>
 	<aspect_ratio name="button" value="1.0"/>
 	<distance name="title_vertical_pad" value="0"/>
-	<border name="title_border" left="20" right="2" top="5" bottom="2"/>
+	<border name="title_border" left="2" right="2" top="5" bottom="2"/>
 	<border name="button_border" left="1" right="1" top="3" bottom="0"/>
 </frame_geometry>
 
