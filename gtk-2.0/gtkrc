@@ -957,7 +957,7 @@ class "GtkSpinButton"  				style "aurora-spinbutton"
 class "GtkScale"       				style "murrine-scale"
 class "GtkVScale"      				style "murrine-vscale"
 class "GtkHScale"      				style "murrine-hscale"
-class "GtkScrollbar"   				style "aurora-scrollbar"
+class "GtkScrollbar"   				style "minimal-scrollbar"
 class "GtkVScrollbar"  				style "murrine-vscrollbar"
 class "GtkHScrollbar"  				style "murrine-hscrollbar"
 
