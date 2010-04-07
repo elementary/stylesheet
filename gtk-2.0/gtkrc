@@ -5,8 +5,6 @@
 gtk_color_scheme = "base_color:#FFFFFF\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#f2f2f2\nframe_color:#C9C9C9\ninactive_frame_color:#C9C9C9"
 
 gtk-icon-size		= "gtk-button=16,16"
-gtk-button-images	= 0
-gtk-toolbar-style	= 0
 
 style "murrine-default"
 {
@@ -23,17 +21,19 @@ style "murrine-default"
 
 	GtkPaned		::handle-size          			= 6
 
-	GtkRange		::trough-border				= 1
+	GtkRange		::trough-border				= 0
 	GtkRange		::slider-width				= 14
 	GtkRange		::stepper-size				= 13
+	GtkRange		::stepper_spacing			= 0
 
-	GtkScale		::slider-length				= 15
-	GtkScale		::slider-width				= 15
-	GtkScale		::trough-side-details			= 1
+	GtkScale		::slider-length				= 14
+	GtkScale		::slider-width				= 14
+	GtkScale		::trough-border				= 4
 
 	GtkScrollbar		::min-slider-length			= 30
 	GtkScrollbar		::has_secondary_backward_stepper	= 1
 	GtkScrollbar		::has_secondary_forward_stepper		= 0
+
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
 
@@ -165,26 +165,24 @@ style "murrine-button" = "murrine-wider"
 	}
 }
 
-style "aurora-button" = "murrine-wider"
+style "equinox-button" = "murrine-wider"
 {
 	bg[NORMAL]      = shade (1.30, @bg_color)
 	bg[PRELIGHT]	= mix(0.93, shade (1.11,@bg_color), shade (1.04,@selected_bg_color))
 	bg[ACTIVE]      = shade (0.80, @bg_color)
 	bg[INSENSITIVE] = shade (1.055, @bg_color)
 	
-	engine "aurora" {
+	engine "equinox" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 }
 
-style "aurora-entry" = "murrine-wider"
+style "equinox-entry" = "murrine-wider"
 {
 	xthickness = 4
 
-	engine "aurora" {
+	engine "equinox" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 
 }
@@ -211,14 +209,14 @@ style "murrine-menu" = "murrine-default"
 	fg[INSENSITIVE]		= darker (@bg_color)
 }
 
-style "aurora-menu-item" = "murrine-wider"
+style "murrine-menu-item" = "murrine-wider"
 {
 	fg[PRELIGHT] 		= @selected_fg_color
 	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
 
-	engine "aurora" {
-		curvature	= 0
-		arrowsize	= 1
+	engine "murrine" {
+		roundness	= 0
+		#arrowsize	= 1
 	}
 }
 
@@ -265,17 +263,19 @@ style "murrine-tooltips" = "murrine-wider"
 	fg[NORMAL] = @tooltip_fg_color
 }
 
-style "murrine-progressbar" = "murrine-thin"
+style "equinox-progressbar"
 {
+	xthickness   = 1
+	ythickness   = 1
 
+	font_name    = "Bold"
+
+	bg[NORMAL]   = shade (2.0, @bg_color)
 	fg[PRELIGHT] = lighter (@selected_fg_color)
-  	bg[NORMAL]   = shade (0.98, @bg_color)
-	bg[SELECTED] = @selected_bg_color
 
-	engine "murrine" {
-		roundness = 1
-		lightborder_shade   = 1.5
-		lightborderstyle   = 0
+	engine "equinox" {
+		curvature 	= 2.5
+		animation       = TRUE
 	}
 }
 
@@ -292,28 +292,30 @@ style "aurora-statusbar" = "murrine-default"
 	}
 }
 
-style "aurora-comboboxentry"
+style "equinox-comboboxentry"
 {
-	engine "aurora" {
+	engine "equinox" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 }
 
-style "aurora-spinbutton"
+style "equinox-spinbutton"
 {
-	engine "aurora" {
+	engine "equinox" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 }
 
-style "murrine-scale" = "aurora-button"
+style "equinox-scale" = "equinox-button"
 {
+	bg[NORMAL]     = shade (1.05, @bg_color)
+	bg[PRELIGHT]   = shade (1.15, @bg_color)
+	base[SELECTED] = @selected_bg_color
 
-	engine "murrine" 
+	engine "equinox" 
 	{
-		roundness	= 6
+		curvature	= 6
+		scalesliderstyle    = 0
 	}
 }
 
@@ -931,16 +933,6 @@ style "totem-main"
 
 }
 
-###################### TRANSMISSION #####################
-
-style "transmission-main"
-{
-	engine "aurora"
-	{
-		curvature	= 6.0
-	}
-}
-
 ###########
 # Matches #
 ###########
@@ -957,10 +949,10 @@ class "GtkToolbar"   				style "murrine-toolbar"
 class "GtkRange"     				style "murrine-wide"
 class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
-class "GtkEntry"     				style "aurora-entry"
+class "GtkEntry"     				style "equinox-entry"
 
-class "GtkSpinButton"  				style "aurora-spinbutton"
-class "GtkScale"       				style "murrine-scale"
+class "GtkSpinButton"  				style "equinox-spinbutton"
+class "GtkScale"       				style "equinox-scale"
 class "GtkVScale"      				style "murrine-vscale"
 class "GtkHScale"      				style "murrine-hscale"
 class "GtkScrollbar"   				style "minimal-scrollbar"
@@ -978,24 +970,24 @@ widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"  style "murrine-notebook"
 
-widget_class "*<GtkButton>"      		style "aurora-button"
+widget_class "*<GtkButton>"      		style "equinox-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
 
 widget_class "*<GtkNotebook>*"    		style "notebook-close"
 
-widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
-widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
+widget_class "*<GtkComboBoxEntry>*"		style "equinox-comboboxentry"
+widget_class "*<GtkCombo>*"         		style "equinox-comboboxentry"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
-widget_class "*<GtkMenuItem>*"          	style "aurora-menu-item"
+widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
 widget_class "*<GtkSeparatorMenuItem>*" 	style "murrine-separator-menu-item"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 
-widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
+widget_class "*<GtkProgressBar>"       		style "equinox-progressbar"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
@@ -1089,7 +1081,7 @@ class "GtkCTree" style "expander-fix"
 
 widget_class "*Nautilus*Window*"                		style "nautilus-window-base"
 widget_class "*Nautilus*Toolbar*"               		style "murrine-toolbar"
-widget_class "*Nautilus*Toolbar*Button"      			style "aurora-button"
+widget_class "*Nautilus*Toolbar*Button"      			style "equinox-button"
 widget_class "*Nautilus*Menu*"               			style "murrine-menu"
 widget_class "*Nautilus*Statusbar*"             		style "nautilus-statusbar"
 widget "*Nautilus*Splitter"                     		style "nautilus-handle"
@@ -1161,11 +1153,6 @@ widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
 #widget		"MidoriBrowser*GtkStatusbar*"					style "nautilus-statusbar"
-
-##################################
-# Transmission
-##################################
-widget		"Transmission*"							style "transmission-main"
 
 ##################################
 # Banshee
