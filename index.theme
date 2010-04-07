@@ -12,3 +12,4 @@ GtkTheme=elementary
 MetacityTheme=elementary
 IconTheme=elementary-monochrome
 CursorTheme=DMZ-White
+ButtonLayout=close,minimize,maximize:menu
