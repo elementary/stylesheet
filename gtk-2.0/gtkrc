@@ -2,9 +2,11 @@
 # Author:	Daniel Fore <Daniel.P.Fore@gmail.com>
 # License:	GPL
 
-gtk_color_scheme = "base_color:#FFFFFF\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#f2f2f2\nframe_color:#C9C9C9\ninactive_frame_color:#C9C9C9"
+gtk_color_scheme = "base_color:#FFFFFF\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#000\ntooltip_fg_color:#FFF\nframe_color:#C9C9C9\ninactive_frame_color:#C9C9C9"
 
 gtk-icon-size		= "gtk-button=16,16"
+
+gtk-auto-mnemonics = 1
 
 style "murrine-default"
 {
@@ -259,7 +261,11 @@ style "murrine-frame-title"
 
 style "murrine-tooltips" = "murrine-wider"
 {
+	xthickness = 8
+	ythickness = 5
+
 	bg[NORMAL] = @tooltip_bg_color
+	bg[SELECTED] = "#000000"
 	fg[NORMAL] = @tooltip_fg_color
 }
 
