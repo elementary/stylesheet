@@ -150,25 +150,12 @@ style "murrine-wider"
 	bg[SELECTED]		= @selected_bg_color
 }
 
-style "murrine-button" = "murrine-wider"
-{
-	GtkWidget	::focus-line-width	= 0
-	GtkWidget	::focus-padding		= 2
-
-	bg[NORMAL]      = shade (1.30, @bg_color)
-	bg[PRELIGHT]	= mix(0.93, shade (1.11,@bg_color), shade (1.04,@selected_bg_color))
-	bg[ACTIVE]      = shade (0.80, @bg_color)
-	bg[INSENSITIVE] = shade (1.055, @bg_color)
-	
-	engine "murrine" {
-		textstyle	= 1
-		contrast	= 1.4
-		reliefstyle	= 4
-	}
-}
-
 style "equinox-button" = "murrine-wider"
 {
+
+	GtkWidget	::focus-line-width	= 2
+	GtkWidget	::focus-padding		= 0
+
 	bg[NORMAL]      = shade (1.30, @bg_color)
 	bg[PRELIGHT]	= mix(0.93, shade (1.11,@bg_color), shade (1.04,@selected_bg_color))
 	bg[ACTIVE]      = shade (0.80, @bg_color)
@@ -205,6 +192,7 @@ style "murrine-tasklist" = "murrine-wide"
 
 style "murrine-menu" = "murrine-default"
 {
+
 	fg[PRELIGHT]		= @selected_fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
@@ -213,30 +201,12 @@ style "murrine-menu" = "murrine-default"
 
 style "murrine-menu-item" = "murrine-wider"
 {
+	engine "equinox" {
+	}
+
 	fg[PRELIGHT] 		= @selected_fg_color
 	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
-
-	engine "murrine" {
-		roundness	= 0
-		#arrowsize	= 1
-	}
 }
-
-style "murrine-separator-menu-item"
-{
-    	engine "pixmap" 
-	{
-	image 
-	{
-       	function        = HLINE
-	recolorable     = TRUE
-	file            = "Menu/menu-line.png"
-	stretch         = TRUE
-	}
-    }
-}
-
-
 
 style "murrine-treeview"
 {
@@ -323,15 +293,6 @@ style "equinox-scale" = "equinox-button"
 		curvature	= 6
 		scalesliderstyle    = 0
 	}
-}
-
-style "murrine-hscale"
-{
-}
-
-style "murrine-vscale"
-{
-
 }
 
 style "murrine-scrollbar" = "murrine-thin"
@@ -687,16 +648,6 @@ style "murrine-radiocheck" = "murrine-default"
   base[NORMAL]	= @selected_fg_color			# enabled background
 }
 
-######################## Banshee #######################
-
-
-style "banshee-main"
-{
-#	GtkStatusbar	::shadow_type	= GTK_SHADOW_NONE
-#	GtkMenubar	::shadow_type	= GTK_SHADOW_NONE
-#	GtkToolbar	::shadow_type	= GTK_SHADOW_NONE
-}
-
 ################### EOG (Eye of Gnome) #################
 
 style "eog-window-base" = "elementary-dark"
@@ -959,8 +910,6 @@ class "GtkEntry"     				style "equinox-entry"
 
 class "GtkSpinButton"  				style "equinox-spinbutton"
 class "GtkScale"       				style "equinox-scale"
-class "GtkVScale"      				style "murrine-vscale"
-class "GtkHScale"      				style "murrine-hscale"
 class "GtkScrollbar"   				style "minimal-scrollbar"
 class "GtkVScrollbar"  				style "murrine-vscrollbar"
 class "GtkHScrollbar"  				style "murrine-hscrollbar"
@@ -988,7 +937,6 @@ widget_class "*<GtkCombo>*"         		style "equinox-comboboxentry"
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
-widget_class "*<GtkSeparatorMenuItem>*" 	style "murrine-separator-menu-item"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
@@ -1022,10 +970,6 @@ widget "gtk-tooltip*" 				style "murrine-tooltips"
 ###################################################
 # Special cases and work arounds
 ###################################################
-
-# Special case the nautilus-extra-view-widget
-# ToDo: A more generic approach for all applications that have a widget like this.
-widget "*.nautilus-extra-view-widget" 		style : highest "murrine-nautilus-location"
 
 # Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
 # Note that the work around assumes that the combobox is _not_ in
@@ -1159,12 +1103,6 @@ widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
 #widget		"MidoriBrowser*GtkStatusbar*"					style "nautilus-statusbar"
-
-##################################
-# Banshee
-##################################
-
-widget  "*gtksharp*Player*"					style "banshee-main"
 
 ##################################
 # Totem
