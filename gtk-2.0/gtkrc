@@ -707,7 +707,7 @@ style "nautilus-sidebar" {
 
 style "nautilus-view" = "murrine-default"
 {
-	xthickness		= 8	
+	xthickness		= 0	
 }
 
 
