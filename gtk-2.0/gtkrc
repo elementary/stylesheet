@@ -47,11 +47,6 @@ style "murrine-default"
 
 	GtkWidget		::new-tooltip-style			= 1
 
-#	NautilusIconContainer	::highlight_alpha			= 145
-
-	# Glow the tasklist by changing the color, instead of overlaying it with a rectangle
-	#WnckTasklist   ::fade-overlay-rect    = 0
-
 	xthickness = 1
 	ythickness = 1
 
@@ -150,7 +145,7 @@ style "murrine-wider"
 	bg[SELECTED]		= @selected_bg_color
 }
 
-style "equinox-button" = "murrine-wider"
+style "aurora-button" = "murrine-wider"
 {
 
 	GtkWidget	::focus-line-width	= 2
@@ -161,17 +156,19 @@ style "equinox-button" = "murrine-wider"
 	bg[ACTIVE]      = shade (0.80, @bg_color)
 	bg[INSENSITIVE] = shade (1.055, @bg_color)
 	
-	engine "equinox" {
+	engine "aurora" {
 		curvature	= 3.0
+		old_arrowstyle  = FALSE
 	}
 }
 
-style "equinox-entry" = "murrine-wider"
+style "aurora-entry" = "murrine-wider"
 {
 	xthickness = 4
 
-	engine "equinox" {
+	engine "aurora" {
 		curvature	= 3.0
+		old_arrowstyle  = FALSE
 	}
 
 }
@@ -239,18 +236,16 @@ style "murrine-tooltips" = "murrine-wider"
 	fg[NORMAL] = @tooltip_fg_color
 }
 
-style "equinox-progressbar"
+style "murrine-progressbar"
 {
-	xthickness   = 1
-	ythickness   = 1
-
-	font_name    = "Bold"
+	xthickness   = 0
+	ythickness   = 0
 
 	bg[NORMAL]   = shade (2.0, @bg_color)
 	fg[PRELIGHT] = lighter (@selected_fg_color)
 
-	engine "equinox" {
-		curvature 	= 2.5
+	engine "murrine" {
+		roundness 	= 2
 		animation       = TRUE
 	}
 }
@@ -268,21 +263,23 @@ style "aurora-statusbar" = "murrine-default"
 	}
 }
 
-style "equinox-comboboxentry"
+style "aurora-comboboxentry"
 {
-	engine "equinox" {
+	engine "aurora" {
 		curvature	= 3.0
+		old_arrowstyle  = FALSE
 	}
 }
 
-style "equinox-spinbutton"
+style "aurora-spinbutton"
 {
-	engine "equinox" {
+	engine "aurora" {
 		curvature	= 3.0
+		old_arrowstyle  = FALSE
 	}
 }
 
-style "equinox-scale" = "equinox-button"
+style "equinox-scale" = "aurora-button"
 {
 	bg[NORMAL]     = shade (1.05, @bg_color)
 	bg[PRELIGHT]   = shade (1.15, @bg_color)
@@ -906,9 +903,9 @@ class "GtkToolbar"   				style "murrine-toolbar"
 class "GtkRange"     				style "murrine-wide"
 class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
-class "GtkEntry"     				style "equinox-entry"
+class "GtkEntry"     				style "aurora-entry"
 
-class "GtkSpinButton"  				style "equinox-spinbutton"
+class "GtkSpinButton"  				style "aurora-spinbutton"
 class "GtkScale"       				style "equinox-scale"
 class "GtkScrollbar"   				style "minimal-scrollbar"
 class "GtkVScrollbar"  				style "murrine-vscrollbar"
@@ -925,14 +922,14 @@ widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"  style "murrine-notebook"
 
-widget_class "*<GtkButton>"      		style "equinox-button"
+widget_class "*<GtkButton>"      		style "aurora-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
 
 widget_class "*<GtkNotebook>*"    		style "notebook-close"
 
-widget_class "*<GtkComboBoxEntry>*"		style "equinox-comboboxentry"
-widget_class "*<GtkCombo>*"         		style "equinox-comboboxentry"
+widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
+widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
@@ -941,7 +938,7 @@ widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 
-widget_class "*<GtkProgressBar>"       		style "equinox-progressbar"
+widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
@@ -1031,7 +1028,7 @@ class "GtkCTree" style "expander-fix"
 
 widget_class "*Nautilus*Window*"                		style "nautilus-window-base"
 widget_class "*Nautilus*Toolbar*"               		style "murrine-toolbar"
-widget_class "*Nautilus*Toolbar*Button"      			style "equinox-button"
+widget_class "*Nautilus*Toolbar*Button"      			style "aurora-button"
 widget_class "*Nautilus*Menu*"               			style "murrine-menu"
 widget_class "*Nautilus*Statusbar*"             		style "nautilus-statusbar"
 widget "*Nautilus*Splitter"                     		style "nautilus-handle"
