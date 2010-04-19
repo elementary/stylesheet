@@ -780,8 +780,10 @@ style "nautilus-handle"
 
 style "nautilus-statusbar" = "murrine-toolbar"
 {
-	bg[NORMAL]	                  = @bg_color
+	bg[NORMAL]	        = @bg_color
+
 	engine "murrine" {
+		roundness  = 6
 	}
 	
 }
@@ -1026,19 +1028,12 @@ class "GtkCTree" style "expander-fix"
 # Order of assignment is important
 #############################################
 
-widget_class "*Nautilus*Window*"                		style "nautilus-window-base"
-widget_class "*Nautilus*Toolbar*"               		style "murrine-toolbar"
-widget_class "*Nautilus*Toolbar*Button"      			style "aurora-button"
-widget_class "*Nautilus*Menu*"               			style "murrine-menu"
+#widget_class "*Nautilus*Window*"                		style "nautilus-window-base"
 widget_class "*Nautilus*Statusbar*"             		style "nautilus-statusbar"
 widget "*Nautilus*Splitter"                     		style "nautilus-handle"
 widget_class "*Nautilus*View*"					style "nautilus-view"
 widget_class "*NautilusSidePane.*"				style "nautilus-sidebar-title"
 widget_class "*Nautilus*Places*Sidebar*"			style "nautilus-sidebar"
-widget_class "*Nautilus*Side*.GtkWidget"			style "nautilus-sidebar"
-widget_class "*Nautilus*Side*Title*"            		style "nautilus-sidebar-title"
-widget_class "*Nautilus*Notebook"    				style "murrine-notebook"
-widget_class "*Nautilus*Scrollbar"   				style "minimal-scrollbar"
 
 widget "*.nautilus-extra-view-widget*"				style:highest "elementary-dark"
 
