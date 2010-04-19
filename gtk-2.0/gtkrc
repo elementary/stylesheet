@@ -672,24 +672,11 @@ style "eog-statusbar"
 ####################### Nautilus #######################
 
 style "nautilus-sidebar" {
-	
-	#bg[PRELIGHT]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 
 	font_name 	                  = "Regular"
 
-      	# These are the old values for the blue sidebar
-	#GtkTreeView::odd_row_color		= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
-	#GtkTreeView::even_row_color		= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
-
-	GtkTreeView::odd_row_color		= @bg_color
-	GtkTreeView::even_row_color		= @bg_color
-	
-	GtkPaned::handle_size                     = 1
-	GtkWidget::wide_separator		  = 1
-	GtkWidget::separator_width		  = 1
-	GtkWidget::separator_height		  = 0
-	GtkWidget::focus_line_width		  = 0
-	GtkWidget::draw_border                    = {0,0,0,0}
+	GtkTreeView::odd_row_color		= "#e2e2e2"
+	GtkTreeView::even_row_color		= "#e2e2e2"
 
       # these make the padding from left window edge a little more sane
 	GtkTreeView::vertical_separator           = 4
@@ -702,68 +689,16 @@ style "nautilus-sidebar" {
 	ythickness                                = 0
 }
 
-style "nautilus-view" = "murrine-default"
+style "nautilus-view"
 {
-	xthickness		= 0	
-}
+	xthickness		= 0
+	ythickness		= 1
 
-
-style "nautilus-sidebar-title"
-{
-	# These are the old values for the blue sidebar
-	#fg[NORMAL]	        = mix(0.50, shade (0.63,@bg_color), shade (0.63, @selected_bg_color))
-	#fg[PRELIGHT]	        = shade (0.65, @selected_bg_color)
-	#bg[PRELIGHT]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
-
-	fg[NORMAL]	        = shade (1.60, @text_color)
-	fg[PRELIGHT]	        = shade (1.25, @text_color)
-	bg[PRELIGHT]       	= @bg_color
-
-	stock["gtk-close"] = {{ "Others/null.png", *, *, * }} # Get rid of the close icon
-
-	font_name 	                  = "semibold"
-
-	GtkExpander::expander_spacing             = 0
-        GtkArrow::arrow-scaling                   = 0.6 # allowed: 0.1 ~ 1.0 (0.6 is an approximation to get 9 by 9 pixels arrow)
-        GtkButton::image-spacing                  = 0
-        GtkButton::inner-border                   = {0, 0, 4, 0}
-	GtkButton::child-displacement-x           = 0
-	GtkButton::child-displacement-y           = 0
-      # with this we'd get a tight button, with 0 pixels frame so the height matches the label plus 1 pixel (8 + 1 = 9)
-	GtkButton::default-border                 = { 0, 0, 0, 0 }
-	
-      xthickness                                = 2
-      ythickness                                = 0	
-	
-
-	
-	engine "pixmap"
-	{
-		image
-		{
-			function	= SHADOW
-		}
-		image
-		{
-			function	= ARROW
-			arrow_direction = DOWN
-			border        = {0,0,0,0}
-			stretch       = TRUE
-			recolorable   = TRUE
-			file		= "Others/arrow-d.png" # this should be 9x9 pixels, arrow down
-		}
-	}
-}
-
-
-style "nautilus-window-base"
-{	
-	#bg[NORMAL]       	= mix(0.30, @bg_color, shade (1.27, @selected_bg_color))
 }
 
 style "nautilus-handle"
 {
-	GtkPaned::handle-size         = 1
+	GtkPaned::handle-size         = 2
 	
 	engine "pixmap"
 	{
@@ -778,21 +713,7 @@ style "nautilus-handle"
 	}
 }
 
-style "nautilus-statusbar" = "murrine-toolbar"
-{
-	bg[NORMAL]	        = @bg_color
-
-	engine "murrine" {
-		roundness  = 6
-	}
-	
-}
-
 style "smaller-text"
-{
-}
-
-style "handle"
 {
 }
 
@@ -1027,12 +948,8 @@ class "GtkCTree" style "expander-fix"
 # NAUTILUS
 # Order of assignment is important
 #############################################
-
-#widget_class "*Nautilus*Window*"                		style "nautilus-window-base"
-widget_class "*Nautilus*Statusbar*"             		style "nautilus-statusbar"
 widget "*Nautilus*Splitter"                     		style "nautilus-handle"
 widget_class "*Nautilus*View*"					style "nautilus-view"
-widget_class "*NautilusSidePane.*"				style "nautilus-sidebar-title"
 widget_class "*Nautilus*Places*Sidebar*"			style "nautilus-sidebar"
 
 widget "*.nautilus-extra-view-widget*"				style:highest "elementary-dark"
