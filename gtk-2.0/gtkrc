@@ -250,6 +250,27 @@ style "murrine-progressbar"
 	}
 }
 
+style "murrine-progressbar-ultrathin"
+{
+	xthickness   = 0
+	ythickness   = 0
+
+	GtkProgressBar		::min-vertical-bar-width		= 8
+	GtkProgressBar		::min-horizontal-bar-height		= 8
+
+	bg[NORMAL]   = shade (2.0, @bg_color)
+	fg[PRELIGHT] = lighter (@selected_fg_color)
+
+	engine "murrine" {
+		progressbarstyle = 0
+		roundness 	= 12
+		highlight_shade     = 1.0 
+		lightborder_shade   = 1.05  
+		gradient_shades     = {1.20,1.12,1.08,1.00}
+		trough_shades       = { 0.98, 0.82 }
+	}
+}
+
 style "murrine-toolbar" 
 {
 	bg[NORMAL]        = @bg_color
@@ -692,7 +713,7 @@ style "nautilus-sidebar" {
 style "nautilus-view"
 {
 	xthickness		= 0
-	ythickness		= 1
+	ythickness		= 0
 
 }
 
