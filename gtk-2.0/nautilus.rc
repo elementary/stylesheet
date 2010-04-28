@@ -1,0 +1,86 @@
+style "nautilus-window-base"
+{
+	bg[NORMAL]	= @fm_color
+}
+
+style "nautilus-sidebar" {
+
+	font_name 	                  = "Regular"
+
+	GtkTreeView::odd_row_color		= "#e2e2e2"
+	GtkTreeView::even_row_color		= "#e2e2e2"
+
+      # these make the padding from left window edge a little more sane
+	GtkTreeView::vertical_separator           = 4
+	GtkTreeView::horizontal_separator         = 15
+	GtkTreeView::indent-expanders             = 1 # 1 means TRUE
+	GtkTreeView::expander-size                = 8
+	GtkExpander::expander_spacing             = 16
+	GtkButton::image_spacing                  = 4
+      	xthickness                                = 8
+	ythickness                                = 0
+}
+
+style "nautilus-view"
+{
+	xthickness		= 0
+	ythickness		= 0
+}
+
+style "nautilus-handle"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+		    function	= HANDLE
+		    recolorable	= TRUE
+		    file		= "Handles/handle-nautilus.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "nautilus-statusbar"
+{
+	xthickness	= 4
+
+	bg[NORMAL]	= @fm_color
+	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
+	bg[SELECTED]	= @fg_color
+
+	base[SELECTED]	= shade (0.8, @selected_bg_color)
+
+	fg[NORMAL]	= mix (0.4, @fm_color, @text_color)
+	fg[PRELIGHT]	= mix (0.4, @fm_color, @text_color)
+	fg[SELECTED]	= mix (0.4, @fm_color, @text_color)
+	fg[ACTIVE]	= mix (0.4, @fm_color, @text_color)
+	fg[INSENSITIVE]	= mix (0.4, @fm_color, @text_color)
+
+	engine "murrine" {}	
+}
+
+style "nautilus-scale"	= "equinox-scale"
+{
+	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
+
+	engine "equinox" {
+	scalesliderstyle = 2
+	}
+}
+widget_class "*Nautilus*Window*"			style "nautilus-window-base"
+widget "*Nautilus*Splitter"                     	style "nautilus-handle"
+widget_class "*Nautilus*View*"				style "nautilus-view"
+widget_class "*Nautilus*Places*Sidebar*"		style "nautilus-sidebar"
+widget_class "*Nautilus*Statusbar*"			style "nautilus-statusbar"
+widget_class "*Nautilus*Scale*"				style "nautilus-scale"
+
+widget_class "*Nautilus*Toolbar*"		style "murrine-toolbar"
+widget_class "*Nautilus*Toolbar*Button"		style:highest "aurora-button"
+widget_class "*Nautilus*Menu*"			style "murrine-menu"
+widget_class "*Nautilus*MenuBar*"		style "murrine-menubar"
+
+widget "*.nautilus-extra-view-widget*"			style:highest "elementary-dark"

@@ -2,11 +2,16 @@
 # Author:	Daniel Fore <Daniel.P.Fore@gmail.com>
 # License:	GPL
 
-gtk_color_scheme = "base_color:#FFFFFF\nfg_color:#4D4D4D\ntooltip_fg_color:#000000\nselected_bg_color:#A9B7C4\nselected_fg_color:#ffffff\ntext_color:#4D4D4D\nbg_color:#D6D6D6\ntooltip_bg_color:#000\ntooltip_fg_color:#FFF\nframe_color:#C9C9C9\ninactive_frame_color:#C9C9C9"
+gtk_color_scheme = "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base.
+gtk_color_scheme = "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text.
+gtk_color_scheme = "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips.
+gtk_color_scheme = "frame_color:#C9C9C9\ninactive_frame_color:#C9C9C9"			# Fix for Chrome
+gtk_color_scheme = "fm_color:#FFF"							# Color used in Nautilus and Thunar.
 
-gtk-icon-size		= "gtk-button=16,16"
-
-gtk-auto-mnemonics = 1
+gtk-icon-sizes		= "gtk-button=16,16"
+gtk-button-images	= 0 # Enables icons in buttons
+gtk-toolbar-style	= 0 # Disables text in toolbar
+gtk-auto-mnemonics	= 1
 
 style "murrine-default"
 {
@@ -690,50 +695,6 @@ style "eog-statusbar"
 	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
 }
 
-####################### Nautilus #######################
-
-style "nautilus-sidebar" {
-
-	font_name 	                  = "Regular"
-
-	GtkTreeView::odd_row_color		= "#e2e2e2"
-	GtkTreeView::even_row_color		= "#e2e2e2"
-
-      # these make the padding from left window edge a little more sane
-	GtkTreeView::vertical_separator           = 4
-	GtkTreeView::horizontal_separator         = 15
-	GtkTreeView::indent-expanders             = 1 # 1 means TRUE
-	GtkTreeView::expander-size                = 8
-	GtkExpander::expander_spacing             = 16
-	GtkButton::image_spacing                  = 4
-      	xthickness                                = 8
-	ythickness                                = 0
-}
-
-style "nautilus-view"
-{
-	xthickness		= 0
-	ythickness		= 0
-
-}
-
-style "nautilus-handle"
-{
-	GtkPaned::handle-size         = 2
-	
-	engine "pixmap"
-	{
-		image # for the thin gray line separating the sidepane and viewpane
-		{
-		    function	= HANDLE
-		    recolorable	= TRUE
-		    file		= "Handles/handle-nautilus.png"
-		    stretch		= TRUE
-		    border 		= { 0, 0, 0, 0 }
-		}
-	}
-}
-
 style "smaller-text"
 {
 }
@@ -803,6 +764,8 @@ style "midori-notebook" = "murrine-notebook"
 	ythickness			= 0
 
 	GtkNotebook::tab-overlap	= 0
+
+	stock["gtk-close"] = {{ "Icons/close-small.png", *, *, * }}
 
 	bg[NORMAL]			= shade (1.0, @bg_color)		#foreground tab color
 	bg[PRELIGHT]			= shade (0.9, @bg_color)		#close tab prelight
@@ -965,16 +928,6 @@ class "GtkExpander" style "expander-fix"
 class "GtkTreeView" style "expander-fix"
 class "GtkCTree" style "expander-fix"
 
-############################################
-# NAUTILUS
-# Order of assignment is important
-#############################################
-widget "*Nautilus*Splitter"                     		style "nautilus-handle"
-widget_class "*Nautilus*View*"					style "nautilus-view"
-widget_class "*Nautilus*Places*Sidebar*"			style "nautilus-sidebar"
-
-widget "*.nautilus-extra-view-widget*"				style:highest "elementary-dark"
-
 ##################################
 # EOG
 ##################################
@@ -1039,4 +992,6 @@ widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar
 ##################################
 
 widget	"totem_*_window*"					style "totem-main"
+
+include "nautilus.rc"
 
