@@ -1,0 +1,60 @@
+style "eog-window"
+{
+	xthickness              = 0
+	ythickness              = 0
+
+	base[NORMAL]		= "#3B3B3B"
+
+	bg[NORMAL]		= "#3B3B3B"
+	bg[ACTIVE]		= "#434241"
+	bg[PRELIGHT]		= "#4D4D4D"
+
+	fg[NORMAL]              = "#D6D6D6"
+	fg[PRELIGHT]            = "#D6D6D6"
+	fg[SELECTED]            = "#D6D6D6"
+	fg[ACTIVE]              = "#D6D6D6"
+	fg[INSENSITIVE]         = "#D6D6D6"
+
+	text[NORMAL]      	= "#D6D6D6"
+	text[PRELIGHT]    	= "#D6D6D6"
+	text[ACTIVE]      	= "#D6D6D6"
+	text[SELECTED]   	= "#D6D6D6"
+	text[INSENSITIVE]	= "#4D4D4D"
+	
+	GtkWidget::shadow_type			= GTK_SHADOW_NONE
+	GtkWidget::draw_border			= {0,0,0,0}
+	GtkScrolledWindow::scrollbar-spacing	= 0
+	GtkScrolledWindow::shadow_type		= GTK_SHADOW_NONE	
+}
+
+style "eog-statusbar"
+{
+	xthickness                    = 6
+	ythickness                    = 4
+
+	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
+}
+
+style "eog-scrollbar" = "murrine-thin"
+{
+
+	bg[ACTIVE]		= "#666362"	# Trough color
+	bg[NORMAL]              = shade(0.95, @selected_bg_color)
+	bg[PRELIGHT]            = @selected_bg_color
+
+	text[NORMAL]            = "#D6D6D6"	# Arrow color
+
+	GtkWidget::draw-border  = {0,0,0,0}
+
+	engine "aurora"
+	{
+		curvature	= 6.0
+	}
+}
+
+widget_class "*Eog*Window*"			style "eog-window"
+widget_class "*Eog*Toolbar*"              			style "murrine-wide"
+widget_class "*Eog*Menu*"               			style "murrine-menu"
+widget_class "Eog*Statusbar*"                  			style "eog-statusbar"
+widget "Eog*Statusbar*.*"                      			style "eog-statusbar"
+widget_class "Eog*Scrollbar"           				style "eog-scrollbar"

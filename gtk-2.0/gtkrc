@@ -671,30 +671,6 @@ style "murrine-radiocheck" = "murrine-default"
   base[NORMAL]	= @selected_fg_color			# enabled background
 }
 
-################### EOG (Eye of Gnome) #################
-
-style "eog-window-base" = "elementary-dark"
-{
-	xthickness              = 0
-	ythickness              = 0
-
-	fg[SELECTED]            = "#D6D6D6"
-	fg[ACTIVE]              = "#D6D6D6"
-	fg[INSENSITIVE]         = "#D6D6D6"
-
-	GtkScrolledWindow::scrollbar-spacing  = 0
-	GtkWidget::shadow_type                    = GTK_SHADOW_NONE
-	GtkWidget::draw_border                    = {0,0,0,0}
-	GtkScrolledWindow::shadow_type            = GTK_SHADOW_NONE	
-}
-
-style "eog-statusbar"
-{
-	xthickness                    = 6
-	ythickness                    = 4
-	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
-}
-
 style "smaller-text"
 {
 }
@@ -929,16 +905,6 @@ class "GtkTreeView" style "expander-fix"
 class "GtkCTree" style "expander-fix"
 
 ##################################
-# EOG
-##################################
-widget_class "*Eog*Window*"					style "eog-window-base"
-widget_class "*Eog*Toolbar*"              			style "murrine-wide"
-widget_class "*Eog*Menu*"               			style "murrine-menu"
-widget_class "Eog*Statusbar*"                  			style "eog-statusbar"
-widget "Eog*Statusbar*.*"                      			style "eog-statusbar"
-widget_class "Eog*Scrollbar"           				style "aurora-scrollbar-dark"
-
-##################################
 # F-SPOT
 ##################################
 
@@ -993,5 +959,7 @@ widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar
 
 widget	"totem_*_window*"					style "totem-main"
 
+include "eog.rc"
 include "nautilus.rc"
+
 

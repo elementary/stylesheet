@@ -1,0 +1,146 @@
+style "thunar-view" = "theme-thin"
+{
+	GtkScrolledWindow::scrollbar-spacing		= 0
+	GtkWidget::shadow_type				= GTK_SHADOW_NONE
+	GtkWidget::draw_border				= {0,0,0,0}
+	GtkScrolledWindow::shadow_type			= GTK_SHADOW_NONE
+	GtkScrolledWindow::scrollbars-within-bevel	= 0
+	
+	base[NORMAL]	= @fm_color
+}
+
+style "thunar-window-base" = "theme-thin"
+{
+	GtkScrolledWindow::scrollbar-spacing		= 0
+	GtkWidget::shadow_type				= GTK_SHADOW_NONE
+	GtkWidget::draw_border				= {0,0,0,0}
+	GtkScrolledWindow::shadow_type			= GTK_SHADOW_NONE
+	GtkScrolledWindow::scrollbars-within-bevel	= 0
+
+	
+	bg[NORMAL]	= @fm_color
+}
+
+style "thunar-statusbar" = "theme-default"
+{
+	GtkStatusbar	::shadow_type	= GTK_SHADOW_NONE
+
+	xthickness	= 2
+
+	bg[NORMAL]	= @fm_color
+}
+
+style "thunar-entry" = "theme-wider"
+{
+}
+
+style "thunar-path-entry"
+{
+	xthickness	= 3
+	ythickness	= 0
+
+	ThunarPathEntry	::icon-size			= 16 # Size of icon in path entry.
+	ThunarPathEntry	::honors-transparent-bg-hint	= 1
+}
+
+style "thunar-button" = "theme-wider"
+{
+	engine "equinox"
+	{
+		curvature	= 3.0
+	}
+}
+
+style "thunar-treeview-button"
+{
+	xthickness	= 2
+	ythickness	= 0
+
+	bg[NORMAL]	= @fm_color
+}
+
+style "thunar-toolbar" = "theme-toolbar"
+{
+	xthickness	= 1
+	ythickness	= 1
+}
+
+style "thunar-scrollbar" = "theme-thin"
+{
+	bg[PRELIGHT]	= shade (1.1, @selected_bg_color)
+	bg[ACTIVE]	= @selected_bg_color
+
+	base[NORMAL]	= @fm_color
+
+	text[NORMAL]		= @fg_color
+	text[PRELIGHT]		= shade (0.85, @selected_bg_color)
+	text[INSENSITIVE] 	= shade (0.9, @bg_color)
+
+	engine "equinox"
+	{
+		curvature	= 6
+	}
+}
+
+style "thunar-menubar" = "theme-menubar"
+{
+	xthickness	= 1
+	ythickness	= 0
+}
+
+style "thunar-icon-view"
+{
+	ThunarIconView	::column-spacing	= 6 # The additional space inserted between columns in the icon and compact view. Default - 6.
+	ThunarIconView	::row-spacing		= 6 # The additional space inserted between rows in the icon and compact view. Default - 6.
+}
+
+style "thunar-compact-view"
+{
+	ThunarCompactView	::column-spacing	= 6 # The additional space inserted between columns in the icon and compact view. Default - 6.
+	ThunarCompactView	::row-spacing		= 0 # The additional space inserted between rows in the icon and compact view. Default - 0.
+}
+
+style "thunar-location-buttons"
+{
+	ThunarLocationButtons	::spacing	= 0 # Space between location buttons. Default - 3.
+	xthickness	= 3
+	ythickness	= 3
+
+	engine "equinox"
+	{
+		curvature	= 0.0
+	}
+}
+
+style "thunar-handle"
+{
+	GtkPaned	::handle-size	= 3
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= HANDLE
+			recolorable	= TRUE
+		}
+	}
+}
+
+class "ThunarIconView"		style "thunar-icon-view"
+class "ThunarCompactView"	style "thunar-compact-view"
+
+widget_class "*Thunar*Window*"			style "thunar-window-base"
+widget_class "*Thunar*Toolbar*"			style "thunar-toolbar"
+widget_class "*Thunar*Toolbar*Button"		style:highest "theme-button"
+widget_class "*Thunar*Menu*"			style "theme-menu"
+widget_class "*Thunar*MenuBar*"			style "thunar-menubar"
+widget_class "*Thunar*Statusbar*"		style "thunar-statusbar"
+widget_class "*Thunar*View*"			style "thunar-view"
+widget_class "*Thunar*Notebook"			style "theme-notebook"
+widget_class "*Thunar*Scrollbar"		style "thunar-scrollbar"
+widget_class "*Thunar*Entry*"			style "thunar-entry"
+class "ThunarPathEntry"				style "thunar-path-entry"
+widget_class "*Thunar*Button*"			style "thunar-button"
+widget_class "*Thunar*Tree*Button*"		style "thunar-treeview-button"
+widget_class "*Thunar*Location*Button*" 	style "thunar-location-buttons"
+
