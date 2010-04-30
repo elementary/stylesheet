@@ -1,9 +1,0 @@
-
-style "ephy-location"
-{
-	fg[SELECTED]		= @fg_color
-	text[INSENSITIVE]	= "#3574B2"
-}
-
-widget_class "*Ephy*GtkEntry*"			style "ephy-location"
-

@@ -104,6 +104,30 @@ style "elementary-panel-buttons" = "elementary-panel"
 	}
 }
 
+style "elementary-panel-handle" 
+{
+    engine "pixmap"
+    {    
+        image
+        {
+		function 	= HANDLE
+        	file 		= "Others/null.png"
+            	border 		= { 0, 0, 0, 0 }
+            	stretch 	= TRUE
+            	orientation 	= VERTICAL
+        }    
+ 
+	image
+        {
+        	function 	= HANDLE
+            	file 		= "Others/null.png"
+            	border 		= { 0, 0, 0, 0 }
+            	stretch 	= TRUE
+            	orientation 	= HORIZONTAL
+        }
+    }
+}
+
 widget "*PanelWidget*"			style "elementary-panel"
 widget "*PanelApplet*"			style "elementary-panel"
 widget "*fast-user-switch*"		style "elementary-panel"
@@ -134,6 +158,9 @@ widget_class "*Panel*<GtkMenuBar>*"	style "elementary-main-menu-text"
 widget "*.clock-applet-button.*"	style "elementary-panel-text"
 widget "*PanelApplet*"			style "elementary-panel-text"
 
-# Panel buttons.
+# Panel buttons
 widget_class "*Panel*GtkToggleButton"	style:highest "elementary-panel-buttons"
 widget_class "*Panel*GtkButton"		style:highest "elementary-panel-buttons"
+
+# Hide ugly handle
+class "PanelAppletFrame" 		style:highest "elementary-panel-handle"
