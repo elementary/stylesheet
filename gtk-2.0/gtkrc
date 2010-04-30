@@ -9,9 +9,9 @@ gtk_color_scheme = "frame_color:#C9C9C9\ninactive_frame_color:#C9C9C9"			# Fix f
 gtk_color_scheme = "fm_color:#FFF"							# Color used in Nautilus and Thunar.
 
 gtk-icon-sizes		= "gtk-button=16,16"
-gtk-button-images	= 0 # Enables icons in buttons
+gtk-button-images	= 0 # Disables icons in buttons
 gtk-toolbar-style	= 0 # Disables text in toolbar
-gtk-auto-mnemonics	= 1
+gtk-auto-mnemonics	= 1 # Disables ugly lines under menu items
 
 style "murrine-default"
 {
@@ -675,53 +675,6 @@ style "smaller-text"
 {
 }
 
-###################### GNOME PANEL ######################
-
-style "elementary-panel"
-{
-	xthickness		= 4
-	ythickness		= 0
-
-	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
-
-	engine "murrine" {
-		textstyle = 1
-		roundness = 0
-	}
-}
-
-style "elementary-panel-light"
-{
-	xthickness		= 4
-	ythickness		= 0
-
-	fg[NORMAL]	= @fg_color
-
-	engine "murrine" {
-		textstyle = 1
-		roundness = 0
-	}
-}
-
-style "elementary-panel-text"
-{
-	fg[NORMAL]	= "#4D4D4D"
-	fg[PRELIGHT]	= "#4D4D4D"
-	fg[ACTIVE]	= "#ffffff"
-	text[NORMAL]	= "#4D4D4D"
-	text[PRELIGHT]	= "#4D4D4D"
-	text[ACTIVE]	= "#ffffff"
-
-	engine "murrine" {
-		textstyle = 1
-	}
-}
-
-style "elementary-main-menu-text" = "elementary-panel-text"
-{
-	fg[PRELIGHT]	= "#ffffff"
-	text[PRELIGHT]	= "#ffffff"
-}
 ######################### MIDORI ########################
 
 style "midori-main"
@@ -911,40 +864,6 @@ class "GtkCTree" style "expander-fix"
 widget	"main_window*ImageContainer"		style "elementary-dark"
 
 ##################################
-# Panel
-##################################
-
-widget "*PanelWidget*"			style "elementary-panel"
-widget "*PanelApplet*"			style "elementary-panel"
-widget "*fast-user-switch*"		style "elementary-panel"
-widget "*CPUFreq*Applet*"		style "elementary-panel"
-widget "*indicator-applet*"		style "elementary-panel"
-class "PanelApp*"			style "elementary-panel"
-class "PanelToplevel*"			style "elementary-panel"
-widget_class "*PanelToplevel*"		style "elementary-panel"
-widget_class "*notif*"			style "elementary-panel"
-widget_class "*Notif*"			style "elementary-panel"
-widget_class "*Tray*"			style "elementary-panel" 
-widget_class "*tray*"			style "elementary-panel"
-widget_class "*computertemp*"		style "elementary-panel"
-widget_class "*Applet*Tomboy*"		style "elementary-panel"
-widget_class "*Applet*Netstatus*"	style "elementary-panel"
-
-# Fixes for tooltip text in some apps.
-widget_class "*Notif*Beagle*"		style "elementary-panel-light"
-widget_class "*Notif*Brasero*"		style "elementary-panel-light"
-
-# XFCE panel theming.
-widget "*Xfce*Panel*"			style "elementary-panel"
-class "*Xfce*Panel*"			style "elementary-panel"
-
-# Make sure panel text color doesn't change
-widget_class "*Panel*MenuBar*"		style "elementary-main-menu-text"
-widget_class "*Panel*<GtkMenuBar>*"	style "elementary-main-menu-text"
-widget "*.clock-applet-button.*"	style "elementary-panel-text"
-widget "*PanelApplet*"			style "elementary-panel-text"
-
-##################################
 # Midori
 ##################################
 widget		"MidoriBrowser"							style "midori-main"
@@ -961,5 +880,5 @@ widget	"totem_*_window*"					style "totem-main"
 
 include "eog.rc"
 include "nautilus.rc"
-
+include "panel.rc"
 
