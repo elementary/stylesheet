@@ -173,9 +173,10 @@ style "equinox-button" = "murrine-wider"
 	GtkWidget	::focus-line-width	= 2
 	GtkWidget	::focus-padding		= 0
 
+	bg[ACTIVE]      = shade (0.90, @bg_color)
 	bg[NORMAL]	= shade (1.30, @bg_color)
 	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= shade (0.9, @selected_bg_color)
+	bg[SELECTED]	= shade (0.90, @selected_bg_color)
 	bg[INSENSITIVE]	= @bg_color
 
 	engine "equinox"
@@ -867,6 +868,8 @@ engine "" {}
 class "GtkExpander" style "expander-fix"
 class "GtkTreeView" style "expander-fix"
 class "GtkCTree" style "expander-fix"
+
+class "GtkArrow" style:highest "equinox-button"
 
 ##################################
 # F-SPOT
