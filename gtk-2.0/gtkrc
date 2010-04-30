@@ -150,20 +150,21 @@ style "murrine-wider"
 	bg[SELECTED]		= @selected_bg_color
 }
 
-style "aurora-button" = "murrine-wider"
+style "equinox-button" = "murrine-wider"
 {
 
 	GtkWidget	::focus-line-width	= 2
 	GtkWidget	::focus-padding		= 0
 
+	bg[ACTIVE]	= shade (0.80, @bg_color)
 	bg[NORMAL]	= shade (1.30, @bg_color)
 	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
 	bg[SELECTED]	= shade (0.9, @selected_bg_color)
 	bg[INSENSITIVE]	= @bg_color
 	
-	engine "aurora" {
+	engine "equinox" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
+		animation	= TRUE
 	}
 }
 
@@ -675,11 +676,16 @@ style "murrine-nautilus-location"
 {
 }
 
-style "murrine-radiocheck" = "murrine-default"
+style "equinox-radiocheck" = "murrine-default"
 {
-  bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
-  bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
-  base[NORMAL]	= @selected_fg_color			# enabled background
+	bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
+	bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
+	base[NORMAL]	= @selected_fg_color			# enabled background
+
+	engine "equinox"
+	{
+		animation	= TRUE
+	}
 }
 
 style "smaller-text"
@@ -739,8 +745,8 @@ style "totem-main"
 ###########
 
 # theme radio buttons and checkmarks
-class "GtkRadio*"                        	style "murrine-radiocheck"
-class "GtkCheck*"                           	style "murrine-radiocheck"
+class "GtkRadio*"                        	style "equinox-radiocheck"
+class "GtkCheck*"                           	style "equinox-radiocheck"
 
 # theme default style is applied to every widget
 class "GtkWidget"    				style "murrine-default"

@@ -92,7 +92,7 @@ widget_class "*Nautilus*Statusbar*"			style "nautilus-statusbar"
 widget_class "*Nautilus*Scale*"				style "nautilus-scale"
 
 widget_class "*Nautilus*Toolbar*"		style "murrine-toolbar"
-widget_class "*Nautilus*Toolbar*Button"		style:highest "aurora-button"
+widget_class "*Nautilus*Toolbar*Button"		style:highest "equinox-button"
 widget_class "*Nautilus*Menu*"			style "murrine-menu"
 widget_class "*Nautilus*MenuBar*"		style "murrine-menubar"
 
