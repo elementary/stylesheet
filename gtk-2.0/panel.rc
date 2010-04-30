@@ -111,19 +111,11 @@ style "elementary-panel-handle"
         image
         {
 		function 	= HANDLE
-        	file 		= "Others/null.png"
-            	border 		= { 0, 0, 0, 0 }
-            	stretch 	= TRUE
-            	orientation 	= VERTICAL
         }    
  
 	image
         {
         	function 	= HANDLE
-            	file 		= "Others/null.png"
-            	border 		= { 0, 0, 0, 0 }
-            	stretch 	= TRUE
-            	orientation 	= HORIZONTAL
         }
     }
 }
