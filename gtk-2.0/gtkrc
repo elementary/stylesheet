@@ -258,6 +258,12 @@ style "murrine-tooltips" = "murrine-wider"
 	bg[NORMAL] = @tooltip_bg_color
 	bg[SELECTED] = "#000000"
 	fg[NORMAL] = @tooltip_fg_color
+
+	engine "murrine"
+	{
+		roundness	= 0
+		trough_shades	= { 0.15, 0.3 }
+	}
 }
 
 style "murrine-progressbar"
