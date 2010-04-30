@@ -35,21 +35,295 @@ style "eog-statusbar"
 	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
 }
 
-style "eog-scrollbar" = "murrine-thin"
+style "minimal-scrollbar-dark"
 {
 
-	bg[ACTIVE]		= "#666362"	# Trough color
-	bg[NORMAL]              = shade(0.95, @selected_bg_color)
-	bg[PRELIGHT]            = @selected_bg_color
+    GtkRange::trough_border = 1
+    GtkRange::slider_width = 13
+    GtkRange::stepper_size = 13
 
-	text[NORMAL]            = "#D6D6D6"	# Arrow color
+    GtkScrollbar::min_slider_length = 30
 
-	GtkWidget::draw-border  = {0,0,0,0}
+    engine "pixmap" 
+    {
 
-	engine "aurora"
+######### Troughs ############
+
+        image 
+        {
+            function        = BOX
+            recolorable     = TRUE
+            detail          = "trough"
+            file            = "Scrollbars-Dark/scrollbar-vert-trough.png"
+            border          = { 0, 0, 39, 39 }
+            stretch         = TRUE
+            orientation     = VERTICAL
+        }
+
+        image 
+        {
+            function        = BOX
+            recolorable     = TRUE
+            detail          = "trough"
+            file            = "Scrollbars-Dark/scrollbar-horiz-trough.png"
+            border          = { 39, 39, 0, 0 }
+            stretch         = TRUE
+            orientation     = HORIZONTAL
+        }
+
+ ######### Sliders ############
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = NORMAL
+	    file            = "Scrollbars-Dark/scrollbar-horiz.png"
+	    border          = { 15, 15, 6, 6 }
+	    stretch         = TRUE
+	    orientation     = HORIZONTAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = ACTIVE
+	    file            = "Scrollbars-Dark/scrollbar-horiz.png"
+	    border          = { 15, 15, 6, 6 }
+	    stretch         = TRUE
+	    orientation     = HORIZONTAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = PRELIGHT
+	    file            = "Scrollbars-Dark/scrollbar-horiz-prelight.png"
+	    border          = { 15, 15, 6, 6 }
+	    stretch         = TRUE
+	    orientation     = HORIZONTAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = INSENSITIVE
+	    file            = "Scrollbars-Dark/scrollbar-horiz.png"
+	    border          = { 15, 15, 6, 6 }
+	    stretch         = TRUE
+	    orientation     = HORIZONTAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = NORMAL
+	    file            = "Scrollbars-Dark/scrollbar-vert.png"
+	    border          = { 6, 6, 15, 15 }
+	    stretch         = TRUE
+	    orientation     = VERTICAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = ACTIVE
+	    file            = "Scrollbars-Dark/scrollbar-vert.png"
+	    border          = { 6, 6, 15, 15 }
+	    stretch         = TRUE
+	    orientation     = VERTICAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = PRELIGHT
+	    file            = "Scrollbars-Dark/scrollbar-vert-prelight.png"
+	    border          = { 6, 6, 15, 15 }
+	    stretch         = TRUE
+	    orientation     = VERTICAL
+        }
+
+        image 
+        {
+	    function        = SLIDER
+	    recolorable     = TRUE
+	    state           = INSENSITIVE
+	    file            = "Scrollbars-Dark/scrollbar-vert.png"
+	    border          = { 6, 6, 15, 15 }
+	    stretch         = TRUE
+	    orientation     = VERTICAL
+        }
+
+ ######### Steppers ############
+
+	image 
 	{
-		curvature	= 6.0
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = NORMAL
+	file		    = "Scrollbars-Dark/stepper-up.png"
+	stretch		    = TRUE
+	arrow_direction	    = UP
 	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = ACTIVE
+	file		    = "Scrollbars-Dark/stepper-up.png"
+	stretch		    = TRUE
+	arrow_direction	    = UP
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = PRELIGHT
+	file		    = "Scrollbars-Dark/stepper-up.png"
+	stretch		    = TRUE
+	arrow_direction	    = UP
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = INSENSITIVE
+	file		    = "Scrollbars-Dark/stepper-up-insensitive.png"
+	stretch		    = TRUE
+	arrow_direction	    = UP
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = NORMAL
+	file		    = "Scrollbars-Dark/stepper-down.png"
+	stretch		    = TRUE
+	arrow_direction	    = DOWN
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = ACTIVE
+	file		    = "Scrollbars-Dark/stepper-down.png"
+	stretch		    = TRUE
+	arrow_direction	    = DOWN
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = PRELIGHT
+	file		    = "Scrollbars-Dark/stepper-down.png"
+	stretch		    = TRUE
+	arrow_direction	    = DOWN
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = INSENSITIVE
+	file		    = "Scrollbars-Dark/stepper-down-insensitive.png"
+	stretch		    = TRUE
+	arrow_direction	    = DOWN
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = NORMAL
+	file		    = "Scrollbars-Dark/stepper-left.png"
+	stretch		    = TRUE
+	arrow_direction	    = LEFT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = ACTIVE
+	file		    = "Scrollbars-Dark/stepper-left.png"
+	stretch		    = TRUE
+	arrow_direction	    = LEFT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = PRELIGHT
+	file		    = "Scrollbars-Dark/stepper-left.png"
+	stretch		    = TRUE
+	arrow_direction	    = LEFT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = INSENSITIVE
+	file		    = "Scrollbars-Dark/stepper-left-insensitive.png"
+	stretch		    = TRUE
+	arrow_direction	    = LEFT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = NORMAL
+	file		    = "Scrollbars-Dark/stepper-right.png"
+	stretch		    = TRUE
+	arrow_direction	    = RIGHT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = ACTIVE
+	file		    = "Scrollbars-Dark/stepper-right.png"
+	stretch		    = TRUE
+	arrow_direction	    = RIGHT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = PRELIGHT
+	file		    = "Scrollbars-Dark/stepper-right.png"
+	stretch		    = TRUE
+	arrow_direction	    = RIGHT
+	}
+
+	image 
+	{
+	function	    = STEPPER
+	recolorable	    = TRUE
+	state               = INSENSITIVE
+	file		    = "Scrollbars-Dark/stepper-right-insensitive.png"
+	stretch		    = TRUE
+	arrow_direction	    = RIGHT
+	}
+
+    }
 }
 
 widget_class "*Eog*Window*"			style "eog-window"
@@ -57,4 +331,4 @@ widget_class "*Eog*Toolbar*"              			style "murrine-wide"
 widget_class "*Eog*Menu*"               			style "murrine-menu"
 widget_class "Eog*Statusbar*"                  			style "eog-statusbar"
 widget "Eog*Statusbar*.*"                      			style "eog-statusbar"
-widget_class "Eog*Scrollbar"           				style "eog-scrollbar"
+widget_class "Eog*Scrollbar"           				style "minimal-scrollbar-dark"
