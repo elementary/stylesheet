@@ -150,6 +150,16 @@ style "murrine-wider"
 	bg[SELECTED]		= @selected_bg_color
 }
 
+style "equinox-separator"
+{
+	xthickness	= 2
+	ythickness	= 2
+
+	engine "equinox"
+	{
+	}
+}
+
 style "equinox-button" = "murrine-wider"
 {
 
@@ -799,6 +809,11 @@ widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 
 widget_class "*<GtkProgress>"			style "murrine-progressbar"
 widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
+
+# Toolar, Menubar, and other Separators
+widget_class "*<GtkSeparatorMenuItem>*" 		style:highest "equinox-separator"
+widget_class "*<GtkSeparatorToolItem>*" 		style:highest "equinox-separator"
+widget_class "*<GtkSeparator>*" 			style:highest "equinox-separator"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"

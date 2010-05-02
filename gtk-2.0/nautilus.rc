@@ -79,6 +79,9 @@ style "nautilus-scale"	= "equinox-scale"
 {
 	bg[NORMAL]	= @bg_color
 	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
+	bg[SELECTED]	= shade (0.8, @selected_bg_color)
+
+	base[SELECTED]	= @bg_color
 
 	engine "equinox" {
 	scalesliderstyle = 2
