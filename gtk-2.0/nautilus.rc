@@ -87,16 +87,25 @@ style "nautilus-scale"	= "equinox-scale"
 	scalesliderstyle = 2
 	}
 }
-widget_class "*Nautilus*Window*"			style "nautilus-window-base"
-widget "*Nautilus*Splitter"                     	style "nautilus-handle"
-widget_class "*Nautilus*View*"				style "nautilus-view"
-widget_class "*Nautilus*Places*Sidebar*"		style "nautilus-sidebar"
-widget_class "*Nautilus*Statusbar*"			style "nautilus-statusbar"
-widget_class "*Nautilus*Scale*"				style "nautilus-scale"
+
+style "nautilus-mode-button"
+{
+	bg[NORMAL]	= shade (1.15, @bg_color)
+	bg[PRELIGHT]	= shade (1.22, @selected_bg_color)
+	bg[SELECTED]	= shade (0.85, @bg_color)
+}
+
+widget_class "*Nautilus*Window*"		style "nautilus-window-base"
+widget "*Nautilus*Splitter"                    	style "nautilus-handle"
+widget_class "*Nautilus*View*"			style "nautilus-view"
+widget_class "*Nautilus*Places*Sidebar*"	style "nautilus-sidebar"
+widget_class "*Nautilus*Statusbar*"		style "nautilus-statusbar"
+widget_class "*Nautilus*Scale*"			style "nautilus-scale"
 
 widget_class "*Nautilus*Toolbar*"		style "murrine-toolbar"
 widget_class "*Nautilus*Toolbar*Button"		style:highest "equinox-button"
 widget_class "*Nautilus*Menu*"			style "murrine-menu"
 widget_class "*Nautilus*MenuBar*"		style "murrine-menubar"
 
-widget "*.nautilus-extra-view-widget*"			style:highest "elementary-dark"
+widget "*.nautilus-extra-view-widget*"		style:highest "elementary-dark"
+widget "*GtkModeButton*"			style "nautilus-mode-button"
