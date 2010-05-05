@@ -75,7 +75,63 @@ style "nautilus-statusbar"
       }
 }
 
-style "nautilus-scale"	= "equinox-scale"
+style "nautilus-scale"
+{
+	ythickness = 0
+	
+  engine "pixmap" 
+  {
+    image 
+    {
+      function			= BOX
+      recolorable		= TRUE
+      detail			= "trough"
+      file			= "Range/trough.png"
+      border			= { 10, 10, 5, 15 }
+      stretch			= TRUE
+      orientation		= HORIZONTAL
+    }	
+    image 
+    {
+      function			= SLIDER
+      recolorable		= TRUE
+      state           		= NORMAL
+      file			= "Others/null.png"
+      border			= { 0, 0, 0, 0 }
+      stretch			= TRUE
+      overlay_file		= "Range/slider.png"
+      overlay_stretch		= FALSE
+      orientation		= HORIZONTAL
+    }
+    image 
+    {
+      function			= SLIDER
+      recolorable		= TRUE
+     state           		= PRELIGHT
+      file			= "Others/null.png"
+      border			= { 0, 0, 0, 0 }
+      stretch			= TRUE
+      overlay_file		= "Range/slider-prelight.png"
+      overlay_stretch		= FALSE
+      orientation		= HORIZONTAL
+    }
+    image 
+    {
+      function			= SLIDER
+      recolorable		= TRUE
+      state           		= INSENSITIVE
+      file			= "Others/null.png"
+      border			= { 0, 0, 0, 0 }
+      stretch			= TRUE
+      overlay_file		= "Range/slider.png"
+      overlay_stretch		= FALSE
+      orientation		= HORIZONTAL
+    }
+  }
+}
+
+
+style "nautilus-scale2"	= "equinox-scale"
 {
 	bg[NORMAL]	= @bg_color
 	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
