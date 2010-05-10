@@ -77,7 +77,7 @@ style "elementary-panel-light"
 style "elementary-panel-text"
 {
 	fg[NORMAL]	= "#4D4D4D"
-	fg[PRELIGHT]	= "#ffffff"
+	fg[PRELIGHT]	= "#5D5D5D"
 	fg[ACTIVE]	= "#ffffff"
 	text[NORMAL]	= "#4D4D4D"
 	text[PRELIGHT]	= "#4D4D4D"
