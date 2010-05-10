@@ -50,7 +50,14 @@ style "elementary-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= INSENSITIVE
-		}  
+		} 
+
+		image
+		{
+			function		= ARROW
+			recolorable		= TRUE
+			arrow_direction		= DOWN
+		}
 	}
 }
 
