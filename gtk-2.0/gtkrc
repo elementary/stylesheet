@@ -922,4 +922,5 @@ widget	"totem_*_window*"					style "totem-main"
 include "eog.rc"
 include "nautilus.rc"
 include "panel.rc"
+include "terminal.rc"
 
