@@ -172,17 +172,17 @@ style "nautilus-menubar" = "murrine-menubar"
 	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
 }
 
-widget_class "*Nautilus*Window*"		style "nautilus-window-base"
-widget "*Nautilus*Splitter"                    	style "nautilus-handle"
-widget_class "*Nautilus*View*"			style "nautilus-view"
-widget_class "*Nautilus*Places*Sidebar*"	style "nautilus-sidebar"
-widget_class "*Nautilus*Statusbar*"		style "nautilus-statusbar"
-widget_class "*Nautilus*Scale*"			style "nautilus-scale"
+widget_class	"*Nautilus*Window*"		style "nautilus-window-base"
+widget		"*Nautilus*Splitter"		style "nautilus-handle"
+widget_class	"*Nautilus*View*"		style "nautilus-view"
+widget_class	"*Nautilus*Places*Sidebar*"	style "nautilus-sidebar"
+widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
+widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
 
-widget_class "*Nautilus*Toolbar*"		style "nautilus-toolbar"
-widget_class "*Nautilus*Toolbar*Button"		style:highest "equinox-button"
-widget_class "*Nautilus*Menu*"			style "murrine-menu"
-widget_class "*Nautilus*MenuBar*"		style "nautilus-menubar"
+widget_class	"*Nautilus*Toolbar*"		style "nautilus-toolbar"
+widget_class	"*Nautilus*Toolbar*Button"	style "equinox-button"
+widget_class	"*Nautilus*Menu*"		style "murrine-menu"
+widget_class	"*Nautilus*MenuBar*"		style "nautilus-menubar"
 
 widget "*.nautilus-extra-view-widget*"		style:highest "elementary-dark"
 widget "*GtkModeButton*"			style "nautilus-mode-button"

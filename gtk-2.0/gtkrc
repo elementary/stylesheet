@@ -86,7 +86,7 @@ style "murrine-default"
 		colorize_scrollbar  = TRUE
 		contrast            = 1.1   # 0.8 for less contrast, more than 1.0 for more contrast on borders
 		glazestyle          = 0     # 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
-		gradient_shades     = {1.15,1.05,1.04,0.9} # default: {1.1,1.0,1.0,1.1}
+		gradient_shades     = {1.15,1.05,1.04,0.9}
 		glowstyle	    = 4
 		highlight_shade     = 1.0  # set highlight amount for buttons or widgets
 		lightborder_shade   = 1.2   # sets lightborder amount for buttons or widgets
@@ -659,54 +659,6 @@ style "smaller-text"
 {
 }
 
-######################### MIDORI ########################
-
-style "midori-main"
-{
-	bg[NORMAL]			= shade (0.75, @bg_color)
-}
-
-style "midori-entry"
-{
-	ythickness			= 4
-}
-
-style "midori-notebook" = "murrine-notebook"
-{
-	xthickness			= 0
-	ythickness			= 0
-
-	GtkNotebook::tab-overlap	= 0
-
-	stock["gtk-close"] = {{ "Icons/close-small.png", *, *, * }}
-
-	bg[NORMAL]			= shade (1.0, @bg_color)		#foreground tab color
-	bg[PRELIGHT]			= shade (0.9, @bg_color)		#close tab prelight
-	bg[ACTIVE]			= shade (0.85, @bg_color)		#background tab color
-
-	engine "murrine" {
-		roundness		= 4
-	}
-}
-
-style "midori-panel-toolbar"
-{
-	bg[NORMAL]			= shade (0.85, @bg_color)
-}
-
-########################## TOTEM ########################
-
-style "totem-main"
-{
-	stock["gtk-media-pause"] = {{ "Icons/media-playback-pause.svg", *, *, * }}
-	stock["gtk-media-play"] = {{ "Icons/media-playback-start.svg", *, *, * }}
-	stock["gtk-media-next"] = {{ "Icons/media-skip-forward.svg", *, *, * }}
-	stock["gtk-media-previous"] = {{ "Icons/media-skip-backward.svg", *, *, * }}
-
-	stock["gtk-close"] = {{ "Icons/close.png", *, *, * }}
-
-}
-
 ###########
 # Matches #
 ###########
@@ -839,8 +791,9 @@ widget_class "*<GtkListItem>*" 				style "murrine-fg-is-text-color-workaround"
 
 widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 
-style "expander-fix" = "default" {
-engine "" {}
+style "expander-fix" = "default"
+{
+engine "equinox" {}
 }
 
 class "GtkExpander" style "expander-fix"
@@ -850,28 +803,13 @@ class "GtkCTree" style "expander-fix"
 class "GtkArrow" style:highest "equinox-button"
 
 ##################################
-# F-SPOT
+# Per-App Styles
 ##################################
 
-widget	"main_window*ImageContainer"		style "elementary-dark"
-
-##################################
-# Midori
-##################################
-widget		"MidoriBrowser"							style "midori-main"
-widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
-widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
-widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
-#widget		"MidoriBrowser*GtkStatusbar*"					style "nautilus-statusbar"
-
-##################################
-# Totem
-##################################
-
-widget	"totem_*_window*"					style "totem-main"
-
-include "eog.rc"
-include "nautilus.rc"
-include "panel.rc"
+include "Apps/eog.rc"
+include "Apps/midori.rc"
+include "Apps/nautilus.rc"
+include "Apps/panel.rc"
+include "Apps/totem.rc"
 #include "terminal.rc"
 

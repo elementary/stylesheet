@@ -1,0 +1,38 @@
+style "midori-main"
+{
+	bg[NORMAL]			= shade (0.75, @bg_color)
+}
+
+style "midori-entry"
+{
+	ythickness			= 4
+}
+
+style "midori-notebook" = "murrine-notebook"
+{
+	xthickness			= 0
+	ythickness			= 0
+
+	GtkNotebook::tab-overlap	= 0
+
+	stock["gtk-close"] = {{ "Icons/close-small.png", *, *, * }}
+
+	bg[NORMAL]			= shade (1.0, @bg_color)		#foreground tab color
+	bg[PRELIGHT]			= shade (0.9, @bg_color)		#close tab prelight
+	bg[ACTIVE]			= shade (0.85, @bg_color)		#background tab color
+
+	engine "murrine" {
+		roundness		= 4
+	}
+}
+
+style "midori-panel-toolbar"
+{
+	bg[NORMAL]			= shade (0.85, @bg_color)
+}
+
+widget		"MidoriBrowser"							style "midori-main"
+widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
+widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
+#widget		"MidoriBrowser*GtkStatusbar*"					style "nautilus-statusbar"
