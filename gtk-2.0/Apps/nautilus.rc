@@ -1,24 +1,30 @@
 style "nautilus-window-base"
 {
-	bg[NORMAL]	= @fm_color
+	bg[NORMAL]				= @base_color
 }
 
 style "nautilus-sidebar" {
 
-	font_name 	                  = "Regular"
+	fg[NORMAL]				= "#737373"
+	fg[PRELIGHT]				= "#737373"
+	fg[SELECTED]				= "#737373"
+	fg[ACTIVE]				= "#737373"
+	fg[INSENSITIVE]				= "#737373"
+
+	text[NORMAL]				= "#737373"
+	text[ACTIVE]				= "#737373"
+	text[INSENSITIVE]			= "#737373"
+
+	font_name				= "Regular"
 
 	GtkTreeView::odd_row_color		= "#e2e2e2"
 	GtkTreeView::even_row_color		= "#e2e2e2"
 
       # these make the padding from left window edge a little more sane
-	GtkTreeView::vertical_separator           = 4
-	GtkTreeView::horizontal_separator         = 15
-	GtkTreeView::indent-expanders             = 1 # 1 means TRUE
-	GtkTreeView::expander-size                = 8
-	GtkExpander::expander_spacing             = 16
-	GtkButton::image_spacing                  = 4
-      	xthickness                                = 8
-	ythickness                                = 0
+	GtkTreeView::vertical_separator		= 4
+	GtkTreeView::horizontal_separator	= 15
+      	xthickness				= 8
+	ythickness				= 0
 }
 
 style "nautilus-view"
@@ -48,7 +54,6 @@ style "nautilus-statusbar"
 {
 	xthickness	= 4
 
-	bg[NORMAL]	= @fm_color
 	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
 	bg[SELECTED]	= @fg_color
 
@@ -128,20 +133,6 @@ style "nautilus-scale"
       orientation		= HORIZONTAL
     }
   }
-}
-
-
-style "nautilus-scale2"	= "equinox-scale"
-{
-	bg[NORMAL]	= @bg_color
-	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= shade (0.8, @selected_bg_color)
-
-	base[SELECTED]	= @bg_color
-
-	engine "equinox" {
-	scalesliderstyle = 2
-	}
 }
 
 style "nautilus-mode-button"

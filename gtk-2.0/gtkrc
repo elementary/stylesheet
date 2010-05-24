@@ -6,7 +6,6 @@ gtk_color_scheme = "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFF
 gtk_color_scheme = "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text.
 gtk_color_scheme = "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips.
 gtk_color_scheme = "frame_color:#C9C9C9\ninactive_frame_color:#C9C9C9"			# Fix for Chrome
-gtk_color_scheme = "fm_color:#FFF"							# Color used in Nautilus and Thunar.
 
 gtk-icon-sizes		= "gtk-button=16,16"
 gtk-button-images	= 0 # Disables icons in buttons
@@ -84,7 +83,7 @@ style "murrine-default"
 	{
 		animation           = TRUE
 		colorize_scrollbar  = TRUE
-		contrast            = 1.1   # 0.8 for less contrast, more than 1.0 for more contrast on borders
+		contrast            = 1.11   # 0.8 for less contrast, more than 1.0 for more contrast on borders
 		glazestyle          = 0     # 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
 		gradient_shades     = {1.15,1.05,1.04,0.9}
 		glowstyle	    = 4
@@ -184,7 +183,7 @@ style "aurora-entry" = "murrine-wider"
 
 	engine "aurora" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
+		
 	}
 
 }
@@ -300,7 +299,6 @@ style "murrine-toolbar"
 style "aurora-statusbar" = "murrine-default"
 {
 	engine "aurora" {
-		old_arrowstyle  = FALSE
 	}
 }
 
@@ -308,7 +306,6 @@ style "aurora-comboboxentry"
 {
 	engine "aurora" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 }
 
@@ -316,7 +313,6 @@ style "aurora-spinbutton"
 {
 	engine "aurora" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 }
 
