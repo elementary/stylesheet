@@ -4,8 +4,8 @@ style "terminal"
 text[NORMAL] = "#ffffff"
 base[NORMAL] = "#000000"
 
-TerminalScreen::background-darkness = 0.95
+TerminalScreen::background-darkness = 0.80
 
 }
 
-class "TerminalScreen" style "terminal"
+class "TerminalScreen"		style "terminal"

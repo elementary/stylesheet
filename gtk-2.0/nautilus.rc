@@ -149,6 +149,27 @@ style "nautilus-mode-button"
 	bg[NORMAL]	= shade (1.15, @bg_color)
 	bg[PRELIGHT]	= shade (1.22, @selected_bg_color)
 	bg[SELECTED]	= shade (0.85, @bg_color)
+
+	engine "murrine" {
+		gradient_shades     = {1.15,1.05,1.04,0.9}
+	}
+
+}
+
+style "nautilus-toolbar" 
+{
+	bg[NORMAL]        = @bg_color
+
+	engine "murrine" {
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,0.94,0.94,0.88}
+	}
+}
+
+style "nautilus-menubar" = "murrine-menubar"
+{
+	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
 }
 
 widget_class "*Nautilus*Window*"		style "nautilus-window-base"
@@ -158,10 +179,10 @@ widget_class "*Nautilus*Places*Sidebar*"	style "nautilus-sidebar"
 widget_class "*Nautilus*Statusbar*"		style "nautilus-statusbar"
 widget_class "*Nautilus*Scale*"			style "nautilus-scale"
 
-widget_class "*Nautilus*Toolbar*"		style "murrine-toolbar"
+widget_class "*Nautilus*Toolbar*"		style "nautilus-toolbar"
 widget_class "*Nautilus*Toolbar*Button"		style:highest "equinox-button"
 widget_class "*Nautilus*Menu*"			style "murrine-menu"
-widget_class "*Nautilus*MenuBar*"		style "murrine-menubar"
+widget_class "*Nautilus*MenuBar*"		style "nautilus-menubar"
 
 widget "*.nautilus-extra-view-widget*"		style:highest "elementary-dark"
 widget "*GtkModeButton*"			style "nautilus-mode-button"

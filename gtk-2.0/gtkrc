@@ -166,7 +166,7 @@ style "equinox-button" = "murrine-wider"
 	GtkWidget	::focus-line-width	= 2
 	GtkWidget	::focus-padding		= 0
 
-	bg[ACTIVE]	= shade (0.80, @bg_color)
+	bg[ACTIVE]	= shade (0.90, @bg_color)
 	bg[NORMAL]	= shade (1.30, @bg_color)
 	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
 	bg[SELECTED]	= shade (0.9, @selected_bg_color)
@@ -175,24 +175,6 @@ style "equinox-button" = "murrine-wider"
 	engine "equinox" {
 		curvature	= 3.0
 		animation	= TRUE
-	}
-}
-
-style "equinox-button" = "murrine-wider"
-{
-
-	GtkWidget	::focus-line-width	= 2
-	GtkWidget	::focus-padding		= 0
-
-	bg[ACTIVE]      = shade (0.90, @bg_color)
-	bg[NORMAL]	= shade (1.30, @bg_color)
-	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= shade (0.90, @selected_bg_color)
-	bg[INSENSITIVE]	= @bg_color
-
-	engine "equinox"
-	{
-		curvature	= 3.0
 	}
 }
 
@@ -313,7 +295,6 @@ style "murrine-progressbar-ultrathin"
 style "murrine-toolbar" 
 {
 	bg[NORMAL]        = @bg_color
-
 }
 
 style "aurora-statusbar" = "murrine-default"
@@ -350,35 +331,6 @@ style "equinox-scale" = "equinox-button"
 		curvature	= 6
 		scalesliderstyle    = 0
 	}
-}
-
-style "murrine-scrollbar" = "murrine-thin"
-{
-
-	bg[ACTIVE]              = shade (1.3, @bg_color)	# Trough color
-	bg[NORMAL]              = shade(0.95, @selected_bg_color)
-	bg[PRELIGHT]            = @selected_bg_color
-	text[NORMAL]            = shade (0.4, @bg_color)	# Arrow Color
-
-	engine "murrine" {
-		roundness	    = 6
-		gradient_shades     = {1.08,0.97,0.95,0.8}
-		trough_shades	    = { 0.9, 1.1 }
-	}
-
-}
-
-style "aurora-scrollbar" = "murrine-thin"
-{
-	engine "aurora"
-	{
-		curvature	= 6.0
-	}
-	GtkWidget::draw-border  = {0,0,0,0}
-	bg[ACTIVE]              = shade (1.3, @bg_color)	# Trough color
-	bg[NORMAL]              = shade(0.95, @selected_bg_color)
-	bg[PRELIGHT]            = @selected_bg_color
-	text[NORMAL]            = shade (0.4, @bg_color)	# Arrow Color
 }
 
 style "minimal-scrollbar"
@@ -685,7 +637,6 @@ style "murrine-menubar" = "murrine-default"
 {
 	bg[NORMAL]	= @bg_color
 	fg[NORMAL] 	= @fg_color
-
 }
 
 style "murrine-nautilus-location"
@@ -777,8 +728,8 @@ class "GtkEntry"     				style "aurora-entry"
 class "GtkSpinButton"  				style "aurora-spinbutton"
 class "GtkScale"       				style "equinox-scale"
 class "GtkScrollbar"   				style "minimal-scrollbar"
-class "GtkVScrollbar"  				style "murrine-vscrollbar"
-class "GtkHScrollbar"  				style "murrine-hscrollbar"
+class "GtkVScrollbar"  				style "minimal-scrollbar"
+class "GtkHScrollbar"  				style "minimal-scrollbar"
 
 # General matching following, the order is choosen so that the right styles override each other
 # eg. progressbar needs to be more important then the menu match.
@@ -922,5 +873,5 @@ widget	"totem_*_window*"					style "totem-main"
 include "eog.rc"
 include "nautilus.rc"
 include "panel.rc"
-include "terminal.rc"
+#include "terminal.rc"
 
