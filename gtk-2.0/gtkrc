@@ -5,6 +5,7 @@
 gtk_color_scheme	= "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base.
 gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text.
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips.
+gtk_color_scheme	= "link_color:#08c"							# Hyperlinks
 gtk_color_scheme	= "frame_color:#C9C9C9\ninactive_frame_color:#C9C9C9"			# Fix for Chrome
 
 gtk-icon-sizes		= "gtk-button=16,16"
@@ -20,7 +21,13 @@ style "murrine-default"
 	GtkButton		::default-border       			= { 0, 0, 0, 0 }
 	GtkCheckButton		::indicator-size       			= 14
 
-	GtkEntry		::progress-border = { 3, 3, 3, 3 }
+	GtkEntry		::progress-border			= { 3, 3, 3, 3 }
+
+	GtkHTML			::link-color				= @link_color
+
+	GtkImage		::x-ayatana-indicator-dynamic 		= 1
+
+	GtkIMHtml		::hyperlink-color			= @link_color
 
 	GtkMenu			::horizontal-padding			= 0
 	GtkMenu			::vertical-padding			= 0
@@ -43,6 +50,7 @@ style "murrine-default"
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
 
 	GtkMenuBar		::internal-padding			= 0
+	GtkMenuBar		::window-dragging			= 1
 
 	GtkNotebook		::tab-overlap				= 0
 
@@ -54,6 +62,7 @@ style "murrine-default"
 	GtkWidget		::new-tooltip-style			= 1
 	GtkWidget		::focus-line-width			= 2
 	GtkWidget		::focus-padding				= 0
+	GtkWidget		::link-color				= @link_color
 
 	xthickness = 1
 	ythickness = 1
@@ -182,7 +191,7 @@ style "aurora-entry" = "murrine-wider"
 }
 style "murrine-notebook" = "murrine-default"
 {
-	bg[NORMAL]		= shade (1.0615, @bg_color)		# selected tab entire
+	bg[NORMAL]		= shade (1.06, @bg_color)		# selected tab entire
 	bg[ACTIVE]		= shade (0.85, @bg_color)		# unselected tab
 
 	engine "murrine" {

@@ -12,8 +12,6 @@ style "midori-notebook" = "murrine-notebook"
 {
 	xthickness			= 0
 	ythickness			= 0
-
-	stock["gtk-close"] = {{ "Icons/close-small.png", *, *, * }}
 }
 
 style "midori-panel-toolbar"

@@ -7,19 +7,22 @@ style "nautilus-window-base"
 
 style "nautilus-sidebar" {
 
-	text[NORMAL]	= mix (0.2, @sidebar_color, @text_color)
+	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
 
-	font_name 	                  = "Regular"
+	font_name 	                  	= "Regular"
 
 	GtkTreeView::odd_row_color		= @sidebar_color
 	GtkTreeView::even_row_color		= @sidebar_color
 
       # these make the padding from left window edge a little more sane
-	GtkTreeView::vertical_separator           = 4
-	GtkTreeView::horizontal_separator         = 15
-	GtkButton::image_spacing                  = 4
-      	xthickness                                = 8
-	ythickness                                = 0
+	GtkTreeView::horizontal_separator	= 15
+      	xthickness				= 8
+	ythickness				= 0
+
+	#engine "murrine"
+	#{
+	#textstyle = 1
+	#}
 }
 
 style "nautilus-view"
