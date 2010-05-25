@@ -1,30 +1,25 @@
+gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
+
 style "nautilus-window-base"
 {
-	bg[NORMAL]				= @base_color
+	bg[NORMAL]	= @base_color
 }
 
 style "nautilus-sidebar" {
 
-	fg[NORMAL]				= "#737373"
-	fg[PRELIGHT]				= "#737373"
-	fg[SELECTED]				= "#737373"
-	fg[ACTIVE]				= "#737373"
-	fg[INSENSITIVE]				= "#737373"
+	text[NORMAL]	= mix (0.2, @sidebar_color, @text_color)
 
-	text[NORMAL]				= "#737373"
-	text[ACTIVE]				= "#737373"
-	text[INSENSITIVE]			= "#737373"
+	font_name 	                  = "Regular"
 
-	font_name				= "Regular"
-
-	GtkTreeView::odd_row_color		= "#e2e2e2"
-	GtkTreeView::even_row_color		= "#e2e2e2"
+	GtkTreeView::odd_row_color		= @sidebar_color
+	GtkTreeView::even_row_color		= @sidebar_color
 
       # these make the padding from left window edge a little more sane
-	GtkTreeView::vertical_separator		= 4
-	GtkTreeView::horizontal_separator	= 15
-      	xthickness				= 8
-	ythickness				= 0
+	GtkTreeView::vertical_separator           = 4
+	GtkTreeView::horizontal_separator         = 15
+	GtkButton::image_spacing                  = 4
+      	xthickness                                = 8
+	ythickness                                = 0
 }
 
 style "nautilus-view"
@@ -54,16 +49,17 @@ style "nautilus-statusbar"
 {
 	xthickness	= 4
 
+	bg[NORMAL]	= @base_color
 	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
 	bg[SELECTED]	= @fg_color
 
 	base[SELECTED]	= shade (0.8, @selected_bg_color)
 
-	fg[NORMAL]	= mix (0.4, @fm_color, @text_color)
-	fg[PRELIGHT]	= mix (0.4, @fm_color, @text_color)
-	fg[SELECTED]	= mix (0.4, @fm_color, @text_color)
-	fg[ACTIVE]	= mix (0.4, @fm_color, @text_color)
-	fg[INSENSITIVE]	= mix (0.4, @fm_color, @text_color)
+	fg[NORMAL]	= mix (0.4, @base_color, @text_color)
+	fg[PRELIGHT]	= mix (0.4, @base_color, @text_color)
+	fg[SELECTED]	= mix (0.4, @base_color, @text_color)
+	fg[ACTIVE]	= mix (0.4, @base_color, @text_color)
+	fg[INSENSITIVE]	= mix (0.4, @base_color, @text_color)
 
 	engine "pixmap" 
 	{
@@ -133,6 +129,20 @@ style "nautilus-scale"
       orientation		= HORIZONTAL
     }
   }
+}
+
+
+style "nautilus-scale2"	= "equinox-scale"
+{
+	bg[NORMAL]	= @bg_color
+	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
+	bg[SELECTED]	= shade (0.8, @selected_bg_color)
+
+	base[SELECTED]	= @bg_color
+
+	engine "equinox" {
+	scalesliderstyle = 2
+	}
 }
 
 style "nautilus-mode-button"
