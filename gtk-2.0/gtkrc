@@ -728,6 +728,8 @@ widget "*.gtk-combobox-popup-menu.*"   			style "murrine-menuitem-text-is-fg-col
 ##################################
 # Work around the usage of GtkLabel inside GtkListItems to display text.
 # This breaks because the label is shown on a background that is based on the base color set.
+# The same problem also exists for GtkCList and GtkCTree
+# Only match GtkCList and not the parent widgets, because that would also change the headers.
 ##################################
 
 style "murrine-fg-is-text-color-workaround"
@@ -740,12 +742,6 @@ style "murrine-fg-is-text-color-workaround"
 }
 
 widget_class "*<GtkListItem>*" 				style "murrine-fg-is-text-color-workaround"
-
-##################################
-# The same problem also exists for GtkCList and GtkCTree
-# Only match GtkCList and not the parent widgets, because that would also change the headers.
-##################################
-
 widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 
 ##################################
@@ -760,7 +756,7 @@ class "GtkCTree"	style "equinox-default"
 # Equinox Arrows
 ##################################
 
-class "GtkArrow"	style:highest "equinox-button"
+class "GtkArrow"	style:highest "equinox-default"
 
 ##################################
 # Equinox Separator
