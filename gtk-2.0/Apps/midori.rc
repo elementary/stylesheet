@@ -10,17 +10,29 @@ style "midori-entry"
 
 style "midori-notebook" = "murrine-notebook"
 {
+	GtkNotebook	::tab-overlap	= 0
+
+	bg[NORMAL]			= @bg_color		# selected tab entire
+
 	xthickness			= 0
 	ythickness			= 0
 }
 
 style "midori-panel-toolbar"
 {
-	bg[NORMAL]			= shade (0.85, @bg_color)
+
+	GtkToolbar:: shadow-type = GTK_SHADOW_NONE
+
+	bg[NORMAL]			= shade (0.75, @bg_color)
+
+	engine "murrine" {
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,1.0,1.0,1.0}
+	}
 }
 
 widget		"MidoriBrowser"							style "midori-main"
 widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
 widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
-#widget		"MidoriBrowser*GtkStatusbar*"					style "nautilus-statusbar"

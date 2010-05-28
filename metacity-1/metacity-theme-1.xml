@@ -217,42 +217,18 @@
 <!-- maximize icon -->
 
 <draw_ops name="maximize_button_normal">
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.63" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.67" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.71" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.75" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.80" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.74" />
+		<color value="shade/gtk:bg[NORMAL]/0.80" />
+	</gradient>	
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.85" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.89" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.93" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<gradient type="vertical" x="(width - 8) / 2 +3" y="(height - 2) / 2 -2" width="2" height="8">
+		<color value="shade/gtk:bg[NORMAL]/0.63" />
+		<color value="shade/gtk:bg[NORMAL]/0.93" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
@@ -260,42 +236,18 @@
 </draw_ops>
 
 <draw_ops name="maximize_button_prelight">
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.51" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.55" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.59" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.63" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.67" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.63" />
+		<color value="shade/gtk:bg[NORMAL]/0.67" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.72" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.76" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.80" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<gradient type="vertical" x="(width - 8) / 2 +3" y="(height - 2) / 2 -2" width="2" height="8">
+		<color value="shade/gtk:bg[NORMAL]/0.51" />
+		<color value="shade/gtk:bg[NORMAL]/0.80" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
@@ -303,42 +255,18 @@
 </draw_ops>
 
 <draw_ops name="maximize_button_pressed">
-<line 
-		color="shade/gtk:bg[SELECTED]/0.72" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/0.77" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/0.82" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/0.87" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/0.92" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.87" />
+		<color value="shade/gtk:bg[NORMAL]/0.92" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/0.97" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/1.01" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/1.05" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<gradient type="vertical" x="(width - 8) / 2 +3" y="(height - 2) / 2 -2" width="2" height="8">
+		<color value="shade/gtk:bg[NORMAL]/0.72" />
+		<color value="shade/gtk:bg[NORMAL]/1.05" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
@@ -346,42 +274,18 @@
 </draw_ops>
 
 <draw_ops name="maximize_button_unfocused">
-<line 
-		color="shade/gtk:bg[NORMAL]/0.70" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -2" y2="(height - 2) / 2 -2"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.73" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 -1" y2="(height - 2) / 2 -1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.76" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2" y2="(height - 2) / 2"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.80" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.85" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.80" />
+		<color value="shade/gtk:bg[NORMAL]/0.85" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.10" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.90" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.94" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 4" y2="(height - 2) / 2 + 4"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.98" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 5" y2="(height - 2) / 2 + 5"/>
+	<gradient type="vertical" x="(width - 8) / 2 +3" y="(height - 2) / 2 -2" width="2" height="8">
+		<color value="shade/gtk:bg[NORMAL]/0.70" />
+		<color value="shade/gtk:bg[NORMAL]/0.98" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.10" 
 		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
@@ -391,14 +295,10 @@
 <!-- minimize icon -->
 
 <draw_ops name="minimize_button_normal">
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.70" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.80" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.70" />
+		<color value="shade/gtk:bg[NORMAL]/0.80" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
@@ -406,14 +306,11 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_prelight">
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.60" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.70" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.60" />
+		<color value="shade/gtk:bg[NORMAL]/0.70" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
@@ -421,14 +318,10 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_pressed">
-	<line 
-		color="shade/gtk:bg[SELECTED]/0.90" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[SELECTED]/1.00" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.90" />
+		<color value="shade/gtk:bg[NORMAL]/1.00" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.20" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
@@ -436,14 +329,10 @@
 </draw_ops>
 
 <draw_ops name="minimize_button_unfocused">
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.85" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 1" y2="(height - 2) / 2 + 1"/>
-	<line 
-		color="shade/gtk:bg[NORMAL]/0.90" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 2" y2="(height - 2) / 2 + 2"/>
+	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
+		<color value="shade/gtk:bg[NORMAL]/0.85" />
+		<color value="shade/gtk:bg[NORMAL]/0.90" />
+	</gradient>
 	<line 
 		color="shade/gtk:bg[NORMAL]/1.10" 
 		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  

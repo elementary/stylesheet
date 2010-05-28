@@ -52,8 +52,6 @@ style "murrine-default"
 	GtkMenuBar		::internal-padding			= 0
 	GtkMenuBar		::window-dragging			= 1
 
-	GtkNotebook		::tab-overlap				= 0
-
 	GtkExpander		::expander-size				= 16
 	GtkToolbar		::internal-padding			= 0
 	GtkTreeView		::expander-size				= 14

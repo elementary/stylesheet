@@ -19,7 +19,7 @@ style "nautilus-sidebar" {
       	xthickness				= 8
 	ythickness				= 0
 
-	#engine "murrine"
+	#engine "equinox"
 	#{
 	#textstyle = 1
 	#}
@@ -100,7 +100,7 @@ style "nautilus-scale"
       function			= SLIDER
       recolorable		= TRUE
       state           		= NORMAL
-      file			= "Others/null.png"
+      file			= ""
       border			= { 0, 0, 0, 0 }
       stretch			= TRUE
       overlay_file		= "Range/slider.png"
@@ -112,7 +112,7 @@ style "nautilus-scale"
       function			= SLIDER
       recolorable		= TRUE
      state           		= PRELIGHT
-      file			= "Others/null.png"
+      file			= ""
       border			= { 0, 0, 0, 0 }
       stretch			= TRUE
       overlay_file		= "Range/slider-prelight.png"
@@ -124,7 +124,7 @@ style "nautilus-scale"
       function			= SLIDER
       recolorable		= TRUE
       state           		= INSENSITIVE
-      file			= "Others/null.png"
+      file			= ""
       border			= { 0, 0, 0, 0 }
       stretch			= TRUE
       overlay_file		= "Range/slider.png"
