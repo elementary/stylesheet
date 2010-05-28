@@ -165,5 +165,9 @@ widget "*PanelApplet*"			style "elementary-panel-text"
 widget_class "*Panel*GtkToggleButton"	style:highest "elementary-panel-buttons"
 widget_class "*Panel*GtkButton"		style:highest "elementary-panel-buttons"
 
+# Don't theme Midori SidePanel
+widget_class "MidoriBrowser*Panel*GtkToggleButton"	style:highest "equinox-button"
+widget_class "MidoriBrowser*Panel*GtkButton"		style:highest "equinox-button"
+
 # Hide ugly handle
 class "PanelAppletFrame" 		style:highest "elementary-panel-handle"

@@ -38,6 +38,11 @@ style "midori-panel-toolbar"
 	}
 }
 
+style "midori-menubar" = "murrine-menubar"
+{
+	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
+}
+
 style "midori-toolbar" 
 {
 	bg[NORMAL]        = @bg_color
@@ -51,6 +56,7 @@ style "midori-toolbar"
 }
 
 widget		"MidoriBrowser"							style "midori-main"
+widget_class	"MidoriBrowser*MenuBar*"					style "midori-menubar"
 widget_class	"MidoriBrowser*GtkToolbar"					style "midori-toolbar"
 widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
