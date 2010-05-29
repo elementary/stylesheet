@@ -1,6 +1,6 @@
 style "midori-main"
 {
-	bg[NORMAL]			= shade (0.75, @bg_color)
+	bg_pixmap[NORMAL]		= "/midori/base.png"	
 }
 
 style "midori-close"
@@ -48,7 +48,7 @@ style "midori-toolbar"
 	bg[NORMAL]        = @bg_color
 
 	engine "murrine" {
-		contrast		= 1.25
+		contrast		= 1.30
 		toolbarstyle		= 1
 		lightborder_shade	= 1.0
 		gradient_shades     	= {1.0,0.94,0.94,0.88}

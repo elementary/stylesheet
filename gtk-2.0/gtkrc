@@ -93,6 +93,7 @@ style "murrine-default"
 	engine "murrine" 
 	{
 		animation		= TRUE
+		border_shades		= { 1.15, 0.85 }
 		colorize_scrollbar	= FALSE
 		contrast		= 1.1		# 0.8 for less contrast, more than 1.0 for more contrast on borders
 		glazestyle		= 0		# 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
@@ -111,6 +112,7 @@ style "murrine-default"
 		rgba			= FALSE		# Alpha transparency
 		roundness		= 3		# 0 = square
 		scrollbarstyle		= 0		# 0 = nothing
+		shadow_shades		= { 5.0, 0.0 }
 		sliderstyle		= 0     	# 0 = nothing added
 		stepperstyle		= 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		toolbarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient
@@ -160,6 +162,23 @@ style "elementary-dark"
 	text[INSENSITIVE]	= "#4D4D4D"
 }
 
+style "murrine-button" = "murrine-wider"
+{
+
+	GtkWidget	::focus-line-width	= 2
+	GtkWidget	::focus-padding		= 0
+
+	bg[ACTIVE]	= shade (0.90, @bg_color)
+	bg[NORMAL]	= shade (1.30, @bg_color)
+	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
+	bg[SELECTED]	= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]	= @bg_color
+	
+	engine "murrine" {
+		contrast	= 1.35
+	}
+}
+
 style "equinox-button" = "equinox-wider"
 {
 
@@ -183,7 +202,6 @@ style "aurora-entry" = "murrine-wider"
 
 	engine "aurora" {
 		curvature	= 3.0
-		old_arrowstyle  = FALSE
 	}
 
 }
