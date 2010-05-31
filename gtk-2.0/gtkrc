@@ -38,7 +38,7 @@ style "murrine-default"
 
 	GtkPaned		::handle-size          			= 6
 
-	GtkRange		::trough-border				= 3
+	GtkRange		::trough-border				= 2
 	GtkRange		::slider-width				= 9
 	GtkRange		::stepper-size				= 13
 	GtkRange		::stepper_spacing			= 0
