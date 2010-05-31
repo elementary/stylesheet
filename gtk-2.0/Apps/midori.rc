@@ -1,5 +1,6 @@
 style "midori-main"
 {
+
 	bg_pixmap[NORMAL]		= "/midori/base.png"	
 }
 
@@ -26,7 +27,6 @@ style "midori-notebook" = "murrine-notebook"
 
 style "midori-panel-toolbar"
 {
-
 	GtkToolbar:: shadow-type = GTK_SHADOW_NONE
 
 	bg[NORMAL]			= shade (0.75, @bg_color)

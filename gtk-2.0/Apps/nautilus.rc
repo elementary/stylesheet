@@ -82,6 +82,8 @@ style "nautilus-statusbar"
 style "nautilus-scale"
 {
 	ythickness = 0
+
+	GtkRange		::trough-border				= 0
 	
   engine "pixmap" 
   {
