@@ -18,11 +18,15 @@ style "nautilus-sidebar" {
 	GtkTreeView::horizontal_separator	= 15
       	xthickness				= 8
 	ythickness				= 0
+}
 
-	#engine "equinox"
-	#{
-	#textstyle = 1
-	#}
+style "nautilus-sidebar-other" = "nautilus-sidebar"
+{
+
+	xthickness				= 0
+
+	bg[NORMAL]				= @sidebar_color
+
 }
 
 style "nautilus-view"
@@ -137,19 +141,6 @@ style "nautilus-scale"
 }
 
 
-style "nautilus-scale2"	= "equinox-scale"
-{
-	bg[NORMAL]	= @bg_color
-	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= shade (0.8, @selected_bg_color)
-
-	base[SELECTED]	= @bg_color
-
-	engine "equinox" {
-	scalesliderstyle = 2
-	}
-}
-
 style "nautilus-mode-button"
 {
 	bg[NORMAL]	= shade (1.15, @bg_color)
@@ -192,3 +183,10 @@ widget_class	"*Nautilus*MenuBar*"		style "nautilus-menubar"
 
 widget "*.nautilus-extra-view-widget*"		style:highest "elementary-dark"
 widget "*GtkModeButton*"			style "nautilus-mode-button"
+
+
+widget_class "*Nautilus*EmblemSidebar*"		style "nautilus-sidebar-other"
+widget_class "*Nautilus*Side*Tree*"		style "nautilus-sidebar-other"
+widget_class "*Nautilus*Notes*"			style "nautilus-sidebar-other"
+widget_class "*Nautilus*History*"		style "nautilus-sidebar-other"
+widget_class "*Nautilus*Information*"		style "nautilus-sidebar-other"
