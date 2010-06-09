@@ -45,11 +45,34 @@ style "nautilus-handle"
 		{
 		    function	= HANDLE
 		    recolorable	= TRUE
-		    file		= "Handles/handle-nautilus.png"
+		    file		= "Apps/nautilus/handle.png"
 		    stretch		= TRUE
 		    border 		= { 0, 0, 0, 0 }
 		}
 	}
+}
+
+style "nautilus-extra-view"
+{
+
+	xthickness		= 0
+	ythickness		= 0
+
+	bg[NORMAL] = @base_color
+
+	engine "pixmap"
+	{
+		image 
+		{
+		    function	= FLAT_BOX
+		    recolorable	= TRUE
+		    file		= "Apps/nautilus/extra-widget.png"
+		    state		= NORMAL
+		    stretch		= TRUE
+		    border 		= { 0, 0, 4, 4 }
+		}
+	}
+
 }
 
 style "nautilus-statusbar"
@@ -76,11 +99,24 @@ style "nautilus-statusbar"
 	     	function	= RESIZE_GRIP
 		recolorable	= TRUE
 		detail		= "statusbar"
-		overlay_file	= "Handles/resize_grip.png"
+		overlay_file	= "Apps/nautilus/resize_grip.png"
 		overlay_border	= {0,0,0,0 }
 		overlay_stretch	= FALSE
 	    }
       }
+}
+
+style "nautilus-notebook" 
+{
+
+	xthickness		= 0
+	ythickness		= 0
+
+	engine "murrine"
+	{
+		roundness	= 0
+		contrast	= 0.3
+	}
 }
 
 style "nautilus-scale"
@@ -180,9 +216,9 @@ widget_class	"*Nautilus*Toolbar*"		style "nautilus-toolbar"
 widget_class	"*Nautilus*Toolbar*Button"	style "equinox-button"
 widget_class	"*Nautilus*Menu*"		style "murrine-menu"
 widget_class	"*Nautilus*MenuBar*"		style "nautilus-menubar"
+widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
 
-widget "*.nautilus-extra-view-widget*"		style:highest "elementary-dark"
-widget "*GtkModeButton*"			style "nautilus-mode-button"
+widget		"*GtkModeButton*"		style "nautilus-mode-button"
 
 
 widget_class "*Nautilus*EmblemSidebar*"		style "nautilus-sidebar-other"
@@ -190,3 +226,7 @@ widget_class "*Nautilus*Side*Tree*"		style "nautilus-sidebar-other"
 widget_class "*Nautilus*Notes*"			style "nautilus-sidebar-other"
 widget_class "*Nautilus*History*"		style "nautilus-sidebar-other"
 widget_class "*Nautilus*Information*"		style "nautilus-sidebar-other"
+
+widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
+
+#widget_class "*Nautilus*Paned*" # FIXME: Create a style

@@ -47,10 +47,10 @@ style "murrine-default"
 	GtkScale		::slider-width				= 14
 
 	GtkScrollbar		::min-slider-length			= 30
-	GtkScrollbar		::has-backward-stepper 			= 0 # Kill
-	GtkScrollbar		::has_secondary_backward_stepper	= 0 # All
-	GtkScrollbar		::has-forward-stepper			= 0 # The
-	GtkScrollbar		::has_secondary_forward_stepper		= 0 # Steppers
+	#GtkScrollbar		::has-backward-stepper 			= 0 
+	GtkScrollbar		::has_secondary_backward_stepper	= 1 
+	#GtkScrollbar		::has-forward-stepper			= 0 
+	#GtkScrollbar		::has_secondary_forward_stepper		= 0 
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
