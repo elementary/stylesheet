@@ -6,7 +6,7 @@ gtk_color_scheme	= "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFF
 gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text.
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips.
 gtk_color_scheme	= "link_color:#08c"							# Hyperlinks
-gtk_color_scheme	= "frame_color:#C9C9C9\ninactive_frame_color:#C9C9C9"			# Fix for Chrome
+gtk_color_scheme	= "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD"			# Fix for Chrome
 
 gtk-icon-sizes		= "gtk-button=16,16"
 gtk-button-images	= 0			# Disables icons in buttons
@@ -64,7 +64,7 @@ style "murrine-default"
 	GtkTreeView		::vertical-separator			= 0
 
 	GtkWidget		::new-tooltip-style			= 1
-	GtkWidget		::focus-line-width			= 2
+	GtkWidget		::focus-line-width			= 1
 	GtkWidget		::focus-padding				= 0
 
 	xthickness = 1
