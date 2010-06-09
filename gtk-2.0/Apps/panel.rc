@@ -90,31 +90,6 @@ style "elementary-main-menu-text" = "elementary-panel-text"
 	text[PRELIGHT]	= "#ffffff"
 }
 
-
-style "elementary-panel-buttons" = "elementary-panel"
-{
-	GtkButton	::child-displacement-x	= 0
-	GtkButton	::child-displacement-y	= 0
-
-	xthickness	= 4
-	ythickness	= 0
-
-	engine "pixmap"
-	{
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= PRELIGHT
-			file			= "Panel/button-hover.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
-		
-	}
-}
-
 style "elementary-panel-handle" 
 {
     engine "pixmap"
@@ -160,14 +135,6 @@ widget_class "*Panel*MenuBar*"		style "elementary-main-menu-text"
 widget_class "*Panel*<GtkMenuBar>*"	style "elementary-main-menu-text"
 widget "*.clock-applet-button.*"	style "elementary-panel-text"
 widget "*PanelApplet*"			style "elementary-panel-text"
-
-# Panel buttons
-widget_class "*Panel*GtkToggleButton"	style:highest "elementary-panel-buttons"
-widget_class "*Panel*GtkButton"		style:highest "elementary-panel-buttons"
-
-# Don't theme Midori SidePanel
-widget_class "MidoriBrowser*Panel*GtkToggleButton"	style:highest "equinox-button"
-widget_class "MidoriBrowser*Panel*GtkButton"		style:highest "equinox-button"
 
 # Hide ugly handle
 class "PanelAppletFrame" 		style:highest "elementary-panel-handle"
