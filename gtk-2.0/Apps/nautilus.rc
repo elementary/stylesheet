@@ -16,8 +16,7 @@ style "nautilus-sidebar" {
 
       # these make the padding from left window edge a little more sane
 	GtkTreeView::horizontal_separator	= 15
-      	xthickness				= 8
-	ythickness				= 0
+	GtkTreeView::vertical_separator		= 2
 }
 
 style "nautilus-sidebar-other" = "nautilus-sidebar"

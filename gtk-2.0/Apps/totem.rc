@@ -9,4 +9,4 @@ style "totem-main"
 
 }
 
-widget	"totem_*_window*"	style "totem-main"
+widget	"GtkWindow.GtkVBox.GtkHPaned.GtkVBox.GtkVBox.GtkHBox.GtkToolButton.GtkButton.GtkImage"	style "totem-main"
