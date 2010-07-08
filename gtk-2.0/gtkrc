@@ -325,6 +325,8 @@ style "murrine-toolbar"
 
 style "aurora-statusbar" = "murrine-default"
 {
+	ythickness = 0
+	
 	engine "aurora" {
 		old_arrowstyle  = FALSE
 	}
@@ -535,6 +537,7 @@ include "Apps/eog.rc"
 include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"
+include "Apps/postler.rc"
 include "Apps/totem.rc"
 #include "terminal.rc"
 

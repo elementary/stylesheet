@@ -1,0 +1,53 @@
+gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
+
+style "postler-sidebar" {
+	
+	bg[NORMAL]	= @sidebar_color
+	base[NORMAL]	= @sidebar_color
+	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+
+	font_name 	                  	= "Regular"
+
+	GtkTreeView::odd_row_color		= @sidebar_color
+	GtkTreeView::even_row_color		= @sidebar_color
+
+      # these make the padding from left window edge a little more sane
+	GtkTreeView::horizontal_separator	= 15
+	GtkTreeView::vertical_separator		= 2
+}
+
+style "postler-handle"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+		    function	= HANDLE
+		    recolorable	= TRUE
+		    file		= "Apps/nautilus/handle.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+
+style "postler-toolbar" 
+{
+	bg[NORMAL]        = @bg_color
+
+	engine "murrine" {
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,0.94,0.94,0.88}
+	}
+}
+
+widget		"*Postler*Splitter"		style "postler-handle"
+widget_class	"*Postler*Pane*"		style "postler-sidebar"
+
+widget_class	"*Postler*Toolbar*"		style "postler-toolbar"
+widget_class	"*Postler*Toolbar*Entry"	style "aurora-entry"
+widget_class	"*Postler*Toolbar*Button"	style "equinox-button"
