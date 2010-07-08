@@ -5,6 +5,8 @@ style "postler-sidebar" {
 	base[NORMAL]	= @sidebar_color
 	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
 
+	font_name 	                  	= "Regular"
+
 }
 
 style "postler-handle-horiz"
