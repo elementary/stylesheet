@@ -13,9 +13,10 @@ style "postler-sidebar" {
       # these make the padding from left window edge a little more sane
 	GtkTreeView::horizontal_separator	= 15
 	GtkTreeView::vertical_separator		= 2
+
 }
 
-style "postler-handle"
+style "postler-handle-horiz"
 {
 	GtkPaned::handle-size         = 2
 	
@@ -32,7 +33,6 @@ style "postler-handle"
 	}
 }
 
-
 style "postler-toolbar" 
 {
 	bg[NORMAL]        = @bg_color
@@ -44,6 +44,7 @@ style "postler-toolbar"
 	}
 }
 
-widget		"*Postler*Splitter"		style "postler-handle"
-widget_class	"*Postler*Pane*"		style "postler-sidebar"
+widget_class	"*Postler*HPaned"		style "postler-handle-horiz"
+widget_class	"*Postler*HPaned*"		style "postler-sidebar"		#FIXME: lets get more specific
+#widget_class	"*Postler*HPaned*VPaned"	style "postler-handle-vert"	#FIXME: create vertical pane style
 widget_class	"*Postler*Toolbar"		style "postler-toolbar"
