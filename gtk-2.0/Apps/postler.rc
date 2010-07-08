@@ -2,7 +2,6 @@ gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
 
 style "postler-sidebar" {
 	
-	bg[NORMAL]	= @sidebar_color
 	base[NORMAL]	= @sidebar_color
 	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
 
@@ -47,5 +46,4 @@ style "postler-toolbar"
 
 widget		"*Postler*Splitter"		style "postler-handle"
 widget_class	"*Postler*Pane*"		style "postler-sidebar"
-
 widget_class	"*Postler*Toolbar"		style "postler-toolbar"
