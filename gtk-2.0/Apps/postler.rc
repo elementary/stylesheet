@@ -48,6 +48,4 @@ style "postler-toolbar"
 widget		"*Postler*Splitter"		style "postler-handle"
 widget_class	"*Postler*Pane*"		style "postler-sidebar"
 
-widget_class	"*Postler*Toolbar*"		style "postler-toolbar"
-widget_class	"*Postler*Toolbar*Entry"	style "aurora-entry"
-widget_class	"*Postler*Toolbar*Button"	style "equinox-button"
+widget_class	"*Postler*Toolbar"		style "postler-toolbar"
