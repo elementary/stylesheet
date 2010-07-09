@@ -61,19 +61,6 @@ style "elementary-panel"
 	}
 }
 
-style "elementary-panel-light"
-{
-	xthickness		= 1
-	ythickness		= 0
-
-	fg[NORMAL]	= @fg_color
-
-	engine "murrine" {
-		textstyle = 1
-		roundness = 0
-	}
-}
-
 style "elementary-panel-text"
 {
 	fg[NORMAL]	= "#4D4D4D"
@@ -82,12 +69,6 @@ style "elementary-panel-text"
 	text[NORMAL]	= "#4D4D4D"
 	text[PRELIGHT]	= "#4D4D4D"
 	text[ACTIVE]	= "#ffffff"
-}
-
-style "elementary-main-menu-text" = "elementary-panel-text"
-{
-	fg[PRELIGHT]	= "#ffffff"
-	text[PRELIGHT]	= "#ffffff"
 }
 
 style "elementary-panel-handle" 
@@ -106,35 +87,21 @@ style "elementary-panel-handle"
     }
 }
 
-widget "*PanelWidget*"			style "elementary-panel"
-widget "*PanelApplet*"			style "elementary-panel"
-widget "*fast-user-switch*"		style "elementary-panel"
-widget "*CPUFreq*Applet*"		style "elementary-panel"
-widget "*indicator-applet*"		style "elementary-panel"
-class "PanelApp*"			style "elementary-panel"
-class "PanelToplevel*"			style "elementary-panel"
-widget_class "*PanelToplevel*"		style "elementary-panel"
-widget_class "*notif*"			style "elementary-panel"
-widget_class "*Notif*"			style "elementary-panel"
-widget_class "*Tray*"			style "elementary-panel" 
-widget_class "*tray*"			style "elementary-panel"
-widget_class "*computertemp*"		style "elementary-panel"
-widget_class "*Applet*Tomboy*"		style "elementary-panel"
-widget_class "*Applet*Netstatus*"	style "elementary-panel"
+class "PanelApp*"				style "elementary-panel"
+class "PanelToplevel*"				style "elementary-panel"
+class "*Xfce*Panel*"				style "elementary-panel"
 
-# Fixes for tooltip text in some apps.
-widget_class "*Notif*Beagle*"		style "elementary-panel-light"
-widget_class "*Notif*Brasero*"		style "elementary-panel-light"
+widget "BonoboPlug*PanelApplet*"		style "elementary-panel"
+widget "*fast-user-switch*"			style "elementary-panel"
+widget "PanelToplevel*PanelAppletFrame"		style "elementary-panel"
+widget "PanelToplevel*PanelMenuBar"		style "elementary-panel"
+widget "PanelToplevel*PanelWidget*"		style "elementary-panel"
+widget "*Xfce*Panel*"				style "elementary-panel"
 
-# XFCE panel theming.
-widget "*Xfce*Panel*"			style "elementary-panel"
-class "*Xfce*Panel*"			style "elementary-panel"
+widget_class "*tray*"				style "elementary-panel"
 
 # Make sure panel text color doesn't change
-widget_class "*Panel*MenuBar*"		style "elementary-main-menu-text"
-widget_class "*Panel*<GtkMenuBar>*"	style "elementary-main-menu-text"
-widget "*.clock-applet-button.*"	style "elementary-panel-text"
-widget "*PanelApplet*"			style "elementary-panel-text"
+widget "*.clock-applet-button.*"		style "elementary-panel-text"
 
 # Hide ugly handle
-class "PanelAppletFrame" 		style:highest "elementary-panel-handle"
+class "PanelAppletFrame" 			style:highest "elementary-panel-handle"

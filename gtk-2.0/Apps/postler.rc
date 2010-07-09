@@ -1,21 +1,19 @@
 gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
 
-style "postler-sidebar" {
+style "postler-sidebar" 
+{
 	
 	base[NORMAL]	= @sidebar_color
 	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
-
-	font_name 	                  	= "Regular"
-
 }
 
 style "postler-handle-horiz"
 {
-	GtkPaned::handle-size         = 2
+	GtkPaned::handle-size		= 2
 	
 	engine "pixmap"
 	{
-		image # for the thin gray line separating the sidepane and viewpane
+		image
 		{
 		    function	= HANDLE
 		    recolorable	= TRUE
@@ -61,8 +59,7 @@ style "postler-filterbar-button" = "equinox-button"
 }
 
 widget_class	"*Postler*HPaned"			style "postler-handle-horiz"
-widget_class	"*Postler*HPaned*"			style "postler-sidebar"		#FIXME: lets get more specific
-widget_class	"*Postler*HPaned*Toolbar*"		style "postler-filterbar"
-widget_class	"*Postler*HPaned*Toolbar*Button"	style "postler-filterbar-button"
-#widget_class	"*Postler*HPaned*VPaned"		style "postler-handle-vert"	#FIXME: create vertical pane style
+widget_class	"*Postler*HPaned*PostlerFolders"	style "postler-sidebar"
+widget_class	"*Postler*VPaned*Toolbar"		style "postler-filterbar"
+widget_class	"*Postler*VPaned*Toolbar*Button"	style "postler-filterbar-button"
 widget_class	"*Postler*Toolbar"			style "postler-toolbar"
