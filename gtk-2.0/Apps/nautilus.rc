@@ -217,5 +217,3 @@ widget_class "*Nautilus*History*"		style "nautilus-sidebar-other"
 widget_class "*Nautilus*Information*"		style "nautilus-sidebar-other"
 
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
-
-#widget_class "*Nautilus*Paned*" # FIXME: Create a style

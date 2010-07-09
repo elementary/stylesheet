@@ -326,7 +326,7 @@ style "minimal-scrollbar-dark"
     }
 }
 
-widget_class "*Eog*Window*"			style "eog-window"
+widget_class "*Eog*Window*"					style "eog-window"
 widget_class "*Eog*Toolbar*"              			style "murrine-wide"
 widget_class "*Eog*Menu*"               			style "murrine-menu"
 widget_class "Eog*Statusbar*"                  			style "eog-statusbar"

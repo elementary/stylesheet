@@ -91,13 +91,13 @@ class "PanelApp*"				style "elementary-panel"
 class "PanelToplevel*"				style "elementary-panel"
 class "*Xfce*Panel*"				style "elementary-panel"
 
-widget "BonoboPlug*PanelApplet*"		style "elementary-panel"
 widget "*fast-user-switch*"			style "elementary-panel"
 widget "PanelToplevel*PanelAppletFrame"		style "elementary-panel"
 widget "PanelToplevel*PanelMenuBar"		style "elementary-panel"
 widget "PanelToplevel*PanelWidget*"		style "elementary-panel"
 widget "*Xfce*Panel*"				style "elementary-panel"
 
+widget_class "BonoboPlug*PanelApplet*"		style "elementary-panel"
 widget_class "*tray*"				style "elementary-panel"
 
 # Make sure panel text color doesn't change
