@@ -318,11 +318,6 @@ style "murrine-progressbar-ultrathin"
 	}
 }
 
-style "murrine-toolbar" 
-{
-	bg[NORMAL]        = @bg_color
-}
-
 style "aurora-statusbar" = "murrine-default"
 {
 	ythickness = 0
@@ -384,12 +379,6 @@ style "minimal-scrollbar"
 	}
 }
 
-style "murrine-menubar" = "murrine-default"
-{
-	bg[NORMAL]	= @bg_color
-	fg[NORMAL] 	= @fg_color
-}
-
 style "equinox-radiocheck" = "equinox-default"
 {
 	bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
@@ -406,7 +395,7 @@ class "GtkWidget"    				style "murrine-default"
 class "GtkRadio*"                        	style "equinox-radiocheck"
 class "GtkCheck*"                           	style "equinox-radiocheck"
 
-class "GtkToolbar"   				style "murrine-toolbar" 
+class "GtkToolbar"   				style "murrine-default" 
 class "GtkRange"     				style "murrine-wide"
 class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
@@ -432,7 +421,7 @@ widget_class "*<GtkNotebook>*"    		style "notebook-close"
 widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
 widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
 
-widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+widget_class "*<GtkMenuBar>*"           	style "murrine-default"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
 widget_class "*<GtkMenuItem>*"          	style "equinox-menu-item"
 
