@@ -297,16 +297,37 @@ style "murrine-progressbar"
 	}
 }
 
+style "murrine-progressbar-etched"
+{
+	xthickness   = 0
+	ythickness   = 0
+
+	GtkProgressBar		::min-vertical-bar-width		= 10
+	GtkProgressBar		::min-horizontal-bar-height		= 10
+
+	bg[ACTIVE]			= shade (0.8, @bg_color)
+	bg[SELECTED]			= @bg_color
+
+	engine "murrine" {
+		progressbarstyle	= 0
+		roundness 		= 12
+		highlight_shade     	= 1.0 
+		lightborder_shade   	= 2.0
+		gradient_shades     	= {1.03,1.09,1.10,1.16}
+		trough_shades       	= {1.00,1.16}
+		contrast		= 1.15
+	}
+}
+
 style "murrine-progressbar-ultrathin"
 {
 	xthickness   = 0
 	ythickness   = 0
 
-	GtkProgressBar		::min-vertical-bar-width		= 8
-	GtkProgressBar		::min-horizontal-bar-height		= 8
+	GtkProgressBar		::min-vertical-bar-width		= 10
+	GtkProgressBar		::min-horizontal-bar-height		= 10
 
-	bg[NORMAL]   = shade (2.0, @bg_color)
-	fg[PRELIGHT] = lighter (@selected_fg_color)
+	bg[ACTIVE]   = shade (2.0, @bg_color)
 
 	engine "murrine" {
 		progressbarstyle	= 0
@@ -428,8 +449,8 @@ widget_class "*<GtkMenuItem>*"          	style "equinox-menu-item"
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 
-widget_class "*<GtkProgress>"			style "murrine-progressbar"
-widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
+widget_class "*<GtkProgress>"			style "murrine-progressbar-etched"
+widget_class "*<GtkProgressBar>"       		style "murrine-progressbar-etched"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
