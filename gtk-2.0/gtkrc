@@ -38,8 +38,11 @@ style "murrine-default"
 
 	GtkPaned		::handle-size          			= 6
 
+	GtkProgressBar		::min-vertical-bar-width		= 10
+	GtkProgressBar		::min-horizontal-bar-height		= 10
+
 	GtkRange		::trough-border				= 2
-	GtkRange		::slider-width				= 10
+	GtkRange		::slider-width				= 8
 	GtkRange		::stepper-size				= 13
 	GtkRange		::stepper_spacing			= 0
  
@@ -284,27 +287,8 @@ style "murrine-tooltips" = "murrine-wider"
 	}
 }
 
-style "murrine-progressbar"
+style "murrine-progressbar" = "murrine-thin"
 {
-	xthickness   = 0
-	ythickness   = 0
-
-	bg[NORMAL]   = shade (2.0, @bg_color)
-	fg[PRELIGHT] = lighter (@selected_fg_color)
-
-	engine "murrine" {
-		roundness 	= 2
-	}
-}
-
-style "murrine-progressbar-etched"
-{
-	xthickness   = 0
-	ythickness   = 0
-
-	GtkProgressBar		::min-vertical-bar-width		= 10
-	GtkProgressBar		::min-horizontal-bar-height		= 10
-
 	bg[ACTIVE]			= shade (0.75, @bg_color)
 	bg[SELECTED]			= @bg_color
 
@@ -315,18 +299,13 @@ style "murrine-progressbar-etched"
 		lightborder_shade   	= 2.0
 		gradient_shades     	= {0.90,1.09,1.10,1.30}
 		trough_shades       	= {1.00,1.16}
-		contrast		= 1.15
+		contrast		= 1.13
+		textstyle		= 1
 	}
 }
 
-style "murrine-progressbar-ultrathin"
+style "murrine-progressbar-alt" = "murrine-thin"
 {
-	xthickness   = 0
-	ythickness   = 0
-
-	GtkProgressBar		::min-vertical-bar-width		= 10
-	GtkProgressBar		::min-horizontal-bar-height		= 10
-
 	bg[ACTIVE]   = shade (2.0, @bg_color)
 
 	engine "murrine" {
@@ -449,8 +428,8 @@ widget_class "*<GtkMenuItem>*"          	style "equinox-menu-item"
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 
-widget_class "*<GtkProgress>"			style "murrine-progressbar-etched"
-widget_class "*<GtkProgressBar>"       		style "murrine-progressbar-etched"
+widget_class "*<GtkProgress>"			style "murrine-progressbar"
+widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
