@@ -1,3 +1,5 @@
+gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
+
 style "midori-main"
 {
 
@@ -25,19 +27,6 @@ style "midori-notebook" = "murrine-notebook"
 	ythickness			= 0
 }
 
-style "midori-panel-toolbar"
-{
-	GtkToolbar:: shadow-type = GTK_SHADOW_NONE
-
-	bg[NORMAL]			= shade (0.75, @bg_color)
-
-	engine "murrine" {
-		toolbarstyle		= 1
-		lightborder_shade	= 1.0
-		gradient_shades     	= {1.0,1.0,1.0,1.0}
-	}
-}
-
 style "midori-menubar" = "murrine-menubar"
 {
 	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
@@ -55,10 +44,54 @@ style "midori-toolbar"
 	}
 }
 
+style "midori-handle"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+		    function	= HANDLE
+		    recolorable	= TRUE
+		    file		= "Apps/nautilus/handle.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "midori-sidebar" {
+
+	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+
+	GtkTreeView::odd_row_color		= @sidebar_color
+	GtkTreeView::even_row_color		= @sidebar_color
+
+}
+
+style "midori-sidebar-toolbar" {
+
+	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+
+	bg[NORMAL]			= @sidebar_color
+
+	engine "murrine" {
+		contrast		= 0.0
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,1.0,1.0,1.0}
+	}
+}
+
+
 widget		"MidoriBrowser"							style "midori-main"
-widget_class	"MidoriBrowser*MenuBar*"					style "midori-menubar"
-widget_class	"MidoriBrowser*GtkToolbar"					style "midori-toolbar"
-widget		"MidoriBrowser.GtkVBox.*.GtkEntry"				style "midori-entry"
-widget		"MidoriBrowser.GtkVBox.GtkHPaned.GtkVPaned.GtkNotebook"		style "midori-notebook"
-widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-panel-toolbar"
+widget		"MidoriBrowser.GtkVBox*GtkEntry"				style "midori-entry"
+widget		"MidoriBrowser*GtkNotebook"					style "midori-notebook"
 widget		"MidoriBrowser*"						style "midori-close"
+widget		"Midori*HPaned"							style "midori-handle"
+widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-sidebar-toolbar"
+
+widget_class	"MidoriBrowser*MenuBar"						style "midori-menubar"
+widget_class	"MidoriBrowser*GtkToolbar"					style "midori-toolbar"
+widget_class	"Midori*VBox*HPaned*Panel"					style "midori-sidebar"
