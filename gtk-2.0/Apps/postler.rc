@@ -1,5 +1,3 @@
-gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
-
 style "postler-sidebar" 
 {
 	

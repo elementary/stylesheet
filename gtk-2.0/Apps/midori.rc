@@ -1,5 +1,3 @@
-gtk_color_scheme = "sidebar_color:#e2e2e2"	# Sidebar color
-
 style "midori-main"
 {
 
@@ -85,13 +83,13 @@ style "midori-sidebar-toolbar" {
 }
 
 
-widget		"MidoriBrowser"							style "midori-main"
-widget		"MidoriBrowser.GtkVBox*GtkEntry"				style "midori-entry"
-widget		"MidoriBrowser*GtkNotebook"					style "midori-notebook"
-widget		"MidoriBrowser*"						style "midori-close"
-widget		"Midori*HPaned"							style "midori-handle"
-widget		"MidoriBrowser.*.MidoriPanel.*.GtkToolbar"			style "midori-sidebar-toolbar"
+widget		"MidoriBrowser"								style "midori-main"
+widget		"MidoriBrowser*"							style "midori-close"
+widget		"MidoriBrowser.GtkVBox*GtkEntry"					style "midori-entry"
+widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "midori-handle"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "midori-sidebar-toolbar"
 
-widget_class	"MidoriBrowser*MenuBar"						style "midori-menubar"
-widget_class	"MidoriBrowser*GtkToolbar"					style "midori-toolbar"
-widget_class	"Midori*VBox*HPaned*Panel"					style "midori-sidebar"
+widget_class	"MidoriBrowser.GtkVBox.GtkMenuBar"					style "midori-menubar"
+widget_class	"MidoriBrowser.GtkVBox.GtkToolbar"					style "midori-toolbar"
+widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "midori-sidebar"

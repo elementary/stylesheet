@@ -7,6 +7,7 @@ gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips.
 gtk_color_scheme	= "link_color:#08c"							# Hyperlinks
 gtk_color_scheme	= "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD"			# Fix for Chrome
+gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar color
 
 gtk-icon-sizes		= "gtk-button=16,16"
 gtk-button-images	= 0			# Disables icons in buttons
