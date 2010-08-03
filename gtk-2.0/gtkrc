@@ -1,18 +1,18 @@
-# Theme:	elementary GTK 
-# Author:	Daniel Foré <Daniel.P.Fore@gmail.com>
-# License:	GPL
+# Theme:		elementary GTK 
+# Author:		Daniel Foré <Daniel.P.Fore@gmail.com>
+# License:		GPL
 
-gtk_color_scheme	= "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base.
-gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text.
-gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips.
+gtk_color_scheme	= "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base
+gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text
+gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar
+gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips
 gtk_color_scheme	= "link_color:#08c"							# Hyperlinks
 gtk_color_scheme	= "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD"			# Fix for Chrome
-gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar color
 
-gtk-icon-sizes		= "gtk-button=16,16"
-gtk-button-images	= 0			# Disables icons in buttons
-gtk-toolbar-style	= 0			# Disables text in toolbar
-gtk-auto-mnemonics	= 1			# Disables ugly lines under menu items
+gtk-icon-sizes		= "gtk-button=16,16"							# Set icon size for button without text
+gtk-button-images	= 0									# Disables icons for buttons with text
+gtk-toolbar-style	= 0									# Disables text in toolbar
+gtk-auto-mnemonics	= 1									# Disables ugly lines under menu items
 
 style "murrine-default"
 {
@@ -44,17 +44,13 @@ style "murrine-default"
 
 	GtkRange		::trough-border				= 2
 	GtkRange		::slider-width				= 8
-	GtkRange		::stepper-size				= 13
-	GtkRange		::stepper_spacing			= 0
  
 	GtkScale		::slider-length				= 14
 	GtkScale		::slider-width				= 14
 
-	GtkScrollbar		::min-slider-length			= 30
-	GtkScrollbar		::has-backward-stepper 			= 0 
-	GtkScrollbar		::has_secondary_backward_stepper	= 0 
+	GtkScrollbar		::min-slider-length			= 20
+	GtkScrollbar		::has-backward-stepper 			= 0  
 	GtkScrollbar		::has-forward-stepper			= 0 
-	GtkScrollbar		::has_secondary_forward_stepper		= 0 
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
@@ -73,7 +69,6 @@ style "murrine-default"
 
 	xthickness = 1
 	ythickness = 1
-
 
 	fg[NORMAL]        = @fg_color
 	fg[PRELIGHT]      = @fg_color
@@ -359,9 +354,6 @@ style "equinox-scale" = "equinox-button"
 
 style "minimal-scrollbar"
 {
-	xthickness = 2
-	ythickness = 2
-
 	bg[SELECTED]   = shade (0.6, @base_color)
 	
 	engine "murrine" {
@@ -373,7 +365,7 @@ style "minimal-scrollbar"
 		gradient_colors		= FALSE
     		lightborder_shade       = 1.0
 		lightborderstyle	= 0
-		trough_shades	        = { 5.0, 1.10}
+		trough_shades	        = { 5.0, 1.20}
 		border_shades		= { 9.0, 9.0}
 		contrast		= 0.0
 		prelight_shade		= 0.65
@@ -529,5 +521,4 @@ include "Apps/nautilus.rc"
 include "Apps/panel.rc"
 include "Apps/postler.rc"
 include "Apps/totem.rc"
-#include "terminal.rc"
 
