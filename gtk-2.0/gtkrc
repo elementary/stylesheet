@@ -209,6 +209,12 @@ style "aurora-entry" = "murrine-wider"
 	}
 
 }
+
+style "murrine-menubar"
+{
+	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
+}
+
 style "murrine-notebook" = "murrine-default"
 {
 	bg[NORMAL]		= shade (1.06, @bg_color)		# selected tab entire
@@ -216,6 +222,15 @@ style "murrine-notebook" = "murrine-default"
 
 	engine "murrine" {
 		roundness		= 4
+	}
+}
+
+style "murrine-toolbar" = "murrine-default"
+{
+	engine "murrine" {
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,0.94,0.94,0.88}
 	}
 }
 
@@ -388,7 +403,7 @@ class "GtkWidget"    				style "murrine-default"
 class "GtkRadio*"                        	style "equinox-radiocheck"
 class "GtkCheck*"                           	style "equinox-radiocheck"
 
-class "GtkToolbar"   				style "murrine-default" 
+class "GtkToolbar"   				style "murrine-toolbar" 
 class "GtkRange"     				style "murrine-wide"
 class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
@@ -414,7 +429,7 @@ widget_class "*<GtkNotebook>*"    		style "notebook-close"
 widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
 widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
 
-widget_class "*<GtkMenuBar>*"           	style "murrine-default"
+widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"
 widget_class "*<GtkMenuItem>*"          	style "equinox-menu-item"
 

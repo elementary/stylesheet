@@ -107,8 +107,8 @@
 <!-- ::: TITLEBAR ::: -->
 
 <draw_ops name="titlebar_gradient">
-	<gradient type="vertical" x="0" y="1" width="width" height="22">
-		<color value="shade/gtk:bg[NORMAL]/1.06"/>
+	<gradient type="vertical" x="0" y="0" width="width" height="22">
+		<color value="shade/gtk:bg[NORMAL]/1.07"/>
 		<color value="shade/gtk:bg[NORMAL]/1.0"/>
 	</gradient>
 </draw_ops>

@@ -25,20 +25,10 @@ style "midori-notebook" = "murrine-notebook"
 	ythickness			= 0
 }
 
-style "midori-menubar" = "murrine-menubar"
-{
-	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
-}
-
 style "midori-toolbar" 
 {
-	bg[NORMAL]        = @bg_color
-
 	engine "murrine" {
 		contrast		= 1.30
-		toolbarstyle		= 1
-		lightborder_shade	= 1.0
-		gradient_shades     	= {1.0,0.94,0.94,0.88}
 	}
 }
 
@@ -90,6 +80,5 @@ widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "midori-handle"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "midori-sidebar-toolbar"
 
-widget_class	"MidoriBrowser.GtkVBox.GtkMenuBar"					style "midori-menubar"
 widget_class	"MidoriBrowser.GtkVBox.GtkToolbar"					style "midori-toolbar"
 widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "midori-sidebar"

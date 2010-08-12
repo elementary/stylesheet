@@ -5,6 +5,7 @@ style "nautilus-window-base"
 
 style "nautilus-sidebar" {
 
+	bg[NORMAL]	= @sidebar_color
 	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
 
 	font_name 	                  	= "Regular"
@@ -179,39 +180,15 @@ style "nautilus-mode-button"
 
 }
 
-style "nautilus-toolbar" 
-{
-	bg[NORMAL]        = @bg_color
-
-	engine "murrine" {
-		toolbarstyle		= 1
-		lightborder_shade	= 1.0
-		gradient_shades     	= {1.0,0.94,0.94,0.88}
-	}
-}
-
-style "nautilus-menubar" = "murrine-menubar"
-{
-	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
-}
-
-widget_class	"*Nautilus*Window"		style "nautilus-window-base"
+widget		"*NautilusNavigationWindow"	style "nautilus-window-base"
 widget		"*Nautilus*Splitter"		style "nautilus-handle"
 widget_class	"*Nautilus*View*"		style "nautilus-view"
-widget_class	"*Nautilus*Places*Sidebar"	style "nautilus-sidebar"
+widget_class	"*Nautilus*NautilusSidePane*"	style "nautilus-sidebar"
 widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
 widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
 
-widget_class	"*Nautilus*Toolbar"		style "nautilus-toolbar"
-widget_class	"*Nautilus*MenuBar"		style "nautilus-menubar"
 widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
 
 widget		"*GtkModeButton*"		style "nautilus-mode-button"
-
-widget_class "*Nautilus*EmblemSidebar*"		style "nautilus-sidebar-other"
-widget_class "*Nautilus*Side*Tree*"		style "nautilus-sidebar-other"
-widget_class "*Nautilus*Notes*"			style "nautilus-sidebar-other"
-widget_class "*Nautilus*History*"		style "nautilus-sidebar-other"
-widget_class "*Nautilus*Information*"		style "nautilus-sidebar-other"
 
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
