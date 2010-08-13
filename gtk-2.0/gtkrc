@@ -37,6 +37,9 @@ style "murrine-default"
 	GtkMenu			::horizontal-padding			= 0
 	GtkMenu			::vertical-padding			= 0
 
+	GtkMenuBar		::internal-padding			= 0
+	GtkMenuBar		::window-dragging			= 1
+
 	GtkPaned		::handle-size          			= 6
 
 	GtkProgressBar		::min-vertical-bar-width		= 10
@@ -54,9 +57,6 @@ style "murrine-default"
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
-
-	GtkMenuBar		::internal-padding			= 0
-	GtkMenuBar		::window-dragging			= 1
 
 	GtkExpander		::expander-size				= 16
 	GtkToolbar		::internal-padding			= 0
@@ -457,6 +457,15 @@ widget "gtk-tooltip*" 				style "murrine-tooltips"
 ###################################################
 # Special cases and work arounds
 ###################################################
+
+style "evo-new-button-workaround" 
+{
+	engine "murrine" {
+		toolbarstyle = 0
+	}
+}
+
+widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem.InternalToolbar" style "evo-new-button-workaround"
 
 # Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
 # Note that the work around assumes that the combobox is _not_ in
