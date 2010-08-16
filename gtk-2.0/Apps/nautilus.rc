@@ -3,17 +3,8 @@ style "nautilus-window-base"
 	bg[NORMAL]	= @base_color
 }
 
-style "nautilus-sidebar" {
-
-	bg[NORMAL]	= @sidebar_color
-	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
-
-	font_name 	                  	= "Regular"
-
-	GtkTreeView::odd_row_color		= @sidebar_color
-	GtkTreeView::even_row_color		= @sidebar_color
-
-      # these make the padding from left window edge a little more sane
+style "nautilus-sidebar" = "sidebar"
+{
 	GtkTreeView::horizontal_separator	= 15
 	GtkTreeView::vertical_separator		= 2
 }

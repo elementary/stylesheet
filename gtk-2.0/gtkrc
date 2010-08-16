@@ -14,6 +14,10 @@ gtk-button-images	= 0									# Disables icons for buttons with text
 gtk-toolbar-style	= 0									# Disables text in toolbar
 gtk-auto-mnemonics	= 1									# Disables ugly lines under menu items
 
+####################
+## Default Styles ##
+####################
+
 style "murrine-default"
 {
 	GnomeHRef		::link_color  				= @link_color		
@@ -129,14 +133,16 @@ style "murrine-thin"	=	"murrine-default"	{ xthickness = 0 ythickness = 0 }
 style "murrine-wide"	=	"murrine-default"	{ xthickness = 2 ythickness = 2 }
 style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
-##################################
-# Equinox Defaults
-##################################
+style "aurora-default" {	
+	engine "aurora" { 		
+		curvature	= 3.0
+		old_arrowstyle  = FALSE
+	}
+}
 
-style "equinox-default"
-{
-	engine "equinox" {
-		animation	= TRUE
+style "equinox-default"	{ 	
+	engine "equinox" { 
+		animation  = TRUE
 	}
 }
 
@@ -144,9 +150,24 @@ style "equinox-thin"	=	"equinox-default"	{ xthickness = 0 ythickness = 0 }
 style "equinox-wide"	=	"equinox-default"	{ xthickness = 2 ythickness = 2 }
 style "equinox-wider"	=	"equinox-default"	{ xthickness = 3 ythickness = 3 }
 
-##################################
-# Dark Style
-##################################
+###################
+## Widget Styles ##
+###################
+
+style "aurora-entry" = "murrine-wider"
+{
+	xthickness = 4
+	engine "aurora" { 		
+		curvature	= 3.0
+		old_arrowstyle  = FALSE
+	}
+}
+
+style "aurora-statusbar"
+{
+	ythickness = 0
+	engine "aurora" {}
+}
 
 style "elementary-dark"
 {
@@ -166,23 +187,6 @@ style "elementary-dark"
 	text[INSENSITIVE]	= "#4D4D4D"
 }
 
-style "murrine-button" = "murrine-wider"
-{
-
-	GtkWidget	::focus-line-width	= 2
-	GtkWidget	::focus-padding		= 0
-
-	bg[ACTIVE]	= shade (0.90, @bg_color)
-	bg[NORMAL]	= shade (1.30, @bg_color)
-	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= shade (0.9, @selected_bg_color)
-	bg[INSENSITIVE]	= @bg_color
-	
-	engine "murrine" {
-		contrast	= 1.35
-	}
-}
-
 style "equinox-button" = "equinox-wider"
 {
 
@@ -200,14 +204,64 @@ style "equinox-button" = "equinox-wider"
 	}
 }
 
-style "aurora-entry" = "murrine-wider"
+style "equinox-menu-item" = "murrine-wider"
 {
-	xthickness = 4
-
-	engine "aurora" {
-		curvature	= 3.0
+	engine "equinox" {
 	}
 
+	fg[PRELIGHT] 		= @selected_fg_color
+	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
+}
+
+style "equinox-radiocheck" = "equinox-default"
+{
+	bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
+	bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
+	base[NORMAL]	= @selected_fg_color			# enabled background
+}
+
+style "equinox-scale" = "equinox-button"
+{
+	bg[NORMAL]     = shade (1.05, @bg_color)
+	bg[PRELIGHT]   = shade (1.15, @bg_color)
+	base[SELECTED] = @selected_bg_color
+
+	engine "equinox" 
+	{
+		curvature	= 6
+		scalesliderstyle    = 0
+	}
+}
+
+style "murrine-button" = "murrine-wider"
+{
+
+	GtkWidget	::focus-line-width	= 2
+	GtkWidget	::focus-padding		= 0
+
+	bg[ACTIVE]	= shade (0.90, @bg_color)
+	bg[NORMAL]	= shade (1.30, @bg_color)
+	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
+	bg[SELECTED]	= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]	= @bg_color
+	
+	engine "murrine" {
+		contrast	= 1.35
+	}
+}
+
+style "murrine-frame-title"
+{
+	fg[NORMAL] = lighter (@fg_color)
+}
+
+style "murrine-menu" = "murrine-default"
+{
+
+	fg[PRELIGHT]		= @selected_fg_color
+	fg[SELECTED]		= @selected_fg_color
+	fg[ACTIVE]		= @fg_color
+	fg[INSENSITIVE]		= darker (@bg_color)
 }
 
 style "murrine-menubar"
@@ -222,79 +276,6 @@ style "murrine-notebook" = "murrine-default"
 
 	engine "murrine" {
 		roundness		= 4
-	}
-}
-
-style "murrine-toolbar" = "murrine-default"
-{
-	engine "murrine" {
-		toolbarstyle		= 1
-		lightborder_shade	= 1.0
-		gradient_shades     	= {1.0,0.94,0.94,0.88}
-	}
-}
-
-style "notebook-close"
-{
-	stock["gtk-close"]	= {{ "Icons/close.png", *, *, * }}	# Prettier Close icon
-}
-
-style "murrine-tasklist" = "murrine-wide"
-{
-}
-
-style "murrine-menu" = "murrine-default"
-{
-
-	fg[PRELIGHT]		= @selected_fg_color
-	fg[SELECTED]		= @selected_fg_color
-	fg[ACTIVE]		= @fg_color
-	fg[INSENSITIVE]		= darker (@bg_color)
-}
-
-style "equinox-menu-item" = "murrine-wider"
-{
-	engine "equinox" {
-	}
-
-	fg[PRELIGHT] 		= @selected_fg_color
-	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
-}
-
-style "murrine-treeview"
-{
-	bg[SELECTED] = @selected_bg_color
-}
-
-style "murrine-treeview-header" = "murrine-default"
-{
-	bg[NORMAL]      = shade (1.08, @bg_color)
-	bg[PRELIGHT]    = shade (1.11, @bg_color)
-	bg[ACTIVE]      = shade (0.92, @bg_color)
-	bg[INSENSITIVE] = shade (1.04, @bg_color)
-
-	engine "murrine" {
-	}
-}
-
-style "murrine-frame-title"
-{
-	fg[NORMAL] = lighter (@fg_color)
-}
-
-style "murrine-tooltips" = "murrine-wider"
-{
-	xthickness = 8
-	ythickness = 5
-
-	bg[NORMAL] = @tooltip_bg_color
-	bg[SELECTED] = "#000000"
-	fg[NORMAL] = @tooltip_fg_color
-
-	engine "murrine"
-	{
-		roundness	= 0
-		trough_shades	= { 0.15, 0.3 }
 	}
 }
 
@@ -315,59 +296,50 @@ style "murrine-progressbar" = "murrine-thin"
 	}
 }
 
-style "murrine-progressbar-alt" = "murrine-thin"
+style "murrine-tasklist" = "murrine-wide" {}
+
+style "murrine-toolbar" = "murrine-default"
 {
-	bg[ACTIVE]   = shade (2.0, @bg_color)
+	engine "murrine" {
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,0.94,0.94,0.88}
+	}
+}
+
+style "murrine-tooltips" = "murrine-wider"
+{
+	xthickness = 8
+	ythickness = 5
+
+	bg[NORMAL] = @tooltip_bg_color
+	bg[SELECTED] = "#000000"
+	fg[NORMAL] = @tooltip_fg_color
+
+	engine "murrine"
+	{
+		roundness	= 0
+		trough_shades	= { 0.15, 0.3 }
+	}
+}
+
+style "murrine-treeview"
+{
+	bg[SELECTED] = @selected_bg_color
+}
+
+style "murrine-treeview-header" = "murrine-default"
+{
+	bg[NORMAL]      = shade (1.08, @bg_color)
+	bg[PRELIGHT]    = shade (1.11, @bg_color)
+	bg[ACTIVE]      = shade (0.92, @bg_color)
+	bg[INSENSITIVE] = shade (1.04, @bg_color)
 
 	engine "murrine" {
-		progressbarstyle	= 0
-		roundness 		= 12
-		highlight_shade     	= 1.0 
-		lightborder_shade   	= 1.05  
-		gradient_shades     	= {1.20,1.12,1.08,1.00}
-		trough_shades       	= { 0.98, 0.82 }
 	}
 }
 
-style "aurora-statusbar" = "murrine-default"
-{
-	ythickness = 0
-	
-	engine "aurora" {
-		old_arrowstyle  = FALSE
-	}
-}
-
-style "aurora-comboboxentry"
-{
-	engine "aurora" {
-		curvature	= 3.0
-		old_arrowstyle  = FALSE
-	}
-}
-
-style "aurora-spinbutton"
-{
-	engine "aurora" {
-		curvature	= 3.0
-		old_arrowstyle  = FALSE
-	}
-}
-
-style "equinox-scale" = "equinox-button"
-{
-	bg[NORMAL]     = shade (1.05, @bg_color)
-	bg[PRELIGHT]   = shade (1.15, @bg_color)
-	base[SELECTED] = @selected_bg_color
-
-	engine "equinox" 
-	{
-		curvature	= 6
-		scalesliderstyle    = 0
-	}
-}
-
-style "minimal-scrollbar"
+style "murrine-scrollbar"
 {
 	bg[SELECTED]   = shade (0.6, @base_color)
 	
@@ -387,16 +359,26 @@ style "minimal-scrollbar"
 	}
 }
 
-style "equinox-radiocheck" = "equinox-default"
+style "notebook-close"
 {
-	bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
-	bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
-	base[NORMAL]	= @selected_fg_color			# enabled background
+	stock["gtk-close"]	= {{ "Icons/close-tiny.png", *, *, * }}	# Prettier Close icon
 }
 
-##################################
-# Matches
-##################################
+style "sidebar" {
+
+	base[NORMAL]	= @sidebar_color
+	bg[NORMAL]	= @sidebar_color
+	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+
+	font_name 	                  	= "Regular"
+
+	GtkTreeView::odd_row_color		= @sidebar_color
+	GtkTreeView::even_row_color		= @sidebar_color
+}
+
+##############
+## Matching ##
+##############
 
 class "GtkWidget"    				style "murrine-default"
 
@@ -409,11 +391,11 @@ class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
 class "GtkEntry"     				style "aurora-entry"
 
-class "GtkSpinButton"  				style "aurora-spinbutton"
+class "GtkSpinButton"  				style "aurora-default"
 class "GtkScale"       				style "equinox-scale"
-class "GtkScrollbar"   				style "minimal-scrollbar"
-class "GtkVScrollbar"  				style "minimal-scrollbar"
-class "GtkHScrollbar"  				style "minimal-scrollbar"
+class "GtkScrollbar"   				style "murrine-scrollbar"
+class "GtkVScrollbar"  				style "murrine-scrollbar"
+class "GtkHScrollbar"  				style "murrine-scrollbar"
 
 widget_class "*<GtkNotebook>*<GtkEventBox>"     style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
@@ -426,8 +408,8 @@ widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
 
 widget_class "*<GtkNotebook>*"    		style "notebook-close"
 
-widget_class "*<GtkComboBoxEntry>*"		style "aurora-comboboxentry"
-widget_class "*<GtkCombo>*"         		style "aurora-comboboxentry"
+widget_class "*<GtkComboBoxEntry>*"		style "aurora-default"
+widget_class "*<GtkCombo>*"         		style "aurora-default"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-menu"

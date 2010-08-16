@@ -1,10 +1,3 @@
-style "postler-sidebar" 
-{
-	
-	base[NORMAL]	= @sidebar_color
-	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
-}
-
 style "postler-handle-horiz"
 {
 	GtkPaned::handle-size		= 2
@@ -48,6 +41,6 @@ style "postler-filterbar-button" = "equinox-button"
 }
 
 widget_class	"*Postler*HPaned"			style "postler-handle-horiz"
-widget_class	"*Postler*HPaned*PostlerFolders"	style "postler-sidebar"
+widget_class	"*Postler*HPaned*PostlerFolders"	style "sidebar"
 widget_class	"*Postler*VPaned*Toolbar"		style "postler-filterbar"
 widget_class	"*Postler*VPaned*Toolbar*Button"	style "postler-filterbar-button"

@@ -49,15 +49,6 @@ style "midori-handle"
 	}
 }
 
-style "midori-sidebar" {
-
-	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
-
-	GtkTreeView::odd_row_color		= @sidebar_color
-	GtkTreeView::even_row_color		= @sidebar_color
-
-}
-
 style "midori-sidebar-toolbar" {
 
 	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
@@ -72,6 +63,10 @@ style "midori-sidebar-toolbar" {
 	}
 }
 
+style "midori-sidebar-search" {
+
+	bg[NORMAL]			= @base_color
+}
 
 widget		"MidoriBrowser"								style "midori-main"
 widget		"MidoriBrowser*"							style "midori-close"
@@ -79,6 +74,7 @@ widget		"MidoriBrowser.GtkVBox*GtkEntry"					style "midori-entry"
 widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "midori-handle"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "midori-sidebar-toolbar"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox*GtkViewport"	style "midori-sidebar-search"
 
 widget_class	"MidoriBrowser.GtkVBox.GtkToolbar"					style "midori-toolbar"
-widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "midori-sidebar"
+widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "sidebar"
