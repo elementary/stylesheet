@@ -341,7 +341,8 @@ style "murrine-treeview-header" = "murrine-default"
 
 style "murrine-scrollbar"
 {
-	bg[SELECTED]   = shade (0.6, @base_color)
+	bg[SELECTED]	= shade (0.6, @base_color)
+	bg[ACTIVE]	= @base_color
 	
 	engine "murrine" {
 		roundness		= 6
@@ -353,7 +354,7 @@ style "murrine-scrollbar"
     		lightborder_shade       = 1.0
 		lightborderstyle	= 0
 		trough_shades	        = { 5.0, 1.20}
-		border_shades		= { 9.0, 9.0}
+		border_shades		= { 2.0, 2.0}
 		contrast		= 0.0
 		prelight_shade		= 0.65
 	}
