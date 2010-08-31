@@ -4,7 +4,7 @@ style "elementary-panel"
 	xthickness		= 1
 	ythickness		= 0
 
-	bg_pixmap[NORMAL]	= "/Panel/panel-dark.png" # Disable for normal panel backgrounds.
+	bg_pixmap[NORMAL]	= "/Panel/panel-black.png" # Disable for normal panel backgrounds.
 
 	engine "pixmap"
 	{
@@ -20,9 +20,6 @@ style "elementary-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= PRELIGHT
-			file			= "Panel/button-active-dark.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
 		}
 		
 		image
@@ -30,9 +27,6 @@ style "elementary-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= ACTIVE
-			file			= "Panel/button-active-dark.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
 		}
 
 		image
@@ -40,9 +34,6 @@ style "elementary-panel"
 			function		= BOX
 			recolorable		= TRUE
 			state			= SELECTED
-			file			= "Panel/button-active-dark.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
 		}
  
 		image
