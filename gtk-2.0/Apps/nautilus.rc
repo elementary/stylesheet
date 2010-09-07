@@ -49,19 +49,6 @@ style "nautilus-extra-view"
 
 	bg[NORMAL] = @base_color
 
-	engine "pixmap"
-	{
-		image 
-		{
-		    function	= FLAT_BOX
-		    recolorable	= TRUE
-		    file		= "Apps/nautilus/extra-widget.png"
-		    state		= NORMAL
-		    stretch		= TRUE
-		    border 		= { 0, 0, 4, 4 }
-		}
-	}
-
 }
 
 style "nautilus-statusbar"
@@ -171,6 +158,126 @@ style "nautilus-mode-button"
 
 }
 
+style "nautilus-breadcrumbs"
+{
+	xthickness = 6
+	ythickness = 0
+	
+	GtkButton::child-displacement-y		= 0
+	GtkButton::inner-border				= { 0, 11, 0, 0}
+
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			shadow				= OUT
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "Breadcrumbs/breadcrumb_prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}		
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow				= IN
+			state				= PRELIGHT
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "Breadcrumbs/breadcrumb_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "Breadcrumbs/breadcrumb_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "Breadcrumbs/breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	}
+}
+
+style "nautilus-left-slider"
+{
+	xthickness = 0
+	ythickness = 0
+	
+	engine "pixmap"
+	{
+		image
+		{
+			function 		= BOX
+			file			= "Breadcrumbs/left_slider_normal.png"
+			border			= { 3, 3, 3, 3 }
+			stretch			= TRUE
+		}
+	}
+
+}
+
+style "nautilus-right-slider"
+{	
+	xthickness = 0
+	ythickness = 0
+	
+	engine "pixmap"
+	{
+		image
+		{
+			function 		= BOX
+			file			= "Breadcrumbs/right_slider_normal.png"
+			border			= { 3, 3, 3, 3 }
+			stretch			= TRUE
+		}
+	}
+}
+
 widget		"*NautilusNavigationWindow"	style "nautilus-window-base"
 widget		"*Nautilus*Splitter"		style "nautilus-handle"
 widget_class	"*Nautilus*View*"		style "nautilus-view"
@@ -183,3 +290,8 @@ widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
 widget		"*GtkModeButton*"		style "nautilus-mode-button"
 
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
+widget "*.nautilus-extra-view-widget*Button" 	style "murrine-button-content"
+
+widget_class "*NautilusPathBar.*ToggleButton" style "nautilus-breadcrumbs" 
+widget "Nautilus*left_slider*" style "nautilus-left-slider" 
+widget "Nautilus*right_slider*" style "nautilus-right-slider"
