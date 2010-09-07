@@ -149,12 +149,74 @@ style "nautilus-scale"
 style "nautilus-mode-button"
 {
 
-	bg[NORMAL]	= shade (1.15, @bg_color)
-	bg[PRELIGHT]	= shade (1.22, @selected_bg_color)
-	bg[SELECTED]	= shade (0.85, @bg_color)
+	xthickness = 6
+	ythickness = 0
+	
+	GtkButton::child-displacement-y		= 0
+	GtkButton::inner-border			= { 0, 11, 0, 0}
 
-	engine "murrine" {
-		gradient_shades			= {1.15,1.05,1.04,0.9}
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "nautilus/mode_prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "nautilus/mode_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "nautilus/mode_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "nautilus/mode_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "nautilus/mode_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "nautilus/mode_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
 	}
 
 }
@@ -175,7 +237,7 @@ style "nautilus-breadcrumbs"
 			shadow				= OUT
 			recolorable     	= TRUE
 			state				= PRELIGHT
-			file				= "Breadcrumbs/breadcrumb_prelight.png"
+			file				= "nautilus/breadcrumb_prelight.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}		
@@ -186,7 +248,7 @@ style "nautilus-breadcrumbs"
 			recolorable     	= TRUE
 			shadow				= IN
 			state				= PRELIGHT
-			file				= "Breadcrumbs/breadcrumb_active.png"
+			file				= "nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -196,7 +258,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= NORMAL
-			file				= "Breadcrumbs/breadcrumb_normal.png"
+			file				= "nautilus/breadcrumb_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -206,7 +268,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= PRELIGHT
-			file				= "Breadcrumbs/breadcrumb_active.png"
+			file				= "nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -217,7 +279,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= ACTIVE
-			file				= "Breadcrumbs/breadcrumb_active.png"
+			file				= "nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}  
@@ -227,7 +289,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= INSENSITIVE
-			file				= "Breadcrumbs/breadcrumb_normal.png"
+			file				= "nautilus/breadcrumb_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		} 
@@ -237,7 +299,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= SELECTED
-			file				= "Breadcrumbs/breadcrumb_active.png"
+			file				= "nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -254,7 +316,7 @@ style "nautilus-left-slider"
 		image
 		{
 			function 		= BOX
-			file			= "Breadcrumbs/left_slider_normal.png"
+			file			= "nautilus/left_slider_normal.png"
 			border			= { 3, 3, 3, 3 }
 			stretch			= TRUE
 		}
@@ -272,7 +334,7 @@ style "nautilus-right-slider"
 		image
 		{
 			function 		= BOX
-			file			= "Breadcrumbs/right_slider_normal.png"
+			file			= "nautilus/right_slider_normal.png"
 			border			= { 3, 3, 3, 3 }
 			stretch			= TRUE
 		}
