@@ -148,12 +148,13 @@ style "nautilus-scale"
 
 style "nautilus-mode-button"
 {
+
 	bg[NORMAL]	= shade (1.15, @bg_color)
 	bg[PRELIGHT]	= shade (1.22, @selected_bg_color)
 	bg[SELECTED]	= shade (0.85, @bg_color)
 
 	engine "murrine" {
-		gradient_shades     = {1.15,1.05,1.04,0.9}
+		gradient_shades			= {1.15,1.05,1.04,0.9}
 	}
 
 }
@@ -164,7 +165,7 @@ style "nautilus-breadcrumbs"
 	ythickness = 0
 	
 	GtkButton::child-displacement-y		= 0
-	GtkButton::inner-border				= { 0, 11, 0, 0}
+	GtkButton::inner-border			= { 0, 11, 0, 0}
 
 	engine "pixmap"
 	{	
