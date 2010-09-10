@@ -65,7 +65,7 @@ style "murrine-default"
 
 	GtkExpander		::expander-size				= 16
 	GtkToolbar		::internal-padding			= 0
-	GtkTreeView		::expander-size				= 14
+	GtkTreeView		::expander-size				= 7
 	GtkTreeView		::vertical-separator			= 0
 
 	GtkWidget		::new-tooltip-style			= 1
@@ -112,8 +112,8 @@ style "murrine-default"
 		highlight_shade		= 1.0		# set highlight amount for buttons or widgets
 		lightborder_shade	= 1.2		# sets lightborder amount for buttons or widgets
 		lightborderstyle	= 0		# 0 = lightborder on top side, 1 = lightborder on all sides
-		listviewheaderstyle	= 1		# 0 = flat, 1 = glassy, 2 = raised
-		listviewstyle		= 1		# 0 = nothing, 1 = dotted
+		#listviewheaderstyle	= 1		# 0 = flat, 1 = glassy, 2 = raised
+		listviewstyle		= 2		# 0 = nothing, 1 = dotted
 		menubaritemstyle	= 0		# 0 = menuitem look, 1 = button look
 		menubarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle		= 0		# 0 = flat, 1 = glassy, 2 = striped
@@ -160,7 +160,7 @@ style "aurora-entry" = "murrine-wider"
 {
 	xthickness = 4
 	engine "aurora" { 		
-		curvature	= 3.0
+		curvature	= 2.0
 		old_arrowstyle  = FALSE
 	}
 }
@@ -265,18 +265,44 @@ style "murrine-button-content" = "murrine-wider"
 	}
 }
 
+style "murrine-entry" = "murrine-wider"
+{
+	xthickness = 4
+	GtkWidget	::focus-line-width	= 1
+	GtkWidget	::focus-padding		= 1
+
+	bg[ACTIVE]	= shade (0.78, @bg_color)
+	bg[NORMAL]	= shade (1.30, @bg_color)
+	bg[PRELIGHT]	= shade (1.18, @selected_bg_color)
+	bg[SELECTED]	= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+	
+	engine "murrine" {
+		border_shades 		= {1.45, 1.25}
+		textstyle		= 1
+		roundness		= 2	
+	}
+}
+
 style "murrine-frame-title"
 {
 	fg[NORMAL] = lighter (@fg_color)
 }
 
-style "murrine-menu" = "murrine-default"
+style "murrine-menu-item" = "murrine-wider"
 {
 
 	fg[PRELIGHT]		= @selected_fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
 	fg[INSENSITIVE]		= darker (@bg_color)
+
+	engine "murrine"
+	{
+		glowstyle = 5
+		glow_shade = 1.1
+		roundness = 0
+	}
 }
 
 style "murrine-menubar"
@@ -333,6 +359,14 @@ style "murrine-scale" = "murrine-wider"
 	}
 }
 
+style "murrine-scale-menu" = "murrine-scale" {
+	engine "murrine" {
+		roundness = 20
+		lightborder_shade = 1.32
+		reliefstyle = 3
+	}
+}
+
 style "murrine-tasklist" = "murrine-wide" {}
 
 style "murrine-toolbar" = "murrine-default"
@@ -363,16 +397,26 @@ style "murrine-tooltips" = "murrine-wider"
 style "murrine-treeview"
 {
 	bg[SELECTED] = @selected_bg_color
+
+		
+	engine "murrine" {}
 }
 
-style "murrine-treeview-header" = "murrine-default"
+style "murrine-treeview-header" = "murrine-wide"
 {
+
 	bg[NORMAL]      = shade (1.08, @bg_color)
 	bg[PRELIGHT]    = shade (1.11, @bg_color)
 	bg[ACTIVE]      = shade (0.92, @bg_color)
 	bg[INSENSITIVE] = shade (1.04, @bg_color)
 
 	engine "murrine" {
+		gradient_shades	= {1.2,1.15,1.14,1.0}
+		glazestyle = 1
+		contrast = 0.8
+		lightborder_shade = 1.16
+		textstyle = 1
+		glow_shade = 1.0
 	}
 }
 
@@ -457,14 +501,19 @@ widget_class "*<GtkComboBoxEntry>*"		style "aurora-default"
 widget_class "*<GtkCombo>*"         		style "aurora-default"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
-widget_class "*<GtkMenu>*"              	style "murrine-menu"
-widget_class "*<GtkMenuItem>*"          	style "equinox-menu-item"
+widget_class "*<GtkMenu>*"              	style "murrine-thin"
+widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
+widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-menu"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 
 widget_class "*<GtkProgress>"			style "murrine-progressbar"
 widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
+
+widget_class "*<GtkSeparatorMenuItem>*"		style "equinox-menu-item"
+
+
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
@@ -553,14 +602,6 @@ class "GtkCTree"	style "equinox-default"
 ##################################
 
 class "GtkArrow"	style:highest "equinox-default"
-
-##################################
-# Equinox Separator
-##################################
-
-widget_class "*<GtkSeparatorMenuItem>*"	style:highest "equinox-wide" # Menus
-widget_class "*<GtkSeparatorToolItem>*" style:highest "equinox-wide" # Toolbars	
-widget_class "*<GtkSeparator>*" 	style:highest "equinox-wide" # Other
 
 ##################################
 # Per-App Styles

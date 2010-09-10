@@ -93,6 +93,7 @@ style "nautilus-scale"
 	ythickness = 0
 
 	GtkRange		::trough-border				= 0
+	GtkScale		::trough-side-details			= 0
 	
   engine "pixmap" 
   {
