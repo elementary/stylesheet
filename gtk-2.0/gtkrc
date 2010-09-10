@@ -54,6 +54,7 @@ style "murrine-default"
  
 	GtkScale		::slider-length				= 14
 	GtkScale		::slider-width				= 14
+	GtkScale		::trough-side-details			= 1
 
 	GtkScrollbar		::min-slider-length			= 20
 	GtkScrollbar		::has-backward-stepper 			= 0  
@@ -221,19 +222,6 @@ style "equinox-radiocheck" = "equinox-default"
 	base[NORMAL]	= @selected_fg_color			# enabled background
 }
 
-style "equinox-scale" = "equinox-button"
-{
-	bg[NORMAL]     = shade (1.05, @bg_color)
-	bg[PRELIGHT]   = shade (1.15, @bg_color)
-	base[SELECTED] = @selected_bg_color
-
-	engine "equinox" 
-	{
-		curvature	= 6
-		scalesliderstyle    = 0
-	}
-}
-
 style "murrine-button" = "murrine-wider"
 {
 
@@ -320,6 +308,28 @@ style "murrine-progressbar" = "murrine-thin"
 		trough_shades       	= {1.00,1.16}
 		contrast		= 1.13
 		textstyle		= 1
+		border_shades 		= {1.0, 0.9}
+	}
+}
+
+style "murrine-scale" = "murrine-wider"
+{
+
+	bg[ACTIVE]	= shade (0.78, @bg_color)
+	bg[NORMAL]	= shade (1.30, @bg_color)
+	bg[PRELIGHT]	= shade (1.18, @selected_bg_color)
+	bg[SELECTED]	= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+	
+	engine "murrine" {
+		border_shades 		= {0.8, 0.6}
+		contrast		= 0.8
+		gradient_shades     	= {1.18,1.09,1.08,0.9}
+		shadow_shades     	= {2.0,1.0}
+		lightborder_shade	= 1.1
+		lightborderstyle	= 1
+		roundness		= 7
+		trough_shades		= {0.9, 1.1}
 	}
 }
 
@@ -424,9 +434,9 @@ class "GtkIconView"				style "murrine-default"
 
 class "GtkSpinButton"  				style "aurora-default"
 
-class "GtkScale"       				style "equinox-scale"
-class "GtkVScale" 				style "equinox-scale"
-class "GtkHScale" 				style "equinox-scale"
+class "GtkScale"       				style "murrine-scale"
+class "GtkVScale" 				style "murrine-scale"
+class "GtkHScale" 				style "murrine-scale"
 
 class "GtkScrollbar"   				style "murrine-scrollbar"
 class "GtkVScrollbar"  				style "murrine-scrollbar"

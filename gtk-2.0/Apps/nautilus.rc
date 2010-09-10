@@ -149,12 +149,6 @@ style "nautilus-scale"
 style "nautilus-mode-button"
 {
 
-	xthickness = 6
-	ythickness = 0
-	
-	GtkButton::child-displacement-y		= 0
-	GtkButton::inner-border			= { 0, 11, 0, 0}
-
 	engine "pixmap"
 	{	
 		image
@@ -176,24 +170,13 @@ style "nautilus-mode-button"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
-		
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= PRELIGHT
-			file				= "nautilus/mode_active.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
 	
-
 		image
 		{
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= ACTIVE
-			file				= "nautilus/mode_active.png"
+			file				= "nautilus/mode_pressed.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}  
@@ -213,7 +196,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= SELECTED
-			file				= "nautilus/mode_active.png"
+			file				= "nautilus/mode_pressed.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
