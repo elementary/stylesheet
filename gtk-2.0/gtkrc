@@ -395,28 +395,27 @@ style "murrine-tooltips" = "murrine-wider"
 }
 
 style "murrine-treeview"
-{
-	bg[SELECTED] = @selected_bg_color
-
-		
+{		
 	engine "murrine" {}
 }
 
-style "murrine-treeview-header" = "murrine-wide"
+style "murrine-treeview-header" = "murrine-thin"
 {
+	GtkWidget	::focus-padding		= 0
 
-	bg[NORMAL]      = shade (1.08, @bg_color)
-	bg[PRELIGHT]    = shade (1.11, @bg_color)
-	bg[ACTIVE]      = shade (0.92, @bg_color)
-	bg[INSENSITIVE] = shade (1.04, @bg_color)
+	bg[NORMAL]      		= shade (1.08, @bg_color)
+	bg[PRELIGHT]    		= shade (1.20, @bg_color)
+	bg[ACTIVE]      		= shade (0.92, @bg_color)
+	bg[INSENSITIVE] 		= shade (1.04, @bg_color)
 
 	engine "murrine" {
-		gradient_shades	= {1.2,1.15,1.14,1.0}
-		glazestyle = 1
-		contrast = 0.8
-		lightborder_shade = 1.16
-		textstyle = 1
-		glow_shade = 1.0
+		gradient_shades     	= {0.96,1.06,1.07,1.20}
+		glazestyle 		= 1
+		contrast 		= 0.75
+		lightborder_shade 	= 0.76
+		textstyle 		= 1
+		glow_shade 		= 1.0
+		roundness		= 0
 	}
 }
 
