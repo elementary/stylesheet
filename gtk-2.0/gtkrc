@@ -44,6 +44,8 @@ style "murrine-default"
 	GtkMenuBar		::internal-padding			= 0
 	GtkMenuBar		::window-dragging			= 1
 
+	GtkNotebook		::tab-overlap 				= 0
+
 	GtkPaned		::handle-size          			= 6
 
 	GtkProgressBar		::min-vertical-bar-width		= 10
@@ -112,7 +114,6 @@ style "murrine-default"
 		highlight_shade		= 1.0		# set highlight amount for buttons or widgets
 		lightborder_shade	= 1.2		# sets lightborder amount for buttons or widgets
 		lightborderstyle	= 0		# 0 = lightborder on top side, 1 = lightborder on all sides
-		#listviewheaderstyle	= 1		# 0 = flat, 1 = glassy, 2 = raised
 		listviewstyle		= 2		# 0 = nothing, 1 = dotted
 		menubaritemstyle	= 0		# 0 = menuitem look, 1 = button look
 		menubarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
@@ -399,17 +400,19 @@ style "murrine-treeview"
 	engine "murrine" {}
 }
 
-style "murrine-treeview-header" = "murrine-thin"
+style "murrine-treeview-header"
 {
+
+	ythickness = 0
+
 	GtkWidget	::focus-padding		= 0
 
 	bg[NORMAL]      		= shade (1.08, @bg_color)
-	bg[PRELIGHT]    		= shade (1.20, @bg_color)
-	bg[ACTIVE]      		= shade (0.92, @bg_color)
+	bg[PRELIGHT]    		= shade (1.20, @selected_bg_color)
 	bg[INSENSITIVE] 		= shade (1.04, @bg_color)
 
 	engine "murrine" {
-		gradient_shades     	= {0.96,1.06,1.07,1.20}
+		gradient_shades     	= {0.95,1.06,1.07,1.20}
 		glazestyle 		= 1
 		contrast 		= 0.75
 		lightborder_shade 	= 0.76
@@ -600,7 +603,7 @@ class "GtkCTree"	style "equinox-default"
 # Equinox Arrows
 ##################################
 
-class "GtkArrow"	style:highest "equinox-default"
+class "GtkArrow"	style "equinox-default"
 
 ##################################
 # Per-App Styles

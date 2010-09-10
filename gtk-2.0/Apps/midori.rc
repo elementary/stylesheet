@@ -17,8 +17,6 @@ style "midori-entry"
 style "midori-notebook" = "murrine-notebook"
 {
 
-	GtkNotebook	::tab-overlap	= 0
-
 	bg[NORMAL]			= @bg_color		# selected tab entire
 
 	xthickness			= 0
