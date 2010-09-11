@@ -2,7 +2,7 @@
 # Author:		Daniel Foré <Daniel.P.Fore@gmail.com>
 # License:		GPL
 
-gtk_color_scheme	= "bg_color:#D6D6D6\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base
+gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base
 gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text
 gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips
@@ -180,13 +180,13 @@ style "elementary-dark"
 	bg[ACTIVE]		= "#434241"
 	bg[PRELIGHT]		= "#4D4D4D"
 
-	fg[NORMAL]              = "#D6D6D6"
-	fg[PRELIGHT]            = "#D6D6D6"
+	fg[NORMAL]              = "#D9D9D9"
+	fg[PRELIGHT]            = "#D9D9D9"
 
-	text[NORMAL]      	= "#D6D6D6"
-	text[PRELIGHT]    	= "#D6D6D6"
-	text[ACTIVE]      	= "#D6D6D6"
-	text[SELECTED]   	= "#D6D6D6"
+	text[NORMAL]      	= "#D9D9D9"
+	text[PRELIGHT]    	= "#D9D9D9"
+	text[ACTIVE]      	= "#D9D9D9"
+	text[SELECTED]   	= "#D9D9D9"
 	text[INSENSITIVE]	= "#4D4D4D"
 }
 
@@ -412,7 +412,7 @@ style "murrine-treeview-header"
 	bg[INSENSITIVE] 		= shade (1.04, @bg_color)
 
 	engine "murrine" {
-		gradient_shades     	= {0.95,1.06,1.07,1.20}
+		gradient_shades     	= {0.97,1.06,1.07,1.20}
 		glazestyle 		= 1
 		contrast 		= 0.75
 		lightborder_shade 	= 0.76
