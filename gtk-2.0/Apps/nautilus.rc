@@ -347,6 +347,6 @@ widget		"*GtkModeButton*"		style "nautilus-mode-button"
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
 widget "*.nautilus-extra-view-widget*Button" 	style "murrine-button-content"
 
-widget_class "*NautilusPathBar.*ToggleButton" style "nautilus-breadcrumbs" 
+widget_class "*NautilusPathBar.*ToggleButton*" style "nautilus-breadcrumbs" 
 widget "Nautilus*left_slider*" style "nautilus-left-slider" 
 widget "Nautilus*right_slider*" style "nautilus-right-slider"

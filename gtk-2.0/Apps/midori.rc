@@ -4,11 +4,6 @@ style "midori-main"
 	bg_pixmap[NORMAL]		= "/midori/base.png"	
 }
 
-style "midori-close"
-{
-	stock["gtk-close"]	= {{ "Icons/close-tiny.png", *, *, * }}
-}
-
 style "midori-entry"
 {
 	ythickness			= 4
@@ -67,7 +62,6 @@ style "midori-sidebar-search" {
 }
 
 widget		"MidoriBrowser"								style "midori-main"
-widget		"MidoriBrowser*"							style "midori-close"
 widget		"MidoriBrowser.GtkVBox*GtkEntry"					style "midori-entry"
 widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "midori-handle"

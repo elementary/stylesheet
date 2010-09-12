@@ -30,7 +30,7 @@ style "murrine-default"
 	GtkButton		::child-displacement-x 			= 1
 	GtkButton		::child-displacement-y 			= 1
 	GtkButton		::default-border       			= { 0, 0, 0, 0 }
-	GtkCheckButton		::indicator-size       			= 14
+	GtkCheckButton		::indicator-size       			= 15
 
 	GtkEntry		::honors-transparent-bg-hint 		= 1
 	GtkEntry		::progress-border			= { 3, 3, 3, 3 }
@@ -138,27 +138,18 @@ style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
 style "aurora-default" {	
 	engine "aurora" { 		
-		curvature	= 3.0
+		curvature	= 2.0
 		old_arrowstyle  = FALSE
 	}
 }
-
-style "equinox-default"	{ 	
-	engine "equinox" { 
-		animation  = TRUE
-	}
-}
-
-style "equinox-thin"	=	"equinox-default"	{ xthickness = 0 ythickness = 0 }
-style "equinox-wide"	=	"equinox-default"	{ xthickness = 2 ythickness = 2 }
-style "equinox-wider"	=	"equinox-default"	{ xthickness = 3 ythickness = 3 }
 
 ###################
 ## Widget Styles ##
 ###################
 
-style "aurora-entry" = "murrine-wider"
+style "aurora-entry"
 {
+	ythickness = 3
 	xthickness = 4
 	engine "aurora" { 		
 		curvature	= 2.0
@@ -190,8 +181,10 @@ style "elementary-dark"
 	text[INSENSITIVE]	= "#4D4D4D"
 }
 
-style "equinox-button" = "equinox-wider"
+style "equinox-button"
 {
+	xthickness = 3 
+	ythickness = 3
 
 	GtkWidget	::focus-line-width	= 2
 	GtkWidget	::focus-padding		= 0
@@ -204,23 +197,8 @@ style "equinox-button" = "equinox-wider"
 	
 	engine "equinox" {
 		curvature	= 3.0
+		animation  = TRUE
 	}
-}
-
-style "equinox-menu-item" = "murrine-wider"
-{
-	engine "equinox" {
-	}
-
-	fg[PRELIGHT] 		= @selected_fg_color
-	bg[SELECTED] 		= shade (0.98, @selected_bg_color)
-}
-
-style "equinox-radiocheck" = "equinox-default"
-{
-	bg[NORMAL]	= shade (1.5, @bg_color)		# disabled frame
-	bg[SELECTED]	= darker (@selected_bg_color)		# hover and selection
-	base[NORMAL]	= @selected_fg_color			# enabled background
 }
 
 style "murrine-button" = "murrine-wider"
@@ -339,6 +317,15 @@ style "murrine-progressbar" = "murrine-thin"
 	}
 }
 
+style "murrine-radiocheck"  = "murrine-button" {
+
+	engine "murrine" {
+		reliefstyle = 3
+		shadow_shades = {0.6, 0.5}
+		textstyle = 0
+	}
+}
+
 style "murrine-scale" = "murrine-wider"
 {
 
@@ -445,7 +432,83 @@ style "murrine-scrollbar"
 
 style "notebook-close"
 {
-	stock["gtk-close"]	= {{ "Icons/close-tiny.png", *, *, * }}	# Prettier Close icon
+	stock["gtk-close"]	= {{ "Icons/close.png", *, *, * }}	# Prettier Close icon
+}
+
+style "pixmap-button" = "murrine-button"
+{
+
+	xthickness	= 3 
+	ythickness	= 4
+	GtkWidget	::focus-line-width	= 0
+
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "Button/prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "Button/normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "Button/selected.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "Button/insensitive.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "Button/selected.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	}
+
+}
+
+style "pixmap-menu-separator"
+{
+    	engine "pixmap" 
+	{
+	image 
+	{
+       	function        = HLINE
+	recolorable     = TRUE
+	file            = "Menu/menu-line.png"
+	stretch         = TRUE
+	}
+    }
 }
 
 style "sidebar" {
@@ -465,9 +528,6 @@ style "sidebar" {
 ##############
 
 class "GtkWidget"    				style "murrine-default"
-
-class "GtkRadio*"                        	style "equinox-radiocheck"
-class "GtkCheck*"                           	style "equinox-radiocheck"
 
 class "GtkToolbar"   				style "murrine-toolbar" 
 class "GtkRange"     				style "murrine-wide"
@@ -493,7 +553,7 @@ widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"	style "murrine-notebook"
 
-widget_class "*<GtkButton>"      		style "equinox-button"
+widget_class "*<GtkButton>"      		style "pixmap-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
 
@@ -513,7 +573,10 @@ widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
 widget_class "*<GtkProgress>"			style "murrine-progressbar"
 widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 
-widget_class "*<GtkSeparatorMenuItem>*"		style "equinox-menu-item"
+widget_class "*<GtkRadioButton>*" 		style "aurora-default"
+widget_class "*<GtkCheckButton>*" 		style "aurora-default"
+
+widget_class "*<GtkSeparatorMenuItem>*"		style "pixmap-menu-separator"
 
 
 
@@ -590,20 +653,6 @@ style "murrine-fg-is-text-color-workaround"
 
 widget_class "*<GtkListItem>*" 				style "murrine-fg-is-text-color-workaround"
 widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
-
-##################################
-# Equinox Expanders
-##################################
-
-class "GtkExpander"	style "equinox-default"
-class "GtkTreeView"	style "equinox-default"
-class "GtkCTree"	style "equinox-default"
-
-##################################
-# Equinox Arrows
-##################################
-
-class "GtkArrow"	style "equinox-default"
 
 ##################################
 # Per-App Styles

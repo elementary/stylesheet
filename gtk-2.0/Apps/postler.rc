@@ -25,18 +25,18 @@ style "postler-filterbar"
 	}
 }
 
-style "postler-filterbar-button" = "equinox-button"
+style "postler-filterbar-button" = "murrine-button"
 {
 	GtkWidget	::focus-line-width	= 0
 	GtkWidget	::focus-padding		= 1
 
-	xthickness 				= 1
-	ythickness 				= 1
+	xthickness 				= 0
+	ythickness 				= 0
 
 	bg[ACTIVE]        = shade (0.9, @bg_color)
 
-	engine "equinox" {
-		curvature			= 14
+	engine "murrine" {
+		roundness			= 14
 	}
 }
 
