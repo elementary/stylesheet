@@ -2,7 +2,7 @@
 # Author:		Daniel Foré <Daniel.P.Fore@gmail.com>
 # License:		GPL
 
-gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#A9B7C4\nbase_color:#FFFFFF"	# Background, base
+gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#B2C7D9\nbase_color:#FFFFFF"	# Background, base
 gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text
 gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips
@@ -30,6 +30,7 @@ style "murrine-default"
 	GtkButton		::child-displacement-x 			= 1
 	GtkButton		::child-displacement-y 			= 1
 	GtkButton		::default-border       			= { 0, 0, 0, 0 }
+
 	GtkCheckButton		::indicator-size       			= 15
 
 	GtkEntry		::honors-transparent-bg-hint 		= 1
@@ -107,7 +108,8 @@ style "murrine-default"
 		border_shades		= { 1.15, 0.85 }
 		colorize_scrollbar	= TRUE
 		contrast		= 1.1		# 0.8 for less contrast, more than 1.0 for more contrast on borders
-		default_button_color	= shade (1.18, @selected_bg_color)
+		default_button_color	= shade (1.05, @selected_bg_color)
+		focusstyle		= 3		
 		glazestyle		= 0		# 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
 		gradient_shades		= {1.15,1.05,1.04,0.9}
 		glowstyle		= 4
@@ -137,6 +139,13 @@ style "murrine-wide"	=	"murrine-default"	{ xthickness = 2 ythickness = 2 }
 style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
 style "aurora-default" {	
+
+	bg[ACTIVE]	= shade (0.78, @bg_color)
+	bg[NORMAL]	= shade (1.15, @bg_color)
+	bg[PRELIGHT]	= shade (1.13, @selected_bg_color)
+	bg[SELECTED]	= shade (0.90, @selected_bg_color)
+	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+
 	engine "aurora" { 		
 		curvature	= 2.0
 		old_arrowstyle  = FALSE
@@ -186,7 +195,7 @@ style "equinox-button"
 	xthickness = 3 
 	ythickness = 3
 
-	GtkWidget	::focus-line-width	= 2
+	GtkWidget	::focus-line-width	= 0
 	GtkWidget	::focus-padding		= 0
 
 	bg[ACTIVE]	= shade (0.90, @bg_color)
@@ -204,23 +213,23 @@ style "equinox-button"
 style "murrine-button" = "murrine-wider"
 {
 
-	GtkWidget	::focus-line-width	= 1
-	GtkWidget	::focus-padding		= 1
-
-	bg[ACTIVE]	= shade (0.78, @bg_color)
-	bg[NORMAL]	= shade (1.30, @bg_color)
-	bg[PRELIGHT]	= shade (1.18, @selected_bg_color)
-	bg[SELECTED]	= shade (0.9, @selected_bg_color)
+	bg[ACTIVE]	= shade (0.80, @bg_color)
+	bg[NORMAL]	= shade (1.15, @bg_color)
+	bg[PRELIGHT]	= shade (1.13, @selected_bg_color)
+	bg[SELECTED]	= shade (0.75, @selected_bg_color)
 	bg[INSENSITIVE]	= shade (0.98, @bg_color)
 	
 	engine "murrine" {
 		border_shades 		= {1.1, 0.9}
 		contrast		= 1.25
-		gradient_shades     	= {1.18,1.09,1.08,0.9}
-		shadow_shades     	= {2.0,1.0}
+		gradient_shades     	= {1.10,1.0,0.99,0.90}
 		lightborder_shade	= 1.1
 		lightborderstyle	= 1
+		shadow_shades     	= {2.0,1.0}
 		textstyle		= 1
+
+		
+
 	}
 }
 
@@ -270,7 +279,7 @@ style "murrine-frame-title"
 
 style "murrine-menu-item" = "murrine-wider"
 {
-
+	
 	fg[PRELIGHT]		= @selected_fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
@@ -553,7 +562,7 @@ widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"	style "murrine-notebook"
 
-widget_class "*<GtkButton>"      		style "pixmap-button"
+widget_class "*<GtkButton>"      		style "murrine-button"
 widget_class "*<GtkNotebook>"    		style "murrine-notebook"
 widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
 
