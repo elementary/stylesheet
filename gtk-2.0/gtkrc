@@ -212,6 +212,7 @@ style "equinox-button"
 
 style "murrine-button" = "murrine-wider"
 {
+	ythickness	= 4
 
 	bg[ACTIVE]	= shade (0.80, @bg_color)
 	bg[NORMAL]	= shade (1.15, @bg_color)
