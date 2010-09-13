@@ -75,51 +75,51 @@ style "murrine-default"
 	GtkWidget		::focus-line-width			= 1
 	GtkWidget		::focus-padding				= 0
 
-	xthickness = 1
-	ythickness = 1
+	xthickness		= 1
+	ythickness		= 1
 
-	fg[NORMAL]        = @fg_color
-	fg[PRELIGHT]      = @fg_color
-	fg[SELECTED]      = @selected_fg_color
-	fg[ACTIVE]        = @fg_color
-	fg[INSENSITIVE]   = darker (@bg_color)
+	base[NORMAL]		= @base_color
+	base[PRELIGHT]		= shade (0.95, @bg_color)
+	base[ACTIVE]		= shade (0.92, @selected_bg_color)
+	base[SELECTED]		= shade (0.93, @selected_bg_color)
+	base[INSENSITIVE]	= @bg_color
 
-	bg[NORMAL]        = @bg_color
-	bg[PRELIGHT]      = shade (1.02, @bg_color)
-	bg[SELECTED]	  = @selected_bg_color
-	bg[INSENSITIVE]   = @bg_color
-	bg[ACTIVE]        = shade (1.04, @bg_color)
+	bg[NORMAL]		= @bg_color
+	bg[PRELIGHT]		= shade (1.02, @bg_color)
+	bg[SELECTED]		= @selected_bg_color
+	bg[INSENSITIVE]		= @bg_color
+	bg[ACTIVE]		= shade (1.04, @bg_color)
 
-	base[NORMAL]      = @base_color
-	base[PRELIGHT]    = shade (0.95, @bg_color)
-	base[ACTIVE]      = shade (0.92, @selected_bg_color)
-	base[SELECTED]    = shade (0.93, @selected_bg_color)
-	base[INSENSITIVE] = @bg_color
+	fg[NORMAL]		= @fg_color
+	fg[PRELIGHT]		= @fg_color
+	fg[SELECTED]		= @selected_fg_color
+	fg[ACTIVE]		= @fg_color
+	fg[INSENSITIVE]		= darker (@bg_color)
 
-	text[NORMAL]      = @text_color
-	text[PRELIGHT]    = @text_color
-	text[ACTIVE]      = @selected_fg_color
-	text[SELECTED]    = @selected_fg_color
-	text[INSENSITIVE] = darker (@bg_color)
+	text[NORMAL]		= @text_color
+	text[PRELIGHT]		= @text_color
+	text[ACTIVE]		= @selected_fg_color
+	text[SELECTED]		= @selected_fg_color
+	text[INSENSITIVE]	= darker (@bg_color)
 
 	engine "murrine" 
 	{
 		animation		= TRUE
 		border_shades		= { 1.15, 0.85 }
 		colorize_scrollbar	= TRUE
-		contrast		= 1.1		# 0.8 for less contrast, more than 1.0 for more contrast on borders
+		contrast		= 1.1
 		default_button_color	= shade (1.05, @selected_bg_color)
 		focusstyle		= 3		
-		glazestyle		= 0		# 0 = flat highlight, 1 = curved highlight, 2 = concave style, 3 = top curved highlight, 4 = beryl highlight
+		glazestyle		= 0
 		gradient_shades		= {1.15,1.05,1.04,0.9}
 		glowstyle		= 4
 		highlight_shade		= 1.0		# set highlight amount for buttons or widgets
 		lightborder_shade	= 1.2		# sets lightborder amount for buttons or widgets
 		lightborderstyle	= 0		# 0 = lightborder on top side, 1 = lightborder on all sides
-		listviewstyle		= 2		# 0 = nothing, 1 = dotted
+		listviewstyle		= 2		# 0 = nothing, 1 = dotted, 2 = line
 		menubaritemstyle	= 0		# 0 = menuitem look, 1 = button look
 		menubarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
-		menuitemstyle		= 0		# 0 = flat, 1 = glassy, 2 = striped
+		menuitemstyle		= 1		# 0 = flat, 1 = glassy, 2 = striped
 		menustyle		= 0		# 0 = no vertical menu stripe, 1 = display vertical menu stripe
 		reliefstyle		= 3		# 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
 		rgba			= FALSE		# Alpha transparency
@@ -128,6 +128,7 @@ style "murrine-default"
 		shadow_shades		= { 5.0, 0.0 }
 		sliderstyle		= 0     	# 0 = nothing added
 		stepperstyle		= 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
+		textstyle		= 1
 		toolbarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient
 		arrowstyle		= 1
 		trough_shades		= { 0.85, 1.0 }
@@ -228,10 +229,6 @@ style "murrine-button" = "murrine-wider"
 		lightborderstyle	= 1
 		roundness		= 2
 		shadow_shades     	= {2.0,1.0}
-		textstyle		= 1
-
-		
-
 	}
 }
 
@@ -287,11 +284,14 @@ style "murrine-menu-item" = "murrine-wider"
 	fg[ACTIVE]		= @fg_color
 	fg[INSENSITIVE]		= darker (@bg_color)
 
+	bg[SELECTED]		= shade (0.90, @selected_bg_color)
+
 	engine "murrine"
 	{
-		glowstyle = 5
-		glow_shade = 1.1
-		roundness = 0
+		roundness		= 0
+		lightborderstyle	= 1
+		lightborder_shade	= 1.15
+		contrast		= 0.8
 	}
 }
 
@@ -522,7 +522,8 @@ style "pixmap-menu-separator"
     }
 }
 
-style "sidebar" {
+style "sidebar"
+{
 
 	base[NORMAL]	= @sidebar_color
 	bg[NORMAL]	= @sidebar_color
