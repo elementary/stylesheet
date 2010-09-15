@@ -225,7 +225,7 @@ style "murrine-button" = "murrine-wider"
 		border_shades 		= {1.1, 0.9}
 		contrast		= 1.25
 		gradient_shades     	= {1.10,1.0,0.99,0.90}
-		lightborder_shade	= 1.15
+		lightborder_shade	= 1.10
 		lightborderstyle	= 1
 		roundness		= 2
 		shadow_shades     	= {2.0,1.0}
@@ -400,20 +400,20 @@ style "murrine-treeview"
 
 style "murrine-treeview-header"
 {
-
-	ythickness = 0
+	ythickness = 1	
 
 	GtkWidget	::focus-padding		= 0
 
+	bg[SELECTED]			= shade (0.90, @selected_bg_color)
 	bg[NORMAL]      		= shade (1.08, @bg_color)
-	bg[PRELIGHT]    		= shade (1.20, @selected_bg_color)
+	bg[PRELIGHT]    		= mix (0.3, @selected_bg_color, @bg_color)
 	bg[INSENSITIVE] 		= shade (1.04, @bg_color)
 
 	engine "murrine" {
-		gradient_shades     	= {0.97,1.06,1.07,1.20}
+		gradient_shades     	= {0.96,1.04,1.05,1.18}
 		glazestyle 		= 1
-		contrast 		= 0.75
-		lightborder_shade 	= 0.76
+		contrast 		= 1.0
+		lightborder_shade 	= 1.0
 		textstyle 		= 1
 		glow_shade 		= 1.0
 		roundness		= 0
