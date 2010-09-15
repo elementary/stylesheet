@@ -142,15 +142,15 @@ style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
 style "aurora-default" {	
 
-	bg[ACTIVE]	= shade (0.78, @bg_color)
-	bg[NORMAL]	= shade (1.15, @bg_color)
-	bg[PRELIGHT]	= shade (1.13, @selected_bg_color)
-	bg[SELECTED]	= shade (0.90, @selected_bg_color)
-	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+	bg[ACTIVE]				= shade (0.78, @bg_color)
+	bg[NORMAL]				= shade (1.15, @bg_color)
+	bg[PRELIGHT]				= shade (1.13, @selected_bg_color)
+	bg[SELECTED]				= shade (0.90, @selected_bg_color)
+	bg[INSENSITIVE]				= shade (0.98, @bg_color)
 
 	engine "aurora" { 		
-		curvature	= 2.0
-		old_arrowstyle  = FALSE
+		curvature			= 2.0
+		old_arrowstyle			= FALSE
 	}
 }
 
@@ -160,73 +160,73 @@ style "aurora-default" {
 
 style "aurora-entry"
 {
-	ythickness = 3
-	xthickness = 4
+	ythickness				= 3
+	xthickness				= 4
 	engine "aurora" { 		
-		curvature	= 2.0
-		old_arrowstyle  = FALSE
+		curvature			= 2.0
+		old_arrowstyle			= FALSE
 	}
 }
 
 style "aurora-statusbar"
 {
-	ythickness = 0
+	ythickness				= 0
 	engine "aurora" {}
 }
 
-style "elementary-dark"
+style "elementary-dark" = "murrine-default"
 {
-	base[NORMAL]		= "#3B3B3B"
+	base[NORMAL]				= "#3B3B3B"
 
-	bg[NORMAL]		= "#3B3B3B"
-	bg[ACTIVE]		= "#434241"
-	bg[PRELIGHT]		= "#4D4D4D"
+	bg[NORMAL]				= "#3B3B3B"
+	bg[ACTIVE]				= "#434241"
+	bg[PRELIGHT]				= "#4D4D4D"
 
-	fg[NORMAL]              = "#D9D9D9"
-	fg[PRELIGHT]            = "#D9D9D9"
+	fg[NORMAL]             			= "#D9D9D9"
+	fg[PRELIGHT]           			= "#D9D9D9"
 
-	text[NORMAL]      	= "#D9D9D9"
-	text[PRELIGHT]    	= "#D9D9D9"
-	text[ACTIVE]      	= "#D9D9D9"
-	text[SELECTED]   	= "#D9D9D9"
-	text[INSENSITIVE]	= "#4D4D4D"
+	text[NORMAL]      			= "#D9D9D9"
+	text[PRELIGHT]    			= "#D9D9D9"
+	text[ACTIVE]      			= "#D9D9D9"
+	text[SELECTED]   			= "#D9D9D9"
+	text[INSENSITIVE]			= "#4D4D4D"
 }
 
 style "equinox-button"
 {
-	xthickness = 3 
-	ythickness = 3
+	xthickness 				= 3 
+	ythickness 				= 3
 
 	GtkWidget	::focus-line-width	= 0
 	GtkWidget	::focus-padding		= 0
 
-	bg[ACTIVE]	= shade (0.90, @bg_color)
-	bg[NORMAL]	= shade (1.30, @bg_color)
-	bg[PRELIGHT]	= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= shade (0.9, @selected_bg_color)
-	bg[INSENSITIVE]	= @bg_color
+	bg[ACTIVE]				= shade (0.90, @bg_color)
+	bg[NORMAL]				= shade (1.30, @bg_color)
+	bg[PRELIGHT]				= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
+	bg[SELECTED]				= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]				= @bg_color
 	
 	engine "equinox" {
-		curvature	= 3.0
-		animation  = TRUE
+		curvature			= 3.0
+		animation			= TRUE
 	}
 }
 
 style "murrine-button" = "murrine-wider"
 {
-	ythickness	= 4
+	ythickness				= 4
 
-	bg[ACTIVE]	= shade (0.80, @bg_color)
-	bg[NORMAL]	= shade (1.15, @bg_color)
-	bg[PRELIGHT]	= shade (1.13, @selected_bg_color)
-	bg[SELECTED]	= shade (0.75, @selected_bg_color)
-	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+	bg[ACTIVE]				= shade (0.80, @bg_color)
+	bg[NORMAL]				= shade (1.15, @bg_color)
+	bg[PRELIGHT]				= shade (1.13, @selected_bg_color)
+	bg[SELECTED]				= shade (0.75, @selected_bg_color)
+	bg[INSENSITIVE]				= shade (0.98, @bg_color)
 	
 	engine "murrine" {
-		border_shades 		= {1.1, 0.9}
-		contrast		= 1.25
-		gradient_shades     	= {1.10,1.0,0.99,0.90}
-		lightborderstyle	= 1
+		border_shades 			= {1.1, 0.9}
+		contrast			= 1.25
+		gradient_shades     		= {1.10,1.0,0.99,0.90}
+		lightborderstyle		= 1
 	}
 }
 
@@ -236,113 +236,106 @@ style "murrine-button-content" = "murrine-wider"
 	GtkWidget	::focus-line-width	= 0
 	GtkWidget	::focus-padding		= 2
 
-	bg[ACTIVE]	= shade (0.9, @base_color)
-	bg[NORMAL]	= @base_color
-	bg[PRELIGHT]	= @base_color
-	bg[SELECTED]	= @base_color
-	bg[INSENSITIVE]	= @base_color
+	bg[ACTIVE]				= shade (0.9, @base_color)
+	bg[NORMAL]				= @base_color
+	bg[PRELIGHT]				= @base_color
+	bg[SELECTED]				= @base_color
+	bg[INSENSITIVE]				= @base_color
 	
 	engine "murrine" {
-		border_shades 		= {1.05, 1.05}
-		contrast		= 0.85
-		gradient_shades     	= {1.0,1.5,1.6,2.5}
-		shadow_shades     	= {2.0,2.0}
+		border_shades 			= {1.05, 1.05}
+		contrast			= 0.85
+		gradient_shades     		= {1.0,1.5,1.6,2.5}
+		shadow_shades     		= {2.0,2.0}
 	}
 }
 
 style "murrine-entry" = "murrine-wider"
 {
-	xthickness = 4
+	xthickness 				= 4
 	GtkWidget	::focus-line-width	= 1
 	GtkWidget	::focus-padding		= 1
 
-	bg[ACTIVE]	= shade (0.78, @bg_color)
-	bg[NORMAL]	= shade (1.30, @bg_color)
-	bg[PRELIGHT]	= shade (1.18, @selected_bg_color)
-	bg[SELECTED]	= shade (0.9, @selected_bg_color)
-	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+	bg[ACTIVE]				= shade (0.78, @bg_color)
+	bg[NORMAL]				= shade (1.30, @bg_color)
+	bg[PRELIGHT]				= shade (1.18, @selected_bg_color)
+	bg[SELECTED]				= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]				= shade (0.98, @bg_color)
 	
 	engine "murrine" {
-		border_shades 		= {1.45, 1.25}	
+		border_shades 			= {1.45, 1.25}	
 	}
 }
 
 style "murrine-frame-title"
 {
-	fg[NORMAL] = lighter (@fg_color)
+	fg[NORMAL] 				= lighter (@fg_color)
 }
 
 style "murrine-menu-item" = "murrine-wider"
 {
 	
-	fg[PRELIGHT]		= @selected_fg_color
-	fg[SELECTED]		= @selected_fg_color
-	fg[ACTIVE]		= @fg_color
-	fg[INSENSITIVE]		= darker (@bg_color)
+	fg[PRELIGHT]				= @selected_fg_color
+	fg[SELECTED]				= @selected_fg_color
+	fg[ACTIVE]				= @fg_color
+	fg[INSENSITIVE]				= darker (@bg_color)
 
-	bg[SELECTED]		= shade (0.90, @selected_bg_color)
+	bg[SELECTED]				= shade (0.90, @selected_bg_color)
 
 	engine "murrine"
 	{
-		roundness		= 0
-		lightborderstyle	= 1
-		contrast		= 0.8
+		roundness			= 0
+		lightborderstyle		= 1
+		contrast			= 0.8
 	}
 }
 
 style "murrine-menubar"
 {
-	GtkMenuBar:: shadow-type = GTK_SHADOW_NONE
+	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 }
 
 style "murrine-notebook" = "murrine-default"
 {
-	bg[NORMAL]		= shade (1.06, @bg_color)		# selected tab entire
-	bg[ACTIVE]		= shade (0.85, @bg_color)		# unselected tab
+	bg[NORMAL]				= shade (1.06, @bg_color)	# selected tab entire
+	bg[ACTIVE]				= shade (0.85, @bg_color)	# unselected tab
 
 	engine "murrine" {
-		roundness		= 4
+		roundness			= 4
 	}
 }
 
 style "murrine-progressbar" = "murrine-thin"
 {
-	bg[ACTIVE]			= shade (0.75, @bg_color)
-	bg[SELECTED]			= @bg_color
+	bg[ACTIVE]				= shade (0.75, @bg_color)
+	bg[SELECTED]				= @bg_color
 
 	engine "murrine" {
-		roundness 		= 100
-		highlight_shade     	= 1.0 
-		lightborder_shade   	= 2.0
-		gradient_shades     	= {0.90,1.09,1.10,1.30}
-		trough_shades       	= {1.00,1.16}
-		contrast		= 1.13
-		border_shades 		= {1.0, 0.9}
+		roundness 			= 100
+		highlight_shade     		= 1.0 
+		lightborder_shade   		= 2.0
+		gradient_shades     		= {0.90,1.09,1.10,1.30}
+		trough_shades       		= {1.00,1.16}
+		contrast			= 1.13
+		border_shades 			= {1.0, 0.9}
 	}
 }
 
 style "murrine-scale" = "murrine-wider"
 {
 
-	bg[ACTIVE]	= shade (0.78, @bg_color)
-	bg[NORMAL]	= shade (1.30, @bg_color)
-	bg[PRELIGHT]	= shade (1.18, @selected_bg_color)
-	bg[SELECTED]	= shade (0.9, @selected_bg_color)
-	bg[INSENSITIVE]	= shade (0.98, @bg_color)
+	bg[ACTIVE]				= shade (0.78, @bg_color)
+	bg[NORMAL]				= shade (1.30, @bg_color)
+	bg[PRELIGHT]				= shade (1.18, @selected_bg_color)
+	bg[SELECTED]				= shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]				= shade (0.98, @bg_color)
 	
 	engine "murrine" {
-		border_shades 		= {0.8, 0.6}
-		contrast		= 0.8
-		lightborderstyle	= 1
-		roundness		= 7
-		trough_shades		= {0.9, 1.1}
-	}
-}
-
-style "murrine-scale-menu" = "murrine-scale" {
-	engine "murrine" {
-		roundness = 20
-
+		border_shades 			= {0.8, 0.6}
+		contrast			= 0.8
+		lightborderstyle		= 1
+		roundness			= 7
+		trough_shades			= {0.9, 1.1}
 	}
 }
 
@@ -351,85 +344,86 @@ style "murrine-tasklist" = "murrine-wide" {}
 style "murrine-toolbar" = "murrine-default"
 {
 	engine "murrine" {
-		toolbarstyle		= 1
-		lightborder_shade	= 1.0
-		gradient_shades     	= {1.0,0.94,0.94,0.88}
+		toolbarstyle			= 1
+		lightborder_shade		= 1.0
+		gradient_shades     		= {1.0,0.94,0.94,0.88}
 	}
 }
 
 style "murrine-tooltips" = "murrine-wider"
 {
-	xthickness = 8
-	ythickness = 5
+	xthickness				= 8
+	ythickness				= 5
 
-	bg[NORMAL] = @tooltip_bg_color
-	bg[SELECTED] = "#000000"
-	fg[NORMAL] = @tooltip_fg_color
+	bg[NORMAL]				= @tooltip_bg_color
+	bg[SELECTED]				= "#000000"
+	fg[NORMAL]				= @tooltip_fg_color
 
 	engine "murrine"
 	{
-		roundness	= 0
-		trough_shades	= { 0.15, 0.3 }
+		roundness			= 0
+		trough_shades			= { 0.15, 0.3 }
 	}
 }
 
 style "murrine-treeview"
 {		
-	engine "murrine" {}
+	engine "murrine" {
+		gradient_shades			= {1.00,1.00,1.00,1.00}
+	}
 }
 
-style "murrine-treeview-header"
+style "murrine-treeview-header" = "murrine-default"
 {
-	ythickness = 1	
+	ythickness 				= 1	
 
 	GtkWidget	::focus-padding		= 0
 
-	bg[SELECTED]			= shade (0.90, @selected_bg_color)
-	bg[NORMAL]      		= shade (1.08, @bg_color)
-	bg[PRELIGHT]    		= mix (0.3, @selected_bg_color, @bg_color)
-	bg[INSENSITIVE] 		= shade (1.04, @bg_color)
+	bg[NORMAL]      			= shade (1.08, @bg_color)
+	bg[PRELIGHT]    			= @bg_color
+	bg[INSENSITIVE] 			= shade (1.04, @bg_color)
 
 	engine "murrine" {
-		gradient_shades     	= {0.96,1.04,1.05,1.18}
-		glazestyle 		= 1
-		contrast 		= 1.0
-		lightborder_shade 	= 1.0
-		glow_shade 		= 1.0
-		roundness		= 0
+		gradient_shades     		= {0.96,1.04,1.05,1.18}
+		glazestyle 			= 1
+		contrast 			= 1.0
+		lightborder_shade 		= 1.0
+		glow_shade 			= 1.0
+		roundness			= 0
 	}
 }
 
 style "murrine-scrollbar"
 {
-	bg[SELECTED]	= shade (0.6, @base_color)
-	bg[ACTIVE]	= @base_color
+	bg[SELECTED]				= shade (0.6, @base_color)
+	bg[ACTIVE]				= @base_color
 	
 	engine "murrine" {
-		roundness		= 6
-		gradient_shades		= {1.0,1.0,1.0,1.0}
-		highlight_shade		= 1.0
-		glow_shade		= 1.0
-		reliefstyle		= 0
-		gradient_colors		= FALSE
-    		lightborder_shade       = 1.0
-		lightborderstyle	= 0
-		trough_shades	        = { 5.0, 1.20}
-		border_shades		= { 2.0, 2.0}
-		contrast		= 0.0
-		prelight_shade		= 0.65
+		roundness			= 6
+		gradient_shades			= {1.0,1.0,1.0,1.0}
+		highlight_shade			= 1.0
+		glow_shade			= 1.0
+		reliefstyle			= 0
+		gradient_colors			= FALSE
+    		lightborder_shade		= 1.0
+		lightborderstyle		= 0
+		trough_shades	        	= { 5.0, 1.20}
+		border_shades			= { 2.0, 2.0}
+		contrast			= 0.0
+		prelight_shade			= 0.65
 	}
 }
 
 style "notebook-close"
 {
-	stock["gtk-close"]	= {{ "Icons/close.png", *, *, * }}	# Prettier Close icon
+	stock["gtk-close"]			= {{ "Icons/close.png", *, *, * }}
 }
 
 style "pixmap-button" = "murrine-button"
 {
 
-	xthickness	= 3 
-	ythickness	= 4
+	xthickness				= 3 
+	ythickness				= 4
 	GtkWidget	::focus-line-width	= 0
 
 	engine "pixmap"
@@ -438,9 +432,9 @@ style "pixmap-button" = "murrine-button"
 		{
 			function        	= BOX
 			recolorable     	= TRUE
-			state				= PRELIGHT
-			file				= "Button/prelight.png"
-			border				= { 3, 13, 3, 3 }
+			state			= PRELIGHT
+			file			= "Button/prelight.png"
+			border			= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
 	  
@@ -448,9 +442,9 @@ style "pixmap-button" = "murrine-button"
 		{
 			function        	= BOX
 			recolorable     	= TRUE
-			state				= NORMAL
-			file				= "Button/normal.png"
-			border				= { 3, 13, 3, 3 }
+			state			= NORMAL
+			file			= "Button/normal.png"
+			border			= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
 	
@@ -458,9 +452,9 @@ style "pixmap-button" = "murrine-button"
 		{
 			function        	= BOX
 			recolorable     	= TRUE
-			state				= ACTIVE
-			file				= "Button/selected.png"
-			border				= { 3, 13, 3, 3 }
+			state			= ACTIVE
+			file			= "Button/selected.png"
+			border			= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}  
 
@@ -468,9 +462,9 @@ style "pixmap-button" = "murrine-button"
 		{
 			function        	= BOX
 			recolorable     	= TRUE
-			state				= INSENSITIVE
-			file				= "Button/insensitive.png"
-			border				= { 3, 13, 3, 3 }
+			state			= INSENSITIVE
+			file			= "Button/insensitive.png"
+			border			= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		} 
 
@@ -478,9 +472,9 @@ style "pixmap-button" = "murrine-button"
 		{
 			function        	= BOX
 			recolorable     	= TRUE
-			state				= SELECTED
-			file				= "Button/selected.png"
-			border				= { 3, 13, 3, 3 }
+			state			= SELECTED
+			file			= "Button/selected.png"
+			border			= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
 	}
@@ -491,22 +485,22 @@ style "pixmap-menu-separator"
 {
     	engine "pixmap" 
 	{
-	image 
-	{
-       	function        = HLINE
-	recolorable     = TRUE
-	file            = "Menu/menu-line.png"
-	stretch         = TRUE
-	}
-    }
+		image 
+		{
+       			function		= HLINE
+			recolorable		= TRUE
+			file			= "Menu/menu-line.png"
+			stretch			= TRUE
+		}
+    	}
 }
 
 style "sidebar"
 {
 
-	base[NORMAL]	= @sidebar_color
-	bg[NORMAL]	= @sidebar_color
-	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+	base[NORMAL]				= @sidebar_color
+	bg[NORMAL]				= @sidebar_color
+	text[NORMAL]				= mix (0.3, @sidebar_color, @text_color)
 
 	font_name 	                  	= "Regular"
 
@@ -556,7 +550,7 @@ widget_class "*<GtkCombo>*"         		style "aurora-default"
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenu>*"              	style "murrine-thin"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
-widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale-menu"
+widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
