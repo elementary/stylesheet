@@ -108,24 +108,25 @@ style "murrine-default"
 		border_shades		= { 1.15, 0.85 }
 		colorize_scrollbar	= TRUE
 		contrast		= 1.1
-		default_button_color	= shade (1.05, @selected_bg_color)
+		default_button_color	= shade (1.12, @selected_bg_color)
 		focusstyle		= 3		
 		glazestyle		= 0
-		gradient_shades		= {1.15,1.05,1.04,0.9}
+		gradient_shades		= {1.18,1.09,1.08,0.9}
 		glowstyle		= 4
 		highlight_shade		= 1.0		# set highlight amount for buttons or widgets
-		lightborder_shade	= 1.2		# sets lightborder amount for buttons or widgets
+		lightborder_shade	= 1.18		# sets lightborder amount for buttons or widgets
 		lightborderstyle	= 0		# 0 = lightborder on top side, 1 = lightborder on all sides
 		listviewstyle		= 2		# 0 = nothing, 1 = dotted, 2 = line
 		menubaritemstyle	= 0		# 0 = menuitem look, 1 = button look
 		menubarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient, 3 = striped
 		menuitemstyle		= 1		# 0 = flat, 1 = glassy, 2 = striped
 		menustyle		= 0		# 0 = no vertical menu stripe, 1 = display vertical menu stripe
+		progressbarstyle	= 1
 		reliefstyle		= 3		# 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
 		rgba			= FALSE		# Alpha transparency
-		roundness		= 3		# 0 = square
+		roundness		= 2		# 0 = square
 		scrollbarstyle		= 0		# 0 = nothing
-		shadow_shades		= { 5.0, 0.0 }
+		shadow_shades		= { 2.0, 1.0 }
 		sliderstyle		= 0     	# 0 = nothing added
 		stepperstyle		= 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		textstyle		= 1
@@ -225,10 +226,7 @@ style "murrine-button" = "murrine-wider"
 		border_shades 		= {1.1, 0.9}
 		contrast		= 1.25
 		gradient_shades     	= {1.10,1.0,0.99,0.90}
-		lightborder_shade	= 1.10
 		lightborderstyle	= 1
-		roundness		= 2
-		shadow_shades     	= {2.0,1.0}
 	}
 }
 
@@ -265,9 +263,7 @@ style "murrine-entry" = "murrine-wider"
 	bg[INSENSITIVE]	= shade (0.98, @bg_color)
 	
 	engine "murrine" {
-		border_shades 		= {1.45, 1.25}
-		textstyle		= 1
-		roundness		= 2	
+		border_shades 		= {1.45, 1.25}	
 	}
 }
 
@@ -290,7 +286,6 @@ style "murrine-menu-item" = "murrine-wider"
 	{
 		roundness		= 0
 		lightborderstyle	= 1
-		lightborder_shade	= 1.15
 		contrast		= 0.8
 	}
 }
@@ -316,24 +311,13 @@ style "murrine-progressbar" = "murrine-thin"
 	bg[SELECTED]			= @bg_color
 
 	engine "murrine" {
-		progressbarstyle	= 1
 		roundness 		= 100
 		highlight_shade     	= 1.0 
 		lightborder_shade   	= 2.0
 		gradient_shades     	= {0.90,1.09,1.10,1.30}
 		trough_shades       	= {1.00,1.16}
 		contrast		= 1.13
-		textstyle		= 1
 		border_shades 		= {1.0, 0.9}
-	}
-}
-
-style "murrine-radiocheck"  = "murrine-button" {
-
-	engine "murrine" {
-		reliefstyle = 3
-		shadow_shades = {0.6, 0.5}
-		textstyle = 0
 	}
 }
 
@@ -349,9 +333,6 @@ style "murrine-scale" = "murrine-wider"
 	engine "murrine" {
 		border_shades 		= {0.8, 0.6}
 		contrast		= 0.8
-		gradient_shades     	= {1.18,1.09,1.08,0.9}
-		shadow_shades     	= {2.0,1.0}
-		lightborder_shade	= 1.1
 		lightborderstyle	= 1
 		roundness		= 7
 		trough_shades		= {0.9, 1.1}
@@ -361,8 +342,7 @@ style "murrine-scale" = "murrine-wider"
 style "murrine-scale-menu" = "murrine-scale" {
 	engine "murrine" {
 		roundness = 20
-		lightborder_shade = 1.32
-		reliefstyle = 3
+
 	}
 }
 
@@ -414,7 +394,6 @@ style "murrine-treeview-header"
 		glazestyle 		= 1
 		contrast 		= 1.0
 		lightborder_shade 	= 1.0
-		textstyle 		= 1
 		glow_shade 		= 1.0
 		roundness		= 0
 	}
