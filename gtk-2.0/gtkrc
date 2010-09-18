@@ -308,13 +308,13 @@ style "murrine-notebook" = "murrine-default"
 style "murrine-progressbar" = "murrine-thin"
 {
 	bg[ACTIVE]				= shade (0.75, @bg_color)
-	bg[SELECTED]				= @bg_color
+	bg[SELECTED]				= shade (1.05, @bg_color)
 
 	engine "murrine" {
 		roundness 			= 100
 		highlight_shade     		= 1.0 
 		lightborder_shade   		= 2.0
-		gradient_shades     		= {0.90,1.09,1.10,1.30}
+		gradient_shades     		= {0.90,1.04,1.05,1.20}
 		trough_shades       		= {1.00,1.16}
 		contrast			= 1.13
 		border_shades 			= {1.0, 0.9}
@@ -561,7 +561,11 @@ widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 widget_class "*<GtkRadioButton>*" 		style "aurora-default"
 widget_class "*<GtkCheckButton>*" 		style "aurora-default"
 
+widget_class "*<GtkScrolledWindow>"		style "murrine-thin"
+
 widget_class "*<GtkSeparatorMenuItem>*"		style "pixmap-menu-separator"
+
+
 
 
 

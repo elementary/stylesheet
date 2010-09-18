@@ -18,12 +18,6 @@ style "nautilus-sidebar-other" = "nautilus-sidebar"
 
 }
 
-style "nautilus-view"
-{
-	xthickness		= 0
-	ythickness		= 0
-}
-
 style "nautilus-handle"
 {
 	GtkPaned::handle-size         = 2
@@ -334,7 +328,6 @@ style "nautilus-right-slider"
 
 widget		"*NautilusNavigationWindow"	style "nautilus-window-base"
 widget		"*Nautilus*Splitter"		style "nautilus-handle"
-widget_class	"*Nautilus*View*"		style "nautilus-view"
 widget_class	"*Nautilus*NautilusSidePane*"	style "nautilus-sidebar"
 widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
 widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
