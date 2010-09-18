@@ -1,0 +1,13 @@
+style "steadyflow-window-base"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "steadyflow-view"
+{
+	xthickness		= 0
+	ythickness		= 0
+}
+
+widget		"*SteadyflowMainWindow"					style "steadyflow-window-base"
+widget_class	"*SteadyflowMainWindow.GtkVBox.GtkScrolledWindow"	style "steadyflow-view"
