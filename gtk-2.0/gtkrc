@@ -2,7 +2,7 @@
 # Author:		Daniel Foré <Daniel.P.Fore@gmail.com>
 # License:		GPL
 
-gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#B2C7D9\nbase_color:#FFFFFF"	# Background, base
+gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#A9C3D9\nbase_color:#FFFFFF"	# Background, base
 gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text
 gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips
