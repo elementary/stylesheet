@@ -32,8 +32,8 @@ style "nautilus-handle"
 	{
 		image # for the thin gray line separating the sidepane and viewpane
 		{
-		    function	= HANDLE
-		    recolorable	= TRUE
+		    function		= HANDLE
+		    recolorable		= TRUE
 		    file		= "Apps/nautilus/handle.png"
 		    stretch		= TRUE
 		    border 		= { 0, 0, 0, 0 }
@@ -47,7 +47,7 @@ style "nautilus-extra-view"
 	xthickness		= 0
 	ythickness		= 0
 
-	bg[NORMAL] = @base_color
+	bg[NORMAL]		= @base_color
 
 }
 

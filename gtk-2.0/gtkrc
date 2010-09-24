@@ -7,7 +7,8 @@ gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4
 gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips
 gtk_color_scheme	= "link_color:#08c"							# Hyperlinks
-gtk_color_scheme	= "frame_color:#CDCDCD\ninactive_frame_color:#CDCDCD"			# Fix for Chrome
+gtk_color_scheme	= "frame_color:#D1D1D1\ninactive_frame_color:#D1D1D1"			# Fix for Chrome
+gtk_color_scheme	= "bg_color_dark:#383838\ntext_color_dark:#FFFFFF"			# Dark colors
 
 gtk-icon-sizes		= "gtk-button=16,16"							# Set icon size for button without text
 gtk-button-images	= 0									# Disables icons for buttons with text
@@ -140,6 +141,45 @@ style "murrine-thin"	=	"murrine-default"	{ xthickness = 0 ythickness = 0 }
 style "murrine-wide"	=	"murrine-default"	{ xthickness = 2 ythickness = 2 }
 style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
+style "murrine-dark"	=	"murrine-default"
+{
+	base[NORMAL]				= "#3B3B3B"
+
+	#base[NORMAL]				= @base_color
+	base[PRELIGHT]				= shade (0.95, @bg_color_dark)
+	#base[ACTIVE]				= shade (0.92, @selected_bg_color)
+	#base[SELECTED]				= shade (0.93, @selected_bg_color)
+	base[INSENSITIVE]			= @bg_color_dark
+
+	bg[NORMAL]				= @bg_color_dark
+	bg[PRELIGHT]				= shade (1.02, @bg_color_dark)
+	#bg[SELECTED]				= @selected_bg_color
+	bg[INSENSITIVE]				= @bg_color_dark
+	bg[ACTIVE]				= shade (1.04, @bg_color_dark)
+
+	fg[NORMAL]             			= "#D9D9D9"
+	fg[PRELIGHT]           			= "#D9D9D9"
+
+	#fg[NORMAL]				= @fg_color
+	#fg[PRELIGHT]				= @fg_color
+	#fg[SELECTED]				= @selected_fg_color
+	#fg[ACTIVE]				= @fg_color
+	fg[INSENSITIVE]				= darker (@bg_color_dark)
+
+	text[ACTIVE]      			= "#D9D9D9"
+	text[SELECTED]   			= "#D9D9D9"
+
+	text[NORMAL]				= @text_color_dark
+	text[PRELIGHT]				= @text_color_dark
+	#text[ACTIVE]				= @selected_fg_color
+	#text[SELECTED]				= @selected_fg_color
+	text[INSENSITIVE]			= darker (@bg_color_dark)
+}
+
+style "murrine-thin-dark"	=	"murrine-dark"	{ xthickness = 0 ythickness = 0 }
+style "murrine-wide-dark"	=	"murrine-dark"	{ xthickness = 2 ythickness = 2 }
+style "murrine-wider-dark"	=	"murrine-dark"	{ xthickness = 3 ythickness = 3 }
+
 style "aurora-default" {	
 
 	bg[ACTIVE]				= shade (0.78, @bg_color)
@@ -172,24 +212,6 @@ style "aurora-statusbar"
 {
 	ythickness				= 0
 	engine "aurora" {}
-}
-
-style "elementary-dark" = "murrine-default"
-{
-	base[NORMAL]				= "#3B3B3B"
-
-	bg[NORMAL]				= "#3B3B3B"
-	bg[ACTIVE]				= "#434241"
-	bg[PRELIGHT]				= "#4D4D4D"
-
-	fg[NORMAL]             			= "#D9D9D9"
-	fg[PRELIGHT]           			= "#D9D9D9"
-
-	text[NORMAL]      			= "#D9D9D9"
-	text[PRELIGHT]    			= "#D9D9D9"
-	text[ACTIVE]      			= "#D9D9D9"
-	text[SELECTED]   			= "#D9D9D9"
-	text[INSENSITIVE]			= "#4D4D4D"
 }
 
 style "equinox-button"
@@ -247,6 +269,24 @@ style "murrine-button-content" = "murrine-wider"
 		contrast			= 0.85
 		gradient_shades     		= {1.0,1.5,1.6,2.5}
 		shadow_shades     		= {2.0,2.0}
+	}
+}
+
+style "murrine-button-dark" = "murrine-wider"
+{
+
+	bg[ACTIVE]				= shade (0.80, @bg_color_dark)
+	bg[NORMAL]				= shade (1.15, @bg_color_dark)
+	bg[PRELIGHT]				= shade (1.13, @selected_bg_color)
+	bg[SELECTED]				= shade (0.75, @selected_bg_color)
+	bg[INSENSITIVE]				= shade (0.98, @bg_color_dark)
+	
+	engine "murrine" {
+		border_shades 			= {1.1, 0.9}
+		contrast			= 1.25
+		gradient_shades     		= {1.10,1.0,0.99,0.90}
+		lightborderstyle		= 1
+		#textstyle			= 0
 	}
 }
 
@@ -648,6 +688,7 @@ include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"
 include "Apps/postler.rc"
+include "Apps/rhythmbox.rc"
 include "Apps/steadyflow.rc"
 include "Apps/totem.rc"
 
