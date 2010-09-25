@@ -106,6 +106,7 @@ style "murrine-default"
 	engine "murrine" 
 	{
 		animation		= TRUE
+		arrowstyle		= 1
 		border_shades		= { 1.15, 0.85 }
 		colorize_scrollbar	= TRUE
 		contrast		= 1.1
@@ -127,12 +128,12 @@ style "murrine-default"
 		rgba			= FALSE		# Alpha transparency
 		roundness		= 2		# 0 = square
 		scrollbarstyle		= 0		# 0 = nothing
+		separatorstyle		= 1
 		shadow_shades		= { 2.0, 1.0 }
 		sliderstyle		= 0     	# 0 = nothing added
 		stepperstyle		= 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
 		textstyle		= 1
 		toolbarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient
-		arrowstyle		= 1
 		trough_shades		= { 0.85, 1.0 }
 	}
 }
@@ -212,26 +213,6 @@ style "aurora-statusbar"
 {
 	ythickness				= 0
 	engine "aurora" {}
-}
-
-style "equinox-button"
-{
-	xthickness 				= 3 
-	ythickness 				= 3
-
-	GtkWidget	::focus-line-width	= 0
-	GtkWidget	::focus-padding		= 0
-
-	bg[ACTIVE]				= shade (0.90, @bg_color)
-	bg[NORMAL]				= shade (1.30, @bg_color)
-	bg[PRELIGHT]				= shade (1.18, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]				= shade (0.9, @selected_bg_color)
-	bg[INSENSITIVE]				= @bg_color
-	
-	engine "equinox" {
-		curvature			= 3.0
-		animation			= TRUE
-	}
 }
 
 style "murrine-button" = "murrine-wider"
@@ -521,20 +502,6 @@ style "pixmap-button" = "murrine-button"
 
 }
 
-style "pixmap-menu-separator"
-{
-    	engine "pixmap" 
-	{
-		image 
-		{
-       			function		= HLINE
-			recolorable		= TRUE
-			file			= "Menu/menu-line.png"
-			stretch			= TRUE
-		}
-    	}
-}
-
 style "sidebar"
 {
 
@@ -600,8 +567,6 @@ widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 
 widget_class "*<GtkRadioButton>*" 		style "aurora-default"
 widget_class "*<GtkCheckButton>*" 		style "aurora-default"
-
-widget_class "*<GtkSeparatorMenuItem>*"		style "pixmap-menu-separator"
 
 
 
