@@ -145,8 +145,6 @@ style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 style "murrine-dark"	=	"murrine-default"
 {
 	base[NORMAL]				= "#3B3B3B"
-
-	#base[NORMAL]				= @base_color
 	base[PRELIGHT]				= shade (0.95, @bg_color_dark)
 	#base[ACTIVE]				= shade (0.92, @selected_bg_color)
 	#base[SELECTED]				= shade (0.93, @selected_bg_color)
@@ -302,9 +300,9 @@ style "murrine-menu-item" = "murrine-wider"
 
 	engine "murrine"
 	{
+		contrast			= 0.8
 		roundness			= 0
 		lightborderstyle		= 1
-		contrast			= 0.8
 	}
 }
 
@@ -552,10 +550,10 @@ widget_class "*<GtkNotebook>*"    		style "notebook-close"
 widget_class "*<GtkComboBoxEntry>*"		style "aurora-default"
 widget_class "*<GtkCombo>*"         		style "aurora-default"
 
+widget_class "*<GtkMenu>*"              	style "murrine-thin"
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
-widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"

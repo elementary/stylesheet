@@ -136,6 +136,24 @@ style "murrine-menu-item" = "murrine-wider"
 	}
 }
 
+style "murrine-menu-item" = "murrine-wider"
+{
+	
+	fg[PRELIGHT]				= @selected_fg_color
+	fg[SELECTED]				= @selected_fg_color
+	fg[ACTIVE]				= @fg_color
+	fg[INSENSITIVE]				= darker (@bg_color)
+
+	bg[SELECTED]				= shade (0.80, @selected_bg_color)
+
+	engine "murrine"
+	{
+		roundness			= 0
+		lightborderstyle		= 1
+		gradient_shades			= {1.0, 0.86, 0.85, 0.70}
+	}
+}
+
 class "PanelApp*"				style "elementary-panel"
 class "PanelToplevel*"				style "elementary-panel"
 class "*Xfce*Panel*"				style "elementary-panel"
@@ -157,3 +175,5 @@ widget "*PanelApplet*"				style "elementary-panel-text"
 
 # Hide ugly handle
 class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
+
+widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
