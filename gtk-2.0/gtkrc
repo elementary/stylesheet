@@ -159,7 +159,7 @@ style "murrine-dark"	=	"murrine-default"
 	bg[ACTIVE]				= shade (1.04, @bg_color_dark)
 
 	fg[NORMAL]             			= "#D9D9D9"
-	fg[PRELIGHT]           			= "#D9D9D9"
+	fg[PRELIGHT]           			= @text_color_dark
 
 	#fg[NORMAL]				= @fg_color
 	#fg[PRELIGHT]				= @fg_color
@@ -167,13 +167,10 @@ style "murrine-dark"	=	"murrine-default"
 	#fg[ACTIVE]				= @fg_color
 	fg[INSENSITIVE]				= darker (@bg_color_dark)
 
-	text[ACTIVE]      			= "#D9D9D9"
-	text[SELECTED]   			= "#D9D9D9"
-
 	text[NORMAL]				= @text_color_dark
 	text[PRELIGHT]				= @text_color_dark
-	#text[ACTIVE]				= @selected_fg_color
-	#text[SELECTED]				= @selected_fg_color
+	text[ACTIVE]				= @text_color_dark
+	text[SELECTED]				= @text_color_dark
 	text[INSENSITIVE]			= darker (@bg_color_dark)
 }
 
@@ -360,11 +357,33 @@ style "murrine-scale" = "murrine-wider"
 	}
 }
 
+style "murrine-scrollbar"
+{
+	bg[SELECTED]				= shade (0.6, @base_color)
+	bg[ACTIVE]				= @base_color
+	
+	engine "murrine" {
+		roundness			= 6
+		gradient_shades			= {1.0,1.0,1.0,1.0}
+		highlight_shade			= 1.0
+		glow_shade			= 1.0
+		reliefstyle			= 0
+		gradient_colors			= FALSE
+    		lightborder_shade		= 1.0
+		lightborderstyle		= 0
+		trough_shades	        	= { 5.0, 1.20}
+		border_shades			= { 2.0, 2.0}
+		contrast			= 0.0
+		prelight_shade			= 0.65
+	}
+}
+
 style "murrine-tasklist" = "murrine-wide" {}
 
 style "murrine-toolbar" = "murrine-default"
 {
 	engine "murrine" {
+		contrast			= 1.13
 		toolbarstyle			= 1
 		lightborder_shade		= 1.0
 		gradient_shades     		= {1.0,0.94,0.94,0.88}
@@ -411,27 +430,6 @@ style "murrine-treeview-header" = "murrine-default"
 		lightborder_shade 		= 1.0
 		glow_shade 			= 1.0
 		roundness			= 0
-	}
-}
-
-style "murrine-scrollbar"
-{
-	bg[SELECTED]				= shade (0.6, @base_color)
-	bg[ACTIVE]				= @base_color
-	
-	engine "murrine" {
-		roundness			= 6
-		gradient_shades			= {1.0,1.0,1.0,1.0}
-		highlight_shade			= 1.0
-		glow_shade			= 1.0
-		reliefstyle			= 0
-		gradient_colors			= FALSE
-    		lightborder_shade		= 1.0
-		lightborderstyle		= 0
-		trough_shades	        	= { 5.0, 1.20}
-		border_shades			= { 2.0, 2.0}
-		contrast			= 0.0
-		prelight_shade			= 0.65
 	}
 }
 
@@ -555,9 +553,9 @@ widget_class "*<GtkComboBoxEntry>*"		style "aurora-default"
 widget_class "*<GtkCombo>*"         		style "aurora-default"
 
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
-widget_class "*<GtkMenu>*"              	style "murrine-thin"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
+widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
 
 widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
 widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
@@ -566,7 +564,9 @@ widget_class "*<GtkProgress>"			style "murrine-progressbar"
 widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 
 widget_class "*<GtkRadioButton>*" 		style "aurora-default"
+
 widget_class "*<GtkCheckButton>*" 		style "aurora-default"
+
 
 
 

@@ -118,6 +118,24 @@ style "elementary-panel-handle"
     }
 }
 
+style "murrine-menu-item" = "murrine-wider"
+{
+	
+	fg[PRELIGHT]				= @selected_fg_color
+	fg[SELECTED]				= @selected_fg_color
+	fg[ACTIVE]				= @fg_color
+	fg[INSENSITIVE]				= darker (@bg_color)
+
+	bg[SELECTED]				= shade (0.90, @selected_bg_color)
+
+	engine "murrine"
+	{
+		roundness			= 0
+		lightborderstyle		= 1
+		contrast			= 1.5
+	}
+}
+
 class "PanelApp*"				style "elementary-panel"
 class "PanelToplevel*"				style "elementary-panel"
 class "*Xfce*Panel*"				style "elementary-panel"
