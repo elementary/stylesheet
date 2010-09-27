@@ -308,6 +308,8 @@ style "murrine-menu-item" = "murrine-wider"
 
 style "murrine-menubar"
 {
+
+	fg[NORMAL]		= @fg_color
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
 }
 

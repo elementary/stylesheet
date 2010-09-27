@@ -6,6 +6,8 @@ style "elementary-panel"
 
 	bg_pixmap[NORMAL]	= "/Panel/panel-dark.png" # Disable for normal panel backgrounds.
 
+	fg[NORMAL]	= "#ffffff"
+
 	engine "pixmap"
 	{
 		image
@@ -63,7 +65,7 @@ style "elementary-panel"
 
 style "elementary-panel-text"
 {
-	fg[NORMAL]	= "#fff"
+	fg[NORMAL]	= "#ffffff"
 	fg[PRELIGHT]	= "#5D5D5D"
 	fg[ACTIVE]	= "#ffffff"
 	text[NORMAL]	= "#ffffff"
@@ -118,7 +120,7 @@ style "elementary-panel-handle"
     }
 }
 
-style "murrine-menu-item" = "murrine-wider"
+style "murrine-menu-item" = "murrine-wider-dark"
 {
 	
 	fg[PRELIGHT]				= @selected_fg_color
@@ -133,24 +135,6 @@ style "murrine-menu-item" = "murrine-wider"
 		roundness			= 0
 		lightborderstyle		= 1
 		contrast			= 1.5
-	}
-}
-
-style "murrine-menu-item" = "murrine-wider"
-{
-	
-	fg[PRELIGHT]				= @selected_fg_color
-	fg[SELECTED]				= @selected_fg_color
-	fg[ACTIVE]				= @fg_color
-	fg[INSENSITIVE]				= darker (@bg_color)
-
-	bg[SELECTED]				= shade (0.80, @selected_bg_color)
-
-	engine "murrine"
-	{
-		roundness			= 0
-		lightborderstyle		= 1
-		gradient_shades			= {1.0, 0.86, 0.85, 0.70}
 	}
 }
 
@@ -177,3 +161,8 @@ widget "*PanelApplet*"				style "elementary-panel-text"
 class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
 
 widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
+widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
+widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
+widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+
+
