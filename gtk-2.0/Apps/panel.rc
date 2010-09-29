@@ -6,58 +6,17 @@ style "elementary-panel"
 
 	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
 
-	engine "pixmap"
-	{
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= NORMAL
-		}
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= PRELIGHT
-			file			= "Panel/button-active.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= ACTIVE
-			file			= "Panel/button-active.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
+	bg[ACTIVE]				= shade (0.72, @bg_color)
+	bg[SELECTED]				= shade (0.72, @bg_color)
+	bg[PRELIGHT]				= shade (0.72, @bg_color)
 
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= SELECTED
-			file			= "Panel/button-active.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
- 
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= INSENSITIVE
-		} 
-
-		image
-		{
-			function		= ARROW
-			recolorable		= TRUE
-			arrow_direction		= DOWN
-		}
+	engine "murrine" {
+		roundness			= 0
+		highlight_shade     		= 1.0 
+		lightborder_shade   		= 0.88
+		gradient_shades     		= {0.90,1.05,1.06,1.20}
+		contrast			= 1.05
+		border_shades 			= {1.2, 1.1}
 	}
 }
 

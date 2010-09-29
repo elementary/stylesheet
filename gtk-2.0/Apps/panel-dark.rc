@@ -6,61 +6,21 @@ style "elementary-panel"
 
 	bg_pixmap[NORMAL]	= "/Panel/panel-dark.png" # Disable for normal panel backgrounds.
 
-	fg[NORMAL]	= "#ffffff"
+	fg[NORMAL]				= "#ffffff"
+	bg[ACTIVE]				= shade (0.85, "#3B3B3B")
+	bg[SELECTED]				= shade (0.85, "#3B3B3B")
+	bg[PRELIGHT]				= shade (0.85, "#3B3B3B")
 
-	engine "pixmap"
-	{
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= NORMAL
-		}
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= PRELIGHT
-			file			= "Panel/button-active-dark.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
-		
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= ACTIVE
-			file			= "Panel/button-active-dark.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
-
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= SELECTED
-			file			= "Panel/button-active-dark.png"
-			border			= { 2, 2, 0, 0 }
-			stretch			= TRUE
-		}
- 
-		image
-		{
-			function		= BOX
-			recolorable		= TRUE
-			state			= INSENSITIVE
-		} 
-
-		image
-		{
-			function		= ARROW
-			recolorable		= TRUE
-			arrow_direction		= DOWN
-		}
+	engine "murrine" {
+		roundness			= 0
+		highlight_shade     		= 1.0 
+		lightborder_shade   		= 0.88
+		gradient_shades     		= {0.90,1.09,1.10,1.30}
+		contrast			= 1.05
+		border_shades 			= {1.2, 1.1}
+		textstyle			= 0
 	}
+
 }
 
 style "elementary-panel-text"
