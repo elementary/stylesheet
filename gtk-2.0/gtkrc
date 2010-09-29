@@ -67,6 +67,8 @@ style "murrine-default"
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
 
+	GtkStatusbar  		::shadow_type	      			= 0 #Remove statusbar separator
+
 	GtkExpander		::expander-size				= 16
 	GtkToolbar		::internal-padding			= 0
 	GtkTreeView		::expander-size				= 7
@@ -649,6 +651,7 @@ widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 ##################################
 
 include "Apps/eog.rc"
+include "Apps/gedit.rc"
 include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"
