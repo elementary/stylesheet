@@ -1,0 +1,17 @@
+# Author: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
+# Author of original metacity theme: elementart Art Team
+# A pleasant theme built to adapt to many color schemes as well as be optimal for both high and low resolution displays.
+# License: GPL
+# Date: October 2010
+
+active_text_color=#727272
+active_text_shadow_color=#efefef
+inactive_text_color=#969696
+inactive_text_shadow_color=#f7f7f7
+title_shadow_active=true
+title_shadow_inactive=true
+full_width_title=true
+title_vertical_offset_active=2
+title_vertical_offset_inactive=2
+button_offset=5
+button_spacing=3
