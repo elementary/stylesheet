@@ -4,13 +4,7 @@ style "rb-sidebar" = "sidebar"
 	ythickness		= 0
 }
 
-style "nautilus-view"
-{
-	xthickness		= 0
-	ythickness		= 0
-}
-
-style "nautilus-handle"
+style "rb-handle"
 {
 	GtkPaned::handle-size         = 2
 	
@@ -27,6 +21,6 @@ style "nautilus-handle"
 	}
 }
 
-widget		"*GtkVBox*GtkHPaned"		style "nautilus-handle"
+widget		"*GtkVBox*GtkHPaned"		style "rb-handle"
 widget_class	"*RBSourceList*"		style "rb-sidebar"
 
