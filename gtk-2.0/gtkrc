@@ -427,8 +427,6 @@ style "murrine-treeview-header" = "murrine-default"
 		gradient_shades     		= {0.96,1.04,1.05,1.18}
 		glazestyle 			= 1
 		contrast 			= 1.0
-		lightborder_shade 		= 1.0
-		glow_shade 			= 1.0
 		roundness			= 0
 	}
 }
