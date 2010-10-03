@@ -144,26 +144,21 @@ style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
 style "murrine-dark"	=	"murrine-default"
 {
-	base[NORMAL]				= "#3B3B3B"
 	base[PRELIGHT]				= shade (0.95, @bg_color_dark)
 	#base[ACTIVE]				= shade (0.92, @selected_bg_color)
-	#base[SELECTED]				= shade (0.93, @selected_bg_color)
 	base[INSENSITIVE]			= @bg_color_dark
 
 	bg[NORMAL]				= @bg_color_dark
 	bg[PRELIGHT]				= shade (1.02, @bg_color_dark)
-	#bg[SELECTED]				= @selected_bg_color
+	bg[SELECTED]				= shade (0.90, @selected_bg_color)
 	bg[INSENSITIVE]				= @bg_color_dark
 	bg[ACTIVE]				= shade (1.04, @bg_color_dark)
 
-	fg[NORMAL]             			= "#D9D9D9"
+	fg[NORMAL]             			= @text_color_dark
 	fg[PRELIGHT]           			= @text_color_dark
-
-	#fg[NORMAL]				= @fg_color
-	#fg[PRELIGHT]				= @fg_color
-	#fg[SELECTED]				= @selected_fg_color
-	#fg[ACTIVE]				= @fg_color
-	fg[INSENSITIVE]				= darker (@bg_color_dark)
+	fg[SELECTED]				= @text_color_dark
+	fg[ACTIVE]				= @text_color_dark
+	fg[INSENSITIVE]				= darker (@bg_color)
 
 	text[NORMAL]				= @text_color_dark
 	text[PRELIGHT]				= @text_color_dark
@@ -660,7 +655,7 @@ include "Apps/eog.rc"
 include "Apps/gedit.rc"
 include "Apps/midori.rc"
 include "Apps/nautilus.rc"
-include "Apps/panel.rc"
+include "Apps/panel-dark.rc"
 include "Apps/postler.rc"
 include "Apps/rhythmbox.rc"
 include "Apps/steadyflow.rc"

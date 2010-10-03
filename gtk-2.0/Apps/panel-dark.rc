@@ -23,22 +23,6 @@ style "elementary-panel"
 
 }
 
-style "elementary-panel-text"
-{
-	fg[NORMAL]	= "#ffffff"
-	fg[PRELIGHT]	= "#5D5D5D"
-	fg[ACTIVE]	= "#ffffff"
-	text[NORMAL]	= "#ffffff"
-	text[PRELIGHT]	= "#ffffff"
-	text[ACTIVE]	= "#ffffff"
-}
-
-style "elementary-main-menu-text" = "elementary-panel-text"
-{
-	fg[PRELIGHT]	= "#ffffff"
-	text[PRELIGHT]	= "#ffffff"
-}
-
 style "elementary-panel-handle" 
 {
     engine "pixmap"
@@ -57,14 +41,6 @@ style "elementary-panel-handle"
 
 style "murrine-menu-item" = "murrine-wider-dark"
 {
-	
-	fg[PRELIGHT]				= @selected_fg_color
-	fg[SELECTED]				= @selected_fg_color
-	fg[ACTIVE]				= @fg_color
-	fg[INSENSITIVE]				= darker (@bg_color)
-
-	bg[SELECTED]				= shade (0.90, @selected_bg_color)
-
 	engine "murrine"
 	{
 		roundness			= 0
@@ -87,10 +63,10 @@ widget_class "BonoboPlug*PanelApplet*"		style "elementary-panel"
 widget_class "*tray*"				style "elementary-panel"
 
 # Make sure panel text color doesn't change
-widget_class "*Panel*MenuBar*"			style "elementary-main-menu-text"
-widget_class "*Panel*<GtkMenuBar>*"		style "elementary-main-menu-text"
-widget "*.clock-applet-button.*"		style "elementary-panel-text"
-widget "*PanelApplet*"				style "elementary-panel-text"
+widget_class "*Panel*MenuBar*"			style "murrine-dark"
+widget_class "*Panel*<GtkMenuBar>*"		style "murrine-dark"
+widget "*.clock-applet-button.*"		style "murrine-dark"
+widget "*PanelApplet*"				style "murrine-dark"
 
 # Hide ugly handle
 class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
@@ -99,5 +75,6 @@ widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+widget "*.gtk-combobox-popup-menu.*"   		style "murrine-dark"
 
 
