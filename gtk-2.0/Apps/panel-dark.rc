@@ -7,6 +7,7 @@ style "elementary-panel"
 	bg_pixmap[NORMAL]	= "/Panel/panel-dark.png" # Disable for normal panel backgrounds.
 
 	fg[NORMAL]				= "#ffffff"
+	bg[NORMAL]				= shade (0.85, "#3B3B3B")
 	bg[ACTIVE]				= shade (0.85, "#3B3B3B")
 	bg[SELECTED]				= shade (0.85, "#3B3B3B")
 	bg[PRELIGHT]				= shade (0.85, "#3B3B3B")
