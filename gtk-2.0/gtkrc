@@ -429,9 +429,9 @@ style "murrine-treeview-header" = "murrine-default"
 style "murrine-xfwm4-tabwin" = "murrine-dark"
 {
 	bg[NORMAL]				= @tooltip_bg_color
-	bg[PRELIGHT]				= @bg_color_dark
+	bg[PRELIGHT]				= shade (0.4, @bg_color_dark)
 	bg[ACTIVE]				= @tooltip_bg_color
-	bg[SELECTED]				= @bg_color_dark
+	bg[SELECTED]				= shade (0.4, @bg_color_dark)
 }
 
 style "notebook-close"
