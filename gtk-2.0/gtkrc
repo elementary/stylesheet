@@ -132,7 +132,6 @@ style "murrine-default"
 		shadow_shades		= { 2.0, 1.0 }
 		sliderstyle		= 0     	# 0 = nothing added
 		stepperstyle		= 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
-		textstyle		= 1
 		toolbarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient
 		trough_shades		= { 0.85, 1.0 }
 	}
@@ -220,6 +219,7 @@ style "murrine-button" = "murrine-wider"
 		contrast			= 1.25
 		gradient_shades     		= {1.10,1.0,0.99,0.90}
 		lightborderstyle		= 1
+		textstyle			= 1
 	}
 }
 
@@ -257,7 +257,6 @@ style "murrine-button-dark" = "murrine-wider"
 		contrast			= 1.25
 		gradient_shades     		= {1.10,1.0,0.99,0.90}
 		lightborderstyle		= 1
-		#textstyle			= 0
 	}
 }
 
