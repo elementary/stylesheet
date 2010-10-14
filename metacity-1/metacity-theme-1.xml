@@ -65,35 +65,33 @@
 <!-- ::: CORNERS OUTLINE::: -->
 <draw_ops name="corners_outline">
 	<!-- top left Dark -->
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="1" y1="3" x2="1" y2="4"/>
+	<line color="shade/gtk:bg[NORMAL]/0.66" x1="3" y1="1" x2="4" y2="1"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="2" y1="2" x2="2" y2="2"/>
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="3" y1="1" x2="3" y2="1"/>
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="4" y1="1" x2="4" y2="1"/>
-
+	<line color="shade/gtk:bg[NORMAL]/0.66" x1="1" y1="3" x2="1" y2="4"/>
+	
 	<!-- top right Dark -->
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-2" y1="3" x2="width-2" y2="4"/>
+	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-5" y1="1" x2="width-4" y2="1"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-3" y1="2" x2="width-3" y2="2"/>
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-4" y1="1" x2="width-4" y2="1"/>
-	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-5" y1="1" x2="width-5" y2="1"/>
+	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-2" y1="3" x2="width-2" y2="4"/>
 
 	<!-- top left White -->
-	<line color="shade/gtk:bg[NORMAL]/1.00" x1="2" y1="4" x2="2" y2="5"/>
-	<line color="shade/gtk:bg[NORMAL]/1.02" x1="3" y1="3" x2="3" y2="3"/>
-	<line color="shade/gtk:bg[NORMAL]/1.08" x1="4" y1="2" x2="4" y2="2"/>
-	<line color="shade/gtk:bg[NORMAL]/1.14" x1="5" y1="2" x2="5" y2="2"/>
+	<line color="shade/gtk:bg[NORMAL]/1.12" x1="4" y1="2" x2="4" y2="2"/>
+	<line color="shade/gtk:bg[NORMAL]/1.14" x1="3" y1="2" x2="3" y2="2"/>
+	<line color="shade/gtk:bg[NORMAL]/1.10" x1="2" y1="3" x2="2" y2="3"/>
+	<line color="shade/gtk:bg[NORMAL]/1.08" x1="2" y1="4" x2="2" y2="4"/>
 
 	<!-- top right White -->
-	<line color="shade/gtk:bg[NORMAL]/1.00" x1="width-3" y1="3" x2="width-3" y2="4"/>
-	<line color="shade/gtk:bg[NORMAL]/1.02" x1="width-4" y1="2" x2="width-4" y2="2"/>
-	<line color="shade/gtk:bg[NORMAL]/1.08" x1="width-5" y1="1" x2="width-5" y2="1"/>
-	<line color="shade/gtk:bg[NORMAL]/1.14" x1="width-6" y1="1" x2="width-6" y2="1"/>
+	<line color="shade/gtk:bg[NORMAL]/1.12" x1="width-5" y1="2" x2="width-5" y2="2"/>
+	<line color="shade/gtk:bg[NORMAL]/1.14" x1="width-4" y1="2" x2="width-4" y2="2"/>
+	<line color="shade/gtk:bg[NORMAL]/1.10" x1="width-3" y1="3" x2="width-3" y2="3"/>
+	<line color="shade/gtk:bg[NORMAL]/1.08" x1="width-3" y1="4" x2="width-3" y2="4"/>
 
 </draw_ops>
 
 <!-- ::: BORDER OUTLINE ::: -->
 <draw_ops name="border">
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="0" x2="width" y2="0"/>
-	<line color="shade/gtk:bg[NORMAL]/1.18" x1="0" y1="1" x2="width" y2="1"/>
+	<line color="shade/gtk:bg[NORMAL]/1.18" x1="4" y1="1" x2="width-1" y2="1"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="0" x2="0" y2="height"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="width-1" y1="0" x2="width-1" y2="height"/>
 	<line color="shade/gtk:bg[NORMAL]/0.66" x1="0" y1="height-1" x2="width" y2="height-1"/>
