@@ -656,7 +656,7 @@ include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"
 include "Apps/postler.rc"
-include "Apps/rhythmbox.rc"
+#include "Apps/rhythmbox.rc"
 include "Apps/steadyflow.rc"
 include "Apps/totem.rc"
 

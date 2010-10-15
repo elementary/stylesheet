@@ -11,11 +11,8 @@ style "nautilus-sidebar" = "sidebar"
 
 style "nautilus-sidebar-other" = "nautilus-sidebar"
 {
-
 	xthickness				= 0
-
 	bg[NORMAL]				= @sidebar_color
-
 }
 
 style "nautilus-view"
@@ -34,7 +31,7 @@ style "nautilus-handle"
 		{
 		    function		= HANDLE
 		    recolorable		= TRUE
-		    file		= "Apps/nautilus/handle.png"
+		    file		= "/Sidebar/handle.png"
 		    stretch		= TRUE
 		    border 		= { 0, 0, 0, 0 }
 		}
@@ -47,7 +44,7 @@ style "nautilus-extra-view"
 	xthickness		= 0
 	ythickness		= 0
 
-	bg[NORMAL]		= @base_color
+	bg_pixmap[NORMAL]	= "/nautilus/extra-widget.png"
 
 }
 
@@ -75,7 +72,7 @@ style "nautilus-statusbar"
 	     	function	= RESIZE_GRIP
 		recolorable	= TRUE
 		detail		= "statusbar"
-		overlay_file	= "Apps/nautilus/resize_grip.png"
+		overlay_file	= "/nautilus/resize_grip.png"
 		overlay_border	= {0,0,0,0 }
 		overlay_stretch	= FALSE
 	    }
@@ -157,7 +154,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= PRELIGHT
-			file				= "nautilus/mode_prelight.png"
+			file				= "/nautilus/mode_prelight.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -167,7 +164,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= NORMAL
-			file				= "nautilus/mode_normal.png"
+			file				= "/nautilus/mode_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -177,7 +174,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= ACTIVE
-			file				= "nautilus/mode_pressed.png"
+			file				= "/nautilus/mode_pressed.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}  
@@ -187,7 +184,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= INSENSITIVE
-			file				= "nautilus/mode_normal.png"
+			file				= "/nautilus/mode_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		} 
@@ -197,7 +194,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= SELECTED
-			file				= "nautilus/mode_pressed.png"
+			file				= "/nautilus/mode_pressed.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -221,7 +218,7 @@ style "nautilus-breadcrumbs"
 			shadow				= OUT
 			recolorable     	= TRUE
 			state				= PRELIGHT
-			file				= "nautilus/breadcrumb_prelight.png"
+			file				= "/nautilus/breadcrumb_prelight.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}		
@@ -232,7 +229,7 @@ style "nautilus-breadcrumbs"
 			recolorable     	= TRUE
 			shadow				= IN
 			state				= PRELIGHT
-			file				= "nautilus/breadcrumb_active.png"
+			file				= "/nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -242,7 +239,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= NORMAL
-			file				= "nautilus/breadcrumb_normal.png"
+			file				= "/nautilus/breadcrumb_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -252,7 +249,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= PRELIGHT
-			file				= "nautilus/breadcrumb_active.png"
+			file				= "/nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -263,7 +260,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= ACTIVE
-			file				= "nautilus/breadcrumb_active.png"
+			file				= "/nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}  
@@ -273,7 +270,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= INSENSITIVE
-			file				= "nautilus/breadcrumb_normal.png"
+			file				= "/nautilus/breadcrumb_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		} 
@@ -283,7 +280,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= SELECTED
-			file				= "nautilus/breadcrumb_active.png"
+			file				= "/nautilus/breadcrumb_active.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -300,7 +297,7 @@ style "nautilus-left-slider"
 		image
 		{
 			function 		= BOX
-			file			= "nautilus/left_slider_normal.png"
+			file			= "/nautilus/left_slider_normal.png"
 			border			= { 3, 3, 3, 3 }
 			stretch			= TRUE
 		}
@@ -318,7 +315,7 @@ style "nautilus-right-slider"
 		image
 		{
 			function 		= BOX
-			file			= "nautilus/right_slider_normal.png"
+			file			= "/nautilus/right_slider_normal.png"
 			border			= { 3, 3, 3, 3 }
 			stretch			= TRUE
 		}
@@ -337,7 +334,7 @@ widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
 widget		"*GtkModeButton*"		style "nautilus-mode-button"
 
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
-widget "*.nautilus-extra-view-widget*Button" 	style "murrine-button-content"
+#widget "*.nautilus-extra-view-widget*Button" 	style "murrine-button-content"
 
 widget_class "*NautilusPathBar.*ToggleButton*" style "nautilus-breadcrumbs" 
 widget "Nautilus*left_slider*" style "nautilus-left-slider" 

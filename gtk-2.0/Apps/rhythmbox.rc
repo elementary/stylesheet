@@ -14,7 +14,7 @@ style "rb-handle"
 		{
 		    function	= HANDLE
 		    recolorable	= TRUE
-		    file		= "Apps/nautilus/handle.png"
+		    file		= "/Sidebar/handle.png"
 		    stretch		= TRUE
 		    border 		= { 0, 0, 0, 0 }
 		}
