@@ -1,25 +1,25 @@
-style "eog-window"
+style "eog-window" = "murrine-dark"
 {
 	xthickness              = 0
 	ythickness              = 0
 
-	base[NORMAL]		= "#3B3B3B"
+	#base[NORMAL]		= "#3B3B3B"
 
-	bg[NORMAL]		= "#3B3B3B"
-	bg[ACTIVE]		= "#434241"
-	bg[PRELIGHT]		= "#4D4D4D"
+	#bg[NORMAL]		= "#3B3B3B"
+	#bg[ACTIVE]		= "#434241"
+	#bg[PRELIGHT]		= "#4D4D4D"
 
-	fg[NORMAL]              = "#D6D6D6"
-	fg[PRELIGHT]            = "#D6D6D6"
-	fg[SELECTED]            = "#D6D6D6"
-	fg[ACTIVE]              = "#D6D6D6"
-	fg[INSENSITIVE]         = "#D6D6D6"
+	#fg[NORMAL]              = "#D6D6D6"
+	#fg[PRELIGHT]            = "#D6D6D6"
+	#fg[SELECTED]            = "#D6D6D6"
+	#fg[ACTIVE]              = "#D6D6D6"
+	#fg[INSENSITIVE]         = "#D6D6D6"
 
-	text[NORMAL]      	= "#D6D6D6"
-	text[PRELIGHT]    	= "#D6D6D6"
-	text[ACTIVE]      	= "#D6D6D6"
-	text[SELECTED]   	= "#D6D6D6"
-	text[INSENSITIVE]	= "#4D4D4D"
+	#text[NORMAL]      	= "#D6D6D6"
+	#text[PRELIGHT]    	= "#D6D6D6"
+	#text[ACTIVE]      	= "#D6D6D6"
+	#text[SELECTED]   	= "#D6D6D6"
+	#text[INSENSITIVE]	= "#4D4D4D"
 	
 	GtkWidget::shadow_type			= GTK_SHADOW_NONE
 	GtkWidget::draw_border			= {0,0,0,0}
@@ -35,299 +35,8 @@ style "eog-statusbar" = "eog-window"
 	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
 }
 
-style "minimal-scrollbar-dark"
-{
-
-    GtkRange::trough_border = 1
-    GtkRange::slider_width = 13
-    GtkRange::stepper_size = 13
-
-    GtkScrollbar::min_slider_length = 30
-
-    engine "pixmap" 
-    {
-
-######### Troughs ############
-
-        image 
-        {
-            function        = BOX
-            recolorable     = TRUE
-            detail          = "trough"
-            file            = "Scrollbars-Dark/scrollbar-vert-trough.png"
-            border          = { 0, 0, 39, 39 }
-            stretch         = TRUE
-            orientation     = VERTICAL
-        }
-
-        image 
-        {
-            function        = BOX
-            recolorable     = TRUE
-            detail          = "trough"
-            file            = "Scrollbars-Dark/scrollbar-horiz-trough.png"
-            border          = { 39, 39, 0, 0 }
-            stretch         = TRUE
-            orientation     = HORIZONTAL
-        }
-
- ######### Sliders ############
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = NORMAL
-	    file            = "Scrollbars-Dark/scrollbar-horiz.png"
-	    border          = { 15, 15, 6, 6 }
-	    stretch         = TRUE
-	    orientation     = HORIZONTAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = ACTIVE
-	    file            = "Scrollbars-Dark/scrollbar-horiz.png"
-	    border          = { 15, 15, 6, 6 }
-	    stretch         = TRUE
-	    orientation     = HORIZONTAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = PRELIGHT
-	    file            = "Scrollbars-Dark/scrollbar-horiz-prelight.png"
-	    border          = { 15, 15, 6, 6 }
-	    stretch         = TRUE
-	    orientation     = HORIZONTAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = INSENSITIVE
-	    file            = "Scrollbars-Dark/scrollbar-horiz.png"
-	    border          = { 15, 15, 6, 6 }
-	    stretch         = TRUE
-	    orientation     = HORIZONTAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = NORMAL
-	    file            = "Scrollbars-Dark/scrollbar-vert.png"
-	    border          = { 6, 6, 15, 15 }
-	    stretch         = TRUE
-	    orientation     = VERTICAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = ACTIVE
-	    file            = "Scrollbars-Dark/scrollbar-vert.png"
-	    border          = { 6, 6, 15, 15 }
-	    stretch         = TRUE
-	    orientation     = VERTICAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = PRELIGHT
-	    file            = "Scrollbars-Dark/scrollbar-vert-prelight.png"
-	    border          = { 6, 6, 15, 15 }
-	    stretch         = TRUE
-	    orientation     = VERTICAL
-        }
-
-        image 
-        {
-	    function        = SLIDER
-	    recolorable     = TRUE
-	    state           = INSENSITIVE
-	    file            = "Scrollbars-Dark/scrollbar-vert.png"
-	    border          = { 6, 6, 15, 15 }
-	    stretch         = TRUE
-	    orientation     = VERTICAL
-        }
-
- ######### Steppers ############
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = NORMAL
-	file		    = "Scrollbars-Dark/stepper-up.png"
-	stretch		    = TRUE
-	arrow_direction	    = UP
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = ACTIVE
-	file		    = "Scrollbars-Dark/stepper-up.png"
-	stretch		    = TRUE
-	arrow_direction	    = UP
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = PRELIGHT
-	file		    = "Scrollbars-Dark/stepper-up.png"
-	stretch		    = TRUE
-	arrow_direction	    = UP
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = INSENSITIVE
-	file		    = "Scrollbars-Dark/stepper-up-insensitive.png"
-	stretch		    = TRUE
-	arrow_direction	    = UP
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = NORMAL
-	file		    = "Scrollbars-Dark/stepper-down.png"
-	stretch		    = TRUE
-	arrow_direction	    = DOWN
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = ACTIVE
-	file		    = "Scrollbars-Dark/stepper-down.png"
-	stretch		    = TRUE
-	arrow_direction	    = DOWN
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = PRELIGHT
-	file		    = "Scrollbars-Dark/stepper-down.png"
-	stretch		    = TRUE
-	arrow_direction	    = DOWN
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = INSENSITIVE
-	file		    = "Scrollbars-Dark/stepper-down-insensitive.png"
-	stretch		    = TRUE
-	arrow_direction	    = DOWN
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = NORMAL
-	file		    = "Scrollbars-Dark/stepper-left.png"
-	stretch		    = TRUE
-	arrow_direction	    = LEFT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = ACTIVE
-	file		    = "Scrollbars-Dark/stepper-left.png"
-	stretch		    = TRUE
-	arrow_direction	    = LEFT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = PRELIGHT
-	file		    = "Scrollbars-Dark/stepper-left.png"
-	stretch		    = TRUE
-	arrow_direction	    = LEFT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = INSENSITIVE
-	file		    = "Scrollbars-Dark/stepper-left-insensitive.png"
-	stretch		    = TRUE
-	arrow_direction	    = LEFT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = NORMAL
-	file		    = "Scrollbars-Dark/stepper-right.png"
-	stretch		    = TRUE
-	arrow_direction	    = RIGHT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = ACTIVE
-	file		    = "Scrollbars-Dark/stepper-right.png"
-	stretch		    = TRUE
-	arrow_direction	    = RIGHT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = PRELIGHT
-	file		    = "Scrollbars-Dark/stepper-right.png"
-	stretch		    = TRUE
-	arrow_direction	    = RIGHT
-	}
-
-	image 
-	{
-	function	    = STEPPER
-	recolorable	    = TRUE
-	state               = INSENSITIVE
-	file		    = "Scrollbars-Dark/stepper-right-insensitive.png"
-	stretch		    = TRUE
-	arrow_direction	    = RIGHT
-	}
-
-    }
-}
-
 widget "EogWindow"						style "eog-window"
-widget "EogWindow.GtkVBox.GtkVBox*"				style "eog-window"
+widget "EogWindow.GtkVBox.GtkVBox"				style "eog-window"
 
-widget_class "EogWindow.GtkVBox.GtkVBox*Scrollbar"		style "minimal-scrollbar-dark"
+widget_class "EogWindow.GtkVBox.GtkVBox*Scrollbar"		style "murrine-scrollbar-dark"
 widget_class "Eog*Statusbar*"                  			style "eog-statusbar"

@@ -372,6 +372,17 @@ style "murrine-scrollbar"
 	}
 }
 
+style "murrine-scrollbar-dark" = "murrine-scrollbar"
+{
+	
+	engine "murrine" {
+		gradient_shades			= {0.65,0.65,0.65,0.65}
+		trough_shades	        	= { 1.0, 1.0}
+		border_shades			= { 0.3, 0.3}
+		prelight_shade			= 1.35
+	}
+}
+
 style "murrine-tasklist" = "murrine-wide" {}
 
 style "murrine-toolbar" = "murrine-default"
