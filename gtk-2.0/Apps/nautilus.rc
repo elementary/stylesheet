@@ -108,31 +108,6 @@ style "nautilus-scale"
     {
       function			= SLIDER
       recolorable		= TRUE
-      state           		= NORMAL
-      file			= ""
-      border			= { 0, 0, 0, 0 }
-      stretch			= TRUE
-      overlay_file		= "Range/slider.png"
-      overlay_stretch		= FALSE
-      orientation		= HORIZONTAL
-    }
-    image 
-    {
-      function			= SLIDER
-      recolorable		= TRUE
-     state           		= PRELIGHT
-      file			= ""
-      border			= { 0, 0, 0, 0 }
-      stretch			= TRUE
-      overlay_file		= "Range/slider-prelight.png"
-      overlay_stretch		= FALSE
-      orientation		= HORIZONTAL
-    }
-    image 
-    {
-      function			= SLIDER
-      recolorable		= TRUE
-      state           		= INSENSITIVE
       file			= ""
       border			= { 0, 0, 0, 0 }
       stretch			= TRUE
@@ -334,7 +309,6 @@ widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
 widget		"*GtkModeButton*"		style "nautilus-mode-button"
 
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
-#widget "*.nautilus-extra-view-widget*Button" 	style "murrine-button-content"
 
 widget_class "*NautilusPathBar.*ToggleButton*" style "nautilus-breadcrumbs" 
 widget "Nautilus*left_slider*" style "nautilus-left-slider" 
