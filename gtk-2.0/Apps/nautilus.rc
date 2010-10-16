@@ -92,28 +92,20 @@ style "nautilus-scale"
 	GtkRange		::trough-border				= 0
 	GtkScale		::trough-side-details			= 0
 	
-  engine "pixmap" 
-  {
-    image 
-    {
-      function			= BOX
-      recolorable		= TRUE
-      detail			= "trough"
-      file			= "Range/trough.png"
-      border			= { 10, 10, 5, 15 }
-      stretch			= TRUE
-      orientation		= HORIZONTAL
-    }	
-    image 
-    {
-      function			= SLIDER
-      recolorable		= TRUE
-      file			= ""
-      border			= { 0, 0, 0, 0 }
-      stretch			= TRUE
-      overlay_file		= "Range/slider.png"
-      overlay_stretch		= FALSE
-      orientation		= HORIZONTAL
+	engine "pixmap" 
+	{
+		image 
+		{
+			function		= BOX
+			detail			= "trough"
+			file			= "/Range/trough.png"
+			border			= { 10, 10, 5, 15 }
+		}	
+		image 
+		{
+			function		= SLIDER
+			overlay_file		= "/Range/slider.png"
+			overlay_stretch		= FALSE
     }
   }
 }
