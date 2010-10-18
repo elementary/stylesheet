@@ -32,12 +32,18 @@ style "elementary-panel-handle"
         {
 		function 	= HANDLE
         }    
- 
-	image
-        {
-        	function 	= HANDLE
-        }
     }
+}
+
+style "murrine-menu-calendar" = "murrine-thin"
+{
+	base[NORMAL]				= "#3B3B3B"
+	base[ACTIVE]				= "#555753"
+
+	engine "murrine"
+	{
+		roundness			= 1
+	}
 }
 
 style "murrine-menu-item" = "murrine-wider-dark"
@@ -74,6 +80,7 @@ class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
 
 widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
+widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-menu-calendar"
 widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget "*.gtk-combobox-popup-menu.*"   		style "murrine-dark"
