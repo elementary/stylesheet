@@ -182,24 +182,12 @@ style "nautilus-breadcrumbs"
 		image
 		{
 			function        	= BOX
-			shadow				= OUT
 			recolorable     	= TRUE
 			state				= PRELIGHT
 			file				= "/nautilus/breadcrumb_prelight.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}		
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			shadow				= IN
-			state				= PRELIGHT
-			file				= "/nautilus/breadcrumb_active.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
 	  
 		image
 		{
@@ -215,22 +203,11 @@ style "nautilus-breadcrumbs"
 		{
 			function        	= BOX
 			recolorable     	= TRUE
-			state				= PRELIGHT
-			file				= "/nautilus/breadcrumb_active.png"
+			state				= ACTIVE
+			file				= "/nautilus/breadcrumb_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
-	
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= ACTIVE
-			file				= "/nautilus/breadcrumb_active.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}  
 
 		image
 		{
@@ -247,7 +224,7 @@ style "nautilus-breadcrumbs"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= SELECTED
-			file				= "/nautilus/breadcrumb_active.png"
+			file				= "/nautilus/breadcrumb_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
