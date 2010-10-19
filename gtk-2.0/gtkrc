@@ -143,6 +143,7 @@ style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
 
 style "murrine-dark"	=	"murrine-default"
 {
+	base[NORMAL]				= @bg_color_dark
 	base[PRELIGHT]				= shade (0.95, @bg_color_dark)
 	#base[ACTIVE]				= shade (0.92, @selected_bg_color)
 	base[INSENSITIVE]			= @bg_color_dark
@@ -365,7 +366,7 @@ style "murrine-scrollbar"
 		gradient_colors			= FALSE
     		lightborder_shade		= 1.0
 		lightborderstyle		= 0
-		trough_shades	        	= { 5.0, 1.20}
+		trough_shades	        	= { 1.3, 1.3}
 		border_shades			= { 2.0, 2.0}
 		contrast			= 0.0
 		prelight_shade			= 0.65
@@ -373,8 +374,8 @@ style "murrine-scrollbar"
 }
 
 style "murrine-scrollbar-dark" = "murrine-scrollbar"
-{
-	
+{	
+
 	engine "murrine" {
 		gradient_shades			= {0.65,0.65,0.65,0.65}
 		trough_shades	        	= { 1.0, 1.0}
@@ -663,6 +664,7 @@ widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 
 include "Apps/eog.rc"
 include "Apps/gedit.rc"
+include "Apps/gnome-terminal.rc"
 include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"
