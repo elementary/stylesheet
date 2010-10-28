@@ -53,14 +53,14 @@ style "murrine-default"
 	GtkProgressBar		::min-vertical-bar-width		= 10
 	GtkProgressBar		::min-horizontal-bar-height		= 10
 
-	GtkRange		::trough-border				= 2
-	GtkRange		::slider-width				= 8
+	GtkRange		::trough-border				= 1
+	GtkRange		::slider-width				= 6
  
 	GtkScale		::slider-length				= 14
 	GtkScale		::slider-width				= 14
 	GtkScale		::trough-side-details			= 1
 
-	GtkScrollbar		::min-slider-length			= 20
+	GtkScrollbar		::min-slider-length			= 30
 	GtkScrollbar		::has-backward-stepper 			= 0  
 	GtkScrollbar		::has-forward-stepper			= 0 
 
@@ -132,7 +132,7 @@ style "murrine-default"
 		shadow_shades		= { 2.0, 1.0 }
 		sliderstyle		= 0     	# 0 = nothing added
 		stepperstyle		= 1		# 0 = standard, 1 = integrated stepper handles, 2 = unknown
-		toolbarstyle		= 2		# 0 = flat, 1 = glassy, 2 = gradient
+		toolbarstyle		= 1		# 0 = flat, 1 = glassy, 2 = gradient
 		trough_shades		= { 0.85, 1.0 }
 	}
 }
@@ -390,7 +390,6 @@ style "murrine-toolbar" = "murrine-default"
 {
 	engine "murrine" {
 		contrast			= 1.13
-		toolbarstyle			= 1
 		lightborder_shade		= 1.0
 		gradient_shades     		= {1.0,0.94,0.94,0.88}
 	}
