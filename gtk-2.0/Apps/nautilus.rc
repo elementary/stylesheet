@@ -44,7 +44,16 @@ style "nautilus-extra-view"
 	xthickness		= 0
 	ythickness		= 0
 
-	bg_pixmap[NORMAL]	= "/nautilus/extra-widget.png"
+	engine "pixmap"
+	{
+		image 
+		{
+		    function		= FLAT_BOX
+		    file		= "/nautilus/extra-widget.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 4, 4 }
+		}
+	}
 
 }
 
