@@ -358,7 +358,7 @@ style "murrine-scrollbar"
 	bg[ACTIVE]				= @base_color
 	
 	engine "murrine" {
-		roundness			= 6
+		roundness			= 2
 		gradient_shades			= {1.0,1.0,1.0,1.0}
 		highlight_shade			= 1.0
 		glow_shade			= 1.0

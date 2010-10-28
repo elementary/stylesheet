@@ -32,7 +32,7 @@
 	<distance name="right_titlebar_edge" value="1"/>
 </frame_geometry>
 
-<frame_geometry name="utility" title_scale="small" rounded_top_left="false" rounded_top_right="false" rounded_bottom_left="false" rounded_bottom_right="false">
+<frame_geometry name="utility" title_scale="small" rounded_top_left="true" rounded_top_right="true" rounded_bottom_left="false" rounded_bottom_right="false">
 	<distance name="left_width" value="2"/>
 	<distance name="right_width" value="2"/>
 	<distance name="bottom_height" value="2"/>
