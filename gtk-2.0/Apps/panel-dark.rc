@@ -20,6 +20,7 @@ style "elementary-panel"
 		contrast			= 1.05
 		border_shades 			= {1.2, 1.1}
 		textstyle			= 0
+		arrowstyle			= 0
 	}
 
 }
@@ -30,19 +31,32 @@ style "elementary-panel-handle"
     {    
         image
         {
-		function 	= HANDLE
+		function 			= HANDLE
         }    
     }
 }
 
 style "murrine-menu-calendar" = "murrine-thin"
 {
+	text[INSENSITIVE]			= "#666666"
+	text[NORMAL]				= "#ffffff"
 	base[NORMAL]				= "#3B3B3B"
 	base[ACTIVE]				= "#555753"
 
 	engine "murrine"
 	{
 		roundness			= 1
+	}
+}
+
+style "murrine-menu-entry" = "murrine-thin"
+{
+	base[NORMAL]				= "#BBBBBB"
+	base[ACTIVE]				= "#BBBBBB"
+
+	engine "murrine"
+	{
+		roundness			= 3
 	}
 }
 
@@ -64,6 +78,7 @@ widget "*fast-user-switch*"			style "elementary-panel"
 widget "PanelToplevel*PanelAppletFrame"		style "elementary-panel"
 widget "PanelToplevel*PanelMenuBar"		style "elementary-panel"
 widget "PanelToplevel*PanelWidget*"		style "elementary-panel"
+widget "*CPUFreq*Applet*"			style "elementary-panel"
 widget "*Xfce*Panel*"				style "elementary-panel"
 
 widget_class "BonoboPlug*PanelApplet*"		style "elementary-panel"
@@ -81,6 +96,7 @@ class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
 widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
 widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-menu-calendar"
+widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "murrine-menu-entry"
 widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
 widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
 widget "*.gtk-combobox-popup-menu.*"   		style "murrine-dark"
