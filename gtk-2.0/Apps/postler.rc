@@ -40,7 +40,17 @@ style "postler-filterbar-button" = "murrine-button"
 	}
 }
 
+style "postler-treeview"
+{
+
+	engine "murrine"
+	{
+		listviewstyle			= 0
+	}
+}
+
 widget_class	"*Postler*HPaned"			style "postler-handle-horiz"
 widget_class	"*Postler*HPaned*PostlerFolders"	style "sidebar"
 widget_class	"*Postler*VPaned*Toolbar"		style "postler-filterbar"
 widget_class	"*Postler*VPaned*Toolbar*Button"	style "postler-filterbar-button"
+widget_class	"*Postler*.<GtkTreeView>*"		style "postler-treeview"
