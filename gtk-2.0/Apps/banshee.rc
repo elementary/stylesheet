@@ -1,0 +1,12 @@
+style "banshee-scrollbar" = "murrine-scrollbar"
+{
+	engine "murrine" {
+		trough_shades	        	= { 0.97, 0.97}
+		border_shades			= { 1.2, 1.2}
+	}
+}
+
+widget "__gtksharp_1*HScrollbar"		style "banshee-scrollbar"
+widget "__gtksharp_1*VScrollbar"		style "banshee-scrollbar"
+widget "__gtksharp_1*View"			style "sidebar"
+
