@@ -1,0 +1,130 @@
+style "marlin-window-base"
+{
+	bg[NORMAL]	= @base_color
+}
+
+style "nautilus-sidebar" = "sidebar"
+{
+	GtkTreeView::horizontal_separator	= 15
+	GtkTreeView::vertical_separator		= 2
+}
+
+style "nautilus-view"
+{
+	xthickness		= 0
+	ythickness		= 0
+}
+
+style "nautilus-handle"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+		    function		= HANDLE
+		    recolorable		= TRUE
+		    file		= "/Sidebar/handle.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "nautilus-scale"
+{
+	ythickness = 0
+
+	GtkRange		::trough-border				= 0
+	GtkScale		::trough-side-details			= 0
+	
+	engine "pixmap" 
+	{
+		image 
+		{
+			function		= BOX
+			detail			= "trough"
+			file			= "/Range/trough.png"
+			border			= { 10, 10, 5, 15 }
+		}	
+		image 
+		{
+			function		= SLIDER
+			overlay_file		= "/Range/slider.png"
+			overlay_stretch		= FALSE
+    }
+  }
+}
+
+
+style "nautilus-mode-button"
+{
+
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "/nautilus/mode_prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "/nautilus/mode_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "/nautilus/mode_pressed.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "/nautilus/mode_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "/nautilus/mode_pressed.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	}
+
+}
+
+#widget		"*Marlin"	style "marlin-window-base"
+#widget		"*Nautilus*Splitter"		style "nautilus-handle"
+#widget_class	"*Marlin*View*"		style "nautilus-view"
+#widget_class	"*Nautilus*NautilusSidePane*"	style "nautilus-sidebar"
+#widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
+#widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
+
+#widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
+
+#widget		"*GtkModeButton*"		style "nautilus-mode-button"
+
+#widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"

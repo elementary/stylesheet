@@ -1,0 +1,24 @@
+style "eog-window" = "murrine-dark"
+{
+	xthickness              = 0
+	ythickness              = 0
+	
+	GtkWidget::shadow_type			= GTK_SHADOW_NONE
+	GtkWidget::draw_border			= {0,0,0,0}
+	GtkScrolledWindow::scrollbar-spacing	= 0
+	GtkScrolledWindow::shadow_type		= GTK_SHADOW_NONE	
+}
+
+style "eog-statusbar" = "eog-window"
+{
+	xthickness                    = 6
+	ythickness                    = 4
+
+	GtkStatusbar::shadow_type     = GTK_SHADOW_NONE	
+}
+
+widget "EogWindow"						style "eog-window"
+widget "EogWindow.GtkVBox.GtkVBox"				style "eog-window"
+
+widget_class "EogWindow.GtkVBox.GtkVBox*Scrollbar"		style "murrine-scrollbar-dark"
+widget_class "Eog*Statusbar*"                  			style "eog-statusbar"

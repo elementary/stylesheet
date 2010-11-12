@@ -1,0 +1,72 @@
+style "midori-main"
+{
+
+	bg_pixmap[NORMAL]		= "/midori/base.png"	
+}
+
+style "midori-entry"
+{
+	ythickness			= 4
+}
+
+style "midori-notebook" = "murrine-notebook"
+{
+
+	bg[NORMAL]			= @bg_color		# selected tab entire
+
+	xthickness			= 0
+	ythickness			= 0
+}
+
+style "midori-toolbar" 
+{
+	engine "murrine" {
+		contrast		= 1.30
+	}
+}
+
+style "midori-handle"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+		    function	= HANDLE
+		    recolorable	= TRUE
+		    file		= "/Sidebar/handle.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "midori-sidebar-toolbar" {
+
+	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+
+	bg[NORMAL]			= @sidebar_color
+
+	engine "murrine" {
+		contrast		= 0.0
+		toolbarstyle		= 1
+		lightborder_shade	= 1.0
+		gradient_shades     	= {1.0,1.0,1.0,1.0}
+	}
+}
+
+style "midori-sidebar-search" {
+
+	bg[NORMAL]			= @base_color
+}
+
+widget		"MidoriBrowser"								style "midori-main"
+widget		"MidoriBrowser.GtkVBox*GtkEntry"					style "midori-entry"
+widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "midori-handle"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "midori-sidebar-toolbar"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox*GtkViewport"	style "midori-sidebar-search"
+
+widget_class	"MidoriBrowser.GtkVBox.GtkToolbar"					style "midori-toolbar"
+widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "sidebar"
