@@ -52,17 +52,16 @@ style "murrine-default"
 
 	GtkProgressBar		::min-vertical-bar-width		= 10
 	GtkProgressBar		::min-horizontal-bar-height		= 10
-
-	GtkRange		::trough-border				= 1
-	GtkRange		::slider-width				= 6
  
 	GtkScale		::slider-length				= 14
 	GtkScale		::slider-width				= 14
 	GtkScale		::trough-side-details			= 1
 
-	GtkScrollbar		::min-slider-length			= 30
 	GtkScrollbar		::has-backward-stepper 			= 0  
-	GtkScrollbar		::has-forward-stepper			= 0 
+	GtkScrollbar		::has-forward-stepper			= 0
+	GtkScrollbar		::min-slider-length			= 30
+	GtkScrollbar		::slider-width				= 6
+	GtkScrollbar		::trough-border				= 1
 
 	GtkScrolledWindow	::scrollbar-spacing			= 0
 	GtkScrolledWindow	::scrollbars-within-bevel		= 1
@@ -449,78 +448,18 @@ style "notebook-close"
 	stock["gtk-close"]			= {{ "Icons/close.png", *, *, * }}
 }
 
-style "pixmap-button" = "murrine-button"
-{
-
-	xthickness				= 3 
-	ythickness				= 4
-	GtkWidget	::focus-line-width	= 0
-
-	engine "pixmap"
-	{	
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state			= PRELIGHT
-			file			= "Button/prelight.png"
-			border			= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	  
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state			= NORMAL
-			file			= "Button/normal.png"
-			border			= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state			= ACTIVE
-			file			= "Button/selected.png"
-			border			= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}  
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state			= INSENSITIVE
-			file			= "Button/insensitive.png"
-			border			= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		} 
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state			= SELECTED
-			file			= "Button/selected.png"
-			border			= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	}
-
-}
-
 style "pixmap-vpaned"
 {
+	GtkPaned::handle_size			= 8
 
-	ythickness				= 5
 	engine "pixmap"
 	{	
 		image
 		{
 			file			= "Handle/pane-vert.png"
-			function		= BOX
+			function		= HANDLE
+			overlay_file		= "Handle/dimple.png"
+			overlay_stretch		= FALSE
 			stretch         	= TRUE
 		}
 	}
