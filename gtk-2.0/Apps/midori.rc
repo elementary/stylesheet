@@ -25,23 +25,6 @@ style "midori-toolbar"
 	}
 }
 
-style "midori-handle"
-{
-	GtkPaned::handle-size         = 2
-	
-	engine "pixmap"
-	{
-		image # for the thin gray line separating the sidepane and viewpane
-		{
-		    function	= HANDLE
-		    recolorable	= TRUE
-		    file		= "/Sidebar/handle.png"
-		    stretch		= TRUE
-		    border 		= { 0, 0, 0, 0 }
-		}
-	}
-}
-
 style "midori-sidebar-toolbar" {
 
 	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
@@ -64,7 +47,7 @@ style "midori-sidebar-search" {
 widget		"MidoriBrowser"								style "midori-main"
 widget		"MidoriBrowser.GtkVBox*GtkEntry"					style "midori-entry"
 widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
-widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "midori-handle"
+widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "pixmap-sidebar-handle-left"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "midori-sidebar-toolbar"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox*GtkViewport"	style "midori-sidebar-search"
 

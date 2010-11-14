@@ -448,6 +448,23 @@ style "notebook-close"
 	stock["gtk-close"]			= {{ "Icons/close.png", *, *, * }}
 }
 
+style "pixmap-sidebar-handle-left"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image
+		{
+		    function		= HANDLE
+		    recolorable		= TRUE
+		    file		= "/Sidebar/handle.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
 style "pixmap-vpaned"
 {
 	GtkPaned::handle_size			= 8
@@ -621,7 +638,6 @@ include "Apps/banshee.rc"
 include "Apps/eog.rc"
 include "Apps/gedit.rc"
 include "Apps/gnome-terminal.rc"
-include "Apps/marlin.rc"
 include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"

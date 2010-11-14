@@ -501,6 +501,23 @@ style "pixmap-vpaned"
 	}
 }
 
+style "pixmap-sidebar-handle-left"
+{
+	GtkPaned::handle-size         = 2
+	
+	engine "pixmap"
+	{
+		image # for the thin gray line separating the sidepane and viewpane
+		{
+		    function		= HANDLE
+		    recolorable		= TRUE
+		    file		= "/Sidebar/handle.png"
+		    stretch		= TRUE
+		    border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
 style "sidebar"
 {
 

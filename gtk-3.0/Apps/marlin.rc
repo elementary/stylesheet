@@ -3,36 +3,19 @@ style "marlin-window-base"
 	bg[NORMAL]	= @base_color
 }
 
-style "nautilus-sidebar" = "sidebar"
+style "marlin-sidebar" = "sidebar"
 {
 	GtkTreeView::horizontal_separator	= 15
 	GtkTreeView::vertical_separator		= 2
 }
 
-style "nautilus-view"
+style "marlin-view"
 {
 	xthickness		= 0
 	ythickness		= 0
 }
 
-style "nautilus-handle"
-{
-	GtkPaned::handle-size         = 2
-	
-	engine "pixmap"
-	{
-		image # for the thin gray line separating the sidepane and viewpane
-		{
-		    function		= HANDLE
-		    recolorable		= TRUE
-		    file		= "/Sidebar/handle.png"
-		    stretch		= TRUE
-		    border 		= { 0, 0, 0, 0 }
-		}
-	}
-}
-
-style "nautilus-scale"
+style "marlin-scale"
 {
 	ythickness = 0
 
@@ -58,7 +41,7 @@ style "nautilus-scale"
 }
 
 
-style "nautilus-mode-button"
+style "marlin-mode-button"
 {
 
 	engine "pixmap"
@@ -68,7 +51,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= PRELIGHT
-			file				= "/nautilus/mode_prelight.png"
+			file				= "/marlin/mode_prelight.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -78,7 +61,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= NORMAL
-			file				= "/nautilus/mode_normal.png"
+			file				= "/marlin/mode_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -88,7 +71,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= ACTIVE
-			file				= "/nautilus/mode_pressed.png"
+			file				= "/marlin/mode_pressed.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}  
@@ -98,7 +81,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= INSENSITIVE
-			file				= "/nautilus/mode_normal.png"
+			file				= "/marlin/mode_normal.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		} 
@@ -108,7 +91,7 @@ style "nautilus-mode-button"
 			function        	= BOX
 			recolorable     	= TRUE
 			state				= SELECTED
-			file				= "/nautilus/mode_pressed.png"
+			file				= "/marlin/mode_pressed.png"
 			border				= { 3, 13, 3, 3 }
 			stretch         	= TRUE
 		}
@@ -116,15 +99,15 @@ style "nautilus-mode-button"
 
 }
 
-#widget		"*Marlin"	style "marlin-window-base"
-#widget		"*Nautilus*Splitter"		style "nautilus-handle"
-#widget_class	"*Marlin*View*"		style "nautilus-view"
-#widget_class	"*Nautilus*NautilusSidePane*"	style "nautilus-sidebar"
-#widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
-#widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
+#widget		"*Marlin"			style "marlin-window-base"
+#widget		"*Marlin*HPaned"		style "pixmap-sidebar-handle-left"
+#widget_class	"*Marlin*View*"			style "marlin-view"
+#widget_class	"*Marlin*marlinSidePane*"	style "marlin-sidebar"
+#widget_class	"*Marlin*Statusbar*"		style "marlin-statusbar"
+#widget_class	"*Marlin*Scale*"		style "marlin-scale"
 
-#widget_class	"*Nautilus*Notebook"		style "nautilus-notebook"
+#widget_class	"*Marlin*Notebook"		style "marlin-notebook"
 
-#widget		"*GtkModeButton*"		style "nautilus-mode-button"
+#widget		"*GtkModeButton*"		style "marlin-mode-button"
 
-#widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
+#widget "*.marlin-extra-view-widget" 		style : highest "marlin-extra-view"
