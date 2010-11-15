@@ -2,13 +2,13 @@
 # Author:		Daniel Foré <Daniel.P.Fore@gmail.com>
 # License:		GPL
 
-gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#A9C3D9\nbase_color:#FFFFFF"	# Background, base
-gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFFFFF\ntext_color:#4D4D4D"	# Foreground, text
-gtk_color_scheme 	= "sidebar_color:#e2e2e2"						# Sidebar
+gtk_color_scheme	= "bg_color:#D9D9D9\nselected_bg_color:#A9C3D9\nbase_color:#FFF"	# Background, base
+gtk_color_scheme	= "fg_color:#4D4D4D\nselected_fg_color:#FFF\ntext_color:#4D4D4D"	# Foreground, text
+gtk_color_scheme 	= "sidebar_color:#E2E2E2"						# Custom colors
 gtk_color_scheme	= "tooltip_bg_color:#000\ntooltip_fg_color:#FFF" 			# Tooltips
-gtk_color_scheme	= "link_color:#08c"							# Hyperlinks
+gtk_color_scheme	= "link_color:#08C"							# Hyperlinks
 gtk_color_scheme	= "frame_color:#D1D1D1\ninactive_frame_color:#D1D1D1"			# Fix for Chrome
-gtk_color_scheme	= "bg_color_dark:#383838\ntext_color_dark:#FFFFFF"			# Dark colors
+gtk_color_scheme	= "bg_color_dark:#383838\ntext_color_dark:#FFF"				# Dark colors
 
 gtk-icon-sizes		= "gtk-button=16,16"							# Set icon size for button without text
 gtk-button-images	= 0									# Disables icons for buttons with text
@@ -482,6 +482,23 @@ style "pixmap-vpaned"
 	}
 }
 
+style "pixmap-hpaned"
+{
+	GtkPaned::handle_size			= 8
+
+	engine "pixmap"
+	{	
+		image
+		{
+			file			= "Handle/pane-horiz.png"
+			function		= HANDLE
+			overlay_file		= "Handle/dimple.png"
+			overlay_stretch		= FALSE
+			stretch         	= TRUE
+		}
+	}
+}
+
 style "sidebar"
 {
 
@@ -520,7 +537,8 @@ class "GtkScrollbar"   				style "murrine-scrollbar"
 class "GtkVScrollbar"  				style "murrine-scrollbar"
 class "GtkHScrollbar"  				style "murrine-scrollbar"
 
-class "GtkVPaned"				style "pixmap-vpaned"
+#class "GtkHPaned"				style "pixmap-hpaned"
+#class "GtkVPaned"				style "pixmap-vpaned"
 
 widget "xfwm4-tabwin*"				style "murrine-xfwm4-tabwin"
 
@@ -552,9 +570,6 @@ widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
 widget_class "*<GtkRadioButton>*" 		style "aurora-default"
 
 widget_class "*<GtkCheckButton>*" 		style "aurora-default"
-
-
-
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
@@ -642,7 +657,6 @@ include "Apps/midori.rc"
 include "Apps/nautilus.rc"
 include "Apps/panel.rc"
 include "Apps/postler.rc"
-#include "Apps/rhythmbox.rc"
 include "Apps/steadyflow.rc"
 include "Apps/totem.rc"
 

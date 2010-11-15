@@ -21,6 +21,7 @@ style "postler-treeview" = "murrine-default"
 
 widget_class	"*Postler*HPaned"			style "pixmap-sidebar-handle-left"
 widget_class	"*Postler*HPaned*PostlerFolders"	style "sidebar"
+widget_class	"*Postler*GtkVPaned"			style "pixmap-vpaned"
 widget_class	"*Postler*VPaned*Toolbar"		style "murrine-treeview-header"
 widget_class	"*Postler*VPaned*Toolbar*Button"	style "postler-filterbar-button"
 widget_class	"*Postler*.<GtkTreeView>*"		style "postler-treeview"
