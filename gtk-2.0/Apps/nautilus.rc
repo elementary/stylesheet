@@ -187,17 +187,18 @@ style "nautilus-right-slider"
 	}
 }
 
-widget		"*NautilusNavigationWindow"	style "nautilus-window-base"
-widget		"*Nautilus*Splitter"		style "pixmap-sidebar-handle-left"
-widget_class	"*Nautilus*View"		style "murrine-thin"
-widget_class	"*Nautilus*NautilusSidePane*"	style "nautilus-sidebar"
-widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
-widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
+widget		"*NautilusNavigationWindow"		style "nautilus-window-base"
+widget		"*Nautilus*Splitter"			style "pixmap-sidebar-handle-left"
+widget_class	"*Nautilus*View"			style "murrine-thin"
+widget_class	"*Nautilus*NautilusSidePane*"		style "nautilus-sidebar"
+widget_class	"*Nautilus*NautilusSidePane*Scrolled*"	style "murrine-scrollbar-sidebar"
+widget_class	"*Nautilus*Statusbar*"			style "nautilus-statusbar"
+widget_class	"*Nautilus*Scale*"			style "nautilus-scale"
 
-widget_class	"*Nautilus*Notebook"		style "murrine-thin"
+widget_class	"*Nautilus*Notebook"			style "murrine-thin"
 
-widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
+widget "*.nautilus-extra-view-widget" 			style : highest "nautilus-extra-view"
 
-widget_class "*NautilusPathBar.*ToggleButton*" style "nautilus-breadcrumbs" 
-widget "Nautilus*left_slider*" style "nautilus-left-slider" 
-widget "Nautilus*right_slider*" style "nautilus-right-slider"
+widget_class "*NautilusPathBar.*ToggleButton*"		style "nautilus-breadcrumbs" 
+widget "Nautilus*left_slider*"				style "nautilus-left-slider" 
+widget "Nautilus*right_slider*"				style "nautilus-right-slider"

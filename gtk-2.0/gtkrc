@@ -383,6 +383,15 @@ style "murrine-scrollbar-dark" = "murrine-scrollbar"
 	}
 }
 
+style "murrine-scrollbar-sidebar" = "murrine-scrollbar"
+{	
+
+	engine "murrine" {
+		trough_shades	        	= { 1.02, 1.02}
+		border_shades			= { 1.3, 1.3}
+	}
+}
+
 style "murrine-tasklist" = "murrine-wide" {}
 
 style "murrine-toolbar" = "murrine-default"
@@ -706,7 +715,7 @@ widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 # Per-App Styles
 ##################################
 
-include "Apps/banshee.rc"
+#include "Apps/banshee.rc"
 include "Apps/eog.rc"
 include "Apps/gedit.rc"
 include "Apps/gnome-terminal.rc"
