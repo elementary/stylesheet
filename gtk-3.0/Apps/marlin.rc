@@ -40,65 +40,6 @@ style "marlin-scale"
   }
 }
 
-
-style "marlin-mode-button"
-{
-
-	engine "pixmap"
-	{	
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= PRELIGHT
-			file				= "/marlin/mode_prelight.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	  
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= NORMAL
-			file				= "/marlin/mode_normal.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= ACTIVE
-			file				= "/marlin/mode_pressed.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}  
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= INSENSITIVE
-			file				= "/marlin/mode_normal.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		} 
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= SELECTED
-			file				= "/marlin/mode_pressed.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	}
-
-}
-
 #widget		"*Marlin"			style "marlin-window-base"
 #widget		"*Marlin*HPaned"		style "pixmap-sidebar-handle-left"
 #widget_class	"*Marlin*View*"			style "marlin-view"
@@ -107,7 +48,5 @@ style "marlin-mode-button"
 #widget_class	"*Marlin*Scale*"		style "marlin-scale"
 
 #widget_class	"*Marlin*Notebook"		style "marlin-notebook"
-
-#widget		"*GtkModeButton*"		style "marlin-mode-button"
 
 #widget "*.marlin-extra-view-widget" 		style : highest "marlin-extra-view"

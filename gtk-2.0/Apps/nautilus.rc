@@ -90,65 +90,6 @@ style "nautilus-scale"
   }
 }
 
-
-style "nautilus-mode-button"
-{
-
-	engine "pixmap"
-	{	
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= PRELIGHT
-			file				= "/nautilus/mode_prelight.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	  
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= NORMAL
-			file				= "/nautilus/mode_normal.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= ACTIVE
-			file				= "/nautilus/mode_pressed.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}  
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= INSENSITIVE
-			file				= "/nautilus/mode_normal.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		} 
-
-		image
-		{
-			function        	= BOX
-			recolorable     	= TRUE
-			state				= SELECTED
-			file				= "/nautilus/mode_pressed.png"
-			border				= { 3, 13, 3, 3 }
-			stretch         	= TRUE
-		}
-	}
-
-}
-
 style "nautilus-breadcrumbs"
 {
 	xthickness = 6
@@ -254,8 +195,6 @@ widget_class	"*Nautilus*Statusbar*"		style "nautilus-statusbar"
 widget_class	"*Nautilus*Scale*"		style "nautilus-scale"
 
 widget_class	"*Nautilus*Notebook"		style "murrine-thin"
-
-widget		"*GtkModeButton*"		style "nautilus-mode-button"
 
 widget "*.nautilus-extra-view-widget" 		style : highest "nautilus-extra-view"
 

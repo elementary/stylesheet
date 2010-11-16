@@ -448,6 +448,64 @@ style "notebook-close"
 	stock["gtk-close"]			= {{ "Icons/close.png", *, *, * }}
 }
 
+style "pixmap-mode-button"
+{
+
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "/Button/mode_prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "/Button/mode_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "/Button/mode_pressed.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "/Button/mode_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "/Button/mode_pressed.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	}
+
+}
+
 style "pixmap-sidebar-handle-left"
 {
 	GtkPaned::handle-size         = 2
@@ -518,7 +576,8 @@ style "sidebar"
 
 class "GtkWidget"    				style "murrine-default"
 
-class "GtkToolbar"   				style "murrine-toolbar" 
+class "GtkToolbar"   				style "murrine-toolbar"
+class "GtkHandleBox"				style "murrine-toolbar"
 class "GtkRange"     				style "murrine-wide"
 class "GtkFrame"     				style "murrine-wide"
 class "GtkSeparator" 				style "murrine-wide"
@@ -537,9 +596,7 @@ class "GtkScrollbar"   				style "murrine-scrollbar"
 class "GtkVScrollbar"  				style "murrine-scrollbar"
 class "GtkHScrollbar"  				style "murrine-scrollbar"
 
-#class "GtkHPaned"				style "pixmap-hpaned"
-#class "GtkVPaned"				style "pixmap-vpaned"
-
+widget "*ModeButton*"				style "pixmap-mode-button"
 widget "xfwm4-tabwin*"				style "murrine-xfwm4-tabwin"
 
 widget_class "*<GtkNotebook>*<GtkEventBox>"     style "murrine-notebook"
