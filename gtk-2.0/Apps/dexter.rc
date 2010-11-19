@@ -1,3 +1,4 @@
+style "dexter-column" { ythickness = 0 xthickness = 0 }
 
-widget_class	"*DexterWindow*Scrolled*"			style "murrine-thin"
+widget_class	"*DexterWindow*Scrolled*"			style "dexter-column"
 widget_class	"*DexterWindow*HPaned"				style "pixmap-hpaned"
