@@ -1,8 +1,6 @@
 
-style "elementary-panel"
+style "elementary-panel" = "murrine-thin"
 {
-	xthickness		= 1
-	ythickness		= 0
 
 	bg_pixmap[NORMAL]	= "/Panel/panel.png" # Disable for normal panel backgrounds.
 

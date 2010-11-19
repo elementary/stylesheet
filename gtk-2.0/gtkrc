@@ -715,7 +715,7 @@ widget_class "*<GtkCList>" 				style "murrine-fg-is-text-color-workaround"
 # Per-App Styles
 ##################################
 
-#include "Apps/banshee.rc"
+include "Apps/dexter.rc"
 include "Apps/eog.rc"
 include "Apps/gedit.rc"
 include "Apps/gnome-terminal.rc"
