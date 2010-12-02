@@ -94,7 +94,7 @@ style "murrine-default"
 	fg[PRELIGHT]		= @fg_color
 	fg[SELECTED]		= @selected_fg_color
 	fg[ACTIVE]		= @fg_color
-	fg[INSENSITIVE]		= darker (@bg_color)
+	fg[INSENSITIVE]		= shade(0.5, @bg_color)
 
 	text[NORMAL]		= @text_color
 	text[PRELIGHT]		= @text_color
