@@ -1,7 +1,4 @@
-style "dexter-column" { ythickness = 0 xthickness = 0 }
-style "dexter-window-base" { bg[NORMAL]	= @base_color }
-
-style "dexter-statusbar"# = "dexter-window-base"
+style "dexter-statusbar"
 {
 	engine "murrine" {
 		gradient_shades = {1.0,1.0,1.0,1.0}
@@ -9,8 +6,6 @@ style "dexter-statusbar"# = "dexter-window-base"
 	}	
 }
 
-#widget_class	"*DexterWindow"					style "dexter-window-base"
-widget_class	"*DexterWindow*HPaned"				style "pixmap-hpaned"
-widget_class	"*DexterWindow*Scrolled*"			style "dexter-column"
-widget_class	"*DexterWindow*Statusbar*"			style "dexter-statusbar"
+widget_class	"*Dexter*HPaned"			style "pixmap-hpaned"
+widget_class	"*Dexter*Statusbar*"			style "dexter-statusbar"
 
