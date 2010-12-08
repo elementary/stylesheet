@@ -423,6 +423,7 @@ style "murrine-treeview"
 {		
 	engine "murrine" {
 		gradient_shades			= {1.00,1.00,1.00,1.00}
+		separatorstyle			= 0
 	}
 }
 
