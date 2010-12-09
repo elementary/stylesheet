@@ -5,7 +5,6 @@ style "gedit-frame"
  		image
 		{
 			function = SHADOW
-                	file = ""
 		}
 	}
 }
