@@ -607,6 +607,11 @@ class "GtkVScrollbar"  				style "murrine-scrollbar"
 class "GtkHScrollbar"  				style "murrine-scrollbar"
 
 widget "*ModeButton*"				style "pixmap-mode-button"
+
+widget "*SidebarHandleLeft"			style "pixmap-sidebar-handle-left"
+widget "*SidebarScrolled*"			style "murrine-scrollbar-sidebar"
+widget "*SidebarContent"			style "sidebar"
+
 widget "xfwm4-tabwin*"				style "murrine-xfwm4-tabwin"
 
 widget_class "*<GtkNotebook>*<GtkEventBox>"     style "murrine-notebook"
