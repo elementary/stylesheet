@@ -42,7 +42,7 @@ style "marlin-scale"
 
 #widget		"*Marlin"			style "marlin-window-base"
 widget_class	"*Marlin*HPaned"		style "pixmap-hpaned"
-#widget_class	"*Marlin*marlinSidePane*"	style "marlin-sidebar"
+widget_class	"*Marlin*Side*"			style "marlin-sidebar"
 #widget_class	"*Marlin*Statusbar*"		style "marlin-statusbar"
 #widget_class	"*Marlin*Scale*"		style "marlin-scale"
 

@@ -1,11 +1,2 @@
-style "dexter-statusbar"
-{
-	engine "murrine" {
-		gradient_shades = {1.0,1.0,1.0,1.0}
-		contrast = 0.1
-	}	
-}
-
 widget_class	"*Dexter*HPaned"			style "pixmap-hpaned"
-widget_class	"*Dexter*Statusbar*"			style "dexter-statusbar"
 
