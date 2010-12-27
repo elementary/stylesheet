@@ -51,6 +51,9 @@ style "murrine-menu-calendar" = "murrine-thin"
 
 style "murrine-menu-entry" = "murrine-thin"
 {
+
+	ythickness				= 3
+
 	base[NORMAL]				= "#BBBBBB"
 	base[ACTIVE]				= "#BBBBBB"
 
