@@ -17,8 +17,8 @@
 	<distance name="right_titlebar_edge" value="6"/>
 	<aspect_ratio name="button" value="1.0"/>
 	<distance name="title_vertical_pad" value="0"/>
-	<border name="title_border" left="2" right="2" top="5" bottom="2"/>
-	<border name="button_border" left="2" right="2" top="3" bottom="0"/>
+	<border name="title_border" left="2" right="2" top="7" bottom="0"/>
+	<border name="button_border" left="2" right="2" top="5" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="shaded" parent="normal" rounded_top_left="true" rounded_top_right="true" rounded_bottom_left="false" rounded_bottom_right="false"/>
@@ -135,13 +135,13 @@
 
 <!-- ::: TITLES ::: -->
 <draw_ops name="title">
-	<title color="shade/gtk:bg[NORMAL]/1.30" x="(width-title_width)/2 - 36" y="1 `max` ((height-title_height)/2)+1"/>
-	<title color="shade/gtk:bg[NORMAL]/0.50" x="(width-title_width)/2 - 36" y="0 `max` ((height-title_height)/2)"/>
+	<title color="shade/gtk:bg[NORMAL]/1.30" x="((width - title_width) / 2) -36 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/0.50" x="((width - title_width) / 2) -36 `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="shade/gtk:bg[NORMAL]/1.15" x="(width-title_width)/2 - 36" y="1 `max` ((height-title_height)/2)+1"/>
-	<title color="shade/gtk:bg[NORMAL]/0.70" x="(width-title_width)/2 - 36" y="0 `max` ((height-title_height)/2)"/>
+	<title color="shade/gtk:bg[NORMAL]/1.15" x="((width - title_width) / 2) -36 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/0.70" x="((width - title_width) / 2) -36 `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <!-- menu icon -->
