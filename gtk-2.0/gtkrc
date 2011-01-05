@@ -539,11 +539,21 @@ style "pixmap-vpaned"
 	{	
 		image
 		{
+			file			= "Handle/pane-horiz.png"
+			function		= HANDLE
+			overlay_file		= "Handle/dimple.png"
+			overlay_stretch		= FALSE
+			stretch         	= TRUE
+			orientation		= VERTICAL
+		}
+		image
+		{
 			file			= "Handle/pane-vert.png"
 			function		= HANDLE
 			overlay_file		= "Handle/dimple.png"
 			overlay_stretch		= FALSE
 			stretch         	= TRUE
+			orientation		= HORIZONTAL
 		}
 	}
 }
@@ -561,6 +571,16 @@ style "pixmap-hpaned"
 			overlay_file		= "Handle/dimple.png"
 			overlay_stretch		= FALSE
 			stretch         	= TRUE
+			orientation		= VERTICAL
+		}
+		image
+		{
+			file			= "Handle/pane-vert.png"
+			function		= HANDLE
+			overlay_file		= "Handle/dimple.png"
+			overlay_stretch		= FALSE
+			stretch         	= TRUE
+			orientation		= HORIZONTAL
 		}
 	}
 }
