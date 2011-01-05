@@ -5,7 +5,8 @@ style "postler-filterbar-button" = "murrine-button"
 }
 
 style "postler-treeview" = "murrine-default"
-{
+{	
+
 	base[ACTIVE]		= @bg_color
 	base[SELECTED]		= @bg_color
 	text[ACTIVE]		= shade (1.35, @text_color)
@@ -19,7 +20,14 @@ style "postler-treeview" = "murrine-default"
 	}
 }
 
-widget_class	"*Postler*GtkVPaned"				style "pixmap-vpaned"
+style "postler-messages" = "postler-treeview"
+{	
+
+	GtkTreeView::vertical-separator	= 12
+}
+
+widget_class	"*Postler*GtkVPaned"			style "pixmap-vpaned"
 widget_class	"*Postler*VPaned*Toolbar"			style "murrine-treeview-header"
 widget_class	"*Postler*VPaned*Toolbar*Button"		style "postler-filterbar-button"
 widget_class	"*Postler*.<GtkTreeView>*"			style "postler-treeview"
+widget_class	"*Postler*PostlerMessages*"		style "postler-messages"
