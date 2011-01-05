@@ -1,16 +1,16 @@
 
 style "postler-filterbar-button" = "murrine-button"
 {
-	bg[ACTIVE]        = shade (0.9, @bg_color)
+	bg[ACTIVE]      			  = shade (0.9, @bg_color)
 }
 
 style "postler-treeview" = "murrine-default"
 {	
 
-	base[ACTIVE]		= @bg_color
-	base[SELECTED]		= @bg_color
-	text[ACTIVE]		= shade (1.35, @text_color)
-	text[SELECTED]		= shade (1.35, @text_color)
+	base[ACTIVE]				= @bg_color
+	base[SELECTED]				= @bg_color
+	text[ACTIVE]				= shade (1.35, @text_color)
+	text[SELECTED]				= shade (1.35, @text_color)
 
 	engine "murrine"
 	{
@@ -24,6 +24,8 @@ style "postler-messages" = "postler-treeview"
 {	
 
 	GtkTreeView::vertical-separator	= 12
+
+	GtkTreeView::odd_row_color		= shade (0.95, @base_color)
 }
 
 widget_class	"*Postler*GtkVPaned"			style "pixmap-vpaned"
