@@ -392,6 +392,25 @@ style "murrine-scrollbar-sidebar" = "murrine-scrollbar"
 
 style "murrine-tasklist" = "murrine-wide" {}
 
+style "murrine-toggleswitch" = "murrine-wider"
+{
+	ythickness				= 4
+
+	bg[ACTIVE]				= shade (0.80, @bg_color)
+	bg[NORMAL]				= shade (1.15, @bg_color)
+	bg[PRELIGHT]				= shade (1.13, @selected_bg_color)
+	bg[SELECTED]				= shade (0.75, @selected_bg_color)
+	bg[INSENSITIVE]				= shade (0.98, @bg_color)
+	
+	engine "murrine" {
+		border_shades 			= {1.1, 0.9}
+		contrast			= 1.25
+		gradient_shades     		= {0.90,0.99,1.00,1.10}
+		lightborderstyle		= 1
+		textstyle			= 1
+	}
+}
+
 style "murrine-toolbar" = "murrine-default"
 {
 	engine "murrine" {
@@ -625,6 +644,7 @@ class "GtkVScrollbar"  				style "murrine-scrollbar"
 class "GtkHScrollbar"  				style "murrine-scrollbar"
 
 widget "*ModeButton*"				style "pixmap-mode-button"
+widget "*ToggleSwitch*"				style "murrine-toggleswitch"
 
 widget "*SidebarHandleLeft"			style "pixmap-sidebar-handle-left"
 widget "*SidebarScrolled*"			style "murrine-scrollbar-sidebar"
