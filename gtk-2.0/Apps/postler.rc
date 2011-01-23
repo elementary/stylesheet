@@ -30,7 +30,12 @@ style "postler-messages" = "postler-treeview"
 
 style "postler-compose-scrolled"
 {
-	xthickness = 0
+	xthickness 	= 0
+
+	engine "murrine" 
+	{
+		contrast	= 0.8
+	}
 }
 
 style "postler-compose-toolbar" = "murrine-toolbar"
@@ -39,6 +44,7 @@ style "postler-compose-toolbar" = "murrine-toolbar"
 	engine "murrine" 
 	{
 		lightborder_shade	= 1.18	
+		contrast		= 0.6
 	}
 }
 
