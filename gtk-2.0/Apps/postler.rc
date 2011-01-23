@@ -28,8 +28,24 @@ style "postler-messages" = "postler-treeview"
 	GtkTreeView::odd_row_color		= shade (0.95, @base_color)
 }
 
-widget_class	"*Postler*GtkVPaned"			style "pixmap-vpaned"
+style "postler-compose-scrolled"
+{
+	xthickness = 0
+}
+
+style "postler-compose-toolbar" = "murrine-toolbar"
+{
+
+	engine "murrine" 
+	{
+		lightborder_shade	= 1.18	
+	}
+}
+
+widget_class	"*Postler*GtkVPaned"				style "pixmap-vpaned"
 widget_class	"*Postler*VPaned*Toolbar"			style "murrine-treeview-header"
 widget_class	"*Postler*VPaned*Toolbar*Button"		style "postler-filterbar-button"
 widget_class	"*Postler*.<GtkTreeView>*"			style "postler-treeview"
-widget_class	"*Postler*PostlerMessages*"		style "postler-messages"
+widget_class	"*Postler*PostlerMessages*"			style "postler-messages"
+widget_class	"*PostlerComposer*Scrolled*"			style "postler-compose-scrolled"
+widget_class	"*PostlerComposer*Toolbar"			style "postler-compose-toolbar"
