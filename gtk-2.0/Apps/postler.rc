@@ -43,8 +43,9 @@ style "postler-compose-toolbar" = "murrine-toolbar"
 
 	engine "murrine" 
 	{
-		lightborder_shade	= 1.18	
-		contrast		= 0.6
+		lightborder_shade	= 1.22	
+		contrast		= 0.6	
+		gradient_shades     		= {1.0,0.93,0.93,0.86}	
 	}
 }
 
