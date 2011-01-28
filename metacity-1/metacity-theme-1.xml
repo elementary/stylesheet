@@ -168,13 +168,6 @@
 		height="object_height"
 		colorize="shade/gtk:bg[SELECTED]/0.85"/>
 </draw_ops>
-<draw_ops name="menu_button_unfocused">
-	<image filename="menu-focus-none.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
-</draw_ops>
 
 
 <!-- close icon -->
@@ -202,14 +195,6 @@
 		width="object_width"
 		height="object_height"
 		colorize="shade/gtk:bg[SELECTED]/0.85"/>
-</draw_ops>
-
-<draw_ops name="close_button_unfocused">
-	<image filename="close-focus-none.svg"
-		x="(width - object_width) / 2"
-		y="(height - object_height) / 2"
-		width="object_width"
-		height="object_height"/>
 </draw_ops>
 
 <!-- maximize icon -->
@@ -271,25 +256,6 @@
 		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
 </draw_ops>
 
-<draw_ops name="maximize_button_unfocused">
-	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
-		<color value="shade/gtk:bg[NORMAL]/0.80" />
-		<color value="shade/gtk:bg[NORMAL]/0.85" />
-	</gradient>
-	<line 
-		color="shade/gtk:bg[NORMAL]/1.10" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
-	<gradient type="vertical" x="(width - 8) / 2 +3" y="(height - 2) / 2 -2" width="2" height="8">
-		<color value="shade/gtk:bg[NORMAL]/0.70" />
-		<color value="shade/gtk:bg[NORMAL]/0.98" />
-	</gradient>
-	<line 
-		color="shade/gtk:bg[NORMAL]/1.10" 
-		x1="(width - 8) / 2 +3" x2="(width - 8) / 2 + 4"  
-		y1="(height - 2) / 2 + 6" y2="(height - 2) / 2 + 6"/>
-</draw_ops>
-
 <!-- minimize icon -->
 
 <draw_ops name="minimize_button_normal">
@@ -326,15 +292,7 @@
 		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
 </draw_ops>
 
-<draw_ops name="minimize_button_unfocused">
-	<gradient type="vertical" x="(width - 8) / 2" y="(height - 2) / 2 + 1" width="8" height="2">
-		<color value="shade/gtk:bg[NORMAL]/0.85" />
-		<color value="shade/gtk:bg[NORMAL]/0.90" />
-	</gradient>
-	<line 
-		color="shade/gtk:bg[NORMAL]/1.10" 
-		x1="(width - 8) / 2" x2="(width - 8) / 2 + 7"  
-		y1="(height - 2) / 2 + 3" y2="(height - 2) / 2 + 3"/>
+<draw_ops name="button_unfocused">
 </draw_ops>
 
 <draw_ops name="blank">
@@ -345,16 +303,16 @@
 <frame_style name="normal" geometry="normal">
 	<piece position="entire_background" draw_ops="round_titlebar"/>
 	<piece position="title" draw_ops="title_unfocused"/>
-	<button function="close" state="normal" draw_ops="close_button_unfocused"/>
+	<button function="close" state="normal" draw_ops="button_unfocused"/>
 	<button function="close" state="pressed" draw_ops="close_button_pressed"/>
 	<button function="close" state="prelight" draw_ops="close_button_prelight"/>
-	<button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
+	<button function="maximize" state="normal" draw_ops="button_unfocused"/>
 	<button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
 	<button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
-	<button function="minimize" state="normal" draw_ops="minimize_button_unfocused"/>
+	<button function="minimize" state="normal" draw_ops="button_unfocused"/>
 	<button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
 	<button function="minimize" state="prelight" draw_ops="minimize_button_prelight"/>
-	<button function="menu" state="normal" draw_ops="menu_button_unfocused"/>
+	<button function="menu" state="normal" draw_ops="button_unfocused"/>
 	<button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
 	<button function="menu" state="prelight" draw_ops="menu_button_prelight"/>
 </frame_style>
@@ -386,7 +344,7 @@
 
 <frame_style name="normal_maximized" geometry="normal_maximized" parent="normal">
 	<piece position="entire_background" draw_ops="titlebar_maximized"/>
-	<button function="maximize" state="normal" draw_ops="maximize_button_unfocused"/>
+	<button function="maximize" state="normal" draw_ops="button_unfocused"/>
 	<button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
 	<button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
 </frame_style>
@@ -454,10 +412,10 @@
 <window type="utility" style_set="utility"/>
 <window type="border" style_set="border"/>
 
-<menu_icon function="close" state="normal" draw_ops="close_button_icon_unfocused"/>
-<menu_icon function="maximize" state="normal" draw_ops="maximize_button_icon_unfocused"/>
-<menu_icon function="unmaximize" state="normal" draw_ops="maximize_button_icon_unfocused"/>
-<menu_icon function="minimize" state="normal" draw_ops="minimize_button_icon_unfocused"/>
+<menu_icon function="close" state="normal" draw_ops="close_button_normal"/>
+<menu_icon function="maximize" state="normal" draw_ops="maximize_button_normal"/>
+<menu_icon function="unmaximize" state="normal" draw_ops="maximize_button_normal"/>
+<menu_icon function="minimize" state="normal" draw_ops="minimize_button_normal"/>
 
 </metacity_theme>
 
