@@ -1,17 +1,18 @@
 # Author: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
+# Modified by: Marcelo Aguero <marceloaguero@gmail.com>
 # Author of original metacity theme: elementart Art Team
-# A pleasant theme built to adapt to many color schemes as well as be optimal for both high and low resolution displays.
+# elementary theme for xfwm4 using GTK color pickup.
 # License: GPL
-# Date: October 2010
+# Date: January 2011
 
-active_text_color=#727272
+active_text_color=#6f6f6f
 active_text_shadow_color=#efefef
-inactive_text_color=#969696
+inactive_text_color=#9c9c9c
 inactive_text_shadow_color=#f7f7f7
 title_shadow_active=true
 title_shadow_inactive=true
 full_width_title=true
-title_vertical_offset_active=2
-title_vertical_offset_inactive=2
-button_offset=5
-button_spacing=3
+title_vertical_offset_active=1
+title_vertical_offset_inactive=1
+button_offset=3
+button_spacing=1

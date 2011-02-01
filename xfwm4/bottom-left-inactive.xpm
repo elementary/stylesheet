@@ -2,7 +2,7 @@
 static char * bottom_left_active_xpm[] = {
 "2 2 3 1",
 " 	c None",
-".	c #8D8D8D",
-"+	c #D9D9D9",
+".	c #939393",
+"+	c #DEDEDE s active_color_2",
 ".+",
 ".."};
