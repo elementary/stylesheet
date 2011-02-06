@@ -1,2 +1,2 @@
-widget_class	"*Dexter*HPaned"			style "pixmap-hpaned"
+#widget_class	"*Dexter*HPaned"			style "pixmap-hpaned"
 
