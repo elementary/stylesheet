@@ -4,11 +4,6 @@ style "midori-main"
 	bg_pixmap[NORMAL]		= "/midori/base.png"	
 }
 
-style "midori-entry"
-{
-	ythickness			= 4
-}
-
 style "midori-notebook" = "murrine-notebook"
 {
 
@@ -45,7 +40,6 @@ style "midori-sidebar-search" {
 }
 
 widget		"MidoriBrowser"								style "midori-main"
-widget		"MidoriBrowser.GtkVBox*GtkEntry"					style "midori-entry"
 widget		"MidoriBrowser*GtkNotebook"						style "midori-notebook"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned"					style "pixmap-sidebar-handle-left"
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "midori-sidebar-toolbar"

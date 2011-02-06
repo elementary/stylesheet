@@ -136,9 +136,10 @@ style "murrine-default"
 	}
 }
 
-style "murrine-thin"	=	"murrine-default"	{ xthickness = 0 ythickness = 0 }
-style "murrine-wide"	=	"murrine-default"	{ xthickness = 2 ythickness = 2 }
-style "murrine-wider"	=	"murrine-default"	{ xthickness = 3 ythickness = 3 }
+style "murrine-thin"    =   "murrine-default"   { xthickness = 0 ythickness = 0 }
+style "murrine-wide"    =   "murrine-default"   { xthickness = 2 ythickness = 2 }
+style "murrine-wider"   =   "murrine-default"   { xthickness = 3 ythickness = 3 }
+style "murrine-widest"  =   "murrine-default"   { xthickness = 4 ythickness = 4 }
 
 style "murrine-dark"	=	"murrine-default"
 {
@@ -170,44 +171,12 @@ style "murrine-thin-dark"	=	"murrine-dark"	{ xthickness = 0 ythickness = 0 }
 style "murrine-wide-dark"	=	"murrine-dark"	{ xthickness = 2 ythickness = 2 }
 style "murrine-wider-dark"	=	"murrine-dark"	{ xthickness = 3 ythickness = 3 }
 
-style "aurora-default" {	
-
-	bg[ACTIVE]				= shade (0.78, @bg_color)
-	bg[NORMAL]				= shade (1.15, @bg_color)
-	bg[PRELIGHT]				= shade (1.13, @selected_bg_color)
-	bg[SELECTED]				= shade (0.90, @selected_bg_color)
-	bg[INSENSITIVE]				= shade (0.98, @bg_color)
-
-	engine "aurora" { 		
-		curvature			= 2.0
-		old_arrowstyle			= FALSE
-	}
-}
-
 ###################
 ## Widget Styles ##
 ###################
 
-style "aurora-entry"
+style "murrine-button" = "murrine-widest"
 {
-	ythickness				= 3
-	xthickness				= 4
-	engine "aurora" { 		
-		curvature			= 2.0
-		old_arrowstyle			= FALSE
-	}
-}
-
-style "aurora-statusbar"
-{
-	ythickness				= 0
-	engine "aurora" {}
-}
-
-style "murrine-button" = "murrine-wider"
-{
-	ythickness				= 4
-
 	bg[ACTIVE]				= shade (0.80, @bg_color)
 	bg[NORMAL]				= shade (1.15, @bg_color)
 	bg[PRELIGHT]				= shade (1.13, @selected_bg_color)
@@ -243,7 +212,7 @@ style "murrine-button-content" = "murrine-wider"
 	}
 }
 
-style "murrine-button-dark" = "murrine-wider"
+style "murrine-button-dark" = "murrine-widest"
 {
 
 	bg[ACTIVE]				= shade (0.80, @bg_color_dark)
@@ -260,26 +229,49 @@ style "murrine-button-dark" = "murrine-wider"
 	}
 }
 
-style "murrine-entry" = "murrine-wider"
+style "murrine-comboboxentry" = "murrine-wider"
 {
-	xthickness 				= 4
+
+    ythickness                      = 4
+
+	bg[ACTIVE]                      = shade (0.80, @bg_color)
+	bg[NORMAL]                      = shade (1.15, @bg_color)
+	bg[PRELIGHT]				    = shade (1.13, @selected_bg_color)
+	bg[INSENSITIVE]				    = shade (0.98, @bg_color)
+	
+	engine "murrine" {
+		lightborderstyle            = 1
+	}
+}
+
+style "murrine-combo" = "murrine-comboboxentry"
+{
+
+	engine "murrine" {
+		gradient_shades     		= {1.10,1.0,0.99,0.90}
+	}
+}
+
+style "murrine-entry" = "murrine-widest"
+{
+
 	GtkWidget	::focus-line-width	= 1
 	GtkWidget	::focus-padding		= 1
 
-	bg[ACTIVE]				= shade (0.78, @bg_color)
-	bg[NORMAL]				= shade (2.20, @bg_color)
-	bg[PRELIGHT]				= shade (1.18, @selected_bg_color)
-	bg[SELECTED]				= shade (0.9, @selected_bg_color)
-	bg[INSENSITIVE]				= shade (0.98, @bg_color)
+	bg[ACTIVE]				        = shade (0.78, @bg_color)
+	bg[NORMAL]				        = shade (2.20, @bg_color)
+	bg[PRELIGHT]				    = shade (1.18, @selected_bg_color)
+	bg[SELECTED]				    = shade (0.9, @selected_bg_color)
+	bg[INSENSITIVE]				    = shade (0.98, @bg_color)
 	
 	engine "murrine" {
-		border_shades 			= {1.45, 1.25}	
+		border_shades 			    = {1.35, 1.15}	
 	}
 }
 
 style "murrine-frame-title"
 {
-	fg[NORMAL] 				= lighter (@fg_color)
+	fg[NORMAL] 				        = lighter (@fg_color)
 }
 
 style "murrine-menu-item" = "murrine-wider"
@@ -533,6 +525,23 @@ style "pixmap-mode-button"
 
 }
 
+
+style "pixmap-resize-grip" = "murrine-default"
+{
+	engine "pixmap"
+	{
+		image
+		{
+		    function        = RESIZE_GRIP
+		    recolorable		= TRUE
+		    overlay_file    = "/Handle/resize_grip.png"
+		    overlay_border	= {0,0,0,0 }
+		    overlay_stretch	= FALSE
+		}
+	}
+}
+
+
 style "pixmap-sidebar-handle-left"
 {
 	GtkPaned::handle-size         = 2
@@ -621,80 +630,81 @@ style "sidebar"
 ## Matching ##
 ##############
 
-class "GtkWidget"    				style "murrine-default"
+class "GtkWidget"                                style "murrine-default"
+class "GtkWindow*"                               style "pixmap-resize-grip"
 
-class "GtkToolbar"   				style "murrine-toolbar"
-class "GtkHandleBox"				style "murrine-toolbar"
-class "GtkRange"     				style "murrine-wide"
-class "GtkFrame"     				style "murrine-wide"
-class "GtkSeparator" 				style "murrine-wide"
-class "GtkEntry"     				style "aurora-entry"
-class "GtkCalendar" 				style "murrine-wide"
-class "GtkInfoBar"				style "murrine-default"
-class "GtkIconView"				style "murrine-default"
+class "GtkToolbar"                               style "murrine-toolbar"
+class "GtkHandleBox"                             style "murrine-toolbar"
+class "GtkRange"                                 style "murrine-wide"
+class "GtkFrame"                                 style "murrine-wide"
+class "GtkSeparator"                             style "murrine-wide"
+class "GtkEntry"                                 style "murrine-entry"
+class "GtkCalendar"                              style "murrine-wide"
+class "GtkInfoBar"                               style "murrine-default"
+class "GtkIconView"                              style "murrine-default"
 
-class "GtkSpinButton"  				style "aurora-default"
+class "GtkSpinButton"                            style "murrine-combo"
 
-class "GtkScale"       				style "murrine-scale"
-class "GtkVScale" 				style "murrine-scale"
-class "GtkHScale" 				style "murrine-scale"
+class "GtkScale"                                 style "murrine-scale"
+class "GtkVScale"                                style "murrine-scale"
+class "GtkHScale"                                style "murrine-scale"
 
-class "GtkScrollbar"   				style "murrine-scrollbar"
-class "GtkVScrollbar"  				style "murrine-scrollbar"
-class "GtkHScrollbar"  				style "murrine-scrollbar"
+class "GtkScrollbar"                             style "murrine-scrollbar"
+class "GtkVScrollbar"                            style "murrine-scrollbar"
+class "GtkHScrollbar"                            style "murrine-scrollbar"
 
-widget "*ModeButton*"				style "pixmap-mode-button"
-widget "*ToggleSwitch*"				style "murrine-toggleswitch"
+widget "*ModeButton*"                            style "pixmap-mode-button"
+widget "*ToggleSwitch*"	                          style "murrine-toggleswitch"
 
-widget "*SidebarHandleLeft"			style "pixmap-sidebar-handle-left"
-widget "*SidebarScrolled*"			style : highest "murrine-scrollbar-sidebar"
-widget "*SidebarContent"				style "sidebar"
+widget "*SidebarHandleLeft"	                      style "pixmap-sidebar-handle-left"
+widget "*SidebarScrolled*"                       style : highest "murrine-scrollbar-sidebar"
+widget "*SidebarContent"                         style "sidebar"
 
-widget "xfwm4-tabwin*"				style "murrine-xfwm4-tabwin"
+widget "xfwm4-tabwin*"                           style "murrine-xfwm4-tabwin"
 
 widget_class "*<GtkNotebook>*<GtkEventBox>"     style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
-widget_class "*<GtkNotebook>*<GtkLabel>"	style "murrine-notebook"
+widget_class "*<GtkNotebook>*<GtkLabel>"        style "murrine-notebook"
 
-widget_class "*<GtkButton>"      		style "murrine-button"
-widget_class "*<GtkNotebook>"    		style "murrine-notebook"
-widget_class "*<GtkStatusbar>*"  		style "aurora-statusbar"
+widget_class "*<GtkButton>"                     style "murrine-button"
+widget_class "*<GtkNotebook>"                   style "murrine-notebook"
+widget_class "*<GtkStatusbar>*"                 style "murrine-default"
 
-widget_class "*<GtkNotebook>*"    		style "notebook-close"
+widget_class "*<GtkNotebook>*"                  style "notebook-close"
 
-widget_class "*<GtkComboBoxEntry>*"		style "aurora-default"
-widget_class "*<GtkCombo>*"         		style "aurora-default"
+widget_class "*<GtkComboBoxEntry>*"             style "murrine-comboboxentry"
+widget_class "*<GtkCombo>*"                     style "murrine-combo"
 
-widget_class "*<GtkMenu>*"              	style "murrine-thin"
-widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
-widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
-widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
+widget_class "*<GtkMenu>*"                      style "murrine-thin"
+widget_class "*<GtkMenuBar>*"                   style "murrine-menubar"
+widget_class "*<GtkMenuItem>*"                  style "murrine-menu-item"
+widget_class "*<GtkMenuItem>.*.<GtkScale>"      style "murrine-scale"
 
-widget_class "*.<GtkFrame>.<GtkLabel>" 		style "murrine-frame-title"
-widget_class "*.<GtkTreeView>*"        		style "murrine-treeview"
+widget_class "*.<GtkFrame>.<GtkLabel>"          style "murrine-frame-title"
+widget_class "*.<GtkTreeView>*"                 style "murrine-treeview"
 
-widget_class "*<GtkProgress>"			style "murrine-progressbar"
-widget_class "*<GtkProgressBar>"       		style "murrine-progressbar"
+widget_class "*<GtkProgress>"                   style "murrine-progressbar"
+widget_class "*<GtkProgressBar>"                style "murrine-progressbar"
 
-widget_class "*<GtkRadioButton>*" 		style "aurora-default"
+widget_class "*<GtkRadioButton>*"               style "murrine-default"
 
-widget_class "*<GtkCheckButton>*" 		style "aurora-default"
+widget_class "*<GtkCheckButton>*"               style "murrine-default"
 
 # Treeview header
-widget_class "*.<GtkTreeView>.<GtkButton>" 	style "murrine-treeview-header"
-widget_class "*.<GtkCTree>.<GtkButton>"    	style "murrine-treeview-header"
-widget_class "*.<GtkList>.<GtkButton>"     	style "murrine-treeview-header"
-widget_class "*.<GtkCList>.<GtkButton>"    	style "murrine-treeview-header"
+widget_class "*.<GtkTreeView>.<GtkButton>"      style "murrine-treeview-header"
+widget_class "*.<GtkCTree>.<GtkButton>"         style "murrine-treeview-header"
+widget_class "*.<GtkList>.<GtkButton>"          style "murrine-treeview-header"
+widget_class "*.<GtkCList>.<GtkButton>"         style "murrine-treeview-header"
 
 # Workarounds for Evolution
-widget_class "*.ETable.ECanvas"    		style "murrine-treeview-header"
-widget_class "*.ETree.ECanvas"    		style "murrine-treeview-header"
+widget_class "*.ETable.ECanvas"                 style "murrine-treeview-header"
+widget_class "*.ETree.ECanvas"                  style "murrine-treeview-header"
 
 ################################
 # FIXME: This will not work if one embeds eg. a button into the tooltip.
 ################################
-widget "gtk-tooltip*" 				style "murrine-tooltips"
+widget "gtk-tooltip*"                            style "murrine-tooltips"
 
 ###################################################
 # Special cases and work arounds
