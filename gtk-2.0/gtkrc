@@ -679,10 +679,6 @@ widget_class "*.<GtkCTree>.<GtkButton>"         style "murrine-treeview-header"
 widget_class "*.<GtkList>.<GtkButton>"          style "murrine-treeview-header"
 widget_class "*.<GtkCList>.<GtkButton>"         style "murrine-treeview-header"
 
-# Workarounds for Evolution
-widget_class "*.ETable.ECanvas"                 style "murrine-treeview-header"
-widget_class "*.ETree.ECanvas"                  style "murrine-treeview-header"
-
 ################################
 # FIXME: This will not work if one embeds eg. a button into the tooltip.
 ################################
@@ -691,15 +687,6 @@ widget "gtk-tooltip*"                            style "murrine-tooltips"
 ###################################################
 # Special cases and work arounds
 ###################################################
-
-style "evo-new-button-workaround" 
-{
-	engine "murrine" {
-		toolbarstyle = 0
-	}
-}
-
-widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem.InternalToolbar" style "evo-new-button-workaround"
 
 # Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
 # Note that the work around assumes that the combobox is _not_ in
