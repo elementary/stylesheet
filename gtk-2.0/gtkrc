@@ -382,6 +382,26 @@ style "murrine-scrollbar-sidebar" = "murrine-scrollbar"
 	}
 }
 
+style "murrine-sidebar"
+{
+
+	base[NORMAL]				= @sidebar_color
+	bg[NORMAL]				= @sidebar_color
+	text[NORMAL]				= mix (0.3, @sidebar_color, @text_color)
+
+	font_name 	                  	= "Regular"
+
+	GtkTreeView::odd_row_color		= @sidebar_color
+	GtkTreeView::even_row_color		= @sidebar_color
+
+	engine "murrine"
+	{
+		textstyle                   = 1
+		listviewstyle               = 0
+	}
+
+}
+
 style "murrine-tasklist" = "murrine-wide" {}
 
 style "murrine-toggleswitch" = "murrine-wider"
@@ -586,19 +606,6 @@ style "pixmap-paned"
 	}
 }
 
-style "sidebar"
-{
-
-	base[NORMAL]				= @sidebar_color
-	bg[NORMAL]				= @sidebar_color
-	text[NORMAL]				= mix (0.3, @sidebar_color, @text_color)
-
-	font_name 	                  	= "Regular"
-
-	GtkTreeView::odd_row_color		= @sidebar_color
-	GtkTreeView::even_row_color		= @sidebar_color
-}
-
 ##############
 ## Matching ##
 ##############
@@ -631,20 +638,19 @@ widget "*ToggleSwitch*"	                          style "murrine-toggleswitch"
 
 widget "*SidebarHandleLeft"	                      style "pixmap-sidebar-handle-left"
 widget "*SidebarScrolled*"                       style : highest "murrine-scrollbar-sidebar"
-widget "*SidebarContent"                         style "sidebar"
+widget "*SidebarContent"                         style "murrine-sidebar"
 
 widget "xfwm4-tabwin*"                           style "murrine-xfwm4-tabwin"
 
-widget_class "*<GtkNotebook>*<GtkEventBox>"     style "murrine-notebook"
+widget_class "*<GtkNotebook>*"                  style "notebook-close"
+
 widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"        style "murrine-notebook"
 
 widget_class "*<GtkButton>"                     style "murrine-button"
 widget_class "*<GtkNotebook>"                   style "murrine-notebook"
-widget_class "*<GtkStatusbar>"                 style "murrine-default"
-
-widget_class "*<GtkNotebook>*"                  style "notebook-close"
+widget_class "*<GtkStatusbar>"                  style "murrine-default"
 
 widget_class "*<GtkComboBoxEntry>*"             style "murrine-comboboxentry"
 widget_class "*<GtkCombo>*"                     style "murrine-combo"

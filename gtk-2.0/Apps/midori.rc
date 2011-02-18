@@ -46,5 +46,5 @@ widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox.GtkToolbar"	style "
 widget		"MidoriBrowser.GtkVBox.GtkHPaned.MidoriPanel.GtkVBox*GtkViewport"	style "midori-sidebar-search"
 
 widget_class	"MidoriBrowser.GtkVBox.GtkToolbar"					style "midori-toolbar"
-widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "sidebar"
+widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel"					style "murrine-sidebar"
 widget_class	"MidoriBrowser.GtkVBox.GtkHPaned*Panel*ScrolledWindow*"			style "murrine-scrollbar-sidebar"

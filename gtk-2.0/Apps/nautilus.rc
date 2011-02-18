@@ -3,7 +3,7 @@ style "nautilus-window-base"
 	bg[NORMAL]	= @base_color
 }
 
-style "nautilus-sidebar" = "sidebar"
+style "nautilus-sidebar" = "murrine-sidebar"
 {
 	GtkTreeView::horizontal_separator	= 15
 	GtkTreeView::vertical_separator		= 2
