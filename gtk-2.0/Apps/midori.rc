@@ -22,9 +22,9 @@ style "midori-toolbar"
 
 style "midori-sidebar-toolbar" {
 
-	text[NORMAL]	= mix (0.3, @sidebar_color, @text_color)
+	text[NORMAL]	= mix (0.3, @bg_color, @text_color)
 
-	bg[NORMAL]			= @sidebar_color
+	bg[NORMAL]			= @bg_color
 
 	engine "murrine" {
 		contrast		= 0.0

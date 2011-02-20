@@ -12,7 +12,7 @@ style "nautilus-sidebar" = "murrine-sidebar"
 style "nautilus-sidebar-other" = "nautilus-sidebar"
 {
 	xthickness				= 0
-	bg[NORMAL]				= @sidebar_color
+	bg[NORMAL]				= @bg_color
 }
 
 style "nautilus-extra-view"
