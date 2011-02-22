@@ -534,7 +534,6 @@ widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLayout>"       style "murrine-notebook"
 widget_class "*<GtkNotebook>*<GtkLabel>"        style "murrine-notebook"
 
-widget_class "*<GtkButton>"                     style "murrine-button"
 widget_class "*<GtkNotebook>"                   style "murrine-notebook"
 widget_class "*<GtkStatusbar>"                  style "murrine-default"
 
@@ -558,6 +557,8 @@ widget_class "*<GtkProgressBar>"                style "murrine-progressbar"
 widget_class "*<GtkRadioButton>*"               style "murrine-default"
 
 widget_class "*<GtkCheckButton>*"               style "murrine-default"
+
+widget_class "*<GtkButton>"                     style "murrine-button"
 
 # Treeview header
 widget_class "*.<GtkTreeView>.<GtkButton>"      style "murrine-treeview-header"
