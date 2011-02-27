@@ -266,7 +266,6 @@ style "murrine-frame-title" { fg[NORMAL] = lighter (@fg_color) }
 
 style "murrine-menu-item" = "murrine-wider"
 {
-	
 	fg[PRELIGHT]				= @selected_fg_color
 	fg[SELECTED]				= @selected_fg_color
 	fg[ACTIVE]                  = @fg_color
