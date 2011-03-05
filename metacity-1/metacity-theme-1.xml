@@ -135,13 +135,13 @@
 
 <!-- ::: TITLES ::: -->
 <draw_ops name="title">
-	<title color="shade/gtk:bg[NORMAL]/1.30" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
-	<title color="shade/gtk:bg[NORMAL]/0.50" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
+	<title color="shade/gtk:bg[NORMAL]/1.30" x="((width - title_width) / 2) -36 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/0.50" x="((width - title_width) / 2) -36 `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="shade/gtk:bg[NORMAL]/1.15" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
-	<title color="shade/gtk:bg[NORMAL]/0.70" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
+	<title color="shade/gtk:bg[NORMAL]/1.15" x="((width - title_width) / 2) -36 `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:bg[NORMAL]/0.70" x="((width - title_width) / 2) -36 `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <!-- menu icon -->

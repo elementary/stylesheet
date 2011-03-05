@@ -1,5 +1,6 @@
 # Author: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
 # Modified by: Marcelo Aguero <marceloaguero@gmail.com>
+# Modified again by: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
 # Author of original metacity theme: elementart Art Team
 # elementary theme for xfwm4 using GTK color pickup.
 # License: GPL
@@ -12,7 +13,7 @@ inactive_text_shadow_color=#f7f7f7
 title_shadow_active=true
 title_shadow_inactive=true
 full_width_title=true
-title_vertical_offset_active=1
-title_vertical_offset_inactive=1
-button_offset=3
-button_spacing=1
+title_vertical_offset_active=2
+title_vertical_offset_inactive=2
+button_offset=4
+button_spacing=2

@@ -11,4 +11,4 @@ GtkTheme=elementary
 MetacityTheme=elementary
 IconTheme=elementary
 CursorTheme=DMZ-Black
-ButtonLayout=close:maximize
+ButtonLayout=close,minimize,maximize:
