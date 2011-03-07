@@ -9,6 +9,6 @@ Name[en_US]=elementary
 [X-GNOME-Metatheme]
 GtkTheme=elementary
 MetacityTheme=elementary
-IconTheme=elementary Dark
+IconTheme=elementary-mono-dark
 CursorTheme=DMZ-Black
 ButtonLayout=close:maximize
