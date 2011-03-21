@@ -1,0 +1,42 @@
+/****************
+ * Text Entries *
+ ****************/
+.entry,
+.toolbar.entry {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (shade (@base_color, 0.94)),
+				     to (@base_color));
+    border-radius: 2;
+    border-width: 1;
+    border-style: solid;
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                                             left top, left bottom,
+                                             from (shade (@bg_color, 0.70)),
+                                             to (shade (@bg_color, 0.74)));
+
+    padding: 3;
+}
+
+.entry:focused {
+    border-color: @focused_entry_border;
+    -adwaita-border-gradient: none;
+}
+
+.entry:insensitive {
+    background-color: @insensitive_bg_color;
+    border-color: shade (@inactive_frame_color, 0.945);
+    -adwaita-border-gradient: none;
+}
+
+.entry.progressbar {
+    /* FIXME: need correct colors/gradient */
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+
+    border-width: 1;
+    border-radius: 1;
+    border-color: @progressbar_border;
+}
+
