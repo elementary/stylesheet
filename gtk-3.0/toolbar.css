@@ -7,9 +7,9 @@
 				     left top,
 				     left bottom,
 				     from (@bg_color),
-                                     color-stop (0.96, shade (@theme_bg_color, 0.88)),
-                                     color-stop (0.97, shade (@theme_bg_color, 0.96)),
-                                     color-stop (0.98, shade (@theme_bg_color, 0.96)),
+                                     color-stop (0.94, shade (@theme_bg_color, 0.88)),
+                                     color-stop (0.95, shade (@theme_bg_color, 0.94)),
+                                     color-stop (0.97, shade (@theme_bg_color, 0.94)),
                                      color-stop (0.99, shade (@theme_bg_color, 0.60)),
 				     to (shade (@theme_bg_color, 0.60)));
     border-width: 0;
