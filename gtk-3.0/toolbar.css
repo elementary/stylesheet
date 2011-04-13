@@ -30,24 +30,16 @@
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
-				     from (@toolbar_gradient_base),
-                                     color-stop (0.01, shade (@theme_bg_color, 0.56)),
-                                     color-stop (0.02, @toolbar_gradient_base),
-				     color-stop (0.16, @toolbar_gradient_step1),
-				     color-stop (0.90, @toolbar_gradient_step2),
-				     color-stop (0.98, @toolbar_gradient_final),
-                                     color-stop (0.99, shade (@theme_bg_color, 0.83)),
-				     to (shade (@theme_bg_color, 0.83)));
+				     from (@bg_color),
+                                     color-stop (0.94, shade (@theme_bg_color, 0.88)),
+                                     color-stop (0.95, shade (@theme_bg_color, 0.94)),
+                                     color-stop (0.97, shade (@theme_bg_color, 0.94)),
+                                     color-stop (0.99, shade (@theme_bg_color, 0.60)),
+				     to (shade (@theme_bg_color, 0.60)));
     border-width: 0;
     border-radius: 0;
-    border-style: none;
-
-    padding: 4;
-
+    padding: 1;
     -GtkWidget-window-dragging: true;
-    -GtkToolbar-button-relief: 0;
-    -GtkWidget-separator-width: 1;
-    -GtkWidget-wide-separators: 1;
 }
 
 .primary-toolbar.toolbar:insensitive {

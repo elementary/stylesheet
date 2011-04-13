@@ -249,7 +249,7 @@ GtkCalendar {
  * tabs          *
  *****************/
 .notebook {
-    padding: 2;
+    padding: 0 0 0 0;
 
     border-color: @notebook_border;
     border-style: solid;
@@ -258,18 +258,18 @@ GtkCalendar {
 
     background-color: @theme_base_color;
 
-    -GtkNotebook-tab-overlap: 8;
-    -GtkNotebook-tab-curvature: 6;
+    -GtkNotebook-tab-overlap: 0;
+    -GtkNotebook-tab-curvature: 2;
 }
 
 .notebook tab {
-    padding: 3 8 0;
+    padding: 0 0 0 0;
     background-image: -gtk-gradient (linear,
                                      left top, left bottom,
                                      from (@notebook_tab_gradient_a),
                                      to (@notebook_tab_gradient_b));
 
-    -adwaita-focus-border-radius: 2;
+    -adwaita-focus-border-radius: 0;
 }
 
 .notebook tab:active {
@@ -506,12 +506,12 @@ GtkScrolledWindow.frame {
     border-style: solid;
     border-color: darker (@theme_bg_color);
     border-width: 1;
-    border-radius: 3;
+    border-radius: 0;
 }
 
 GtkViewport,
 GtkIconView {
-    border-radius: 3;
+    border-radius: 0;
     padding: 0;
 }
 
