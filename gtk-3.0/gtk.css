@@ -98,6 +98,7 @@
 @define-color expander_row_selected_color #acccee;
 
 @import url("gtk-widgets.css");
+@import url("button.css");
 @import url("entry.css");
 @import url("grip.css");
 @import url("menu.css");

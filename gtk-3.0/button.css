@@ -1,0 +1,57 @@
+/***********
+ * Buttons *
+ ***********/
+.button {
+    padding: 1;
+
+    -adwaita-focus-fill-color: alpha (@theme_base_color, 0.35);
+    -adwaita-focus-border-gradient: -gtk-gradient (linear,
+                                                   left top, left bottom,
+                                                   from (alpha (@keyboard_focus_border_a, 0.62)),
+                                                   to (alpha (@keyboard_focus_border_b, 0.62)));
+    -adwaita-focus-border-radius: 1;
+    -adwaita-focus-border-dashes: 0;
+    -GtkWidget-focus-line-width: 2;
+
+    border-radius: 2;
+    border-width: 1;
+    border-color: @button_border;
+    border-style: solid;
+
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+                                     from (@button_gradient_color_a),
+                                     to (@button_gradient_color_b));
+}
+
+.button:hover,
+.toolbar.button:hover {
+    border-color: @button_border;
+    background-image: -gtk-gradient (linear,
+				     left top, left bottom,
+				     from (@button_hover_gradient_color_a),
+				     to (@button_hover_gradient_color_b));
+}
+
+.button:active,
+.toolbar .button:active,
+.button:hover:active,
+.toolbar.button:hover:active {
+    background-image: -gtk-gradient (linear,
+    				     left top, left bottom,
+                                     from (@button_active_gradient_color_a),
+				     to (alpha (@button_active_gradient_color_b, 0.13)));
+    border-color: @highlighted_border;
+}
+
+.button:insensitive {
+    background-image: none;
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
+}
+
+.button.default {
+    border-width: 2;
+    border-color: shade (@button_border, 1.10);
+}
+
