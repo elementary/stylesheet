@@ -467,6 +467,12 @@ style "pixmap-mode-button" {
 	}
 }
 
+style "overlay-scrollbar" {
+
+    base[SELECTED]      = shade (0.6, @base_color)
+    base[INSENSITIVE]   = shade (0.85, @base_color)
+}
+
 style "pixmap-paned" {
 	GtkPaned::handle_size			= 8
 
@@ -564,6 +570,9 @@ widget_class "*.<GtkTreeView>.<GtkButton>"      style "murrine-treeview-header"
 widget_class "*.<GtkCTree>.<GtkButton>"         style "murrine-treeview-header"
 widget_class "*.<GtkList>.<GtkButton>"          style "murrine-treeview-header"
 widget_class "*.<GtkCList>.<GtkButton>"         style "murrine-treeview-header"
+
+#Overlay scrollbars
+widget_class "*<GtkScrolledWindow>*<OsScrollbar>" style "overlay-scrollbar"
 
 ################################
 # FIXME: This will not work if one embeds eg. a button into the tooltip.
