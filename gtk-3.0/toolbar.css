@@ -125,17 +125,24 @@
 /* primary toolbar raised buttons */
 .primary-toolbar.toolbar.raised.button,
 .primary-toolbar.toolbar.raised.button:insensitive {
+
     border-radius: 2;
     border-width: 1;
-    border-color: @button_border;
     border-style: solid;
+    -adwaita-focus-border-radius: 2;
+    -adwaita-focus-border-dashes: 0;
+    -GtkWidget-focus-line-width: 1;
 
     background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-                                     from (@button_gradient_color_a),
-                                     to (@button_gradient_color_b));
+                    left top,
+                    left bottom,
+                    from (@base_color),
+                    to (shade (@base_color, 0.88)));
 
-    -GtkWidget-focus-line-width: 2;
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@bg_color, 0.78)),
+                    to (shade (@bg_color, 0.60)));
 }
 
 .primary-toolbar.toolbar.raised.button:hover {
@@ -150,15 +157,17 @@
 
 .primary-toolbar.toolbar.raised.button:hover:active,
 .primary-toolbar.toolbar.raised.button:active {
-    background-image: -gtk-gradient (linear,
-    				     left top, left bottom,
-                                     from (@button_active_gradient_color_a),
-				     to (alpha (@button_active_gradient_color_b, 0.13)));
-    background-color: @theme_base_color;
 
-    border-color: @highlighted_border;
-    border-width: 1;
-    border-style: solid;
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (shade (@base_color, 0.54)),
+				     to (shade (@base_color, 0.76)));
+
+    -adwaita-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.48)),
+                     to (shade (@bg_color, 0.60)));
 }
 
 /* progressbars on primary toolbar entries are special */
