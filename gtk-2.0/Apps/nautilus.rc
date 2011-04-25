@@ -9,12 +9,6 @@ style "nautilus-sidebar" = "murrine-sidebar"
 	GtkTreeView::vertical_separator		= 2
 }
 
-style "nautilus-sidebar-other" = "nautilus-sidebar"
-{
-	xthickness				= 0
-	bg[NORMAL]				= @bg_color
-}
-
 style "nautilus-extra-view"
 {
 
@@ -36,40 +30,18 @@ style "nautilus-extra-view"
 
 style "nautilus-statusbar"
 {
-	xthickness	= 4
+	bg[NORMAL]      = @base_color
 
-	bg[NORMAL]	= @base_color
-	bg[PRELIGHT]	= shade (1.16, mix (0.1, @bg_color, @selected_bg_color))
-	bg[SELECTED]	= @fg_color
-
-	base[SELECTED]	= shade (0.8, @selected_bg_color)
-
-	fg[NORMAL]	= mix (0.4, @base_color, @text_color)
+	fg[NORMAL]	    = mix (0.4, @base_color, @text_color)
 	fg[PRELIGHT]	= mix (0.4, @base_color, @text_color)
 	fg[SELECTED]	= mix (0.4, @base_color, @text_color)
-	fg[ACTIVE]	= mix (0.4, @base_color, @text_color)
+	fg[ACTIVE]	    = mix (0.4, @base_color, @text_color)
 	fg[INSENSITIVE]	= mix (0.4, @base_color, @text_color)
-
-	engine "pixmap" 
-	{
-
-	    image
-	    {
-	     	function	= RESIZE_GRIP
-		recolorable	= TRUE
-		detail		= "statusbar"
-		overlay_file	= "/Handle/resize_grip.png"
-		overlay_border	= {0,0,0,0 }
-		overlay_stretch	= FALSE
-	    }
-      }
 }
 
 style "nautilus-scale"
 {
-	ythickness = 0
-
-	GtkRange		::trough-border				= 0
+	GtkRange		::trough-border			        = 0
 	GtkScale		::trough-side-details			= 0
 	
 	engine "pixmap" 
@@ -187,18 +159,18 @@ style "nautilus-right-slider"
 	}
 }
 
-widget		"*NautilusNavigationWindow"		style "nautilus-window-base"
-widget		"*Nautilus*Splitter"			style "pixmap-sidebar-handle-left"
-widget_class	"*Nautilus*View"			style "murrine-thin"
-widget_class	"*Nautilus*NautilusSidePane*"		style "nautilus-sidebar"
+widget		    "*NautilusNavigationWindow"		        style "nautilus-window-base"
+widget		    "*Nautilus*Splitter"			        style "pixmap-sidebar-handle-left"
+widget_class	"*Nautilus*View"			            style "murrine-thin"
+widget_class	"*Nautilus*NautilusSidePane*"		    style "nautilus-sidebar"
 widget_class	"*Nautilus*NautilusSidePane*Scrolled*"	style "murrine-scrollbar-sidebar"
-widget_class	"*Nautilus*Statusbar*"			style "nautilus-statusbar"
-widget_class	"*Nautilus*Scale*"			style "nautilus-scale"
+widget_class	"*Nautilus*Statusbar*"			        style "nautilus-statusbar"
+widget_class	"*Nautilus*Scale*"			            style "nautilus-scale"
 
-widget_class	"*Nautilus*Notebook"			style "murrine-thin"
+widget_class	"*Nautilus*Notebook"			        style "murrine-thin"
 
-widget "*.nautilus-extra-view-widget" 			style : highest "nautilus-extra-view"
+widget          "*.nautilus-extra-view-widget" 			style : highest "nautilus-extra-view"
 
-widget_class "*NautilusPathBar.*ToggleButton*"		style "nautilus-breadcrumbs" 
-widget "Nautilus*left_slider*"				style "nautilus-left-slider" 
-widget "Nautilus*right_slider*"				style "nautilus-right-slider"
+widget_class "*NautilusPathBar.*ToggleButton*"		    style "nautilus-breadcrumbs" 
+widget "Nautilus*left_slider*"				            style "nautilus-left-slider" 
+widget "Nautilus*right_slider*"				            style "nautilus-right-slider"

@@ -10,5 +10,5 @@ style "gedit-frame"
 }
 
 widget_class "*Gedit*.<GtkFrame>*"     			style "gedit-frame"
-widget_class "*Gedit*.<GtkScrolledWindow>"     		style "murrine-thin"
+widget_class "*Gedit*.<GtkScrolledWindow>"     	style "murrine-thin"
 widget_class "*Gedit*.<GtkArrow>*"     			style:highest "murrine-default"
