@@ -5,14 +5,17 @@
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
+
+    border-radius:  0;
+    border-width:   1;
+    border-style:   solid;
+
     background-image: -gtk-gradient (linear,
 				     left top,
 				     right top,
 				     from (shade (@base_color, 0.94)),
 				     to (@base_color));
-    border-width: 1;
-    border-style: solid;
-    border-color: @bg_color;
-    color: shade (@inactive_frame_color, 0.80);
+
+    border-color: shade (@bg_color, 0.78);
 }
 

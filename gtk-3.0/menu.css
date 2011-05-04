@@ -42,6 +42,7 @@
     border-width: 1;
     border-radius: 6;
     border-color: alpha (#FFF, 0.8);
+    -unico-inner-stroke-color: alpha (#000, 0.30);
 
     -GtkMenuItem-arrow-scaling: 0.4;
 

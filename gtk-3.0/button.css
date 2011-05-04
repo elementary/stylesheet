@@ -7,8 +7,8 @@
     border-radius: 2;
     border-width: 1;
     border-style: solid;
-    -adwaita-focus-border-radius: 2;
-    -adwaita-focus-border-dashes: 0;
+    -unico-focus-border-radius: 2;
+    -unico-focus-border-dashes: 0;
     -GtkWidget-focus-line-width: 1;
 
     background-image: -gtk-gradient (linear,
@@ -17,12 +17,17 @@
                     from (@base_color),
                     to (shade (@base_color, 0.88)));
 
-    -adwaita-border-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (shade (@bg_color, 0.78)),
                     to (shade (@bg_color, 0.60)));
 
-    -adwaita-focus-border-gradient: -gtk-gradient (linear,
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (#fff, 0.00)),
+                    to (shade (#fff, 0.10)));
+
+    -unico-focus-border-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (alpha (@keyboard_focus_border_a, 0.62)),
                     to (alpha (@keyboard_focus_border_b, 0.62)));
@@ -50,10 +55,15 @@
 				     from (shade (@base_color, 0.54)),
 				     to (shade (@base_color, 0.76)));
 
-    -adwaita-border-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
-                     from (shade (@bg_color, 0.48)),
-                     to (shade (@bg_color, 0.60)));
+                     from (shade (@bg_color, 0.46)),
+                     to (shade (@bg_color, 0.58)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.12)),
+                    to (alpha (#000, 0.06)));
 }
 
 .button:insensitive {

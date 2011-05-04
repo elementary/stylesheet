@@ -4,30 +4,41 @@
 .entry,
 .toolbar.entry {
     background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-				     from (shade (@base_color, 0.94)),
-				     to (@base_color));
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.94)),
+			         to (@base_color));
     border-radius: 2;
     border-width: 1;
-    border-style: solid;
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (shade (@bg_color, 0.70)),
-                                             to (shade (@bg_color, 0.74)));
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-border-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.70)),
+                     to (shade (@bg_color, 0.74)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.12)),
+                    to (alpha (#000, 0.06)));
 
     padding: 3;
 }
 
 .entry:focused {
-    border-color: @focused_entry_border;
-    -adwaita-border-gradient: none;
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#2f90ff, 0.25)),
+                    to (alpha (#56c5ff, 0.25)));
 }
 
 .entry:insensitive {
     background-color: @insensitive_bg_color;
     border-color: shade (@inactive_frame_color, 0.945);
-    -adwaita-border-gradient: none;
+    -unico-border-gradient: none;
 }
 
 .entry.progressbar {

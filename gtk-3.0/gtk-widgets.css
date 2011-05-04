@@ -1,5 +1,5 @@
 * {
-    engine: adwaita;
+    engine: unico;
     padding: 1;
 
     /* Style properties */
@@ -47,11 +47,12 @@
 
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-color: alpha (@theme_text_color, 0.4);
-    -adwaita-focus-border-radius: 2;
-    -adwaita-focus-fill-color: none;
-    -adwaita-focus-border-gradient: none;
-    -adwaita-focus-border-dashes: 1;
+    -unico-focus-border-color: alpha (@theme_text_color, 0.4);
+    -unico-focus-border-radius: 2;
+    -unico-focus-fill-color: none;
+    -unico-focus-border-gradient: none;
+    -unico-focus-border-dashes: 1;
+    -unico-inner-stroke-color: alpha (#fff, 0.30);
 }
 
 /***************
@@ -159,18 +160,18 @@ GtkProgressBar.trough {
                                      from (@notebook_tab_gradient_a),
                                      to (@notebook_tab_gradient_b));
 
-    -adwaita-focus-border-radius: 0;
+    -unico-focus-border-radius: 0;
 }
 
 .notebook tab:active {
     border-width: 1;
 
-    -adwaita-border-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
                                              from (@notebook_active_tab_border),
                                              to (@notebook_border));
 
-    -adwaita-selected-tab-color: @notebook_selected_tab_color;
+    -unico-selected-tab-color: @notebook_selected_tab_color;
     background-color: @theme_base_color;
     background-image: none;
 }
@@ -284,7 +285,7 @@ GtkSwitch.trough {
 
 GtkSwitch.trough:active {
     color: @theme_base_color;
-    -adwaita-border-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
                                              left top, left bottom,
                                              from (shade (@theme_selected_bg_color, 0.70)),
                                              to (shade (@theme_selected_bg_color, 0.94)));
@@ -298,7 +299,7 @@ GtkSwitch.trough:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 0.9);
     border-color: shade (@inactive_frame_color, 0.845);
-    -adwaita-border-gradient: none;
+    -unico-border-gradient: none;
 }
 
 GtkSwitch.slider {
@@ -316,7 +317,7 @@ GtkSwitch.slider {
                                      color-stop (0.86, shade (@switch_slider_color, 1.03)),
                                      to (shade (@switch_slider_color, 1.03)));
 
-    -adwaita-switch-grip-color: shade (@switch_slider_color, 0.97);
+    -unico-switch-grip-color: shade (@switch_slider_color, 0.97);
 }
 
 GtkSwitch.slider:active {
@@ -356,9 +357,9 @@ GtkIconView.view.cell:selected:focused {
     /* FIXME: this probably needs to be better;
      * see https://bugzilla.gnome.org/show_bug.cgi?id=644157
      */
-    -adwaita-focus-border-color: @progressbar_border;
-    -adwaita-focus-border-radius: 3;
-    -adwaita-focus-border-dashes: 0;
+    -unico-focus-border-color: @progressbar_border;
+    -unico-focus-border-radius: 3;
+    -unico-focus-border-dashes: 0;
 }
 
 .view {
@@ -373,9 +374,9 @@ GtkTreeView {
     -GtkTreeView-expander-size: 8;
 
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-radius: 0;
-    -adwaita-focus-border-dashes: 0;
-    -adwaita-focus-border-color: @keyboard_focus_border_a;
+    -unico-focus-border-radius: 0;
+    -unico-focus-border-dashes: 0;
+    -unico-focus-border-color: @keyboard_focus_border_a;
 }
 
 GtkTreeView.separator {
