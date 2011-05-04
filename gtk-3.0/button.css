@@ -2,14 +2,9 @@
  * Buttons *
  ***********/
 
-.button {
-
-    border-radius: 2;
+.button,
+.toolbar.button {
     border-width: 1;
-    border-style: solid;
-    -unico-focus-border-radius: 2;
-    -unico-focus-border-dashes: 0;
-    -GtkWidget-focus-line-width: 1;
 
     background-image: -gtk-gradient (linear,
                     left top,
@@ -31,21 +26,14 @@
                     left top, left bottom,
                     from (alpha (@keyboard_focus_border_a, 0.62)),
                     to (alpha (@keyboard_focus_border_b, 0.62)));
-
-
 }
 
 .button:hover,
 .toolbar.button:hover {
-    border-color: @button_border;
-    background-image: -gtk-gradient (linear,
-				     left top, left bottom,
-				     from (@button_hover_gradient_color_a),
-				     to (@button_hover_gradient_color_b));
 }
 
 .button:active,
-.toolbar .button:active,
+.toolbar.button:active,
 .button:hover:active,
 .toolbar.button:hover:active {
 
@@ -68,8 +56,13 @@
 
 .button:insensitive {
     background-image: none;
-    background-color: @insensitive_bg_color;
-    color: @insensitive_fg_color;
+
+    background-color: alpha (@fg_color, 0.00);
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
 }
 
 .button.default {

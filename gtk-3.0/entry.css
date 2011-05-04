@@ -8,7 +8,6 @@
 			         left bottom,
 			         from (shade (@base_color, 0.94)),
 			         to (@base_color));
-    border-radius: 2;
     border-width: 1;
     -unico-outer-stroke-gradient: -gtk-gradient (linear,
                      left top, left bottom,

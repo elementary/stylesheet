@@ -34,68 +34,10 @@
 @define-color error_fg_color rgb (166, 38, 38);
 @define-color error_bg_color rgb (237, 54, 54);
 
-@define-color keyboard_focus_border_a #a2c9f1;
-@define-color keyboard_focus_border_b #6794cf;
-
-@define-color os_chrome_bg_color black;
-@define-color os_chrome_fg_color #ccc;
-@define-color os_chrome_selected_bg_color #333;
-@define-color os_chrome_selected_fg_color white;
-
-@define-color chrome_bg_color #1e1a17;
-@define-color chrome_fg_color #fff;
-
-@define-color focused_entry_border #579eea;
-
-@define-color button_gradient_color_a #f4f6f4;
-@define-color button_gradient_color_b #d7dad7;
-@define-color button_border #a7aba7;
-
-@define-color button_hover_gradient_color_a @theme_base_color;
-@define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
-
-@define-color button_active_gradient_color_a #a2a9a2;
-@define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
 
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
 
-@define-color trough_bg_color_a #ccccc7;
-@define-color trough_bg_color_b #e4e4e1;
-
-@define-color active_switch_bg_color_a #509ae7;
-@define-color active_switch_bg_color_b #84b8ee;
-
-@define-color switch_slider_color #eeeeec;
-@define-color switch_slider_border #2a79cb;
-
-@define-color progressbar_background_a #1f72c6;
-@define-color progressbar_background_b #76b0ec;
-@define-color progressbar_border #3277bf;
-
-@define-color scale_fill_a #2c85e2;
-@define-color scale_fill_b #b8d6f5;
-
-@define-color menu_controls_color #555753;
-
-@define-color highlighted_border #8a8f8a;
-@define-color internal_element_color #888a85;
-
-@define-color notebook_border #a6a6a6;
-@define-color notebook_active_tab_border #1372d3;
-@define-color notebook_selected_tab_color #8dc0f3;
-
-@define-color notebook_tab_gradient_a @theme_base_color;
-@define-color notebook_tab_gradient_b @switch_slider_color;
-
-@define-color toolbar_gradient_base #aaaa9e;
-@define-color toolbar_gradient_step1 #bcbcb4;
-@define-color toolbar_gradient_step2 #d9d9d7;
-@define-color toolbar_gradient_final #e5e5e2;
-
-@define-color toolbar_active_button_color #909081;
-
-@define-color expander_row_selected_color #acccee;
 
 @import url("gtk-widgets.css");
 @import url("button.css");

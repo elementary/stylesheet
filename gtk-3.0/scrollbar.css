@@ -6,16 +6,14 @@
     background-image: none;
     border-style: solid;
     -GtkRange-trough-border: 1;
-    -GtkRange-arrow-scaling: 0.444;
     -GtkRange-slider-width: 6;
     -GtkRange-stepper-size: 0;
     -GtkScrollbar-min-slider-length: 30;
     -GtkRange-stepper-spacing: 1;
-    -GtkRange-trough-under-steppers: 1;
 }
 
 .scrollbar.trough {
-    background-color: @theme_base_color;
+    background-color: @base_color;
     border-width: 0;
     border-radius: 0;
 }
@@ -30,7 +28,6 @@
 }
 
 .scrollbar.button {
-    color: @internal_element_color;
 }
 
 .scrollbar.slider:insensitive {
