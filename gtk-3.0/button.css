@@ -2,8 +2,7 @@
  * Buttons *
  ***********/
 
-.button,
-.toolbar.button {
+.button {
     border-width: 1;
 
     background-image: -gtk-gradient (linear,
@@ -26,6 +25,10 @@
                     left top, left bottom,
                     from (alpha (@keyboard_focus_border_a, 0.62)),
                     to (alpha (@keyboard_focus_border_b, 0.62)));
+}
+
+.toolbar.button {
+    -GtkButton-inner-border:                    4;
 }
 
 .button:hover,
@@ -60,13 +63,21 @@
 }
 
 .button:insensitive {
-    background-image: none;
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+                     from (shade (@bg_color, 1.06)),
+                     to (shade (@bg_color, 0.88)));
 
-    background-color: alpha (@fg_color, 0.00);
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.76)),
+                     to (shade (@bg_color, 0.70)));
 
     -unico-outer-stroke-gradient: -gtk-gradient (linear,
                      left top, left bottom,
                      from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
                      to (alpha (#fff, 0.40)));
 }
 
