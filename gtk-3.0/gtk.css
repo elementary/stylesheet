@@ -38,12 +38,4 @@
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
 
-
 @import url("gtk-widgets.css");
-@import url("button.css");
-@import url("entry.css");
-@import url("grip.css");
-@import url("menu.css");
-@import url("scale.css");
-@import url("scrollbar.css");
-@import url("toolbar.css");

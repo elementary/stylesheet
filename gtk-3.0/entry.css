@@ -38,9 +38,19 @@
 }
 
 .entry:insensitive {
-    background-color: @insensitive_bg_color;
-    border-color: shade (@inactive_frame_color, 0.945);
-    -unico-border-gradient: none;
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@bg_color, 0.85)),
+                     color-stop (0.20, shade (@bg_color, 0.94)),
+			         to (@bg_color));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
 }
 
 .entry.progressbar {
