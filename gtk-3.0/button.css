@@ -19,8 +19,8 @@
 
     -unico-outer-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
-                    from (shade (#fff, 0.00)),
-                    to (shade (#fff, 0.10)));
+                    from (alpha (#000, 0.00)),
+                    to (alpha (#000, 0.10)));
 
     -unico-focus-border-gradient: -gtk-gradient (linear,
                     left top, left bottom,
@@ -42,6 +42,11 @@
 				     left bottom,
 				     from (shade (@base_color, 0.54)),
 				     to (shade (@base_color, 0.76)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
 
     -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,

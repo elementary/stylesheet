@@ -3,28 +3,31 @@
  ****************/
 .entry,
 .toolbar.entry {
+    border-width:   1;
+    padding:        4;
+
     background-image: -gtk-gradient (linear,
 			         left top,
 			         left bottom,
-			         from (shade (@base_color, 0.94)),
+			         from (shade (@base_color, 0.80)),
+                     color-stop (0.20, shade (@base_color, 0.94)),
 			         to (@base_color));
-    border-width: 1;
+
     -unico-outer-stroke-gradient: -gtk-gradient (linear,
                      left top, left bottom,
                      from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
                      to (alpha (#fff, 0.40)));
 
-    -unico-border-stroke-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
-                     from (shade (@bg_color, 0.70)),
-                     to (shade (@bg_color, 0.74)));
+                     from (shade (@bg_color, 0.65)),
+                     to (shade (@bg_color, 0.72)));
 
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
-                    from (alpha (#000, 0.12)),
+                    from (alpha (#000, 0.10)),
                     to (alpha (#000, 0.06)));
-
-    padding: 3;
 }
 
 .entry:focused {
@@ -41,12 +44,10 @@
 }
 
 .entry.progressbar {
-    /* FIXME: need correct colors/gradient */
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 
     border-width: 1;
     border-radius: 1;
-    border-color: @progressbar_border;
 }
 

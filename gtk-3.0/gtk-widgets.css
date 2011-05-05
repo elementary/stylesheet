@@ -2,7 +2,7 @@
     -GtkButton-child-displacement-x:             1;
     -GtkButton-child-displacement-y:             1;
     -GtkButton-default-border:                 0;
-    -GtkButton-inner-border:                    0;
+    -GtkButton-inner-border:                    4;
 
     -GtkCheckButton-indicator-size:             15;
     -GtkCheckMenuItem-indicator-size:           12;
@@ -17,6 +17,8 @@
     -GtkScrolledWindow-scrollbar-spacing:        0;
     -GtkScrolledWindow-scrollbars-within-bevel:  1;
 
+    -GtkToolbar-internal-padding:               0;
+
     -GtkWidget-link-color:                      @link_color;
     -GtkWidget-visited-link-color:              @link_color;
     -GtkIMHtml-hyperlink-color:                 @link_color;
@@ -30,6 +32,12 @@
 
     engine: unico;
         -unico-inner-stroke-color:              alpha (#fff, 0.30);
+        -unico-text-shadow-color:              alpha (#fff, 0.30);
+        -unico-outer-stroke-style:              custom;
+        -unico-outer-stroke-gradient:           -gtk-gradient (linear,
+                                                left top, left bottom,
+                                                from (alpha (#000, 0.00)),
+                                                to (alpha (#000, 0.10)));
 }
 
 
@@ -39,7 +47,6 @@
     -GtkToolButton-icon-spacing: 4;
     -GtkTextView-error-underline-color: @error_color;
     -GtkToolItemGroup-expander-size: 12;
-    -GtkToolbar-internal-padding: 0;
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
     -GtkWidget-wide-separators: 1;
