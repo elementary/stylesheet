@@ -27,18 +27,15 @@
                     to (alpha (@keyboard_focus_border_b, 0.62)));
 }
 
-.toolbar.button {
-    -GtkButton-inner-border:                    4;
-}
-
 .button:hover,
-.toolbar.button:hover {
+.primary-toolbar.toolbar.button:hover {
+
 }
 
 .button:active,
-.toolbar.button:active,
+.primary-toolbar.toolbar.button:active,
 .button:hover:active,
-.toolbar.button:hover:active {
+.primary-toolbar.toolbar.button:hover:active {
 
     background-image: -gtk-gradient (linear,
 				     left top,
@@ -49,6 +46,7 @@
     -unico-outer-stroke-gradient: -gtk-gradient (linear,
                      left top, left bottom,
                      from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
                      to (alpha (#fff, 0.40)));
 
     -unico-border-gradient: -gtk-gradient (linear,
@@ -81,8 +79,116 @@
                      to (alpha (#fff, 0.40)));
 }
 
+.button:active:insensitive,
+.primary-toolbar.toolbar.button:active:insensitive {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@bg_color, 0.85)),
+                     color-stop (0.20, shade (@bg_color, 0.94)),
+			         to (@bg_color));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
+}
+
 .button.default {
     border-width: 1;
     border-color: shade (@button_border, 1.10);
 }
 
+/*******************
+ * Toolbar Buttons *
+ ******************/
+
+.toolbar.button:active {    
+    border-width: 1;
+    -GtkButton-inner-border:                    0;
+
+    background-image:   none;
+    background-color:   shade (@bg_color, 0.70);
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@bg_color, 0.58)),
+                    color-stop (0.20, shade (@bg_color, 0.70)),
+                    color-stop (0.85, shade (@bg_color, 0.70)),
+                    to (shade (@bg_color, 0.98)));
+
+    -unico-outer-stroke-style: none;
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                left top, left bottom,
+                from (alpha (#000, 0.00)),
+                to (alpha (#000, 0.00)));
+}
+
+/***************************
+ * Primary Toolbar Buttons *
+ ***************************/
+.primary-toolbar.toolbar.button {
+    border-width: 1;
+    -GtkButton-inner-border:                    4;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (@base_color),
+                    to (shade (@base_color, 0.88)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@bg_color, 0.78)),
+                    to (shade (@bg_color, 0.60)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.00)),
+                    to (alpha (#000, 0.10)));
+
+    -unico-focus-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (@keyboard_focus_border_a, 0.62)),
+                    to (alpha (@keyboard_focus_border_b, 0.62)));
+}
+
+.primary-toolbar.toolbar.button:insensitive {
+}
+
+.primary-toolbar.toolbar.button:hover {
+}
+
+.primary-toolbar.toolbar.button:active {
+}
+
+.primary-toolbar.toolbar.button:active:prelight {
+}
+
+.primary-toolbar.toolbar.button:active:insensitive {
+}
+
+/* primary toolbar raised buttons */
+.primary-toolbar.toolbar.raised.button,
+.primary-toolbar.toolbar.raised.button:insensitive {
+}
+
+.primary-toolbar.toolbar.raised.button:hover {
+}
+
+.primary-toolbar.toolbar.raised.button:hover:active,
+.primary-toolbar.toolbar.raised.button:active {
+}
