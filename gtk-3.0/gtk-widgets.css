@@ -12,7 +12,7 @@
 
     -GtkExpander-expander-size:                 16;
 
-    -GtkPaned-handle-size:                      6;
+    -GtkPaned-handle-size:                      8;
 
     -GtkScrolledWindow-scrollbar-spacing:        0;
     -GtkScrolledWindow-scrollbars-within-bevel:  1;

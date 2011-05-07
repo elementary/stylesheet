@@ -9,3 +9,13 @@
     background-color:         shade (@bg_color, 1.10);
 }
 
+.sidebar-hpaned {
+    border-width:           0;
+    -GtkPaned-handle-size:   2;
+
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     right top,
+				     from (shade (@bg_color, 1.10)),
+				     to (@bg_color));
+}
