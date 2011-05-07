@@ -9,14 +9,18 @@
     background-color:         shade (@bg_color, 1.10);
 }
 
-/*.sidebar-hpaned {*/
 GtkHCollapsablePaned {
-    border-width:           0;
-    -GtkPaned-handle-size:   2;
+    border-width:            0;
+    -GtkPaned-handle-size:    2;
+}
 
+GtkHCollapsablePaned.pane-separator,
+GtkHCollapsablePaned.pane-separator:prelight,
+GtkHCollapsablePaned.pane-separator:selected {
     background-image: -gtk-gradient (linear,
 				     left top,
 				     right top,
-				     from (shade (@bg_color, 1.10)),
-				     to (@bg_color));
+				     from (shade (@bg_color, 1.30)),
+				     to (shade (@bg_color, 0.65)));
+    background-color: none;
 }
