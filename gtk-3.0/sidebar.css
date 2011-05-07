@@ -9,7 +9,8 @@
     background-color:         shade (@bg_color, 1.10);
 }
 
-.sidebar-hpaned {
+/*.sidebar-hpaned {*/
+GtkHCollapsablePaned {
     border-width:           0;
     -GtkPaned-handle-size:   2;
 
