@@ -24,9 +24,6 @@
     -GtkIMHtml-hyperlink-color:                 @link_color;
     -GtkHTML-link-color:                        @link_color;
 
-    /*background-color:                          @bg_color;
-    color:                                      @fg_color;*/
-
     border-radius:                               2;
     padding:                                    1;
 
@@ -363,6 +360,7 @@ WnckPager, WnckTasklist {
 @import url("entry.css");
 @import url("grip.css");
 @import url("menu.css");
+@import url("sidebar.css");
 @import url("scale.css");
 @import url("scrollbar.css");
 @import url("toolbar.css");

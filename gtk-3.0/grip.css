@@ -1,5 +1,4 @@
 .grip {
-    background-color: shade (@inactive_frame_color, 0.93);
 }
 
 .pane-separator,
@@ -8,14 +7,12 @@
 
     border-radius:  0;
     border-width:   1;
-    border-style:   solid;
-
     background-image: -gtk-gradient (linear,
 				     left top,
 				     right top,
 				     from (shade (@base_color, 0.94)),
 				     to (@base_color));
 
-    border-color: shade (@bg_color, 0.78);
+    border-color: shade (@base_color, 0.80);
 }
 

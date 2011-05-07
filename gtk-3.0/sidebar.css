@@ -1,0 +1,11 @@
+.sidebar,
+.sidebar.view {
+    background-color:         @bg_color;
+    border-radius:              0;
+    color:                      shade (@bg_color, 0.55);
+}
+
+.sidebar.view:prelight {
+    background-color:         shade (@bg_color, 1.10);
+}
+
