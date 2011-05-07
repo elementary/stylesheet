@@ -8,9 +8,9 @@
     background-image: -gtk-gradient (linear,
 				     left top,
 				     right top,
-				     from (shade (@base_color, 0.40)),
+				     from (shade (@base_color, 0.55)),
                      color-stop (0.15, @base_color),
-                     color-stop (0.85, shade (@base_color, 0.85)),
-				     to (shade (@base_color, 0.40)));
+                     color-stop (0.85, shade (@base_color, 0.88)),
+				     to (shade (@base_color, 0.55)));
 }
 
