@@ -45,11 +45,12 @@
     -unico-inner-stroke-color: alpha (#000, 0.30);
 
     -GtkMenuItem-arrow-scaling: 0.4;
+    color: #fff;
 
 }
 
 .menuitem {
-    -adwaita-menuitem-arrow-color: @menu_controls_color;
+    -unico-menuitem-arrow-color: @menu_controls_color;
 }
 
 .menuitem.accelerator {
@@ -72,7 +73,7 @@
 }
 
 .menu.separator {
-    -adwaita-border-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
                                              left top, right top,
                                              from (alpha (@base_color, 0.00)),
                                              color-stop (0.30, alpha (@base_color, 0.25)),
