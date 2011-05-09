@@ -38,6 +38,8 @@
 .primary-toolbar.toolbar.button:active,
 .primary-toolbar.toolbar.button:hover:active {
 
+    color:          #fff;
+
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,

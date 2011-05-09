@@ -1,7 +1,8 @@
 * {
-    -GtkButton-child-displacement-x:             1;
-    -GtkButton-child-displacement-y:             1;
+    -GtkButton-child-displacement-x:             0;
+    -GtkButton-child-displacement-y:             0;
     -GtkButton-default-border:                 0;
+    -GtkButton-image-spacing:                    4;
     -GtkButton-inner-border:                    3;
 
     -GtkCheckButton-indicator-size:             15;
@@ -18,6 +19,10 @@
     -GtkScrolledWindow-scrollbars-within-bevel:  1;
 
     -GtkToolbar-internal-padding:               0;
+
+    -GtkToolButton-icon-spacing:                 6;
+
+    -GtkWidget-focus-padding:                   0;
 
     -GtkWidget-link-color:                      @link_color;
     -GtkWidget-visited-link-color:              @link_color;
@@ -39,22 +44,18 @@
 
 
 /*
-    -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
-    -GtkToolButton-icon-spacing: 4;
     -GtkTextView-error-underline-color: @error_color;
     -GtkToolItemGroup-expander-size: 12;
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
     -GtkWidget-wide-separators: 1;
     -WnckTasklist-fade-overlay-rect: 0;
-    -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
     -unico-focus-border-color: alpha (@theme_text_color, 0.4);
     -unico-focus-border-radius: 2;
     -unico-focus-fill-color: none;
     -unico-focus-border-gradient: none;
-    -unico-focus-border-dashes: 1;
 */
 
 
@@ -89,15 +90,6 @@ GtkSpinButton.button,
 GtkSpinButton.button:insensitive,
 GtkSpinButton.button:prelight,
 GtkSpinButton.button:active {
-}
-
-/****************
- * Progress bar *
- ****************/
-GtkProgressBar.progressbar {
-}
-
-GtkProgressBar.trough {
 }
 
 /*****************
@@ -360,6 +352,7 @@ WnckPager, WnckTasklist {
 @import url("entry.css");
 @import url("grip.css");
 @import url("menu.css");
+@import url("progressbar.css");
 @import url("sidebar.css");
 @import url("scale.css");
 @import url("scrollbar.css");
