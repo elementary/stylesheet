@@ -4,7 +4,7 @@
 
 .button,
 .primary-toolbar.toolbar.button {
-    border-width: 1;
+    border-width: 1;    
 
     background-image: -gtk-gradient (linear,
                     left top,
@@ -111,7 +111,7 @@
 }
 
 .button.default {
-}
+}z
 
 /*******************
  * Toolbar Buttons *
@@ -142,5 +142,5 @@
  * Primary Toolbar Buttons *
  ***************************/
 .primary-toolbar.toolbar.button {
-    -GtkButton-inner-border:    4;
+    -GtkButton-inner-border:    5;
 }
