@@ -51,6 +51,8 @@
 
 .menuitem {
     -unico-menuitem-arrow-color: @menu_controls_color;
+    font: bold;
+    padding: 2;
 }
 
 .menuitem.accelerator {
@@ -63,17 +65,29 @@
 }
 
 .menuitem:insensitive {
-    color: @insensitive_fg_color;
+    color: alpha (#000, 0.40);
 }
 
 .menuitem:active,
 .menuitem:prelight {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
+    color: @selected_fg_color;
     border-style: solid;
     border-width: 1;
     border-radius: 0;
-    border-color: lighter (@theme_selected_bg_color);
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@selected_bg_color, 1.20)),
+                    to (shade (@selected_bg_color, 0.88)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@selected_bg_color, 1.30)),
+                    to (shade (@selected_bg_color, 0.98)));
+
+    -unico-inner-stroke-color:              alpha (#fff, 0.00);
+
 }
 
 .menu.separator {

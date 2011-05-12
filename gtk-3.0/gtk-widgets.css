@@ -229,6 +229,7 @@ GtkTreeView {
 }
 
 GtkTreeView.separator {
+
 }
 
 column-header {
@@ -354,6 +355,7 @@ WnckPager, WnckTasklist {
 @import url("menu.css");
 @import url("progressbar.css");
 @import url("sidebar.css");
+@import url("separator.css");
 @import url("scale.css");
 @import url("scrollbar.css");
 @import url("toolbar.css");
