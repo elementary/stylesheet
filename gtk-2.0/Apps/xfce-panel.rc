@@ -1,0 +1,110 @@
+
+style "elementary-panel"
+{
+	xthickness		= 1
+	ythickness		= 0
+
+	bg_pixmap[NORMAL]	= "Apps/xfce-panel/panel-dark.png" # Disable for normal panel backgrounds.
+
+	fg[NORMAL]				= "#ffffff"
+	fg[ACTIVE]				= "#ffffff"
+	fg[SELECTED]				= "#ffffff"
+	fg[PRELIGHT]				= "#ffffff"
+	bg[NORMAL]				= shade (0.85, "#3B3B3B")
+	bg[ACTIVE]				= shade (0.85, "#3B3B3B")
+	bg[SELECTED]				= shade (0.85, "#3B3B3B")
+	bg[PRELIGHT]				= shade (0.85, "#3B3B3B")
+
+	engine "murrine" {
+		roundness			= 0
+		highlight_shade     		= 1.0 
+		lightborder_shade   		= 0.88
+		gradient_shades     		= {0.90,1.09,1.10,1.30}
+		contrast			= 1.05
+		border_shades 			= {1.2, 1.1}
+		textstyle			= 0
+		arrowstyle			= 0
+	}
+
+}
+
+style "elementary-panel-handle" 
+{
+    engine "pixmap"
+    {    
+        image
+        {
+		function 			= HANDLE
+        }    
+    }
+}
+
+style "murrine-menu-calendar" = "murrine-thin"
+{
+	text[INSENSITIVE]			= "#666666"
+	text[NORMAL]				= "#ffffff"
+	base[NORMAL]				= "#3B3B3B"
+	base[ACTIVE]				= "#555753"
+
+	engine "murrine"
+	{
+		roundness			= 1
+	}
+}
+
+style "murrine-menu-entry" = "murrine-thin"
+{
+
+	ythickness				= 3
+
+	base[NORMAL]				= "#BBBBBB"
+	base[ACTIVE]				= "#BBBBBB"
+
+	engine "murrine"
+	{
+		roundness			= 3
+	}
+}
+
+style "murrine-menu-item" = "murrine-wider-dark"
+{
+	engine "murrine"
+	{
+		roundness			= 0
+		lightborderstyle		= 1
+		contrast			= 1.5
+	}
+}
+
+class "PanelApp*"				style "elementary-panel"
+class "PanelToplevel*"				style "elementary-panel"
+class "*Xfce*Panel*"				style "elementary-panel"
+
+# widget "*fast-user-switch*"			style "elementary-panel"
+# widget "PanelToplevel*PanelAppletFrame"		style "elementary-panel"
+# widget "PanelToplevel*PanelMenuBar"		style "elementary-panel"
+# widget "PanelToplevel*PanelWidget*"		style "elementary-panel"
+# widget "*CPUFreq*Applet*"			style "elementary-panel"
+widget "*Xfce*Panel*"				style "elementary-panel"
+
+# widget_class "BonoboPlug*PanelApplet*"		style "elementary-panel"
+widget_class "*tray*"				style "elementary-panel"
+
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"			style "murrine-dark"
+widget_class "*Panel*<GtkMenuBar>*"		style "murrine-dark"
+widget "*.clock-applet-button.*"		style "murrine-dark"
+widget "*PanelApplet*"				style "murrine-dark"
+
+# Hide ugly handle
+class "PanelAppletFrame" 			style:highest "elementary-panel-handle"
+
+widget_class "*<GtkMenu>*"              	style "murrine-thin-dark"
+widget_class "*<GtkMenuItem>*"          	style "murrine-menu-item"
+widget_class "*<GtkMenuItem>.*.<GtkCalendar>"	style "murrine-menu-calendar"
+widget_class "*<GtkMenuItem>.*.<GtkEntry>"	style "murrine-menu-entry"
+widget_class "*<GtkMenuItem>.*.<GtkScale>" 	style "murrine-scale"
+widget_class "*<GtkMenuBar>*"           	style "murrine-menubar"
+widget "*.gtk-combobox-popup-menu.*"   		style "murrine-dark"
+
+
