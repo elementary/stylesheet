@@ -657,4 +657,4 @@ include "Apps/menus-dark.rc"
 include "Apps/postler.rc"
 include "Apps/steadyflow.rc"
 include "Apps/totem.rc"
-
+include "Apps/xfce-panel.rc"
