@@ -130,6 +130,30 @@ GtkComboBox.button {
 .check,
 .check row:selected,
 .check row:selected:focused {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.82)),
+                     color-stop (0.20, shade (@base_color, 0.94)),
+			         to (@base_color));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.65)),
+                     to (shade (@bg_color, 0.72)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
 }
 
 .check:insensitive,
@@ -156,6 +180,32 @@ GtkComboBox.button {
 .radio,
 .radio row:selected,
 .radio row:selected:focused {
+
+    border-radius:  10;
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.82)),
+                     color-stop (0.20, shade (@base_color, 0.94)),
+			         to (@base_color));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.65)),
+                     to (shade (@bg_color, 0.72)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
 }
 
 .radio:insensitive,
