@@ -233,20 +233,102 @@ GtkComboBox.button {
  *************/
 
 GtkSwitch {
+    padding:    2;
     font: bold condensed 10;
 }
 
 GtkSwitch.trough {
+
+    color:          @text_color;
+
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (shade (@base_color, 0.54)),
+				     to (shade (@base_color, 0.76)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.46)),
+                     to (shade (@bg_color, 0.58)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.12)),
+                    to (alpha (#000, 0.06)));
+
 }
 
 GtkSwitch.trough:active {
+    color:          #fff;
+
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (shade (@selected_bg_color, 0.89)),
+				     to (shade (@selected_bg_color, 1.11)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@selected_bg_color, 0.76)),
+                     to (shade (@selected_bg_color, 0.88)));
+
 }
 
 GtkSwitch.trough:insensitive {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@bg_color, 0.85)),
+                     color-stop (0.20, shade (@bg_color, 0.94)),
+			         to (@bg_color));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.75, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
 }
 
-GtkSwitch.slider {
-    -unico-switch-grip-color: shade (@switch_slider_color, 0.97);
+GtkSwitch.slider {     
+    -unico-outer-stroke-style:              none;
+
+    border-width: 1;    
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (@base_color),
+                    to (shade (@base_color, 0.88)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@bg_color, 0.78)),
+                    to (shade (@bg_color, 0.60)));
+
+    -unico-focus-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (@keyboard_focus_border_a, 0.62)),
+                    to (alpha (@keyboard_focus_border_b, 0.62)));
+    
 }
 
 GtkSwitch.slider:active {

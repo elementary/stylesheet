@@ -31,10 +31,21 @@
 }
 
 .entry:focused {
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@selected_bg_color, 1.05)),
+                    to (shade (@selected_bg_color, 1.25)));
+
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
-                    from (alpha (#2f90ff, 0.25)),
-                    to (alpha (#56c5ff, 0.25)));
+                    from (alpha (@selected_bg_color, 0.20)),
+                    to (alpha (@selected_bg_color, 0.20)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (@selected_bg_color, 0.15)),
+                    to (shade (@selected_bg_color, 1.55)));
 }
 
 .entry:insensitive {

@@ -111,31 +111,6 @@
 }
 
 .button.default {
-}z
-
-/*******************
- * Toolbar Buttons *
- ******************/
-
-.toolbar.button:active,
-.toolbar.button:hover:active {    
-    -GtkButton-inner-border:    0;
-    background-image:          none;
-    background-color:          shade (@bg_color, 0.70);
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (shade (@bg_color, 0.58)),
-                    color-stop (0.20, shade (@bg_color, 0.70)),
-                    color-stop (0.85, shade (@bg_color, 0.70)),
-                    to (shade (@bg_color, 0.98)));
-
-    -unico-outer-stroke-style:  none;
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                left top, left bottom,
-                from (alpha (#000, 0.00)),
-                to (alpha (#000, 0.00)));
 }
 
 /***************************
