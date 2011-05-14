@@ -224,8 +224,8 @@ GtkIconView.view.cell:selected:focused {
 }
 
 GtkTreeView {
-    -GtkTreeView-vertical-separator: 0;
-    -GtkTreeView-expander-size: 8;
+    -GtkTreeView-vertical-separator:            0;
+    -GtkTreeView-expander-size:                 8;
 }
 
 GtkTreeView.separator {
@@ -236,6 +236,14 @@ column-header {
 }
 
 column-header .button {
+    -unico-outer-stroke-style:                  none;
+    border-radius:                              0;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@base_color, 0.88)),
+                    to (@base_color));
 }
 
 row:hover {
