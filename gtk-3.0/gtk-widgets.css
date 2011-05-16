@@ -98,6 +98,7 @@ GtkSpinButton.button:active {
  *****************/
 .notebook {
     background-color:   shade (@bg_color, 1.06);
+    border-radius:                               4;
 }
 
 .notebook tab {
