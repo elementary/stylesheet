@@ -96,7 +96,7 @@ GtkSpinButton.button:active {
  * Notebooks and *
  * tabs          *
  *****************/
-.notebook {
+/*.notebook {
     background-color:   shade (@bg_color, 1.06);
     border-radius:                               4;
 }
@@ -107,7 +107,7 @@ GtkSpinButton.button:active {
 
 .notebook tab:active {
     background-color:   shade (@bg_color, 1.06);
-}
+}*/
 
 .notebook tab .button,
 .notebook tab .button:hover,
