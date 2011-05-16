@@ -53,9 +53,9 @@
     background-image: -gtk-gradient (linear,
 			         left top,
 			         left bottom,
-			         from (shade (@bg_color, 0.90)),
-                     color-stop (0.20, @bg_color),
-			         to (@bg_color));
+			         from (alpha (#000, 0.10)),
+                     color-stop (0.20, alpha (#000, 0.00)),
+			         to (alpha (#000, 0.00)));
 
     -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
