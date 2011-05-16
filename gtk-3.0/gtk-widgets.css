@@ -97,12 +97,15 @@ GtkSpinButton.button:active {
  * tabs          *
  *****************/
 .notebook {
+    background-color:   shade (@bg_color, 1.06);
 }
 
 .notebook tab {
+    background-color:   shade (@bg_color, 0.85);
 }
 
 .notebook tab:active {
+    background-color:   shade (@bg_color, 1.06);
 }
 
 .notebook tab .button,
