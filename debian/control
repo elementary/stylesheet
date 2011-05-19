@@ -7,7 +7,8 @@ Build-Depends: debhelper (>= 7.0.8)
 
 Package: elementary-theme
 Architecture: all
-Depends: gtk2-engines-aurora, gtk2-engines-murrine
+Depends: gtk2-engines-murrine, gtk3-engines-unico
 Suggests: elementary-icon-theme
 Description: the elementary GTK theme
  The official elementary GTK theme, elementary-theme.
+ Supports GTK+ versions 2 and 3.
