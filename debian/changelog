@@ -1,3 +1,10 @@
+elementary-theme (3.0-0ubuntu1) natty; urgency=low
+
+  * GTK3 and XFWM are now supported
+  * Bumped version to 3.0
+
+ -- Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>  Fri, 03 Jun 2011 02:03:01 +0400
+
 elementary-theme (0.1-0ubuntu1~ppa1) karmic; urgency=low
 
   * Initial release.
