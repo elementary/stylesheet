@@ -7,7 +7,10 @@ Build-Depends: debhelper (>= 7.0.8)
 
 Package: elementary-theme
 Architecture: all
-Depends: gtk2-engines-murrine, gtk3-engines-unico, fonts-open-sans, fonts-raleway
+Depends: fonts-open-sans,
+         fonts-raleway,
+         gtk2-engines-murrine,
+         gtk3-engines-unico
 Suggests: elementary-icon-theme
 Breaks: libgtk-3-common (<< 3.4.0)
 Description: the elementary GTK theme
