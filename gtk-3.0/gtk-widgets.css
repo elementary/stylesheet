@@ -1,0 +1,352 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**********************
+ * Notebooks and Tabs *
+ **********************/
+
+.dynamic-notebook {
+    background-image: -gtk-gradient (linear,
+            left top,
+            left bottom,
+            from (shade (@bg_color, 0.76)),
+            color-stop (0.17, shade (@bg_color, 0.83)),
+            to (shade (@bg_color, 0.90)));
+}
+
+.dynamic-notebook GtkLabel,
+.dynamic-notebook GtkImage {
+ 
+   color: shade (@bg_color, 0.35);
+}
+
+.dynamic-notebook GtkLabel:insensitive,
+.dynamic-notebook GtkImage:insensitive {
+ 
+   color: shade (@bg_color, 0.65);
+}
+
+.dynamic-notebook .notebook {
+    border-width: 1px 0 0 0;
+
+    border-radius: 0;
+
+    padding: 1px 0 0 0;
+
+    -GtkNotebook-tab-overlap: 4px;
+    -GtkNotebook-initial-gap: 10px;
+
+    border-color: alpha (#000, 0.40);
+
+}
+
+.dynamic-notebook .notebook tab {
+    padding: 2px 3px 0 3px;
+
+    color: alpha (@text_color, 0.80);
+
+    border-radius: 0;
+
+    background-image: none;
+    background-color: @transparent;
+
+    border-width: 0 1px 0 0;
+}
+
+.dynamic-notebook .notebook tab:nth-child(first) {
+    border-width: 0 1px 0 1px;
+}
+
+.dynamic-notebook .notebook tab:active {
+    background-image: -gtk-gradient (linear,
+            left top,
+            left bottom,
+            from (shade (@bg_color, 1.04)),
+            to (@bg_color));
+    border-color: alpha (#000, 0.30);
+
+    color: @text_color;
+    border-radius: 4px;
+
+    border-width: 1px;
+}
+
+.notebook {
+
+    border-color: shade (@bg_color, 0.60);
+
+    -GtkNotebook-tab-overlap: 5px;
+
+    background-color: shade (@bg_color, 1.06);
+}
+
+.notebook tab {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@bg_color, 0.75)),
+                     to (shade (@bg_color, 0.80)));
+
+    border-radius: 4px;
+
+    padding: 2px 3px 0 3px;
+}
+
+.dynamic-notebook .notebook tab .entry {
+    border-radius: 2px;
+    padding: 1px 5px;
+}
+
+.notebook tab .entry {
+    border-radius: 2px;
+    padding: 2px 5px;
+}
+
+.notebook tab:active {
+        background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@bg_color, 1.24)),
+                     to (shade (@bg_color, 1.06)));
+
+        color: @text_color;
+
+}
+
+.dynamic-notebook .notebook tab .button,
+.dynamic-notebook .notebook tab .button:hover,
+.dynamic-notebook .notebook tab .button:hover:active,
+.notebook tab .button:hover,
+.notebook tab .button:hover:active {
+
+    padding: 0;
+
+    -GtkButton-inner-border: 0;
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 0;
+
+    background-image:   none;
+    background-color:   alpha (#000, 0.02);
+}
+
+.dynamic-notebook .notebook tab .button:hover:active,
+.notebook tab .button:hover:active {
+    background-color:   alpha (#000, 0.10);
+}
+
+/**************
+ * SourceList *
+ *************/
+
+.sidebar,
+.sidebar.view,
+.source-list,
+.source-list.view {
+    background-color: @bg_color;
+    border-radius: 0;
+    color: shade (@bg_color, 0.50);
+}
+
+.sidebar,
+.source-list {
+    -GtkTreeView-horizontal-separator: 1px;
+    -GtkTreeView-vertical-separator: 6px;
+}
+
+.source-list.category-expander {
+    color: @transparent;
+}
+
+.sidebar.view:selected,
+.sidebar.view:prelight:selected,
+.source-list.view:selected,
+.source-list.view:prelight:selected,
+.source-list.category-expander:hover {
+
+    color: shade (@bg_color, 0.50);
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (alpha (#000, 0.11)),
+                    to (alpha (#000, 0.07)));
+}
+
+.sidebar.view:selected:backdrop,
+.sidebar.view:prelight:selected:backdrop,
+.source-list.view:selected:backdrop,
+.source-list.view:prelight:selected:backdrop {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (alpha (#000, 0.08)),
+                    to (alpha (#000, 0.04)));
+}
+
+.sidebar.view:prelight,
+.source-list.view:prelight {
+    background-color: shade (@bg_color, 1.10);
+}
+
+.sidebar-pane-separator,
+.sidebar-pane-separator:prelight,
+.sidebar-pane-separator:selected {
+
+    border-width: 0;
+    -GtkPaned-handle-size: 1;
+    background-image: none;
+    background-color: shade (@bg_color, 0.75);
+    
+    border-color: shade (@bg_color, 0.75);
+}
+
+.source-list.badge,
+.source-list.badge:prelight,
+.source-list.badge:selected,
+.source-list.badge:prelight:selected {
+    background-image: none;
+    background-color: alpha (#000, 0.4);
+    color: @bg_color;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin: 0 3px;
+    text-shadow: 0 1 alpha (#000, 0.1);
+    icon-shadow: 0 1 alpha (#000, 0.1);
+    border-width: 0;
+}
+
+.source-list.badge:selected,
+.source-list.badge:prelight:selected {
+    color: @bg_color;
+}
+
+.source-list.badge:selected:backdrop,
+.source-list.badge:selected:prelight:backdrop {
+    background-image: none;
+    background-color: alpha (#000, 0.2);
+    color: shade (@bg_color, 0.95);
+    text-shadow: 0 1 alpha (#000, 0.1);
+    icon-shadow: 0 1 alpha (#000, 0.1);
+}
+
+/*************
+ * Statusbar *
+ ************/
+
+GraniteWidgetsStatusBar {
+    padding: 1px;
+
+    background-image: -gtk-gradient (linear,
+		     left top,
+		     left bottom,
+		     from (@bg_color),
+		     to (shade (@bg_color, 0.88)));
+		     
+    border: 1px solid;
+		     
+    border-top-width: 1px;
+    border-top-color: shade (@bg_color, 0.52);
+}
+
+/**************
+* Text Styles *
+**************/
+
+.title { font: raleway thin 36; }
+.h1 { font: open sans bold 24; }
+.h2 { font: open sans light 18; }
+.h3 { font: open sans bold 12; }
+
+/***********
+* Toolbars *
+***********/
+
+.toolbar {
+    -GtkWidget-window-dragging: true;
+    
+    border-style: solid;
+	border-width: 0 0 1px 0;
+
+	border-color: shade (@bg_color, 0.56);
+	
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (@bg_color),
+				     to (shade (@bg_color, 0.84)));
+}
+
+/************
+ * Tooltips *
+ ************/
+ 
+.tooltip,
+.files-overlay-bar {
+    background-color: alpha (black, 0.7);
+    border-radius: 3px;
+    border: 0;
+    padding: 3px 6px;
+    margin: 3px;
+    text-shadow: 0 1 alpha (#000, 0.3);
+}
+
+.tooltip GtkLabel,
+.files-overlay-bar GtkLabel {
+    color: white;
+}
+
+/************
+* TreeViews * 
+************/
+
+GtkTreeView {
+    -GtkTreeView-vertical-separator: 5px;
+    -GtkTreeView-horizontal-separator: 6px;
+    -GtkTreeView-expander-size: 8px;
+    -GtkTreeView-grid-line-pattern: "\000\000";
+}
+
+GtkTreeView row:nth-child(even) {
+	background-color: @base_color;
+}
+
+GtkTreeView row:nth-child(odd) {
+	background-color: shade (@base_color, 0.96);
+}
+
+/********
+* Views *
+********/
+
+.view {
+    background-color: @base_color;
+}
+
+.view:selected {
+    background-color: shade (@base_color, 0.80);
+    color: @text_color;
+}
+
+.view:selected:focus {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+@import url("menu.css");

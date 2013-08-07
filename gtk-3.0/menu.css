@@ -1,0 +1,105 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+ * Menus *
+ *********/
+
+/* this controls the general appearance of the menubar */
+.menubar {
+    border-width: 0;
+    border-style: none;
+    padding: 4px;
+    color: @text_color;
+
+    -GtkWidget-window-dragging: true;
+    -GtkMenuBar-internal-padding: 0;
+}
+
+.menubar.menuitem {
+    border-width: 1px;
+    border-style: none;
+}
+
+.content-view .menu,
+.menu {
+
+    padding: 0 1px 0 1px;
+
+    background-color: #f8f8f8;
+    background-image: none;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: alpha (#000, 0.4);
+}
+
+.menu GtkLabel {
+    color: @text_color;
+}
+
+.menu.button {
+    background-image: none;
+}
+
+.menuitem {
+    padding: 4px 0 4px 0;
+}
+
+.menuitem.accelerator {
+    color: alpha (#FFF, 0.66);
+}
+
+.menuitem.accelerator:prelight,
+.menuitem.accelerator:active {
+    color: alpha (@text_color, 0.49);
+}
+
+.menuitem:insensitive {
+    color: alpha (@text_color, 0.40);
+}
+
+.menuitem:active,
+.menuitem:prelight {
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@selected_bg_color, 1.30)),
+                    to (shade (@selected_bg_color, 0.98)));
+}
+
+/* menu radio and check items are drawn differently */
+.menu.check:active {
+    color: @menu_controls_color;
+}
+
+.menu.radio:active {
+    color: @menu_controls_color;
+}
+
+.menu.check:prelight {
+    color: @selected_fg_color;
+}
+
+.menu.radio:prelight {
+    color: @selected_fg_color;
+}
+

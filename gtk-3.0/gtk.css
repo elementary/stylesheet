@@ -1,0 +1,61 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/* Default color scheme */
+@define-color base_color #FFF;
+@define-color bg_color #DEDEDE;
+@define-color tooltip_bg_color #000;
+@define-color selected_bg_color #3d9bda;
+@define-color text_color #323232;
+@define-color insensitive_color #888;
+@define-color fg_color #323232;
+@define-color tooltip_fg_color #FFF;
+@define-color selected_fg_color #FFF;
+@define-color transparent alpha (#FFF, 0.00);
+
+/* Colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+
+@define-color link_color #08C;
+@define-color frame_color #8a9580;
+@define-color inactive_frame_color #c7ccc1;
+@define-color warning_color #f57900;
+@define-color error_color #cc0000;
+@define-color success_color #4e9a06;
+
+@define-color info_fg_color rgb (0, 136, 204);
+@define-color info_bg_color rgb (252, 252, 189);
+@define-color warning_fg_color rgb (173, 120, 41);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color rgb (166, 38, 38);
+@define-color error_bg_color rgb (237, 54, 54);
+
+
+@define-color insensitive_bg_color #f4f4f2;
+@define-color insensitive_fg_color #a7aba7;
+
+@import url("gtk-widgets.css");
