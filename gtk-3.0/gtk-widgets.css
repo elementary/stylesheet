@@ -16,9 +16,7 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-* {
-    engine: unico;
-    
+* { 
     background-clip: padding-box;
 
     -GtkArrow-arrow-scaling: 0.75;
@@ -43,22 +41,13 @@
     -GtkWidget-focus-padding: 0;
     
     -GtkWidget-wide-separators: true;
-    -GtkWidget-separator-width: 2px;
-    -GtkWidget-separator-height: 2px;
+    -GtkWidget-separator-width: 1px;
+    -GtkWidget-separator-height: 1px;
     
     -GtkWidget-link-color: @link_color;
     -GtkWidget-visited-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
-
-    -unico-bullet-color: shade (@bg_color, 0.535);
-    -unico-bullet-outline-color: shade (@bg_color, 1.2);
-    -unico-focus-border-color: transparent;
-    -unico-focus-border-radius: 2;
-    -unico-focus-fill-color: transparent;
-    -unico-focus-outer-stroke-color: transparent;
-    -unico-inner-stroke-color: transparent;
-    -unico-text-shadow-color: alpha (#fff, 0.30);
 }
 
 /*****************
@@ -93,10 +82,7 @@
 GtkProgressBar.trough,
 .scale.trough,
 GtkComboBox.combobox-entry .button:last-child {
-    -unico-outer-stroke-style: custom;
 	border: 1px solid;
-	-unico-inner-stroke-width: 1px;
-	-unico-outer-stroke-width: 1px;
 }
 
 /* No Border */
@@ -104,10 +90,6 @@ GtkComboBox.combobox-entry .button:last-child {
     border-image: none;
     border-style: none;
     border-width: 0;
-    -unico-outer-stroke-style: none;
-    -unico-inner-stroke-style: none;
-    -unico-outer-stroke-width: 0;
-    -unico-inner-stroke-width: 0;
 }
 
 /**********
@@ -230,10 +212,8 @@ GtkAssistant .sidebar {
     color: mix (@fg_color, @bg_color, 0.40);
     text-shadow: 0 1 shade (@bg_color, 1.04);
 
-    -unico-border-gradient: none;
     -unico-inner-stroke-color: shade (@bg_color, 0.94);
     -unico-inner-stroke-width: 1px 1px 0 0;
-    -unico-outer-stroke-width: 0;
 }
 
 /***********
@@ -297,7 +277,6 @@ GtkComboBox {
 
 .grip {
 	background-color: transparent;
-	-unico-centroid-texture: url("assets/resize-grip.svg");
 }
 
 /************
@@ -451,11 +430,7 @@ GtkScrolledWindow {
 
 .separator {
     -GtkMenuItem-horizontal-padding: 0;
-
-    -unico-border-gradient: none;
     -unico-inner-stroke-color: alpha (#fff, 0.4);
-    -unico-inner-stroke-gradient: none;
-    
     border-color: alpha (#000, 0.15);
 }
 
