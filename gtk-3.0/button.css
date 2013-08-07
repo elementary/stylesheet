@@ -28,11 +28,13 @@ GtkComboBox.combobox-entry .button {
 
 .button {
 
-    text-shadow: 0 1 alpha (#fff, 0.4);
-    icon-shadow: 0 1 alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 
-    border-radius: 2.5px;
+    -unico-outer-stroke-style: custom;
 	border: 1px solid;
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-width: 1px;
 
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 0;
@@ -47,7 +49,12 @@ GtkComboBox.combobox-entry .button {
             from (shade (@bg_color, 1.15)),
             to (shade (@bg_color, 0.98)));
 
-    border-color: alpha (#000, 0.25);
+    border-image: linear-gradient(to top,
+                                  alpha (#000, 0.23),
+                                  alpha (#000, 0.28)
+                                  ) 1 1 1 1;
+
+    border-radius: 2.5px;
         
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
             left bottom, left top,
@@ -225,8 +232,8 @@ GtkComboBox.combobox-entry .button {
 .button.noundo GtkLabel,
 .button.noundo Gtklabel:prelight {
     color: @selected_fg_color;
-    text-shadow: 0 1 alpha (#000, 0.3);
-    icon-shadow: 0 1 alpha (#000, 0.3);
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
 /*********************
@@ -257,8 +264,8 @@ GtkComboBox.combobox-entry .button {
 .button.affirmative GtkLabel,
 .button.affirmative Gtklabel:prelight {
     color: @selected_fg_color;
-    text-shadow: 0 1 alpha (#000, 0.3);
-    icon-shadow: 0 1 alpha (#000, 0.3);
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
 } 
 
 /*****************

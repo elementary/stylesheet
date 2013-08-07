@@ -108,13 +108,13 @@
 .content-view .title,
 .content-view .option-title {
     color: @text_color;
-    text-shadow: 0 1 alpha (#fff, 0.3);
+    text-shadow: 0 1px alpha (#fff, 0.3);
 }
 
 .content-view .subtitle,
 .content-view .option-description {
     color: alpha (@text_color, 0.5);
-    text-shadow: 0 1 alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .content-view .button {
@@ -126,7 +126,7 @@
     -unico-inner-stroke-width: 1;
 
     color: @text_color;
-    text-shadow: 0 1 alpha (#fff, 0.60);
+    text-shadow: 0 1px alpha (#fff, 0.60);
 
     border-style: solid;
     border-radius: 2.5px;

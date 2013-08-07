@@ -161,8 +161,8 @@ GtkProgressBar,
 .trough row:selected,
 .trough row:selected:focused,
 GraniteWidgetsStatusBar {
-    text-shadow: 0 1 alpha (#fff, 0.4);
-    icon-shadow: 0 1 alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 /* white text */
@@ -183,8 +183,8 @@ GraniteWidgetsStatusBar {
 .menu *:active,
 .menu *:prelight,
 .progressbar row {
-    text-shadow: 0 1 alpha (#000, 0.3);
-    icon-shadow: 0 1 alpha (#000, 0.3);
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
 .title { font: raleway thin 36; }
@@ -210,7 +210,7 @@ GtkAssistant .sidebar {
     padding: 12px;
 
     color: mix (@fg_color, @bg_color, 0.40);
-    text-shadow: 0 1 shade (@bg_color, 1.04);
+    text-shadow: 0 1px shade (@bg_color, 1.04);
 
     -unico-inner-stroke-color: shade (@bg_color, 0.94);
     -unico-inner-stroke-width: 1px 1px 0 0;
@@ -402,8 +402,8 @@ GtkIconView.view.cell:selected:focus {
 }
 
 GtkInfoBar GtkLabel {
-    text-shadow: 0 1 alpha (#fff, 0.3);
-    icon-shadow: 0 1 alpha (#fff, 0.3);
+    text-shadow: 0 1px alpha (#fff, 0.3);
+    icon-shadow: 0 1px alpha (#fff, 0.3);
 }
 
 GtkInfoBar .entry,
@@ -928,7 +928,7 @@ GtkComboBox.combobox-entry .button:last-child {
     border: 0;
     padding: 3px 6px;
     margin: 3px;
-    text-shadow: 0 1 alpha (#000, 0.3);
+    text-shadow: 0 1px alpha (#000, 0.3);
 }
 
 .tooltip GtkLabel,

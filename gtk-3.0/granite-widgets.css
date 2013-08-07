@@ -117,8 +117,8 @@
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
-    text-shadow: 0 1 alpha (#000, 0.1);
-    icon-shadow: 0 1 alpha (#000, 0.1);
+    text-shadow: 0 1px alpha (#000, 0.1);
+    icon-shadow: 0 1px alpha (#000, 0.1);
     border-width: 0;
 	-unico-inner-stroke-width: 0;
 	-unico-outer-stroke-width: 0;
@@ -134,8 +134,8 @@
     background-image: none;
     background-color: alpha (#000, 0.2);
     color: shade (@bg_color, 0.95);
-    text-shadow: 0 1 alpha (#000, 0.1);
-    icon-shadow: 0 1 alpha (#000, 0.1);
+    text-shadow: 0 1px alpha (#000, 0.1);
+    icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 
@@ -157,8 +157,6 @@ GraniteWidgetsStatusBar {
     border-top-width: 1px;
 
     border-top-color: shade (@bg_color, 0.52);
-    
-    -unico-inner-stroke-width: 1px;
 
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                      left bottom, left top,
@@ -166,9 +164,6 @@ GraniteWidgetsStatusBar {
                      color-stop (0.20, alpha (#fff, 0.05)),
                      color-stop (0.80, alpha (#fff, 0.05)),
                      to (alpha (#fff, 0.50)));
-                    
-    -unico-outer-stroke-style: custom; 
-    -unico-outer-stroke-width: 0;
 
 }
 
