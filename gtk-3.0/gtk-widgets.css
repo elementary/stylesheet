@@ -277,6 +277,7 @@ GtkComboBox {
 
 .grip {
 	background-color: transparent;
+    background-image: url("assets/resize-grip.svg");
 }
 
 /************
