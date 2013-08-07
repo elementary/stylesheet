@@ -1,0 +1,293 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**************
+ * SourceList *
+ *************/
+
+.sidebar,
+.sidebar.view,
+.source-list,
+.source-list.view {
+    background-color: @bg_color;
+    border-radius: 0;
+    color: shade (@bg_color, 0.50);
+}
+
+.sidebar,
+.source-list {
+    -GtkTreeView-horizontal-separator: 1px;
+    -GtkTreeView-vertical-separator: 6px;
+}
+
+.source-list.category-expander {
+    color: @transparent;
+}
+
+.sidebar.view:selected,
+.sidebar.view:prelight:selected,
+.source-list.view:selected,
+.source-list.view:prelight:selected,
+.source-list.category-expander:hover {
+
+    color: shade (@bg_color, 0.50);
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    -unico-inner-stroke-width: 1px 0 1px 0;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (alpha (#000, 0.11)),
+                    to (alpha (#000, 0.07)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.25)),
+                    to (alpha (#fff, 0.30)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.03)),
+                    to (alpha (#000, 0.10)));
+}
+
+.sidebar.view:selected:backdrop,
+.sidebar.view:prelight:selected:backdrop,
+.source-list.view:selected:backdrop,
+.source-list.view:prelight:selected:backdrop {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (alpha (#000, 0.08)),
+                    to (alpha (#000, 0.04)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.19)),
+                    to (alpha (#fff, 0.25)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.03)),
+                    to (alpha (#000, 0.10)));
+
+}
+
+.sidebar.view:prelight,
+.source-list.view:prelight {
+    background-color: shade (@bg_color, 1.10);
+}
+
+.sidebar-pane-separator,
+.sidebar-pane-separator:prelight,
+.sidebar-pane-separator:selected {
+
+    -unico-centroid-texture: none;
+    border-width: 0;
+    -GtkPaned-handle-size: 1;
+    background-image: none;
+    background-color: shade (@bg_color, 0.75);
+    
+    border-color: shade (@bg_color, 0.75);
+}
+
+.source-list.badge,
+.source-list.badge:prelight,
+.source-list.badge:selected,
+.source-list.badge:prelight:selected {
+    background-image: none;
+    background-color: alpha (#000, 0.4);
+    color: @bg_color;
+    border-radius: 10px;
+    padding: 0 6px;
+    margin: 0 3px;
+    text-shadow: 0 1 alpha (#000, 0.1);
+    icon-shadow: 0 1 alpha (#000, 0.1);
+    border-width: 0;
+	-unico-inner-stroke-width: 0;
+	-unico-outer-stroke-width: 0;
+}
+
+.source-list.badge:selected,
+.source-list.badge:prelight:selected {
+    color: @bg_color;
+}
+
+.source-list.badge:selected:backdrop,
+.source-list.badge:selected:prelight:backdrop {
+    background-image: none;
+    background-color: alpha (#000, 0.2);
+    color: shade (@bg_color, 0.95);
+    text-shadow: 0 1 alpha (#000, 0.1);
+    icon-shadow: 0 1 alpha (#000, 0.1);
+}
+
+
+/*************
+ * Statusbar *
+ ************/
+
+GraniteWidgetsStatusBar {
+    padding: 1px;
+
+    background-image: -gtk-gradient (linear,
+		     left top,
+		     left bottom,
+		     from (@bg_color),
+		     to (shade (@bg_color, 0.88)));
+		     
+    border: 1px solid;
+		     
+    border-top-width: 1px;
+
+    border-top-color: shade (@bg_color, 0.52);
+    
+    -unico-inner-stroke-width: 1px;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.20)),
+                     color-stop (0.20, alpha (#fff, 0.05)),
+                     color-stop (0.80, alpha (#fff, 0.05)),
+                     to (alpha (#fff, 0.50)));
+                    
+    -unico-outer-stroke-style: custom; 
+    -unico-outer-stroke-width: 0;
+
+}
+
+/***********
+ * Popover *
+ **********/
+
+GraniteWidgetsPopOver {
+
+    -GraniteWidgetsPopOver-arrow-width: 21;
+    -GraniteWidgetsPopOver-arrow-height: 10;
+    -GraniteWidgetsPopOver-border-radius: 5px;
+    -GraniteWidgetsPopOver-border-width: 1;
+    -GraniteWidgetsPopOver-shadow-size: 12;
+    
+    border-style: solid;
+    border-color: alpha (#000, 0.3);
+    margin: 0;
+}
+
+.popover_bg {
+    background-color: @transparent;
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (alpha (#f9f9f9, 0.97)),
+                     color-stop (0.80, alpha (#f9f9f9, 0.97)),
+			         to (alpha (#f0f0f0, 0.97)));
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: alpha (#000, 0.3);
+}
+
+GraniteWidgetsPopOver .sidebar.view,
+GraniteWidgetsPopOver * {
+    background-color: @transparent;
+}
+
+GraniteWidgetsPopOver .button {
+
+    background-image: none;
+    
+    background-color: alpha (#fff, 0.0);    
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.80, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.80)),
+                     to (shade (@base_color, 0.74)));
+
+}
+
+GraniteWidgetsPopOver .button:active,
+GraniteWidgetsPopOver .button:hover:active {
+
+	background-image: none;
+
+    background-color: alpha (#000, 0.05);
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.74)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+GraniteWidgetsPopOver .entry {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.88)),
+                     color-stop (0.20, shade (@base_color, 0.94)),
+			         to (shade (@base_color, 0.96)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.76)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+.button.app {
+
+    border-width: 0;
+    border-radius: 5px;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.00)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.00)),
+                     to (alpha (#000, 0.00)));
+}
+
+.app:hover {
+
+    background-color: alpha (#000, 0.08);
+    
+}
+.app:focus {
+
+    background-color: alpha (#000, 0.20);
+
+}

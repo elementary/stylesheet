@@ -1,0 +1,55 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**************
+ * Scrollbars *
+ **************/
+
+.scrollbar {
+    -GtkRange-slider-width: 4;
+    -GtkRange-stepper-size: 0;
+    -GtkRange-stepper-spacing: 1;
+    -GtkRange-trough-border: 2;
+
+    -GtkScrollbar-min-slider-length: 30;
+}
+
+.scrollbar.trough {
+    background-color: @base_color;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.scrollbar.slider,
+.scrollbar.slider:prelight,
+.scrollbar.button {
+    border-width: 0;
+    background-color:         alpha (#000, 0.4);
+    -unico-inner-stroke-color:  rgba (0, 0, 0, 0);
+    -unico-outer-stroke-color:  alpha (#FFF, 0.4);
+    border-radius: 10px;
+}
+
+.scrollbar.slider:insensitive {
+    -GtkRange-slider-width: 0;
+}
+
+.scrollbar.trough:insensitive {
+    -GtkRange-trough-border: 0;
+}
+

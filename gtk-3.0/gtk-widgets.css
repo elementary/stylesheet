@@ -16,6 +16,744 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+* {
+    engine: unico;
+    
+    background-clip: padding-box;
+
+    -GtkArrow-arrow-scaling: 0.75;
+    
+    -GtkCheckButton-indicator-size: 15;
+    -GtkCheckMenuItem-indicator-size: 12;
+    
+    -GtkExpander-expander-size: 10; 
+      
+    -GtkMenu-horizontal-padding: 0;
+    -GtkMenu-vertical-padding: 0;
+    
+    -GtkPaned-handle-size: 8px;
+
+    -GtkSeparatorMenuItem-horizontal-padding: 0;
+    
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+    
+    -GtkTextView-error-underline-color: @error_color;
+    
+    -GtkWidget-focus-padding: 0;
+    
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-separator-width: 2px;
+    -GtkWidget-separator-height: 2px;
+    
+    -GtkWidget-link-color: @link_color;
+    -GtkWidget-visited-link-color: @link_color;
+    -GtkIMHtml-hyperlink-color: @link_color;
+    -GtkHTML-link-color: @link_color;
+
+    -unico-bullet-color: shade (@bg_color, 0.535);
+    -unico-bullet-outline-color: shade (@bg_color, 1.2);
+    -unico-focus-border-color: transparent;
+    -unico-focus-border-radius: 2;
+    -unico-focus-fill-color: transparent;
+    -unico-focus-outer-stroke-color: transparent;
+    -unico-inner-stroke-color: transparent;
+    -unico-text-shadow-color: alpha (#fff, 0.30);
+}
+
+/*****************
+ * Widget States *
+ ****************/
+
+* {
+    background-color: @bg_color;
+    color: @text_color;
+}
+
+*:insensitive {
+    color: @insensitive_color;
+}
+
+*:selected,
+*:selected:focus {
+    background-color: alpha (@selected_bg_color, 0.9);
+    color: @selected_fg_color;
+}
+
+/****************
+* Border Styles *
+****************/
+
+/* Border */
+.check,
+.entry,
+.notebook,
+.radio,
+.separator,
+GtkProgressBar.trough,
+.scale.trough,
+GtkComboBox.combobox-entry .button:last-child {
+    -unico-outer-stroke-style: custom;
+	border: 1px solid;
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-width: 1px;
+}
+
+/* No Border */
+.menu.button {
+    border-image: none;
+    border-style: none;
+    border-width: 0;
+    -unico-outer-stroke-style: none;
+    -unico-inner-stroke-style: none;
+    -unico-outer-stroke-width: 0;
+    -unico-inner-stroke-width: 0;
+}
+
+/**********
+* Padding *
+**********/
+
+/* No Padding */
+
+.entry.progressbar,
+.notebook tab .button,
+.notebook tab .button:hover,
+.notebook tab .button:hover:active,
+.toolbar GtkComboBox {
+    padding: 0;
+}
+
+
+/************
+* Roundness *
+************/
+
+/* Square */
+.dynamic-notebook tab,
+.inline-toolbar.toolbar,
+.inline-toolbar.toolbar .button,
+.pane-separator,
+.rubberband,
+.view {
+    border-radius: 0;
+}
+
+/* Slightly rounded */
+.check,
+.entry,
+.notebook,
+.notebook tab .button {
+    border-radius: 2.5px;
+}
+
+/* Circular */
+.help_button,
+.radio,
+GtkProgressBar,
+.scale.trough {
+    border-radius: 12px;
+}
+
+
+/**************
+* Text Styles *
+**************/
+
+/* etched text */
+.entry,
+.inline-toolbar.toolbar .button,
+*:insensitive,
+.notebook,
+.secondary-toolbar,
+.secondary-toolbar.toolbar .button,
+.sidebar,
+.sidebar.view,
+.sidebar.view:selected:backdrop,
+.sidebar.view:prelight:selected:backdrop,
+.source-list,
+.source-list.view,
+.source-list.view:selected:backdrop,
+.source-list.view:prelight:selected:backdrop
+.toolbar,
+.trough row:selected,
+.trough row:selected:focused,
+GraniteWidgetsStatusBar {
+    text-shadow: 0 1 alpha (#fff, 0.4);
+    icon-shadow: 0 1 alpha (#fff, 0.4);
+}
+
+/* white text */
+.expander row:selected,
+.expander row:selected:focus,
+.menubar *:active,
+.menubar *:prelight,
+.menu *:active,
+.menu *:prelight,
+.progressbar row,
+.sidebar.view:selected {
+    color: @selected_fg_color;
+}
+
+/* text shadow */
+.menubar.menuitem:active,
+.menubar.menuitem:prelight,
+.menu *:active,
+.menu *:prelight,
+.progressbar row {
+    text-shadow: 0 1 alpha (#000, 0.3);
+    icon-shadow: 0 1 alpha (#000, 0.3);
+}
+
+.title { font: raleway thin 36; }
+.h1 { font: open sans bold 24; }
+.h2 { font: open sans light 18; }
+.h3 { font: open sans bold 12; }
+
+/*************
+ * assistant *
+ *************/
+
+GtkAssistant .sidebar .highlight {
+    color: @fg_color;
+    font: bold;
+}
+
+GtkAssistant .sidebar {
+    background-color: shade (@bg_color, 0.97);
+    border-color: shade (@bg_color, 0.8);
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    padding: 12px;
+
+    color: mix (@fg_color, @bg_color, 0.40);
+    text-shadow: 0 1 shade (@bg_color, 1.04);
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-color: shade (@bg_color, 0.94);
+    -unico-inner-stroke-width: 1px 1px 0 0;
+    -unico-outer-stroke-width: 0;
+}
+
+/***********
+* Calendar *
+************/
+
+GtkCalendar {
+    border-radius: 2px;
+}
+
+GtkCalendar.button,
+GtkCalendar.button:insensitive,
+GtkCalendar.header,
+GtkCalendar.view {
+    background-image: none;
+    background-color: @transparent;
+}
+
+.highlight,
+GtkCalendar.highlight {
+    color: #777;
+    border-width: 0;
+}
+
+
+/**************
+ * ComboBoxes *
+ **************/
+
+GtkComboBox {
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: none;
+}
+
+
+/***********
+* Expander *
+***********/
+
+.expander {
+    color: @fg_color;
+}
+
+/***************
+ * Drag N Drop *
+ **************/
+
+.dnd {
+    margin: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @selected_bg_color;
+    border-radius: 5px;
+    background-image: none;
+    background-color: alpha (@selected_bg_color, 0.4);
+}
+
+/********
+ * Grip *
+ ********/
+
+.grip {
+	background-color: transparent;
+	-unico-centroid-texture: url("assets/resize-grip.svg");
+}
+
+/************
+ * iconview *
+ ************/
+
+GtkViewport,
+GtkIconView {
+    padding: 0;
+    background-color: @transparent;
+}
+
+GtkIconView.view.cell:selected,
+GtkIconView.view.cell:selected:focus {
+    background-color: alpha (#000, 0.18);
+    border-radius: 4px;
+    color: @text_color;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.74)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+.rubberband,
+.view.rubberband {
+    background-color: alpha (@selected_bg_color, 0.35);
+    border-color: @selected_bg_color;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/***********
+ * infobar *
+ ***********/
+ 
+.info,
+.question,
+.warning,
+.error {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    -unico-inner-stroke-width: 1px 0 1px 0;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#fff, 0.30)),
+                    to (alpha (#fff, 0.06)));
+}
+
+.info {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#fafafa),
+                    to (#f6f6f6));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (#c3c3c3),
+                    to (#c3c3c3));
+}
+
+.info GtkLabel {
+    color: @text_color;
+}
+
+.question {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#55c1ec),
+                    to (#44a2e9));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (#357fb8),
+                    to (#357fb8));
+}
+
+.question GtkLabel {
+    color: #004166;
+}
+
+.warning {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#fdde76),
+                    to (#fbd058));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (#c09e42),
+                    to (#c09e42));
+}
+
+.warning GtkLabel {
+    color: #664e00;
+}
+
+.error {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#e35d4f),
+                    to (#d33f3d));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (#a2302e),
+                    to (#a2302e));
+}
+
+.error GtkLabel {
+    color: #660000;
+}
+
+GtkInfoBar GtkLabel {
+    text-shadow: 0 1 alpha (#fff, 0.3);
+    icon-shadow: 0 1 alpha (#fff, 0.3);
+}
+
+GtkInfoBar .entry,
+GtkInfoBar .menu {
+    color: @text_color;
+}
+
+
+GtkInfoBar GtkLabel:insensitive {
+    color: @insensitive_color;
+
+}
+
+/******************
+* Scrolled Window *
+******************/
+
+GtkScrolledWindow {
+    background-color: @transparent;
+}
+
+/************
+* Separator *
+************/
+
+.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-color: alpha (#fff, 0.4);
+    -unico-inner-stroke-gradient: none;
+    
+    border-color: alpha (#000, 0.15);
+}
+
+/************
+ * Switches *
+ ***********/
+
+GtkSwitch {
+    -GtkSwitch-slider-width: 22;
+    -GtkSwitch-slider-height: 22;
+    padding: 1px 3px 1px 1px;
+}
+
+GtkSwitch:active {
+    padding: 1px 1px 1px 3px;
+}
+
+GtkSwitch.trough,
+GtkSwitch.trough:backdrop {
+    border: none;
+    border-image: none;
+    background: none;
+    color: transparent;
+    font: open sans bold 1;
+    background-image: url("assets/switch-off.svg");
+    background-size: 48px 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: none;
+}
+
+GtkSwitch.trough:active {
+    background-image: url("assets/switch-on.svg");
+}
+
+GtkSwitch.trough:insensitive {
+    background-image: url("assets/switch-off-disabled.svg");
+}
+
+GtkSwitch.trough:active:insensitive {
+    background-image: url("assets/switch-on-disabled.svg");
+}
+
+GtkSwitch.slider {
+    border: none;
+    background-image: url("assets/switch-slider.svg");
+    background-size: 22px 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: @transparent;
+}
+
+GtkSwitch.slider:focus {
+    background-image: url("assets/switch-slider-focus.svg");
+
+}
+
+GtkSwitch.slider:insensitive {
+    background-image: none;
+    background-color: @transparent;
+}
+
+/********
+* Views *
+********/
+
+.view {
+    background-color: @base_color;
+}
+
+.view:selected {
+    background-color: shade (@base_color, 0.80);
+    color: @text_color;
+}
+
+.view:selected:focus {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+
+/*************
+* Highlights *
+*************/
+
+/* Inner Higlight */
+.gala-workspace-selected,
+.menu.menuitem,
+.menubar.menuitem:active,
+.menubar.menuitem:prelight,
+.menuitem:active,
+.menuitem:prelight,
+.notebook,
+.toolbar,
+GtkProgressBar.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus,
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus {
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.20)),
+                     color-stop (0.10, alpha (#fff, 0.05)),
+                     color-stop (0.90, alpha (#fff, 0.05)),
+                     to (alpha (#fff, 0.50)));
+}
+
+/* Outer Highlight */
+.entry,
+.check,
+.dynamic-notebook .notebook tab .button,
+.notebook tab .button,
+GtkComboBox.combobox-entry .button:last-child {
+        -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                         left top, left bottom,
+                         from (@transparent),
+                         color-stop (0.80, @transparent),
+                         to (alpha (#fff, 0.40)));
+}
+
+/* Outer Highlight Rounded */
+.radio,
+GtkProgressBar.trough {
+        -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                         left top, left bottom,
+                         from (@transparent),
+                         color-stop (0.50, @transparent),
+                         to (alpha (#fff, 0.40)));
+}
+
+/**********
+* Shadows *
+**********/
+
+/* Inner Shadow */
+
+.entry,
+.check,
+.inline-toolbar.toolbar,
+.inline-toolbar.toolbar .button,
+.dynamic-notebook .notebook tab .button,
+.notebook tab .button,
+.radio,
+GtkComboBox.combobox-entry .button:last-child,
+GtkProgressBar.trough,
+.scale.trough {
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+}
+
+/* Outer Shadow */
+
+.menu.menuitem,
+.notebook,
+.cd  {
+        -unico-outer-stroke-gradient:               -gtk-gradient (linear,
+                                                    left top, left bottom,
+                                                    from (alpha (#000, 0.00)),
+                                                    to (alpha (#000, 0.08)));
+}
+
+
+/**********
+* Troughs *
+**********/
+
+/* Interactive Trough */
+
+.check,
+.entry,
+.radio,
+GtkComboBox.combobox-entry .button:last-child {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.82)),
+                     color-stop (0.20, shade (@base_color, 0.90)),
+			         to (@base_color)); 
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.34)),
+                     to (alpha (#000, 0.20)));
+}
+
+
+/* Insensitive Trough */
+
+.check:insensitive,
+.entry:insensitive,
+.radio:insensitive,
+GtkComboBox.combobox-entry .button:last-child:insensitive {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (alpha (#000, 0.10)),
+                     color-stop (0.20, alpha (#000, 0.00)),
+			         to (alpha (#000, 0.00)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
+}
+
+/* Shallow Trough */
+
+GtkProgressBar.trough,
+.scale.trough {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (alpha (#000, 0.18)),
+                     color-stop (0.20, alpha (#000, 0.14)),
+			         to (alpha (#000, 0.04)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.40)),
+                     to (alpha (#000, 0.30)));
+}
+
+/**************
+ * ComboBoxes *
+ **************/
+
+GtkComboBox .separator {
+    border-color: @transparent;
+
+    -unico-border-gradient: none;
+    -unico-inner-stroke-color: @transparent;
+    -unico-inner-stroke-gradient: none;
+}
+
+GtkComboBox.combobox-entry .entry:first-child,
+GtkComboBox.combobox-entry .button:first-child {
+    border-radius: 2.5px 0 0 2.5px;
+    border-width: 1px 0 1px 1px;
+    -unico-outer-stroke-width: 1px 0 1px 1px;
+    -unico-inner-stroke-width: 1px 0 1px 1px;
+}
+
+GtkComboBox.combobox-entry .entry:last-child,
+GtkComboBox.combobox-entry .button:last-child {
+    border-radius: 0 2.5px 2.5px 0;
+    border-width: 1px 1px 1px 0;
+    -unico-outer-stroke-width: 1px 1px 1px 0;
+    -unico-inner-stroke-width: 1px 1px 1px 0;
+
+}
+
+/********
+* Entry *
+********/
+
+*.entry {
+    padding: 5px;
+    -GtkEntry-progress-border: 0;
+}
+
+.entry.progressbar {
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@selected_bg_color, 1.23)),
+                    to (shade (@selected_bg_color, 1.37)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@selected_bg_color, 1.00)),
+                    to (shade (@selected_bg_color, 1.00)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (@transparent),
+                    to (@transparent));
+}
+
+
+/*FIXME: This fucks up progressbar entry icons */
+ 
+.entry.image {
+    color: shade (@text_color, 2);
+}
+
+.entry.image:hover {
+    color: @text_color;
+}
+
+
 /**********************
  * Notebooks and Tabs *
  **********************/
@@ -43,6 +781,8 @@
 
 .dynamic-notebook .notebook {
     border-width: 1px 0 0 0;
+    -unico-outer-stroke-style: none;
+    -unico-inner-stroke-style: none;
 
     border-radius: 0;
 
@@ -66,10 +806,22 @@
     background-color: @transparent;
 
     border-width: 0 1px 0 0;
+    -unico-inner-stroke-width: 0 1px 0 0;
+    -unico-outer-stroke-width: 0;
+    -unico-border-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (@transparent),
+        to (alpha (#000, 0.20)));
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (@transparent),
+        to (alpha (#fff, 0.20)));
+
 }
 
 .dynamic-notebook .notebook tab:nth-child(first) {
     border-width: 0 1px 0 1px;
+    -unico-inner-stroke-width: 0 1px 0 1px;
 }
 
 .dynamic-notebook .notebook tab:active {
@@ -78,12 +830,19 @@
             left bottom,
             from (shade (@bg_color, 1.04)),
             to (@bg_color));
+
+    -unico-border-gradient: none;
     border-color: alpha (#000, 0.30);
 
     color: @text_color;
     border-radius: 4px;
 
     border-width: 1px;
+    -unico-inner-stroke-width: 1px;
+    -unico-outer-stroke-width: 1px;
+
+    -unico-inner-stroke-color: alpha (#fff, 0.30);
+
 }
 
 .notebook {
@@ -142,6 +901,11 @@
 
     background-image:   none;
     background-color:   alpha (#000, 0.02);
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.29)),
+                     to (alpha (#000, 0.32)));
 }
 
 .dynamic-notebook .notebook tab .button:hover:active,
@@ -149,148 +913,32 @@
     background-color:   alpha (#000, 0.10);
 }
 
-/**************
- * SourceList *
- *************/
+.pane-separator,
+.pane-separator:prelight,
+.pane-separator:selected {
 
-.sidebar,
-.sidebar.view,
-.source-list,
-.source-list.view {
-    background-color: @bg_color;
-    border-radius: 0;
-    color: shade (@bg_color, 0.50);
-}
-
-.sidebar,
-.source-list {
-    -GtkTreeView-horizontal-separator: 1px;
-    -GtkTreeView-vertical-separator: 6px;
-}
-
-.source-list.category-expander {
-    color: @transparent;
-}
-
-.sidebar.view:selected,
-.sidebar.view:prelight:selected,
-.source-list.view:selected,
-.source-list.view:prelight:selected,
-.source-list.category-expander:hover {
-
-    color: shade (@bg_color, 0.50);
-    border-style: solid;
-    border-width: 1px 0 1px 0;
-
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (alpha (#000, 0.11)),
-                    to (alpha (#000, 0.07)));
-}
-
-.sidebar.view:selected:backdrop,
-.sidebar.view:prelight:selected:backdrop,
-.source-list.view:selected:backdrop,
-.source-list.view:prelight:selected:backdrop {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (alpha (#000, 0.08)),
-                    to (alpha (#000, 0.04)));
-}
-
-.sidebar.view:prelight,
-.source-list.view:prelight {
-    background-color: shade (@bg_color, 1.10);
-}
-
-.sidebar-pane-separator,
-.sidebar-pane-separator:prelight,
-.sidebar-pane-separator:selected {
-
-    border-width: 0;
-    -GtkPaned-handle-size: 1;
-    background-image: none;
-    background-color: shade (@bg_color, 0.75);
+	-unico-centroid-texture: url("assets/pane-handle.svg");
     
-    border-color: shade (@bg_color, 0.75);
-}
-
-.source-list.badge,
-.source-list.badge:prelight,
-.source-list.badge:selected,
-.source-list.badge:prelight:selected {
-    background-image: none;
-    background-color: alpha (#000, 0.4);
-    color: @bg_color;
-    border-radius: 10px;
-    padding: 0 6px;
-    margin: 0 3px;
-    text-shadow: 0 1 alpha (#000, 0.1);
-    icon-shadow: 0 1 alpha (#000, 0.1);
-    border-width: 0;
-}
-
-.source-list.badge:selected,
-.source-list.badge:prelight:selected {
-    color: @bg_color;
-}
-
-.source-list.badge:selected:backdrop,
-.source-list.badge:selected:prelight:backdrop {
-    background-image: none;
-    background-color: alpha (#000, 0.2);
-    color: shade (@bg_color, 0.95);
-    text-shadow: 0 1 alpha (#000, 0.1);
-    icon-shadow: 0 1 alpha (#000, 0.1);
-}
-
-/*************
- * Statusbar *
- ************/
-
-GraniteWidgetsStatusBar {
-    padding: 1px;
-
     background-image: -gtk-gradient (linear,
-		     left top,
-		     left bottom,
-		     from (@bg_color),
-		     to (shade (@bg_color, 0.88)));
-		     
-    border: 1px solid;
-		     
-    border-top-width: 1px;
-    border-top-color: shade (@bg_color, 0.52);
+				     left top,
+				     right top,
+				     from (shade (@base_color, 0.55)),
+                     color-stop (0.15, @base_color),
+                     color-stop (0.85, shade (@base_color, 0.88)),
+				     to (shade (@base_color, 0.55)));
 }
 
-/**************
-* Text Styles *
-**************/
-
-.title { font: raleway thin 36; }
-.h1 { font: open sans bold 24; }
-.h2 { font: open sans light 18; }
-.h3 { font: open sans bold 12; }
-
-/***********
-* Toolbars *
-***********/
-
-.toolbar {
-    -GtkWidget-window-dragging: true;
+.pane-separator.vertical,
+.pane-separator.vertical:prelight,
+.pane-separator.vertical:selected {
     
-    border-style: solid;
-	border-width: 0 0 1px 0;
-
-	border-color: shade (@bg_color, 0.56);
-	
     background-image: -gtk-gradient (linear,
 				     left top,
 				     left bottom,
-				     from (@bg_color),
-				     to (shade (@bg_color, 0.84)));
+				     from (shade (@base_color, 0.55)),
+                     color-stop (0.15, @base_color),
+                     color-stop (0.85, shade (@base_color, 0.88)),
+				     to (shade (@base_color, 0.55)));
 }
 
 /************
@@ -312,9 +960,110 @@ GraniteWidgetsStatusBar {
     color: white;
 }
 
-/************
-* TreeViews * 
-************/
+.button:active:insensitive {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@bg_color, 0.85)),
+                     color-stop (0.20, shade (@bg_color, 0.94)),
+			         to (@bg_color));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (@transparent),
+                     color-stop (0.75, @transparent),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
+}
+
+/*************************
+ * Check and Radio items *
+ *************************/
+
+.check row,
+.check row:selected,
+.check row:selected:focus {
+
+	border: 1px solid;
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-width: 1px;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.29)),
+                     to (alpha (#000, 0.15)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.05)),
+                    to (alpha (#000, 0.03)));
+
+    background-color: #f7f7f7;
+    background-image: none;
+
+}
+
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+}
+
+.check:active,
+.check row:selected:active,
+.check row:selected:focus:active {
+}
+
+.check:active:insensitive,
+.check row:selected:active:insensitive,
+.check row:selected:focus:active:insensitive
+{
+}
+
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focus:inconsistent {
+}
+
+.radio,
+.radio row:selected,
+.radio row:selected:focus {
+
+}
+
+.radio:insensitive,
+.radio row:selected:insensitive,
+.radio row:selected:focus:insensitive {
+}
+
+.radio:active,
+.radio row:selected:active,
+.radio row:selected:focus:active {
+}
+
+.radio:active:insensitive,
+.radio row:selected:active:insensitive,
+.radio row:selected:focus:active:insensitive {
+}
+
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focus:inconsistent {
+}
+
+GtkViewport,
+GtkIconView {
+}
 
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
@@ -331,22 +1080,307 @@ GtkTreeView row:nth-child(odd) {
 	background-color: shade (@base_color, 0.96);
 }
 
-/********
-* Views *
-********/
+GtkTreeView.separator {
 
-.view {
-    background-color: @base_color;
 }
 
-.view:selected {
-    background-color: shade (@base_color, 0.80);
+GtkTreeView .entry {
+    border-radius: 0;
+}
+
+row:hover {
+}
+
+row:insensitive {
+}
+
+
+ConversationList.view.cell {
+    background-color: red;
+}
+
+.cell {
     color: @text_color;
 }
 
-.view:selected:focus {
+.cell:selected,
+.cell:selected:focus {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
 }
 
+.cell {
+    border-width: 0px;
+}
+
+@import url("button.css");
 @import url("menu.css");
+@import url("granite-widgets.css");
+@import url("scale.css");
+@import url("scrollbar.css");
+@import url("toolbar.css");
+@import url("content-view.css");
+@import url("progressbar.css");
+@import url("apps.css");
+
+/**********************
+ * Column Headers *
+ *********************/
+ 
+column-header {
+}
+
+column-header .button,
+.content-view column-header .button {
+    -unico-outer-stroke-width: 0;
+    border-radius: 0;
+}
+
+column-header:nth-child(first) .button,
+.content-view column-header:nth-child(first) .button {
+    border-width: 0 0 1px 0;
+}
+
+column-header .button {
+
+    font: bold;
+
+	padding: 4px 2px 4px 2px;
+
+	border-width: 0 0 1px 1px;
+
+    -unico-outer-stroke-style: none;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@base_color, 0.88)),
+                    to (@base_color));
+
+        -unico-border-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (shade (@base_color, 0.88)),
+        to (shade (@base_color, 0.70)));
+
+}
+
+column-header .button:hover {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@base_color, 0.90)),
+                                     color-stop (0.02, shade (@base_color, 0.80)),
+                                     color-stop (0.96, @base_color),
+                                     color-stop (0.99, shade (@base_color, 0.50)),
+                    to (shade (@base_color, 0.45)));
+}
+
+/**********************
+ * Remove Backgrounds *
+ *********************/
+ 
+GtkDrawingArea,
+GtkImage,
+GtkImage:insensitive,
+GtkImage:selected,
+GtkLabel {
+    background-color: @transparent;
+}
+
+/*****************
+ * Fix Menu Seps *
+ ****************/
+
+.menuitem.separator {
+    border-width: 1px;
+}
+
+GtkScale {
+    padding: 14px;
+}
+
+/*************************************
+ * Fix Entry, Check, and Radio Focus *
+ *************************************/
+
+*.entry:focus,
+*.check:focus,
+*.radio:focus {
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (@selected_bg_color, 0.80)),
+                    to (alpha (@selected_bg_color, 0.75)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (@selected_bg_color, 0.23)),
+                    to (alpha (@selected_bg_color, 0.25)));
+}
+
+/**********
+* Spinner *
+**********/
+
+.spinner:active {
+    transition: 500ms linear loop;
+ }
+
+/*********
+* Linked *
+*********/
+
+/* Middle button */
+.linked .entry,
+.linked .button,
+.linked .button:active,
+.linked .button:active:hover,
+.linked .button:focus,
+.linked .button:focus:active,
+.linked .button:insensitive {
+    border-right-width: 0;
+    -unico-outer-stroke-width: 1px 0 1px 0;
+    border-radius: 0;
+}
+
+/*********
+* Linked *
+*********/
+
+/* Middle button */
+.linked .entry,
+.linked .button,
+.linked .button:active,
+.linked .button:active:hover,
+.linked .button:focus,
+.linked .button:focus:active,
+.linked .button:insensitive {
+    border-right-width: 0;
+    -unico-outer-stroke-width: 1px 0 1px 0;
+    border-radius: 0;
+}
+
+/* Leftmost button */
+.linked .entry:first-child,
+.linked .button:first-child,
+.linked .button:active:first-child,
+.linked .button:active:hover:first-child,
+.linked .button:focus:first-child,
+.linked .button:focus:active:first-child,
+.linked .button:insensitive:first-child {
+    -unico-outer-stroke-width: 1px 0 1px 1px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2.5px;
+    border-top-left-radius: 2.5px;
+}
+
+/* Rightmost button */
+.linked .entry:last-child,
+.linked .button:last-child,
+.linked .button:active:last-child,
+.linked .button:active:hover:last-child,
+.linked .button:focus:last-child,
+.linked .button:focus:active:last-child,
+.linked .button:insensitive:last-child {
+    border-right-width: 1px;
+    -unico-outer-stroke-width: 1px 1px 1px 0;
+    border-bottom-right-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* Linked single button */
+.linked .entry:only-child,
+.linked .button:only-child,
+.linked .button:active:only-child,
+.linked .button:active:hover:only-child,
+.linked .button:focus:only-child,
+.linked .button:focus:active:only-child,
+.linked .button:insensitive:only-child {
+    border-width: 1px;
+    -unico-outer-stroke-width: 1px;
+    border-radius: 2.5px;
+}
+
+/**********
+ * Frames *
+ **********/
+
+.frame {
+    border: 1px solid;
+    border-color: shade (@bg_color, 0.70);
+    padding: 0;
+}
+
+GtkScrolledWindow.frame {
+    border: 1px solid;
+    border-color: shade (@bg_color, 0.70);
+    padding: 0;
+}
+
+/* avoid borders when a viewport is
+ * packed into a ScrolledWindow or Pane */
+GtkScrolledWindow GtkViewport.frame,
+GtkPaned .frame {
+    border-style: none;
+}
+
+
+/*****************
+ * GtkSpinButton *
+ *****************/
+.spinbutton .button {
+    border-radius: 0;
+    border-width: 0 0 0 1px;
+    background-color: @transparent;
+    background-image: none;
+    -unico-outer-stroke-width: 0;
+    -unico-inner-stroke-width: 0;
+    padding: 2px 6px;
+}
+
+.spinbutton .button:active,
+.spinbutton .button:active:hover {
+
+    background-color: alpha (#000, 0.05);
+	background-image: none;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.74)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+.spinbutton .button:focus,
+.spinbutton .button:focus:active {
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (@selected_bg_color, 0.80)),
+                    to (alpha (@selected_bg_color, 0.75)));
+}
+
+.spinbutton .button:insensitive,
+.spinbutton .button:focus:insensitive {
+    background-image: none;
+    background-color: alpha (#000, 0.05);
+    color: @insensitive_color;
+}
+
+.spinbutton .button:last-child {
+    border-width: 0 0 0 1px;
+    border-radius: 0 2px 2px 0;
+    -unico-outer-stroke-width: 0;
+}
+
+.spinbutton .button:first-child {
+    border-width: 1px 0 0 0;
+    border-radius: 2px 0 0 2px;
+    -unico-outer-stroke-width: 0;
+}

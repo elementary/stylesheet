@@ -1,0 +1,216 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**************
+ * GNOME Crap *
+ *************/
+
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    -EogScrollView-shadow-type: none;
+}
+
+/**********
+ * Birdie *
+ *********/
+
+BirdieWidgetsTweetList * {
+    background-image: none;
+    background-color: @transparent;
+    -unico-inner-stroke-style: none;
+    -unico-outer-stroke-style: none;
+}
+
+/********
+ * Gala *
+ *******/
+
+.gala-workspaces-background {
+	border-top: 1px solid alpha (#fff, 0.15);
+	background-image: -gtk-gradient (linear,
+		left top, left bottom,
+		from (#1d1d1d),
+		color-stop (0.07, #252525),
+		to (#252525));
+}
+
+.gala-workspace-selected {
+
+	border: 1px solid alpha (#000, 0.15);
+	border-radius: 4px;
+
+	-unico-inner-stroke-width: 1px;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@selected_bg_color, 1.25)),
+                    to (shade (@selected_bg_color, 0.98)));
+}
+
+/*********
+ * Geary *
+ ********/
+
+ConversationListView {
+    -GtkTreeView-grid-line-width: 0;
+}
+
+ConversationListView.view.cell {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: alpha (#000, 0.2);
+}
+
+ConversationListView.view.cell:selected {
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: shade (@selected_bg_color, 0.8);
+}
+
+/*********
+ * Noise *
+ ********/
+
+.album-list-view,
+.album-list-view GtkLabel,
+.album-list-view:backdrop,
+.album-list-view GtkLabel:backdrop,
+.album-list-view GraniteWidgetsRating {
+    background-color: #262626;
+	color: @selected_fg_color;
+
+    border-radius: 0;
+    border-color: #000;
+}
+
+.album-list-view GtkTreeView,
+.album-list-view GtkTreeView:backdrop {
+    background-color: #262626;
+	background-image: -gtk-gradient (linear,
+	                                 right bottom,
+	                                 left bottom,
+	                                 from (#262626),
+	                                 to (#262626));
+	color: @selected_fg_color;
+    -GtkTreeView-vertical-separator: 3;
+    -GtkTreeView-grid-line-width: 0;
+}
+
+.album-list-view GtkTreeView row:nth-child(even),
+.album-list-view GtkTreeView row:nth-child(even):backdrop {
+    background-image: none;
+	background-color: #313131;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #373737;
+}
+
+
+.album-list-view GtkTreeView row:nth-child(odd),
+.album-list-view GtkTreeView row:nth-child(odd):backdrop {
+    background-image: none;
+	background-color: #262626;
+    border-width: 0px;
+    border-style: none;
+}
+
+.album-list-view GtkTreeView row:selected {
+    background-color: @selected_bg_color;
+	color: @selected_fg_color;
+}
+
+/**********
+ * Notify *
+ *********/
+
+.notify {
+    /*-notify-shadow: 0px 2px 18px alpha (#000, 0.60);*/
+
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+
+    border-color: alpha (#000, 0.30);
+
+    background-color: alpha (#f8f8f8, 0.95);
+}
+
+.notify .low {
+}
+
+.notify .critical {
+}
+
+/*********
+ * Panel *
+ ********/
+
+.panel {
+    background-color: alpha (#000, 0.7);
+    color: #fff;
+    font-weight: bold;
+}
+
+.panel-shadow {
+    background-color: @transparent;
+    background-image: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.3)),
+                     to (alpha (#000, 0.0)));
+}
+
+.panel-app-button {
+    -GtkMenuItem-horizontal-padding: 6px;
+}
+
+.composited-indicator {
+    background-color: @transparent;
+    color: #fff;
+    padding: 0 2px;
+}
+
+.composited-indicator.menuitem:active,
+.composited-indicator.menuitem:prelight {
+    border-style: none;
+    -unico-inner-stroke-width: 0;
+    background-image: none;
+}
+
+/************
+ * Terminal *
+ ***********/
+
+TerminalScreen {
+    -TerminalScreen-background-darkness: 0.85;
+
+    background-color: #000;
+
+    color: #fff;
+}
+
+/*********
+ * Tweet *
+ ********/
+
+.tweet {
+    padding: 0;
+    -unico-inner-stroke-width: 0;
+}

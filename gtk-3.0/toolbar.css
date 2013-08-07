@@ -1,0 +1,172 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+* Toolbars *
+***********/
+
+.toolbar {
+    -GtkWidget-window-dragging: true;
+    
+    padding: 1px;
+    
+    border-style: solid;
+	border-width: 0 0 1px 0;
+	-unico-inner-stroke-width: 0 0 1px 0;
+
+	border-color: shade (@bg_color, 0.56);
+	
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (@bg_color),
+				     to (shade (@bg_color, 0.84)));
+}
+
+.toolbar .separator {
+    border-width: 0;
+}
+
+
+/*********************
+* Secondary Toolbars *
+*********************/
+
+.secondary-toolbar.toolbar {
+
+    padding: 2px;
+    -unico-inner-stroke-width: 1px 0 1px 0;
+
+    background-image: -gtk-gradient (linear,
+		     left top,
+		     left bottom,
+		     from (shade (@bg_color, 0.84)),
+		     to (shade (@bg_color, 0.80)));
+		     
+    border-color: shade (@bg_color, 0.50);
+}
+
+.secondary-toolbar.toolbar .button {
+
+    -unico-border-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (shade (@bg_color, 0.74)),
+        to (shade (@bg_color, 0.61)));
+}
+
+
+/******************
+* Bottom Toolbars *
+******************/
+
+.bottom-toolbar.toolbar {
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    -unico-inner-stroke-width: 1px;
+
+    border-color: shade (@bg_color, 0.66);
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (@bg_color),
+				     to (shade (@bg_color, 0.88)));
+}
+
+.bottom-toolbar.toolbar .button {
+    padding: 2px 3px 2px 3px;
+}
+
+
+/*******************
+ * Inline toolbars *
+ *******************/
+
+
+.inline-toolbar.toolbar {
+
+    -GtkToolbar-button-relief: normal;
+    -unico-inner-stroke-width: 1px;
+    border-width: 0 1px 1px 1px;
+    padding: 0;
+    -unico-border-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (shade (@bg_color, 0.70)),
+        to (shade (@bg_color, 0.70)));
+
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@base_color, 0.92)),
+                                     to (shade (@base_color, 0.98)));
+
+}
+
+GtkPaned .inline-toolbar.toolbar {
+
+    border-width: 1px 0 0 0;
+    /*FIXME: This should probably use alpha just in case */
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@bg_color, 0.92)),
+                                     to (shade (@bg_color, 0.98)));
+}
+
+.inline-toolbar.toolbar .button {
+    border-width: 0 0 0 1px;
+    -unico-inner-stroke-width: 0;
+    -unico-outer-stroke-width: 0;
+    -GtkButton-inner-border: 2px 4px 2px 4px;
+    padding: 0;
+    background-image: none;
+    background-color: @transparent;
+}
+
+.inline-toolbar.toolbar .button:active,
+.inline-toolbar.toolbar .button:active:hover {
+
+    background-color: alpha (#000, 0.05);
+	background-image: none;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.74)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+.inline-toolbar.toolbar GtkToolButton:first-child .button,
+.inline-toolbar.toolbar .button:first-child {
+    border-width: 0;
+    -unico-inner-stroke-width: 0;
+}
+
+.inline-toolbar.toolbar GtkToolButton:last-child .button,
+.inline-toolbar.toolbar .button:last-child {
+    border-width: 0 1px 0 1px;
+    border-radius: 0 2px 2px 0;
+    -unico-outer-stroke-width: 0;
+}
+
+.inline-toolbar.toolbar .button *:insensitive,
+.inline-toolbar.toolbar .button:insensitive {
+    background-image: none;
+    background-color: alpha (#000, 0.02);
+    color: @insensitive_color;
+}

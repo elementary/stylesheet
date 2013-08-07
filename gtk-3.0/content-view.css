@@ -1,0 +1,246 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+.content-view-window {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#f8f8f8),
+                    color-stop (0.8, #f8f8f8),
+                    to (#f0f0f0));
+    
+    border-radius: 5px;
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: alpha (#000, 0.25);
+
+}
+
+.content-view,
+.content-view GtkViewport {
+    background-color: @base_color;
+
+}
+
+.content-view GtkNotebook,
+.content-view GtkTreeView,
+.content-view GtkTextView,
+.content-view GtkEventBox {
+    background-image: none;
+    background-color: @transparent;
+}
+
+.content-view column-header .button {
+	border-width: 0 0 1px 1px;
+
+    -unico-outer-stroke-style: none;
+
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@base_color, 0.98)),
+                    to (shade (@base_color, 0.92)));
+
+        -unico-border-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (shade (@base_color, 0.86)),
+        to (shade (@base_color, 0.70)));
+}
+
+.content-view .entry {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.90)),
+                     color-stop (0.20, shade (@base_color, 0.96)),
+			         to (shade (@base_color, 0.98)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.76)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+.content-view .entry:insensitive {
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (alpha (#000, 0.10)),
+                     color-stop (0.20, alpha (#000, 0.00)),
+			         to (alpha (#000, 0.00)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.78)),
+                     to (shade (@base_color, 0.80)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.05)),
+                    to (alpha (#000, 0.02)));
+}
+
+
+
+.content-view .title,
+.content-view .option-title {
+    color: @text_color;
+    text-shadow: 0 1 alpha (#fff, 0.3);
+}
+
+.content-view .subtitle,
+.content-view .option-description {
+    color: alpha (@text_color, 0.5);
+    text-shadow: 0 1 alpha (#fff, 0.4);
+}
+
+.content-view .button {
+
+    -GtkButton-child-displacement-x: 0;
+    -GtkButton-child-displacement-y: 0;
+
+    -unico-outer-stroke-width: 1;
+    -unico-inner-stroke-width: 1;
+
+    color: @text_color;
+    text-shadow: 0 1 alpha (#fff, 0.60);
+
+    border-style: solid;
+    border-radius: 2.5px;
+
+    background-color: alpha (#fff, 0.0);
+
+    background-image: none;
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.80, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.60)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.40)),
+                     color-stop (0.20, alpha (#fff, 0.10)),
+                     color-stop (0.80, alpha (#fff, 0.10)),
+                     to (alpha (#fff, 1.00)));
+
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.18)),
+                     to (alpha (#000, 0.22)));
+}
+
+.content-view .button:active,
+.content-view .button:active:hover {
+
+    -unico-outer-stroke-width: 1;
+    -unico-inner-stroke-width: 1;
+
+    background-color: alpha (#000, 0.05);
+	background-image: none;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@base_color, 0.74)),
+                     to (shade (@base_color, 0.74)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+.content-view .button:insensitive {
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.18)),
+                     to (alpha (#000, 0.22)));
+
+    background-image: none;
+    background-color: @transparent;
+}
+
+.content-view .button GtkLabel:insensitive {
+    color: @insensitive_color;
+}
+
+.content-view .button:focus {
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@selected_bg_color, 1.15)),
+                     to (shade (@selected_bg_color, 0.98)));
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (@transparent),
+                     to (shade (@selected_bg_color, 1.7)));
+}
+
+.content-view .help_button GtkLabel {
+    color: @text_color;
+}   
+
+.content-view .toolbar {
+    -GtkWidget-window-dragging: true;
+    
+    padding: 1px;
+    
+    border-style: solid;
+	border-width: 0 0 1px 0;
+	-unico-inner-stroke-width: 0 0 1px 0;
+
+    border-color: alpha (#000, 0.05);	
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (alpha (#000, 0.10)),
+				     to (alpha (#000, 0.03)));
+
+}
+
+.content-view .check,
+.content-view .check row:selected,
+.content-view .check row:selected:focus {
+
+	border: 1px solid;
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-width: 1px;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.29)),
+                     to (alpha (#000, 0.15)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.05)),
+                    to (alpha (#000, 0.03)));
+
+    background-color: #f7f7f7;
+    background-image: none;
+
+}

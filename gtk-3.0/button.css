@@ -1,0 +1,339 @@
+/* Copyright 2011-2013 elementary LLC.
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+* Button *
+*********/
+
+.button,
+.button.menuitem.menubar,
+GtkComboBox.combobox-entry .button {
+    padding: 3px;
+}
+
+.button {
+
+    text-shadow: 0 1 alpha (#fff, 0.4);
+    icon-shadow: 0 1 alpha (#fff, 0.4);
+
+    border-radius: 2.5px;
+
+    -unico-outer-stroke-style: custom;
+	border: 1px solid;
+	-unico-inner-stroke-width: 1px;
+	-unico-outer-stroke-width: 1px;
+
+    -GtkButton-child-displacement-x: 0;
+    -GtkButton-child-displacement-y: 0;
+    -GtkButton-default-border: 0;
+    -GtkButton-image-spacing: 4px;
+    -GtkButton-inner-border: 3;
+    -GtkButton-interior-focus: true;
+
+    background-image: -gtk-gradient (linear,
+            left top,
+            left bottom,
+            from (shade (@bg_color, 1.15)),
+            to (shade (@bg_color, 0.98)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+            left top, left bottom,
+            from (alpha (#000, 0.23)),
+            to (alpha (#000, 0.28)));
+        
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+            left bottom, left top,
+            from (alpha (#fff, 0.20)),
+            color-stop (0.10, alpha (#fff, 0.05)),
+            color-stop (0.90, alpha (#fff, 0.05)),
+            to (alpha (#fff, 0.50)));
+             
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+            left top, left bottom,
+            from (alpha (#000, 0.00)),
+            to (alpha (#000, 0.08)));
+}
+
+.button:hover {
+    color:@text_color;
+}
+
+.button:insensitive {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (alpha (#fff, 0.20)),
+                    to (alpha (#000, 0.05)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@bg_color, 0.76)),
+                    to (shade (@bg_color, 0.70)));
+                     
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (@transparent),
+                    color-stop (0.80, @transparent),
+                    to (alpha (#fff, 0.40)));
+}
+
+.button:focus {
+    color:@text_color;
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@selected_bg_color, 1.15)),
+                     to (shade (@selected_bg_color, 0.98)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (@selected_bg_color, 0.0)),
+                     to (alpha (@selected_bg_color, 0.25)));
+}
+
+.button:active,
+.button:hover:active,
+.button:focus:active {
+
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+				     from (shade (@bg_color, 0.86)),
+				     to (shade (@bg_color, 0.95)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.56)),
+                     to (shade (@bg_color, 0.68)));
+                     
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+                     
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (@transparent),
+                     color-stop (0.80, @transparent),
+                     to (alpha (#fff, 0.40)));
+}
+
+.button:active,
+.button:hover:active {
+    -unico-focus-border-color: transparent;
+    -unico-focus-fill-color: transparent;
+    -unico-focus-outer-stroke-color: transparent;
+}
+
+
+.toolbar .button {
+    padding: 4px;
+    icon-shadow: none;
+}
+
+/*************************** 
+* Secondary Toolbar Button *
+***************************/
+
+.secondary-toolbar.toolbar .button {
+    -GtkButton-inner-border: 0 3px 0 3px;
+    padding: 0 3px 0 3px;
+    -unico-outer-stroke-width: 0;
+}
+
+.secondary-toolbar.toolbar .button:hover {
+    -GtkButton-inner-border: 0 3px 0 3px;
+    padding: 0 3px 0 3px;
+
+    color: shade (@selected_bg_color, 0.65);
+
+    border-color: @transparent;
+    background-image: none;
+    background-color: @transparent;
+    -unico-inner-stroke-width: 0;
+}
+
+.secondary-toolbar.toolbar .button:active,
+.secondary-toolbar.toolbar .button:hover:active {
+    -GtkButton-inner-border: 0 3px 0 3px;
+    padding: 0 3px 0 3px;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (alpha (#000, 0.00)),
+        to (alpha (#000, 0.00)));
+
+    background-image: -gtk-gradient (linear,
+        left top,
+        left bottom,
+        from (alpha (#000, 0.10)),
+        to (alpha (#000, 0.10)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+        left top, left bottom,
+        from (alpha (#000, 0.30)),
+        color-stop (0.15, alpha (#000, 0.10)),
+        color-stop (0.85, alpha (#000, 0.10)),
+        to (alpha (#fff, 0.50)));
+}
+
+/*****************
+* No Undo Button *
+*****************/
+
+.button.noundo,
+.content-view .button.noundo {
+    background-image: -gtk-gradient (linear,
+				     left top,
+				     left bottom,
+                     from (#e56453),
+                     to (#bb2332));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (#dd3b27),
+                     to (#791235));
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.20)),
+                     color-stop (0.10, alpha (#fff, 0.05)),
+                     color-stop (0.90, alpha (#fff, 0.05)),
+                     to (alpha (#fff, 0.50)));
+}
+
+.button.noundo:focus {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#f67564),
+                    to (#cc3443));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (#dd3b27),
+                    to (#791235));
+}
+
+.button.noundo GtkLabel,
+.button.noundo Gtklabel:prelight {
+    color: @selected_fg_color;
+    text-shadow: 0 1 alpha (#000, 0.3);
+    icon-shadow: 0 1 alpha (#000, 0.3);
+}
+
+/*********************
+* Affirmative Button *
+*********************/
+
+.button.affirmative,
+.content-view .button.affirmative {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (shade (@selected_bg_color, 1.30)),
+                    to (shade (@selected_bg_color, 0.98)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (shade (@selected_bg_color, 1.05)),
+                    to (shade (@selected_bg_color, 0.88)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.20)),
+                     color-stop (0.10, alpha (#fff, 0.05)),
+                     color-stop (0.90, alpha (#fff, 0.05)),
+                     to (alpha (#fff, 0.50)));
+}
+
+.button.affirmative GtkLabel,
+.button.affirmative Gtklabel:prelight {
+    color: @selected_fg_color;
+    text-shadow: 0 1 alpha (#000, 0.3);
+    icon-shadow: 0 1 alpha (#000, 0.3);
+} 
+
+/*****************
+* Infobar Button *
+******************/
+
+GtkInfoBar .button,
+GtkInfoBar .button:focus,
+.dynamic-notebook GtkInfoBar .button {
+
+    text-shadow: none;
+    icon-shadow: none;
+    
+    background-image: none; 
+    background-color: @transparent;  
+    
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.25)),
+                     color-stop (0.50, @transparent),
+                     to (@transparent));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.24)),
+                     to (alpha (#000, 0.30)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.80, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.20)));
+
+}
+
+GtkInfoBar .button:active,
+GtkInfoBar .button:hover:active {
+
+    background-image: none;
+    background-color: alpha (#000, 0.05);
+    
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.30)),
+                     to (alpha (#000, 0.24)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.07)),
+                    to (alpha (#000, 0.03)));
+}
+
+GtkInfoBar .button:insensitive,
+GtkInfoBar .button:hover:insensitive {
+
+    background-image: none;
+    background-color: @transparent;    
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#fff, 0.00)),
+                     color-stop (0.50, alpha (#fff, 0.00)),
+                     to (alpha (#fff, 0.20)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.24)),
+                     to (alpha (#000, 0.18)));
+
+}
+
