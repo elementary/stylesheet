@@ -84,7 +84,6 @@ GtkWindow {
 .radio,
 .separator,
 GtkProgressBar.trough,
-.scale.trough,
 GtkComboBox.combobox-entry .button:last-child {
 	border: 1px solid;
 }
@@ -136,8 +135,7 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Circular */
 .help_button,
 .radio,
-GtkProgressBar,
-.scale.trough {
+GtkProgressBar {
     border-radius: 12px;
 }
 
@@ -583,9 +581,7 @@ GtkProgressBar.trough {
 .dynamic-notebook .notebook tab .button,
 .notebook tab .button,
 .radio,
-GtkComboBox.combobox-entry .button:last-child,
-GtkProgressBar.trough,
-.scale.trough {
+GtkComboBox.combobox-entry .button:last-child {
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (alpha (#000, 0.10)),
@@ -650,8 +646,10 @@ GtkComboBox.combobox-entry .button:last-child:insensitive {
 
 /* Shallow Trough */
 
-GtkProgressBar.trough,
-.scale.trough {
+GtkProgressBar.trough {
+
+	border: 1px solid;
+
     background-image: -gtk-gradient (linear,
 			         left top,
 			         left bottom,
@@ -663,6 +661,11 @@ GtkProgressBar.trough,
                      left top, left bottom,
                      from (alpha (#000, 0.40)),
                      to (alpha (#000, 0.30)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
 }
 
 /**************
@@ -1175,10 +1178,6 @@ GtkLabel {
     border-width: 1px;
 }
 
-GtkScale {
-    padding: 14px;
-}
-
 /*************************************
  * Fix Entry, Check, and Radio Focus *
  *************************************/
@@ -1292,6 +1291,7 @@ GtkScale {
     border: 1px solid;
     border-color: shade (@bg_color, 0.70);
     padding: 0;
+    color: lighter (@theme_fg_color);
 }
 
 GtkScrolledWindow.frame {
