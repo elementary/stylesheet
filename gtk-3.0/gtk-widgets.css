@@ -79,7 +79,6 @@ GtkWindow {
 
 /* Border */
 .check,
-.entry,
 .notebook,
 .radio,
 .separator,
@@ -126,7 +125,6 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Slightly rounded */
 .check,
-.entry,
 .notebook,
 .notebook tab .button {
     border-radius: 2.5px;
@@ -546,7 +544,6 @@ GtkProgressBar.progressbar,
 }
 
 /* Outer Highlight */
-.entry,
 .check,
 .dynamic-notebook .notebook tab .button,
 .notebook tab .button,
@@ -574,7 +571,6 @@ GtkProgressBar.trough {
 
 /* Inner Shadow */
 
-.entry,
 .check,
 .inline-toolbar.toolbar,
 .inline-toolbar.toolbar .button,
@@ -607,7 +603,6 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Interactive Trough */
 
 .check,
-.entry,
 .radio,
 GtkComboBox.combobox-entry .button:last-child {
     background-image: -gtk-gradient (linear,
@@ -702,7 +697,19 @@ GtkComboBox.combobox-entry .button:last-child {
 ********/
 
 *.entry {
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.82),
+                                  shade (@base_color, 0.90) 20%,
+                                  @base_color
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
+
+	border: 1px solid alpha (#000, 0.25);
+    border-radius: 2.5px;
+
     padding: 5px;
+
     -GtkEntry-progress-border: 0;
 }
 
