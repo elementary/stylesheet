@@ -27,14 +27,8 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button {
-
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-
-    -unico-outer-stroke-style: custom;
-	border: 1px solid;
-	-unico-inner-stroke-width: 1px;
-	-unico-outer-stroke-width: 1px;
 
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 0;
@@ -49,24 +43,18 @@ GtkComboBox.combobox-entry .button {
             from (shade (@bg_color, 1.15)),
             to (shade (@bg_color, 0.98)));
 
-    border-image: linear-gradient(to top,
+
+	border: 1px solid alpha (#000, 0.28);
+    border-radius: 2.5px;
+
+    /*border-image: linear-gradient(to top,
                                   alpha (#000, 0.23),
                                   alpha (#000, 0.28)
-                                  ) 1 1 1 1;
+                                  ) 1 1 1 1;*/
 
-    border-radius: 2.5px;
-        
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-            left bottom, left top,
-            from (alpha (#fff, 0.20)),
-            color-stop (0.10, alpha (#fff, 0.05)),
-            color-stop (0.90, alpha (#fff, 0.05)),
-            to (alpha (#fff, 0.50)));
-             
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-            left top, left bottom,
-            from (alpha (#000, 0.00)),
-            to (alpha (#000, 0.08)));
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.50);
+
+                /*0 1px 0 1px alpha (#000, 0.08);*/
 }
 
 .button:hover {
@@ -77,19 +65,12 @@ GtkComboBox.combobox-entry .button {
     background-image: -gtk-gradient (linear,
                     left top,
                     left bottom,
-                    from (alpha (#fff, 0.20)),
-                    to (alpha (#000, 0.05)));
+                    from (alpha (#000, 0.005)),
+                    to (alpha (#000, 0.15)));
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (shade (@bg_color, 0.76)),
-                    to (shade (@bg_color, 0.70)));
-                     
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (@transparent),
-                    color-stop (0.80, @transparent),
-                    to (alpha (#fff, 0.40)));
+	border: 1px solid alpha (#000, 0.20);
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
 }
 
 .button:focus {

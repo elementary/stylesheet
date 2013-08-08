@@ -30,7 +30,7 @@
 }
 
 .scrollbar.trough {
-    background-color: @base_color;
+    background-color: transparent;
     border-width: 0;
     border-radius: 0;
 }
