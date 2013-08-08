@@ -86,7 +86,6 @@
 .sidebar-pane-separator:prelight,
 .sidebar-pane-separator:selected {
 
-    -unico-centroid-texture: none;
     border-width: 0;
     -GtkPaned-handle-size: 1;
     background-image: none;
@@ -108,8 +107,6 @@
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
     border-width: 0;
-	-unico-inner-stroke-width: 0;
-	-unico-outer-stroke-width: 0;
 }
 
 .source-list.badge:selected,

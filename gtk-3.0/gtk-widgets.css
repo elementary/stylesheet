@@ -16,7 +16,7 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-* { 
+/* { 
     background-clip: padding-box;
 
     -GtkArrow-arrow-scaling: 0.75;
@@ -48,14 +48,18 @@
     -GtkWidget-visited-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
+}*/
+
+GtkWindow {
+    background-color: @bg_color
 }
+
 
 /*****************
  * Widget States *
  ****************/
 
 * {
-    background-color: @bg_color;
     color: @text_color;
 }
 
