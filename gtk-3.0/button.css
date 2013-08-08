@@ -37,12 +37,10 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-inner-border: 3;
     -GtkButton-interior-focus: true;
 
-    background-image: -gtk-gradient (linear,
-            left top,
-            left bottom,
-            from (shade (@bg_color, 1.15)),
-            to (shade (@bg_color, 0.98)));
-
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.15),
+                                  shade (@bg_color, 0.98)
+                                  );
 
 	border: 1px solid alpha (#000, 0.28);
     border-radius: 2.5px;
@@ -62,11 +60,10 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button:insensitive {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (alpha (#000, 0.005)),
-                    to (alpha (#000, 0.15)));
+    background-image: linear-gradient(to bottom,
+                                  alpha (#fff, 0.05),
+                                  alpha (#000, 0.15)
+                                  );
 
 	border: 1px solid alpha (#000, 0.20);
 
