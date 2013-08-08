@@ -35,7 +35,6 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-default-border: 0;
     -GtkButton-image-spacing: 4px;
     -GtkButton-inner-border: 3;
-    -GtkButton-interior-focus: true;
 
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 1.15),
@@ -50,7 +49,7 @@ GtkComboBox.combobox-entry .button {
                                   alpha (#000, 0.28)
                                   ) 1 1 1 1;*/
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.50);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
 
                 /*0 1px 0 1px alpha (#000, 0.08);*/
 }
@@ -97,14 +96,6 @@ GtkComboBox.combobox-entry .button {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
 }
 
-.button:active,
-.button:hover:active {
-    -unico-focus-border-color: transparent;
-    -unico-focus-fill-color: transparent;
-    -unico-focus-outer-stroke-color: transparent;
-}
-
-
 .toolbar .button {
     padding: 4px;
     icon-shadow: none;
@@ -117,7 +108,6 @@ GtkComboBox.combobox-entry .button {
 .secondary-toolbar.toolbar .button {
     -GtkButton-inner-border: 0 3px 0 3px;
     padding: 0 3px 0 3px;
-    -unico-outer-stroke-width: 0;
 }
 
 .secondary-toolbar.toolbar .button:hover {
