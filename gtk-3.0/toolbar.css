@@ -37,7 +37,7 @@
 }
 
 .toolbar .separator {
-    border-width: 0;
+    color: transparent;
 }
 
 
