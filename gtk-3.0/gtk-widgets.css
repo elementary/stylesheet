@@ -130,8 +130,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Circular */
 .help_button,
-.radio,
-GtkProgressBar {
+.radio {
     border-radius: 12px;
 }
 
@@ -516,7 +515,6 @@ GtkSwitch.slider:insensitive {
 .menubar.menuitem:prelight,
 .notebook,
 .toolbar,
-GtkProgressBar.progressbar,
 .progressbar row,
 .progressbar row:hover,
 .progressbar row:selected,
