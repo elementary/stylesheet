@@ -608,7 +608,6 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Insensitive Trough */
 
 .check:insensitive,
-.entry:insensitive,
 .radio:insensitive,
 GtkComboBox.combobox-entry .button:last-child:insensitive {
     background-image: -gtk-gradient (linear,
@@ -673,6 +672,17 @@ GtkComboBox.combobox-entry .button:last-child {
     padding: 5px;
 
     -GtkEntry-progress-border: 0;
+}
+
+.entry:insensitive {
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.05),
+                                  alpha (#000, 0.00) 15%,
+                                  alpha (#000, 0.00)
+                                  );
+
+    border-color: alpha (#000, 0.25);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
 }
 
 .entry.progressbar {
