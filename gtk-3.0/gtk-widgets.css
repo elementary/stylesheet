@@ -140,7 +140,6 @@ GtkComboBox.combobox-entry .button:last-child {
 **************/
 
 /* etched text */
-.entry,
 .inline-toolbar.toolbar .button,
 *:insensitive,
 .notebook,
@@ -658,6 +657,9 @@ GtkComboBox.combobox-entry .button:last-child {
 ********/
 
 *.entry {
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.82),
                                   shade (@base_color, 0.90) 20%,
