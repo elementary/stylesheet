@@ -17,18 +17,14 @@
 */
 
 .content-view-window {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (#f8f8f8),
-                    color-stop (0.8, #f8f8f8),
-                    to (#f0f0f0));
-    
+    background-image: linear-gradient(to bottom,
+                                  #f8f8f8,
+                                  #f8f8f8 80%,
+                                  #f0f0f0
+                                  );
+
+    border: 1px solid alpha (#000, 0.25);
     border-radius: 5px;
-    
-    border-width: 1px;
-    border-style: solid;
-    border-color: alpha (#000, 0.25);
 }
 
 .content-view,
@@ -46,9 +42,7 @@
 }
 
 .content-view column-header .button {
-	border-width: 0 0 1px 1px;
-
-    -unico-outer-stroke-style: none;
+    border-width: 0 0 1px 1px;
 
     background-image: -gtk-gradient (linear,
                     left top,
@@ -56,30 +50,18 @@
                     from (shade (@base_color, 0.98)),
                     to (shade (@base_color, 0.92)));
 
-        -unico-border-gradient: -gtk-gradient (linear,
-        left top, left bottom,
-        from (shade (@base_color, 0.86)),
-        to (shade (@base_color, 0.70)));
+    border-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.86),
+                                  shade (@base_color, 0.70)
+                                  ) 1 0 1 0;
 }
 
 .content-view .entry {
-
-    background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@base_color, 0.90)),
-                     color-stop (0.20, shade (@base_color, 0.96)),
-			         to (shade (@base_color, 0.98)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@base_color, 0.74)),
-                     to (shade (@base_color, 0.76)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.07)),
-                    to (alpha (#000, 0.03)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.90),
+                                  shade (@base_color, 0.96) 20%,
+                                  shade (@base_color, 0.98)
+                                  );
 }
 
 .content-view .entry:insensitive {
