@@ -81,10 +81,9 @@ GtkWindow {
 .check,
 .notebook,
 .radio,
-.separator,
 GtkProgressBar.trough,
 GtkComboBox.combobox-entry .button:last-child {
-	border: 1px solid;
+    border: 1px solid;
 }
 
 /* No Border */
@@ -431,8 +430,7 @@ GtkScrolledWindow {
 
 .separator {
     -GtkMenuItem-horizontal-padding: 0;
-    -unico-inner-stroke-color: alpha (#fff, 0.4);
-    border-color: alpha (#000, 0.15);
+    color: alpha (#000, 0.15);
 }
 
 /************
@@ -1175,14 +1173,6 @@ GtkImage:insensitive,
 GtkImage:selected,
 GtkLabel {
     background-color: @transparent;
-}
-
-/*****************
- * Fix Menu Seps *
- ****************/
-
-.menuitem.separator {
-    border-width: 1px;
 }
 
 /*************************************
