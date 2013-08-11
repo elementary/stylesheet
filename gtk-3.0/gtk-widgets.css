@@ -169,8 +169,6 @@ GraniteWidgetsStatusBar {
 .expander row:selected:focus,
 .menubar *:active,
 .menubar *:prelight,
-.menu *:active,
-.menu *:prelight,
 .progressbar row,
 .sidebar.view:selected {
     color: @selected_fg_color;
@@ -179,8 +177,6 @@ GraniteWidgetsStatusBar {
 /* text shadow */
 .menubar.menuitem:active,
 .menubar.menuitem:prelight,
-.menu *:active,
-.menu *:prelight,
 .progressbar row {
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
@@ -517,11 +513,8 @@ GtkSwitch.slider:insensitive {
 
 /* Inner Higlight */
 .gala-workspace-selected,
-.menu.menuitem,
 .menubar.menuitem:active,
 .menubar.menuitem:prelight,
-.menuitem:active,
-.menuitem:prelight,
 .notebook,
 .toolbar,
 GtkProgressBar.progressbar,
@@ -584,7 +577,6 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Outer Shadow */
 
-.menu.menuitem,
 .notebook,
 .cd  {
         -unico-outer-stroke-gradient:               -gtk-gradient (linear,

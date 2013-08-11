@@ -32,8 +32,6 @@
 }
 
 .menubar.menuitem {
-    border-width: 1px;
-    border-style: none;
 }
 
 .content-view .menu,
@@ -47,8 +45,6 @@
     border-style: solid;
     border-width: 1px;
     border-color: alpha (#000, 0.4);
-
-    -unico-inner-stroke-width: 0;
 }
 
 .menu.button {
@@ -57,7 +53,6 @@
 
 .menuitem {
     padding: 4px 0 4px 0;
-    -unico-menuitem-arrow-color: @menu_controls_color;
 }
 
 .menuitem.accelerator {
@@ -75,26 +70,27 @@
 
 .menuitem:active,
 .menuitem:prelight {
-    border-style: solid;
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  shade (@selected_bg_color, 0.98)
+                                  );
+
+/*
+    border-style: 1px solid shade (@selected_bg_color, 0.88);
     border-width: 1px 0 1px 0;
-    -unico-inner-stroke-width: 1px 0 1px 0;
-
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@selected_bg_color, 1.30)),
-                    to (shade (@selected_bg_color, 0.98)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (shade (@selected_bg_color, 1.05)),
-                    to (shade (@selected_bg_color, 0.88)));
 
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (alpha (#fff, 0.30)),
                     to (alpha (#fff, 0.06)));
+*/
+}
 
+
+.menu .menuitem:active,
+.menu .menuitem:prelight {
+    color: @selected_fg_color;
 }
 
 /* menu radio and check items are drawn differently */
