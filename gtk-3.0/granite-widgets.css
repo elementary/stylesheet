@@ -39,6 +39,11 @@
     color: @transparent;
 }
 
+.sidebar.view:prelight,
+.source-list.view:prelight {
+    background-color: shade (@bg_color, 1.10);
+}
+
 .sidebar.view:selected,
 .sidebar.view:prelight:selected,
 .source-list.view:selected,
@@ -49,6 +54,7 @@
     border-style: solid;
     border-width: 1px 0 1px 0;
 
+    background-color: transparent;
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.11),
                                   alpha (#000, 0.07)
@@ -75,11 +81,6 @@
                                   alpha (#000, 0.19),
                                   alpha (#fff, 0.25)
                                   ) 1 1 1 1;
-}
-
-.sidebar.view:prelight,
-.source-list.view:prelight {
-    background-color: shade (@bg_color, 1.10);
 }
 
 .sidebar-pane-separator,
@@ -222,32 +223,17 @@ GraniteWidgetsPopOver .entry {
 			         from (shade (@base_color, 0.88)),
                      color-stop (0.20, shade (@base_color, 0.94)),
 			         to (shade (@base_color, 0.96)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@base_color, 0.74)),
-                     to (shade (@base_color, 0.76)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.07)),
-                    to (alpha (#000, 0.03)));
 }
 
 .button.app {
-
     border-width: 0;
     border-radius: 5px;
     box-shadow: none;
 }
 
 .app:hover {
-
     background-color: alpha (#000, 0.08);
-    
 }
 .app:focus {
-
     background-color: alpha (#000, 0.20);
-
 }
