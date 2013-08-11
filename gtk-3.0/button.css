@@ -30,12 +30,6 @@ GtkComboBox.combobox-entry .button {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 4px;
-    -GtkButton-inner-border: 3;
-
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 1.15),
                                   shade (@bg_color, 0.98)
