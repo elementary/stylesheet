@@ -238,16 +238,7 @@ GraniteWidgetsPopOver .entry {
 
     border-width: 0;
     border-radius: 5px;
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#fff, 0.00)),
-                     to (alpha (#fff, 0.00)));
-
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.00)),
-                     to (alpha (#000, 0.00)));
+    box-shadow: none;
 }
 
 .app:hover {
