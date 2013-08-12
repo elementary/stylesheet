@@ -23,7 +23,7 @@
 .toolbar {
     -GtkWidget-window-dragging: true;
     
-    padding: 1px;
+    padding: 3px;
 
     border: 1px solid shade (@bg_color, 0.56);
     border-width: 0 0 1px 0;

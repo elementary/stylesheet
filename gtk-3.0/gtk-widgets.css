@@ -671,7 +671,7 @@ GtkComboBox.combobox-entry .button:last-child {
     border: 1px solid alpha (#000, 0.25);
     border-radius: 2.5px;
 
-    padding: 5px;
+    padding: 4px;
 
     -GtkEntry-progress-border: 0;
 }
@@ -716,7 +716,6 @@ GtkComboBox.combobox-entry .button:last-child {
 .entry.image:hover {
     color: @text_color;
 }
-
 
 /**********************
  * Notebooks and Tabs *

@@ -22,7 +22,7 @@
 .button,
 .button.menuitem.menubar,
 GtkComboBox.combobox-entry .button {
-    padding: 3px;
+    padding: 2px 3px;
 }
 
 .button {
@@ -53,7 +53,7 @@ GtkComboBox.combobox-entry .button {
 .button:insensitive {
     background-image: linear-gradient(to bottom,
                                   alpha (#fff, 0.05),
-                                  alpha (#000, 0.15)
+                                  alpha (#000, 0.05)
                                   );
 
     border: 1px solid alpha (#000, 0.20);
@@ -89,7 +89,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 .toolbar .button {
-    padding: 4px;
+    padding: 3px;
     icon-shadow: none;
 }
 
