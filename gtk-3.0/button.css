@@ -19,7 +19,6 @@
 /*********
 * Button *
 *********/
-
 .button,
 .button.menuitem.menubar,
 GtkComboBox.combobox-entry .button {
@@ -84,7 +83,7 @@ GtkComboBox.combobox-entry .button {
                                   alpha (#fff, 0.10)
                                   );
 
-	border: 1px solid alpha (#000, 0.25);
+    border: 1px solid alpha (#000, 0.25);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
 }
