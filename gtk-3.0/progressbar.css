@@ -46,17 +46,19 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.03);
 }
 
+/**********************************
+ * Progress bar in a Tree or Cell *
+ *********************************/
+
 .progressbar row,
 .progressbar row:hover {
-
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@selected_bg_color, 1.30)),
-                    color-stop (0.50, shade (@selected_bg_color, 1.20)),
-                    color-stop (0.60, shade (@selected_bg_color, 1.08)),
-                    color-stop (0.70, shade (@selected_bg_color, 1.08)),
-                    to (shade (@selected_bg_color, 1.30)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  shade (@selected_bg_color, 1.20) 50%,
+                                  shade (@selected_bg_color, 1.08) 60%,
+                                  shade (@selected_bg_color, 1.08) 70%,
+                                  shade (@selected_bg_color, 1.30)
+                                  );
 
     border-style: solid;
     border-width: 1px;
@@ -73,14 +75,13 @@ GtkProgressBar.trough {
 .progressbar row:backdrop:hover,
 .progressbar row:selected:backdrop,
 .progressbar row:selected:backdrop:hover {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@bg_color, 1.00)),
-                    color-stop (0.50, shade (@bg_color, 0.90)),
-                    color-stop (0.60, shade (@bg_color, 0.78)),
-                    color-stop (0.70, shade (@bg_color, 0.78)),
-                    to (shade (@bg_color, 1.00)));
+    background-image: linear-gradient(to bottom,
+                                  @bg_color,
+                                  shade (@bg_color, 0.90) 50%,
+                                  shade (@bg_color, 0.78) 60%,
+                                  shade (@bg_color, 0.78) 70%,
+                                  @bg_color
+                                  );
 
     border-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.80),
@@ -90,22 +91,19 @@ GtkProgressBar.trough {
 
 .progressbar row:selected,
 .progressbar row:selected:focused {
-
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@selected_bg_color, 1.30)),
-                    color-stop (0.50, shade (@selected_bg_color, 1.20)),
-                    color-stop (0.60, shade (@selected_bg_color, 1.08)),
-                    color-stop (0.70, shade (@selected_bg_color, 1.08)),
-                    to (shade (@selected_bg_color, 1.30)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  shade (@selected_bg_color, 1.20) 50%,
+                                  shade (@selected_bg_color, 1.08) 60%,
+                                  shade (@selected_bg_color, 1.08) 70%,
+                                  shade (@selected_bg_color, 1.30)
+                                  );
 
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 0.87),
                                   shade (@selected_bg_color, 0.80)
                                   ) 1 1 1 1;
 }
-
 
 .trough row,
 .trough row:hover,
@@ -116,16 +114,14 @@ GtkProgressBar.trough {
 
     border-style: solid;
     border-width: 1px;
-    -unico-inner-stroke-width: 1px;
 
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@bg_color, 1.10)),
-                    color-stop (0.50, shade (@bg_color, 1.05)),
-                    color-stop (0.60, shade (@bg_color, 0.98)),
-                    color-stop (0.70, shade (@bg_color, 0.98)),
-                    to (shade (@bg_color, 1.10)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.10),
+                                  shade (@bg_color, 1.05) 50%,
+                                  shade (@bg_color, 0.98) 60%,
+                                  shade (@bg_color, 0.98) 70%,
+                                  shade (@bg_color, 1.10)
+                                  );
 
     border-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.83),
@@ -142,4 +138,3 @@ GtkProgressBar.trough {
                                   shade (@selected_bg_color, 0.80)
                                   ) 1 1 1 1;
 }
-
