@@ -113,8 +113,6 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Square */
 .dynamic-notebook tab,
-.inline-toolbar.toolbar,
-.inline-toolbar.toolbar .button,
 .pane-separator,
 .rubberband,
 .view {
@@ -558,8 +556,6 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Inner Shadow */
 
 .check,
-.inline-toolbar.toolbar,
-.inline-toolbar.toolbar .button,
 .dynamic-notebook .notebook tab .button,
 .notebook tab .button,
 .radio,
