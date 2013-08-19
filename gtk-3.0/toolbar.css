@@ -133,6 +133,9 @@ GtkPaned .inline-toolbar.toolbar {
     background-image: none;
     background-color: @transparent;
     box-shadow: none;
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .inline-toolbar.toolbar .button:active,

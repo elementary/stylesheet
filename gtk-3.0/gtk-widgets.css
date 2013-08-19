@@ -78,10 +78,8 @@ GtkWindow {
 ****************/
 
 /* Border */
-.check,
 .notebook,
-.radio,
-GtkComboBox.combobox-entry .button:last-child {
+.radio {
     border: 1px solid;
 }
 
@@ -120,7 +118,6 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 /* Slightly rounded */
-.check,
 .notebook,
 .notebook tab .button {
     border-radius: 2.5px;
@@ -138,7 +135,6 @@ GtkComboBox.combobox-entry .button:last-child {
 **************/
 
 /* etched text */
-.inline-toolbar.toolbar .button,
 *:insensitive,
 .notebook,
 .secondary-toolbar,
@@ -227,17 +223,6 @@ GtkCalendar.highlight {
     color: #777;
     border-width: 0;
 }
-
-
-/**************
- * ComboBoxes *
- **************/
-
-GtkComboBox {
-    -GtkComboBox-arrow-scaling: 0.5;
-    -GtkComboBox-shadow-type: none;
-}
-
 
 /***********
 * Expander *
@@ -529,10 +514,8 @@ GtkSwitch.slider:insensitive {
 }
 
 /* Outer Highlight */
-.check,
 .dynamic-notebook .notebook tab .button,
-.notebook tab .button,
-GtkComboBox.combobox-entry .button:last-child {
+.notebook tab .button {
         -unico-outer-stroke-gradient: -gtk-gradient (linear,
                          left top, left bottom,
                          from (@transparent),
@@ -555,11 +538,9 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Inner Shadow */
 
-.check,
 .dynamic-notebook .notebook tab .button,
 .notebook tab .button,
-.radio,
-GtkComboBox.combobox-entry .button:last-child {
+.radio {
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (alpha (#000, 0.10)),
@@ -583,9 +564,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Interactive Trough */
 
-.check,
-.radio,
-GtkComboBox.combobox-entry .button:last-child {
+.radio {
     background-image: -gtk-gradient (linear,
 			         left top,
 			         left bottom,
@@ -602,9 +581,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Insensitive Trough */
 
-.check:insensitive,
-.radio:insensitive,
-GtkComboBox.combobox-entry .button:last-child:insensitive {
+.radio:insensitive {
     background-image: -gtk-gradient (linear,
 			         left top,
 			         left bottom,
@@ -623,12 +600,13 @@ GtkComboBox.combobox-entry .button:last-child:insensitive {
  * ComboBoxes *
  **************/
 
-GtkComboBox .separator {
-    border-color: @transparent;
+GtkComboBox {
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: none;
+}
 
-    -unico-border-gradient: none;
-    -unico-inner-stroke-color: @transparent;
-    -unico-inner-stroke-gradient: none;
+GtkComboBox .separator {
+    color: @transparent;
 }
 
 GtkComboBox.combobox-entry .entry:first-child,
@@ -642,10 +620,17 @@ GtkComboBox.combobox-entry .button:first-child {
 GtkComboBox.combobox-entry .entry:last-child,
 GtkComboBox.combobox-entry .button:last-child {
     border-radius: 0 2.5px 2.5px 0;
-    border-width: 1px 1px 1px 0;
+    border-width: 1px;
     -unico-outer-stroke-width: 1px 1px 1px 0;
     -unico-inner-stroke-width: 1px 1px 1px 0;
 
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.82),
+                                  shade (@base_color, 0.90) 20%,
+                                  @base_color
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
 }
 
 /********
@@ -950,23 +935,27 @@ GtkComboBox.combobox-entry .button:last-child {
  * Check and Radio items *
  *************************/
 
+.check {
+    border: 1px solid alpha (#000, 0.34);
+    border-radius: 2.5px;
+
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.82)),
+                     color-stop (0.20, shade (@base_color, 0.90)),
+			         to (@base_color)); 
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
+}
+
 .check row,
 .check row:selected,
 .check row:selected:focus {
 
-	border: 1px solid;
-	-unico-inner-stroke-width: 1px;
-	-unico-outer-stroke-width: 1px;
+	border: 1px solid alpha (#000, 0.29);
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.29)),
-                     to (alpha (#000, 0.15)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.05)),
-                    to (alpha (#000, 0.03)));
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.03);
 
     background-color: #f7f7f7;
     background-image: none;
@@ -976,6 +965,14 @@ GtkComboBox.combobox-entry .button:last-child {
 .check:insensitive,
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (alpha (#000, 0.10)),
+                     color-stop (0.20, alpha (#000, 0.00)),
+			         to (alpha (#000, 0.00)));
+
+    border-color: shade (@bg_color, 0.67);
 }
 
 .check:active,
