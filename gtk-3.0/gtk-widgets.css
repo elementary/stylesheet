@@ -916,11 +916,11 @@ GtkComboBox.combobox-entry .button:last-child {
     border-radius: 2.5px;
 
     background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@base_color, 0.82)),
+                     left top,
+                     left bottom,
+                     from (shade (@base_color, 0.82)),
                      color-stop (0.20, shade (@base_color, 0.90)),
-			         to (@base_color)); 
+                     to (@base_color)); 
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
 }
@@ -929,7 +929,7 @@ GtkComboBox.combobox-entry .button:last-child {
 .check row:selected,
 .check row:selected:focus {
 
-	border: 1px solid alpha (#000, 0.29);
+    border: 1px solid alpha (#000, 0.29);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.03);
 
@@ -942,59 +942,13 @@ GtkComboBox.combobox-entry .button:last-child {
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
     background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (alpha (#000, 0.10)),
+                     left top,
+                     left bottom,
+                     from (alpha (#000, 0.10)),
                      color-stop (0.20, alpha (#000, 0.00)),
-			         to (alpha (#000, 0.00)));
+                     to (alpha (#000, 0.00)));
 
     border-color: shade (@bg_color, 0.67);
-}
-
-.check:active,
-.check row:selected:active,
-.check row:selected:focus:active {
-}
-
-.check:active:insensitive,
-.check row:selected:active:insensitive,
-.check row:selected:focus:active:insensitive
-{
-}
-
-.check:inconsistent,
-.check row:selected:inconsistent,
-.check row:selected:focus:inconsistent {
-}
-
-.radio,
-.radio row:selected,
-.radio row:selected:focus {
-
-}
-
-.radio:insensitive,
-.radio row:selected:insensitive,
-.radio row:selected:focus:insensitive {
-}
-
-.radio:active,
-.radio row:selected:active,
-.radio row:selected:focus:active {
-}
-
-.radio:active:insensitive,
-.radio row:selected:active:insensitive,
-.radio row:selected:focus:active:insensitive {
-}
-
-.radio:inconsistent,
-.radio row:selected:inconsistent,
-.radio row:selected:focus:inconsistent {
-}
-
-GtkViewport,
-GtkIconView {
 }
 
 GtkTreeView {
@@ -1005,27 +959,16 @@ GtkTreeView {
 }
 
 GtkTreeView row:nth-child(even) {
-	background-color: @base_color;
+    background-color: @base_color;
 }
 
 GtkTreeView row:nth-child(odd) {
-	background-color: shade (@base_color, 0.96);
-}
-
-GtkTreeView.separator {
-
+    background-color: shade (@base_color, 0.96);
 }
 
 GtkTreeView .entry {
     border-radius: 0;
 }
-
-row:hover {
-}
-
-row:insensitive {
-}
-
 
 ConversationList.view.cell {
     background-color: red;
@@ -1077,9 +1020,9 @@ column-header .button {
 
     font: bold;
 
-	padding: 4px 2px 4px 2px;
+    padding: 4px 2px 4px 2px;
 
-	border-width: 0 0 1px 1px;
+    border-width: 0 0 1px 1px;
 
     -unico-outer-stroke-style: none;
 
@@ -1258,7 +1201,6 @@ GtkLabel {
 .linked .button:focus:active,
 .linked .button:insensitive {
     border-right-width: 0;
-    -unico-outer-stroke-width: 1px 0 1px 0;
     border-radius: 0;
 }
 
@@ -1275,7 +1217,6 @@ GtkLabel {
 .linked .button:focus:active,
 .linked .button:insensitive {
     border-right-width: 0;
-    -unico-outer-stroke-width: 1px 0 1px 0;
     border-radius: 0;
 }
 
@@ -1287,7 +1228,6 @@ GtkLabel {
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
 .linked .button:insensitive:first-child {
-    -unico-outer-stroke-width: 1px 0 1px 1px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 2.5px;
@@ -1303,7 +1243,6 @@ GtkLabel {
 .linked .button:focus:active:last-child,
 .linked .button:insensitive:last-child {
     border-right-width: 1px;
-    -unico-outer-stroke-width: 1px 1px 1px 0;
     border-bottom-right-radius: 2.5px;
     border-top-right-radius: 2.5px;
     border-bottom-left-radius: 0;
@@ -1319,7 +1258,6 @@ GtkLabel {
 .linked .button:focus:active:only-child,
 .linked .button:insensitive:only-child {
     border-width: 1px;
-    -unico-outer-stroke-width: 1px;
     border-radius: 2.5px;
 }
 
@@ -1328,15 +1266,13 @@ GtkLabel {
  **********/
 
 .frame {
-    border: 1px solid;
-    border-color: shade (@bg_color, 0.70);
+    border: 1px solid shade (@bg_color, 0.70);
     padding: 0;
     color: lighter (@theme_fg_color);
 }
 
 GtkScrolledWindow.frame {
-    border: 1px solid;
-    border-color: shade (@bg_color, 0.70);
+    border: 1px solid shade (@bg_color, 0.70);
     padding: 0;
 }
 
@@ -1364,7 +1300,7 @@ GtkPaned .frame {
 .spinbutton .button:active:hover {
 
     background-color: alpha (#000, 0.05);
-	background-image: none;
+    background-image: none;
 
     -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
