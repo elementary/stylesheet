@@ -35,7 +35,6 @@
     
     -GtkScrolledWindow-scrollbar-spacing: 0;
 
-    
     -GtkTextView-error-underline-color: @error_color;
     
     -GtkWidget-focus-padding: 0;
@@ -57,7 +56,6 @@
 GtkWindow {
     background-color: @bg_color
 }
-
 
 /*****************
  * Widget States *
@@ -82,8 +80,7 @@ GtkWindow {
 ****************/
 
 /* Border */
-.notebook,
-.radio {
+.notebook {
     border: 1px solid;
 }
 
@@ -127,8 +124,7 @@ GtkWindow {
 }
 
 /* Circular */
-.help_button,
-.radio {
+.help_button {
     border-radius: 12px;
 }
 
@@ -510,23 +506,13 @@ GtkSwitch.slider:insensitive {
                          to (alpha (#fff, 0.40)));
 }
 
-/* Outer Highlight Rounded */
-.radio {
-        -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                         left top, left bottom,
-                         from (@transparent),
-                         color-stop (0.50, @transparent),
-                         to (alpha (#fff, 0.40)));
-}
-
 /**********
 * Shadows *
 **********/
 
 /* Inner Shadow */
 
-.notebook tab .button,
-.radio {
+.notebook tab .button {
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (alpha (#000, 0.10)),
@@ -897,6 +883,20 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .radio {
+
+    border: 1px solid;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
+        -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                         left top, left bottom,
+                         from (@transparent),
+                         color-stop (0.50, @transparent),
+                         to (alpha (#fff, 0.40)));
+
     background-image: -gtk-gradient (linear,
 			         left top,
 			         left bottom,
@@ -908,6 +908,8 @@ GtkComboBox.combobox-entry .button:last-child {
                      left top, left bottom,
                      from (alpha (#000, 0.34)),
                      to (alpha (#000, 0.20)));
+
+    border-radius: 12px;
 }
 
 .radio:insensitive {
