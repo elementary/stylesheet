@@ -103,9 +103,6 @@
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 0;
 
-    -unico-outer-stroke-width: 1;
-    -unico-inner-stroke-width: 1;
-
     color: @text_color;
     text-shadow: 0 1px alpha (#fff, 0.60);
 
@@ -115,25 +112,6 @@
     background-color: alpha (#fff, 0.0);
 
     background-image: none;
-
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#fff, 0.00)),
-                     color-stop (0.80, alpha (#fff, 0.00)),
-                     to (alpha (#fff, 0.60)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                     left bottom, left top,
-                     from (alpha (#fff, 0.40)),
-                     color-stop (0.20, alpha (#fff, 0.10)),
-                     color-stop (0.80, alpha (#fff, 0.10)),
-                     to (alpha (#fff, 1.00)));
-
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.18)),
-                     to (alpha (#000, 0.22)));
 }
 
 .content-view .button:active,
