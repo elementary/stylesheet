@@ -28,8 +28,6 @@
       
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
-    
-    -GtkPaned-handle-size: 8px;
 
     -GtkSeparatorMenuItem-horizontal-padding: 0;
     
@@ -51,6 +49,8 @@
 
 * {
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
+
+    -GtkPaned-handle-size: 8px;
 }
 
 GtkWindow {
@@ -78,11 +78,6 @@ GtkWindow {
 /****************
 * Border Styles *
 ****************/
-
-/* Border */
-.notebook {
-    border: 1px solid;
-}
 
 /* No Border */
 .menu.button {
@@ -665,8 +660,8 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .notebook {
+    border: 1px solid shade (@bg_color, 0.60);
 
-    border-color: shade (@bg_color, 0.60);
     border-radius: 2.5px;
 
     -GtkNotebook-tab-overlap: 5px;
@@ -732,29 +727,28 @@ GtkComboBox.combobox-entry .button:last-child {
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
+    border: 1px solid shade (@base_color, 0.55);
+    border-width: 0 1px;
 
-    -unico-centroid-texture: url("assets/pane-handle.svg");
-    
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     right top,
-                     from (shade (@base_color, 0.55)),
-                     color-stop (0.15, @base_color),
-                     color-stop (0.85, shade (@base_color, 0.88)),
-                     to (shade (@base_color, 0.55)));
+    background-image: url("assets/pane-handle.svg"),
+                        linear-gradient(to right,
+                                  @base_color,
+                                  shade (@base_color, 0.88)
+                                  );
+    background-position: 50%;
+    background-repeat: no-repeat;
 }
 
 .pane-separator.vertical,
 .pane-separator.vertical:prelight,
 .pane-separator.vertical:selected {
+    border-width: 1px 0;
     
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (shade (@base_color, 0.55)),
-                     color-stop (0.15, @base_color),
-                     color-stop (0.85, shade (@base_color, 0.88)),
-                     to (shade (@base_color, 0.55)));
+    background-image: url("assets/pane-handle.svg"),
+                        linear-gradient(to bottom,
+                                  @base_color,
+                                  shade (@base_color, 0.88)
+                                  );
 }
 
 /************
