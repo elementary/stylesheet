@@ -105,7 +105,6 @@ GtkWindow {
     padding: 0;
 }
 
-
 /************
 * Roundness *
 ************/
@@ -768,15 +767,15 @@ GtkComboBox.combobox-entry .button:last-child {
 .pane-separator:prelight,
 .pane-separator:selected {
 
-	-unico-centroid-texture: url("assets/pane-handle.svg");
+    -unico-centroid-texture: url("assets/pane-handle.svg");
     
     background-image: -gtk-gradient (linear,
-				     left top,
-				     right top,
-				     from (shade (@base_color, 0.55)),
+                     left top,
+                     right top,
+                     from (shade (@base_color, 0.55)),
                      color-stop (0.15, @base_color),
                      color-stop (0.85, shade (@base_color, 0.88)),
-				     to (shade (@base_color, 0.55)));
+                     to (shade (@base_color, 0.55)));
 }
 
 .pane-separator.vertical,
@@ -784,12 +783,12 @@ GtkComboBox.combobox-entry .button:last-child {
 .pane-separator.vertical:selected {
     
     background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-				     from (shade (@base_color, 0.55)),
+                     left top,
+                     left bottom,
+                     from (shade (@base_color, 0.55)),
                      color-stop (0.15, @base_color),
                      color-stop (0.85, shade (@base_color, 0.88)),
-				     to (shade (@base_color, 0.55)));
+                     to (shade (@base_color, 0.55)));
 }
 
 /************
@@ -814,11 +813,11 @@ GtkComboBox.combobox-entry .button:last-child {
 .button:active:insensitive {
 
     background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@bg_color, 0.85)),
+                     left top,
+                     left bottom,
+                     from (shade (@bg_color, 0.85)),
                      color-stop (0.20, shade (@bg_color, 0.94)),
-			         to (@bg_color));
+                     to (@bg_color));
 
     -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
@@ -898,11 +897,11 @@ GtkComboBox.combobox-entry .button:last-child {
                          to (alpha (#fff, 0.40)));
 
     background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@base_color, 0.82)),
+                     left top,
+                     left bottom,
+                     from (shade (@base_color, 0.82)),
                      color-stop (0.20, shade (@base_color, 0.90)),
-			         to (@base_color)); 
+                     to (@base_color)); 
 
     -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
@@ -914,11 +913,11 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .radio:insensitive {
     background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (alpha (#000, 0.10)),
+                     left top,
+                     left bottom,
+                     from (alpha (#000, 0.10)),
                      color-stop (0.20, alpha (#000, 0.00)),
-			         to (alpha (#000, 0.00)));
+                     to (alpha (#000, 0.00)));
 
     -unico-border-gradient: -gtk-gradient (linear,
                      left top, left bottom,
