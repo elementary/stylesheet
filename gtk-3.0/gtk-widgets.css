@@ -539,45 +539,6 @@ GtkSwitch.slider:insensitive {
                                                     to (alpha (#000, 0.08)));
 }
 
-
-/**********
-* Troughs *
-**********/
-
-/* Interactive Trough */
-
-.radio {
-    background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@base_color, 0.82)),
-                     color-stop (0.20, shade (@base_color, 0.90)),
-			         to (@base_color)); 
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.34)),
-                     to (alpha (#000, 0.20)));
-}
-
-
-/* Insensitive Trough */
-
-.radio:insensitive {
-    background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (alpha (#000, 0.10)),
-                     color-stop (0.20, alpha (#000, 0.00)),
-			         to (alpha (#000, 0.00)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@bg_color, 0.67)),
-                     to (shade (@bg_color, 0.74)));
-
-}
-
 /**************
  * ComboBoxes *
  **************/
@@ -595,16 +556,12 @@ GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .button:first-child {
     border-radius: 2.5px 0 0 2.5px;
     border-width: 1px 0 1px 1px;
-    -unico-outer-stroke-width: 1px 0 1px 1px;
-    -unico-inner-stroke-width: 1px 0 1px 1px;
 }
 
 GtkComboBox.combobox-entry .entry:last-child,
 GtkComboBox.combobox-entry .button:last-child {
     border-radius: 0 2.5px 2.5px 0;
     border-width: 1px;
-    -unico-outer-stroke-width: 1px 1px 1px 0;
-    -unico-inner-stroke-width: 1px 1px 1px 0;
 
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.82),
@@ -792,7 +749,6 @@ GtkComboBox.combobox-entry .button:last-child {
                                   );
 
         color: @text_color;
-
 }
 
 .dynamic-notebook .notebook tab .button,
@@ -936,6 +892,35 @@ GtkComboBox.combobox-entry .button:last-child {
     border-color: shade (@bg_color, 0.67);
 }
 
+.radio {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (shade (@base_color, 0.82)),
+                     color-stop (0.20, shade (@base_color, 0.90)),
+			         to (@base_color)); 
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.34)),
+                     to (alpha (#000, 0.20)));
+}
+
+.radio:insensitive {
+    background-image: -gtk-gradient (linear,
+			         left top,
+			         left bottom,
+			         from (alpha (#000, 0.10)),
+                     color-stop (0.20, alpha (#000, 0.00)),
+			         to (alpha (#000, 0.00)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
+}
+
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
     -GtkTreeView-horizontal-separator: 6px;
@@ -986,13 +971,9 @@ ConversationList.view.cell {
 /**********************
  * Column Headers *
  *********************/
- 
-column-header {
-}
 
 column-header .button,
 .content-view column-header .button {
-    -unico-outer-stroke-width: 0;
     border-radius: 0;
 }
 
@@ -1009,7 +990,6 @@ column-header .button {
 
     border-width: 0 0 1px 1px;
 
-    -unico-outer-stroke-style: none;
 
     background-image: -gtk-gradient (linear,
                     left top,
@@ -1017,7 +997,7 @@ column-header .button {
                     from (shade (@base_color, 0.88)),
                     to (@base_color));
 
-        -unico-border-gradient: -gtk-gradient (linear,
+    -unico-border-gradient: -gtk-gradient (linear,
         left top, left bottom,
         from (shade (@base_color, 0.88)),
         to (shade (@base_color, 0.70)));
