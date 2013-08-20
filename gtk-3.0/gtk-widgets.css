@@ -299,12 +299,9 @@ GtkIconView.view.cell:selected:focus {
 .error {
     border-style: solid;
     border-width: 0 0 1px 0;
-    -unico-inner-stroke-width: 1px 0 1px 0;
 
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#fff, 0.30)),
-                    to (alpha (#fff, 0.06)));
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
+                inset 0 -1px 0 0 alpha (#fff, 0.06);
 }
 
 .info {
@@ -314,10 +311,7 @@ GtkIconView.view.cell:selected:focus {
                     from (#fafafa),
                     to (#f6f6f6));
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (#c3c3c3),
-                    to (#c3c3c3));
+    border-color: #c3c3c3;
 }
 
 .info GtkLabel {
@@ -331,10 +325,7 @@ GtkIconView.view.cell:selected:focus {
                     from (#55c1ec),
                     to (#44a2e9));
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (#357fb8),
-                    to (#357fb8));
+    border-color: #357fb8;
 }
 
 .question GtkLabel {
@@ -348,10 +339,7 @@ GtkIconView.view.cell:selected:focus {
                     from (#fdde76),
                     to (#fbd058));
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (#c09e42),
-                    to (#c09e42));
+    border-color: #c09e42;
 }
 
 .warning GtkLabel {
@@ -365,10 +353,7 @@ GtkIconView.view.cell:selected:focus {
                     from (#e35d4f),
                     to (#d33f3d));
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (#a2302e),
-                    to (#a2302e));
+    border-color: #a2302e;
 }
 
 .error GtkLabel {
@@ -781,7 +766,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .notebook tab {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.75,
+                                  shade (@bg_color, 0.75),
                                   shade (@bg_color, 0.80)
                                   );
 
@@ -802,7 +787,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .notebook tab:active {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.24,
+                                  shade (@bg_color, 1.24),
                                   shade (@bg_color, 1.06)
                                   );
 
