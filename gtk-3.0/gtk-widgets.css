@@ -34,7 +34,7 @@
     -GtkSeparatorMenuItem-horizontal-padding: 0;
     
     -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+
     
     -GtkTextView-error-underline-color: @error_color;
     
@@ -49,6 +49,10 @@
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
 }*/
+
+* {
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+}
 
 GtkWindow {
     background-color: @bg_color
