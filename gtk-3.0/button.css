@@ -214,6 +214,14 @@ GtkComboBox.combobox-entry .button {
     icon-shadow: 0 1px alpha (#000, 0.3);
 } 
 
+/**************
+* Help Button *
+**************/
+
+.help_button {
+    border-radius: 12px;
+}
+
 /*****************
 * Infobar Button *
 ******************/

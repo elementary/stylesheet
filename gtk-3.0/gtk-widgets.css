@@ -91,43 +91,6 @@ GtkWindow {
     border-width: 0;
 }
 
-/**********
-* Padding *
-**********/
-
-/* No Padding */
-
-.entry.progressbar,
-.notebook tab .button,
-.notebook tab .button:hover,
-.notebook tab .button:hover:active,
-.toolbar GtkComboBox {
-    padding: 0;
-}
-
-/************
-* Roundness *
-************/
-
-/* Square */
-.pane-separator,
-.rubberband,
-.view {
-    border-radius: 0;
-}
-
-/* Slightly rounded */
-.notebook,
-.notebook tab .button {
-    border-radius: 2.5px;
-}
-
-/* Circular */
-.help_button {
-    border-radius: 12px;
-}
-
-
 /**************
 * Text Styles *
 **************/
@@ -704,6 +667,7 @@ GtkComboBox.combobox-entry .button:last-child {
 .notebook {
 
     border-color: shade (@bg_color, 0.60);
+    border-radius: 2.5px;
 
     -GtkNotebook-tab-overlap: 5px;
 
@@ -745,6 +709,8 @@ GtkComboBox.combobox-entry .button:last-child {
 .dynamic-notebook .notebook tab .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
+
+    border-radius: 2.5px;
 
     padding: 0;
 
