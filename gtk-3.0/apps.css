@@ -43,18 +43,18 @@ BirdieWidgetsTweetList * {
  *******/
 
 .gala-workspaces-background {
-	border-top: 1px solid alpha (#fff, 0.15);
-	background-image: -gtk-gradient (linear,
-		left top, left bottom,
-		from (#1d1d1d),
-		color-stop (0.07, #252525),
-		to (#252525));
+    border-top: 1px solid alpha (#fff, 0.15);
+    background-image: -gtk-gradient (linear,
+        left top, left bottom,
+        from (#1d1d1d),
+        color-stop (0.07, #252525),
+        to (#252525));
 }
 
 .gala-workspace-selected {
 
-	border: 1px solid alpha (#000, 0.15);
-	border-radius: 4px;
+    border: 1px solid alpha (#000, 0.15);
+    border-radius: 4px;
 
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                      left bottom, left top,
@@ -100,7 +100,7 @@ ConversationListView.view.cell:selected {
 .album-list-view GtkLabel:backdrop,
 .album-list-view GraniteWidgetsRating {
     background-color: #262626;
-	color: @selected_fg_color;
+    color: @selected_fg_color;
 
     border-radius: 0;
     border-color: #000;
@@ -109,12 +109,12 @@ ConversationListView.view.cell:selected {
 .album-list-view GtkTreeView,
 .album-list-view GtkTreeView:backdrop {
     background-color: #262626;
-	background-image: -gtk-gradient (linear,
-	                                 right bottom,
-	                                 left bottom,
-	                                 from (#262626),
-	                                 to (#262626));
-	color: @selected_fg_color;
+    background-image: -gtk-gradient (linear,
+                                     right bottom,
+                                     left bottom,
+                                     from (#262626),
+                                     to (#262626));
+    color: @selected_fg_color;
     -GtkTreeView-vertical-separator: 3;
     -GtkTreeView-grid-line-width: 0;
 }
@@ -122,7 +122,7 @@ ConversationListView.view.cell:selected {
 .album-list-view GtkTreeView row:nth-child(even),
 .album-list-view GtkTreeView row:nth-child(even):backdrop {
     background-image: none;
-	background-color: #313131;
+    background-color: #313131;
     border-width: 1px;
     border-style: solid;
     border-color: #373737;
@@ -132,7 +132,7 @@ ConversationListView.view.cell:selected {
 .album-list-view GtkTreeView row:nth-child(odd),
 .album-list-view GtkTreeView row:nth-child(odd):backdrop {
     background-image: none;
-	background-color: #262626;
+    background-color: #262626;
     border-width: 0px;
     border-style: none;
 }
