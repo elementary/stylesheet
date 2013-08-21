@@ -25,8 +25,19 @@
 .source-list,
 .source-list.view {
     background-color: @bg_color;
-    border-radius: 0;
     color: shade (@bg_color, 0.50);
+}
+
+.sidebar,
+.sidebar.view,
+.sidebar.view:selected:backdrop,
+.sidebar.view:prelight:selected:backdrop,
+.source-list,
+.source-list.view,
+.source-list.view:selected:backdrop,
+.source-list.view:prelight:selected:backdrop {
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .sidebar,
@@ -132,6 +143,9 @@
 GraniteWidgetsStatusBar {
     padding: 3px;
 
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+
     background-image: linear-gradient(to bottom,
                                   @bg_color,
                                   shade (@bg_color, 0.88)
@@ -179,50 +193,23 @@ GraniteWidgetsPopOver * {
 }
 
 GraniteWidgetsPopOver .button {
-
     background-image: none;
-    
-    background-color: alpha (#fff, 0.0);    
-
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#fff, 0.00)),
-                     color-stop (0.80, alpha (#fff, 0.00)),
-                     to (alpha (#fff, 0.40)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@base_color, 0.80)),
-                     to (shade (@base_color, 0.74)));
-
+    background-color: @transparent;    
 }
 
 GraniteWidgetsPopOver .button:active,
 GraniteWidgetsPopOver .button:hover:active {
-
 	background-image: none;
-
     background-color: alpha (#000, 0.05);
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@base_color, 0.74)),
-                     to (shade (@base_color, 0.74)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.07)),
-                    to (alpha (#000, 0.03)));
+    border-color: shade (@base_color, 0.74);
 }
 
 GraniteWidgetsPopOver .entry {
-
-    background-image: -gtk-gradient (linear,
-			         left top,
-			         left bottom,
-			         from (shade (@base_color, 0.88)),
-                     color-stop (0.20, shade (@base_color, 0.94)),
-			         to (shade (@base_color, 0.96)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.88),
+                                  shade (@base_color, 0.94) 20%,
+                                  shade (@base_color, 0.96)
+                                  );
 }
 
 .button.app {

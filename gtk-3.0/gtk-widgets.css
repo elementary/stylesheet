@@ -49,7 +49,6 @@
 
 * {
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
-
     -GtkPaned-handle-size: 8px;
 }
 
@@ -75,17 +74,6 @@ GtkWindow {
     color: @selected_fg_color;
 }
 
-/****************
-* Border Styles *
-****************/
-
-/* No Border */
-.menu.button {
-    border-image: none;
-    border-style: none;
-    border-width: 0;
-}
-
 /**************
 * Text Styles *
 **************/
@@ -95,18 +83,9 @@ GtkWindow {
 .notebook,
 .secondary-toolbar,
 .secondary-toolbar.toolbar .button,
-.sidebar,
-.sidebar.view,
-.sidebar.view:selected:backdrop,
-.sidebar.view:prelight:selected:backdrop,
-.source-list,
-.source-list.view,
-.source-list.view:selected:backdrop,
-.source-list.view:prelight:selected:backdrop
 .toolbar,
 .trough row:selected,
-.trough row:selected:focused,
-GraniteWidgetsStatusBar {
+.trough row:selected:focused {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
@@ -114,19 +93,8 @@ GraniteWidgetsStatusBar {
 /* white text */
 .expander row:selected,
 .expander row:selected:focus,
-.menubar *:active,
-.menubar *:prelight,
-.progressbar row,
 .sidebar.view:selected {
     color: @selected_fg_color;
-}
-
-/* text shadow */
-.menubar.menuitem:active,
-.menubar.menuitem:prelight,
-.progressbar row {
-    text-shadow: 0 1px alpha (#000, 0.3);
-    icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
 .title { font: raleway thin 36; }
@@ -433,15 +401,10 @@ GtkSwitch.slider:insensitive {
 *************/
 
 /* Inner Higlight */
-.gala-workspace-selected,
 .menubar.menuitem:active,
 .menubar.menuitem:prelight,
 .notebook,
 .toolbar,
-.progressbar row,
-.progressbar row:hover,
-.progressbar row:selected,
-.progressbar row:selected:focus,
 .trough row,
 .trough row:hover,
 .trough row:selected,
@@ -454,29 +417,9 @@ GtkSwitch.slider:insensitive {
                      to (alpha (#fff, 0.50)));
 }
 
-/* Outer Highlight */
-.notebook tab .button {
-        -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                         left top, left bottom,
-                         from (@transparent),
-                         color-stop (0.80, @transparent),
-                         to (alpha (#fff, 0.40)));
-}
-
 /**********
 * Shadows *
 **********/
-
-/* Inner Shadow */
-
-.notebook tab .button {
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.10)),
-                    to (alpha (#000, 0.06)));
-}
-
-/* Outer Shadow */
 
 .notebook,
 .cd  {
@@ -704,7 +647,6 @@ GtkComboBox.combobox-entry .button:last-child {
 .dynamic-notebook .notebook tab .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
-
     border-radius: 2.5px;
 
     padding: 0;
@@ -849,12 +791,6 @@ GtkComboBox.combobox-entry .button:last-child {
                     left top, left bottom,
                     from (alpha (#000, 0.10)),
                     to (alpha (#000, 0.06)));
-
-        -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                         left top, left bottom,
-                         from (@transparent),
-                         color-stop (0.50, @transparent),
-                         to (alpha (#fff, 0.40)));
 
     background-image: -gtk-gradient (linear,
                      left top,

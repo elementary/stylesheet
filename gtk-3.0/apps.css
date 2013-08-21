@@ -56,7 +56,12 @@ BirdieWidgetsTweetList * {
 	border: 1px solid alpha (#000, 0.15);
 	border-radius: 4px;
 
-	-unico-inner-stroke-width: 1px;
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.20)),
+                     color-stop (0.10, alpha (#fff, 0.05)),
+                     color-stop (0.90, alpha (#fff, 0.05)),
+                     to (alpha (#fff, 0.50)));
 
     background-image: -gtk-gradient (linear,
                     left top,

@@ -52,6 +52,10 @@ GtkProgressBar.trough {
 
 .progressbar row,
 .progressbar row:hover {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
+
     background-image: linear-gradient(to left top,
                                   alpha (#fff, 0.10),
                                   alpha (#fff, 0.10) 25%,
