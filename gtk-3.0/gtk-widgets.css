@@ -34,22 +34,24 @@
     -GtkScrolledWindow-scrollbar-spacing: 0;
 
     -GtkTextView-error-underline-color: @error_color;
-    
-    -GtkWidget-focus-padding: 0;
-    
+
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     -GtkWidget-separator-height: 1px;
     
-    -GtkWidget-link-color: @link_color;
-    -GtkWidget-visited-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkHTML-link-color: @link_color;
+
 }*/
 
 * {
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 8px;
+
+    -GtkWidget-link-color: @link_color;
+    -GtkWidget-visited-link-color: @link_color;
+    -GtkIMHtml-hyperlink-color: @link_color;
+    -GtkHTML-link-color: @link_color;
+
+    -GtkWidget-focus-line-width: 0;
 }
 
 GtkWindow {

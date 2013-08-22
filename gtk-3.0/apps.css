@@ -139,7 +139,7 @@ ConversationListView.view.cell:selected {
 
 .album-list-view GtkTreeView row:selected {
     background-color: @selected_bg_color;
-	color: @selected_fg_color;
+    color: @selected_fg_color;
 }
 
 /**********
@@ -169,15 +169,11 @@ ConversationListView.view.cell:selected {
  ********/
 
 .panel {
-    background-color: alpha (#000, 0.7);
+    background-color: @transparent;
     color: #fff;
     font-weight: bold;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
     icon-shadow: 0 1px 2px alpha (#000, 0.6);
-}
-
-.panel GtkLabel {
-    box-shadow:
 }
 
 .panel-shadow {

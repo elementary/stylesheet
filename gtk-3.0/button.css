@@ -182,23 +182,17 @@ GtkComboBox.combobox-entry .button {
 
 .button.affirmative,
 .content-view .button.affirmative {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@selected_bg_color, 1.30)),
-                    to (shade (@selected_bg_color, 0.98)));
 
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (shade (@selected_bg_color, 1.05)),
-                    to (shade (@selected_bg_color, 0.88)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  @selected_bg_color
+                                  );
 
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                     left bottom, left top,
-                     from (alpha (#fff, 0.20)),
-                     color-stop (0.10, alpha (#fff, 0.05)),
-                     color-stop (0.90, alpha (#fff, 0.05)),
-                     to (alpha (#fff, 0.50)));
+    border-color: shade (@selected_bg_color, 0.90);
+}
+
+.button.affirmative:insensitive {
+    border-color: alpha (#000, 0.20);
 }
 
 .button.affirmative GtkLabel,
@@ -206,7 +200,24 @@ GtkComboBox.combobox-entry .button {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
-} 
+}
+
+.button.affirmative GtkLabel:insensitive {
+    text-shadow: 0 1px alpha (#fff, 0.3);
+    icon-shadow: 0 1px alpha (#fff, 0.3);
+}
+
+.button.affirmative:active,
+.button.affirmative:active:hover,
+.content-view .button.affirmative:active,
+.content-view .button.affirmative:active:hover {
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.20),
+                                  @selected_bg_color
+                                  );
+
+    border-color: shade (@selected_bg_color, 0.85);
+}
 
 /**************
 * Help Button *
