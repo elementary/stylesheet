@@ -16,32 +16,6 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* { 
-    background-clip: padding-box;
-
-    -GtkArrow-arrow-scaling: 0.75;
-    
-    -GtkCheckButton-indicator-size: 15;
-    -GtkCheckMenuItem-indicator-size: 12;
-    
-    -GtkExpander-expander-size: 10; 
-      
-    -GtkMenu-horizontal-padding: 0;
-    -GtkMenu-vertical-padding: 0;
-
-    -GtkSeparatorMenuItem-horizontal-padding: 0;
-    
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-
-    -GtkTextView-error-underline-color: @error_color;
-
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-separator-width: 1px;
-    -GtkWidget-separator-height: 1px;
-    
-
-}*/
-
 * {
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 8px;
@@ -61,6 +35,7 @@ GtkWindow {
 /*****************
  * Widget States *
  ****************/
+
 
 * {
     color: @text_color;
