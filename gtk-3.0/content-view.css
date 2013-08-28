@@ -180,26 +180,3 @@
 				     to (alpha (#000, 0.03)));
 
 }
-
-.content-view .check,
-.content-view .check row:selected,
-.content-view .check row:selected:focus {
-
-	border: 1px solid;
-	-unico-inner-stroke-width: 1px;
-	-unico-outer-stroke-width: 1px;
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.29)),
-                     to (alpha (#000, 0.15)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.05)),
-                    to (alpha (#000, 0.03)));
-
-    background-color: #f7f7f7;
-    background-image: none;
-
-}

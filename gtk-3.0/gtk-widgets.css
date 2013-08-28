@@ -716,89 +716,6 @@ GtkComboBox.combobox-entry .button:last-child {
 
 }
 
-/*************************
- * Check and Radio items *
- *************************/
-
-.check {
-    border: 1px solid alpha (#000, 0.34);
-    border-radius: 2.5px;
-
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (shade (@base_color, 0.82)),
-                     color-stop (0.20, shade (@base_color, 0.90)),
-                     to (@base_color)); 
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
-}
-
-.check row,
-.check row:selected,
-.check row:selected:focus {
-
-    border: 1px solid alpha (#000, 0.29);
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.03);
-
-    background-color: #f7f7f7;
-    background-image: none;
-
-}
-
-.check:insensitive,
-.check row:selected:insensitive,
-.check row:selected:focus:insensitive {
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (alpha (#000, 0.10)),
-                     color-stop (0.20, alpha (#000, 0.00)),
-                     to (alpha (#000, 0.00)));
-
-    border-color: shade (@bg_color, 0.67);
-}
-
-.radio {
-
-    border: 1px solid;
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.10)),
-                    to (alpha (#000, 0.06)));
-
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (shade (@base_color, 0.82)),
-                     color-stop (0.20, shade (@base_color, 0.90)),
-                     to (@base_color)); 
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.34)),
-                     to (alpha (#000, 0.20)));
-
-    border-radius: 12px;
-}
-
-.radio:insensitive {
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (alpha (#000, 0.10)),
-                     color-stop (0.20, alpha (#000, 0.00)),
-                     to (alpha (#000, 0.00)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@bg_color, 0.67)),
-                     to (shade (@bg_color, 0.74)));
-
-}
-
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
     -GtkTreeView-horizontal-separator: 6px;
@@ -910,7 +827,6 @@ GtkLabel {
  *************************************/
 
 *.entry:focus,
-*.check:focus,
 *.radio:focus {
     border-color: alpha (@selected_bg_color, 0.80);
     box-shadow: inset 0 0 0 1px alpha (@selected_bg_color, 0.23);
@@ -1176,4 +1092,61 @@ GtkPaned .frame {
 .spinbutton .button:first-child {
     border-width: 1px 0 0 0;
     border-radius: 2px 0 0 2px;
+}
+
+/*************************
+ * Check and Radio items *
+ *************************/
+
+.check {
+    background-image: url("assets/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.check:focus {
+    background-image: url("assets/check-focus.svg"); 
+}
+
+.check:active {
+    background-image: url("assets/check-active.svg"); 
+}
+
+.radio {
+
+    border: 1px solid;
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
+    background-image: -gtk-gradient (linear,
+                     left top,
+                     left bottom,
+                     from (shade (@base_color, 0.82)),
+                     color-stop (0.20, shade (@base_color, 0.90)),
+                     to (@base_color)); 
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (alpha (#000, 0.34)),
+                     to (alpha (#000, 0.20)));
+
+    border-radius: 12px;
+}
+
+.radio:insensitive {
+    background-image: -gtk-gradient (linear,
+                     left top,
+                     left bottom,
+                     from (alpha (#000, 0.10)),
+                     color-stop (0.20, alpha (#000, 0.00)),
+                     to (alpha (#000, 0.00)));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
 }
