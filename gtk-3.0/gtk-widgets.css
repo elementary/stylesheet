@@ -32,8 +32,38 @@ GtkWindow {
     background-color: @bg_color
 }
 
-GtkHeaderBar {
-    border-radius: 6px;
+.header-bar {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: shade (@bg_color, 0.56);
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.04),
+                                  shade (@bg_color, 0.84)
+                                  );
+
+    padding: 4px 6px 4px 6px;
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.header-bar .separator {
+    color: @transparent
+}
+
+.header-bar .title {
+    color: alpha (#000, 0.50);
+    font: Bold 9;
+    text-shadow: 0 1px alpha (#fff, 0.6);
+}
+
+.header-bar .title:backdrop {
+    color: alpha (#000, 0.30);
+    font: Bold 9;
+    text-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 /*****************
