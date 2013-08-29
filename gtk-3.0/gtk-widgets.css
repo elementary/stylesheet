@@ -684,18 +684,6 @@ column-header .button:hover {
                                   );
 }
 
-/**********************
- * Remove Backgrounds *
- *********************/
- 
-GtkDrawingArea,
-GtkImage,
-GtkImage:insensitive,
-GtkImage:selected,
-GtkLabel {
-    background-color: @transparent;
-}
-
 /*************************************
  * Fix Entry, Check, and Radio Focus *
  *************************************/
