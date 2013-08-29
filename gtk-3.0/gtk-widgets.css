@@ -728,11 +728,6 @@ column-header:nth-child(first) .button,
 }
 
 column-header .button {
-
-    font: bold;
-
-    padding: 4px 2px 4px 2px;
-
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.88),
                                   @base_color
@@ -743,6 +738,8 @@ column-header .button {
                                   shade (@base_color, 0.70)
                                   ) 0 0 1 1;
     border-width: 0 0 1px 1px;
+    font: bold;
+    padding: 4px 2px 4px 2px;
 }
 
 column-header .button:hover {
@@ -999,24 +996,18 @@ GtkPaned .frame {
 
 .spinbutton .button:active,
 .spinbutton .button:active:hover {
-
     background-color: alpha (#000, 0.05);
     background-image: none;
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@base_color, 0.74)),
-                     to (shade (@base_color, 0.74)));
-
+    border-color: shade (@base_color, 0.74);
     box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
 }
 
 .spinbutton .button:focus,
 .spinbutton .button:focus:active {
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (@selected_bg_color, 0.80)),
-                    to (alpha (@selected_bg_color, 0.75)));
+    border-image: linear-gradient(to bottom,
+                                  alpha (@selected_bg_color, 0.80),
+                                  alpha (@selected_bg_color, 0.75)
+                                  ) 1 1 1 1;
 }
 
 .spinbutton .button:insensitive,
@@ -1055,40 +1046,11 @@ GtkPaned .frame {
 }
 
 .radio {
-
-    border: 1px solid;
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.10)),
-                    to (alpha (#000, 0.06)));
-
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (shade (@base_color, 0.82)),
-                     color-stop (0.20, shade (@base_color, 0.90)),
-                     to (@base_color)); 
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.34)),
-                     to (alpha (#000, 0.20)));
-
-    border-radius: 12px;
+    background-image: url("assets/radio.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.radio:insensitive {
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (alpha (#000, 0.10)),
-                     color-stop (0.20, alpha (#000, 0.00)),
-                     to (alpha (#000, 0.00)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@bg_color, 0.67)),
-                     to (shade (@bg_color, 0.74)));
-
+.radio:active {
+    background-image: url("assets/radio-active.svg"); 
 }
