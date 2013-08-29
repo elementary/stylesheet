@@ -174,11 +174,10 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .info {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (#fafafa),
-                    to (#f6f6f6));
+    background-image: linear-gradient(to bottom,
+                                  #fafafa,
+                                  #f6f6f6
+                                  );
     border-color: #c3c3c3;
 }
 
@@ -187,11 +186,10 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .question {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (#55c1ec),
-                    to (#44a2e9));
+    background-image: linear-gradient(to bottom,
+                                  #55c1ec,
+                                  #44a2e9
+                                  );
     border-color: #357fb8;
 }
 
@@ -200,11 +198,10 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .warning {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (#fdde76),
-                    to (#fbd058));
+    background-image: linear-gradient(to bottom,
+                                  #fdde76,
+                                  #fbd058
+                                  );
     border-color: #c09e42;
 }
 
@@ -213,11 +210,10 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .error {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (#e35d4f),
-                    to (#d33f3d));
+    background-image: linear-gradient(to bottom,
+                                  #e35d4f,
+                                  #d33f3d
+                                  );
     border-color: #a2302e;
 }
 
@@ -399,11 +395,10 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .entry.progressbar {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@selected_bg_color, 1.23)),
-                    to (shade (@selected_bg_color, 1.37)));
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.23),
+                                  shade (@selected_bg_color, 1.37)
+                                  );
     border-color: @selected_bg_color;
 }
 
