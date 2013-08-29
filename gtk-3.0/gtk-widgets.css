@@ -36,13 +36,14 @@ GtkWindow {
  * Widget States *
  ****************/
 
-
 * {
     color: @text_color;
 }
 
 *:insensitive {
     color: @insensitive_color;
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 *:selected,
@@ -54,25 +55,6 @@ GtkWindow {
 /**************
 * Text Styles *
 **************/
-
-/* etched text */
-*:insensitive,
-.notebook,
-.secondary-toolbar,
-.secondary-toolbar.toolbar .button,
-.toolbar,
-.trough row:selected,
-.trough row:selected:focused {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
-}
-
-/* white text */
-.expander row:selected,
-.expander row:selected:focus,
-.sidebar.view:selected {
-    color: @selected_fg_color;
-}
 
 .title { font: raleway thin 36; }
 .h1 { font: open sans bold 24; }
@@ -131,6 +113,11 @@ GtkCalendar.highlight {
 
 .expander {
     color: @fg_color;
+}
+
+.expander row:selected,
+.expander row:selected:focus {
+    color: @selected_fg_color;
 }
 
 /***************
@@ -587,6 +574,9 @@ GtkComboBox.combobox-entry .button:last-child {
     -GtkNotebook-tab-overlap: 5px;
 
     background-color: shade (@bg_color, 1.06);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .notebook tab {

@@ -34,6 +34,9 @@
                                   @bg_color,
                                   shade (@bg_color, 0.84)
                                   );
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .toolbar .separator {
@@ -58,6 +61,9 @@
                 inset 0 -1px 0 0 alpha (#fff, 0.20);
 
     border-color: shade (@bg_color, 0.50);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .secondary-toolbar.toolbar .button {
@@ -66,6 +72,9 @@
         left top, left bottom,
         from (shade (@bg_color, 0.74)),
         to (shade (@bg_color, 0.61)));
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 

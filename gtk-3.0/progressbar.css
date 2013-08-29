@@ -164,4 +164,7 @@ GtkProgressBar.trough {
                                   shade (@selected_bg_color, 0.87),
                                   shade (@selected_bg_color, 0.80)
                                   ) 1 1 1 1;
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
