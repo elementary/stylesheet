@@ -96,12 +96,6 @@ GtkComboBox.combobox-entry .button {
                      from (shade (@bg_color, 0.67)),
                      to (shade (@bg_color, 0.74)));
 
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (@transparent),
-                     color-stop (0.75, @transparent),
-                     to (alpha (#fff, 0.40)));
-
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
                     from (alpha (#000, 0.10)),

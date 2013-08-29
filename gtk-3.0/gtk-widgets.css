@@ -76,8 +76,6 @@ GtkAssistant .sidebar {
     border-style: solid;
     border-width: 1px 1px 0 0;
     color: mix (@fg_color, @bg_color, 0.40);
-    -unico-inner-stroke-color: shade (@bg_color, 0.94);
-    -unico-inner-stroke-width: 1px 1px 0 0;
     padding: 12px;
     text-shadow: 0 1px shade (@bg_color, 1.04);
 }
@@ -152,10 +150,7 @@ GtkIconView.view.cell:selected:focus {
     border-color: shade (@base_color, 0.74);
     border-radius: 4px;
     color: @text_color;
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.07)),
-                    to (alpha (#000, 0.03)));
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
 }
 
 .rubberband,
@@ -340,24 +335,6 @@ GtkSwitch.slider:insensitive {
     color: @selected_fg_color;
 }
 
-/* Inner Higlight */
-
-.menubar.menuitem:active,
-.menubar.menuitem:prelight,
-.notebook,
-.toolbar,
-.trough row,
-.trough row:hover,
-.trough row:selected,
-.trough row:selected:focus {
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                     left bottom, left top,
-                     from (alpha (#fff, 0.20)),
-                     color-stop (0.10, alpha (#fff, 0.05)),
-                     color-stop (0.90, alpha (#fff, 0.05)),
-                     to (alpha (#fff, 0.50)));
-}
-
 /**************
  * ComboBoxes *
  **************/
@@ -422,22 +399,12 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .entry.progressbar {
-
     background-image: -gtk-gradient (linear,
                     left top,
                     left bottom,
                     from (shade (@selected_bg_color, 1.23)),
                     to (shade (@selected_bg_color, 1.37)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (shade (@selected_bg_color, 1.00)),
-                    to (shade (@selected_bg_color, 1.00)));
-
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (@transparent),
-                    to (@transparent));
+    border-color: @selected_bg_color;
 }
 
 
@@ -637,33 +604,6 @@ GtkComboBox.combobox-entry .button:last-child {
 .tooltip GtkLabel,
 .files-overlay-bar GtkLabel {
     color: white;
-}
-
-.button:active:insensitive {
-
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (shade (@bg_color, 0.85)),
-                     color-stop (0.20, shade (@bg_color, 0.94)),
-                     to (@bg_color));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@bg_color, 0.67)),
-                     to (shade (@bg_color, 0.74)));
-
-    -unico-outer-stroke-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (@transparent),
-                     color-stop (0.75, @transparent),
-                     to (alpha (#fff, 0.40)));
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.10)),
-                    to (alpha (#000, 0.06)));
-
 }
 
 GtkTreeView {
