@@ -82,6 +82,33 @@ GtkComboBox.combobox-entry .button {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
 }
 
+.button:active:insensitive {
+
+    background-image: -gtk-gradient (linear,
+                     left top,
+                     left bottom,
+                     from (shade (@bg_color, 0.85)),
+                     color-stop (0.20, shade (@bg_color, 0.94)),
+                     to (@bg_color));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (shade (@bg_color, 0.67)),
+                     to (shade (@bg_color, 0.74)));
+
+    -unico-outer-stroke-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (@transparent),
+                     color-stop (0.75, @transparent),
+                     to (alpha (#fff, 0.40)));
+
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (alpha (#000, 0.10)),
+                    to (alpha (#000, 0.06)));
+
+}
+
 .toolbar .button {
     padding: 3px;
     icon-shadow: none;
