@@ -317,6 +317,13 @@ GtkWindow {
                 0 1px 0 1px alpha (#fff, 0.30);
 }
 
+/*******************
+ * Symbolic Images *
+ ******************/
+
+.image {
+    color: @fg_color;
+}
 
 /*FIXME: This fucks up progressbar entry icons */
  
@@ -326,14 +333,6 @@ GtkWindow {
 
 .entry.image:hover {
     color: @text_color;
-}
-
-/*******************
- * Symbolic Images *
- ******************/
-
-.image {
-    color: @fg_color;
 }
 
 /*****************
@@ -538,9 +537,10 @@ GtkProgressBar.trough {
                                   shade (@bg_color, 0.84)
                                   );
 
-    border-width: 0 0 1px;
-    border-style: solid;
     border-color: shade (@bg_color, 0.56);
+    border-radius: 6px 6px 0 0;
+    border-style: solid;
+    border-width: 0 0 1px;
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
 
@@ -1194,4 +1194,23 @@ GtkPaned .frame {
 
 .radio:active {
     background-image: url("assets/radio-active.svg"); 
+}
+
+/*******
+ * CSD *
+ ******/
+
+.window-frame {
+    border-color: alpha (#000, 0.3);
+    border-radius: 7px 7px 0 0;
+    border-width: 1px;
+    border-style: solid;
+
+    box-shadow: 0 15px 20px 3px alpha (#000, 0.86);
+
+    margin: 10px;
+}
+
+.window-frame:backdrop {
+    box-shadow: 0 6px 8px 3px alpha (#000, 0.58);
 }
