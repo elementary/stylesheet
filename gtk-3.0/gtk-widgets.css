@@ -854,10 +854,12 @@ GtkComboBox.combobox-entry .button:last-child {
  **********************/
 
 .dynamic-notebook {
+    /* FIXME: should really use border */
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.76),
                                   shade (@bg_color, 0.83) 17%,
-                                  shade (@bg_color, 0.90)
+                                  shade (@bg_color, 0.90) 93%,
+                                  shade (@bg_color, 0.10)
                                   );
 }
 
@@ -867,16 +869,14 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .dynamic-notebook .notebook {
-    border-width: 1px 0 0 0;
+    border-width: 0;
 
     -GtkNotebook-tab-overlap: 1px;
     -GtkNotebook-initial-gap: 10px;
-
-    border-color: alpha (#000, 0.40);
 }
 
 .dynamic-notebook .notebook tab {
-    padding: 1px 3px 0 3px;
+    padding: 2px 3px;
 
     border-radius: 0;
 
@@ -926,10 +926,15 @@ GtkComboBox.combobox-entry .button:last-child {
 
     -GtkNotebook-tab-overlap: 5px;
 
+    background-clip: border-box;
     background-color: shade (@bg_color, 1.06);
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.notebook GtkViewport {
+    background-color: @base_color;
 }
 
 .notebook tab {
@@ -940,7 +945,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
     border-radius: 4px;
 
-    padding: 2px 3px 0 3px;
+    padding: 2px 3px 0;
 }
 
 .dynamic-notebook .notebook tab .entry {
