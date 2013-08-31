@@ -1229,8 +1229,8 @@ GtkPaned .frame {
 
 
 .titlebar .titlebutton {
-    icon-shadow: 0px 1px (#fff, 0.4);
-    color: color: alpha (#000, 0.50);
+    icon-shadow: 0px 1px alpha (#fff, 0.4);
+    color: alpha (#000, 0.50);
     background: none;
     padding: 5px 5px 6px 5px;
 
