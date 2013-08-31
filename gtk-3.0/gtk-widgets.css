@@ -1201,7 +1201,7 @@ GtkPaned .frame {
  ******/
 
 .window-frame {
-    border-color: alpha (#000, 0.3);
+    border-color: alpha (#000, 0.35);
     border-radius: 7px 7px 0 0;
     border-width: 1px;
     border-style: solid;
