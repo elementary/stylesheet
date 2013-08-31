@@ -385,6 +385,161 @@ GtkWindow {
     border-radius: 2px 0 0 2px;
 }
 
+/****************
+ * Progress bar *
+ ****************/
+
+GtkProgressBar {
+    border-radius: 12px;
+    padding: 1px;
+}
+
+GtkProgressBar.progressbar {
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.88),
+                                  @base_color
+                                  );
+
+    border-style: none;
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
+}
+
+GtkProgressBar.trough {
+    border: 1px solid alpha (#000, 0.35);
+
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.15),
+                                  alpha (#000, 0.07)
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.03);
+}
+
+/**********************************
+ * Progress bar in a Tree or Cell *
+ *********************************/
+
+.progressbar row,
+.progressbar row:hover {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
+
+    background-image: linear-gradient(to left top,
+                                  alpha (#fff, 0.10),
+                                  alpha (#fff, 0.10) 25%,
+                                  transparent 25%,
+                                  transparent 50%,
+                                  alpha (#fff, 0.10) 50%,
+                                  alpha (#fff, 0.10) 75%,
+                                  transparent 75%,
+                                  transparent
+                                  ),
+                        linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  shade (@selected_bg_color, 1.20) 50%,
+                                  shade (@selected_bg_color, 1.08) 60%,
+                                  shade (@selected_bg_color, 1.08) 70%,
+                                  shade (@selected_bg_color, 1.30)
+                                  );
+
+    background-size: 24px 24px, auto;
+
+    border-style: solid;
+    border-width: 1px;
+
+    border-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.05),
+                                  shade (@selected_bg_color, 0.88)
+                                  ) 1 1 1 1;
+
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.50),
+                inset 0 -1px 0 0 alpha (#fff, 0.25);
+}
+
+.progressbar row:backdrop,
+.progressbar row:backdrop:hover,
+.progressbar row:selected:backdrop,
+.progressbar row:selected:backdrop:hover {
+    background-image: linear-gradient(to left top,
+                                  alpha (#fff, 0.10),
+                                  alpha (#fff, 0.10) 25%,
+                                  transparent 25%,
+                                  transparent 50%,
+                                  alpha (#fff, 0.10) 50%,
+                                  alpha (#fff, 0.10) 75%,
+                                  transparent 75%,
+                                  transparent
+                                  ),
+                        linear-gradient(to bottom,
+                                  @bg_color,
+                                  shade (@bg_color, 0.90) 50%,
+                                  shade (@bg_color, 0.78) 60%,
+                                  shade (@bg_color, 0.78) 70%,
+                                  @bg_color
+                                  );
+
+    border-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.80),
+                                  shade (@bg_color, 0.63)
+                                  ) 1 1 1 1;
+}
+
+.progressbar row:selected,
+.progressbar row:selected:focused {
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  shade (@selected_bg_color, 1.20) 50%,
+                                  shade (@selected_bg_color, 1.08) 60%,
+                                  shade (@selected_bg_color, 1.08) 70%,
+                                  shade (@selected_bg_color, 1.30)
+                                  );
+
+    border-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 0.87),
+                                  shade (@selected_bg_color, 0.80)
+                                  ) 1 1 1 1;
+}
+
+.trough row,
+.trough row:hover,
+.trough row:selected:backdrop,
+.trough row:selected:backdrop:hover  {
+
+    padding: 0;
+
+    border-style: solid;
+    border-width: 1px;
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.10),
+                                  shade (@bg_color, 1.05) 50%,
+                                  shade (@bg_color, 0.93) 60%,
+                                  shade (@bg_color, 0.93) 70%,
+                                  shade (@bg_color, 1.10)
+                                  );
+
+    border-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.78),
+                                  shade (@bg_color, 0.70)
+                                  ) 1 1 1 1;
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
+}
+
+.trough row:selected,
+.trough row:selected:focused  {
+    color: @text_color;
+
+    border-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 0.87),
+                                  shade (@selected_bg_color, 0.80)
+                                  ) 1 1 1 1;
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
 /***************
  * Header Bars *
  **************/
@@ -892,7 +1047,6 @@ ConversationList.view.cell {
 @import url("scrollbar.css");
 @import url("toolbar.css");
 @import url("content-view.css");
-@import url("progressbar.css");
 @import url("apps.css");
 
 /**********************
