@@ -192,11 +192,6 @@ GtkCalendar.highlight {
  * iconview *
  ************/
 
-GtkViewport,
-GtkIconView {
-    background-color: @transparent;
-}
-
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-color: alpha (#000, 0.18);
@@ -288,14 +283,6 @@ GtkInfoBar .menu {
 GtkInfoBar GtkLabel:insensitive {
     color: @insensitive_color;
 
-}
-
-/******************
-* Scrolled Window *
-******************/
-
-GtkScrolledWindow {
-    background-color: @transparent;
 }
 
 /************
@@ -660,12 +647,13 @@ GtkComboBox.combobox-entry .button:last-child {
     border: 0;
     padding: 3px 6px;
     margin: 3px;
-    text-shadow: 0 1px alpha (#000, 0.3);
+    text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
 .tooltip GtkLabel,
 .files-overlay-bar GtkLabel {
     color: white;
+    text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
 GtkTreeView {
