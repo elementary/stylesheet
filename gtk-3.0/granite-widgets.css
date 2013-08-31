@@ -102,8 +102,6 @@
     -GtkPaned-handle-size: 1;
     background-image: none;
     background-color: shade (@bg_color, 0.75);
-    
-    border-color: shade (@bg_color, 0.75);
 }
 
 .source-list.badge,

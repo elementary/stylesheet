@@ -39,11 +39,6 @@
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
-.toolbar .separator {
-    color: transparent;
-}
-
-
 /*********************
 * Secondary Toolbars *
 *********************/
