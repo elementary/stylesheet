@@ -40,7 +40,7 @@ GtkWindow {
 
 .background {
     color: @fg_color;
-    background-color: @background_color;
+    background-color: @bg_color;
 }
 
 /* FIXME: I shouldn't need this */
@@ -68,7 +68,7 @@ GtkWindow {
 }
 
 .gtkstyle-fallback {
-    background-color: @background-color;
+    background-color: @bg_color;
     color: @fg_color;
 }
 
