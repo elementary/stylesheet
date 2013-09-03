@@ -308,6 +308,7 @@ GtkWindow {
                                   shade (@selected_bg_color, 1.23),
                                   shade (@selected_bg_color, 1.37)
                                   );
+
     border-color: @selected_bg_color;
 }
 
@@ -327,7 +328,7 @@ GtkWindow {
  ******************/
 
 .image {
-    color: @fg_color;
+    color: @text_color;
 }
 
 /*FIXME: This fucks up progressbar entry icons */
@@ -404,7 +405,8 @@ GtkProgressBar.trough {
                                   alpha (#000, 0.07)
                                   );
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.03);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.03),
+                0 1px 0 1px alpha (#fff, 0.30);
 }
 
 /**********************************
@@ -549,7 +551,7 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
 
-    padding: 4px 6px 4px 6px;
+    padding: 8px 6px 8px 6px;
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
@@ -567,7 +569,7 @@ GtkProgressBar.trough {
 }
 
 .header-bar .button.text-button {
-    padding: 2px 16px;
+    padding: 2px 6px;
 }
 
 .header-bar .button.image-button {
@@ -592,8 +594,8 @@ GtkProgressBar.trough {
 /**************
 * Text Styles *
 **************/
-
-.title { font: raleway thin 36; }
+/*FIXME: breaks headerbar*/
+/*.title { font: raleway thin 36; }*/
 .h1 { font: open sans bold 24; }
 .h2 { font: open sans light 18; }
 .h3 { font: open sans bold 12; }
