@@ -1151,9 +1151,6 @@ GtkPaned .frame {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
 
     padding: 8px;
-
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .header-bar:backdrop {
@@ -1168,7 +1165,7 @@ GtkPaned .frame {
 }
 
 .header-bar .button.image-button {
-    padding: 0;
+    padding: 1px;
     border: none;
     background-image: none;
     box-shadow: none;
@@ -1177,6 +1174,7 @@ GtkPaned .frame {
 .header-bar .button.image-button:active,
 .header-bar .button.image-button:hover:active,
 .header-bar .button.image-button:focus:active {
+    padding: 0;
     background-color: alpha (#000, 0.10);    
 
     border: 1px solid alpha (#000, 0.22);
