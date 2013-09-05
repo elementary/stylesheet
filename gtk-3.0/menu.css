@@ -22,11 +22,9 @@
 
 /* this controls the general appearance of the menubar */
 .menubar {
-    border-style: none;
     padding: 4px;
     color: @text_color;
     -GtkWidget-window-dragging: true;
-    -GtkMenuBar-internal-padding: 0;
 }
 
 .content-view .menu,
@@ -48,7 +46,7 @@
 }
 
 .menuitem.accelerator {
-    color: alpha (#FFF, 0.66);
+    color: alpha (#fff, 0.66);
 }
 
 .menuitem.accelerator:prelight,
@@ -81,23 +79,6 @@
 
 .menu .menuitem:active,
 .menu .menuitem:prelight {
-    color: @selected_fg_color;
-}
-
-/* menu radio and check items are drawn differently */
-.menu.check:active {
-    color: @menu_controls_color;
-}
-
-.menu.radio:active {
-    color: @menu_controls_color;
-}
-
-.menu.check:prelight {
-    color: @selected_fg_color;
-}
-
-.menu.radio:prelight {
     color: @selected_fg_color;
 }
 
