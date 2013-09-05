@@ -22,7 +22,7 @@
 @define-color tooltip_bg_color #000;
 @define-color selected_bg_color #3d9bda;
 @define-color text_color #323232;
-@define-color insensitive_color #888;
+@define-color insensitive_color #999;
 @define-color fg_color #323232;
 @define-color tooltip_fg_color #FFF;
 @define-color selected_fg_color #FFF;

@@ -69,6 +69,7 @@
  * Tooltips *
  ************/
  
+/* FIXME: find out class name for granite overlay or have it changed to .tooltip in granite */
 .tooltip,
 .files-overlay-bar {
     background-color: alpha (black, 0.7);
@@ -969,6 +970,72 @@ GtkComboBox.combobox-entry .button:last-child {
 * Inline Toolbars *
 ******************/
 
+.inline-toolbar.toolbar {
+    -GtkToolbar-button-relief: normal;
+
+    border-radius: 0;
+    border-width: 0 1px 1px 1px;
+    padding: 0;
+
+    border-image: none;
+    border-color: shade (@bg_color, 0.70);
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.92),
+                                  shade (@base_color, 0.98)
+                                  );
+
+    box-shadow: inset 0 1px 0 0 alpha (#000, 0.10),
+                inset 0 -1px 0 0 alpha (#000, 0.06);
+}
+
+GtkPaned .inline-toolbar.toolbar {
+    border-width: 1px 0 0 0;
+    /*FIXME: This should probably use alpha just in case */
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.92),
+                                  shade (@bg_color, 0.98)
+                                  );
+}
+
+.inline-toolbar.toolbar .button {
+    border-radius: 0;
+    border-width: 0 0 0 1px;
+    padding: 1px 2px 1px 2px;
+    background-image: none;
+    background-color: @transparent;
+    box-shadow: none;
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.inline-toolbar.toolbar .button:active,
+.inline-toolbar.toolbar .button:active:hover {
+    background-color: alpha (#000, 0.05);
+	background-image: none;
+
+    border-color: shade (@base_color, 0.74);
+}
+
+.inline-toolbar.toolbar GtkToolButton:first-child .button,
+.inline-toolbar.toolbar .button:first-child {
+    border-width: 0;
+}
+
+.inline-toolbar.toolbar GtkToolButton:last-child .button,
+.inline-toolbar.toolbar .button:last-child {
+    border-width: 0 1px 0 1px;
+    border-radius: 0 2px 2px 0;
+}
+
+.inline-toolbar.toolbar .button *:insensitive,
+.inline-toolbar.toolbar .button:insensitive {
+    background-image: none;
+    background-color: alpha (#000, 0.02);
+    color: @insensitive_color;
+}
+
 /************************
 * Sidebar & Source List *
 ************************/
@@ -977,9 +1044,92 @@ GtkComboBox.combobox-entry .button:last-child {
 * Suggested Action Button *
 **************************/
 
+/* FIXME: Get .affirmative changed to .suggested-action */
+
+.button.affirmative,
+.content-view .button.affirmative {
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  @selected_bg_color
+                                  );
+
+    border-color: shade (@selected_bg_color, 0.90);
+}
+
+.button.affirmative:insensitive {
+    border-color: alpha (#000, 0.20);
+}
+
+.button.affirmative GtkLabel,
+.button.affirmative Gtklabel:prelight {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
+}
+
+.button.affirmative GtkLabel:insensitive {
+    text-shadow: 0 1px alpha (#fff, 0.3);
+    icon-shadow: 0 1px alpha (#fff, 0.3);
+}
+
+.button.affirmative:active,
+.button.affirmative:active:hover,
+.content-view .button.affirmative:active,
+.content-view .button.affirmative:active:hover {
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.20),
+                                  @selected_bg_color
+                                  );
+
+    border-color: shade (@selected_bg_color, 0.85);
+}
+
 /****************************
 * Destructive Action Button *
 ****************************/
+
+/* FIXME: Get .noundo changed to .destructive-action */
+
+.button.noundo,
+.content-view .button.noundo {
+    background-image: -gtk-gradient (linear,
+                     left top,
+                     left bottom,
+                     from (#e56453),
+                     to (#bb2332));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                     left top, left bottom,
+                     from (#dd3b27),
+                     to (#791235));
+    -unico-inner-stroke-gradient: -gtk-gradient (linear,
+                     left bottom, left top,
+                     from (alpha (#fff, 0.20)),
+                     color-stop (0.10, alpha (#fff, 0.05)),
+                     color-stop (0.90, alpha (#fff, 0.05)),
+                     to (alpha (#fff, 0.50)));
+}
+
+.button.noundo:focus {
+    background-image: -gtk-gradient (linear,
+                    left top,
+                    left bottom,
+                    from (#f67564),
+                    to (#cc3443));
+
+    -unico-border-gradient: -gtk-gradient (linear,
+                    left top, left bottom,
+                    from (#dd3b27),
+                    to (#791235));
+}
+
+.button.noundo GtkLabel,
+.button.noundo Gtklabel:prelight {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha (#000, 0.3);
+    icon-shadow: 0 1px alpha (#000, 0.3);
+}
 
 /***************
 * GtkAssistant *
@@ -1227,6 +1377,33 @@ GtkInfoBar .menu {
 GtkInfoBar GtkLabel:insensitive {
     color: @insensitive_color;
 
+}
+
+GtkInfoBar .button,
+GtkInfoBar .button:focus,
+.dynamic-notebook GtkInfoBar .button {
+
+    text-shadow: none;
+    icon-shadow: none;
+    
+    background-image: none; 
+    background-color: @transparent;  
+
+    border: 1px solid alpha (#000, 0.24);
+}
+
+GtkInfoBar .button:active,
+GtkInfoBar .button:hover:active {
+    background-image: none;
+    background-color: alpha (#000, 0.05);
+}
+
+GtkInfoBar .button:insensitive,
+GtkInfoBar .button:hover:insensitive {
+    background-image: none;
+    background-color: @transparent;    
+
+    border: 1px solid alpha (#000, 0.18);
 }
 
 /*******
