@@ -30,10 +30,6 @@
     -GtkWidget-focus-line-width: 0;
 }
 
-GtkWindow {
-    background-color: @bg_color
-}
-
 /***************
  * Base States *
  **************/
@@ -563,9 +559,9 @@ GtkProgressBar.trough {
                                   shade (@bg_color, 0.98)
                                   );
 
-    border-color: shade (@bg_color, 0.66);
+    border-color: shade (@bg_color, 0.70);
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.30);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
 }
 
 .header-bar .button.text-button {
@@ -890,7 +886,7 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .dynamic-notebook .notebook tab {
-    padding: 2px 3px;
+    padding: 3px;
 
     border-radius: 0;
 
@@ -986,14 +982,6 @@ GtkComboBox.combobox-entry .button:last-child {
 .dynamic-notebook .notebook tab .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
-    border-radius: 2.5px;
-
-    padding: 0;
-
-    -GtkButton-inner-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 0;
-
     background-image:   none;
     background-color:   alpha (#000, 0.02);
 
@@ -1166,20 +1154,18 @@ column-header .button:hover {
 
 .frame {
     border: 1px solid shade (@bg_color, 0.70);
-    padding: 0;
     color: lighter (@theme_fg_color);
 }
 
 GtkScrolledWindow.frame {
     border: 1px solid shade (@bg_color, 0.70);
-    padding: 0;
 }
 
 /* avoid borders when a viewport is
  * packed into a ScrolledWindow or Pane */
 GtkScrolledWindow GtkViewport.frame,
 GtkPaned .frame {
-    border-style: none;
+    border: none;
 }
 
 /*************************
@@ -1256,7 +1242,7 @@ GtkPaned .frame {
     border-radius: 4px 4px 0 0;
 
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 2px 8px alpha (#000, 0.86);
+                0 3px 8px alpha (#000, 0.86);
 
     margin: 12px;
 }
