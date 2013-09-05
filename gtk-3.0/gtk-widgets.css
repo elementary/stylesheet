@@ -1012,10 +1012,6 @@ GtkTreeView .entry {
     border-radius: 0;
 }
 
-ConversationList.view.cell {
-    background-color: red;
-}
-
 .cell {
     color: @text_color;
 }

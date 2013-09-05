@@ -99,34 +99,19 @@
 }
 
 .content-view .button {
-
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-
     color: @text_color;
     text-shadow: 0 1px alpha (#fff, 0.60);
 
-    border-style: solid;
-    border-radius: 2.5px;
-
     background-color: alpha (#fff, 0.0);
-
     background-image: none;
 }
 
 .content-view .button:active,
 .content-view .button:active:hover {
 
-    -unico-outer-stroke-width: 1;
-    -unico-inner-stroke-width: 1;
-
     background-color: alpha (#000, 0.05);
 	background-image: none;
-
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (shade (@base_color, 0.74)),
-                     to (shade (@base_color, 0.74)));
+    border-color: shade (@base_color, 0.74);
 
     -unico-inner-stroke-gradient: -gtk-gradient (linear,
                     left top, left bottom,
