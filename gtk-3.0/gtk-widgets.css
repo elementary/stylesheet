@@ -794,7 +794,67 @@ GtkComboBox.combobox-entry .button:last-child {
 * Menus *
 ********/
 
-@import url("menu.css");
+/* this controls the general appearance of the menubar */
+.menubar {
+    padding: 4px;
+    color: @text_color;
+    -GtkWidget-window-dragging: true;
+}
+
+.content-view .menu,
+.menu {
+    padding: 0 1px 0 1px;
+
+    background-color: #f8f8f8;
+    background-image: none;
+
+    border: 1px solid alpha (#000, 0.4);
+}
+
+.menu.button {
+    background-image: none;
+}
+
+.menuitem {
+    padding: 4px 0 4px 0;
+}
+
+.menuitem.accelerator {
+    color: alpha (#fff, 0.66);
+}
+
+.menuitem.accelerator:prelight,
+.menuitem.accelerator:active {
+    color: alpha (@text_color, 0.49);
+}
+
+.menuitem:insensitive {
+    color: alpha (@text_color, 0.40);
+}
+
+.menuitem:active,
+.menuitem:prelight {
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  shade (@selected_bg_color, 0.98)
+                                  );
+
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    border-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.18),
+                                  shade (@selected_bg_color, 0.88)
+                                  ) 1 0 1 0;
+
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
+                inset 0 -1px 0 0 alpha (#fff, 0.06);
+}
+
+.menu .menuitem:active,
+.menu .menuitem:prelight {
+    color: @selected_fg_color;
+}
 
 /*************
 * Menu Button*
