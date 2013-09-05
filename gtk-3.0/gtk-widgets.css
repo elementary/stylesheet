@@ -46,15 +46,13 @@
 
 *:selected,
 *:selected:focus {
+    /* FIXME: We should set the bg color in each widget */
     background-color: alpha (@selected_bg_color, 0.9);
     color: @selected_fg_color;
 }
 
 *:insensitive {
     color: @insensitive_color;
-    icon-shadow: 0 1px alpha (#fff, 0.4);
-    text-shadow: 0 1px alpha (#fff, 0.4);
-
     -gtk-image-effect: dim;
 }
 
@@ -528,63 +526,6 @@ GtkProgressBar.trough {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-}
-
-/***************
- * Header Bars *
- **************/
-
-.header-bar {
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.04),
-                                  shade (@bg_color, 0.84)
-                                  );
-
-    border-color: shade (@bg_color, 0.56);
-    border-radius: 3px 3px 0 0;
-    border-style: solid;
-    border-width: 0 0 1px;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
-
-    padding: 8px 6px 8px 6px;
-
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
-}
-
-.header-bar:backdrop {
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.10),
-                                  shade (@bg_color, 0.98)
-                                  );
-
-    border-color: shade (@bg_color, 0.70);
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
-}
-
-.header-bar .button.text-button {
-    padding: 2px 6px;
-}
-
-.header-bar .button.image-button {
-    padding: 5px 4px 5px 5px;
-}
-
-.header-bar .separator {
-    color: @transparent
-}
-
-.header-bar .title {
-    color: alpha (#000, 0.50);
-    font: Bold 9;
-    text-shadow: 0 1px alpha (#fff, 0.6);
-}
-
-.header-bar .title:backdrop {
-    color: alpha (#000, 0.30);
-    text-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 /**************
@@ -1150,7 +1091,7 @@ column-header .button:hover {
 
 .frame {
     border: 1px solid shade (@bg_color, 0.70);
-    color: lighter (@theme_fg_color);
+    color: lighter (@fg_color);
 }
 
 GtkScrolledWindow.frame {
@@ -1190,6 +1131,77 @@ GtkPaned .frame {
 
 .radio:active {
     background-image: url("assets/radio-active.svg"); 
+}
+
+/***************
+ * Header Bars *
+ **************/
+
+.header-bar {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.04),
+                                  shade (@bg_color, 0.84)
+                                  );
+
+    border-color: shade (@bg_color, 0.56);
+    border-radius: 3px 3px 0 0;
+    border-style: solid;
+    border-width: 0 0 1px;
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
+
+    padding: 8px;
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.header-bar:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.10),
+                                  shade (@bg_color, 0.98)
+                                  );
+
+    border-color: shade (@bg_color, 0.70);
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
+}
+
+.header-bar .button.image-button {
+    padding: 0;
+    border: none;
+    background-image: none;
+    box-shadow: none;
+}
+
+.header-bar .button.image-button:active,
+.header-bar .button.image-button:hover:active,
+.header-bar .button.image-button:focus:active {
+    background-color: alpha (#000, 0.10);    
+
+    border: 1px solid alpha (#000, 0.22);
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 1px alpha (#fff, 0.30);
+}
+
+.header-bar .separator {
+    color: @transparent;
+}
+
+.header-bar .title,
+.header-bar .button.image-button GtkImage {
+    color: shade (@bg_color, 0.55);
+    font: Bold 9;
+    text-shadow: 0 1px alpha (#fff, 0.6);
+    icon-shadow: 0 1px alpha (#fff, 0.6);
+}
+
+.header-bar .title:backdrop,
+.header-bar .button.image-button GtkImage:backdrop {
+    color: shade (@bg_color, 0.80);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 /*******
