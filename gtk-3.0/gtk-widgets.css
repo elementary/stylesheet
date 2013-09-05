@@ -882,6 +882,7 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .menu .menuitem:active,
+.menu .menuitem:hover,
 .menu .menuitem:prelight {
     color: @selected_fg_color;
 }
@@ -1451,7 +1452,6 @@ GtkTreeView .entry {
     border-radius: 0;
 }
 
-
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-color: alpha (#000, 0.18);
@@ -1489,9 +1489,70 @@ GtkIconView.view.cell:selected:focus {
     border-width: 0px;
 }
 
+/**********************
+ * Column Headers *
+ *********************/
+
+column-header .button,
+.content-view column-header .button {
+    border-radius: 0;
+}
+
+column-header:nth-child(first) .button,
+.content-view column-header:nth-child(first) .button {
+    border-width: 0 0 1px 0;
+}
+
+column-header .button {
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.88),
+                                  @base_color
+                                  );
+
+    border-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.88),
+                                  shade (@base_color, 0.70)
+                                  ) 0 0 1 1;
+    border-width: 0 0 1px 1px;
+    font: bold;
+    padding: 4px 2px 4px 2px;
+}
+
+column-header .button:hover {
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.80),
+                                  @base_color
+                                  );
+}
+
+/***********
+* Expander *
+***********/
+
+.expander {
+    color: @fg_color;
+}
+
+.expander row:selected,
+.expander row:selected:focus {
+    color: @selected_fg_color;
+}
+
 /*************
 * List Boxes *
 *************/
+
+EggListBox {
+    background-color: @base_color;
+}
+
+.list {
+    background-color: @base_color;
+}
+
+.list-row:selected {
+    background-color: @selected_bg_color;
+}
 
 /***************
 * Content View *
@@ -1691,20 +1752,6 @@ GtkInfoBar .button:hover:insensitive {
 .h2 { font: open sans light 18; }
 .h3 { font: open sans bold 12; }
 
-
-/***********
-* Expander *
-***********/
-
-.expander {
-    color: @fg_color;
-}
-
-.expander row:selected,
-.expander row:selected:focus {
-    color: @selected_fg_color;
-}
-
 /********
  * Grip *
  ********/
@@ -1716,39 +1763,3 @@ GtkInfoBar .button:hover:insensitive {
 
 @import url("granite-widgets.css");
 @import url("apps.css");
-
-/**********************
- * Column Headers *
- *********************/
-
-column-header .button,
-.content-view column-header .button {
-    border-radius: 0;
-}
-
-column-header:nth-child(first) .button,
-.content-view column-header:nth-child(first) .button {
-    border-width: 0 0 1px 0;
-}
-
-column-header .button {
-    background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.88),
-                                  @base_color
-                                  );
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.88),
-                                  shade (@base_color, 0.70)
-                                  ) 0 0 1 1;
-    border-width: 0 0 1px 1px;
-    font: bold;
-    padding: 4px 2px 4px 2px;
-}
-
-column-header .button:hover {
-    background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.80),
-                                  @base_color
-                                  );
-}
