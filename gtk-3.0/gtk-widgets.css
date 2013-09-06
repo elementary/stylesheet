@@ -260,7 +260,6 @@
 * Text Entry *
 *************/
 
-/* FIXME: Why is there a wildcard here? */
 .entry {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.10),
@@ -367,6 +366,7 @@
 .spinbutton .button:insensitive,
 .spinbutton .button:focus:insensitive {
     background-color: alpha (#000, 0.02);
+    background-image: none;
     color: @insensitive_color;
 }
 
