@@ -463,12 +463,12 @@ GtkProgressBar.trough {
 *********/
 
 .frame {
-    border: 1px solid shade (@bg_color, 0.70);
+    border: 1px solid alpha (#000, 0.30);
     color: lighter (@fg_color);
 }
 
 GtkScrolledWindow.frame {
-    border: 1px solid shade (@bg_color, 0.70);
+    border: 1px solid alpha (#000, 0.30);
 }
 
 /* avoid borders when a viewport is
@@ -1796,8 +1796,6 @@ GtkInfoBar .button:hover:insensitive {
 * Text Styles *
 **************/
 
-/*FIXME: breaks headerbar*/
-/*.title { font: raleway thin 36; }*/
 .h1 { font: open sans bold 24; }
 .h2 { font: open sans light 18; }
 .h3 { font: open sans bold 12; }

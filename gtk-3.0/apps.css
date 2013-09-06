@@ -169,7 +169,7 @@ ConversationListView.view.cell:selected {
  ********/
 
 .panel {
-    background-color: @transparent;
+    background-color: transparent;
     color: #fff;
     font-weight: bold;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
@@ -178,7 +178,7 @@ ConversationListView.view.cell:selected {
 
 .panel-shadow {
     background-image: none;
-    background-color: @transparent;
+    background-color: transparent;
 }
 
 .panel-app-button {
@@ -186,7 +186,7 @@ ConversationListView.view.cell:selected {
 }
 
 .composited-indicator {
-    background-color: @transparent;
+    background-color: transparent;
     color: #fff;
     padding: 0 2px;
 }
@@ -194,8 +194,8 @@ ConversationListView.view.cell:selected {
 .composited-indicator.menuitem:active,
 .composited-indicator.menuitem:prelight {
     border-style: none;
-    -unico-inner-stroke-width: 0;
     background-image: none;
+    box-shadow: none;
 }
 
 /************
@@ -216,5 +216,5 @@ TerminalScreen {
 
 .tweet {
     padding: 0;
-    -unico-inner-stroke-width: 0;
+    box-shadow: none;
 }
