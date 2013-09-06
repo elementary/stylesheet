@@ -197,7 +197,7 @@
                       -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0.250)), to(transparent)),
                       -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0.125)), to(transparent)),
                       -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent));
-    animation: spinner 1s infinite linear;
+    animation: spinner 600ms infinite linear;
 }
 
 .view.rubberband,
