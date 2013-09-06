@@ -108,6 +108,7 @@
     background-color: transparent;
     background-image: url("assets/spinner-01.svg");
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .spinner:active {
