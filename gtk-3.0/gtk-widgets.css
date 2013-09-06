@@ -274,7 +274,7 @@
     border: 1px solid alpha (#000, 0.27);
     border-radius: 2.5px;
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.06),
+    box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 1px alpha (#fff, 0.30);
 
     -GtkEntry-progress-border: 0;
@@ -314,7 +314,7 @@
                                   );
 
     border-color: alpha (#000, 0.25);
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.06),
+    box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 1px alpha (#fff, 0.30);
 }
 
@@ -565,13 +565,40 @@ GtkPaned .frame {
 * Linked *
 *********/
 
+.linked .entry {
+    box-shadow: inset -1px 0 @inset_dark_color;
+}
+
+.linked .entry:focus {
+    box-shadow: inset 1px 0 @inset_dark_color,
+                inset -1px 0 @inset_dark_color,
+                inset 1px 2px alpha(@selected_bg_color, 0.1),
+                inset 1px 1px alpha(@selected_bg_color, 0.1),
+                inset -1px -1px alpha(@selected_bg_color, 0.2);
+
+}
+
+.linked .entry:focus:first-child {
+    box-shadow: inset -1px 0 @inset_dark_color,
+                inset 1px 2px alpha(@selected_bg_color, 0.1),
+                inset 1px 1px alpha(@selected_bg_color, 0.1),
+                inset -1px -1px alpha(@selected_bg_color, 0.2);
+
+}
+
+.linked .entry:focus:last-child {
+    box-shadow: inset 1px 0 @inset_dark_color,
+                inset 1px 2px alpha(@selected_bg_color, 0.1),
+                inset 1px 1px alpha(@selected_bg_color, 0.1),
+                inset -1px -1px alpha(@selected_bg_color, 0.2);
+
+}
+
 /* Middle button */
 .linked .entry,
 .linked .button,
 .linked .button:active,
 .linked .button:active:hover,
-.linked .button:focus,
-.linked .button:focus:active,
 .linked .button:insensitive {
     border-right-width: 0;
     border-radius: 0;
@@ -582,8 +609,6 @@ GtkPaned .frame {
 .linked .button:first-child,
 .linked .button:active:first-child,
 .linked .button:active:hover:first-child,
-.linked .button:focus:first-child,
-.linked .button:focus:active:first-child,
 .linked .button:insensitive:first-child {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -596,8 +621,6 @@ GtkPaned .frame {
 .linked .button:last-child,
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
-.linked .button:focus:last-child,
-.linked .button:focus:active:last-child,
 .linked .button:insensitive:last-child {
     border-right-width: 1px;
     border-bottom-right-radius: 2.5px;
@@ -611,10 +634,49 @@ GtkPaned .frame {
 .linked .button:only-child,
 .linked .button:active:only-child,
 .linked .button:active:hover:only-child,
-.linked .button:focus:only-child,
-.linked .button:focus:active:only-child,
 .linked .button:insensitive:only-child {
-    border-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-radius: 2.5px;
+}
+
+/* Middle button (vertical) */
+.linked.vertical .entry,
+.linked.vertical .button,
+.linked.vertical .button:active,
+.linked.vertical .button:active:hover,
+.linked.vertical .button:insensitive {
+    border-bottom-width: 0;
+    border-radius: 0;
+}
+
+/* Top button (vertical) */
+.linked.vertical .entry:first-child,
+.linked.vertical .button:first-child,
+.linked.vertical .button:active:first-child,
+.linked.vertical .button:active:hover:first-child,
+.linked.vertical .button:insensitive:first-child {
+    border-radius: 2.5px 2.5px 0 0;
+}
+
+/* Bottom button (vertical) */
+.linked.vertical .entry:last-child,
+.linked.vertical .button:last-child,
+.linked.vertical .button:active:last-child,
+.linked.vertical .button:active:hover:last-child,
+.linked.vertical .button:insensitive:last-child {
+    border-bottom-width: 1px;
+    border-radius: 0 0 2.5px 2.5px;
+}
+
+/* Linked single button (vertical) */
+.linked.vertical .entry:only-child,
+.linked.vertical .button:only-child,
+.linked.vertical .button:active:only-child,
+.linked.vertical .button:active:hover:only-child,
+.linked.vertical .button:insensitive:only-child {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
     border-radius: 2.5px;
 }
 
@@ -782,7 +844,7 @@ GtkComboBox.combobox-entry .button:last-child {
                                   @base_color
                                   );
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
+    box-shadow: inset 0 0 0 1px @inset_dark_color;
 }
 
 /*************
@@ -1090,7 +1152,7 @@ GtkComboBox.combobox-entry .button:last-child {
                                   );
 
     box-shadow: inset 0 1px 0 0 alpha (#000, 0.10),
-                inset 0 -1px 0 0 alpha (#000, 0.06);
+                inset 0 -1px 0 0 @inset_dark_color;
 }
 
 GtkPaned .inline-toolbar.toolbar {
@@ -1458,7 +1520,7 @@ GtkIconView.view.cell:selected:focus {
     border-color: shade (@base_color, 0.74);
     border-radius: 4px;
     color: @text_color;
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.06);
+    box-shadow: inset 0 0 0 1px @inset_dark_color;
 }
 
 .view {
