@@ -2,7 +2,7 @@
 <metacity_theme>
 <info>
     <name>elementary</name>
-    <author>elementart Design Team</author>
+    <author>elementary Design Team</author>
     <copyright>elementary</copyright>
     <date>2009-2012</date>
     <description>A pleasant theme built to adapt to many color schemes as well as be optimal for both high and low resolution displays.</description>
@@ -176,9 +176,9 @@
 
 <draw_ops name="titlebar_fill_attached_focused"> <!-- gradient for attached and modal dialogs titlebar-->
 	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
-		<color value="shade/gtk:bg[NORMAL]/0.80" />
-		<color value="shade/gtk:bg[NORMAL]/0.95" />
-		<color value="gtk:bg[NORMAL]" />
+		<color value="shade/#fff/0.80" />
+		<color value="shade/#fff/0.91" />
+		<color value="shade/#fff/0.96" />
 	</gradient>
 </draw_ops>
 

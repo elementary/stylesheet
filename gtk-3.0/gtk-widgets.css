@@ -274,44 +274,6 @@
     color: @selected_fg_color;
 }
 
-/*****************
- * GtkSpinButton *
- *****************/
-
-.spinbutton .button {
-    border-width: 0;
-    border-radius: 0;
-    border-style: none;
-    border-image: none;
-
-    background-color: transparent;
-    background-image: none;
-
-    box-shadow: inset 1px 0 alpha (#000, 0.10);
-
-    padding: 2px 6px;
-}
-
-.spinbutton .button:insensitive,
-.spinbutton .button:focus:insensitive {
-    background-color: alpha (#000, 0.02);
-    background-image: none;
-    color: @insensitive_color;
-}
-
-.spinbutton .button:first-child {
-    border-radius: 2px 0 0 2px;
-    box-shadow: none;
-}
-
-.spinbutton .button:last-child {
-    border-radius: 0 2px 2px 0;
-}
-
-.spinbutton .button:dir(rtl) {
-    box-shadow: inset -1px 0 alpha (#000, 0.10);
-}
-
 /****************
  * Progress bar *
  ****************/
@@ -581,11 +543,12 @@ GtkComboBox.combobox-entry .button {
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.15),
-                                  shade (@bg_color, 0.98)
+                                  transparent,
+                                  transparent 50%,
+                                  alpha (#000, 0.04)
                                   );
 
-    border: 1px solid alpha (#000, 0.28);
+    border: 1px solid alpha (#000, 0.2);
     border-radius: 2.5px;
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
@@ -594,11 +557,25 @@ GtkComboBox.combobox-entry .button {
                 0 1px 0 1px alpha (#fff, 0.15);
 }
 
+.toolbar .button {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.15),
+                                  shade (@bg_color, 0.98)
+                                  );
+    border-color: alpha (#000, 0.28);
+}
+
 .button:hover {
     color:@text_color;
 }
 
 .button:insensitive {
+    background-image: none;
+    background-color: transparent;
+    border-color: alpha (#000, 0.20);
+}
+
+.toolbar .button:insensitive {
     background-image: linear-gradient(to bottom,
                                   alpha (#fff, 0.05),
                                   alpha (#000, 0.05)
@@ -621,15 +598,21 @@ GtkComboBox.combobox-entry .button {
 .button:active,
 .button:hover:active,
 .button:focus:active {
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.10),
-                                  alpha (#fff, 0.10)
-                                  );
-
+    background-color: alpha (#000, 0.05);
+	background-image: none;
     border-color: alpha (#000, 0.25);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
                 0 1px 0 1px alpha (#fff, 0.30);
+}
+
+.toolbar .button:active,
+.toolbar .button:hover:active,
+.toolbar .button:focus:active {
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.10),
+                                  alpha (#fff, 0.10)
+                                  );
 }
 
 .button:active:insensitive {
@@ -647,6 +630,43 @@ GtkComboBox.combobox-entry .button {
 }
 
 @import url("button.css");
+
+/*****************
+ * GtkSpinButton *
+ *****************/
+
+.spinbutton .button {
+    color: @internal_element_color;
+    padding: 2px 6px;
+    border-width: 0;
+    border-radius: 0;
+    border-style: none;
+    border-image: none;
+    box-shadow: inset 1px 0 alpha (#000, 0.10);
+
+    background-color: transparent;
+    background-image: none;
+}
+
+.spinbutton .button:insensitive,
+.spinbutton .button:focus:insensitive {
+    background-color: alpha (#000, 0.02);
+    background-image: none;
+    color: @insensitive_color;
+}
+
+.spinbutton .button:first-child {
+    border-radius: 2px 0 0 2px;
+    box-shadow: none;
+}
+
+.spinbutton .button:last-child {
+    border-radius: 0 2px 2px 0;
+}
+
+.spinbutton .button:dir(rtl) {
+    box-shadow: inset -1px 0 alpha (#000, 0.10);
+}
 
 /*********
 * Linked *
@@ -1114,7 +1134,7 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .secondary-toolbar.toolbar .button {
-    border: 1px solid alpha (#000, 0.3);
+    border-color: alpha (#000, 0.3);
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
@@ -1728,46 +1748,7 @@ EggListBox {
 .content-view .option-description {
     color: alpha (@text_color, 0.5);
     text-shadow: 0 1px alpha (#fff, 0.4);
-}
-
-.content-view .button {
-    color: @text_color;
-    text-shadow: 0 1px alpha (#fff, 0.60);
-
-    background-color: alpha (#fff, 0.0);
-    background-image: none;
-}
-
-.content-view .button:active,
-.content-view .button:active:hover {
-
-    background-color: alpha (#000, 0.05);
-	background-image: none;
-    border-color: shade (@base_color, 0.74);
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                    left top, left bottom,
-                    from (alpha (#000, 0.07)),
-                    to (alpha (#000, 0.03)));
-}
-
-.content-view .button:insensitive {
-    -unico-border-gradient: -gtk-gradient (linear,
-                     left top, left bottom,
-                     from (alpha (#000, 0.18)),
-                     to (alpha (#000, 0.22)));
-
-    background-image: none;
-    background-color: transparent;
-}
-
-.content-view .button GtkLabel:insensitive {
-    color: @insensitive_color;
-}
-
-.content-view .help_button GtkLabel {
-    color: @text_color;
-}   
+} 
 
 .content-view .toolbar {
     padding: 1px;
