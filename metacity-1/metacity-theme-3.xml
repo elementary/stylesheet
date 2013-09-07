@@ -72,20 +72,20 @@
 	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 	<line x1="0" y1="0" x2="width" y2="0" color="shade/#DEDEDE/0.6" />
 	<gradient type="vertical" x="0" y="0" width="1" height="top_height">
-		<color value="blend/#DEDEDE/#000000/0.3" />
-		<color value="blend/#DEDEDE/#000000/0.1" />		
-		<color value="blend/#DEDEDE/#000000/0.1" />
-		<color value="blend/#DEDEDE/#000000/0.2" />
-		<color value="blend/#DEDEDE/#000000/0.2" />
-		<color value="C_border_focused" />
+		<color value="blend/#fff/#000000/0.3" />
+		<color value="blend/#fff/#000000/0.1" />		
+		<color value="blend/#fff/#000000/0.1" />
+		<color value="blend/#fff/#000000/0.2" />
+		<color value="blend/#fff/#000000/0.2" />
+		<color value="shade/#fff/0.50" />
 	</gradient>
 	<gradient type="vertical" x="width-1" y="0" width="1" height="top_height">
-		<color value="blend/#DEDEDE/#000000/0.3" />
-		<color value="blend/#DEDEDE/#000000/0.1" />
-		<color value="blend/#DEDEDE/#000000/0.1" />
-		<color value="blend/#DEDEDE/#000000/0.2" />
-		<color value="blend/#DEDEDE/#000000/0.2" />
-		<color value="C_border_focused" />
+		<color value="blend/#fff/#000000/0.3" />
+		<color value="blend/#fff/#000000/0.1" />
+		<color value="blend/#fff/#000000/0.1" />
+		<color value="blend/#fff/#000000/0.2" />
+		<color value="blend/#fff/#000000/0.2" />
+		<color value="shade/#fff/0.50" />
 	</gradient>
 </draw_ops>
 
@@ -157,6 +157,10 @@
 
 <draw_ops name="entire_background_unfocused">
 	<rectangle color="shade/#DEDEDE/1.06" x="1" y="5" width="width-2" height="height-6" filled="true" />
+</draw_ops>
+
+<draw_ops name="dialog_background_focused">
+	<rectangle color="shade/#fff/0.96" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
@@ -555,7 +559,7 @@
 </frame_style>
 
 <frame_style name="dialog_focused" geometry="nobuttons">
-	<piece position="entire_background" draw_ops="entire_background_focused" />
+	<piece position="entire_background" draw_ops="dialog_background_focused" />
 	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="rounded_border" />
@@ -811,7 +815,7 @@
 </frame_style>
 
 <frame_style name="attached_focused" geometry="attached">
-	<piece position="entire_background" draw_ops="entire_background_focused" />
+	<piece position="entire_background" draw_ops="dialog_background_focused" />
 	<piece position="titlebar" draw_ops="titlebar_attached_focused" />
 	<piece position="overlay" draw_ops="border_attached_focused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
