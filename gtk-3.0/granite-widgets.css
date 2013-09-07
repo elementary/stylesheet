@@ -84,14 +84,6 @@ GraniteWidgetsPopOver .button:hover:active {
     border-color: shade (@base_color, 0.74);
 }
 
-GraniteWidgetsPopOver .entry {
-    background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.88),
-                                  shade (@base_color, 0.94) 20%,
-                                  shade (@base_color, 0.96)
-                                  );
-}
-
 .button.app {
     border-width: 0;
     border-radius: 5px;
