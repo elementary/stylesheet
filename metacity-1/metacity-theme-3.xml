@@ -2,15 +2,15 @@
 <metacity_theme>
 <info>
     <name>elementary</name>
-    <author>elementary Design Team</author>
-    <copyright>elementary</copyright>
-    <date>2009-2012</date>
-    <description>A pleasant theme built to adapt to many color schemes as well as be optimal for both high and low resolution displays.</description>
+    <author>Daniel Fore</author>
+    <copyright>elementary LLC.</copyright>
+    <date>2009-2013</date>
+    <description>elementary theme for LibMutter-based WM's</description>
 </info>
 
 <!-- :: CONSTANTS :: -->
 
-<constant name="C_border_focused" value="shade/gtk:bg[NORMAL]/0.50" />
+<constant name="C_border_focused" value="shade/#DEDEDE/0.50" />
 
 <!-- :: GEOMETRIES :: -->
 
@@ -70,21 +70,21 @@
 
 <draw_ops name="border_attached_focused">
 	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
-	<line x1="0" y1="0" x2="width" y2="0" color="shade/gtk:bg[NORMAL]/0.6" />
+	<line x1="0" y1="0" x2="width" y2="0" color="shade/#DEDEDE/0.6" />
 	<gradient type="vertical" x="0" y="0" width="1" height="top_height">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />		
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
+		<color value="blend/#DEDEDE/#000000/0.3" />
+		<color value="blend/#DEDEDE/#000000/0.1" />		
+		<color value="blend/#DEDEDE/#000000/0.1" />
+		<color value="blend/#DEDEDE/#000000/0.2" />
+		<color value="blend/#DEDEDE/#000000/0.2" />
 		<color value="C_border_focused" />
 	</gradient>
 	<gradient type="vertical" x="width-1" y="0" width="1" height="top_height">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
+		<color value="blend/#DEDEDE/#000000/0.3" />
+		<color value="blend/#DEDEDE/#000000/0.1" />
+		<color value="blend/#DEDEDE/#000000/0.1" />
+		<color value="blend/#DEDEDE/#000000/0.2" />
+		<color value="blend/#DEDEDE/#000000/0.2" />
 		<color value="C_border_focused" />
 	</gradient>
 </draw_ops>
@@ -103,9 +103,9 @@
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
-	<line color="shade/gtk:bg[NORMAL]/1.14" x1="5" y1="1" x2="width-6" y2="1" />
-	<arc color="shade/gtk:bg[NORMAL]/1.14" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
-	<arc color="shade/gtk:bg[NORMAL]/1.14" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
+	<line color="shade/#DEDEDE/1.14" x1="5" y1="1" x2="width-6" y2="1" />
+	<arc color="shade/#DEDEDE/1.14" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
+	<arc color="shade/#DEDEDE/1.14" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 
@@ -140,36 +140,36 @@
 <!-- ::: TITLES ::: -->
 
 <draw_ops name="title_focused">
-	<title color="shade/gtk:bg[NORMAL]/1.30" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/#DEDEDE/1.30" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="shade/gtk:text[NORMAL]/2.00" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="shade/gtk:bg[NORMAL]/1.15" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/#DEDEDE/1.15" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="shade/gtk:text[NORMAL]/2.50" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <!-- ::: TITLEBAR ::: -->
 
 <draw_ops name="entire_background_focused">
-	<rectangle color="gtk:bg[NORMAL]" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="#DEDEDE" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="entire_background_unfocused">
-	<rectangle color="shade/gtk:bg[NORMAL]/1.06" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/#DEDEDE/1.06" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
-		<color value="shade/gtk:bg[NORMAL]/1.04"/>
-		<color value="shade/gtk:bg[NORMAL]/1.0"/>
+		<color value="shade/#DEDEDE/1.04"/>
+		<color value="shade/#DEDEDE/1.0"/>
 	</gradient>
 </draw_ops>
 
 <draw_ops name="titlebar_fill_unfocused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
-		<color value="shade/gtk:bg[NORMAL]/1.10"/>
-		<color value="shade/gtk:bg[NORMAL]/1.06"/>
+		<color value="shade/#DEDEDE/1.10"/>
+		<color value="shade/#DEDEDE/1.06"/>
 	</gradient>
 </draw_ops>
 
@@ -183,7 +183,7 @@
 </draw_ops>
 
 <draw_ops name="hilight">
-	<line color="shade/gtk:bg[NORMAL]/1.14" x1="0" y1="0" x2="width-1" y2="0" />
+	<line color="shade/#DEDEDE/1.14" x1="0" y1="0" x2="width-1" y2="0" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">

@@ -36,7 +36,7 @@
 
 .background {
     color: @fg_color;
-    background-color: @bg_color;
+    background-color: shade (@base_color, 0.96);
 }
 
 /* FIXME: I shouldn't need this */
