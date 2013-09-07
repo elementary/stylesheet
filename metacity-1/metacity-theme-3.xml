@@ -170,6 +170,10 @@
 	</gradient>
 </draw_ops>
 
+<draw_ops name="dialog_titlebar_fill_focused">
+	<rectangle color="shade/#fff/0.96" x="1" y="1" width="width-2" height="height-2" filled="true" />
+</draw_ops>
+
 <draw_ops name="titlebar_fill_unfocused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
 		<color value="shade/#DEDEDE/1.10"/>
@@ -201,6 +205,11 @@
 
 <draw_ops name="rounded_titlebar_focused">
 	<include name="titlebar_fill_focused" />
+	<include name="rounded_hilight" />
+</draw_ops>
+
+<draw_ops name="dialog_titlebar_focused">
+	<include name="dialog_titlebar_fill_focused" />
 	<include name="rounded_hilight" />
 </draw_ops>
 
@@ -560,7 +569,7 @@
 
 <frame_style name="dialog_focused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="dialog_background_focused" />
-	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
+	<piece position="titlebar" draw_ops="dialog_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="rounded_border" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -621,7 +630,7 @@
 
 <frame_style name="modal_dialog_focused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
+	<piece position="titlebar" draw_ops="dialog_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="rounded_border" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -681,8 +690,8 @@
 </frame_style>
 
 <frame_style name="utility_focused" geometry="normal">
-	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="rounded_titlebar_focused" />
+	<piece position="entire_background" draw_ops="dialog_background_focused" />
+	<piece position="titlebar" draw_ops="dialog_titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="rounded_border" />
 	<button function="close" state="normal" draw_ops="close_focused" />
