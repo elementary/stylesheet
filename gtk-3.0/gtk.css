@@ -19,15 +19,16 @@
 /* Default color scheme */
 @define-color base_color #FFF;
 @define-color bg_color shade (@base_color, 0.96);
-@define-color titlebar_color #DEDEDE;
-@define-color tooltip_bg_color #000;
-@define-color selected_bg_color #3d9bda;
-@define-color text_color #323232;
+@define-color fg_color #323232;
 @define-color insensitive_color #999;
 @define-color inset_dark_color alpha (#000, 0.06);
-@define-color fg_color #323232;
-@define-color tooltip_fg_color #FFF;
+@define-color progress_row_trough_color #DEDEDE;
+@define-color selected_bg_color #3d9bda;
 @define-color selected_fg_color #FFF;
+@define-color text_color #323232;
+@define-color titlebar_color #DEDEDE;
+@define-color tooltip_bg_color #000;
+@define-color tooltip_fg_color #FFF;
 
 @define-color internal_element_color mix(@text_color, @base_color, 0.4);
 @define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
