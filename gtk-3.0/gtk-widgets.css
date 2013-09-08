@@ -650,9 +650,9 @@ GtkComboBox.combobox-entry .button {
     background-image: none;
     background-color: alpha (#000, 0.10);
         
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
-        inset 0 1px 0 0 alpha (#000, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.25);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+        inset 0 1px 0 0 alpha (#000, 0.25),
+        inset 0 -1px 0 0 alpha (#fff, 0.4);
         
     padding: 0 3px 0 3px;
 }
