@@ -1295,8 +1295,8 @@ GtkPaned .inline-toolbar.toolbar {
     border-width: 1px 0 0 0;
     /*FIXME: This should probably use alpha just in case */
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.92),
-                                  shade (@bg_color, 0.98)
+                                  shade (@titlebar_color, 0.92),
+                                  shade (@titlebar_color, 0.98)
                                   );
 }
 
@@ -1553,8 +1553,6 @@ GtkAssistant .sidebar {
 /*************
  * GtkSwitch *
  *************/
- 
-/* FIXME: Wtf man. What is this shit? */
 
 GtkSwitch {
     font: 1;

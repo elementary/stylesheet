@@ -28,7 +28,6 @@
 @define-color fg_color #323232;
 @define-color tooltip_fg_color #FFF;
 @define-color selected_fg_color #FFF;
-@define-color transparent alpha (#FFF, 0.00);
 
 @define-color internal_element_color mix(@text_color, @base_color, 0.4);
 @define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
