@@ -1029,10 +1029,13 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* this controls the general appearance of the menubar */
 .menubar {
-    padding: 4px;
     color: @text_color;
-    background-color: @bg_color;
+    background-color: @titlebar_color;
     -GtkWidget-window-dragging: true;
+}
+
+.menubar .menuitem {
+    padding: 3px 6px;
 }
 
 .content-view .menu,
