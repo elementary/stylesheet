@@ -1465,8 +1465,6 @@ GtkPaned .inline-toolbar.toolbar {
 
 /* FIXME: Get .affirmative changed to .suggested-action */
 
-.button.affirmative,
-.content-view .button.affirmative,
 .suggested-action.button {
 
     background-image: linear-gradient(to bottom,
@@ -1477,13 +1475,10 @@ GtkPaned .inline-toolbar.toolbar {
     border-color: shade (@selected_bg_color, 0.90);
 }
 
-.button.affirmative:insensitive,
 .suggested-action.button:insensitive {
     border-color: alpha (#000, 0.20);
 }
 
-.button.affirmative GtkLabel,
-.button.affirmative Gtklabel:prelight,
 .suggested-action.button GtkLabel,
 .suggested-action.button Gtklabel:prelight, {
     color: @selected_fg_color;
@@ -1491,16 +1486,11 @@ GtkPaned .inline-toolbar.toolbar {
     icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
-.button.affirmative GtkLabel:insensitive,
 .suggested-action.button GtkLabel:insensitive {
     text-shadow: 0 1px alpha (#fff, 0.3);
     icon-shadow: 0 1px alpha (#fff, 0.3);
 }
 
-.button.affirmative:active,
-.button.affirmative:active:hover,
-.content-view .button.affirmative:active,
-.content-view .button.affirmative:active:hover,
 .suggested-action.button:active,
 .suggested-action.button:active:hover {
     background-image: linear-gradient(to bottom,
@@ -1517,8 +1507,6 @@ GtkPaned .inline-toolbar.toolbar {
 
 /* FIXME: change hex values to variables */
 
-.button.noundo,
-.content-view .button.noundo,
 .destructive-action.button {
     background-image: linear-gradient(to bottom,
                                   #f67564,
@@ -1527,8 +1515,8 @@ GtkPaned .inline-toolbar.toolbar {
     border-color: #a2302e;
 }
 
-.button.noundo GtkLabel,
-.button.noundo Gtklabel:prelight {
+.destructive-action.button GtkLabel,
+.destructive-action.button Gtklabel:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     icon-shadow: 0 1px alpha (#000, 0.2);
