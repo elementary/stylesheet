@@ -36,7 +36,7 @@
 
 .background {
     color: @fg_color;
-    background-color: shade (@base_color, 0.96);
+    background-color: @bg_color;
 }
 
 /* FIXME: I shouldn't need this */
@@ -483,12 +483,10 @@ GtkProgressBar.trough {
 }
 
 .scale.trough.vertical:insensitive {
-
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     right top,
-                     from (shade (@bg_color, 0.95)),
-                     to (shade (@bg_color, 1.10)));
+    background-image: linear-gradient(to right,
+                                  alpha (#000, 0.10),
+                                  alpha (#000, 0.02)
+                                  );
 }
 
 .scale.mark {
@@ -559,8 +557,8 @@ GtkComboBox.combobox-entry .button {
 
 .toolbar .button {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.15),
-                                  shade (@bg_color, 0.98)
+                                  shade (@titlebar_color, 1.15),
+                                  shade (@titlebar_color, 0.98)
                                   );
     border-color: alpha (#000, 0.28);
     padding: 3px;
@@ -617,13 +615,11 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button:active:insensitive {
-
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (shade (@bg_color, 0.85)),
-                     color-stop (0.20, shade (@bg_color, 0.94)),
-                     to (@bg_color));
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.85),
+                                  shade (@bg_color, 0.94) 20%,
+                                  @bg_color
+                                  );
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
                 0 1px 0 1px alpha (#fff, 0.30);
@@ -635,41 +631,30 @@ GtkComboBox.combobox-entry .button {
 ***************************/
 
 .secondary-toolbar.toolbar .button {
-    -GtkButton-inner-border: 0 3px 0 3px;
     padding: 0 3px 0 3px;
 }
 
 .secondary-toolbar.toolbar .button:hover {
-    -GtkButton-inner-border: 0 3px 0 3px;
     padding: 0 3px 0 3px;
 
     color: shade (@selected_bg_color, 0.65);
 
-    border-color: @transparent;
+    border-color: transparent;
     background-image: none;
-    background-color: @transparent;
+    background-color: transparent;
     box-shadow: none;
 }
 
 .secondary-toolbar.toolbar .button:active,
 .secondary-toolbar.toolbar .button:hover:active {
-    -GtkButton-inner-border: 0 3px 0 3px;
+    background-image: none;
+    background-color: alpha (#000, 0.10);
+        
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
+        inset 0 1px 0 0 alpha (#000, 0.45),
+        inset 0 -1px 0 0 alpha (#fff, 0.25);
+        
     padding: 0 3px 0 3px;
-
-    box-shadow: none;
-
-    background-image: -gtk-gradient (linear,
-        left top,
-        left bottom,
-        from (alpha (#000, 0.10)),
-        to (alpha (#000, 0.10)));
-
-    -unico-border-gradient: -gtk-gradient (linear,
-        left top, left bottom,
-        from (alpha (#000, 0.30)),
-        color-stop (0.15, alpha (#000, 0.10)),
-        color-stop (0.85, alpha (#000, 0.10)),
-        to (alpha (#fff, 0.50)));
 }
 
 /**************
@@ -843,16 +828,16 @@ GtkComboBox.combobox-entry .button {
 .dynamic-notebook {
     /* FIXME: should really use border */
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.76),
-                                  shade (@bg_color, 0.83) 17%,
-                                  shade (@bg_color, 0.90) 93%,
-                                  shade (@bg_color, 0.10)
+                                  shade (@titlebar_color, 0.76),
+                                  shade (@titlebar_color, 0.83) 17%,
+                                  shade (@titlebar_color, 0.90) 93%,
+                                  shade (@titlebar_color, 0.10)
                                   );
 }
 
 .dynamic-notebook GtkLabel:insensitive,
 .dynamic-notebook .image:insensitive {
-   color: shade (@bg_color, 0.65);
+   color: shade (@titlebar_color, 0.65);
 }
 
 .dynamic-notebook .notebook {
@@ -879,7 +864,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 .dynamic-notebook .notebook tab GtkImage {
-    color: shade (@bg_color, 0.35);
+    color: shade (@titlebar_color, 0.35);
 }
 
 .dynamic-notebook .notebook tab:nth-child(first) {
@@ -892,8 +877,8 @@ GtkComboBox.combobox-entry .button {
 
 .dynamic-notebook .notebook tab:active {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.04),
-                                  @bg_color
+                                  shade (@titlebar_color, 1.04),
+                                  @titlebar_color
                                   );
 
     border-image: none;
@@ -907,14 +892,14 @@ GtkComboBox.combobox-entry .button {
 }
 
 .notebook {
-    border: 1px solid shade (@bg_color, 0.60);
+    border: 1px solid shade (@titlebar_color, 0.60);
 
     border-radius: 2.5px;
 
     -GtkNotebook-tab-overlap: 5px;
 
     background-clip: border-box;
-    background-color: shade (@bg_color, 1.06);
+    background-color: shade (@titlebar_color, 1.06);
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
@@ -926,8 +911,8 @@ GtkComboBox.combobox-entry .button {
 
 .notebook tab {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.75),
-                                  shade (@bg_color, 0.80)
+                                  shade (@titlebar_color, 0.75),
+                                  shade (@titlebar_color, 0.80)
                                   );
 
     border-radius: 4px;
@@ -947,8 +932,8 @@ GtkComboBox.combobox-entry .button {
 
 .notebook tab:active {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.24),
-                                  shade (@bg_color, 1.06)
+                                  shade (@titlebar_color, 1.24),
+                                  shade (@titlebar_color, 1.06)
                                   );
 
         color: @text_color;
@@ -1147,14 +1132,14 @@ GtkComboBox.combobox-entry .button:last-child {
     
     padding: 0 3px 3px;
 
-    border: 1px solid shade (@bg_color, 0.56);
+    border: 1px solid shade (@titlebar_color, 0.56);
     border-width: 0 0 1px 0;
 
     box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.20);
 
     background-image: linear-gradient(to bottom,
-                                  @bg_color,
-                                  shade (@bg_color, 0.84)
+                                  @titlebar_color,
+                                  shade (@titlebar_color, 0.84)
                                   );
 
     text-shadow: 0 1px alpha (#fff, 0.4);
@@ -1169,14 +1154,14 @@ GtkComboBox.combobox-entry .button:last-child {
     padding: 2px;
 
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.84),
-                                  shade (@bg_color, 0.80)
+                                  shade (@titlebar_color, 0.84),
+                                  shade (@titlebar_color, 0.80)
                                   );
 
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
                 inset 0 -1px 0 0 alpha (#fff, 0.20);
 
-    border-color: shade (@bg_color, 0.50);
+    border-color: shade (@titlebar_color, 0.50);
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
@@ -1197,12 +1182,12 @@ GtkComboBox.combobox-entry .button:last-child {
 .bottom-toolbar.toolbar {
     padding: 8px;
 
-    border: 1px solid shade (@bg_color, 0.66);
+    border: 1px solid shade (@titlebar_color, 0.66);
     border-width: 1px 0 0 0;
 
     background-image: linear-gradient(to bottom,
-                                  @bg_color,
-                                  shade (@bg_color, 0.88)
+                                  @titlebar_color,
+                                  shade (@titlebar_color, 0.88)
                                   );
 
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.50),
@@ -1219,11 +1204,11 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .header-bar {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.04),
-                                  shade (@bg_color, 0.84)
+                                  shade (@titlebar_color, 1.04),
+                                  shade (@titlebar_color, 0.84)
                                   );
 
-    border-color: shade (@bg_color, 0.56);
+    border-color: shade (@titlebar_color, 0.56);
     border-radius: 3px 3px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
@@ -1236,11 +1221,11 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .header-bar:backdrop {
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.10),
-                                  shade (@bg_color, 0.98)
+                                  shade (@titlebar_color, 1.10),
+                                  shade (@titlebar_color, 0.98)
                                   );
 
-    border-color: shade (@bg_color, 0.70);
+    border-color: shade (@titlebar_color, 0.70);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
 }
@@ -1269,7 +1254,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .header-bar .title,
 .header-bar .button.image-button GtkImage {
-    color: shade (@bg_color, 0.55);
+    color: shade (@titlebar_color, 0.55);
     font: Bold 9;
     text-shadow: 0 1px alpha (#fff, 0.6);
     icon-shadow: 0 1px alpha (#fff, 0.6);
@@ -1277,7 +1262,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .header-bar .title:backdrop,
 .header-bar .button.image-button GtkImage:backdrop {
-    color: shade (@bg_color, 0.80);
+    color: shade (@titlebar_color, 0.80);
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
@@ -1294,7 +1279,7 @@ GtkComboBox.combobox-entry .button:last-child {
     padding: 0;
 
     border-image: none;
-    border-color: shade (@bg_color, 0.70);
+    border-color: shade (@titlebar_color, 0.70);
 
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.92),
@@ -1360,8 +1345,8 @@ GtkPaned .inline-toolbar.toolbar {
 .sidebar.view,
 .source-list,
 .source-list.view {
-    background-color: @bg_color;
-    color: shade (@bg_color, 0.50);
+    background-color: @titlebar_color;
+    color: shade (@titlebar_color, 0.50);
 }
 
 .sidebar,
@@ -1388,7 +1373,7 @@ GtkPaned .inline-toolbar.toolbar {
 
 .sidebar.view:prelight,
 .source-list.view:prelight {
-    background-color: shade (@bg_color, 1.10);
+    background-color: shade (@titlebar_color, 1.10);
 }
 
 .sidebar.view:selected,
@@ -1397,7 +1382,7 @@ GtkPaned .inline-toolbar.toolbar {
 .source-list.view:prelight:selected,
 .source-list.category-expander:hover {
 
-    color: shade (@bg_color, 0.50);
+    color: shade (@titlebar_color, 0.50);
     border-style: solid;
     border-width: 1px 0 1px 0;
 
@@ -1438,7 +1423,7 @@ GtkPaned .inline-toolbar.toolbar {
     border-width: 0;
     -GtkPaned-handle-size: 1;
     background-image: none;
-    background-color: shade (@bg_color, 0.75);
+    background-color: shade (@titlebar_color, 0.75);
 }
 
 .source-list.badge,
@@ -1447,7 +1432,7 @@ GtkPaned .inline-toolbar.toolbar {
 .source-list.badge:prelight:selected {
     background-image: none;
     background-color: alpha (#000, 0.4);
-    color: @bg_color;
+    color: @titlebar_color;
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
@@ -1458,14 +1443,14 @@ GtkPaned .inline-toolbar.toolbar {
 
 .source-list.badge:selected,
 .source-list.badge:prelight:selected {
-    color: @bg_color;
+    color: @titlebar_color;
 }
 
 .source-list.badge:selected:backdrop,
 .source-list.badge:selected:prelight:backdrop {
     background-image: none;
     background-color: alpha (#000, 0.2);
-    color: shade (@bg_color, 0.95);
+    color: shade (@titlebar_color, 0.95);
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
 }
@@ -1477,7 +1462,8 @@ GtkPaned .inline-toolbar.toolbar {
 /* FIXME: Get .affirmative changed to .suggested-action */
 
 .button.affirmative,
-.content-view .button.affirmative {
+.content-view .button.affirmative,
+.suggested-action.button {
 
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
@@ -1487,18 +1473,22 @@ GtkPaned .inline-toolbar.toolbar {
     border-color: shade (@selected_bg_color, 0.90);
 }
 
-.button.affirmative:insensitive {
+.button.affirmative:insensitive,
+.suggested-action.button:insensitive {
     border-color: alpha (#000, 0.20);
 }
 
 .button.affirmative GtkLabel,
-.button.affirmative Gtklabel:prelight {
+.button.affirmative Gtklabel:prelight,
+.suggested-action.button GtkLabel,
+.suggested-action.button Gtklabel:prelight, {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
-.button.affirmative GtkLabel:insensitive {
+.button.affirmative GtkLabel:insensitive,
+.suggested-action.button GtkLabel:insensitive {
     text-shadow: 0 1px alpha (#fff, 0.3);
     icon-shadow: 0 1px alpha (#fff, 0.3);
 }
@@ -1506,7 +1496,9 @@ GtkPaned .inline-toolbar.toolbar {
 .button.affirmative:active,
 .button.affirmative:active:hover,
 .content-view .button.affirmative:active,
-.content-view .button.affirmative:active:hover {
+.content-view .button.affirmative:active:hover,
+.suggested-action.button:active,
+.suggested-action.button:active:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.20),
                                   @selected_bg_color
@@ -1519,27 +1511,24 @@ GtkPaned .inline-toolbar.toolbar {
 * Destructive Action Button *
 ****************************/
 
-/* FIXME: Get .noundo changed to .destructive-action */
 /* FIXME: change hex values to variables */
-/* FIXME: remove references to Unico */
 
 .button.noundo,
-.content-view .button.noundo {
-    background-image: -gtk-gradient (linear,
-                     left top,
-                     left bottom,
-                     from (#e56453),
-                     to (#bb2332));
-                     
-    border-color: #791235;
+.content-view .button.noundo,
+.destructive-action.button {
+    background-image: linear-gradient(to bottom,
+                                  #e35d4f,
+                                  #d33f3d
+                                  );
+    border-color: #a2302e;
 }
 
-.button.noundo:focus {
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (#f67564),
-                    to (#cc3443));
+.button.noundo:focus,
+.destructive-action.button:focus {
+    background-image: linear-gradient(to bottom,
+                                  #f67564,
+                                  #cc3443
+                                  );
                     
     border-color: #791235
 }
@@ -1547,8 +1536,8 @@ GtkPaned .inline-toolbar.toolbar {
 .button.noundo GtkLabel,
 .button.noundo Gtklabel:prelight {
     color: @selected_fg_color;
-    text-shadow: 0 1px alpha (#000, 0.3);
-    icon-shadow: 0 1px alpha (#000, 0.3);
+    text-shadow: 0 1px alpha (#000, 0.2);
+    icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 /***************
@@ -1633,7 +1622,7 @@ GtkTreeView row:nth-child(even) {
 }
 
 GtkTreeView row:nth-child(odd) {
-    background-color: shade (@base_color, 0.96);
+    background-color: @bg_color;
 }
 
 GtkTreeView .entry {
@@ -1773,12 +1762,11 @@ EggListBox {
 
 .content-view column-header .button {
     border-width: 0 0 1px 1px;
-
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@base_color, 0.98)),
-                    to (shade (@base_color, 0.92)));
+    
+    background-image: linear-gradient(to bottom,
+                              @bg_color,
+                              shade (@bg_color, 0.94)
+                              );
 
     border-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.86),
@@ -1801,13 +1789,12 @@ EggListBox {
 .content-view .toolbar {
     padding: 1px;
 
-    border-color: alpha (#000, 0.05);	
-    background-image: -gtk-gradient (linear,
-				     left top,
-				     left bottom,
-				     from (alpha (#000, 0.10)),
-				     to (alpha (#000, 0.03)));
-
+    background-image: linear-gradient(to bottom,
+                          alpha (#000, 0.10),
+                          alpha (#000, 0.03)
+                          );
+                          
+  border-color: alpha (#000, 0.05);
 }
 
 /**************
