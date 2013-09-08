@@ -1031,6 +1031,7 @@ GtkComboBox.combobox-entry .button:last-child {
 .menubar {
     padding: 4px;
     color: @text_color;
+    background-color: @bg_color;
     -GtkWidget-window-dragging: true;
 }
 
@@ -1517,20 +1518,10 @@ GtkPaned .inline-toolbar.toolbar {
 .content-view .button.noundo,
 .destructive-action.button {
     background-image: linear-gradient(to bottom,
-                                  #e35d4f,
-                                  #d33f3d
-                                  );
-    border-color: #a2302e;
-}
-
-.button.noundo:focus,
-.destructive-action.button:focus {
-    background-image: linear-gradient(to bottom,
                                   #f67564,
                                   #cc3443
                                   );
-                    
-    border-color: #791235
+    border-color: #a2302e;
 }
 
 .button.noundo GtkLabel,

@@ -33,9 +33,7 @@ CheeseThumbView /* Cheese */
 
 BirdieWidgetsTweetList * {
     background-image: none;
-    background-color: @transparent;
-    -unico-inner-stroke-style: none;
-    -unico-outer-stroke-style: none;
+    background-color: transparent;
 }
 
 /********
@@ -44,30 +42,28 @@ BirdieWidgetsTweetList * {
 
 .gala-workspaces-background {
     border-top: 1px solid alpha (#fff, 0.15);
-    background-image: -gtk-gradient (linear,
-        left top, left bottom,
-        from (#1d1d1d),
-        color-stop (0.07, #252525),
-        to (#252525));
+    background-color: #2d2d2d;
+    
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.30),
+                                  transparent 6px
+                                  );
 }
 
 .gala-workspace-selected {
 
     border: 1px solid alpha (#000, 0.15);
     border-radius: 4px;
-
-    -unico-inner-stroke-gradient: -gtk-gradient (linear,
-                     left bottom, left top,
-                     from (alpha (#fff, 0.20)),
-                     color-stop (0.10, alpha (#fff, 0.05)),
-                     color-stop (0.90, alpha (#fff, 0.05)),
-                     to (alpha (#fff, 0.50)));
-
-    background-image: -gtk-gradient (linear,
-                    left top,
-                    left bottom,
-                    from (shade (@selected_bg_color, 1.25)),
-                    to (shade (@selected_bg_color, 0.98)));
+    
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+            inset 0 1px 0 0 alpha (#fff, 0.45),
+            inset 0 -1px 0 0 alpha (#fff, 0.15),
+            0 1px 0 1px alpha (#000, 0.15);
+            
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.25),
+                                  shade (@selected_bg_color, 0.98)
+                                  );
 }
 
 /*********
@@ -109,11 +105,7 @@ ConversationListView.view.cell:selected {
 .album-list-view GtkTreeView,
 .album-list-view GtkTreeView:backdrop {
     background-color: #262626;
-    background-image: -gtk-gradient (linear,
-                                     right bottom,
-                                     left bottom,
-                                     from (#262626),
-                                     to (#262626));
+    background-image: none;
     color: @selected_fg_color;
     -GtkTreeView-vertical-separator: 3;
     -GtkTreeView-grid-line-width: 0;
@@ -123,9 +115,7 @@ ConversationListView.view.cell:selected {
 .album-list-view GtkTreeView row:nth-child(even):backdrop {
     background-image: none;
     background-color: #313131;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #373737;
+    border: 1px solid #373737;
 }
 
 
@@ -150,10 +140,7 @@ ConversationListView.view.cell:selected {
     /*-notify-shadow: 0px 2px 18px alpha (#000, 0.60);*/
 
     border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-
-    border-color: alpha (#000, 0.30);
+    border: 1px solid alpha (#000, 0.30);
 
     background-color: alpha (#f8f8f8, 0.95);
 }
