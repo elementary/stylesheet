@@ -1,3 +1,9 @@
+elementary-theme (4.0-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+
+ -- Cody Garver <cody@elementaryos.org>  Sun, 08 Sep 2013 13:24:23 -0500
+
 elementary-theme (3.4-0ubuntu1) precise; urgency=low
 
   * New upstream release
