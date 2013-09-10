@@ -133,15 +133,6 @@
  * Separators *
  *************/
 
-.separator {
-    color: alpha (#000, 0.15);
-    -GtkMenuItem-horizontal-padding: 0;
-}
-
-.toolbar .separator {
-    color: transparent;
-}
-
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
@@ -207,6 +198,7 @@
                                   shade (@base_color, 0.90),
                                   @base_color
                                   );
+                                  
     border-color: alpha (#000, 0.27);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 1px alpha (#fff, 0.30);
@@ -965,13 +957,22 @@ GtkComboBox {
 }
 
 GtkComboBox .separator {
-    color: transparent;
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
 }
 
 GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .button:first-child {
     border-radius: 2.5px 0 0 2.5px;
-    border-width: 1px 0 1px 1px;
+    border-right-width: 0;
+}
+
+GtkComboBox.combobox-entry .entry:last-child,
+GtkComboBox.combobox-entry .button:last-child {
+    border-radius: 0 2.5px 2.5px 0;
+    border-left-width: 0;
 }
 
 GtkComboBox.combobox-entry .entry:last-child,
@@ -980,10 +981,7 @@ GtkComboBox.combobox-entry .button:last-child {
                                   shade (@base_color, 0.93),
                                   shade (@base_color, 0.97)
                                   );
-
-    border-radius: 0 2.5px 2.5px 0;
-    border-width: 1px;
-
+                                  
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
                 0 1px 0 1px alpha (#fff, 0.30);
@@ -992,12 +990,16 @@ GtkComboBox.combobox-entry .button:last-child {
 .toolbar GtkComboBox.combobox-entry .entry:last-child,
 .toolbar GtkComboBox.combobox-entry .button:last-child {
     background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.82),
-                                  shade (@base_color, 0.90) 20%,
+                                  alpha (#000, 0.10),
+                                  transparent 5px
+                                  ),
+                        linear-gradient(to bottom,
+                                  shade (@base_color, 0.90),
                                   @base_color
                                   );
-
-    box-shadow: inset 0 0 0 1px @inset_dark_color;
+                                  
+    box-shadow: inset 0 0 0 1px @inset_dark_color,
+                0 1px 0 1px alpha (#fff, 0.30);
 }
 
 /*************
@@ -1101,14 +1103,34 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .menu .menuitem:active,
-.menu .menuitem:hover,
-.menu .menuitem:prelight {
+.menu .menuitem:hover {
     color: @selected_fg_color;
 }
 
-/*************
-* Menu Button*
-*************/
+GtkModelMenuItem GtkBox GtkImage {
+    padding-right: 6px;
+}
+
+.menuitem.separator {
+    color: @menu_separator;
+
+    -GtkMenuItem-horizontal-padding: 0;
+}
+
+.menuitem.check,
+.menuitem.radio,
+.menuitem.check:hover,
+.menuitem.radio:hover,
+.menuitem.check:insensitive,
+.menuitem.radio:insensitive {
+    background-image: none;
+    background-color: transparent;
+}
+
+.menuitem.check:active,
+.menuitem.radio:active {
+    background-color: transparent;
+}
 
 /*************************
  * Check and Radio items *
@@ -1996,3 +2018,4 @@ GtkInfoBar .button:hover:insensitive {
 
 @import url("granite-widgets.css");
 @import url("apps.css");
+
