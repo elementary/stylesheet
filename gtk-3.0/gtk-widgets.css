@@ -132,6 +132,11 @@
 /**************
  * Separators *
  *************/
+ 
+.separator {
+    color: @menu_separator;
+}
+
 
 .pane-separator,
 .pane-separator:prelight,
@@ -1041,15 +1046,8 @@ GtkComboBox.combobox-entry .button:last-child {
 * Menus *
 ********/
 
-/* this controls the general appearance of the menubar */
-.menubar {
-    color: @text_color;
-    background-color: @titlebar_color;
-    -GtkWidget-window-dragging: true;
-}
-
-.menubar .menuitem {
-    padding: 3px 6px;
+GtkTreeMenu .menuitem {
+    padding: 2px;
 }
 
 .content-view .menu,
@@ -1062,30 +1060,27 @@ GtkComboBox.combobox-entry .button:last-child {
     border: 1px solid alpha (#000, 0.4);
 }
 
+
 .menu.button {
     background-image: none;
 }
 
-.menuitem {
+.menubar {
+    color: @text_color;
+    background-color: @titlebar_color;
+    -GtkWidget-window-dragging: true;
+}
+
+.menubar .menuitem {
+    padding: 3px 6px;
+}
+
+.menu .menuitem {
     padding: 4px 0 4px 0;
 }
 
-.menuitem.accelerator {
-    color: alpha (#fff, 0.66);
-}
-
-.menuitem.accelerator:prelight,
-.menuitem.accelerator:active {
-    color: alpha (@text_color, 0.49);
-}
-
-.menuitem:insensitive {
-    color: alpha (@text_color, 0.40);
-}
-
-.menuitem:active,
-.menuitem:prelight {
-
+.menu .menuitem:active,
+.menu .menuitem:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   shade (@selected_bg_color, 0.98)
@@ -1105,6 +1100,19 @@ GtkComboBox.combobox-entry .button:last-child {
 .menu .menuitem:active,
 .menu .menuitem:hover {
     color: @selected_fg_color;
+}
+
+.menu .menuitem *:insensitive {
+    color: @insensitive_color;
+}
+
+.menuitem .accelerator {
+    color: alpha (@text_color, 0.4);
+}
+
+.menuitem .accelerator:hover,
+.menuitem .accelerator:active {
+    color: alpha (@fg_color, 0.3);
 }
 
 GtkModelMenuItem GtkBox GtkImage {
@@ -1135,6 +1143,21 @@ GtkModelMenuItem GtkBox GtkImage {
 /*************************
  * Check and Radio items *
  *************************/
+
+.check,
+.radio,
+.check:insensitive,
+.radio:insensitive {
+    background-color: transparent;
+    border-style: none;
+}
+
+GtkCheckButton:hover,
+GtkCheckButton:active:hover,
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus {
+    background-color: transparent;
+}
 
 .check {
     background-image: url("assets/check.svg");
@@ -1183,6 +1206,12 @@ GtkModelMenuItem GtkBox GtkImage {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
+
+.toolbar .separator {
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+} 
 
 /*********************
 * Secondary Toolbars *
