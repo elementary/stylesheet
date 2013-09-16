@@ -1270,6 +1270,8 @@ GtkCheckButton:selected:focus {
  **************/
 
 .header-bar {
+    -GtkWindow-decoration-button-layout: 'close:'
+
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 1.04),
                                   shade (@titlebar_color, 0.84)
