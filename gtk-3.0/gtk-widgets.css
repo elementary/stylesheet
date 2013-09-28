@@ -1469,6 +1469,7 @@ GtkPaned .inline-toolbar.toolbar {
 .sidebar.view:prelight:selected,
 .source-list.view:selected,
 .source-list.view:prelight:selected,
+.source-list.view:focus:selected,
 .source-list.category-expander:hover {
 
     color: shade (@titlebar_color, 0.50);
