@@ -446,9 +446,13 @@ GtkProgressBar.trough {
     background-image: url("assets/scale-slider-focus.svg");
 }
 
+.scale.slider:backdrop {
+    background-image: url("assets/scale-slider-backdrop.svg");
+}
 
+.toolbar .scale.slider,
 .scale.slider:insensitive {
-    background-image: url("assets/scale-slider-insensitive.svg");
+    background-image: none;
 }
 
 .scale.trough {
@@ -466,9 +470,16 @@ GtkProgressBar.trough {
                 0 1px 0 1px alpha (#fff, 0.30);
 }
 
+.toolbar .scale.trough {
+    border-radius: 0 12px 12px 0;
+    border-width: 1px 1px 1px 0;
+}
+
 .scale.trough:insensitive {
-    background-color: shade (@theme_bg_color, 1.20);
-    border-color: shade (@inactive_frame_color, 0.845);
+    background-color: shade (@theme_bg_color, 1.25);
+    border-color: shade (@inactive_frame_color, 0.9);
+    border-radius: 0 12px 12px 0;
+    border-width: 1px 1px 1px 0;
 }
 
 .scale.trough.vertical {
@@ -493,6 +504,7 @@ GtkProgressBar.trough {
 
 .scale.highlight.left {
     border: 1px solid alpha (#000, 0.50);
+    border-radius: 12px 0 0 12px;
 
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.40),
@@ -501,6 +513,15 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
                 0 1px 0 1px alpha (#fff, 0.30);
+}
+
+.scale.highlight.left:insensitive {
+    border: 1px solid alpha (#000, 0.40);
+    
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.30),
+                                  alpha (#000, 0.20)
+                                  );
 }
 
 /*********
