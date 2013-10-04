@@ -365,7 +365,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<include name="minimize_normal" />
+	<include name="minimize_focused" />
 	<include name="pressed" />
 </draw_ops>
 
