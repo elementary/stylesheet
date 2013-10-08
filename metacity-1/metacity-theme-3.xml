@@ -471,7 +471,7 @@
 	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 
 	<button function="minimize" state="normal" draw_ops="minimize_focused"/>
-    <button function="minimize" state="prelight" draw_ops="minimize_hover"/>
+	<button function="minimize" state="prelight" draw_ops="minimize_hover"/>
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed"/>
 	<button function="menu" state="normal" draw_ops="blank" />
 	<button function="menu" state="pressed" draw_ops="blank" />
@@ -501,7 +501,7 @@
 	<button function="maximize" state="pressed" draw_ops="unmaximize_unfocused_pressed"/>
 
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused"/>
-    <button function="minimize" state="prelight" draw_ops="minimize_unfocused_hover"/>
+    	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_hover"/>
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed"/>
 	<button function="menu" state="normal" draw_ops="blank" />
 	<button function="menu" state="pressed" draw_ops="blank" />
@@ -532,7 +532,7 @@
 	<button function="maximize" state="pressed" draw_ops="unmaximize_focused_pressed" />
 
 	<button function="minimize" state="normal" draw_ops="minimize_focused"/>
-    <button function="minimize" state="prelight" draw_ops="minimize_hover"/>
+    	<button function="minimize" state="prelight" draw_ops="minimize_hover"/>
 	<button function="minimize" state="pressed" draw_ops="minimize_focused_pressed"/>
 	<button function="menu" state="normal" draw_ops="blank" />
 	<button function="menu" state="pressed" draw_ops="blank" />
@@ -563,7 +563,7 @@
 	<button function="maximize" state="pressed" draw_ops="unmaximize_unfocused_pressed"/>
 
 	<button function="minimize" state="normal" draw_ops="minimize_unfocused"/>
-    <button function="minimize" state="prelight" draw_ops="minimize_unfocused_hover"/>
+    	<button function="minimize" state="prelight" draw_ops="minimize_unfocused_hover"/>
 	<button function="minimize" state="pressed" draw_ops="minimize_unfocused_pressed"/>
 	<button function="menu" state="normal" draw_ops="blank" />
 	<button function="menu" state="pressed" draw_ops="blank" />
