@@ -40,11 +40,6 @@
     background-color: @bg_color;
 }
 
-/* FIXME: I shouldn't need this */
-* {
-    color: @fg_color;
-}
-
 *:selected,
 *:selected:focus {
     /* FIXME: We should set the bg color in each widget */
