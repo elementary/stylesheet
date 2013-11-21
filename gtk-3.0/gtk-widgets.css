@@ -502,7 +502,7 @@ GtkProgressBar.trough {
                 0 1px 1px alpha (#000, 0.10);
 }
 
-.toolbar .scale.slider,
+.header-bar .scale.slider,
 .scale.slider:insensitive {
     background-image: none;
     border: none;
@@ -524,7 +524,7 @@ GtkProgressBar.trough {
                 0 1px 0 1px alpha (#fff, 0.30);
 }
 
-.toolbar .scale.trough {
+.header-bar .scale.trough {
     border-radius: 0 12px 12px 0;
     border-width: 1px 1px 1px 0;
 }
