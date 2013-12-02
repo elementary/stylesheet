@@ -1371,6 +1371,8 @@ GtkCheckButton:selected:focus {
     border-color: shade (@titlebar_color, 0.72);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
+
+    -gtk-image-effect: dim;
 }
 
 .header-bar .button.image-button {
@@ -2111,7 +2113,7 @@ GtkInfoBar .button:hover:insensitive {
     border-radius: 4px 4px 0 0;
 
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 3px 8px alpha (#000, 0.86);
+                0 3px 7px alpha (#000, 0.86);
 
     margin: 12px;
 }
