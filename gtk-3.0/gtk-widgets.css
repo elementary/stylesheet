@@ -402,14 +402,6 @@ GtkProgressBar.trough {
 
 .progressbar row:selected,
 .progressbar row:selected:focused {
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  shade (@selected_bg_color, 1.20) 50%,
-                                  shade (@selected_bg_color, 1.08) 60%,
-                                  shade (@selected_bg_color, 1.08) 70%,
-                                  shade (@selected_bg_color, 1.30)
-                                  );
-
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 0.87),
                                   shade (@selected_bg_color, 0.80)
