@@ -912,7 +912,6 @@ GtkComboBox.combobox-entry .button {
     border-width: 0;
 
     -GtkNotebook-tab-overlap: 1px;
-    -GtkNotebook-initial-gap: 10px;
 }
 
 .dynamic-notebook .notebook tab {
