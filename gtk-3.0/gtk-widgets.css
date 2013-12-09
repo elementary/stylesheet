@@ -1262,6 +1262,22 @@ GtkCheckButton:selected:focus {
     background-image: url("assets/radio-active.svg"); 
 }
 
+/***************
+ * Search bars *
+ ***************/
+
+.search-bar {
+    border-width: 0 0 1px;
+    border-style: solid;
+
+    background-color: shade(@titlebar_color, 0.98);
+}
+
+.search-bar .button.close-button {
+    padding: 5px 4px 5px 5px;
+}
+
+
 
 /***********
 * Toolbars *
