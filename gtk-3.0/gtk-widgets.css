@@ -913,8 +913,6 @@ GtkComboBox.combobox-entry .button {
 }
 
 .dynamic-notebook .notebook {
-    border-width: 0;
-
     -GtkNotebook-tab-overlap: 1px;
 }
 
@@ -963,8 +961,6 @@ GtkComboBox.combobox-entry .button {
 }
 
 .notebook {
-    border: 1px solid shade (@titlebar_color, 0.60);
-
     border-radius: 2.5px;
 
     -GtkNotebook-tab-overlap: 5px;
@@ -974,6 +970,10 @@ GtkComboBox.combobox-entry .button {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.notebook.frame {
+    border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook GtkViewport {
