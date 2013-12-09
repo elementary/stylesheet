@@ -1124,6 +1124,11 @@ GtkTreeMenu .menuitem {
     padding: 2px;
 }
 
+.context-menu {
+    font: initial;
+    text-shadow: none;
+}
+
 .content-view .menu,
 .menu {
     padding: 0 1px 0 1px;
@@ -1786,6 +1791,7 @@ GtkIconView.view.cell:selected:focus {
 
 .cell {
     color: @text_color;
+    text-shadow: none;
 }
 
 .cell:selected,
