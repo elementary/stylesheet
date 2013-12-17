@@ -589,7 +589,7 @@ GtkScrolledWindow.frame {
 }
 
 /* avoid borders when a viewport is
- * packed into a ScrolledWindow,Pane, or Popover */
+ * packed into a ScrolledWindow, Pane, or Popover */
 GtkScrolledWindow GtkViewport.frame,
 GtkPaned .frame,
 GraniteWidgetsPopOver .frame {
@@ -1346,6 +1346,14 @@ GtkCheckButton:selected:focus {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.secondary-toolbar.toolbar:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.98),
+                                  shade (@titlebar_color, 0.94)
+                                  );
+    border-color: shade (@titlebar_color, 0.70);
 }
 
 .secondary-toolbar.toolbar .button {
