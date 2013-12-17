@@ -1354,6 +1354,10 @@ GtkCheckButton:selected:focus {
                                   shade (@titlebar_color, 0.94)
                                   );
     border-color: shade (@titlebar_color, 0.70);
+    
+    color: @insensitive_color;
+    
+    -gtk-image-effect: dim;
 }
 
 .secondary-toolbar.toolbar .button {
