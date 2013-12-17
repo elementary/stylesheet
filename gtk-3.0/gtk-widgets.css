@@ -56,10 +56,6 @@
     -gtk-image-effect: none;
 }
 
-*:backdrop {
-    -gtk-image-effect: dim;
-}
-
 .gtkstyle-fallback {
     background-color: @bg_color;
     color: @fg_color;
@@ -593,9 +589,10 @@ GtkScrolledWindow.frame {
 }
 
 /* avoid borders when a viewport is
- * packed into a ScrolledWindow or Pane */
+ * packed into a ScrolledWindow,Pane, or Popover */
 GtkScrolledWindow GtkViewport.frame,
-GtkPaned .frame {
+GtkPaned .frame,
+GraniteWidgetsPopOver .frame {
     border: none;
 }
 
@@ -1412,6 +1409,8 @@ GtkCheckButton:selected:focus {
     border-color: shade (@titlebar_color, 0.72);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
+    
+    -gtk-image-effect: dim;
 }
 
 .header-bar .button.image-button {
