@@ -18,6 +18,8 @@
 
 * {
     background-clip: padding-box;
+    
+    -GtkTextView-error-underline-color: @error_color;
 
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 8px;
@@ -28,7 +30,10 @@
     -GtkHTML-link-color: @link_color;
 
     -GtkWidget-focus-line-width: 0;
-    -GtkWindow-decoration-button-layout: 'close:'
+    
+    -GtkWindow-decoration-button-layout: 'close:maximize'
+    -GtkWindow-resize-grip-width: 0;
+    -GtkWindow-resize-grip-height: 0; 
 }
 
 /***************
@@ -1289,7 +1294,20 @@ GtkCheckButton:selected:focus {
     border-width: 0 0 1px;
     border-style: solid;
 
-    background-color: shade(@titlebar_color, 0.98);
+    padding: 2px;
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.84),
+                                  shade (@titlebar_color, 0.80)
+                                  );
+
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
+                inset 0 -1px 0 0 alpha (#fff, 0.20);
+
+    border-color: shade (@titlebar_color, 0.50);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .search-bar .button.close-button {
@@ -2169,15 +2187,6 @@ GtkInfoBar .button:hover:insensitive {
 .h1 { font: open sans bold 24; }
 .h2 { font: open sans light 18; }
 .h3 { font: open sans bold 12; }
-
-/********
- * Grip *
- ********/
-
-.grip {
-    background-color: transparent;
-    background-image: url("assets/resize-grip.svg");
-}
 
 @import url("granite-widgets.css");
 @import url("apps.css");
