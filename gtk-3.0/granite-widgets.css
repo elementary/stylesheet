@@ -35,7 +35,7 @@ GraniteWidgetsStatusBar {
     border-width: 1px 0 0 0;
     border-top-color: shade (@bg_color, 0.52);
 
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.20);
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.05);
 }
 
 /***********

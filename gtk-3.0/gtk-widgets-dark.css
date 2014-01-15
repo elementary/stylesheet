@@ -616,7 +616,7 @@ GtkComboBox.combobox-entry .button {
     border: 1px solid alpha (#000, 0.5);
     border-radius: 2.5px;
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.1),
                 inset 0 -1px 0 0 alpha (#000, 0.15),
                 0 1px 0 1px alpha (#fff, 0.1);
@@ -625,13 +625,15 @@ GtkComboBox.combobox-entry .button {
 }
 
 .toolbar .button {
-    border-radius: 2.5px;
+     background-color: @transparent; 
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 1.1),
-                                  shade (@titlebar_color, 0.9)
-                                  );
-                                  
-    border-color: alpha (#000, 0.35);
+                                  shade (@titlebar_color, 0.7)
+                                  );   
+
+    box-shadow: inset 0 0 1px 1px alpha (#fff, 0.05);
+                
+    border: 1px solid alpha (#000, 0.22);
     padding: 3px;
 }
 
@@ -675,9 +677,10 @@ GtkComboBox.combobox-entry .button {
                                   );    
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                               0 1px 0 1px alpha (#fff, 0.1);
+                               
                 
     border: 1px solid alpha (#000, 0.22);
+    padding: 2px 3px;
 }
 
 .toolbar .button:active,
@@ -689,14 +692,10 @@ GtkComboBox.combobox-entry .button {
                                  alpha (@titlebar_color, 0.7)
                                   );    
 
-    
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                inset 0 1px 0 0 alpha (#000, 0.1),
-                inset 0 -1px 0 0 alpha (#000, 0.15),
-                0 1px 0 1px alpha (#fff, 0.1);
-                
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
     border: 1px solid alpha (#000, 0.22);
+    padding: 3px;
 }
 
 .button:active:insensitive {
@@ -1402,12 +1401,8 @@ GtkCheckButton:selected:focus {
     -gtk-image-effect: dim;
 }
 
-.header-bar .button.image-button {
-    padding: 1px;
-    border: none;
-    background-image: none;
-    box-shadow: none;
-}
+
+.header-bar .button.image-button, 
 .header-bar .button {
     
     background-color: @transparent; 
@@ -1435,6 +1430,7 @@ GtkCheckButton:selected:focus {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
     border: 1px solid alpha (#000, 0.22);
+    padding: 3px;
 }
 
 .header-bar .button.image-button:active,
@@ -1446,6 +1442,7 @@ GtkCheckButton:selected:focus {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
     border: 1px solid alpha (#000, 0.22);
+    padding: 3px;
 }
 
 .header-bar .separator {
@@ -1552,7 +1549,10 @@ GtkPaned .inline-toolbar.toolbar {
 /************************
 * Sidebar & Source List *
 ************************/
-
+GthSidebar,
+GtkViewport,
+GtkScrolledWindow,
+.sidebar .view,
 .sidebar,
 .sidebar.view,
 .source-list,
@@ -1561,6 +1561,7 @@ GtkPaned .inline-toolbar.toolbar {
     color: shade (@text_color, 0.90);
 }
 
+.sidebar .view,
 .sidebar,
 .sidebar.view,
 .sidebar.view:selected:backdrop,
@@ -1588,6 +1589,8 @@ GtkPaned .inline-toolbar.toolbar {
     background-color: shade (@titlebar_color, 1.10);
 }
 
+
+.sidebar .view:selected,
 .sidebar.view:selected,
 .sidebar.view:prelight:selected,
 .source-list.view:selected,
@@ -1625,7 +1628,7 @@ GtkPaned .inline-toolbar.toolbar {
 
     border-image: linear-gradient(to bottom,
                                   alpha (#000, 0.19),
-                                  alpha (#fff, 0.25)
+                                  alpha (#fff, 0.10)
                                   ) 1 1 1 1;
 }
 
