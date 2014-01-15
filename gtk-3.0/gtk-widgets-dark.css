@@ -16,28 +16,12 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-* {
-    background-clip: padding-box;
-
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkPaned-handle-size: 8px;
-
-    -GtkWidget-link-color: @link_color;
-    -GtkWidget-visited-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkHTML-link-color: @link_color;
-
-    -GtkWidget-focus-line-width: 0;
-    -GtkWindow-decoration-button-layout: 'close:'
-}
-
 /***************
  * Base States *
  **************/
 
 .background {
     color: @text_color;
-    background-color: @bg_color;
 }
 
 *:selected,
@@ -45,15 +29,6 @@
     /* FIXME: We should set the bg color in each widget */
     background-color: alpha (@selected_bg_color, 0.9);
     color: @selected_fg_color;
-}
-
-*:insensitive {
-    color: @insensitive_color;
-    -gtk-image-effect: dim;
-}
-
-*:hover {
-    -gtk-image-effect: none;
 }
 
 .gtkstyle-fallback {
@@ -2126,15 +2101,9 @@ GtkInfoBar .button:hover:insensitive {
                                   shade (@titlebar_color, 1.1),
                                   shade (@titlebar_color, 0.8)
                                   );
-    border-radius: 4px 4px 0 0;
 
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
-}
-
-.titlebar.default-decoration {
-    border: none;
-    box-shadow: none;
 }
 
 .titlebar .title {
@@ -2159,16 +2128,6 @@ GtkInfoBar .button:hover:insensitive {
     color: alpha (#000, 0.30);
 }
 
-.window-frame {
-    box-shadow: 0 0 0 1px alpha (#000, 0.4),
-                0 3px 7px alpha (#000, 0.86);
-}
-
-.window-frame:backdrop {
-    box-shadow: 0 0 0 1px alpha (#000, 0.4),
-                0 2px 5px alpha (#000, 0.58);
-}
-
 /**************
 * Text Styles *
 **************/
@@ -2176,15 +2135,6 @@ GtkInfoBar .button:hover:insensitive {
 .h1 { font: open sans bold 24; }
 .h2 { font: open sans light 18; }
 .h3 { font: open sans bold 12; }
-
-/********
- * Grip *
- ********/
-
-.grip {
-    background-color: transparent;
-    background-image: url("assets/resize-grip.svg");
-}
 
 @import url("granite-widgets-dark.css");
 @import url("apps.css");
