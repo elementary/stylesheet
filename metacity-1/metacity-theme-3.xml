@@ -103,9 +103,9 @@
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
-	<line color="shade/#333/1.14" x1="5" y1="1" x2="width-6" y2="1" />
-	<arc color="shade/#333/1.14" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
-	<arc color="shade/#333/1.14" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
+	<line color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1.4" x1="5" y1="1" x2="width-6" y2="1" />
+	<arc color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1.4" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
+	<arc color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1.4" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 
@@ -152,46 +152,46 @@
 <!-- ::: TITLEBAR ::: -->
 
 <draw_ops name="entire_background_focused">
-	<rectangle color="#cdcdcd" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
 
 </draw_ops> 
 
 <draw_ops name="entire_background_unfocused">
-	<rectangle color="shade/#cdcdcd/1.06" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="dialog_background_focused">
-	<rectangle color="shade/#fff/0.96" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
 	<gradient type="vertical" x="0" y="0" width="width" height="top_height">
-		<color value="shade/gtk:custom(titlebar_color,gtk:bg[NORMAL])/1.1"/>
-		<color value="shade/gtk:custom(titlebar_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
 	</gradient>
 </draw_ops>
 
 <draw_ops name="dialog_titlebar_fill_focused">
-	<rectangle color="shade/#fff/0.96" x="1" y="1" width="width-2" height="height-2" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="1" width="width-2" height="height-2" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_unfocused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
-			<color value="shade/gtk:custom(titlebar_color,gtk:bg[NORMAL])/1"/>
-		<color value="shade/gtk:custom(titlebar_color,gtk:bg[NORMAL])/1"/>
+			<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_colorr,gtk:bg[NORMAL])/1"/>
 	</gradient>
 </draw_ops>
 
 
 <draw_ops name="titlebar_fill_attached_focused"> <!-- gradient for attached and modal dialogs titlebar-->
 	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
-		<color value="shade/gtk:custom(titlebar_color,gtk:bg[NORMAL])/1"/>
-		<color value="shade/gtk:custom(titlebar_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
 	</gradient>
 </draw_ops>
 
 <draw_ops name="hilight">
-	<line color="shade/#333/1.14" x1="0" y1="0" x2="width-1" y2="0" />
+	<line color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x1="0" y1="0" x2="width-1" y2="0" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
