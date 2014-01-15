@@ -18,6 +18,8 @@
 
 * {
     background-clip: padding-box;
+    
+    -GtkTextView-error-underline-color: @error_color;
 
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 8px;
@@ -28,7 +30,10 @@
     -GtkHTML-link-color: @link_color;
 
     -GtkWidget-focus-line-width: 0;
-    -GtkWindow-decoration-button-layout: 'close:'
+    
+    -GtkWindow-decoration-button-layout: 'close:maximize'
+    -GtkWindow-resize-grip-width: 0;
+    -GtkWindow-resize-grip-height: 0; 
 }
 
 /***************
@@ -268,6 +273,10 @@
 
 .header-bar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.05),
+                                  transparent 5px
+                                  );
     border-color: alpha (#000, 0.20);
     box-shadow: inset 0 0 0 1px @inset_dark_color_backdrop,
                 0 1px 0 1px alpha (#fff, 0.30);
@@ -585,9 +594,10 @@ GtkScrolledWindow.frame {
 }
 
 /* avoid borders when a viewport is
- * packed into a ScrolledWindow or Pane */
+ * packed into a ScrolledWindow, Pane, or Popover */
 GtkScrolledWindow GtkViewport.frame,
-GtkPaned .frame {
+GtkPaned .frame,
+GraniteWidgetsPopOver .frame {
     border: none;
 }
 
@@ -896,12 +906,28 @@ GtkComboBox.combobox-entry .button {
 .dynamic-notebook {
     /* FIXME: should really use border */
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.76),
-                                  shade (@titlebar_color, 0.83) 17%,
-                                  shade (@titlebar_color, 0.90) 93%,
-                                  shade (@titlebar_color, 0.10)
+                                  alpha (#000, 0.10),
+                                  alpha (#000, 0.00) 15%
+                                  ),
+                        linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.8),
+                                  shade (@titlebar_color, 0.9) 93%,
+                                  shade (@titlebar_color, 0.1)
                                   );
 }
+
+.dynamic-notebook:backdrop {
+    /* FIXME: should really use border */
+    background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.08),
+                                  alpha (#000, 0.00) 12%
+                                  ),
+                        linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.96) 93%,
+                                  shade (@titlebar_color, 0.1)
+                                  );
+}
+
 
 .dynamic-notebook GtkLabel:insensitive,
 .dynamic-notebook .image:insensitive {
@@ -909,10 +935,9 @@ GtkComboBox.combobox-entry .button {
 }
 
 .dynamic-notebook .notebook {
-    border-width: 0;
-
     -GtkNotebook-tab-overlap: 1px;
-    -GtkNotebook-initial-gap: 10px;
+    
+    border-width: 0;
 }
 
 .dynamic-notebook .notebook tab {
@@ -956,25 +981,27 @@ GtkComboBox.combobox-entry .button {
     color: @text_color;
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.43);
-
 }
 
 .notebook {
-    border: 1px solid shade (@titlebar_color, 0.60);
-
     border-radius: 2.5px;
-
-    -GtkNotebook-tab-overlap: 5px;
 
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+    
+    border: 1px solid shade (@titlebar_color, 0.60);
+}
+
+.notebook.frame {
+   /*FIXME: Move the border down here so devs have more control*/
 }
 
 .notebook GtkViewport {
     background-color: @base_color;
+    border-width : 0;
 }
 
 .notebook tab {
@@ -1121,6 +1148,11 @@ GtkTreeMenu .menuitem {
     padding: 2px;
 }
 
+.context-menu {
+    font: initial;
+    text-shadow: none;
+}
+
 .content-view .menu,
 .menu {
     padding: 0 1px 0 1px;
@@ -1254,6 +1286,35 @@ GtkCheckButton:selected:focus {
     background-image: url("assets/radio-active.svg"); 
 }
 
+/***************
+ * Search bars *
+ ***************/
+
+.search-bar {
+    border-width: 0 0 1px;
+    border-style: solid;
+
+    padding: 2px;
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.84),
+                                  shade (@titlebar_color, 0.80)
+                                  );
+
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
+                inset 0 -1px 0 0 alpha (#fff, 0.20);
+
+    border-color: shade (@titlebar_color, 0.50);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.search-bar .button.close-button {
+    padding: 5px 4px 5px 5px;
+}
+
+
 
 /***********
 * Toolbars *
@@ -1303,6 +1364,18 @@ GtkCheckButton:selected:focus {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.secondary-toolbar.toolbar:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.98),
+                                  shade (@titlebar_color, 0.94)
+                                  );
+    border-color: shade (@titlebar_color, 0.70);
+    
+    color: @insensitive_color;
+    
+    -gtk-image-effect: dim;
 }
 
 .secondary-toolbar.toolbar .button {
@@ -1366,7 +1439,7 @@ GtkCheckButton:selected:focus {
     border-color: shade (@titlebar_color, 0.72);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
-
+    
     -gtk-image-effect: dim;
 }
 
@@ -1783,6 +1856,7 @@ GtkIconView.view.cell:selected:focus {
 
 .cell {
     color: @text_color;
+    text-shadow: none;
 }
 
 .cell:selected,
@@ -1880,18 +1954,6 @@ EggListBox {
     background-color: @base_color;
 
 }
-
-/* FIXME: Just testing if I need this */
-
-/*
-.content-view GtkNotebook,
-.content-view GtkTreeView,
-.content-view GtkTextView,
-.content-view GtkEventBox {
-    background-image: none;
-    background-color: transparent;
-}
-*/
 
 .content-view column-header .button {
     border-width: 0 0 1px 1px;
@@ -2126,15 +2188,5 @@ GtkInfoBar .button:hover:insensitive {
 .h2 { font: open sans light 18; }
 .h3 { font: open sans bold 12; }
 
-/********
- * Grip *
- ********/
-
-.grip {
-    background-color: transparent;
-    background-image: url("assets/resize-grip.svg");
-}
-
 @import url("granite-widgets.css");
 @import url("apps.css");
-
