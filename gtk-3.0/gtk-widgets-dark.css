@@ -1361,7 +1361,7 @@ GtkBox .horizontal,
  **************/
 .header-bar GtkLabel,
 .header-bar GtkImage {
-    color: shade (@text_color, 0.90);   
+    color: shade (@text_color, 0.90);
 }
 
 .header-bar {
@@ -1373,13 +1373,10 @@ GtkBox .horizontal,
     border-color: shade (#000, 1.08);
     border-radius: 3px 3px 0 0;
     border-style: solid;
-    border-width: 1px 0 1px;
+    border-width: 0 0 1px;
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.1);
-              
-    
-              
-                        
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.08);
 
     padding: 10px 6px 8px 6px;
 }
@@ -1390,12 +1387,8 @@ GtkBox .horizontal,
                                   shade (@titlebar_color, 0.98)
                                   );
 
-   border-color: shade (#000, 1.08);
-    border-radius: 3px 3px 0 0;
-    border-style: solid;
-    border-width: 1px 0 1px;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.1);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.08);
 
     -gtk-image-effect: dim;
 }
@@ -2167,17 +2160,12 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .window-frame {
-    border-radius: 4px 4px 0 0;
-    
-
-    box-shadow: 0 0 0 1px alpha (#000, 0.3),
+    box-shadow: 0 0 0 1px alpha (#000, 0.4),
                 0 3px 7px alpha (#000, 0.86);
-
-    margin: 12px;
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 0 0 1px alpha (#000, 0.3),
+    box-shadow: 0 0 0 1px alpha (#000, 0.4),
                 0 2px 5px alpha (#000, 0.58);
 }
 
