@@ -988,8 +988,8 @@ GtkComboBox.combobox-entry .button {
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#000, 0.4);
+    icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .notebook GtkViewport {
