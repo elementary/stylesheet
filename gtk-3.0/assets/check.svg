@@ -15,7 +15,7 @@
    height="16"
    id="svg7539"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="check-off.svg">
+   sodipodi:docname="check.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -26,14 +26,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1280"
-     inkscape:window-height="758"
+     inkscape:window-height="747"
      id="namedview33"
      showgrid="false"
-     inkscape:zoom="16.58825"
-     inkscape:cx="-0.87417935"
-     inkscape:cy="8.500206"
+     inkscape:zoom="33.5625"
+     inkscape:cx="8"
+     inkscape:cy="8"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="28"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg7539" />
   <defs
@@ -86,7 +86,7 @@
        id="linearGradient3012"
        xlink:href="#linearGradient4751-5-4-1-2-9-1-2-3-365-589-154-4-7-64-3-8-6-5-3-1"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.8047894,0,0,0.60165743,-516.81815,-380.08054)" />
+       gradientTransform="matrix(0.74288252,0,0,0.55537609,-477.67845,-350.22801)" />
     <linearGradient
        x1="257.57822"
        y1="289.32889"
@@ -198,12 +198,12 @@
     </rdf:RDF>
   </metadata>
   <rect
-     width="13"
-     height="13"
-     rx="2"
-     ry="2"
-     x="-14.499832"
-     y="1.4998016"
+     width="12"
+     height="12"
+     rx="1.5"
+     ry="1.5"
+     x="-14"
+     y="2"
      transform="scale(-1,1)"
      id="rect6132-8-2-8-0-0-0-10-0-6-0-6-2-0-5-7-3-3-7-8-4-0-2-5-3-6-7-8"
      style="opacity:0.98999999;color:#000000;fill:url(#linearGradient3012);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999982;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
