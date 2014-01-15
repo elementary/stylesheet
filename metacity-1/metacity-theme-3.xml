@@ -10,7 +10,7 @@
 
 <!-- :: CONSTANTS :: -->
 
-<constant name="C_border_focused" value="shade/#DEDEDE/0.50" />
+<constant name="C_border_focused" value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/0.5" />
 
 <!-- :: GEOMETRIES :: -->
 
