@@ -17,7 +17,7 @@
 */
 
 /* Default color scheme */
-@define-color base_color #333;
+@define-color base_color #262a2e;
 @define-color bg_color shade (@base_color, 0.96);
 @define-color fg_color #2e3436;
 @define-color insensitive_color #999;
@@ -28,7 +28,7 @@
 @define-color selected_bg_color #3d9bda;
 @define-color selected_fg_color #FFF;
 @define-color text_color #FFF;
-@define-color titlebar_color #333;
+@define-color titlebar_color #262a2e;
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
 
