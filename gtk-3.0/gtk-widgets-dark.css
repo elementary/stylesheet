@@ -2128,6 +2128,20 @@ GtkInfoBar .button:hover:insensitive {
     color: alpha (#000, 0.30);
 }
 
+.window-frame {
+    border-radius: 4px 4px 0 0;
+
+    box-shadow: 0 0 0 1px alpha (#000, 0.8),
+                0 3px 7px alpha (#000, 0.86);
+
+    margin: 12px;
+}
+
+.window-frame:backdrop {
+    box-shadow: 0 0 0 1px alpha (#000, 0.8),
+                0 2px 5px alpha (#000, 0.58);
+}
+
 /**************
 * Text Styles *
 **************/
