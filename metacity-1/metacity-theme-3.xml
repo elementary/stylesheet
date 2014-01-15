@@ -11,6 +11,7 @@
 <!-- :: CONSTANTS :: -->
 
 <constant name="C_border_focused" value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/0.5" />
+<constant name="C_text_color" value="gtk:custom(metacity_color,gtk:bg[NORMAL])" />
 
 <!-- :: GEOMETRIES :: -->
 
@@ -178,7 +179,7 @@
 <draw_ops name="titlebar_fill_unfocused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
 			<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
-		<color value="shade/gtk:custom(metacity_colorr,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
 	</gradient>
 </draw_ops>
 
@@ -239,7 +240,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="close_hover">
@@ -258,7 +260,8 @@
 	    y="(height - object_height) / 2"
 	    width="object_width"
 	    height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="close_unfocused_hover">
@@ -278,7 +281,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="maximize_hover">
@@ -297,7 +301,8 @@
 		y="(height - object_height) / 2"
 		width="object_width"
 		height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_hover">
@@ -317,7 +322,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="unmaximize_hover">
@@ -336,7 +342,8 @@
 		y="(height - object_height) / 2"
 		width="object_width"
 		height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_hover">
@@ -356,7 +363,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="minimize_hover">
@@ -375,7 +383,8 @@
 		y="(height - object_height) / 2"
 		width="object_width"
 		height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_hover">
