@@ -1539,7 +1539,7 @@ GtkScrolledWindow,
 .source-list.category-expander {
     color: transparent;
 }
-
+.sidebar .view:prelight,
 .sidebar.view:prelight,
 .source-list.view:prelight {
     background-color: shade (@titlebar_color, 1.10);
@@ -1547,6 +1547,7 @@ GtkScrolledWindow,
 
 
 .sidebar .view:selected,
+.sidebar .view:prelight:selected,
 .sidebar.view:selected,
 .sidebar.view:prelight:selected,
 .source-list.view:selected,
@@ -1572,7 +1573,8 @@ GtkScrolledWindow,
     box-shadow: inset 0 1px 0 0 alpha (#000, 0.03),
                 inset 0 -1px 0 0 alpha (#000, 0.10);
 }
-
+.sidebar .view:selected:backdrop,
+.sidebar .view:prelight:selected:backdrop,
 .sidebar.view:selected:backdrop,
 .sidebar.view:prelight:selected:backdrop,
 .source-list.view:selected:backdrop,
