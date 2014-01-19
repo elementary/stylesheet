@@ -532,6 +532,7 @@ GtkProgressBar.trough {
 }
 
 .scale.trough:insensitive {
+    background-image: none;
     background-color: shade (@theme_bg_color, 1.25);
     border-color: shade (@inactive_frame_color, 0.9);
     border-radius: 0 12px 12px 0;
@@ -539,7 +540,7 @@ GtkProgressBar.trough {
 }
 
 .scale.trough.vertical {
-    margin: 0 8px;
+    margin: 0 5px 0 6px;
 
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.15),
@@ -548,10 +549,10 @@ GtkProgressBar.trough {
 }
 
 .scale.trough.vertical:insensitive {
-    background-image: linear-gradient(to right,
-                                  alpha (#000, 0.10),
-                                  alpha (#000, 0.02)
-                                  );
+    background-image: none;
+    background-color: shade (@theme_bg_color, 1.25);
+    border-radius: 0 0 12px 12px;
+    border-width: 1px 1px 0 1px;
 }
 
 .scale.mark {
@@ -575,6 +576,28 @@ GtkProgressBar.trough {
     border: 1px solid alpha (#000, 0.40);
     
     background-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.30),
+                                  alpha (#000, 0.20)
+                                  );
+}
+
+.scale.highlight.bottom {
+    border: 1px solid alpha (#000, 0.50);
+    border-radius: 0 0 12px 12px;
+
+    background-image: linear-gradient(to right,
+                                  alpha (#000, 0.40),
+                                  alpha (#000, 0.30)
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 1px alpha (#fff, 0.30);
+}
+
+.scale.highlight.bottom:insensitive {
+    border: 1px solid alpha (#000, 0.40);
+
+    background-image: linear-gradient(to right,
                                   alpha (#000, 0.30),
                                   alpha (#000, 0.20)
                                   );
