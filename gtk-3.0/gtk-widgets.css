@@ -317,7 +317,11 @@ GtkProgressBar {
     padding: 1px;
 }
 
-GtkProgressBar.progressbar {
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus {
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.88),
                                   @base_color
@@ -327,7 +331,18 @@ GtkProgressBar.progressbar {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
 }
 
-GtkProgressBar.trough {
+.progressbar.vertical {
+    background-image: linear-gradient(to right,
+                                  shade (@base_color, 0.88),
+                                  @base_color
+                                  );
+}
+
+.trough,
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus {
     border: 1px solid alpha (#000, 0.35);
 
     background-image: linear-gradient(to bottom,
@@ -337,6 +352,13 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.03),
                 0 1px 0 1px alpha (#fff, 0.30);
+}
+
+.trough.vertical {
+    background-image: linear-gradient(to right,
+                                  alpha (#000, 0.15),
+                                  alpha (#000, 0.07)
+                                  );
 }
 
 /**********************************
