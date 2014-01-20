@@ -62,29 +62,6 @@
  * Miscellaneous *
  ****************/
 
-@keyframes spinner {
-    0% { background-image: url("assets/spinner-01.svg"); }
-    14% { background-image: url("assets/spinner-02.svg"); }
-    28% { background-image: url("assets/spinner-03.svg"); }
-    42% { background-image: url("assets/spinner-04.svg"); }
-    56% { background-image: url("assets/spinner-05.svg"); }
-    70% { background-image: url("assets/spinner-06.svg"); }
-    84% { background-image: url("assets/spinner-07.svg"); }
-    100% { background-image: url("assets/spinner-08.svg"); }
-}
-
-.spinner {
-    background-color: transparent;
-    background-image: url("assets/spinner-01.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.spinner:active {
-    background-image: url("assets/spinner-01.svg");
-    animation: spinner 600ms infinite linear;
-}
-
 .view.rubberband,
 .rubberband {
     background-color: alpha (@selected_bg_color, 0.35);
@@ -1505,21 +1482,19 @@ GtkPaned .inline-toolbar.toolbar {
 /************************
 * Sidebar & Source List *
 ************************/
-GthSidebar,
-GtkViewport,
-GtkScrolledWindow,
-.sidebar .view,
+
 .sidebar,
 .sidebar.view,
+.sidebar .view,
 .source-list,
 .source-list.view {
     background-color: #272b2f;
     color: shade (@text_color, 0.90);
 }
 
-.sidebar .view,
 .sidebar,
 .sidebar.view,
+.sidebar .view,
 .sidebar.view:selected:backdrop,
 .sidebar.view:prelight:selected:backdrop,
 .source-list,
@@ -1632,8 +1607,6 @@ GtkScrolledWindow,
 /**************************
 * Suggested Action Button *
 **************************/
-
-/* FIXME: Get .affirmative changed to .suggested-action */
 
 .suggested-action.button {
 
@@ -1901,18 +1874,6 @@ EggListBox {
     background-color: @base_color;
 
 }
-
-/* FIXME: Just testing if I need this */
-
-/*
-.content-view GtkNotebook,
-.content-view GtkTreeView,
-.content-view GtkTextView,
-.content-view GtkEventBox {
-    background-image: none;
-    background-color: transparent;
-}
-*/
 
 .content-view column-header .button {
     border-width: 0 0 1px 1px;
