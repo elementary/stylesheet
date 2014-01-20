@@ -1055,35 +1055,16 @@ GtkComboBox.combobox-entry .button:last-child {
 * Scrollbars *
 *************/
 
-.scrollbar {
-    -GtkRange-slider-width: 4;
-    -GtkRange-stepper-size: 0;
-    -GtkRange-stepper-spacing: 1;
-    -GtkRange-trough-border: 2;
-
-    -GtkScrollbar-min-slider-length: 30;
-}
-
 .scrollbar.trough {
     background-color: transparent;
-    border-width: 0;
-    border-radius: 0;
 }
 
 .scrollbar.slider,
 .scrollbar.slider:prelight,
 .scrollbar.button {
     border-width: 0;
-    background-color:         alpha (#000, 0.4);
+    background-color: alpha (#fff, 0.4);
     border-radius: 10px;
-}
-
-.scrollbar.slider:insensitive {
-    -GtkRange-slider-width: 0;
-}
-
-.scrollbar.trough:insensitive {
-    -GtkRange-trough-border: 0;
 }
 
 /********
