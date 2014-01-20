@@ -1057,6 +1057,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .scrollbar.trough {
     background-color: transparent;
+    background-image: none;
 }
 
 .scrollbar.slider,
