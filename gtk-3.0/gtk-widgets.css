@@ -262,6 +262,8 @@
                                   alpha (#000, 0.05),
                                   transparent 5px
                                   );
+
+    color: @insensitive_color;
 }
 
 .header-bar .entry:insensitive,
