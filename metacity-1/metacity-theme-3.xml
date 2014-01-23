@@ -193,7 +193,7 @@
 </draw_ops>
 
 <draw_ops name="hilight">
-	<line color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x1="0" y1="0" x2="width-1" y2="0" />
+	<line color="C_highlight_color" x1="0" y1="0" x2="width-1" y2="0" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
