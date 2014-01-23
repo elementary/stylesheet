@@ -950,6 +950,7 @@ GtkComboBox.combobox-entry .button {
 * Notebook and Tabs *
 ********************/
 
+.dynamic-notebook,
 .dynamic-notebook .notebook.header {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.10),
@@ -964,6 +965,7 @@ GtkComboBox.combobox-entry .button {
     border-radius: 0;
 }
 
+.dynamic-notebook:backdrop,
 .dynamic-notebook .notebook.header:backdrop {
     background-color: shade (@titlebar_color, 0.96);
     background-image: linear-gradient(to bottom,
