@@ -54,10 +54,6 @@
 	<border name="title_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
 
-<frame_geometry name="attached" title_scale="small" hide_buttons="true" rounded_top_left="false" rounded_top_right="false" parent="normal">
-	<distance name="title_vertical_pad" value="0"/>
-</frame_geometry>
-
 <!-- ::: BORDER OUTLINE ::: -->
 
 <draw_ops name="border_focused">
@@ -67,28 +63,6 @@
 <draw_ops name="border_unfocused">
 	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
-
-<draw_ops name="border_attached_focused">
-	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
-	<line x1="0" y1="0" x2="width" y2="0" color="shade/#DEDEDE/0.6" />
-	<gradient type="vertical" x="0" y="0" width="1" height="top_height">
-		<color value="blend/#fff/#000000/0.3" />
-		<color value="blend/#fff/#000000/0.1" />		
-		<color value="blend/#fff/#000000/0.1" />
-		<color value="blend/#fff/#000000/0.2" />
-		<color value="blend/#fff/#000000/0.2" />
-		<color value="shade/#fff/0.50" />
-	</gradient>
-	<gradient type="vertical" x="width-1" y="0" width="1" height="top_height">
-		<color value="blend/#fff/#000000/0.3" />
-		<color value="blend/#fff/#000000/0.1" />
-		<color value="blend/#fff/#000000/0.1" />
-		<color value="blend/#fff/#000000/0.2" />
-		<color value="blend/#fff/#000000/0.2" />
-		<color value="shade/#fff/0.50" />
-	</gradient>
-</draw_ops>
-
 
 <draw_ops name="rounded_border">
 	<line color="C_border_focused" x1="4" y1="0" x2="width-5" y2="0" />
@@ -181,15 +155,6 @@
 	</gradient>
 </draw_ops>
 
-
-<draw_ops name="titlebar_fill_attached_focused"> <!-- gradient for attached and modal dialogs titlebar-->
-	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
-		<color value="shade/#fff/0.80" />
-		<color value="shade/#fff/0.91" />
-		<color value="shade/#fff/0.96" />
-	</gradient>
-</draw_ops>
-
 <draw_ops name="hilight">
 	<line color="shade/#DEDEDE/1.14" x1="0" y1="0" x2="width-1" y2="0" />
 </draw_ops>
@@ -197,10 +162,6 @@
 <draw_ops name="titlebar_focused">
 	<include name="titlebar_fill_focused" />
 	<include name="hilight" />
-</draw_ops>
-
-<draw_ops name="titlebar_attached_focused"> <!-- titlebar for attached and modal dialogs -->
-	<include name="titlebar_fill_attached_focused" />
 </draw_ops>
 
 <draw_ops name="rounded_titlebar_focused">
@@ -837,57 +798,6 @@
 	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
 </frame_style>
 
-<frame_style name="attached_focused" geometry="attached">
-	<piece position="entire_background" draw_ops="dialog_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_attached_focused" />
-	<piece position="overlay" draw_ops="border_attached_focused" />
-	<button function="close" state="normal"><draw_ops></draw_ops></button>
-	<button function="close" state="pressed"><draw_ops></draw_ops></button>
-	<button function="maximize" state="normal"><draw_ops></draw_ops></button>
-	<button function="maximize" state="pressed"><draw_ops></draw_ops></button>
-	<button function="minimize" state="normal"><draw_ops></draw_ops></button>
-	<button function="minimize" state="pressed"><draw_ops></draw_ops></button>
-	<button function="menu" state="normal"><draw_ops></draw_ops></button>
-	<button function="menu" state="pressed"><draw_ops></draw_ops></button>
-	<button function="shade" state="normal"><draw_ops></draw_ops></button>
-	<button function="shade" state="pressed"><draw_ops></draw_ops></button>
-	<button function="unshade" state="normal"><draw_ops></draw_ops></button>
-	<button function="unshade" state="pressed"><draw_ops></draw_ops></button>
-	<button function="above" state="normal"><draw_ops></draw_ops></button>
-	<button function="above" state="pressed"><draw_ops></draw_ops></button>
-	<button function="unabove" state="normal"><draw_ops></draw_ops></button>
-	<button function="unabove" state="pressed"><draw_ops></draw_ops></button>
-	<button function="stick" state="normal"><draw_ops></draw_ops></button>
-	<button function="stick" state="pressed"><draw_ops></draw_ops></button>
-	<button function="unstick" state="normal"><draw_ops></draw_ops></button>
-	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
-</frame_style>
-
-<frame_style name="attached_unfocused" geometry="attached">
-	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="overlay" draw_ops="border_unfocused" />
-	<button function="close" state="normal"><draw_ops></draw_ops></button>
-	<button function="close" state="pressed"><draw_ops></draw_ops></button>
-	<button function="maximize" state="normal"><draw_ops></draw_ops></button>
-	<button function="maximize" state="pressed"><draw_ops></draw_ops></button>
-	<button function="minimize" state="normal"><draw_ops></draw_ops></button>
-	<button function="minimize" state="pressed"><draw_ops></draw_ops></button>
-	<button function="menu" state="normal"><draw_ops></draw_ops></button>
-	<button function="menu" state="pressed"><draw_ops></draw_ops></button>
-	<button function="shade" state="normal"><draw_ops></draw_ops></button>
-	<button function="shade" state="pressed"><draw_ops></draw_ops></button>
-	<button function="unshade" state="normal"><draw_ops></draw_ops></button>
-	<button function="unshade" state="pressed"><draw_ops></draw_ops></button>
-	<button function="above" state="normal"><draw_ops></draw_ops></button>
-	<button function="above" state="pressed"><draw_ops></draw_ops></button>
-	<button function="unabove" state="normal"><draw_ops></draw_ops></button>
-	<button function="unabove" state="pressed"><draw_ops></draw_ops></button>
-	<button function="stick" state="normal"><draw_ops></draw_ops></button>
-	<button function="stick" state="pressed"><draw_ops></draw_ops></button>
-	<button function="unstick" state="normal"><draw_ops></draw_ops></button>
-	<button function="unstick" state="pressed"><draw_ops></draw_ops></button>
-</frame_style>
-
 <!-- placeholder for unimplementated styles-->
 <frame_style name="blank" geometry="normal">
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
@@ -969,18 +879,6 @@
 	<frame focus="no" state="maximized_and_shaded" style="blank"/>
 </frame_style_set>
 
-<frame_style_set name="attached_style_set">
-	<frame focus="yes" state="normal" resize="both" style="attached_focused"/>
-	<frame focus="no" state="normal" resize="both" style="attached_focused"/>
-	<frame focus="yes" state="maximized" style="blank"/>
-	<frame focus="no" state="maximized" style="blank"/>
-	<frame focus="yes" state="shaded" style="blank"/>
-	<frame focus="no" state="shaded" style="blank"/>
-	<frame focus="yes" state="maximized_and_shaded" style="blank"/>
-	<frame focus="no" state="maximized_and_shaded" style="blank"/>
-</frame_style_set>
-
-
 <!-- windows -->
 
 <window type="normal" style_set="normal_style_set"/>
@@ -989,6 +887,6 @@
 <window type="menu" style_set="utility_style_set"/>
 <window type="utility" style_set="utility_style_set"/>
 <window type="border" style_set="border_style_set"/>
-<window version=">= 3.2" type="attached" style_set="attached_style_set"/>
+<window version=">= 3.2" type="attached" style_set="dialog_style_set"/>
 
 </metacity_theme>
