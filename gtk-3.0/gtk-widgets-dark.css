@@ -1930,11 +1930,8 @@ GtkCalendar.highlight {
 }
 
 .info {
-    background-image: linear-gradient(to bottom,
-                                  #fafafa,
-                                  #f6f6f6
-                                  );
-    border-color: #c3c3c3;
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.15),
+                inset 0 -1px 0 0 alpha (#fff, 0.03);
 }
 
 .info GtkLabel {

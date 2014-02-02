@@ -2102,10 +2102,14 @@ GtkCalendar.highlight {
 
 .info {
     background-image: linear-gradient(to bottom,
-                                  #fafafa,
-                                  #f6f6f6
+                                  shade (@bg_color, 1.01),
+                                  shade (@bg_color, 0.97)
                                   );
-    border-color: #c3c3c3;
+
+    box-shadow: inset 0 1px 0 0 #fff,
+                inset 0 -1px 0 0 alpha (#fff, 0.4);
+
+    border-color: shade (@bg_color, 0.8);
 }
 
 .info GtkLabel {
