@@ -36,6 +36,11 @@
     color: @fg_color;
 }
 
+*:insensitive {
+    text-shadow: 0 1px alpha (#fff, 0.07);
+    icon-shadow: 0 1px alpha (#fff, 0.07);
+}
+
 /************
  * Tooltips *
  ************/
