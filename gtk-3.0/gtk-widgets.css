@@ -1842,6 +1842,8 @@ GtkSwitch.trough {
     background-position: 0 center;
         
     color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 GtkSwitch.trough:active {
