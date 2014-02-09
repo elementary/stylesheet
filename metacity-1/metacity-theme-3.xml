@@ -10,7 +10,9 @@
 
 <!-- :: CONSTANTS :: -->
 
-<constant name="C_border_focused" value="shade/#DEDEDE/0.50" />
+<constant name="C_border_focused" value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/0.5" />
+<constant name="C_highlight_color" value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1.4" />
+<constant name="C_text_color" value="shade/gtk:custom(text_color,gtk:bg[NORMAL])/1" />
 
 <!-- :: GEOMETRIES :: -->
 
@@ -77,9 +79,9 @@
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
-	<line color="shade/#DEDEDE/1.14" x1="5" y1="1" x2="width-6" y2="1" />
-	<arc color="shade/#DEDEDE/1.14" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
-	<arc color="shade/#DEDEDE/1.14" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
+	<line color="C_highlight_color" x1="5" y1="1" x2="width-6" y2="1" />
+	<arc color="C_highlight_color" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
+	<arc color="C_highlight_color" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 
@@ -114,49 +116,50 @@
 <!-- ::: TITLES ::: -->
 
 <draw_ops name="title_focused">
-	<title color="shade/#DEDEDE/1.30" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:custom(theme_bg_color,gtk:bg[NORMAL])/1.30" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="shade/gtk:text[NORMAL]/2.00" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="shade/#DEDEDE/1.15" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
+	<title color="shade/gtk:custom(theme_bg_color,gtk:bg[NORMAL])/1.15" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="shade/gtk:text[NORMAL]/2.50" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <!-- ::: TITLEBAR ::: -->
 
 <draw_ops name="entire_background_focused">
-	<rectangle color="#DEDEDE" x="1" y="5" width="width-2" height="height-6" filled="true" />
-</draw_ops>
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
+
+</draw_ops> 
 
 <draw_ops name="entire_background_unfocused">
-	<rectangle color="shade/#DEDEDE/1.06" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="dialog_background_focused">
-	<rectangle color="shade/#fff/0.96" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
-	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
-		<color value="shade/#DEDEDE/1.04"/>
-		<color value="shade/#DEDEDE/1.0"/>
+	<gradient type="vertical" x="0" y="0" width="width" height="top_height">
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
 	</gradient>
 </draw_ops>
 
 <draw_ops name="dialog_titlebar_fill_focused">
-	<rectangle color="shade/#fff/0.96" x="1" y="1" width="width-2" height="height-2" filled="true" />
+	<rectangle color="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1" x="1" y="1" width="width-2" height="height-2" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_unfocused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
-		<color value="shade/#DEDEDE/1.10"/>
-		<color value="shade/#DEDEDE/1.06"/>
+			<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
+		<color value="shade/gtk:custom(metacity_color,gtk:bg[NORMAL])/1"/>
 	</gradient>
 </draw_ops>
 
 <draw_ops name="hilight">
-	<line color="shade/#DEDEDE/1.14" x1="0" y1="0" x2="width-1" y2="0" />
+	<line color="C_highlight_color" x1="0" y1="0" x2="width-1" y2="0" />
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
@@ -200,7 +203,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="close_hover">
@@ -219,7 +223,8 @@
 	    y="(height - object_height) / 2"
 	    width="object_width"
 	    height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="close_unfocused_hover">
@@ -239,7 +244,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="maximize_hover">
@@ -258,7 +264,8 @@
 		y="(height - object_height) / 2"
 		width="object_width"
 		height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_hover">
@@ -278,7 +285,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="unmaximize_hover">
@@ -297,7 +305,8 @@
 		y="(height - object_height) / 2"
 		width="object_width"
 		height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="unmaximize_unfocused_hover">
@@ -317,7 +326,8 @@
 		x="(width - object_width) / 2"
 		y="(height - object_height) / 2"
 		width="object_width"
-		height="object_height"/>
+		height="object_height"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="minimize_hover">
@@ -336,7 +346,8 @@
 		y="(height - object_height) / 2"
 		width="object_width"
 		height="object_height"
-        alpha="0.6"/>
+        alpha="0.6"
+        colorize="C_text_color" />
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_hover">

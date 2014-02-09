@@ -14,8 +14,8 @@
    width="18"
    height="16"
    id="svg2"
-   inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="close-normal.svg">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="close.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -25,7 +25,7 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="669"
+     inkscape:window-width="677"
      inkscape:window-height="480"
      id="namedview32"
      showgrid="false"
@@ -181,11 +181,7 @@
        gradientTransform="matrix(0.7071068,0.7071068,-0.7071068,0.7071068,-18.87868,-10.43503)" />
   </defs>
   <path
-     d="M 8.9701822,7.555969 11.5,5 13,6.5 10.401435,8.987221 13,11.5 11.5,13 8.987221,10.401435 6.5,13 5,11.5 7.5857864,9 5,6.5 6.5,5 8.9701822,7.555969 z"
-     id="path2398"
-     style="opacity:0.6;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-  <path
      d="M 8.9701822,6.5559687 11.5,4 13,5.5 10.401435,7.987221 13,10.5 11.5,12 8.987221,9.401435 6.5,12 5,10.5 7.5857864,8 5,5.5 6.5,4 8.9701822,6.5559687 z"
      id="path2386"
-     style="opacity:0.5;color:#000000;fill:url(#linearGradient6693-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.99829447000000004;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+     style="opacity:1;color:#bebebe;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
 </svg>
