@@ -1841,14 +1841,8 @@ EggListBox {
 ***************/
 
 .content-view-window {
-    background-image: linear-gradient(to bottom,
-                                   @titlebar_color,
-                                   @titlebar_color 80%,
-                                  @titlebar_color
-                                  );
-
-    border: 1px solid alpha (#000, 0.25);
-    border-radius: 5px;
+    background-image: none;
+    border: 1px solid alpha (#000, 0.8);
 }
 
 .content-view,
