@@ -20,10 +20,6 @@
  * Base States *
  **************/
 
-.background {
-    color: @text_color;
-}
-
 *:selected,
 *:selected:focus {
     /* FIXME: We should set the bg color in each widget */

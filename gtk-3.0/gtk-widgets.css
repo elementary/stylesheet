@@ -41,7 +41,7 @@
  **************/
 
 .background {
-    color: @fg_color;
+    color: @text_color;
     background-color: @bg_color;
 }
 
