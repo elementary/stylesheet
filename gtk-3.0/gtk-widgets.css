@@ -2031,8 +2031,8 @@ EggListBox {
 
 .content-view,
 .content-view GtkViewport {
-    background-color: @base_color;
-
+    background-color: transparent;
+    background-image: none;
 }
 
 .content-view column-header .button {
