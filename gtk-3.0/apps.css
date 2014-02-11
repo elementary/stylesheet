@@ -167,6 +167,7 @@ ConversationListView.view.cell:selected {
 .panel .menu .menuitem {
     text-shadow: none;
     icon-shadow: none;
+    font-weight: normal;
 }
 
 .panel .menu .menuitem:active,
