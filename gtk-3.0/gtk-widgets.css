@@ -2019,12 +2019,6 @@ EggListBox {
 ***************/
 
 .content-view-window {
-    background-image: linear-gradient(to bottom,
-                                  #f8f8f8,
-                                  #f8f8f8 80%,
-                                  #f0f0f0
-                                  );
-
     border: 1px solid alpha (#000, 0.25);
     border-radius: 5px;
 }
@@ -2037,7 +2031,7 @@ EggListBox {
 
 .content-view column-header .button {
     border-width: 0 0 1px 1px;
-    
+
     background-image: linear-gradient(to bottom,
                               @bg_color,
                               shade (@bg_color, 0.94)
