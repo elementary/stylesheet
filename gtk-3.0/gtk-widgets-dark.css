@@ -37,48 +37,6 @@
     icon-shadow: 0 1px alpha (#fff, 0.07);
 }
 
-/************
- * Tooltips *
- ************/
- 
-/* FIXME: find out class name for granite overlay
-           or have it changed to .tooltip in granite */
-.tooltip,
-.files-overlay-bar {
-    background-color: alpha (black, 0.7);
-    border-radius: 3px;
-    border: 0;
-    padding: 3px 6px;
-    margin: 3px;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
-}
-
-.tooltip GtkLabel,
-.files-overlay-bar GtkLabel {
-    color: white;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
-}
-
-/*****************
- * Miscellaneous *
- ****************/
-
-.view.rubberband,
-.rubberband {
-    background-color: alpha (@selected_bg_color, 0.35);
-    border: 1px solid @selected_bg_color;
-}
-
-.dnd {
-    background-color: alpha (@selected_bg_color, 0.4);
-    background-image: none;
-
-    border: 1px solid @selected_bg_color;
-    border-radius: 3px;
-
-    margin: 3px;
-}
-
 /**************
  * Separators *
  *************/
@@ -1843,71 +1801,7 @@ EggListBox {
 
 .content-view-window {
     background-image: none;
-    border: 1px solid alpha (#000, 0.8);
-}
-
-.content-view,
-.content-view GtkViewport {
-    background-color: @base_color;
-
-}
-
-.content-view column-header .button {
-    border-width: 0 0 1px 1px;
-    
-    background-image: linear-gradient(to bottom,
-                              @bg_color,
-                              shade (@bg_color, 0.94)
-                              );
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.86),
-                                  shade (@base_color, 0.70)
-                                  ) 1 0 1 0;
-}
-
-.content-view .title,
-.content-view .option-title {
-    color: @text_color;
-    text-shadow: 0 1px alpha (#000, 0.3);
-}
-
-.content-view .subtitle,
-.content-view .option-description {
-    color: alpha (@text_color, 0.5);
-    text-shadow: 0 1px alpha (#000, 0.4);
-} 
-
-.content-view .toolbar {
-    padding: 1px;
-
-    background-image: linear-gradient(to bottom,
-                          alpha (#000, 0.10),
-                          alpha (#000, 0.03)
-                          );
-                          
-  border-color: alpha (#000, 0.05);
-}
-
-/**************
-* GtkCalendar *
-**************/
-
-GtkCalendar {
-    border-radius: 2px;
-}
-
-GtkCalendar.button,
-GtkCalendar.button:insensitive,
-GtkCalendar.header,
-GtkCalendar.view {
-    background-color: transparent;
-    background-image: none;
-}
-
-.highlight,
-GtkCalendar.highlight {
-    color: #777;
+    border: 1px solid alpha (#000, 0.6);
 }
 
 /*************
@@ -2035,7 +1929,6 @@ GtkInfoBar .button:hover:insensitive {
 .titlebar .title {
     font: Bold 9;
 }
-
 
 .titlebar .titlebutton {
     icon-shadow: 0px 1px alpha (#000, 0.4);
