@@ -1158,7 +1158,7 @@ GtkComboBox.combobox-entry .button:last-child {
     -GtkRange-trough-border: 2;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-slider-width: 4;
+    -GtkRange-slider-width: 3;
     -GtkScrollbar-min-slider-length: 30;
 
     -GtkRange-stepper-spacing: 0;
