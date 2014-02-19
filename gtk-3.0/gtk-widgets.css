@@ -2266,14 +2266,14 @@ GtkPopover {
     border-radius: 4px 4px 0 0;
 
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 3px 7px alpha (#000, 0.86);
+                0 12px 36px -6px alpha (#000, 0.82);
 
-    margin: 12px;
+    margin: 8px;
 }
 
 .window-frame:backdrop {
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 2px 5px alpha (#000, 0.58);
+                0 6px 10px -3px alpha (#000, 0.64);
 }
 
 /**************

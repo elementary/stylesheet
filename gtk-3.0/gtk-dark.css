@@ -17,7 +17,7 @@
 */
 
 /* Default color scheme */
-@define-color base_color #262a2e;
+@define-color base_color #252e32;
 @define-color bg_color shade (@base_color, 0.96);
 @define-color fg_color #2e3436;
 @define-color insensitive_color shade (@bg_color, 0.4);
@@ -28,7 +28,7 @@
 @define-color selected_bg_color #3d9bda;
 @define-color selected_fg_color #FFF;
 @define-color text_color #919e9b;
-@define-color titlebar_color #262a2e;
+@define-color titlebar_color #252e32;
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
 
@@ -54,7 +54,7 @@
 @define-color warning_color #f57900;
 @define-color error_color #cc0000;
 @define-color success_color #4e9a06;
-@define-color metacity_color #262a2e;
+@define-color metacity_color @titlebar_color;
 
 @define-color info_fg_color rgb (0, 136, 204);
 @define-color info_bg_color rgb (252, 252, 189);

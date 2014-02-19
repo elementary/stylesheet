@@ -197,18 +197,6 @@ ConversationListView.view.cell:selected {
     box-shadow: none;
 }
 
-/************
- * Terminal *
- ***********/
-
-TerminalScreen {
-    -TerminalScreen-background-darkness: 0.85;
-
-    background-color: #000;
-
-    color: #fff;
-}
-
 /*********
  * Tweet *
  ********/
