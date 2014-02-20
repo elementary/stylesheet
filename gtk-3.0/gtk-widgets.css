@@ -1176,6 +1176,11 @@ GtkComboBox.combobox-entry .button:last-child {
     -GtkRange-trough-under-steppers: 1;
 }
 
+.scrollbar:backdrop {
+    -GtkRange-trough-border: 0;
+    -GtkRange-slider-width: 0;
+}
+
 .scrollbars-junction,
 .scrollbar.trough {
     background-image: none;
