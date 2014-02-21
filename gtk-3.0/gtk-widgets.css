@@ -21,6 +21,7 @@
     
     -GtkTextView-error-underline-color: @error_color;
 
+    -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 8px;
 
@@ -1744,6 +1745,13 @@ GtkPaned .inline-toolbar.toolbar {
     -GtkPaned-handle-size: 1;
     background-image: none;
     background-color: shade (@titlebar_color, 0.75);
+}
+
+/.sidebar .scrollbar.trough,
+.sidebar .scrollbars-junction,
+.source-list .scrollbar.trough,
+.source-list .scrollbars-junction {
+    background-color: @titlebar_color;
 }
 
 .source-list.badge,
