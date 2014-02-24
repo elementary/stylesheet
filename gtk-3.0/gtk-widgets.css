@@ -1747,7 +1747,7 @@ GtkPaned .inline-toolbar.toolbar {
     background-color: shade (@titlebar_color, 0.75);
 }
 
-/.sidebar .scrollbar.trough,
+.sidebar .scrollbar.trough,
 .sidebar .scrollbars-junction,
 .source-list .scrollbar.trough,
 .source-list .scrollbars-junction {
