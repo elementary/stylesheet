@@ -1382,15 +1382,6 @@ GtkCheckButton:selected:focus {
 }
 
 /***************
- * Dialog      *
- ***************/
-
-.prompt,
-GtkMessageDialog {
-    -GtkDialog-button-spacing: 0;
-}
-
-/***************
  * Search bars *
  ***************/
 
@@ -2261,28 +2252,16 @@ GtkPopover {
                                   shade (@titlebar_color, 1.04),
                                   shade (@titlebar_color, 0.84)
                                   );
+    border-color: shade (@titlebar_color, 0.56);
     border-radius: 4px 4px 0 0;
+    border-style: solid;
+    border-width: 0 0 1px;
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-}
 
-GtkMessageDialog .titlebar {
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.2),
-                                  @bg_color
-                                  );
-
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 alpha (#fff, 0.80);
-}
-
-GtkMessageDialog {
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 -1px 0 0 alpha (#fff, 0.30);
-
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
+                inset 0 1px 0 0 alpha (#fff, 0.60);
 }
 
 .titlebar.default-decoration {
@@ -2325,6 +2304,35 @@ GtkMessageDialog {
 .window-frame:backdrop {
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
                 0 6px 10px -3px alpha (#000, 0.90);
+}
+
+/***************
+ * Dialog      *
+ ***************/
+
+.prompt,
+GtkMessageDialog {
+    -GtkDialog-button-spacing: 0;
+}
+
+GtkDialog .titlebar,
+GtkMessageDialog .titlebar {
+    border: none;
+
+    background-image: none;
+    background-color: @bg_color;
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 1px 0 0 #fff;
+}
+
+GtkDialog,
+GtkMessageDialog {
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 -1px 0 0 alpha (#fff, 0.30);
+
 }
 
 /**************
