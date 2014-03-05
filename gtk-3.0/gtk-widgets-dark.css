@@ -582,13 +582,12 @@ GtkComboBox.combobox-entry .button {
 .button:active,
 .button:hover:active,
 .button:focus:active {
-    background-color: alpha (#000, 0.10);  
-    background-image: linear-gradient(to bottom,
-                                  alpha (@titlebar_color, 0.10),
-                                 alpha (@titlebar_color, 0.7)
-                                  );    
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.1);
+    background-color: alpha (#000, 0.06);
+	background-image: none;
+    border-color: alpha (#000, 0.40);
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.10);
                 
     border: 1px solid alpha (#000, 0.37);
     padding: 2px 3px;

@@ -2315,6 +2315,10 @@ GtkMessageDialog {
     -GtkDialog-button-spacing: 0;
 }
 
+GtkMessageDialog .button {
+    padding: 6px;
+}
+
 GtkDialog .titlebar,
 GtkMessageDialog .titlebar {
     border: none;
