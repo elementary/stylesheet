@@ -1926,19 +1926,6 @@ GtkInfoBar .button:hover:insensitive {
     icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
-GtkMessageDialog .titlebar {
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),
-                inset -1px 0 0 0 alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.15);
-}
-
-GtkMessageDialog {
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),
-                inset -1px 0 0 0 alpha (#fff, 0.05),
-                inset 0 -1px 0 0 alpha (#fff, 0.07);
-
-}
-
 .titlebar .title {
     font: Bold 9;
 }
@@ -1968,6 +1955,30 @@ GtkMessageDialog {
 .window-frame:backdrop {
     box-shadow: 0 0 0 1px alpha (#000, 0.8),
                 0 2px 5px alpha (#000, 0.58);
+}
+
+/***************
+ * Dialog      *
+ ***************/
+
+GtkDialog .titlebar,
+GtkMessageDialog .titlebar {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.2),
+                                  @bg_color
+                                  );
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),
+                inset -1px 0 0 0 alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.15);
+}
+
+GtkDialog,
+GtkMessageDialog {
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),
+                inset -1px 0 0 0 alpha (#fff, 0.05),
+                inset 0 -1px 0 0 alpha (#fff, 0.07);
+
 }
 
 /**************
