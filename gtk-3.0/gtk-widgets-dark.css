@@ -1926,6 +1926,10 @@ GtkInfoBar .button:hover:insensitive {
     icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
+GtkMessageDialog .titlebar {
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.15);
+}
+
 .titlebar .title {
     font: Bold 9;
 }

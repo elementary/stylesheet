@@ -1382,6 +1382,15 @@ GtkCheckButton:selected:focus {
 }
 
 /***************
+ * Dialog      *
+ ***************/
+
+.prompt,
+GtkMessageDialog {
+    -GtkDialog-button-spacing: 0;
+}
+
+/***************
  * Search bars *
  ***************/
 
@@ -2256,6 +2265,15 @@ GtkPopover {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+GtkMessageDialog .titlebar {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.2),
+                                  @bg_color
+                                  );
+
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.60);
 }
 
 .titlebar.default-decoration {
