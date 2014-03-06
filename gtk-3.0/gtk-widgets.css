@@ -2363,6 +2363,7 @@ GtkModelButton.button:selected {
 .prompt,
 GtkMessageDialog {
     -GtkDialog-button-spacing: 0;
+    -GtkDialog-content-area-border: 6px;
 }
 
 GtkMessageDialog .button {
