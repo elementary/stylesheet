@@ -570,7 +570,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button:focus {
-    color:@text_color;
+    color: shade (@selected_bg_color, 1.4);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
                 inset 0 1px 0 0 alpha (#fff, 0.07),
@@ -578,11 +578,14 @@ GtkComboBox.combobox-entry .button {
                 0 1px 0 1px alpha (#fff, 0.05);
 
     border: 1px solid shade (@titlebar_color, 0.5);
+
+    text-shadow: 0 1px 2px shade (@selected_bg_color, 0.4);
 }
 
 .button:active,
 .button:hover:active,
 .button:focus:active {
+    color: shade (@text_color, 0.8);
 
     background-color: alpha (#000, 0.06);
 	background-image: none;
@@ -592,6 +595,9 @@ GtkComboBox.combobox-entry .button {
                 
     border: 1px solid alpha (#000, 0.37);
     padding: 2px 3px;
+
+    text-shadow: 0 1px alpha (#000, 0.4);
+    icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .toolbar .button:active,
