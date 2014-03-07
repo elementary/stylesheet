@@ -31,10 +31,11 @@
     -GtkHTML-link-color: @link_color;
 
     -GtkWidget-focus-line-width: 0;
+    -GtkWidget-focus-padding: 0;
     
     -GtkWindow-decoration-button-layout: 'close:maximize'
     -GtkWindow-resize-grip-width: 0;
-    -GtkWindow-resize-grip-height: 0; 
+    -GtkWindow-resize-grip-height: 0;
 }
 
 /***************
@@ -660,7 +661,7 @@ GraniteWidgetsPopOver .frame {
 .button.menuitem.menubar,
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
-    padding: 2px 3px;
+    padding: 3px;
 }
 
 .button {
@@ -964,8 +965,9 @@ GtkComboBox.combobox-entry .button {
                                   shade (@titlebar_color, 0.8),
                                   shade (@titlebar_color, 0.9)
                                   );
+    border-style: solid;
     border-width: 0 0 1px 0;
-    border-color: shade (@titlebar_color, 0.1);
+    border-color: alpha (#000, 0.3);
     border-radius: 0;
 }
 
@@ -1564,8 +1566,8 @@ GtkCheckButton:selected:focus {
 .header-bar .button.image-button GtkImage {
     color: @title_color;
     font: Bold 9;
-    text-shadow: 0 1px alpha (#fff, 0.6);
-    icon-shadow: 0 1px alpha (#fff, 0.6);
+    text-shadow: 0 1px @title_shadow_color;
+    icon-shadow: 0 1px @title_shadow_color;
 }
 
 .header-bar .title:backdrop,
