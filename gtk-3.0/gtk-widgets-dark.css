@@ -1331,7 +1331,7 @@ GtkBox .horizontal,
 
 .header-bar .title,
 .header-bar .button.image-button GtkImage {
-    color: shade (@text_color, 0.90);
+    color: @title_color;
     font: Bold 9;
     text-shadow: 0 1px alpha (#000, 0.6);
     icon-shadow: 0 1px alpha (#000, 0.6);

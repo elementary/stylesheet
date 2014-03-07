@@ -1562,7 +1562,7 @@ GtkCheckButton:selected:focus {
 
 .header-bar .title,
 .header-bar .button.image-button GtkImage {
-    color: shade (@titlebar_color, 0.55);
+    color: @title_color;
     font: Bold 9;
     text-shadow: 0 1px alpha (#fff, 0.6);
     icon-shadow: 0 1px alpha (#fff, 0.6);

@@ -29,6 +29,8 @@
 @define-color selected_fg_color #FFF;
 @define-color text_color #323232;
 @define-color titlebar_color #DEDEDE;
+@define-color title_color shade (@titlebar_color, 0.55);
+@define-color title_shadow_color alpha (#fff, 0.6);
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
 
