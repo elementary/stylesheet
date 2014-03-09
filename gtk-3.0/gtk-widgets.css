@@ -1795,10 +1795,7 @@ GtkPaned .inline-toolbar.toolbar {
 * Suggested Action Button *
 **************************/
 
-/* FIXME: Get .affirmative changed to .suggested-action */
-
 .suggested-action.button {
-
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   @selected_bg_color
@@ -2253,7 +2250,7 @@ GtkPopover {
 
 GtkModelButton.button
 {
-    color: @theme_fg_color;
+    color: @fg_color;
 }
 
 GtkModelButton.button:active,
