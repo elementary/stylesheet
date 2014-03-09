@@ -685,6 +685,12 @@ GtkComboBox.combobox-entry .button {
     color: @text_color;
 }
 
+.button:backdrop {
+    background-image: none;
+                                  
+    border: 1px solid alpha (#000, 0.2);
+}
+
 .toolbar .button {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 1.15),
@@ -2382,6 +2388,20 @@ GtkMessageDialog .titlebar {
     box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
                 inset -1px 0 0 0 alpha (#fff, 0.20),
                 inset 0 1px 0 0 #fff;
+}
+
+GtkDialog .titlebar:backdrop,
+GtkMessageDialog .titlebar:backdrop {
+    border: none;
+
+    background-image: none;
+    background-color: @bg_color;
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 1px 0 0 #fff;
+
+    color: shade (@titlebar_color, 1.20);
 }
 
 GtkDialog,
