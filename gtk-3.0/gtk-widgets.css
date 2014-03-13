@@ -1909,7 +1909,6 @@ GtkSwitch.slider {
 
 GtkSwitch.slider:focus {
     background-image: url("assets/switch-slider-focus.svg");
-
 }
 
 GtkSwitch.slider:insensitive {

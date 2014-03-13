@@ -87,52 +87,6 @@ ConversationListView.view.cell:selected {
     border-color: shade (@selected_bg_color, 0.8);
 }
 
-/*********
- * Noise *
- ********/
-
-.album-list-view,
-.album-list-view GtkLabel,
-.album-list-view:backdrop,
-.album-list-view GtkLabel:backdrop,
-.album-list-view GraniteWidgetsRating {
-    background-color: #262626;
-    color: @selected_fg_color;
-
-    border-radius: 0;
-    border-color: #000;
-}
-
-.album-list-view GtkTreeView,
-.album-list-view GtkTreeView:backdrop {
-    background-color: #262626;
-    background-image: none;
-    color: @selected_fg_color;
-    -GtkTreeView-vertical-separator: 3;
-    -GtkTreeView-grid-line-width: 0;
-}
-
-.album-list-view GtkTreeView row:nth-child(even),
-.album-list-view GtkTreeView row:nth-child(even):backdrop {
-    background-image: none;
-    background-color: #313131;
-    border: 1px solid #373737;
-}
-
-
-.album-list-view GtkTreeView row:nth-child(odd),
-.album-list-view GtkTreeView row:nth-child(odd):backdrop {
-    background-image: none;
-    background-color: #262626;
-    border-width: 0px;
-    border-style: none;
-}
-
-.album-list-view GtkTreeView row:selected {
-    background-color: @selected_bg_color;
-    color: @selected_fg_color;
-}
-
 /**********
  * Notify *
  *********/
