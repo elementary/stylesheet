@@ -580,7 +580,7 @@ GtkProgressBar {
 .scale.trough.vertical:insensitive {
     background-image: none;
     background-color: shade (@theme_bg_color, 1.25);
-    border-radius: 0 0 12px 12px;
+    border-radius: 12px 12px 0 0;
     border-width: 1px 1px 0 1px;
 }
 
@@ -625,6 +625,7 @@ GtkProgressBar {
 
 .scale.highlight.bottom:insensitive {
     border: 1px solid alpha (#000, 0.40);
+    border-radius: 0 0 12px 12px;
 
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.30),
