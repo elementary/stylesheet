@@ -159,3 +159,11 @@ ConversationListView.view.cell:selected {
     padding: 0;
     box-shadow: none;
 }
+
+/************
+ * Terminal *
+ ***********/
+
+PantheonTerminalPantheonTerminalWindow.background {
+   background-color: transparent;
+}
