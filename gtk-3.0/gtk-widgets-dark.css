@@ -1182,8 +1182,11 @@ GtkCheckButton:selected:focus {
     -gtk-image-effect: dim;
 }
 
-
-
+.header-bar .button.image-button {
+    border: none;
+    background-image: none;
+    box-shadow: none;
+}
 
 .header-bar .button:active,
 .header-bar .button:hover:active,
@@ -1808,14 +1811,16 @@ GtkInfoBar .button:hover:insensitive {
 .titlebar .titlebutton {
     icon-shadow: 0px 1px alpha (#000, 0.4);
     color: alpha (#fff, 0.50);
+
     background: none;
     padding: 3px;
 
     border-radius: 3px;
-    border-width: 1px 1px 2px 1px;
+    border-width: 1px;
     border-color: transparent;
     border-style: solid;
     border-image: none;
+    box-shadow: none;
 }
 
 .titlebar .titlebutton:backdrop {
