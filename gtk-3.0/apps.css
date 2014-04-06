@@ -119,16 +119,9 @@ ConversationListView.view.cell:selected {
 }
 
 .panel .menu .menuitem {
-    text-shadow: none;
-    icon-shadow: none;
     font-weight: normal;
 }
 
-.panel .menu .menuitem:active,
-.panel .menu .menuitem:hover {
-    text-shadow: 0 1px 1px alpha (#000, 0.25);
-    icon-shadow: 0 1px 1px alpha (#000, 0.25);
-}
 .panel-shadow {
     background-image: none;
     background-color: transparent;

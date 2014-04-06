@@ -1280,6 +1280,8 @@ GtkTreeMenu .menuitem {
 
 .menu .menuitem {
     padding: 4px 0 4px 0;
+    text-shadow: none;
+    icon-shadow: none
 }
 
 .menu .menuitem:active,
