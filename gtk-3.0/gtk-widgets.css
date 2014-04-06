@@ -1817,10 +1817,6 @@ GtkPaned .inline-toolbar.toolbar {
     border-color: shade (@selected_bg_color, 0.90);
 }
 
-.suggested-action.button:insensitive {
-    border-color: alpha (#000, 0.20);
-}
-
 .suggested-action.button GtkLabel,
 .suggested-action.button GtkLabel:prelight {
     color: @selected_fg_color;
@@ -1828,9 +1824,16 @@ GtkPaned .inline-toolbar.toolbar {
     icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
+.suggested-action.button:insensitive {
+    border-color: alpha (#000, 0.20);
+    background-image: none;
+    background-color: transparent;
+}
+
 .suggested-action.button GtkLabel:insensitive {
     text-shadow: 0 1px alpha (#fff, 0.3);
     icon-shadow: 0 1px alpha (#fff, 0.3);
+    color: @insensitive_color;
 }
 
 .suggested-action.button:active,
