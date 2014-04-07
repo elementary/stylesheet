@@ -1144,8 +1144,8 @@ GtkCheckButton:selected:focus {
 /***************
  * Header Bars *
  **************/
-.header-bar GtkLabel,
-.header-bar GtkImage {
+.header-bar > GtkLabel,
+.header-bar > GtkImage {
     color: shade (@text_color, 0.90);
 }
 
