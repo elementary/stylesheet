@@ -932,7 +932,7 @@ GtkTreeMenu .menuitem {
 .menu {
     padding: 0 1px 0 1px;
 
-    background-color:  #272b2f;
+    background-color: @base_color;
     background-image: none;
 
     border: 1px solid alpha (#000, 0.4);
