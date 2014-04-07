@@ -36,6 +36,10 @@
     -GtkWindow-decoration-button-layout: 'close:maximize'
     -GtkWindow-resize-grip-width: 0;
     -GtkWindow-resize-grip-height: 0;
+
+
+    -GtkButtonBox-child-min-height: 20;
+    -GtkButtonBox-child-internal-pad-y: 1;
 }
 
 /***************
