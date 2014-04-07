@@ -1322,7 +1322,7 @@ GtkPaned .inline-toolbar.toolbar {
 .sidebar .view,
 .source-list,
 .source-list.view {
-    background-color: #272b2f;
+    background-color: @titlebar_color;
     color: shade (@text_color, 0.90);
 }
 
@@ -1824,13 +1824,13 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .window-frame {
-    box-shadow: 0 0 0 1px alpha (#000, 0.8),
-                0 3px 7px alpha (#000, 0.86);
+    box-shadow: 0 0 0 1px alpha (#000, 0.75),
+                0 6px 20px -3px alpha (#000, 0.80);
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 0 0 1px alpha (#000, 0.8),
-                0 2px 5px alpha (#000, 0.58);
+    box-shadow: 0 0 0 1px alpha (#000, 0.75),
+                0 6px 10px -3px alpha (#000, 0.90);
 }
 
 /***************
