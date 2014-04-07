@@ -994,8 +994,8 @@ GtkComboBox.combobox-entry .button {
 }
 
 
-.dynamic-notebook GtkLabel:insensitive,
-.dynamic-notebook .image:insensitive {
+.dynamic-notebook > GtkLabel:insensitive,
+.dynamic-notebook > .image:insensitive {
    color: shade (@titlebar_color, 0.65);
 }
 
@@ -1021,7 +1021,7 @@ GtkComboBox.combobox-entry .button {
                                   ) 0 1 0 0;
 }
 
-.dynamic-notebook .notebook tab GtkImage {
+.dynamic-notebook .notebook tab > GtkImage {
     color: shade (@titlebar_color, 0.35);
 }
 
@@ -1085,12 +1085,12 @@ GtkComboBox.combobox-entry .button {
     padding: 2px 3px 0;
 }
 
-.dynamic-notebook .notebook tab .entry {
+.dynamic-notebook .notebook tab > .entry {
     border-radius: 2px;
     padding: 1px 5px;
 }
 
-.notebook tab .entry {
+.notebook tab > .entry {
     border-radius: 2px;
     padding: 2px 5px;
 }
@@ -1104,9 +1104,9 @@ GtkComboBox.combobox-entry .button {
         color: @text_color;
 }
 
-.dynamic-notebook .notebook tab .button,
-.dynamic-notebook .notebook tab .button:hover,
-.dynamic-notebook .notebook tab .button:hover:active,
+.dynamic-notebook .notebook tab > .button,
+.dynamic-notebook .notebook tab > .button:hover,
+.dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
     background-image:   none;
@@ -1115,8 +1115,8 @@ GtkComboBox.combobox-entry .button {
     border-color: alpha (#000, 0.29);
 }
 
-.dynamic-notebook .notebook tab .button:hover:active,
-.notebook tab .button:hover:active {
+.dynamic-notebook .notebook tab > .button:hover:active,
+.notebook tab > .button:hover:active {
     background-color:   alpha (#000, 0.10);
 }
 
