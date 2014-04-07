@@ -676,7 +676,7 @@ GraniteWidgetsStaticNotebook .frame {
 .button.menuitem.menubar,
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
-    padding: 3px;
+    padding: 3px 6px;
 }
 
 .button {
@@ -894,6 +894,7 @@ GtkComboBox.combobox-entry .button {
 .linked .button:insensitive {
     border-right-width: 0;
     border-radius: 0;
+    padding: 3px;
 }
 
 /* Leftmost button */
