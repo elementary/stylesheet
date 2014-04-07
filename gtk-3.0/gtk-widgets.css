@@ -48,7 +48,7 @@
 
 .background {
     color: @text_color;
-   background-color: @bg_color;
+    background-color: @bg_color;
 }
 
 *:selected,
@@ -1309,10 +1309,7 @@ GtkTreeMenu .menuitem {
 
     text-shadow: 0 1px 1px alpha (#000, 0.25);
     icon-shadow: 0 1px 1px alpha (#000, 0.25);
-}
 
-.menu .menuitem:active,
-.menu .menuitem:hover {
     color: @selected_fg_color;
 }
 

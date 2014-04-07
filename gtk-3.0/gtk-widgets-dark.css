@@ -1,5 +1,4 @@
-
-/* Copyright 2011-2013 elementary LLC.
+/* Copyright 2011-2014 elementary LLC.
 *
 * This file is part of the elementary GTK theme.
 *
@@ -974,10 +973,7 @@ GtkTreeMenu .menuitem {
 
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
                 inset 0 -1px 0 0 alpha (#fff, 0.06);
-}
 
-.menu .menuitem:active,
-.menu .menuitem:hover {
     color: @selected_fg_color;
 }
 
