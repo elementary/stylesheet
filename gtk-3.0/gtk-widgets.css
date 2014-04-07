@@ -756,15 +756,6 @@ GtkComboBox.combobox-entry .button {
                 0 1px 0 1px alpha (#fff, 0.30);
 }
 
-.toolbar .button:active,
-.toolbar .button:hover:active,
-.toolbar .button:focus:active {
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.10),
-                                  alpha (#fff, 0.10)
-                                  );
-}
-
 .button:active:insensitive {
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.85),
