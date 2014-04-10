@@ -1553,8 +1553,8 @@ GtkCheckButton:selected:focus {
 }
 
 .header-bar .button.image-button {
-    padding: 1px;
-    border: none;
+    padding: 3px 6px;
+    border: 1px solid transparent;
     background-image: none;
     box-shadow: none;
 }
@@ -1562,12 +1562,9 @@ GtkCheckButton:selected:focus {
 .header-bar .button.image-button:active,
 .header-bar .button.image-button:hover:active,
 .header-bar .button.image-button:focus:active {
-    padding: 0;
     background-color: alpha (#000, 0.10);    
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
-                
     border: 1px solid alpha (#000, 0.22);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
 }
 
 .header-bar .separator {
