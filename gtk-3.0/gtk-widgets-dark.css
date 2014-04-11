@@ -1779,6 +1779,9 @@ GtkInfoBar .button:hover:insensitive {
                                   shade (@titlebar_color, 0.8)
                                   );
 
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.08);
+
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
 }
