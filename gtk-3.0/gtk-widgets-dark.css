@@ -1833,6 +1833,13 @@ GtkMessageDialog .titlebar {
                 inset 0 1px 0 0 alpha (#fff, 0.15);
 }
 
+GtkDialog .titlebar:backdrop,
+GtkMessageDialog .titlebar:backdrop {
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),
+                inset -1px 0 0 0 alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.15);
+} 
+
 GtkDialog,
 GtkMessageDialog {
     box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),
