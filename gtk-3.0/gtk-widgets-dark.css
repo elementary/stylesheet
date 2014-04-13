@@ -1783,23 +1783,9 @@ GtkInfoBar .button:hover:insensitive {
     icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
-.titlebar .title {
-    font: Bold 9;
-}
-
 .titlebar .titlebutton {
     icon-shadow: 0px 1px alpha (#000, 0.4);
     color: alpha (#fff, 0.50);
-
-    background: none;
-    padding: 3px;
-
-    border-radius: 3px;
-    border-width: 1px;
-    border-color: transparent;
-    border-style: solid;
-    border-image: none;
-    box-shadow: none;
 }
 
 .titlebar .titlebutton:backdrop {
