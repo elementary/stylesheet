@@ -1153,14 +1153,6 @@ GtkCheckButton:selected:focus {
                                   shade (@titlebar_color, 1),
                                   shade (@titlebar_color, 0.84)
                                   );
-
-    border-color: shade (#000, 1.08);
-    border-radius: 3px 3px 0 0;
-    border-style: solid;
-    border-width: 0 0 1px;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.08);
 }
 
 .header-bar:backdrop {
