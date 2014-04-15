@@ -1966,17 +1966,24 @@ EggListBox {
 ************************/
 
 .sidebar,
-.sidebar.view,
+.sidebar .view,
+.sidebar GtkScrolledWindow,
 .source-list,
 .source-list.view {
     background-color: @titlebar_color;
     color: shade (@titlebar_color, 0.50);
 }
 
+GtkDialog .sidebar,
+GtkDialog .sidebar .view,
+GtkDialog .sidebar GtkScrolledWindow {
+    background-color: shade (@titlebar_color, 1.07);
+}
+
 .sidebar,
-.sidebar.view,
-.sidebar.view:selected:backdrop,
-.sidebar.view:prelight:selected:backdrop,
+.sidebar .view,
+.sidebar .view:selected:backdrop,
+.sidebar .view:prelight:selected:backdrop,
 .source-list,
 .source-list.view,
 .source-list.view:selected:backdrop,
@@ -1995,13 +2002,13 @@ EggListBox {
     color: transparent;
 }
 
-.sidebar.view:prelight,
+.sidebar .view:prelight,
 .source-list.view:prelight {
     background-color: shade (@titlebar_color, 1.10);
 }
 
-.sidebar.view:selected,
-.sidebar.view:prelight:selected,
+.sidebar .view:selected,
+.sidebar .view:prelight:selected,
 .source-list.view:selected,
 .source-list.view:prelight:selected,
 .source-list.view:selected:focus,
@@ -2026,8 +2033,22 @@ EggListBox {
                 inset 0 -1px 0 0 alpha (#000, 0.10);
 }
 
-.sidebar.view:selected:backdrop,
-.sidebar.view:prelight:selected:backdrop,
+GtkDialog .sidebar .view:selected,
+GtkDialog .sidebar .view:prelight:selected {
+    background-image: none;
+    background-color: alpha (#000, 0.05);
+
+    border-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.15),
+                                  alpha (#fff, 0.30)
+                                  ) 1 1 1 1;
+
+    box-shadow: inset 0 1px 0 0 alpha (#000, 0.02),
+                inset 0 -1px 0 0 alpha (#000, 0.10);
+}
+
+.sidebar .view:selected:backdrop,
+.sidebar .view:prelight:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:prelight:selected:backdrop {
     background-image: linear-gradient(to bottom,
@@ -2037,6 +2058,17 @@ EggListBox {
 
     border-image: linear-gradient(to bottom,
                                   alpha (#000, 0.19),
+                                  alpha (#fff, 0.25)
+                                  ) 1 1 1 1;
+}
+
+GtkDialog .sidebar .view:selected:backdrop,
+GtkDialog .sidebar .view:prelight:selected:backdrop {
+    background-color: alpha (#000, 0.05);
+    background-image: none;
+
+    border-image: linear-gradient(to bottom,
+                                  alpha (#000, 0.15),
                                   alpha (#fff, 0.25)
                                   ) 1 1 1 1;
 }
