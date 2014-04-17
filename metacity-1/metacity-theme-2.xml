@@ -5,16 +5,15 @@
     <author>Daniel Fore</author>
     <copyright>elementary LLC.</copyright>
     <date>2009-2014</date>
-    <description>elementary theme for LibMutter-based WM's</description>
+    <description>elementary theme for metacity-based WM's</description>
 </info>
 
 <!-- :: CONSTANTS :: -->
 
 <constant name="C_border_focused" value="shade/gtk:bg[NORMAL]/0.5" />
-<constant name="C_highlight_color" value="shade/gtk:bg[NORMAL]/1.4" />
+<constant name="C_highlight_color" value="#FFF" />
 <constant name="C_text_color" value="gtk:fg[NORMAL]" />
 <constant name="C_title_color" value="gtk:fg[NORMAL]" />
-<constant name="C_title_shadow_color" value="gtk:bg[NORMAL]" />
 
 <!-- :: GEOMETRIES :: -->
 
@@ -118,45 +117,43 @@
 <!-- ::: TITLES ::: -->
 
 <draw_ops name="title_focused">
-	<title color="C_title_shadow_color" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="C_title_color" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <draw_ops name="title_unfocused">
-	<title color="C_title_shadow_color" x="((width - title_width) / 2) `max` 0" y="1 `max` ((height-title_height)/2)+1"/>
 	<title color="C_title_color" x="((width - title_width) / 2) `max` 0" y="0 `max` ((height-title_height)/2)"/>
 </draw_ops>
 
 <!-- ::: TITLEBAR ::: -->
 
 <draw_ops name="entire_background_focused">
-	<rectangle color="shade/gtk:bg[NORMAL]/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:base[NORMAL]/0.96" x="1" y="5" width="width-2" height="height-6" filled="true" />
 
 </draw_ops> 
 
 <draw_ops name="entire_background_unfocused">
-	<rectangle color="shade/gtk:bg[NORMAL]/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:base[NORMAL]/0.96" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="dialog_background_focused">
-	<rectangle color="shade/gtk:bg[NORMAL]/1" x="1" y="5" width="width-2" height="height-6" filled="true" />
+	<rectangle color="shade/gtk:base[NORMAL]/0.96" x="1" y="5" width="width-2" height="height-6" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
 	<gradient type="vertical" x="0" y="0" width="width" height="top_height">
-		<color value="shade/gtk:bg[NORMAL]/1"/>
-		<color value="shade/gtk:bg[NORMAL]/1"/>
+		<color value="shade/gtk:base[NORMAL]/0.98"/>
+		<color value="shade/gtk:base[NORMAL]/0.96"/>
 	</gradient>
 </draw_ops>
 
 <draw_ops name="dialog_titlebar_fill_focused">
-	<rectangle color="shade/gtk:bg[NORMAL]/1" x="1" y="1" width="width-2" height="height-2" filled="true" />
+	<rectangle color="shade/gtk:base[NORMAL]/0.96" x="1" y="1" width="width-2" height="height-2" filled="true" />
 </draw_ops>
 
 <draw_ops name="titlebar_fill_unfocused">
 	<gradient type="vertical" x="1" y="1" width="width-2" height="height-2">
-			<color value="shade/gtk:bg[NORMAL]/1"/>
-		<color value="shade/gtk:bg[NORMAL]/1"/>
+			<color value="shade/gtk:base[NORMAL]/0.96"/>
+		<color value="shade/gtk:base[NORMAL]/0.96"/>
 	</gradient>
 </draw_ops>
 
