@@ -90,7 +90,9 @@ GtkGrid:insensitive {
 /* FIXME: find out class name for granite overlay
            or have it changed to .tooltip in granite */
 .tooltip,
-.files-overlay-bar {
+.overlay-bar, 
+.files-overlay-bar,
+.granite-overlay-bar {
     background-color: alpha (black, 0.7);
     border-radius: 3px;
     border-width: 0;
@@ -100,7 +102,9 @@ GtkGrid:insensitive {
 }
 
 .tooltip GtkLabel,
-.files-overlay-bar GtkLabel {
+.overlay-bar GtkLabel, 
+.files-overlay-bar GtkLabel,
+.granite-overlay-bar GtkLabel {
     color: white;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
