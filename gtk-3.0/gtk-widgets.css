@@ -710,12 +710,8 @@ GtkComboBox.combobox-entry .button {
     border: 1px solid alpha (#000, 0.2);
 }
 
+.header-bar .button,
 .toolbar .button {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.15),
-                                  shade (@titlebar_color, 0.98)
-                                  );
-    border-color: alpha (#000, 0.28);
     padding: 3px;
 }
 
