@@ -1553,18 +1553,13 @@ GtkCheckButton:selected:focus {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
 }
 
-.header-bar .title,
 .header-bar .button.image-button GtkImage {
     color: @title_color;
-    font: Bold 9;
-    text-shadow: 0 1px @title_shadow_color;
     icon-shadow: 0 1px @title_shadow_color;
 }
 
-.header-bar .title:backdrop,
 .header-bar .button.image-button GtkImage:backdrop {
     color: shade (@titlebar_color, 0.80);
-    text-shadow: none;
     icon-shadow: none;
 }
 
@@ -2340,6 +2335,14 @@ GtkModelButton.button:selected {
     padding: 0 3px;
 }
 
+.titlebar:backdrop {
+    background-image: linear-gradient(to bottom,
+                              @titlebar_color,
+                              shade (@titlebar_color, 0.90)
+                              );
+    border-color: shade (@titlebar_color, 0.64);
+}
+
 .header-bar {
     padding: 10px 6px 8px;
 }
@@ -2354,7 +2357,15 @@ GtkModelButton.button:selected {
 }
 
 .titlebar .title {
+    color: @title_color;
     font: Bold 9;
+    text-shadow: 0 1px @title_shadow_color;
+    icon-shadow: 0 1px @title_shadow_color;
+}
+
+.titlebar .title:backdrop {
+    color: shade (@title_color, 0.80);
+    text-shadow: none;
 }
 
 

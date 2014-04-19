@@ -1781,7 +1781,8 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .titlebar .titlebutton:backdrop {
-    color: alpha (#000, 0.30);
+    icon-shadow: 0px 1px alpha (#000, 0.2);
+    color: alpha (#fff, 0.30);
 }
 
 .window-frame {
