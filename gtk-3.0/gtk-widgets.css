@@ -1580,7 +1580,7 @@ GtkCheckButton:selected:focus {
  ***************/
 
 .action-bar {
-    padding: 6px 12px;
+    padding: 1px 6px;
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
