@@ -275,12 +275,11 @@ GtkGrid:insensitive {
                                   shade (@selected_bg_color, 1.23),
                                   shade (@selected_bg_color, 1.37)
                                   );
-    background-size: auto;
 
-    border-color: @selected_bg_color;
-    
-    border-bottom-right-radius: 0;
+    border: 1px solid @selected_bg_color;
+
     border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .entry:insensitive {
