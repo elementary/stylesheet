@@ -1893,11 +1893,13 @@ column-header .button,
 }
 
 column-header:nth-child(first) .button,
+column-header:nth-child(first) .button:backdrop,
 .content-view column-header:nth-child(first) .button {
     border-width: 0 0 1px 0;
 }
 
-column-header .button {
+column-header .button,
+column-header .button:backdrop {
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.88),
                                   @base_color
@@ -1912,10 +1914,22 @@ column-header .button {
     padding: 4px 2px 4px 2px;
 }
 
+column-header .button:backdrop {
+    background-image: none;
+    background-color: @bg_color;
+}
+
 column-header .button:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.80),
                                   @base_color
+                                  );
+}
+
+column-header .button:hover:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.92),
+                                  @bg_color
                                   );
 }
 
