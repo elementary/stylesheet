@@ -1297,7 +1297,7 @@ GtkTreeMenu .menuitem {
 
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage  {
-    padding: 0 6px;
+    padding: 0 3px 0 3px;
 }
 
 .menu .menuitem:active,
@@ -1342,7 +1342,6 @@ GtkModelMenuItem GtkBox GtkImage {
 
 .menuitem.separator {
     color: @menu_separator;
-
     -GtkMenuItem-horizontal-padding: 0;
 }
 
