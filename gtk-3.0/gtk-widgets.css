@@ -2085,6 +2085,8 @@ GtkDialog .sidebar GtkScrolledWindow {
 
 .sidebar .view:selected,
 .sidebar .view:prelight:selected,
+.sidebar.view:selected,
+.sidebar.view:prelight:selected,
 .source-list.view:selected,
 .source-list.view:prelight:selected,
 .source-list.view:selected:focus,
