@@ -913,6 +913,8 @@ GtkOverlay .button:focus:active {
 .linked .entry,
 .linked .button,
 .linked .button:active,
+.linked .button:focus,
+.linked .button:hover,
 .linked .button:active:hover,
 .linked .button:insensitive {
     border-right-width: 0;
