@@ -88,10 +88,6 @@
 
     icon-shadow: 0 1px alpha (#000, 0.4);
     text-shadow: 0 1px alpha (#000, 0.4);
-
-    padding: 4px;
-
-    transition: all 200ms ease-out;
 }
 
 
@@ -287,9 +283,6 @@ GtkProgressBar.trough {
 .trough row:hover,
 .trough row:selected:backdrop,
 .trough row:selected:backdrop:hover  {
-
-    padding: 0;
-
     border-style: solid;
     border-width: 1px;
 
@@ -582,8 +575,6 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
         inset 0 1px 0 0 alpha (#000, 0.25),
         inset 0 -1px 0 0 alpha (#fff, 0.4);
-        
-    padding: 0 3px 0 3px;
 }
 
 /*****************
@@ -592,9 +583,6 @@ GtkProgressBar.trough {
 
 .spinbutton .button {
     color: @internal_element_color;
-    padding: 2px 6px;
-    border-width: 0;
-    border-radius: 0;
     border-style: none;
     border-image: none;
     box-shadow: inset 1px 0 alpha (#000, 0.10);
@@ -611,12 +599,7 @@ GtkProgressBar.trough {
 }
 
 .spinbutton .button:first-child {
-    border-radius: 2px 0 0 2px;
     box-shadow: none;
-}
-
-.spinbutton .button:last-child {
-    border-radius: 0 2px 2px 0;
 }
 
 .spinbutton .button:dir(rtl) {
@@ -665,21 +648,9 @@ GtkProgressBar.trough {
    color: shade (@text_color, 0.65);
 }
 
-.dynamic-notebook .notebook {
-    border-width: 0;
-
-    -GtkNotebook-tab-overlap: 1px;
-}
-
 .dynamic-notebook .notebook tab {
-    padding: 3px;
-
-    border-radius: 0;
-
     background-image: none;
     background-color: transparent;
-
-    border-width: 0 1px 0 0;
 
     border-image: linear-gradient(to bottom,
                                   transparent,
@@ -695,7 +666,6 @@ GtkProgressBar.trough {
 }
 
 .dynamic-notebook .notebook tab:nth-child(first) {
-    border-width: 0 1px 0 1px;
     border-image: linear-gradient(to bottom,
                                   transparent,
                                   alpha (#000, 0.20)
@@ -710,7 +680,6 @@ GtkProgressBar.trough {
 
     border-image: none;
     border: 1px solid alpha (#000, 0.30);
-    border-radius: 4px;
 
      color: shade (@text_color, 0.90);
 
@@ -723,16 +692,6 @@ GtkProgressBar.trough {
 .notebook {
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
-}
-
-.dynamic-notebook .notebook tab .entry {
-    border-radius: 2px;
-    padding: 1px 5px;
-}
-
-.notebook tab .entry {
-    border-radius: 2px;
-    padding: 2px 5px;
 }
 
 .notebook tab:active {
@@ -829,14 +788,8 @@ GtkComboBox.combobox-entry .button:last-child {
 * Menus *
 ********/
 
-GtkTreeMenu .menuitem {
-    padding: 2px;
-}
-
 .content-view .menu,
 .menu {
-    padding: 0 1px 0 1px;
-
     background-color: @base_color;
     background-image: none;
 
@@ -854,14 +807,6 @@ GtkTreeMenu .menuitem {
     -GtkWidget-window-dragging: true;
 }
 
-.menubar .menuitem {
-    padding: 3px 6px;
-}
-
-.menu .menuitem {
-    padding: 4px 0 4px 0;
-}
-
 .menu .menuitem:active,
 .menu .menuitem:hover {
     background-image: linear-gradient(to bottom,
@@ -870,7 +815,6 @@ GtkTreeMenu .menuitem {
                                   );
 
     border-style: solid;
-    border-width: 1px 0 1px 0;
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.18),
                                   shade (@selected_bg_color, 0.88)
@@ -895,14 +839,8 @@ GtkTreeMenu .menuitem {
     color: alpha (@fg_color, 0.3);
 }
 
-GtkModelMenuItem GtkBox GtkImage {
-    padding-right: 6px;
-}
-
 .menuitem.separator {
     color: @menu_separator;
-
-    -GtkMenuItem-horizontal-padding: 0;
 }
 
 .menuitem.check,
@@ -986,7 +924,6 @@ GtkCheckButton:selected:focus {
 *********************/
 
 .secondary-toolbar.toolbar {
-    padding: 2px;
     color: shade (@text_color, 0.90);   
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.84),
@@ -1015,10 +952,7 @@ GtkCheckButton:selected:focus {
 ******************/
 
 .bottom-toolbar.toolbar {
-    padding: 8px;
-
     border: 1px solid shade (@titlebar_color, 0.66);
-    border-width: 1px 0 0 0;
 
     background-image: linear-gradient(to bottom,
                                   @titlebar_color,
@@ -1027,10 +961,6 @@ GtkCheckButton:selected:focus {
 
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.12),
                 inset 0 -1px 0 0 alpha (#fff, 0.05);
-}
-
-.bottom-toolbar.toolbar .button {
-    padding: 2px 3px 2px 3px;
 }
 
 /***************
@@ -1069,7 +999,6 @@ GtkCheckButton:selected:focus {
 .header-bar .button.image-button:active,
 .header-bar .button.image-button:hover:active,
 .header-bar .button.image-button:focus:active {
-    padding: 0;
     background-color: alpha (#000, 0.10);    
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
@@ -1129,12 +1058,6 @@ GtkCheckButton:selected:focus {
 ******************/
 
 .inline-toolbar.toolbar {
-    -GtkToolbar-button-relief: normal;
-
-    border-radius: 0;
-    border-width: 0 1px 1px 1px;
-    padding: 0;
-
     border-image: none;
     border-color: shade (@titlebar_color, 0.70);
 
@@ -1148,7 +1071,6 @@ GtkCheckButton:selected:focus {
 }
 
 GtkPaned .inline-toolbar.toolbar {
-    border-width: 1px 0 0 0;
     /*FIXME: This should probably use alpha just in case */
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.92),
@@ -1157,9 +1079,6 @@ GtkPaned .inline-toolbar.toolbar {
 }
 
 .inline-toolbar.toolbar .button {
-    border-radius: 0;
-    border-width: 0 0 0 1px;
-    padding: 1px 2px 1px 2px;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
@@ -1174,17 +1093,6 @@ GtkPaned .inline-toolbar.toolbar {
     background-image: none;
 
     border-color: shade (@base_color, 0.74);
-}
-
-.inline-toolbar.toolbar GtkToolButton:first-child .button,
-.inline-toolbar.toolbar .button:first-child {
-    border-width: 0;
-}
-
-.inline-toolbar.toolbar GtkToolButton:last-child .button,
-.inline-toolbar.toolbar .button:last-child {
-    border-width: 0 1px 0 1px;
-    border-radius: 0 2px 2px 0;
 }
 
 .inline-toolbar.toolbar .button *:insensitive,
@@ -1247,7 +1155,6 @@ GtkPaned .inline-toolbar.toolbar {
 
     color: shade (@text_color, 0.90);
     border-style: solid;
-    border-width: 1px 0 1px 0;
 
     background-color: transparent;
     background-image: linear-gradient(to bottom,
@@ -1283,9 +1190,6 @@ GtkPaned .inline-toolbar.toolbar {
 .sidebar-pane-separator,
 .sidebar-pane-separator:prelight,
 .sidebar-pane-separator:selected {
-
-    border-width: 0;
-    -GtkPaned-handle-size: 1;
     background-image: none;
     background-color: shade (@titlebar_color, 0.75);
 }
@@ -1297,12 +1201,8 @@ GtkPaned .inline-toolbar.toolbar {
     background-image: none;
     background-color: alpha (#fff, 0.4);
     color: @titlebar_color;
-    border-radius: 10px;
-    padding: 0 6px;
-    margin: 0 3px;
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
-    border-width: 0;
 }
 
 .source-list.badge:selected,
@@ -1374,20 +1274,13 @@ GtkAssistant .sidebar {
     background-color: shade (@bg_color, 0.97);
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
-    border-width: 1px 1px 0 0;
     color: mix (@fg_color, @bg_color, 0.40);
-    padding: 12px;
     text-shadow: 0 1px shade (@bg_color, 1.04);
 }
 
 /*************
  * GtkSwitch *
  *************/
-
-GtkSwitch {
-    font: 1;
-    -GtkSwitch-slider-width: 38;
-}
 
 GtkSwitch.trough {
     background-image: url("assets/switch-off.svg");
@@ -1481,24 +1374,9 @@ GtkIconView.view.cell:selected:focus {
     color: @selected_fg_color;
 }
 
-.cell {
-    border-width: 0px;
-}
-
 /**********************
  * Column Headers *
  *********************/
-
-column-header .button,
-.content-view column-header .button {
-    border-radius: 0;
-}
-
-column-header:nth-child(first) .button,
-.content-view column-header:nth-child(first) .button {
-    border-width: 0 0 1px 0;
-}
-
 column-header .button {
     background-image: linear-gradient(to bottom,
                                   shade ( @titlebar_color, 0.88),
@@ -1509,9 +1387,7 @@ column-header .button {
                                   shade ( @titlebar_color, 0.88),
                                   shade ( @titlebar_color, 0.70)
                                   ) 0 0 1 1;
-    border-width: 0 0 1px 1px;
     font: bold;
-    padding: 4px 2px 4px 2px;
 }
 
 column-header .button:hover {
@@ -1568,7 +1444,6 @@ EggListBox {
 .warning,
 .error {
     border-style: solid;
-    border-width: 0 0 1px 0;
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
                 inset 0 -1px 0 0 alpha (#fff, 0.06);
 }
