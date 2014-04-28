@@ -767,10 +767,10 @@ GtkComboBox.combobox-entry .button {
 * Overlay Button *
 ***************************/
 
-GtkOverlay .button,
-GtkOverlay .button:hover,
-GtkOverlay .button:backdrop,
-GtkOverlay .button:focus {
+GtkOverlay > .button,
+GtkOverlay > .button:hover,
+GtkOverlay > .button:backdrop,
+GtkOverlay > .button:focus {
     background-image: none;
     background-color: transparent;
     border: 2px solid #fff;
@@ -782,20 +782,20 @@ GtkOverlay .button:focus {
     background-clip: border-box;
 }
 
-GtkOverlay .button:active,
-GtkOverlay .button:hover:active {
+GtkOverlay > .button:active,
+GtkOverlay > .button:hover:active {
     background-color: #fff;
     color: @text_color;
     border-color: #fff;
     text-shadow: none;
 }
 
-GtkOverlay .button:focus,
-GtkOverlay .button:focus:active {
+GtkOverlay > .button:focus,
+GtkOverlay > .button:focus:active {
     border-color: @selected_bg_color;
 }
 
-GtkOverlay .button:focus:active {
+GtkOverlay > .button:focus:active {
     background-color: @selected_bg_color;
 }
 
