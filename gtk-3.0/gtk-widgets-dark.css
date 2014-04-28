@@ -483,7 +483,6 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 1px 1px alpha (#fff, 0.05);
                 
     border: 1px solid alpha (#000, 0.22);
-    padding: 3px;
 }
 
 .button:hover {
@@ -530,7 +529,6 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.10);
                 
     border: 1px solid alpha (#000, 0.37);
-    padding: 2px 3px;
 
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
@@ -548,7 +546,6 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
     border: 1px solid alpha (#000, 0.22);
-    padding: 3px;
 }
 
 .button:active:insensitive {
@@ -567,12 +564,7 @@ GtkProgressBar.trough {
 * Secondary Toolbar Button *
 ***************************/
 
-.secondary-toolbar.toolbar .button {
-    padding: 0 3px 0 3px;
-}
-
 .secondary-toolbar.toolbar .button:hover {
-    padding: 0 3px 0 3px;
 
     color: shade (@selected_bg_color, 0.65);
 
@@ -662,92 +654,6 @@ GtkProgressBar.trough {
                 inset 1px 1px alpha(@selected_bg_color, 0.1),
                 inset -1px -1px alpha(@selected_bg_color, 0.2);
 
-}
-
-/* Middle button */
-.linked .entry,
-.linked .button,
-.linked .button:active,
-.linked .button:active:hover,
-.linked .button:insensitive {
-    border-right-width: 0;
-    border-radius: 0;
-}
-
-/* Leftmost button */
-.linked .entry:first-child,
-.linked .button:first-child,
-.linked .button:active:first-child,
-.linked .button:active:hover:first-child,
-.linked .button:insensitive:first-child {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 2.5px;
-    border-top-left-radius: 2.5px;
-}
-
-/* Rightmost button */
-.linked .entry:last-child,
-.linked .button:last-child,
-.linked .button:active:last-child,
-.linked .button:active:hover:last-child,
-.linked .button:insensitive:last-child {
-    border-right-width: 1px;
-    border-bottom-right-radius: 2.5px;
-    border-top-right-radius: 2.5px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-/* Linked single button */
-.linked .entry:only-child,
-.linked .button:only-child,
-.linked .button:active:only-child,
-.linked .button:active:hover:only-child,
-.linked .button:insensitive:only-child {
-    border-right-width: 1px;
-    border-left-width: 1px;
-    border-radius: 2.5px;
-}
-
-/* Middle button (vertical) */
-.linked.vertical .entry,
-.linked.vertical .button,
-.linked.vertical .button:active,
-.linked.vertical .button:active:hover,
-.linked.vertical .button:insensitive {
-    border-bottom-width: 0;
-    border-radius: 0;
-}
-
-/* Top button (vertical) */
-.linked.vertical .entry:first-child,
-.linked.vertical .button:first-child,
-.linked.vertical .button:active:first-child,
-.linked.vertical .button:active:hover:first-child,
-.linked.vertical .button:insensitive:first-child {
-    border-radius: 2.5px 2.5px 0 0;
-}
-
-/* Bottom button (vertical) */
-.linked.vertical .entry:last-child,
-.linked.vertical .button:last-child,
-.linked.vertical .button:active:last-child,
-.linked.vertical .button:active:hover:last-child,
-.linked.vertical .button:insensitive:last-child {
-    border-bottom-width: 1px;
-    border-radius: 0 0 2.5px 2.5px;
-}
-
-/* Linked single button (vertical) */
-.linked.vertical .entry:only-child,
-.linked.vertical .button:only-child,
-.linked.vertical .button:active:only-child,
-.linked.vertical .button:active:hover:only-child,
-.linked.vertical .button:insensitive:only-child {
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-    border-radius: 2.5px;
 }
 
 /********************
@@ -1063,20 +969,7 @@ GtkCheckButton:selected:focus {
 ***********/
 
 .toolbar {
-    -GtkWidget-window-dragging: true;
-    
-    padding: 0 3px 3px;
-
-    border: 1px solid shade (@titlebar_color, 0.56);
-    border-width: 0 0 1px 0;
-
-    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.1);
-
-    background-image: linear-gradient(to bottom,
-                                  @titlebar_color,
-                                  @titlebar_color,
-                                  shade (@titlebar_color, 0.86)
-                                  );
+    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.10);
 
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
@@ -1213,6 +1106,22 @@ GtkCheckButton:selected:focus {
     color: shade (@text_color, 0.75);
     text-shadow: none;
     icon-shadow: none;
+}
+
+/***************
+ * Action bars *
+ ***************/
+
+.action-bar {
+    text-shadow: 0 1px alpha (#000, 0.4);
+    icon-shadow: 0 1px alpha (#000, 0.4);
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.08);
+}
+
+.action-bar GtkLabel {
+    color: @text_color;
 }
 
 /******************
