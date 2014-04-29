@@ -43,23 +43,18 @@
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
-    border: 1px solid shade (@base_color, 0.55);
-    border-width: 0 1px;
+    border-color: shade (@base_color, 0.55);
 
     background-image: url("assets/pane-handle.svg"),
                         linear-gradient(to right,
                                   @base_color,
                                   shade (@base_color, 0.88)
                                   );
-    background-position: 50%;
-    background-repeat: no-repeat;
 }
 
 .pane-separator.vertical,
 .pane-separator.vertical:prelight,
 .pane-separator.vertical:selected {
-    border-width: 1px 0;
-
     background-image: url("assets/pane-handle.svg"),
                         linear-gradient(to bottom,
                                   @base_color,
@@ -77,8 +72,7 @@
                                   shade (@titlebar_color, 0.97)
                                   );
 
-    border: 1px solid alpha (#000, 0.22);
-    border-radius: 2.5px;
+    border-color: alpha (#000, 0.22);
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
@@ -118,8 +112,7 @@
                                   shade (@titlebar_color, 0.94)
                                   );
 
-    border: 1px solid alpha (#000, 0.47);
-    border-radius: 2.5px;
+    border-color: alpha (#000, 0.47);
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
@@ -145,12 +138,7 @@
                                   shade (@selected_bg_color, 1.23),
                                   shade (@selected_bg_color, 1.37)
                                   );
-    background-size: auto;
-
     border-color: @selected_bg_color;
-    
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
 }
 
 .entry:insensitive {
@@ -190,7 +178,7 @@ GtkProgressBar.progressbar {
 }
 
 GtkProgressBar.trough {
-    border: 1px solid alpha (#000, 0.35);
+    border-color: alpha (#000, 0.35);
 
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.15),
@@ -232,7 +220,6 @@ GtkProgressBar.trough {
     background-size: 24px 24px, auto;
 
     border-style: solid;
-    border-width: 1px;
 
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.05),
@@ -283,9 +270,6 @@ GtkProgressBar.trough {
 .trough row:hover,
 .trough row:selected:backdrop,
 .trough row:selected:backdrop:hover  {
-    border-style: solid;
-    border-width: 1px;
-
     background-image: linear-gradient(to bottom,
                                   shade (@progress_row_trough_color, 1.10),
                                   shade (@progress_row_trough_color, 1.05) 50%,
@@ -319,15 +303,8 @@ GtkProgressBar.trough {
 * Scale *
 ********/
 
-.scale {
-    -GtkScale-slider-length: 16;
-    -GtkRange-slider-width: 16;
-    -GtkRange-trough-border: 0;
-}
-
 .scale.slider {
-    border: 1px solid alpha (#000, 0.25);
-    border-radius: 10px;
+    border-color: alpha (#000, 0.25);
     
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 1.10),
@@ -341,7 +318,7 @@ GtkProgressBar.trough {
 }
 
 .scale.slider:focus {
-    border: 1px solid alpha (@selected_bg_color, 0.9);
+    border-color: alpha (@selected_bg_color, 0.9);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
                 inset 0 1px 0 0 alpha (#fff, 0.90),
@@ -371,10 +348,7 @@ GtkProgressBar.trough {
 }
 
 .scale.trough {
-    margin: 6px 0 5px 0;
-
-    border: 1px solid alpha (#000, 0.35);
-    border-radius: 12px;
+    border-color: alpha (#000, 0.35);
 
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.15),
@@ -385,21 +359,12 @@ GtkProgressBar.trough {
                 0 1px 0 1px alpha (#fff, 0.1);
 }
 
-.header-bar .scale.trough {
-    border-radius: 0 12px 12px 0;
-    border-width: 1px 1px 1px 0;
-}
-
 .scale.trough:insensitive {
     background-color: shade (@theme_bg_color, 1.25);
     border-color: alpha (#000, 0.35);
-    border-radius: 0 12px 12px 0;
-    border-width: 1px 1px 1px 0;
 }
 
 .scale.trough.vertical {
-    margin: 0 8px;
-
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.15),
                                   alpha (#000, 0.07)
@@ -418,8 +383,7 @@ GtkProgressBar.trough {
 }
 
 .scale.highlight.left {
-    border: 1px solid alpha (#000, 0.50);
-    border-radius: 12px 0 0 12px;
+    border-color: alpha (#000, 0.50);
 
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.40),
@@ -431,7 +395,7 @@ GtkProgressBar.trough {
 }
 
 .scale.highlight.left:insensitive {
-    border: 1px solid alpha (#000, 0.40);
+    border-color: alpha (#000, 0.40);
     
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.30),
@@ -453,7 +417,7 @@ GtkProgressBar.trough {
                                   shade (@titlebar_color, 0.8)
                                   );
                                   
-    border: 1px solid shade (@titlebar_color, 0.5);
+    border-color: shade (@titlebar_color, 0.5);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
                 inset 0 1px 0 0 alpha (#fff, 0.07),
@@ -475,7 +439,7 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 1px 1px alpha (#fff, 0.05);
                 
-    border: 1px solid alpha (#000, 0.22);
+    border-color: alpha (#000, 0.22);
 }
 
 .button:hover {
@@ -505,7 +469,7 @@ GtkProgressBar.trough {
                 inset 0 -1px 0 0 alpha (#fff, 0.01),
                 0 1px 0 1px alpha (#fff, 0.05);
 
-    border: 1px solid shade (@titlebar_color, 0.5);
+    border-color: shade (@titlebar_color, 0.5);
 
     text-shadow: 0 1px 2px shade (@selected_bg_color, 0.4);
 }
@@ -521,7 +485,7 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.10);
                 
-    border: 1px solid alpha (#000, 0.37);
+    border-color: alpha (#000, 0.37);
 
     text-shadow: 0 1px alpha (#000, 0.4);
     icon-shadow: 0 1px alpha (#000, 0.4);
@@ -538,7 +502,7 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
-    border: 1px solid alpha (#000, 0.22);
+    border-color: alpha (#000, 0.22);
 }
 
 .button:active:insensitive {
@@ -679,7 +643,7 @@ GtkProgressBar.trough {
                                   );
 
     border-image: none;
-    border: 1px solid alpha (#000, 0.30);
+    border-color: alpha (#000, 0.30);
 
      color: shade (@text_color, 0.90);
 
@@ -735,18 +699,6 @@ GtkComboBox .separator {
     -GtkWidget-vertical-separator: 0;
 }
 
-GtkComboBox.combobox-entry .entry:first-child,
-GtkComboBox.combobox-entry .button:first-child {
-    border-radius: 2.5px 0 0 2.5px;
-    border-right-width: 0;
-}
-
-GtkComboBox.combobox-entry .entry:last-child,
-GtkComboBox.combobox-entry .button:last-child {
-    border-radius: 0 2.5px 2.5px 0;
-    border-left-width: 0;
-}
-
 GtkComboBox.combobox-entry .entry:last-child,
 GtkComboBox.combobox-entry .button:last-child {
     background-image: linear-gradient(to bottom,
@@ -793,7 +745,7 @@ GtkComboBox.combobox-entry .button:last-child {
     background-color: @base_color;
     background-image: none;
 
-    border: 1px solid alpha (#000, 0.4);
+    border-color: alpha (#000, 0.4);
 }
 
 
@@ -814,7 +766,6 @@ GtkComboBox.combobox-entry .button:last-child {
                                   shade (@selected_bg_color, 0.98)
                                   );
 
-    border-style: solid;
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.18),
                                   shade (@selected_bg_color, 0.88)
@@ -952,7 +903,7 @@ GtkCheckButton:selected:focus {
 ******************/
 
 .bottom-toolbar.toolbar {
-    border: 1px solid shade (@titlebar_color, 0.66);
+    border-color: shade (@titlebar_color, 0.66);
 
     background-image: linear-gradient(to bottom,
                                   @titlebar_color,
@@ -1003,7 +954,7 @@ GtkCheckButton:selected:focus {
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
-    border: 1px solid alpha (#000, 0.22);
+    border-color: alpha (#000, 0.22);
 }
 
 .header-bar .separator {
@@ -1337,15 +1288,10 @@ GtkTreeView row:nth-child(odd) {
     background-color: @bg_color;
 }
 
-GtkTreeView .entry {
-    border-radius: 0;
-}
-
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-color: alpha (#000, 0.18);
     border-color: shade (@base_color, 0.74);
-    border-radius: 4px;
     color: @text_color;
     box-shadow: inset 0 0 0 1px @inset_dark_color;
 }
@@ -1432,7 +1378,7 @@ EggListBox {
 
 .content-view-window {
     background-image: none;
-    border: 1px solid alpha (#000, 0.6);
+    border-color: alpha (#000, 0.6);
 }
 
 /*************
@@ -1519,7 +1465,7 @@ GtkInfoBar .button:focus,
     background-image: none; 
     background-color: transparent;  
 
-    border: 1px solid alpha (#000, 0.3);
+    border-color: alpha (#000, 0.3);
     
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.45),
