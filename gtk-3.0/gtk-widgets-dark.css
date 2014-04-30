@@ -991,6 +991,12 @@ GtkCheckButton:selected:focus {
                 inset 0 1px 0 0 alpha (#fff, 0.08);
 }
 
+.action-bar .button {
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+}
+
 .action-bar GtkLabel {
     color: @text_color;
 }
