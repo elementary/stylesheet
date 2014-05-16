@@ -19,40 +19,18 @@
  * Base States *
  **************/
 
+/***************
+ * Base States *
+ **************/
+
+.background {
+    color: @text_color;
+    background-color: @bg_color;
+}
+
 *:insensitive {
     text-shadow: 0 1px alpha (#fff, 0.07);
     icon-shadow: 0 1px alpha (#fff, 0.07);
-}
-
-/**************
- * Separators *
- *************/
- 
-.separator {
-    color: @menu_separator;
-}
-
-
-.pane-separator,
-.pane-separator:prelight,
-.pane-separator:selected {
-    border-color: shade (@base_color, 0.55);
-
-    background-image: url("assets/pane-handle.svg"),
-                        linear-gradient(to right,
-                                  @base_color,
-                                  shade (@base_color, 0.88)
-                                  );
-}
-
-.pane-separator.vertical,
-.pane-separator.vertical:prelight,
-.pane-separator.vertical:selected {
-    background-image: url("assets/pane-handle.svg"),
-                        linear-gradient(to bottom,
-                                  @base_color,
-                                  shade (@base_color, 0.88)
-                                  );
 }
 
 /*************
@@ -1516,14 +1494,6 @@ GtkMessageDialog {
                 inset 0 -1px 0 0 alpha (#fff, 0.07);
 
 }
-
-/**************
-* Text Styles *
-**************/
-
-.h1 { font: open sans bold 24; }
-.h2 { font: open sans light 18; }
-.h3 { font: open sans bold 12; }
 
 @import url("granite-widgets-dark.css");
 @import url("apps.css");

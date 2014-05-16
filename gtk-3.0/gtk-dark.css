@@ -19,7 +19,7 @@
 /* Default color scheme */
 @define-color base_color #333c40;
 @define-color bg_color shade (@base_color, 0.96);
-@define-color fg_color #2e3436;
+@define-color fg_color #969f9d;
 @define-color insensitive_color shade (@bg_color, 0.4);
 @define-color inset_dark_color alpha (#000, 0.06);
 @define-color inset_dark_color_backdrop alpha (#000, 0.03);
