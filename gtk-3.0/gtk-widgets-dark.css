@@ -1159,7 +1159,7 @@ GtkAssistant .sidebar {
  *************/
 
 GtkSwitch.trough {
-    background-image: url("assets/switch-off.svg");
+    background-image: url("assets/switch-off-dark.svg");
     background-repeat: no-repeat;
     background-position: 0 center;
         
@@ -1167,7 +1167,7 @@ GtkSwitch.trough {
 }
 
 GtkSwitch.trough:active {
-    background-image: url("assets/switch-on.svg");
+    background-image: url("assets/switch-on-dark.svg");
 }
 
 GtkSwitch.trough:insensitive {
@@ -1179,13 +1179,13 @@ GtkSwitch.trough:active:insensitive {
 }
 
 GtkSwitch.slider {
-    background-image: url("assets/switch-slider.svg");
+    background-image: url("assets/switch-slider-dark.svg");
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider:focus {
-    background-image: url("assets/switch-slider-focus.svg");
+    background-image: url("assets/switch-slider-dark.svg");
 
 }
 

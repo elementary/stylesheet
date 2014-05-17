@@ -667,10 +667,6 @@ GraniteWidgetsStaticNotebook .frame {
     border: none;
 }
 
-GraniteWidgetsStaticNotebook {
-    background-color: pink;
-}
-
 /**********
 * Buttons *
 **********/
