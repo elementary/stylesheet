@@ -576,50 +576,14 @@ GtkProgressBar.trough {
 * Notebook and Tabs *
 ********************/
 
-.dynamic-notebook GtkLabel:insensitive,
-.dynamic-notebook .image:insensitive {
-   color: shade (@text_color, 0.65);
-}
-
-.dynamic-notebook .notebook tab {
-    background-image: none;
-    background-color: transparent;
-
-    border-image: linear-gradient(to bottom,
-                                  transparent,
-                                  alpha (#000, 0.20)
-                                  ) 0 1 0 0;
-}
-.dynamic-notebook .notebook tab GtkLabel {
-    color: shade (@text_color, 0.90);
-}
-
-.dynamic-notebook .notebook tab GtkImage {
-    color: shade (@text_color, 0.90);
-}
-
-.dynamic-notebook .notebook tab:nth-child(first) {
-    border-image: linear-gradient(to bottom,
-                                  transparent,
-                                  alpha (#000, 0.20)
-                                  ) 0 1 0 1;
-}
-
 .dynamic-notebook .notebook tab:active {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.04),
-                                  @titlebar_color
-                                  );
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                0 0 0 1px shade (@titlebar_color, 0.56);
+}
 
-    border-image: none;
-    border-color: alpha (#000, 0.30);
-
-     color: shade (@text_color, 0.90);
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.1),
-   
-    inset 0 -1px 0 0 shade (@titlebar_color, 1);
-
+.dynamic-notebook .notebook tab:active:backdrop {
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                0 0 0 1px shade (@titlebar_color, 0.70);
 }
 
 .notebook {
@@ -628,12 +592,8 @@ GtkProgressBar.trough {
 }
 
 .notebook tab:active {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.24),
-                                  shade (@titlebar_color, 1.06)
-                                  );
-
-        color: @text_color;
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
+                0 0 0 1px shade (@titlebar_color, 0.56);
 }
 
 .dynamic-notebook .notebook tab .button,
@@ -641,7 +601,6 @@ GtkProgressBar.trough {
 .dynamic-notebook .notebook tab .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
-    background-image:   none;
     background-color:   alpha (#000, 0.02);
 
     border-color: alpha (#000, 0.29);
