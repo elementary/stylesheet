@@ -2217,6 +2217,7 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
 .source-list.badge,
 .source-list.badge:prelight,
 .source-list.badge:selected,
+.source-list.badge:selected:focus,
 .source-list.badge:prelight:selected {
     background-image: none;
     background-color: alpha (#000, 0.4);
