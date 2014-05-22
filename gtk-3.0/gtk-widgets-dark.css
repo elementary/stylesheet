@@ -383,12 +383,12 @@ GtkProgressBar.trough {
     icon-shadow: 0 1px alpha (#000, 0.4);
 
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.9),
-                                  shade (@titlebar_color, 0.9) 50%,
-                                  shade (@titlebar_color, 0.8)
+                                  shade (@bg_color, 0.9),
+                                  shade (@bg_color, 0.9) 50%,
+                                  shade (@bg_color, 0.8)
                                   );
                                   
-    border-color: shade (@titlebar_color, 0.5);
+    border-color: shade (@bg_color, 0.5);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
                 inset 0 1px 0 0 alpha (#fff, 0.07),
@@ -404,8 +404,8 @@ GtkProgressBar.trough {
 .toolbar .button {
     background-color: @transparent; 
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.1),
-                                  shade (@titlebar_color, 0.7)
+                                  shade (@bg_color, 1.1),
+                                  shade (@bg_color, 0.7)
                                   );   
 
     box-shadow: inset 0 0 1px 1px alpha (#fff, 0.05);
@@ -438,7 +438,7 @@ GtkProgressBar.trough {
                 inset 0 -1px 0 0 alpha (#fff, 0.01),
                 0 1px 0 1px alpha (#fff, 0.05);
 
-    border-color: shade (@titlebar_color, 0.5);
+    border-color: shade (@bg_color, 0.5);
 
     text-shadow: 0 1px 2px shade (@selected_bg_color, 0.4);
 }
@@ -683,7 +683,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .menubar {
     color: @text_color;
-    background-color: @titlebar_color;
+    background-color: @bg_color;
     -GtkWidget-window-dragging: true;
 }
 
@@ -918,11 +918,10 @@ GtkPaned .inline-toolbar.toolbar {
 ************************/
 
 .sidebar,
-.sidebar.view,
 .sidebar .view,
+.sidebar GtkScrolledWindow,
 .source-list,
 .source-list.view {
-    background-color: @titlebar_color;
     color: shade (@text_color, 0.90);
 }
 
@@ -951,7 +950,7 @@ GtkPaned .inline-toolbar.toolbar {
 .sidebar .view:prelight,
 .sidebar.view:prelight,
 .source-list.view:prelight {
-    background-color: shade (@titlebar_color, 1.10);
+    background-color: shade (@bg_color, 1.10);
 }
 
 
@@ -1002,7 +1001,7 @@ GtkPaned .inline-toolbar.toolbar {
 .sidebar-pane-separator:prelight,
 .sidebar-pane-separator:selected {
     background-image: none;
-    background-color: shade (@titlebar_color, 0.75);
+    background-color: shade (@bg_color, 0.75);
 }
 
 .source-list.badge,
@@ -1011,21 +1010,21 @@ GtkPaned .inline-toolbar.toolbar {
 .source-list.badge:prelight:selected {
     background-image: none;
     background-color: alpha (#fff, 0.4);
-    color: @titlebar_color;
+    color: @bg_color;
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 .source-list.badge:selected,
 .source-list.badge:prelight:selected {
-    color: @titlebar_color;
+    color: @bg_color;
 }
 
 .source-list.badge:selected:backdrop,
 .source-list.badge:selected:prelight:backdrop {
     background-image: none;
     background-color: alpha (#000, 0.2);
-    color: shade (@titlebar_color, 0.95);
+    color: shade (@bg_color, 0.95);
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
 }

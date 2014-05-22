@@ -2092,7 +2092,7 @@ EggListBox {
 .sidebar GtkScrolledWindow,
 .source-list,
 .source-list.view {
-    background-color: @titlebar_color;
+    background-color: shade (@bg_color, 0.92);
     color: shade (@titlebar_color, 0.50);
 }
 

@@ -17,7 +17,7 @@
 */
 
 /* Default color scheme */
-@define-color base_color #333c40;
+@define-color base_color #383e41;
 @define-color bg_color shade (@base_color, 0.96);
 @define-color fg_color #969f9d;
 @define-color headerbar_color #838484;
