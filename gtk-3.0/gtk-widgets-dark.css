@@ -21,7 +21,6 @@
 
 .background {
     color: @text_color;
-    background-color: @bg_color;
 }
 
 *:insensitive {
