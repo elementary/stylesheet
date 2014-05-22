@@ -29,14 +29,14 @@
 @define-color selected_bg_color #3d9bda;
 @define-color selected_fg_color #FFF;
 @define-color text_color #969f9d;
-@define-color titlebar_color #333c40;
+@define-color titlebar_color #383e41;
 @define-color title_color shade (@text_color, 0.90);
 @define-color title_shadow_color alpha (#000, 0.6);
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
 
-@define-color internal_element_color mix(@text_color, @base_color, 0.4);
-@define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
+@define-color internal_element_color mix(@text_color, @base_color, 0.8);
+@define-color internal_element_prelight mix(@text_color, @base_color, 0.4);
 @define-color internal_element_insensitive mix(@internal_element_color, @base_color, 0.7);
 
 @define-color view_symbolic_color shade(@internal_element_color, 0.80);
