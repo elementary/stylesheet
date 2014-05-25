@@ -218,6 +218,8 @@ GtkGrid:insensitive {
 
     transition: all 200ms ease-out;
     background-clip: padding-box;
+
+    -gtk-icon-style: symbolic;
 }
 
 
@@ -2094,6 +2096,8 @@ EggListBox {
 .source-list.view {
     background-color: shade (@bg_color, 0.92);
     color: shade (@titlebar_color, 0.50);
+
+    -gtk-icon-style: regular;
 }
 
 GtkDialog .sidebar,
