@@ -16,15 +16,6 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/*************
- * Statusbar *
- ************/
-
-GraniteWidgetsStatusBar {
-    background-color: pink;
-    background-image: none;
-}
-
 /***********
  * Popover *
  **********/
