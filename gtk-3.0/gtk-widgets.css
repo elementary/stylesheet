@@ -1359,6 +1359,8 @@ GtkTreeMenu .menuitem {
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage  {
     padding: 0 3px 0 3px;
+
+    -gtk-icon-style: symbolic;
 }
 
 .menu .menuitem:active,
