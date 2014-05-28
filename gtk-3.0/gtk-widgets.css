@@ -222,6 +222,10 @@ GtkGrid:insensitive {
     -gtk-icon-style: symbolic;
 }
 
+.entry.image.left {
+    padding-right: 6px;
+    color: @internal_element_color;
+}
 
 .titlebar .entry,
 .toolbar .entry {

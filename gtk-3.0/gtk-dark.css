@@ -22,7 +22,7 @@
 @define-color fg_color #969f9d;
 @define-color headerbar_color #838484;
 @define-color insensitive_color shade (@bg_color, 0.4);
-@define-color inset_dark_color alpha (#000, 0.06);
+@define-color inset_dark_color alpha (#000, 0.03);
 @define-color inset_dark_color_backdrop alpha (#000, 0.03);
 @define-color menu_separator alpha (#000, 0.15);
 @define-color placeholder_text_color shade(@text_color, 0.8);
@@ -36,7 +36,7 @@
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
 
-@define-color internal_element_color mix(@text_color, @base_color, 0.8);
+@define-color internal_element_color mix(@text_color, @base_color, 0.4);
 @define-color internal_element_prelight mix(@text_color, @base_color, 0.4);
 @define-color internal_element_insensitive mix(@internal_element_color, @base_color, 0.7);
 
