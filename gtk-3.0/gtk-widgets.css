@@ -345,51 +345,7 @@ GtkGrid:insensitive {
  * Progress bar *
  ****************/
 
-GtkProgressBar {
-    border-radius: 12px;
-    padding: 1px;
-}
-
-.progressbar {
-    background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.88),
-                                  @base_color
-                                  );
-
-    border-style: none;
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
-}
-
-.progressbar.vertical {
-    background-image: linear-gradient(to right,
-                                  shade (@base_color, 0.88),
-                                  @base_color
-                                  );
-}
-
-.trough {
-    border: 1px solid alpha (#000, 0.35);
-
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.15),
-                                  alpha (#000, 0.07)
-                                  );
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.03),
-                0 1px 0 1px alpha (#fff, 0.30);
-}
-
-.trough.vertical {
-    background-image: linear-gradient(to right,
-                                  alpha (#000, 0.15),
-                                  alpha (#000, 0.07)
-                                  );
-}
-
-/**********************************
- * Progress bar in a Tree or Cell *
- *********************************/
-
+.progressbar,
 .progressbar row,
 .progressbar row:hover {
     color: @selected_fg_color;
@@ -428,6 +384,7 @@ GtkProgressBar {
                 inset 0 -1px 0 0 alpha (#fff, 0.25);
 }
 
+.progressbar:backdrop,
 .progressbar row:backdrop,
 .progressbar row:backdrop:hover,
 .progressbar row:selected:backdrop,
@@ -464,6 +421,7 @@ GtkProgressBar {
                                   ) 1 1 1 1;
 }
 
+.trough,
 .trough row,
 .trough row:hover,
 .trough row:selected:backdrop,
@@ -501,6 +459,20 @@ GtkProgressBar {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.progressbar.vertical {
+    background-image: linear-gradient(to right,
+                                  shade (@base_color, 0.88),
+                                  @base_color
+                                  );
+}
+
+.trough.vertical {
+    background-image: linear-gradient(to right,
+                                  alpha (#000, 0.15),
+                                  alpha (#000, 0.07)
+                                  );
 }
 
 /********
