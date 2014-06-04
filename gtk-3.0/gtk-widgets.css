@@ -1583,15 +1583,6 @@ GtkCheckButton:selected:focus {
  * Header Bars *
  **************/
 
-.header-bar:backdrop {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.10),
-                                  shade (@titlebar_color, 0.98)
-                                  );
-
-    border-color: shade (@titlebar_color, 0.72);
-}
-
 .header-bar .button.image-button {
     padding: 3px;
     border: 1px solid transparent;
@@ -2457,9 +2448,10 @@ GtkModelButton.button:selected {
 
 .titlebar:backdrop {
     background-image: linear-gradient(to bottom,
-                              @titlebar_color,
-                              shade (@titlebar_color, 0.90)
+                              shade (@titlebar_color, 1.08),
+                              shade (@titlebar_color, 0.98)
                               );
+    background-color: shade (@titlebar_color, 1.10);
     border-color: shade (@titlebar_color, 0.64);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
