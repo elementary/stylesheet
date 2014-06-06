@@ -1311,13 +1311,12 @@ GtkTreeMenu .menuitem {
 .menu .menuitem {
     padding: 4px 0;
     text-shadow: none;
-    icon-shadow: none
+    icon-shadow: none;
 }
 
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage  {
     padding: 0 3px 0 3px;
-
     -gtk-icon-style: symbolic;
 }
 
@@ -1368,17 +1367,12 @@ GtkModelMenuItem GtkBox GtkImage {
 
 .menuitem.check,
 .menuitem.radio,
+.menuitem.check:active,
+.menuitem.radio:active,
 .menuitem.check:hover,
 .menuitem.radio:hover,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
-    background-image: none;
-    background-color: transparent;
-    box-shadow: none;
-}
-
-.menuitem.check:active,
-.menuitem.radio:active {
     background-image: none;
     background-color: transparent;
     box-shadow: none;
