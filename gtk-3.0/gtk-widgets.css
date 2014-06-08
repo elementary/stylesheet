@@ -156,7 +156,6 @@ GtkGrid:insensitive {
     color: @menu_separator;
 }
 
-
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
@@ -1537,7 +1536,8 @@ GtkCheckButton:selected:focus {
 .header-bar .button.image-button:focus:active {
     background-color: alpha (#000, 0.10);    
     border: 1px solid @border_color;
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 0 alpha (#fff, 0.30);
 }
 
 .header-bar .button.image-button GtkImage {
