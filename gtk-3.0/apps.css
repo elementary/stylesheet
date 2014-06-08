@@ -187,6 +187,52 @@ ConversationListView.view.cell:selected {
     box-shadow: none;
 }
 
+/*************
+ * Slingshot *
+ ************/
+
+.button.app {
+    border-width: 0;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.app:hover {
+    background-color: alpha (#000, 0.08);
+}
+.app:focus {
+    background-color: alpha (#000, 0.20);
+}
+ 
+.search-item {
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.search-item:hover,
+.search-item:focus {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+    text-shadow: 0 1px 1px alpha (#000, 0.25);
+    icon-shadow: 0 1px 1px alpha (#000, 0.25);
+}
+ 
+.search-entry-large,
+.search-entry-large:focus {
+        border: none;
+        font: open sans light 18;
+        padding: 8px;
+        background-image: none;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+}
+ 
+.search-category-header {
+        color: #808080;
+}
+
 /*********
  * Tweet *
  ********/

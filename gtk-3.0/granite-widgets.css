@@ -60,16 +60,3 @@ GraniteWidgetsPopOver .button:hover:active {
     background-color: alpha (#000, 0.05);
     border-color: shade (@base_color, 0.74);
 }
-
-.button.app {
-    border-width: 0;
-    border-radius: 5px;
-    box-shadow: none;
-}
-
-.app:hover {
-    background-color: alpha (#000, 0.08);
-}
-.app:focus {
-    background-color: alpha (#000, 0.20);
-}
