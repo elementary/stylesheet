@@ -221,6 +221,11 @@ GtkGrid:insensitive {
     -gtk-icon-style: symbolic;
 }
 
+.entry:selected,
+.entry:selected:focus {
+    background-color: @selected_bg_color;
+}
+
 .entry.image.left {
     padding-right: 6px;
     color: @internal_element_color;
