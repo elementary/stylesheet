@@ -216,6 +216,7 @@ ConversationListView.view.cell:selected {
     color: @selected_fg_color;
     text-shadow: 0 1px 1px alpha (#000, 0.25);
     icon-shadow: 0 1px 1px alpha (#000, 0.25);
+    margin: 6px 0;
 }
  
 .search-entry-large,
