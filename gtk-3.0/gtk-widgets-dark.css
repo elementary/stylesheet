@@ -570,7 +570,7 @@ GtkProgressBar.trough {
 
 .dynamic-notebook .notebook tab:active {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                0 0 0 1px shade (@titlebar_color, 0.56);
+                0 0 1px 1px alpha (#000, 0.15);
 }
 
 .dynamic-notebook .notebook tab:active:backdrop {
