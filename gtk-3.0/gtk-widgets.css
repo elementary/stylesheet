@@ -221,6 +221,16 @@ GtkGrid:insensitive {
     -gtk-icon-style: symbolic;
 }
 
+
+/* Rounded Search Entries 
+
+GtkSearchEntry.entry,
+GraniteWidgetsSearchBar.entry {
+    border-radius: 12px;
+}
+
+*/
+
 .entry:selected,
 .entry:selected:focus {
     background-color: @selected_bg_color;
@@ -309,6 +319,7 @@ GtkGrid:insensitive {
  /*******************
  * Symbolic images *
  *******************/
+
 .image {
     color: @internal_element_color;
 }
@@ -741,7 +752,7 @@ GtkOverlay > .button:focus {
     color: #fff;
 
     box-shadow: 0 1px 0 1px alpha (#000, 0.30);
-    text-shadow: 0 1px 0 1px alpha (#000, 0.30);
+    text-shadow: 0 1px 0 alpha (#000, 0.30);
 
     background-clip: border-box;
 }
@@ -1068,7 +1079,7 @@ GtkOverlay .linked .button:insensitive:last-child {
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
-                0 0 0 1px shade (@titlebar_color, 0.56);
+                0 0 1px 1px alpha (#000, 0.15);
 
     border-image: none;
 
@@ -1328,7 +1339,9 @@ GtkTreeMenu .menuitem {
 }
 
 .menu .menuitem:active,
-.menu .menuitem:hover {
+.menu .menuitem:hover,
+.popup .menuitem:active,
+.popup .menuitem:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   shade (@selected_bg_color, 0.98)
@@ -1369,6 +1382,7 @@ GtkModelMenuItem GtkBox GtkImage {
 
 .menuitem.separator {
     color: @menu_separator;
+    box-shadow: 0 1px #fff;
     -GtkMenuItem-horizontal-padding: 0;
 }
 
