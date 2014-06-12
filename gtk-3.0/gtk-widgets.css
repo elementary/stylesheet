@@ -2528,6 +2528,10 @@ GtkModelButton.button:selected {
     margin: 8px;
 }
 
+.window-frame.dialog {
+    border-radius: 4px;
+}
+
 .window-frame.menu.csd,
 .window-frame.popup.csd {
     border-radius: 4px;
@@ -2553,6 +2557,14 @@ GtkModelButton.button:selected {
 /***************
  * Dialog      *
  ***************/
+
+GtkDialog.csd {
+	border-radius: 4px;
+}
+
+GtkDialog.background {
+	border-radius: 0 0 4px 4px;
+}
 
 .prompt,
 GtkMessageDialog {
