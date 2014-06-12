@@ -2558,7 +2558,8 @@ GtkModelButton.button:selected {
  * Dialog      *
  ***************/
 
-GtkDialog.csd {
+GtkDialog.csd,
+GtkMessageDialog.csd {
 	border-radius: 4px;
 }
 
