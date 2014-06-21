@@ -23,7 +23,7 @@
 
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkPaned-handle-size: 8px;
+    -GtkPaned-handle-size: 1px;
 
     -GtkWidget-link-color: @link_color;
     -GtkWidget-visited-link-color: @link_color;
@@ -156,30 +156,18 @@ GtkGrid:insensitive {
     color: @menu_separator;
 }
 
+GtkPaned {
+    margin: 8px;
+}
+
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
-    border: 1px solid shade (@base_color, 0.55);
-    border-width: 0 1px;
-
-    background-image: url("assets/pane-handle.svg"),
-                        linear-gradient(to right,
-                                  @base_color,
-                                  shade (@base_color, 0.88)
-                                  );
-    background-position: 50%;
-    background-repeat: no-repeat;
-}
-
-.pane-separator.vertical,
-.pane-separator.vertical:prelight,
-.pane-separator.vertical:selected {
-    border-width: 1px 0;
-
-    background-image: url("assets/pane-handle.svg"),
-                        linear-gradient(to bottom,
-                                  @base_color,
-                                  shade (@base_color, 0.88)
+    background-color: shade (@base_color, 0.55);
+    /* background-image: none does not hide the grip handle */
+    background-image: linear-gradient(to right,
+                                  shade (@base_color, 0.55),
+                                  shade (@base_color, 0.55)
                                   );
 }
 
@@ -2183,16 +2171,6 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
                                   ) 1 1 1 1;
 }
 
-.sidebar-pane-separator,
-.sidebar-pane-separator:prelight,
-.sidebar-pane-separator:selected {
-
-    border-width: 0;
-    -GtkPaned-handle-size: 1;
-    background-image: none;
-    background-color: shade (@titlebar_color, 0.75);
-}
-
 .sidebar .scrollbar.trough,
 .sidebar .scrollbars-junction,
 .source-list .scrollbar.trough,
@@ -2470,6 +2448,10 @@ GtkModelButton.button:selected {
 
 .header-bar {
     padding: 10px 6px 8px;
+}
+
+.maximized .header-bar {
+    padding: 7px 6px 5px;
 }
 
 .titlebar.default-decoration {
