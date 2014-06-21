@@ -2455,6 +2455,10 @@ GtkModelButton.button:selected {
     padding: 10px 6px 8px;
 }
 
+.maximized .header-bar {
+    padding: 7px 6px 5px;
+}
+
 .titlebar.default-decoration {
     border: none;
     box-shadow: none;
