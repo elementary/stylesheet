@@ -662,7 +662,7 @@ GtkComboBox.combobox-entry .button {
 
     color: @text_color;
 
-    transition: all 200ms ease-in;
+    transition: all 100ms ease-in;
 }
 
 .button:backdrop {
@@ -705,7 +705,7 @@ GtkComboBox.combobox-entry .button {
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
                 0 0 0 1px alpha (@selected_bg_color, 0.25);
 
-    transition: all 200ms ease-out;
+    transition: all 100ms ease-out;
 }
 
 .button:active,
