@@ -2350,6 +2350,14 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 /***********
+ * Welcome *
+ **********/
+
+GraniteWidgetsWelcome {
+	background-color: @base_color;
+}
+
+/***********
  * Popover *
  **********/
 
