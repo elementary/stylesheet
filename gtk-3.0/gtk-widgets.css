@@ -1624,7 +1624,6 @@ GtkDialog .action-bar {
 ******************/
 
 .inline-toolbar.toolbar {
-    -GtkToolbar-button-relief: normal;
 
     border-radius: 0;
     border-width: 0 1px 1px 1px;
@@ -1653,41 +1652,31 @@ GtkPaned .inline-toolbar.toolbar {
 
 .inline-toolbar.toolbar .button {
     border-radius: 0;
-    border-width: 0 0 0 1px;
-    padding: 1px 2px 1px 2px;
+    border-width: 0;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+
+    color: shade (@text_color, 1.25);
 }
 
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:active:hover {
     background-color: alpha (#000, 0.05);
     background-image: none;
-
-    border-color: shade (@base_color, 0.74);
 }
 
-.inline-toolbar.toolbar GtkToolButton:first-child .button,
-.inline-toolbar.toolbar .button:first-child {
-    border-width: 0;
-}
-
-.inline-toolbar.toolbar GtkToolButton:last-child .button,
-.inline-toolbar.toolbar .button:last-child {
-    border-width: 0 1px 0 1px;
-    border-radius: 0 2px 2px 0;
-}
-
-.inline-toolbar.toolbar .button *:insensitive,
+.inline-toolbar.toolbar .button GtkImage:insensitive,
+.inline-toolbar.toolbar .button GtkLabel:insensitive,
 .inline-toolbar.toolbar .button:insensitive {
     background-image: none;
-    background-color: alpha (#000, 0.02);
+    background-color: none;
     color: @insensitive_color;
 }
+
 
 /***************
  * Search bars *
