@@ -491,7 +491,7 @@ GraniteWidgetsSearchBar.entry {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
                 inset 0 1px 0 0 alpha (#fff, 0.90),
                 inset 0 -1px 0 0 alpha (#fff, 0.30),
-                0 1px 2px alpha (@selected_bg_color, 0.95);
+                0 1px 1px alpha (@selected_bg_color, 0.95);
 }
 
 .scale.slider:backdrop {
@@ -660,6 +660,8 @@ GtkComboBox.combobox-entry .button {
                 0 1px 0 0 alpha (#fff, 0.15);
 
     color: @text_color;
+
+    transition: all 100ms ease-in;
 }
 
 .button:backdrop {
@@ -701,6 +703,8 @@ GtkComboBox.combobox-entry .button {
                 inset 0 1px 0 0 alpha (#fff, 0.45),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
                 0 0 0 1px alpha (@selected_bg_color, 0.25);
+    
+    transition: all 100ms ease-in;
 }
 
 .button:active,
@@ -1076,12 +1080,12 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .dynamic-notebook .notebook tab:active:backdrop {
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.94),
-                                  shade (@titlebar_color, 0.90)
+                                  shade (@titlebar_color, 0.98),
+                                  shade (@titlebar_color, 0.96)
                                   );
     border-color: shade (@titlebar_color, 0.70);
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
-                0 0 0 1px shade (@titlebar_color, 0.70);
+                0 0 1px 1px alpha (#000, 0.10);
 }
 
 .notebook.header {
@@ -1625,7 +1629,6 @@ GtkDialog .action-bar {
 ******************/
 
 .inline-toolbar.toolbar {
-    -GtkToolbar-button-relief: normal;
 
     border-radius: 0;
     border-width: 0 1px 1px 1px;
@@ -1654,39 +1657,28 @@ GtkPaned .inline-toolbar.toolbar {
 
 .inline-toolbar.toolbar .button {
     border-radius: 0;
-    border-width: 0 0 0 1px;
-    padding: 1px 2px 1px 2px;
+    border-width: 0;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+
+    color: shade (@text_color, 1.25);
 }
 
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:active:hover {
     background-color: alpha (#000, 0.05);
     background-image: none;
-
-    border-color: shade (@base_color, 0.74);
 }
 
-.inline-toolbar.toolbar GtkToolButton:first-child .button,
-.inline-toolbar.toolbar .button:first-child {
-    border-width: 0;
-}
-
-.inline-toolbar.toolbar GtkToolButton:last-child .button,
-.inline-toolbar.toolbar .button:last-child {
-    border-width: 0 1px 0 1px;
-    border-radius: 0 2px 2px 0;
-}
-
-.inline-toolbar.toolbar .button *:insensitive,
+.inline-toolbar.toolbar .button GtkImage:insensitive,
+.inline-toolbar.toolbar .button GtkLabel:insensitive,
 .inline-toolbar.toolbar .button:insensitive {
     background-image: none;
-    background-color: alpha (#000, 0.02);
+    background-color: none;
     color: @insensitive_color;
 }
 
@@ -2342,6 +2334,14 @@ GtkInfoBar .button:hover:insensitive {
     background-color: transparent;    
 
     border-color: alpha (#000, 0.18);
+}
+
+/***********
+ * Welcome *
+ **********/
+
+GraniteWidgetsWelcome {
+	background-color: @base_color;
 }
 
 /***********
