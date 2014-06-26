@@ -1937,6 +1937,7 @@ column-header .button:backdrop {
     border-width: 0 0 1px 1px;
     font: bold;
     padding: 4px 2px 4px 2px;
+    color: shade(@text_color, 1.5);
 }
 
 column-header .button:backdrop {
