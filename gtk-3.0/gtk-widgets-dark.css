@@ -34,15 +34,15 @@
 
 .entry {
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.93),
-                                  shade (@titlebar_color, 0.97)
+                                  shade (@base_color, 0.93),
+                                  shade (@base_color, 0.97)
                                   );
 
-    border-color: alpha (#000, 0.22);
+    border-color: alpha (#000, 0.30);
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 1px alpha (#fff, 0.01);
+                0 1px 0 0 alpha (#fff, 0.05);
                 
     color: @text_color;
 
@@ -64,7 +64,7 @@
                                   
     border-color: alpha (#000, 0.47);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 }
 
 .titlebar .entry:backdrop,
@@ -82,7 +82,7 @@
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
                 
     color: @insensitive_fg_color;
 
@@ -99,6 +99,13 @@
     border-color: @selected_bg_color;
 }
 
+.entry:focus {
+    border-color: alpha (#000, 0.30);
+    box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+                inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+                0 1px 0 0 alpha (#fff, 0.05);
+}
+
 .entry:insensitive {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.05),
@@ -110,14 +117,14 @@
 .toolbar .entry:insensitive {
     border-color: alpha (#000, 0.25);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 }
 
 .titlebar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
     border-color: alpha (#000, 0.20);
     box-shadow: inset 0 0 0 1px @inset_dark_color_backdrop,
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 }
 
 /****************
