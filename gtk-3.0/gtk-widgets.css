@@ -1634,7 +1634,6 @@ GtkDialog .action-bar {
     border-width: 0 1px 1px 1px;
     padding: 0;
 
-    border-image: none;
     border-color: shade (@titlebar_color, 0.70);
 
     background-image: linear-gradient(to bottom,
@@ -1941,6 +1940,7 @@ column-header .button:backdrop {
     border-width: 0 0 1px 1px;
     font: bold;
     padding: 4px 2px 4px 2px;
+    color: shade(@text_color, 1.5);
 }
 
 column-header .button:backdrop {
@@ -2505,7 +2505,7 @@ GtkModelButton.button:selected {
     border-radius: 4px 4px 0 0;
 
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 6px 20px -3px alpha (#000, 0.80);
+                0 12px 30px -6px alpha (#000, 0.80);
 
     margin: 8px;
 }
