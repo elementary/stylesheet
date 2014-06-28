@@ -34,15 +34,15 @@
 
 .entry {
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.93),
-                                  shade (@titlebar_color, 0.97)
+                                  shade (@base_color, 0.93),
+                                  shade (@base_color, 0.97)
                                   );
 
-    border-color: alpha (#000, 0.22);
+    border-color: alpha (#000, 0.30);
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 1px alpha (#fff, 0.01);
+                0 1px 0 0 alpha (#fff, 0.05);
                 
     color: @text_color;
 
@@ -64,7 +64,7 @@
                                   
     border-color: alpha (#000, 0.47);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 }
 
 .titlebar .entry:backdrop,
@@ -82,7 +82,7 @@
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
                 
     color: @insensitive_fg_color;
 
@@ -99,6 +99,13 @@
     border-color: @selected_bg_color;
 }
 
+.entry:focus {
+    border-color: alpha (#000, 0.30);
+    box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+                inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+                0 1px 0 0 alpha (#fff, 0.05);
+}
+
 .entry:insensitive {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.05),
@@ -110,14 +117,14 @@
 .toolbar .entry:insensitive {
     border-color: alpha (#000, 0.25);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 }
 
 .titlebar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
     border-color: alpha (#000, 0.20);
     box-shadow: inset 0 0 0 1px @inset_dark_color_backdrop,
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 }
 
 /****************
@@ -125,135 +132,11 @@
  ****************/
 
 GtkProgressBar.progressbar {
-    background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.88),
-                                  @base_color
-                                  );
-
-    border-style: none;
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.1);
+    border-width: 0;
 }
 
 GtkProgressBar.trough {
-    border-color: alpha (#000, 0.35);
-
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.15),
-                                  alpha (#000, 0.07)
-                                  );
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.03),
-                0 1px 0 1px alpha (#fff, 0.30);
-}
-
-/**********************************
- * Progress bar in a Tree or Cell *
- *********************************/
-
-.progressbar row,
-.progressbar row:hover {
-    color: @selected_fg_color;
-    text-shadow: 0 1px alpha (#000, 0.3);
-    icon-shadow: 0 1px alpha (#000, 0.3);
-
-    background-image: linear-gradient(to left top,
-                                  alpha (#fff, 0.10),
-                                  alpha (#fff, 0.10) 25%,
-                                  transparent 25%,
-                                  transparent 50%,
-                                  alpha (#fff, 0.10) 50%,
-                                  alpha (#fff, 0.10) 75%,
-                                  transparent 75%,
-                                  transparent
-                                  ),
-                        linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  shade (@selected_bg_color, 1.20) 50%,
-                                  shade (@selected_bg_color, 1.08) 60%,
-                                  shade (@selected_bg_color, 1.08) 70%,
-                                  shade (@selected_bg_color, 1.30)
-                                  );
-
-    background-size: 24px 24px, auto;
-
-    border-style: solid;
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.05),
-                                  shade (@selected_bg_color, 0.88)
-                                  ) 1 1 1 1;
-
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.50),
-                inset 0 -1px 0 0 alpha (#fff, 0.25);
-}
-
-.progressbar row:backdrop,
-.progressbar row:backdrop:hover,
-.progressbar row:selected:backdrop,
-.progressbar row:selected:backdrop:hover {
-    background-image: linear-gradient(to left top,
-                                  alpha (#fff, 0.10),
-                                  alpha (#fff, 0.10) 25%,
-                                  transparent 25%,
-                                  transparent 50%,
-                                  alpha (#fff, 0.10) 50%,
-                                  alpha (#fff, 0.10) 75%,
-                                  transparent 75%,
-                                  transparent
-                                  ),
-                        linear-gradient(to bottom,
-                                  @progress_row_trough_color,
-                                  shade (@progress_row_trough_color, 0.90) 50%,
-                                  shade (@progress_row_trough_color, 0.78) 60%,
-                                  shade (@progress_row_trough_color, 0.78) 70%,
-                                  @progress_row_trough_color
-                                  );
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@progress_row_trough_color, 0.80),
-                                  shade (@progress_row_trough_color, 0.63)
-                                  ) 1 1 1 1;
-}
-
-.progressbar row:selected,
-.progressbar row:selected:focused {
-    border-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 0.87),
-                                  shade (@selected_bg_color, 0.80)
-                                  ) 1 1 1 1;
-}
-
-.trough row,
-.trough row:hover,
-.trough row:selected:backdrop,
-.trough row:selected:backdrop:hover  {
-    background-image: linear-gradient(to bottom,
-                                  shade (@progress_row_trough_color, 1.10),
-                                  shade (@progress_row_trough_color, 1.05) 50%,
-                                  shade (@progress_row_trough_color, 0.93) 60%,
-                                  shade (@progress_row_trough_color, 0.93) 70%,
-                                  shade (@progress_row_trough_color, 1.10)
-                                  );
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@progress_row_trough_color, 0.78),
-                                  shade (@progress_row_trough_color, 0.70)
-                                  ) 1 1 1 1;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20);
-}
-
-.trough row:selected,
-.trough row:selected:focused  {
-    color: @text_color;
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 0.87),
-                                  shade (@selected_bg_color, 0.80)
-                                  ) 1 1 1 1;
-
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    border-width: 0;
 }
 
 /********
@@ -379,7 +262,7 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
                 inset 0 1px 0 0 alpha (#fff, 0.07),
                 inset 0 -1px 0 0 alpha (#fff, 0.01),
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 
     color: @text_color;
 }
@@ -428,7 +311,7 @@ GtkProgressBar.trough {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
                 inset 0 1px 0 0 alpha (#fff, 0.07),
                 inset 0 -1px 0 0 alpha (#fff, 0.01),
-                0 1px 0 1px alpha (#fff, 0.05);
+                0 1px 0 0 alpha (#fff, 0.05);
 
     border-color: shade (@bg_color, 0.5);
 
@@ -1107,57 +990,6 @@ GtkSwitch.slider:focus {
 GtkSwitch.slider:insensitive {
     background-image: none;
     background-color: transparent;
-}
-
-/**********************
-* Tree and Icon Views *
-**********************/
-
-GtkTreeView {
-    -GtkTreeView-vertical-separator: 5px;
-    -GtkTreeView-horizontal-separator: 6px;
-    -GtkTreeView-expander-size: 8px;
-    -GtkTreeView-grid-line-pattern: "\000\000";
-}
-
-GtkTreeView row:nth-child(even) {
-    background-color: @base_color;
-}
-
-GtkTreeView row:nth-child(odd) {
-    background-color: @bg_color;
-}
-
-GtkIconView.view.cell:selected,
-GtkIconView.view.cell:selected:focus {
-    background-color: alpha (#000, 0.18);
-    border-color: shade (@base_color, 0.74);
-    color: @text_color;
-    box-shadow: inset 0 0 0 1px @inset_dark_color;
-}
-
-.view {
-    background-color: @base_color;
-}
-
-.view:selected {
-    background-color: shade (@base_color, 0.80);
-    color: @text_color;
-}
-
-.view:selected:focus {
-    background-color: @selected_bg_color;
-    color: @selected_fg_color;
-}
-
-.cell {
-    color: @text_color;
-}
-
-.cell:selected,
-.cell:selected:focus {
-    background-color: @selected_bg_color;
-    color: @selected_fg_color;
 }
 
 /**********************
