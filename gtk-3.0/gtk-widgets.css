@@ -1911,10 +1911,18 @@ GtkListBoxRow:selected:focus,
     border-width: 0px;
 }
 
-GtkListBoxRow {
+/* FIXME: This doesn't work with only-child
+
+GtkListBoxRow:only-child {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+GtkListBoxRow:first-child {
     border-bottom: solid 1px alpha(#fff, 0.04);
     box-shadow: inset 0 -1px shade(@base_color, 0.85);
 }
+*/
 
 /******************
  * Column Headers *
