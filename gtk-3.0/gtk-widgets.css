@@ -1672,7 +1672,7 @@ GtkPaned .inline-toolbar.toolbar {
 .inline-toolbar.toolbar .button GtkLabel:insensitive,
 .inline-toolbar.toolbar .button:insensitive {
     background-image: none;
-    background-color: none;
+    background-color: transparent;
     color: @insensitive_color;
 }
 
