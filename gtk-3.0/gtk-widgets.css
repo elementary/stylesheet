@@ -2494,6 +2494,36 @@ GtkModelButton.button:selected {
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.60);
 }
 
+GtkDialog .titlebar,
+GtkMessageDialog .titlebar,
+GtkDialog .titlebar.default-decoration,
+GtkMessageDialog .titlebar.default-decoration {
+    border: none;
+
+    background-image: none;
+    background-color: @bg_color;
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 1px 0 0 #fff;
+}
+
+GtkDialog .titlebar:backdrop,
+GtkMessageDialog .titlebar:backdrop
+GtkDialog .titlebar.default-decoration:backdrop,
+GtkMessageDialog .titlebar.default-decoration:backdrop {
+    border: none;
+
+    background-image: none;
+    background-color: @bg_color;
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 1px 0 0 #fff;
+
+    color: shade (@titlebar_color, 1.20);
+}
+
 .titlebar .separator {
     color: transparent;
 }
@@ -2592,32 +2622,6 @@ GtkMessageDialog {
 
 GtkMessageDialog .button {
     padding: 6px;
-}
-
-GtkDialog .titlebar,
-GtkMessageDialog .titlebar {
-    border: none;
-
-    background-image: none;
-    background-color: @bg_color;
-
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 #fff;
-}
-
-GtkDialog .titlebar:backdrop,
-GtkMessageDialog .titlebar:backdrop {
-    border: none;
-
-    background-image: none;
-    background-color: @bg_color;
-
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 #fff;
-
-    color: shade (@titlebar_color, 1.20);
 }
 
 GtkDialog,
