@@ -1194,6 +1194,10 @@ GtkInfoBar .button:hover:insensitive {
     box-shadow: none;
 }
 
+.titlebar.default-decoration {
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.08);
+}
+
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
