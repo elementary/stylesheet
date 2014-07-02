@@ -664,14 +664,6 @@ GtkComboBox.combobox-entry .button {
     transition: all 100ms ease-in;
 }
 
-.button.flat,
-.button.flat:insensitive {
-    border-color: transparent;
-    box-shadow: none;
-    background-image: none;
-    background-color: transparent;
-}
-
 .button:backdrop {
     background-image: none;
                                   
@@ -713,6 +705,15 @@ GtkComboBox.combobox-entry .button {
                 0 0 0 1px alpha (@selected_bg_color, 0.25);
 
     transition: all 100ms ease-out;
+}
+
+.button.flat,
+.button.flat:backdrop,
+.button.flat:insensitive {
+    border-color: transparent;
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
 }
 
 .button:active,
