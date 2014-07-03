@@ -2370,6 +2370,12 @@ GraniteWidgetsWelcome {
 GraniteWidgetsWelcome GtkLabel {
 	color: @placeholder_text_color;
     font: open sans 11;
+    text-shadow: none;
+}
+
+GraniteWidgetsWelcome .h1,
+GraniteWidgetsWelcome .h3 {
+	color: alpha(@text_color, 0.8);
 }
 
 /***********
