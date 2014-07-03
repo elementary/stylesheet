@@ -787,12 +787,12 @@ GtkOverlay > .button:focus:active {
 .secondary-toolbar.toolbar .button:hover {
     padding: 0 3px 0 3px;
 
-    color: shade (@selected_bg_color, 0.65);
-
     border-color: transparent;
     background-image: none;
     background-color: transparent;
     box-shadow: none;
+
+    color: shade (@selected_bg_color, 0.65);
 }
 
 .secondary-toolbar.toolbar .button:active,
@@ -1383,7 +1383,6 @@ GtkModelMenuItem GtkBox GtkImage {
 
 .menuitem.separator {
     color: @menu_separator;
-    box-shadow: 0 1px #fff;
     -GtkMenuItem-horizontal-padding: 0;
 }
 
@@ -1686,7 +1685,7 @@ GtkPaned .inline-toolbar.toolbar {
 .inline-toolbar.toolbar .button GtkLabel:insensitive,
 .inline-toolbar.toolbar .button:insensitive {
     background-image: none;
-    background-color: none;
+    background-color: transparent;
     color: @insensitive_color;
 }
 
@@ -2371,6 +2370,17 @@ GraniteWidgetsWelcome {
 	background-color: @base_color;
 }
 
+GraniteWidgetsWelcome GtkLabel {
+	color: @placeholder_text_color;
+    font: open sans 11;
+    text-shadow: none;
+}
+
+GraniteWidgetsWelcome .h1,
+GraniteWidgetsWelcome .h3 {
+	color: alpha(@text_color, 0.8);
+}
+
 /***********
  * Popover *
  **********/
@@ -2640,9 +2650,9 @@ GtkDialog .toolbar {
 * Text Styles *
 **************/
 
-.h1 { font: open sans bold 24; }
+.h1 { font: open sans 24; }
 .h2 { font: open sans light 18; }
-.h3 { font: open sans bold 12; }
+.h3 { font: open sans 12; }
 
 @import url("granite-widgets.css");
 @import url("apps.css");
