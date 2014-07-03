@@ -2369,6 +2369,7 @@ GraniteWidgetsWelcome {
 
 GraniteWidgetsWelcome GtkLabel {
 	color: @placeholder_text_color;
+    font: open sans 11;
 }
 
 /***********
@@ -2609,7 +2610,7 @@ GtkDialog .toolbar {
 
 .h1 { font: open sans 24; }
 .h2 { font: open sans light 18; }
-.h3 { font: open sans bold 12 !important; }
+.h3 { font: open sans 12; }
 
 @import url("granite-widgets.css");
 @import url("apps.css");
