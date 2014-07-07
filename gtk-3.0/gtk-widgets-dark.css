@@ -471,18 +471,17 @@ GtkProgressBar.trough {
                 0 0 0 1px shade (@titlebar_color, 0.56);
 }
 
-.dynamic-notebook .notebook tab .button,
-.dynamic-notebook .notebook tab .button:hover,
-.dynamic-notebook .notebook tab .button:hover:active,
+.dynamic-notebook .notebook tab > .button,
+.dynamic-notebook .notebook tab > .button:hover,
+.dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
     background-color:   alpha (#000, 0.02);
-
     border-color: alpha (#000, 0.29);
 }
 
-.dynamic-notebook .notebook tab .button:hover:active,
-.notebook tab .button:hover:active {
+.dynamic-notebook .notebook tab > .button:hover:active,
+.notebook tab > .button:hover:active {
     background-color:   alpha (#000, 0.10);
 }
 
