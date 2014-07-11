@@ -560,15 +560,12 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .menu .menuitem:active,
-.menu .menuitem:hover {
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  shade (@selected_bg_color, 0.98)
-                                  );
-
+.menu .menuitem:hover,
+.popup .menuitem:active,
+.popup .menuitem:hover {
     border-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.18),
-                                  shade (@selected_bg_color, 0.88)
+                                  shade (@selected_bg_color, 0.38),
+                                  shade (@selected_bg_color, 0.38)
                                   ) 1 0 1 0;
 
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
