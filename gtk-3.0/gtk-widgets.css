@@ -338,10 +338,6 @@ GraniteWidgetsSearchBar.entry {
 .progressbar,
 .progressbar row,
 .progressbar row:hover {
-    color: @selected_fg_color;
-    text-shadow: 0 1px alpha (#000, 0.3);
-    icon-shadow: 0 1px alpha (#000, 0.3);
-
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   shade (@selected_bg_color, 1.20) 50%,
@@ -418,15 +414,10 @@ GraniteWidgetsSearchBar.entry {
 
 .trough row:selected,
 .trough row:selected:focused  {
-    color: @text_color;
-
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 0.87),
                                   shade (@selected_bg_color, 0.80)
                                   ) 1 1 1 1;
-
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 .progressbar.vertical {
