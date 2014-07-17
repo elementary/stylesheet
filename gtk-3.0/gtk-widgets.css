@@ -58,7 +58,8 @@
     color: @selected_fg_color;
 }
 
-*:insensitive {
+*:insensitive,
+*:backdrop {
     color: @insensitive_color;
     -gtk-image-effect: dim;
 }
