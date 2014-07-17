@@ -1940,6 +1940,11 @@ column-header .button,
     border-radius: 0;
 }
 
+column-header .button GtkLabel {
+    padding-left: 3px;
+    color: shade (@text_color, 1.8);
+}
+
 column-header:nth-child(first) .button,
 column-header:nth-child(first) .button:backdrop,
 .content-view column-header:nth-child(first) .button {
