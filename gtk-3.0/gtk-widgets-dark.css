@@ -28,6 +28,10 @@
     icon-shadow: 0 1px alpha (#fff, 0.07);
 }
 
+*:backdrop {
+    color: shade (@text_color, 0.70);
+}
+
 /*************
 * Text Entry *
 *************/
