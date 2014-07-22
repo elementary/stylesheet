@@ -109,27 +109,25 @@ GtkGrid:insensitive {
  * Miscellaneous *
  ****************/
 
-@keyframes spinner {
-    0% { background-image: url("assets/spinner-01.svg"); }
-    14% { background-image: url("assets/spinner-02.svg"); }
-    28% { background-image: url("assets/spinner-03.svg"); }
-    42% { background-image: url("assets/spinner-04.svg"); }
-    56% { background-image: url("assets/spinner-05.svg"); }
-    70% { background-image: url("assets/spinner-06.svg"); }
-    84% { background-image: url("assets/spinner-07.svg"); }
-    100% { background-image: url("assets/spinner-08.svg"); }
+@keyframes spin {
+    to {
+        -gtk-icon-transform: rotate(1turn);
+    }
 }
 
 .spinner {
-    background-color: transparent;
-    background-image: url("assets/spinner-01.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: none;
+    opacity: 0;
+    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }
 
 .spinner:active {
-    background-image: url("assets/spinner-01.svg");
-    animation: spinner 600ms infinite linear;
+    opacity: 0.8;
+    animation: spin 600ms linear infinite;
+}
+
+.spinner:active:insensitive {
+    opacity: 0.4;
 }
 
 .view.rubberband,
