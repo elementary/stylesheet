@@ -275,21 +275,13 @@ GtkProgressBar.trough {
 .header-bar .button.image-button, 
 .header-bar .button,
 .toolbar .button {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.15);
-
     background-image: linear-gradient(to bottom,
                                   transparent,
                                   transparent 50%,
                                   alpha (#000, 0.04)
                                   );
                                   
-    border: 1px solid alpha (#000, 0.30);
-    border-radius: 2.5px;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
-                inset 0 1px 0 0 alpha (#fff, 0.22),
-                inset 0 -1px 0 0 alpha (#fff, 0.07);
+    border-color: alpha (#000, 0.30);
 }
 
 .button:hover {
@@ -337,11 +329,12 @@ GtkProgressBar.trough {
     color: shade (@text_color, 0.8);
 
     background-color: alpha (#000, 0.06);
-	background-image: none;
+    background-image: none;
     border-color: alpha (#000, 0.40);
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.10);
-                
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.10),
+                0 1px 0 0 alpha (#fff, 0.05);;
+
     border-color: alpha (#000, 0.37);
 
     text-shadow: 0 1px alpha (#000, 0.4);
@@ -1256,6 +1249,8 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .header-bar .title,
+.header-bar .button,
+.header-bar .button:active,
 .header-bar .button.image-button GtkImage,
 .header-bar .titlebutton GtkImage {
     color: shade (@headerbar_color, 0.40);
@@ -1269,9 +1264,32 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .header-bar .title:backdrop,
+.header-bar .button:backdrop,
+.header-bar .button:active:backdrop,
 .header-bar .button.image-button GtkImage:backdrop,
 .header-bar .titlebutton GtkImage:backdrop {
     color: shade (@headerbar_color, 0.60);
+    icon-shadow: none;
+}
+
+/* Reset GtkDialog Headerbar Button Color */
+
+GtkDialog .header-bar .title,
+GtkDialog .header-bar .button,
+GtkDialog .header-bar .button:active,
+GtkDialog .header-bar .button.image-button GtkImage,
+GtkDialog .header-bar .titlebutton GtkImage {
+    color: @text_color;
+    text-shadow: 0 1px alpha (#000, 0.4);
+    icon-shadow: 0 1px alpha (#000, 0.4);
+}
+
+GtkDialog .header-bar .title:backdrop,
+GtkDialog .header-bar .button:backdrop,
+GtkDialog .header-bar .button:active:backdrop,
+GtkDialog .header-bar .button.image-button GtkImage:backdrop,
+GtkDialog .header-bar .titlebutton GtkImage:backdrop {
+    color: shade (@text_color, 0.70);
     icon-shadow: none;
 }
 
