@@ -94,6 +94,26 @@
     text-shadow: 0 1px alpha (#000, 0.4);
 }
 
+.header-bar .entry,
+.header-bar .entry:focus,
+.header-bar .entry:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (#fff, 0.93),
+                                  shade (#fff, 0.97)
+                                  );
+
+    border-color: alpha (#000, 0.25);
+
+    box-shadow: inset 0 1px 0 0 alpha (#000, 0.08),
+                inset 0 0 0 1px alpha (#000, 0.04),
+                0 1px 0 0 alpha (#fff, 0.20);
+                
+    color: #333;
+
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+}
+
 .entry.progressbar,
 .entry.progressbar:focus {
     background-image: linear-gradient(to bottom,
@@ -498,13 +518,6 @@ GtkProgressBar.trough {
 GtkComboBox {
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: none;
-}
-
-GtkComboBox .separator {
-    /* always disable separators */
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
 }
 
 GtkComboBox.combobox-entry .entry:last-child,

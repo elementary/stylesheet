@@ -202,8 +202,6 @@ GtkPaned {
     padding: 4px;
 
     transition: all 200ms ease-out;
-    background-clip: padding-box;
-
     -gtk-icon-style: symbolic;
 }
 
