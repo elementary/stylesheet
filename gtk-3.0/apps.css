@@ -197,6 +197,29 @@ SwitchboardCategoryView .category-label {
     text-shadow: 0 1px alpha (#fff, 0.6);
 }
 
+SwitchboardNavigationButton.button {
+    border-image: url("assets/button-back.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-width: 2px 3px 3px 11px;
+    border-radius: 0 2.5px 2.5px 0;
+    box-shadow: none;
+}
+
+SwitchboardNavigationButton.button:backdrop {
+    border-image: url("assets/button-back-backdrop.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-width: 2px 3px 3px 11px;
+    border-radius: 0 2.5px 2.5px 0;
+    box-shadow: none;
+}
+
+SwitchboardNavigationButton.button:active,
+SwitchboardNavigationButton.button:hover:active,
+SwitchboardNavigationButton.button:focus:active {
+    border-image: url("assets/button-back-active.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-width: 2px 3px 3px 11px;
+    border-radius: 0 2.5px 2.5px 0;
+    box-shadow: none;
+}
+
 /************
  * Terminal *
  ***********/
