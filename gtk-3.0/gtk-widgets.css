@@ -1164,6 +1164,10 @@ GtkComboBox {
     -GtkComboBox-shadow-type: none;
 }
 
+.header-bar GtkComboBox .button {
+    padding: 2px;
+}
+
 GtkComboBox .separator {
     /* always disable separators */
     -GtkWidget-wide-separators: true;
