@@ -837,35 +837,6 @@ GtkOverlay > .button:focus:active {
 * Linked *
 *********/
 
-.linked .entry {
-    box-shadow: inset -1px 0 @inset_dark_color;
-}
-
-.linked .entry:focus {
-    box-shadow: inset 1px 0 @inset_dark_color,
-                inset -1px 0 @inset_dark_color,
-                inset 1px 2px alpha(@selected_bg_color, 0.1),
-                inset 1px 1px alpha(@selected_bg_color, 0.1),
-                inset -1px -1px alpha(@selected_bg_color, 0.2);
-
-}
-
-.linked .entry:focus:first-child {
-    box-shadow: inset -1px 0 @inset_dark_color,
-                inset 1px 2px alpha(@selected_bg_color, 0.1),
-                inset 1px 1px alpha(@selected_bg_color, 0.1),
-                inset -1px -1px alpha(@selected_bg_color, 0.2);
-
-}
-
-.linked .entry:focus:last-child {
-    box-shadow: inset 1px 0 @inset_dark_color,
-                inset 1px 2px alpha(@selected_bg_color, 0.1),
-                inset 1px 1px alpha(@selected_bg_color, 0.1),
-                inset -1px -1px alpha(@selected_bg_color, 0.2);
-
-}
-
 /* Middle button */
 .linked .entry,
 .linked .button,
@@ -876,7 +847,6 @@ GtkOverlay > .button:focus:active {
 .linked .button:insensitive {
     border-right-width: 0;
     border-radius: 0;
-    padding: 3px;
 }
 
 /* Leftmost button */
@@ -1157,6 +1127,10 @@ GtkOverlay .linked .button:insensitive:last-child {
 GtkComboBox {
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: none;
+}
+
+.header-bar GtkComboBox .button {
+    padding: 2px;
 }
 
 GtkComboBox .separator {
@@ -1887,6 +1861,11 @@ GtkIconView.view.cell:selected:focus {
     background-color: @base_color;
 }
 
+GtkListBoxRow {
+    border: none;
+    background-image: none;
+}
+
 GtkListBoxRow:selected,
 GtkListBoxRow:selected:backdrop,
 .view:selected {
@@ -2389,7 +2368,8 @@ GraniteWidgetsWelcome .h3 {
  * Popover *
  **********/
 
-GtkPopover {
+.popover,
+.popover.osd {
     border-radius: 5px;
     background-clip: border-box;
     background-color: @bg_color;
