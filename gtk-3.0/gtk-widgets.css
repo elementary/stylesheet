@@ -1861,19 +1861,19 @@ GtkIconView.view.cell:selected:focus {
     background-color: @base_color;
 }
 
-GtkListBoxRow {
+.list-row.button {
     border: none;
     background-image: none;
 }
 
-GtkListBoxRow:selected,
-GtkListBoxRow:selected:backdrop,
+.list-row.button:selected,
+.list-row.button:selected:backdrop,
 .view:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
 }
 
-GtkListBoxRow:selected:focus,
+.list-row.button:selected:focus,
 .view:selected:focus {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
