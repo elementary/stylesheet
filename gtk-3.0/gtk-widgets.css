@@ -1862,8 +1862,10 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .list-row.button {
-    border: none;
     background-image: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .list-row.button:selected,
