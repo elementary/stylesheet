@@ -808,7 +808,7 @@ GtkOverlay > .button:focus:active {
 
 .help_button {
     border-radius: 100px;
-    padding: 3px 8px;
+    padding: 3px 9px;
 }
 
 /*****************
