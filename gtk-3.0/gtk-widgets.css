@@ -720,6 +720,20 @@ GtkComboBox.combobox-entry .button {
 
 }
 
+GtkLinkButton.button,
+GtkLinkButton.button:active,
+GtkLinkButton.button:focus:active {
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+}
+
+GtkLinkButton GtkLabel {
+    color: @link_color;
+}
+
 /*************************** 
 * Overlay Button *
 ***************************/
