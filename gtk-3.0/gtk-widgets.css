@@ -869,7 +869,8 @@ GtkOverlay > .button:focus:active {
 .linked .button:first-child,
 .linked .button:active:first-child,
 .linked .button:active:hover:first-child,
-.linked .button:insensitive:first-child {
+.linked .button:insensitive:first-child,
+.linked > GtkComboBox:first-child > .button {
     border-width: 1px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
