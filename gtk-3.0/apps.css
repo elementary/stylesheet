@@ -95,6 +95,11 @@ ConversationListView.view.cell:selected {
     font-weight: normal;
 }
 
+.panel .window-frame.menu.csd,
+.panel .window-frame.popup.csd {
+    box-shadow: none;
+}
+
 .panel-shadow {
     background-image: none;
     background-color: transparent;
