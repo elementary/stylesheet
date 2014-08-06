@@ -857,35 +857,6 @@ GtkOverlay > .button:focus:active {
 * Linked *
 *********/
 
-.linked .entry {
-    box-shadow: inset -1px 0 @inset_dark_color;
-}
-
-.linked .entry:focus {
-    box-shadow: inset 1px 0 @inset_dark_color,
-                inset -1px 0 @inset_dark_color,
-                inset 1px 2px alpha(@selected_bg_color, 0.1),
-                inset 1px 1px alpha(@selected_bg_color, 0.1),
-                inset -1px -1px alpha(@selected_bg_color, 0.2);
-
-}
-
-.linked .entry:focus:first-child {
-    box-shadow: inset -1px 0 @inset_dark_color,
-                inset 1px 2px alpha(@selected_bg_color, 0.1),
-                inset 1px 1px alpha(@selected_bg_color, 0.1),
-                inset -1px -1px alpha(@selected_bg_color, 0.2);
-
-}
-
-.linked .entry:focus:last-child {
-    box-shadow: inset 1px 0 @inset_dark_color,
-                inset 1px 2px alpha(@selected_bg_color, 0.1),
-                inset 1px 1px alpha(@selected_bg_color, 0.1),
-                inset -1px -1px alpha(@selected_bg_color, 0.2);
-
-}
-
 /* Middle button */
 .linked .entry,
 .linked .button,
@@ -894,9 +865,8 @@ GtkOverlay > .button:focus:active {
 .linked .button:hover,
 .linked .button:active:hover,
 .linked .button:insensitive {
-    border-right-width: 0;
+    border-left-width: 0;
     border-radius: 0;
-    padding: 3px;
 }
 
 /* Leftmost button */
@@ -906,6 +876,7 @@ GtkOverlay > .button:focus:active {
 .linked .button:active:hover:first-child,
 .linked .button:insensitive:first-child,
 .linked > GtkComboBox:first-child > .button {
+    border-width: 1px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 2.5px;
@@ -918,7 +889,7 @@ GtkOverlay > .button:focus:active {
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
 .linked .button:insensitive:last-child {
-    border-right-width: 1px;
+    border-left-width: 0;
     border-bottom-right-radius: 2.5px;
     border-top-right-radius: 2.5px;
     border-bottom-left-radius: 0;
