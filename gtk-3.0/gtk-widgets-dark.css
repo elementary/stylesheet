@@ -1059,15 +1059,6 @@ EggListBox {
     background-color: @selected_bg_color;
 }
 
-/***************
-* Content View *
-***************/
-
-.content-view-window {
-    background-image: none;
-    border-color: alpha (#000, 0.6);
-}
-
 /*************
 * GtkInfoBar *
 *************/
