@@ -725,6 +725,34 @@ GtkComboBox.combobox-entry .button {
 
 }
 
+.back-button,
+SwitchboardNavigationButton.button {
+    border-image: url("assets/button-back.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-width: 1px 3px 3px 11px;
+    border-radius: 0 2.5px 2.5px 0;
+    box-shadow: none;
+}
+
+.back-button:backdrop,
+SwitchboardNavigationButton.button:backdrop {
+    border-image: url("assets/button-back-backdrop.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-width: 1px 3px 3px 11px;
+    border-radius: 0 2.5px 2.5px 0;
+    box-shadow: none;
+}
+
+.back-button:active,
+.back-button:hover:active,
+.back-button:focus:active,
+SwitchboardNavigationButton.button:active,
+SwitchboardNavigationButton.button:hover:active,
+SwitchboardNavigationButton.button:focus:active {
+    border-image: url("assets/button-back-active.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-width: 1px 3px 3px 11px;
+    border-radius: 0 2.5px 2.5px 0;
+    box-shadow: none;
+}
+
 GtkLinkButton.button,
 GtkLinkButton.button:active,
 GtkLinkButton.button:focus:active {
@@ -2361,18 +2389,18 @@ GtkInfoBar .button:hover:insensitive {
  **********/
 
 GraniteWidgetsWelcome {
-	background-color: @base_color;
+    background-color: @base_color;
 }
 
 GraniteWidgetsWelcome GtkLabel {
-	color: @placeholder_text_color;
+    color: @placeholder_text_color;
     font: open sans 11;
     text-shadow: none;
 }
 
 GraniteWidgetsWelcome .h1,
 GraniteWidgetsWelcome .h3 {
-	color: alpha(@text_color, 0.8);
+    color: alpha(@text_color, 0.8);
 }
 
 /***********
