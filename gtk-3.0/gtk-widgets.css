@@ -1242,7 +1242,7 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .scrollbar:backdrop {
-    -GtkRange-trough-border: 0;
+    -GtkRange-trough-border: 5;
     -GtkRange-slider-width: 0;
 }
 
