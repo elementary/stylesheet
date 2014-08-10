@@ -1237,7 +1237,7 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .scrollbar:backdrop {
-    -GtkRange-trough-border: 0;
+    -GtkRange-trough-border: 5;
     -GtkRange-slider-width: 0;
 }
 
@@ -1267,7 +1267,8 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .scrollbars-junction,
-.scrollbar.trough {
+.scrollbar.trough,
+.scrollbar.trough:backdrop {
     background-image: none;
     background-color: @bg_color;
     background-image: none;
