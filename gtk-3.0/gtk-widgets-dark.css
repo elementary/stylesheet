@@ -1209,7 +1209,7 @@ GtkInfoBar .button:hover:insensitive {
 
 .window-frame {
     box-shadow: 0 0 0 1px alpha (#000, 0.75),
-                0 6px 20px -3px alpha (#000, 0.80);
+                0 12px 30px -6px alpha (#000, 0.80);
 }
 
 .window-frame:backdrop {
