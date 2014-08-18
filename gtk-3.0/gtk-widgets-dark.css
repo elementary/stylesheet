@@ -1197,6 +1197,18 @@ GtkInfoBar .button:hover:insensitive {
     color: shade (@title_color, 0.80);
 }
 
+.header-bar .title:backdrop,
+.header-bar .subtitle:backdrop,
+.header-bar .titlebutton:backdrop,
+.header-bar .button.image-button GtkImage:backdrop,
+.header-bar .button:backdrop,
+.header-bar .button:active:backdrop,
+.header-bar .titlebutton GtkImage:backdrop,
+.header-bar GtkLabel:backdrop {
+    color: shade (@headerbar_color, 0.60);
+    icon-shadow: none;
+}
+
 .window-frame {
     box-shadow: 0 0 0 1px alpha (#000, 0.75),
                 0 12px 30px -6px alpha (#000, 0.80);
@@ -1255,15 +1267,6 @@ GtkInfoBar .button:hover:insensitive {
 .header-bar .button.image-button GtkImage:insensitive {
     color: @insensitive_color;
     -gtk-image-effect: dim;
-}
-
-.header-bar .title:backdrop,
-.header-bar .button:backdrop,
-.header-bar .button:active:backdrop,
-.header-bar .button.image-button GtkImage:backdrop,
-.header-bar .titlebutton GtkImage:backdrop {
-    color: shade (@headerbar_color, 0.60);
-    icon-shadow: none;
 }
 
 /* Reset GtkDialog Headerbar Button Color */

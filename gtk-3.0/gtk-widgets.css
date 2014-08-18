@@ -136,6 +136,7 @@ GtkGrid:insensitive {
 .rubberband {
     background-color: alpha (@selected_bg_color, 0.35);
     border: 1px solid @selected_bg_color;
+    transition: all 600ms ease-out;
 }
 
 .dnd {
