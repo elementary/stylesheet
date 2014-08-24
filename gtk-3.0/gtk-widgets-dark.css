@@ -472,8 +472,8 @@ GtkProgressBar.trough {
 .dynamic-notebook .notebook tab .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
+    padding: 0;
     background-color:   alpha (#000, 0.02);
-
     border-color: alpha (#000, 0.29);
 }
 
