@@ -134,14 +134,17 @@ ConversationListView.view.cell:selected {
     background-color: transparent;
 }
 
-.panel-app-button {
-    -GtkMenuItem-horizontal-padding: 6px;
-}
-
 .composited-indicator {
     background-color: transparent;
     color: #fff;
-    padding: 0 2px;
+}
+
+.composited-indicator > GtkWidget > GtkWidget {
+    padding: 0 2px;    
+}
+
+.panel-app-button > GtkWidget > GtkWidget {
+    padding: 0 2px 0 4px;
 }
 
 .composited-indicator.menuitem:active,
