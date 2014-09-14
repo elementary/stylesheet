@@ -2650,6 +2650,13 @@ GtkMessageDialog .titlebar:backdrop {
     color: shade (@titlebar_color, 1.20);
 }
 
+GtkDialog .titlebar .title {
+    color: @transparent;
+    font-size: 1;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
 GtkDialog,
 GtkMessageDialog {
     box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
