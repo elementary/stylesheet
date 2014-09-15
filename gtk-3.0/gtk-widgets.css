@@ -2514,6 +2514,11 @@ GtkModelButton.button:selected {
     padding: 7px 6px 5px;
 }
 
+.maximized .titlebar,
+.tiled .titlebar {
+    border-radius: 0;
+}
+
 .titlebar.default-decoration {
     padding: 1px 3px;
     background-image: linear-gradient(to bottom,
