@@ -2652,7 +2652,7 @@ GtkMessageDialog .titlebar:backdrop {
 
 GtkDialog .titlebar .title {
     color: @transparent;
-    font-size: 1;
+    font-size: 0;
     text-shadow: none;
     icon-shadow: none;
 }
