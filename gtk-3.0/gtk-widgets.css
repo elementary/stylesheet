@@ -1440,7 +1440,9 @@ GtkCheckButton:selected:focus {
 }
 
 .check:active,
-.menuitem.check:active {
+.check:checked,
+.menuitem.check:active,
+.menuitem.check:checked {
     -gtk-icon-source: url("assets/check-active.svg"); 
 }
 
