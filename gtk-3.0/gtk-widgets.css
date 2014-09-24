@@ -1394,7 +1394,7 @@ GtkModelMenuItem GtkBox GtkImage {
 .menuitem.radio:hover,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
-    background-image: none;
+    -gtk-icon-source: none;
     background-color: transparent;
     box-shadow: none;
 }
@@ -1419,17 +1419,17 @@ GtkCheckButton:selected:focus {
 }
 
 .check {
-    background-image: url("assets/check.svg");
+    -gtk-icon-source: url("assets/check.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .check:focus {
-    background-image: url("assets/check-focus.svg"); 
+    -gtk-icon-source: url("assets/check-focus.svg"); 
 }
 
 .radio {
-    background-image: url("assets/radio.svg");
+    -gtk-icon-source: url("assets/radio.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1441,12 +1441,12 @@ GtkCheckButton:selected:focus {
 
 .check:active,
 .menuitem.check:active {
-    background-image: url("assets/check-active.svg"); 
+    -gtk-icon-source: url("assets/check-active.svg"); 
 }
 
 .radio:active,
 .menuitem.radio:active {
-    background-image: url("assets/radio-active.svg"); 
+    -gtk-icon-source: url("assets/radio-active.svg"); 
 }
 
 /***********
