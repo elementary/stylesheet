@@ -502,6 +502,7 @@ GtkProgressBar.trough {
 .dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
+    padding: 0;
     background-color:   alpha (#000, 0.02);
     border-color: alpha (#000, 0.29);
 }
@@ -1256,24 +1257,30 @@ GtkInfoBar .button:hover:insensitive {
 .header-bar .button,
 .header-bar .button:active,
 .header-bar .button.image-button GtkImage,
-.header-bar .titlebutton GtkImage {
+.header-bar .titlebutton GtkImage,
+.header-bar GtkLabel {
     color: shade (@headerbar_color, 0.40);
     text-shadow: 0 1px alpha (#fff, 0.15);
     icon-shadow: 0 1px alpha (#fff, 0.15);
 }
 
-.header-bar .button.image-button GtkImage:insensitive {
-    color: @insensitive_color;
-    -gtk-image-effect: dim;
-}
-
 .header-bar .title:backdrop,
 .header-bar .button:backdrop,
 .header-bar .button:active:backdrop,
+.header-bar .subtitle:backdrop,
+.header-bar .titlebutton:backdrop,
 .header-bar .button.image-button GtkImage:backdrop,
-.header-bar .titlebutton GtkImage:backdrop {
+.header-bar .button:backdrop,
+.header-bar .button:active:backdrop,
+.header-bar .titlebutton GtkImage:backdrop,
+.header-bar GtkLabel:backdrop {
     color: shade (@headerbar_color, 0.60);
     icon-shadow: none;
+}
+
+.header-bar .button.image-button GtkImage:insensitive {
+    color: @insensitive_color;
+    -gtk-image-effect: dim;
 }
 
 /* Reset GtkDialog Headerbar Button Color */

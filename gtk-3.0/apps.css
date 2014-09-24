@@ -36,11 +36,14 @@ BirdieWidgetsTweetList * {
     background-color: transparent;
 }
 
+<<<<<<< TREE
 .tweet {
     padding: 0;
     box-shadow: none;
 }
 
+=======
+>>>>>>> MERGE-SOURCE
 /********
 * Files *
 ********/
@@ -63,7 +66,11 @@ BirdieWidgetsTweetList * {
 *******/
 
 .gala-notification {
+<<<<<<< TREE
     border: none;
+=======
+    border-width: 0;
+>>>>>>> MERGE-SOURCE
     border-radius: 4px;
     background-color: transparent;
     background-image: linear-gradient(to bottom,
@@ -187,6 +194,17 @@ ConversationListView.view.cell:selected {
  
 .search-category-header {
         color: #808080;
+}
+
+/***************
+ * Switchboard *
+ **************/
+
+SwitchboardCategoryView .category-label {
+    color: shade (@bg_color, 0.4);
+    font: open sans 11;
+    font-weight: 600;
+    text-shadow: 0 1px alpha (#fff, 0.6);
 }
 
 /***************

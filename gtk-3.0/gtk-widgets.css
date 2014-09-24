@@ -134,6 +134,7 @@ GtkGrid:insensitive {
 .rubberband {
     background-color: alpha (@selected_bg_color, 0.35);
     border: 1px solid @selected_bg_color;
+    transition: all 600ms ease-out;
 }
 
 .dnd {
@@ -2098,7 +2099,6 @@ EggListBox {
 .source-list.view {
     background-color: shade (@bg_color, 0.92);
     color: shade (@titlebar_color, 0.50);
-
     -gtk-icon-style: regular;
 }
 
@@ -2427,7 +2427,9 @@ GraniteWidgetsWelcome .h3 {
     text-shadow: none;
 }
 
-.popover .view {
+
+.popover .view,
+GtkPopover .view {
     background-color: transparent;
 }
 
@@ -2522,6 +2524,11 @@ GtkModelButton.button:selected {
 
 .maximized .header-bar {
     padding: 7px 6px 5px;
+}
+
+.maximized .titlebar,
+.tiled .titlebar {
+    border-radius: 0;
 }
 
 .titlebar.default-decoration {
@@ -2660,6 +2667,39 @@ GtkMessageDialog .button {
     padding: 6px;
 }
 
+GtkDialog .titlebar,
+GtkMessageDialog .titlebar {
+    border: none;
+
+    background-image: none;
+    background-color: @bg_color;
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 1px 0 0 #fff;
+}
+
+GtkDialog .titlebar:backdrop,
+GtkMessageDialog .titlebar:backdrop {
+    border: none;
+
+    background-image: none;
+    background-color: @bg_color;
+
+    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
+                inset -1px 0 0 0 alpha (#fff, 0.20),
+                inset 0 1px 0 0 #fff;
+
+    color: shade (@titlebar_color, 1.20);
+}
+
+GtkDialog .titlebar .title {
+    color: @transparent;
+    font-size: 0;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
 GtkDialog,
 GtkMessageDialog {
     box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
@@ -2679,6 +2719,10 @@ GtkDialog .toolbar {
 .h1 { font: open sans 24; }
 .h2 { font: open sans light 18; }
 .h3 { font: open sans 12; }
+=======
+.h1 { font: open sans 24px; }
+.h2 { font: open sans light 18px; }
+.h3 { font: open sans 12px; }
 
 @import url("granite-widgets.css");
 @import url("apps.css");
