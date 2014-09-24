@@ -700,7 +700,10 @@ GtkComboBox.combobox-entry .button {
 
 .button:active,
 .button:hover:active,
-.button:focus:active {
+.button:focus:active,
+.button:checked,
+.button:hover:checked,
+.button:focus:checked {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-color: alpha (#000, 0.25);
@@ -1447,7 +1450,9 @@ GtkCheckButton:selected:focus {
 }
 
 .radio:active,
-.menuitem.radio:active {
+.radio:checked,
+.menuitem.radio:active,
+.menuitem.radio:checked {
     -gtk-icon-source: url("assets/radio-active.svg"); 
 }
 
@@ -1557,7 +1562,10 @@ GtkCheckButton:selected:focus {
 
 .header-bar .button.image-button:active,
 .header-bar .button.image-button:hover:active,
-.header-bar .button.image-button:focus:active {
+.header-bar .button.image-button:focus:active,
+.header-bar .button.image-button:checked,
+.header-bar .button.image-button:hover:checked,
+.header-bar .button.image-button:focus:checked {
     background-color: alpha (#000, 0.10);    
     border: 1px solid @border_color;
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
