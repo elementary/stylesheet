@@ -36,14 +36,11 @@ BirdieWidgetsTweetList * {
     background-color: transparent;
 }
 
-<<<<<<< TREE
 .tweet {
     padding: 0;
     box-shadow: none;
 }
 
-=======
->>>>>>> MERGE-SOURCE
 /********
 * Files *
 ********/
@@ -66,11 +63,7 @@ BirdieWidgetsTweetList * {
 *******/
 
 .gala-notification {
-<<<<<<< TREE
     border: none;
-=======
-    border-width: 0;
->>>>>>> MERGE-SOURCE
     border-radius: 4px;
     background-color: transparent;
     background-image: linear-gradient(to bottom,

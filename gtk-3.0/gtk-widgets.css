@@ -2718,10 +2718,6 @@ GtkDialog .toolbar {
 * Text Styles *
 **************/
 
-.h1 { font: open sans 24; }
-.h2 { font: open sans light 18; }
-.h3 { font: open sans 12; }
-=======
 .h1 { font: open sans 24px; }
 .h2 { font: open sans light 18px; }
 .h3 { font: open sans 12px; }
