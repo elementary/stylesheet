@@ -806,6 +806,15 @@ GtkOverlay > .button:focus:active {
     padding: 0 3px 0 3px;
 }
 
+.secondary-toolbar.toolbar .button.flat,
+.secondary-toolbar.toolbar .button.flat:backdrop,
+.secondary-toolbar.toolbar .button.flat:insensitive {
+    border-color: transparent;
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+}
+
 .secondary-toolbar.toolbar .button:hover {
     padding: 0 3px 0 3px;
 
