@@ -496,9 +496,9 @@ GtkProgressBar.trough {
                 0 0 0 1px shade (@titlebar_color, 0.56);
 }
 
-.dynamic-notebook .notebook tab .button,
-.dynamic-notebook .notebook tab .button:hover,
-.dynamic-notebook .notebook tab .button:hover:active,
+.dynamic-notebook .notebook tab > .button,
+.dynamic-notebook .notebook tab > .button:hover,
+.dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
     padding: 0;
@@ -506,7 +506,7 @@ GtkProgressBar.trough {
     border-color: alpha (#000, 0.29);
 }
 
-.dynamic-notebook .notebook tab .button:hover:active,
+.dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab .button:hover:active {
     background-color:   alpha (#000, 0.10);
 }
@@ -518,13 +518,6 @@ GtkProgressBar.trough {
 GtkComboBox {
     -GtkComboBox-arrow-scaling: 0.5;
     -GtkComboBox-shadow-type: none;
-}
-
-GtkComboBox .separator {
-    /* always disable separators */
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
 }
 
 GtkComboBox.combobox-entry .entry:last-child,
@@ -571,10 +564,9 @@ GtkComboBox.combobox-entry .button:last-child {
 .content-view .menu,
 .menu,
 .popup {
-    background-color: @base_color;
-    background-image: none;
-
-    border-color: alpha (#000, 0.4);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
+                inset 0 1px 0 0 alpha (#fff, 0.07),
+                inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
 .menu .menuitem:active,
