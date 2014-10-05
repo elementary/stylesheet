@@ -94,6 +94,26 @@
     text-shadow: 0 1px alpha (#000, 0.4);
 }
 
+.header-bar .entry,
+.header-bar .entry:focus,
+.header-bar .entry:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (#fff, 0.93),
+                                  shade (#fff, 0.97)
+                                  );
+
+    border-color: alpha (#000, 0.25);
+
+    box-shadow: inset 0 1px 0 0 alpha (#000, 0.08),
+                inset 0 0 0 1px alpha (#000, 0.04),
+                0 1px 0 0 alpha (#fff, 0.20);
+                
+    color: #333;
+
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (#fff, 0.4);
+}
+
 .entry.progressbar,
 .entry.progressbar:focus {
     background-image: linear-gradient(to bottom,
@@ -314,17 +334,26 @@ GtkProgressBar.trough {
     text-shadow: 0 1px 2px shade (@selected_bg_color, 0.4);
 }
 
+.button.flat,
+.button.flat:backdrop,
+.button.flat:insensitive {
+    border-color: transparent;
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+}
+
 .button:active,
 .button:hover:active,
 .button:focus:active {
     color: shade (@text_color, 0.8);
 
     background-color: alpha (#000, 0.06);
-	background-image: none;
+    background-image: none;
     border-color: alpha (#000, 0.40);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.10);
-                
+
     border-color: alpha (#000, 0.37);
 
     text-shadow: 0 1px alpha (#000, 0.4);
@@ -540,7 +569,8 @@ GtkComboBox.combobox-entry .button:last-child {
 ********/
 
 .content-view .menu,
-.menu {
+.menu,
+.popup {
     background-color: @base_color;
     background-image: none;
 
@@ -548,7 +578,9 @@ GtkComboBox.combobox-entry .button:last-child {
 }
 
 .menu .menuitem:active,
-.menu .menuitem:hover {
+.menu .menuitem:hover,
+.popup .menuitem:active,
+.popup .menuitem:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   shade (@selected_bg_color, 0.98)
@@ -1038,15 +1070,6 @@ EggListBox {
 
 .list-row:selected {
     background-color: @selected_bg_color;
-}
-
-/***************
-* Content View *
-***************/
-
-.content-view-window {
-    background-image: none;
-    border-color: alpha (#000, 0.6);
 }
 
 /*************
