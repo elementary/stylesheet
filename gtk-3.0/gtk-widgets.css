@@ -2453,6 +2453,8 @@ GraniteWidgetsWelcome .h3 {
  * Popover *
  **********/
 
+.popover,
+.popover.osd,
 GtkPopover {
     border-radius: 5px;
     background-clip: border-box;
@@ -2468,6 +2470,7 @@ GtkPopover {
     text-shadow: none;
 }
 
+.popover .view,
 GtkPopover .view {
     background-color: transparent;
 }
@@ -2600,7 +2603,6 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     color: shade (@titlebar_color, 1.20);
 }
 
-
 .titlebar .separator {
     color: transparent;
 }
@@ -2707,7 +2709,6 @@ GtkMessageDialog {
     box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
                 inset -1px 0 0 0 alpha (#fff, 0.20),
                 inset 0 -1px 0 0 alpha (#fff, 0.30);
-
 }
 
 GtkDialog .toolbar {
