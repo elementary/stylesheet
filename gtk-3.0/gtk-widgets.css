@@ -1711,11 +1711,11 @@ GtkPaned .inline-toolbar.toolbar {
     color: @insensitive_color;
 }
 
-
 /***************
  * Search bars *
  ***************/
 
+EggFindBar.toolbar,
 .search-bar {
     border-width: 0 0 1px;
     border-style: solid;
@@ -1734,6 +1734,19 @@ GtkPaned .inline-toolbar.toolbar {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+EggFindBar.toolbar:backdrop,
+.search-bar:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.98),
+                                  shade (@titlebar_color, 0.94)
+                                  );
+    border-color: shade (@titlebar_color, 0.70);
+    
+    color: @insensitive_color;
+    
+    -gtk-image-effect: dim;
 }
 
 GtkDialog .search-bar {
