@@ -304,6 +304,7 @@ GtkGrid:insensitive {
  /*******************
  * Symbolic images *
  *******************/
+
 .image {
     color: @internal_element_color;
 }
