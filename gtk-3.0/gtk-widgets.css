@@ -2243,7 +2243,8 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
                                   ) 1 1 1 1;
 }
 
-.source-list.category-expander {
+.source-list.category-expander,
+.source-list.category-expander:backdrop {
     color: transparent;
 }
 
