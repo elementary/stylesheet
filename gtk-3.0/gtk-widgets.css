@@ -1104,8 +1104,8 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .dynamic-notebook .notebook tab:active:backdrop {
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.94),
-                                  shade (@titlebar_color, 0.90)
+                                  shade (@titlebar_color, 0.98),
+                                  shade (@titlebar_color, 0.96)
                                   );
     border-color: shade (@titlebar_color, 0.70);
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
