@@ -2221,12 +2221,12 @@ GtkDialog .sidebar .view:prelight:selected {
 .source-list.view:selected:backdrop,
 .source-list.view:prelight:selected:backdrop {
     background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.08),
-                                  alpha (#000, 0.04)
+                                  alpha (#000, 0.04),
+                                  alpha (#000, 0.03)
                                   );
 
     border-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.19),
+                                  alpha (#000, 0.15),
                                   alpha (#fff, 0.25)
                                   ) 1 1 1 1;
 }
@@ -2250,6 +2250,11 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
     -GtkPaned-handle-size: 1;
     background-image: none;
     background-color: shade (@titlebar_color, 0.75);
+}
+
+.source-list.category-expander,
+.source-list.category-expander:backdrop {
+    color: transparent;
 }
 
 .sidebar .scrollbar.trough,
