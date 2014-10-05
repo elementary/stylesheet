@@ -714,10 +714,7 @@ GtkComboBox.combobox-entry .button {
 
 .button:active,
 .button:hover:active,
-.button:focus:active,
-.button:checked,
-.button:hover:checked,
-.button:focus:checked {
+.button:focus:active {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-color: alpha (#000, 0.25);
