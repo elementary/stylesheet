@@ -1939,6 +1939,15 @@ GtkIconView.view.cell:selected:focus {
     background-color: @base_color;
 }
 
+.list-row.button {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.list-row.button:selected,
+.list-row.button:selected:backdrop,
 GtkListBoxRow:selected,
 GtkListBoxRow:selected:backdrop,
 .view:selected {
@@ -1947,6 +1956,7 @@ GtkListBoxRow:selected:backdrop,
 }
 
 GtkListBoxRow:selected:focus,
+.list-row.button:selected:focus,
 .view:selected:focus {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
@@ -2159,16 +2169,10 @@ GtkDialog .sidebar GtkScrolledWindow {
     -GtkTreeView-vertical-separator: 6px;
 }
 
-.source-list.category-expander {
-    color: transparent;
-}
-
 .sidebar .view:prelight,
 .source-list.view:prelight {
     background-color: shade (@titlebar_color, 1.10);
 }
-
-
 
 .sidebar .view:selected,
 .sidebar .view:prelight:selected,
