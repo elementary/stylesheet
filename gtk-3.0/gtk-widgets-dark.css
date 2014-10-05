@@ -1265,8 +1265,6 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .header-bar .title:backdrop,
-.header-bar .button:backdrop,
-.header-bar .button:active:backdrop,
 .header-bar .subtitle:backdrop,
 .header-bar .titlebutton:backdrop,
 .header-bar .button.image-button GtkImage:backdrop,
