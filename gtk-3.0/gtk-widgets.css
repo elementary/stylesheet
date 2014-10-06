@@ -1361,9 +1361,13 @@ GtkTreeMenu .menuitem {
 }
 
 .menu .menuitem GtkLabel,
-.menu .menuitem GtkImage  {
-    padding: 0 3px 0 3px;
+.menu .menuitem GtkImage {
+    padding: 0 3px;
     -gtk-icon-style: symbolic;
+}
+
+.menu .menuitem GtkImage:last-child {
+    padding-right: 6px;
 }
 
 .menu .menuitem:active,
@@ -1408,9 +1412,9 @@ GtkModelMenuItem GtkBox GtkImage {
     padding-right: 6px;
 }
 
-.menuitem.separator {
+GtkSeparatorMenuItem {
     color: @menu_separator;
-    -GtkMenuItem-horizontal-padding: 0;
+    padding: 4px 0 !important;
 }
 
 .menuitem.check,
