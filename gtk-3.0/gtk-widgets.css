@@ -1366,6 +1366,7 @@ GtkTreeMenu .menuitem {
     -gtk-icon-style: symbolic;
 }
 
+/* Work around shitty padding in sound menu */
 .menu .menuitem GtkImage:last-child {
     padding-right: 12px;
 }
