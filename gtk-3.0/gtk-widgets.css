@@ -139,6 +139,10 @@ GtkGrid:insensitive {
     transition: all 600ms ease-out;
 }
 
+GtkPaned {
+    margin: 8px;
+}
+
 .dnd {
     background-color: alpha (@selected_bg_color, 0.4);
     background-image: none;
@@ -1004,7 +1008,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 .dynamic-notebook .notebook.header {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.10),
-                                  alpha (#000, 0.00) 15%
+                                  alpha (#000, 0.00) 3px
                                   ),
                         linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.8),
@@ -1020,7 +1024,7 @@ GtkOverlay .linked .button:insensitive:last-child {
     background-color: shade (@titlebar_color, 0.96);
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.08),
-                                  alpha (#000, 0.00) 12%
+                                  alpha (#000, 0.00) 3px
                                   );
 
     border-color: shade (@titlebar_color, 0.70);
