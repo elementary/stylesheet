@@ -353,7 +353,7 @@ GtkProgressBar.trough {
     border-color: alpha (#000, 0.40);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.10),
-                0 1px 0 0 alpha (#fff, 0.05);;
+                0 1px 0 0 alpha (#fff, 0.05);
 
     border-color: alpha (#000, 0.37);
 
