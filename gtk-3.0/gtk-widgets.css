@@ -1413,9 +1413,9 @@ GtkModelMenuItem GtkBox GtkImage {
     padding-right: 6px;
 }
 
-GtkSeparatorMenuItem {
+.menuitem.separator {
     color: @menu_separator;
-    padding: 4px 0 !important;
+    padding: 4px 0;
 }
 
 .menuitem.check,
