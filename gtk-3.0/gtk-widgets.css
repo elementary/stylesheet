@@ -1367,7 +1367,7 @@ GtkTreeMenu .menuitem {
 }
 
 .menu .menuitem GtkImage:last-child {
-    padding-right: 6px;
+    padding-right: 12px;
 }
 
 .menu .menuitem:active,
