@@ -640,6 +640,9 @@ GraniteWidgetsStaticNotebook .frame {
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
     padding: 3px 6px;
+    -GtkButton-image-spacing: 4;
+    -GtkButton-interior-focus: true;
+    -GtkButton-default-border: 0;
 }
 
 .button {
