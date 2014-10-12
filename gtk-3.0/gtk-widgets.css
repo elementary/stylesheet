@@ -1940,11 +1940,7 @@ GtkTreeView .entry {
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    background-color: alpha (#000, 0.18);
-    border-color: shade (@base_color, 0.74);
-    border-radius: 4px;
-    color: @text_color;
-    box-shadow: inset 0 0 0 1px @inset_dark_color;
+    background-color: transparent;
 }
 
 .view {
