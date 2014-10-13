@@ -2475,6 +2475,7 @@ GtkPopover {
     border-radius: 5px;
     background-clip: border-box;
     background-color: @bg_color;
+    background-image: none;
 
     border-color: alpha (#000, 0.3);
     border-width: 1px;
