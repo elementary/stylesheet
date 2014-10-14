@@ -154,7 +154,9 @@ ConversationListView.view.cell:selected {
 .app:hover {
     background-color: alpha (#000, 0.08);
 }
-.app:focus {
+
+.app:focus,
+.app:focus:hover {
     background-color: alpha (#000, 0.20);
 }
  
@@ -171,27 +173,12 @@ ConversationListView.view.cell:selected {
     text-shadow: 0 1px 1px alpha (#000, 0.25);
     icon-shadow: 0 1px 1px alpha (#000, 0.25);
 }
- 
-.search-entry-large,
-.search-entry-large:focus {
-        border: none;
-        font: open sans light 18;
-        padding: 8px;
-        background-image: none;
-        background-color: transparent;
-        box-shadow: none;
-        border-radius: 0;
-}
- 
-.search-category-header {
-        color: #808080;
-}
 
 /***************
  * Switchboard *
  **************/
 
-SwitchboardCategoryView .category-label {
+.category-label {
     color: shade (@bg_color, 0.4);
     font: open sans 11;
     font-weight: 600;
