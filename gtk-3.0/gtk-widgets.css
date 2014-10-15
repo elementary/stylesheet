@@ -1361,6 +1361,7 @@ GtkTreeMenu .menuitem {
     padding: 4px 0;
     text-shadow: none;
     icon-shadow: none;
+    border-width: 1px 0;
 }
 
 .menu .menuitem GtkLabel,
@@ -1384,7 +1385,6 @@ GtkTreeMenu .menuitem {
                                   );
 
     border-style: solid;
-    border-width: 1px 0;
     border-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.18),
                                   shade (@selected_bg_color, 0.88)
@@ -2489,6 +2489,14 @@ GtkPopover {
 .popover .view,
 GtkPopover .view {
     background-color: transparent;
+}
+
+.popover.menu {
+    background-image: none;
+}
+
+.popover.menu .menuitem {
+    border-radius: 0;
 }
 
 GtkModelButton.button {
