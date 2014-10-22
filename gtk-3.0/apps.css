@@ -129,11 +129,11 @@ ConversationListView.view.cell:selected {
     color: #fff;
 }
 
-.composited-indicator > GtkWidget > GtkWidget {
+.composited-indicator > GtkWidget > GtkWidget:first-child {
     padding: 0 2px;    
 }
 
-.panel-app-button > GtkWidget > GtkWidget {
+.panel-app-button > GtkWidget > GtkWidget:first-child {
     padding: 0 2px 0 4px;
 }
 
