@@ -1507,6 +1507,18 @@ GtkCheckButton:selected:focus {
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
+.toolbar:backdrop {
+    background-image: linear-gradient(to bottom,
+                              @titlebar_color,
+                              shade (@titlebar_color, 0.98)
+                              );
+    border-color: shade (@titlebar_color, 0.64);
+
+    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.40);
+    
+    -gtk-image-effect: dim;
+}
+
 .toolbar .separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
