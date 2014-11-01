@@ -569,7 +569,7 @@ GtkComboBox.combobox-entry .button:last-child {
                 inset 0 1px 0 0 alpha (#fff, 0.07),
                 inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
-
+z
 .menu .menuitem:active,
 .menu .menuitem:hover,
 .popup .menuitem:active,
@@ -1258,7 +1258,8 @@ GtkInfoBar .button:hover:insensitive {
 .header-bar .button:active,
 .header-bar .button.image-button GtkImage,
 .header-bar .titlebutton GtkImage,
-.header-bar GtkLabel {
+.header-bar > GtkLabel,
+.header-bar > GtkBox GtkLabel {
     color: shade (@headerbar_color, 0.40);
     text-shadow: 0 1px alpha (#fff, 0.15);
     icon-shadow: 0 1px alpha (#fff, 0.15);
