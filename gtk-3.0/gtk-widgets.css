@@ -2675,15 +2675,12 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     margin: 8px;
 }
 
-.window-frame.dialog {
-    border-radius: 4px;
-}
-
 .window-frame.menu.csd,
 .window-frame.popup.csd {
     border-radius: 4px;
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
-                0 2px 7px 0 alpha (#000, 0.35);
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
     margin: 0;
 }
 
@@ -2694,8 +2691,19 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 6px 10px -3px alpha (#000, 0.90);
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
+}
+
+GtkDialog.window-frame,
+GtkDialog.window-frame:backdrop,
+.window-frame.dialog,
+.window-frame.dialog:backdrop {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 10px 20px alpha (#000, 0.19),
+                0 6px 6px alpha (#000, 0.23);
 }
 
 /***************
@@ -2704,11 +2712,11 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 
 GtkDialog.csd,
 GtkMessageDialog.csd {
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 GtkDialog.background {
-	border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
 }
 
 .prompt,
