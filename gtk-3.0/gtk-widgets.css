@@ -609,6 +609,7 @@ GtkScrolledWindow.frame {
 
 /* avoid borders when a viewport is
  * packed into a ScrolledWindow, Pane, Static Notebook, or Popover */
+.frame.flat,
 GtkScrolledWindow GtkViewport.frame,
 GtkPaned .frame,
 GraniteWidgetsPopOver .frame,
@@ -1121,12 +1122,10 @@ GtkOverlay .linked .button:insensitive:last-child {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-    
-    border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook.frame {
-   /*FIXME: Move the border down here so devs have more control*/
+    border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook GtkViewport {
