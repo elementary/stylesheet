@@ -1698,7 +1698,8 @@ GtkDialog .action-bar {
                 inset 0 -1px 0 0 @inset_dark_color;
 }
 
-GtkPaned .inline-toolbar.toolbar {
+.sidebar.inline-toolbar.toolbar,
+.source-list.inline-toolbar.toolbar {
     border-width: 1px 0 0 0;
     /*FIXME: This should probably use alpha just in case */
     background-image: linear-gradient(to bottom,
