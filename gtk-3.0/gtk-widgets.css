@@ -1703,6 +1703,10 @@ GtkDialog .action-bar {
                 inset 0 -1px 0 0 @inset_dark_color;
 }
 
+GtkPaned .inline-toolbar.toolbar {
+    border-width: 1px 0 0 0;
+}
+
 .sidebar.inline-toolbar.toolbar,
 .source-list.inline-toolbar.toolbar {
     border-width: 1px 0 0 0;
