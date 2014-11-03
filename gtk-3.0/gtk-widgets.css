@@ -2089,12 +2089,16 @@ column-header .button:hover:backdrop {
 * List Boxes *
 *************/
 
-EggListBox {
+EggListBox,
+GtkListBox,
+.list {
     background-color: @base_color;
 }
 
-.list {
-    background-color: @base_color;
+GtkPopover EggListBox,
+GtkPopover GtkListBox,
+GtkPopover .list {
+    background-color: transparent;
 }
 
 .list-row:selected {
