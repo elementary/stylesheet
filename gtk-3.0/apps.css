@@ -124,6 +124,14 @@ ConversationListView.view.cell:selected {
     box-shadow: none;
 }
 
+.panel .menu .window-frame.menu.csd,
+.panel .menu .window-frame.popup.csd {
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 10px 20px alpha (#000, 0.19),
+                0 6px 6px alpha (#000, 0.23);
+}
+
+
 .panel-shadow {
     background-image: none;
     background-color: transparent;

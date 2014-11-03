@@ -2680,6 +2680,13 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     margin: 0;
 }
 
+.menu .window-frame.menu.csd,
+.menu .window-frame.popup.csd {
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 10px 20px alpha (#000, 0.19),
+                0 6px 6px alpha (#000, 0.23);
+}
+
 .window-frame.tooltip.csd {
     border-radius: 3px;
     box-shadow: none;
