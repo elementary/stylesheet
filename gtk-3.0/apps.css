@@ -132,19 +132,13 @@ ConversationListView.view.cell:selected {
                 0 6px 6px alpha (#000, 0.23);
 }
 
-
-.panel-shadow {
-    background-image: none;
-    background-color: transparent;
-}
-
 .composited-indicator {
     background-color: transparent;
     color: #fff;
 }
 
 .composited-indicator > GtkWidget > GtkWidget:first-child {
-    padding: 0 2px;    
+    padding: 0 2px;
 }
 
 .panel-app-button > GtkWidget > GtkWidget:first-child {
