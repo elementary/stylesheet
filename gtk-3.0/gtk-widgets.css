@@ -794,7 +794,7 @@ GtkOverlay > .button:focus {
     color: #fff;
 
     box-shadow: 0 1px 0 1px alpha (#000, 0.30);
-    text-shadow: 0 1px 0 1px alpha (#000, 0.30);
+    text-shadow: 0 1px 0 alpha (#000, 0.30);
 
     background-clip: border-box;
 }
