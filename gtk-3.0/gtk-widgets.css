@@ -2082,6 +2082,8 @@ EggListBox {
 
 .list-row:selected {
     background-color: @selected_bg_color;
+    icon-shadow: none;
+    text-shadow: none;
 }
 
 /***************
