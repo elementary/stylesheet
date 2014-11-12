@@ -112,6 +112,11 @@ ConversationListView.view.cell:selected {
     icon-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
+.panel-shadow {
+    background-image: none;
+    background-color: transparent;
+}
+
 .panel .menu {
     box-shadow: none;
 }
