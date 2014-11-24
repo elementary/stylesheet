@@ -177,6 +177,7 @@ GtkPaned {
 GraniteWidgetsThinPaned {
     background-color: transparent;
     background-image: none;
+    margin: 0;
 }
 
 .toolbar .pane-separator,
