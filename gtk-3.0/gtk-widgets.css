@@ -1167,7 +1167,7 @@ GtkOverlay .linked .button:insensitive:last-child {
                                   shade (@titlebar_color, 1.06)
                                   );
 
-        color: @text_color;
+    color: @text_color;
 }
 
 .dynamic-notebook .notebook tab > .button,
@@ -1184,6 +1184,23 @@ GtkOverlay .linked .button:insensitive:last-child {
 .dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab > .button:hover:active {
     background-color:   alpha (#000, 0.10);
+}
+
+/*Label Trickery*/
+
+.notebook tab GtkLabel {
+    color: alpha(@text_color, 0.75);
+}
+
+.notebook tab:active GtkLabel,
+.notebook .active-page,
+.notebook tab .active-page GtkLabel {
+    color: @text_color;
+}
+
+.notebook tab:backdrop GtkLabel,
+.notebook tab GtkLabel:backdrop {
+    color: alpha(@text_color, 0.75);
 }
 
 /*************
