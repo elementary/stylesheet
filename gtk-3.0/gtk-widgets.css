@@ -1190,6 +1190,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .notebook tab GtkLabel {
     color: alpha(@text_color, 0.75);
+    padding: 0 6px;
 }
 
 .notebook tab:active GtkLabel,
