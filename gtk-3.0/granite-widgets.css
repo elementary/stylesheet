@@ -33,14 +33,7 @@ GraniteWidgetsPopOver {
 }
 
 .popover_bg {
-    background-color: transparent;
-
-    background-image: linear-gradient(to bottom,
-                                  alpha (#f9f9f9, 0.97),
-                                  alpha (#f9f9f9, 0.97) 80%,
-                                  alpha (#f0f0f0, 0.97)
-                                  );
-
+    background-color: @bg_color;
     border: 1px solid alpha (#000, 0.3);
 }
 

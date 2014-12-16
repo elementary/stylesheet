@@ -69,13 +69,14 @@ BirdieWidgetsTweetList * {
     background-image: linear-gradient(to bottom,
                                   alpha (@bg_color, 0.98),
                                   alpha (@bg_color, 0.98) 80%,
-                                  alpha (shade(@bg_color, 0.92), 0.98)
+                                  alpha (shade(@bg_color, 0.94), 0.98)
                                   );
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
                 inset 0 1px 0 0 alpha (#fff, 0.90),
                 inset 0 -1px 0 0 alpha (#fff, 0.30),
                 0 0 0 1px alpha (#000, 0.20),
-                0 2px 7px 0 alpha (#000, 0.35);
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
 }
 
 /********
@@ -111,6 +112,11 @@ ConversationListView.view.cell:selected {
     icon-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
+.panel-shadow {
+    background-image: none;
+    background-color: transparent;
+}
+
 .panel .menu {
     box-shadow: none;
 }
@@ -119,18 +125,13 @@ ConversationListView.view.cell:selected {
     font-weight: normal;
 }
 
-.panel-shadow {
-    background-image: none;
-    background-color: transparent;
-}
-
 .composited-indicator {
     background-color: transparent;
     color: #fff;
 }
 
 .composited-indicator > GtkWidget > GtkWidget:first-child {
-    padding: 0 2px;    
+    padding: 0 2px;
 }
 
 .panel-app-button > GtkWidget > GtkWidget:first-child {

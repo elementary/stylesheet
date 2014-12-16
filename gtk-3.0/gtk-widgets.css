@@ -1173,7 +1173,7 @@ GtkOverlay .linked .button:insensitive:last-child {
                                   shade (@titlebar_color, 1.06)
                                   );
 
-        color: @text_color;
+    color: @text_color;
 }
 
 .dynamic-notebook .notebook tab > .button,
@@ -1190,6 +1190,24 @@ GtkOverlay .linked .button:insensitive:last-child {
 .dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab > .button:hover:active {
     background-color:   alpha (#000, 0.10);
+}
+
+/*Label Trickery*/
+
+.notebook tab GtkLabel {
+    color: alpha(@text_color, 0.75);
+    padding: 0 6px;
+}
+
+.notebook tab:active GtkLabel,
+.notebook .active-page,
+.notebook tab .active-page GtkLabel {
+    color: @text_color;
+}
+
+.notebook tab:backdrop GtkLabel,
+.notebook tab GtkLabel:backdrop {
+    color: alpha(@text_color, 0.75);
 }
 
 /*************
@@ -1974,9 +1992,11 @@ GtkIconView.view.cell:selected:focus {
 
 .list-row.button:selected,
 .list-row.button:selected:backdrop,
+.popover GtkTreeView.view row:selected,
+.view:selected,
 GtkListBoxRow:selected,
 GtkListBoxRow:selected:backdrop,
-.view:selected {
+GtkPopover GtkTreeView.view row:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
 }
@@ -2103,6 +2123,8 @@ GtkPopover .list {
 
 .list-row:selected {
     background-color: @selected_bg_color;
+    icon-shadow: none;
+    text-shadow: none;
 }
 
 /***************
@@ -2699,8 +2721,9 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 0 0 1px alpha (#000, 0.3),
-                0 6px 10px -3px alpha (#000, 0.90);
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 3px 6px alpha (#000, 0.16),
+                0 3px 6px alpha (#000, 0.23);
 }
 
 /***************
