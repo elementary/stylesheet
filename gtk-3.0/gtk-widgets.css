@@ -216,16 +216,6 @@ GraniteWidgetsThinPaned {
     -gtk-icon-style: symbolic;
 }
 
-
-/* Rounded Search Entries 
-
-GtkSearchEntry.entry,
-GraniteWidgetsSearchBar.entry {
-    border-radius: 12px;
-}
-
-*/
-
 .entry:selected,
 .entry:selected:focus {
     background-color: @selected_bg_color;
@@ -1985,8 +1975,8 @@ GtkIconView.view.cell:selected:focus {
 
 .list-row.button:selected,
 .list-row.button:selected:backdrop,
-.view:selected,
 .popover GtkTreeView.view row:selected,
+.view:selected,
 GtkPopover GtkTreeView.view row:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
