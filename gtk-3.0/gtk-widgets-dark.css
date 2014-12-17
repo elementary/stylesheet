@@ -1199,7 +1199,6 @@ GtkInfoBar .button:hover:insensitive {
 }
 
 .titlebar .titlebutton {
-    color: alpha (#fff, 0.50);
     background: none;
 
     border-color: transparent;

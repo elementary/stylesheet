@@ -1610,7 +1610,6 @@ GtkCheckButton:selected:focus {
     box-shadow: none;
 }
 
-.titlebar .button.image-button GtkImage,
 .toolbar .button.image-button GtkImage {
     color: shade (@title_color, 0.75);
     icon-shadow: 0 1px @title_shadow_color;
@@ -2588,7 +2587,7 @@ GtkModelButton.button:selected {
     background-color: shade (@colorPrimary, 1.10);
     border-color: shade (@colorPrimary, 0.64);
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
+    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.40);
     
     -gtk-image-effect: dim;
 }
@@ -2651,11 +2650,17 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     color: transparent;
 }
 
-.titlebar .title {
+.titlebar .title,
+.titlebar .subtitle,
+.titlebar .titlebutton,
+.titlebar .button.image-button GtkImage {
     color: @textColorPrimary;
+    text-shadow: 0 1px @textColorPrimaryShadow;
+    icon-shadow: 0 1px @textColorPrimaryShadow;
+}
+
+.titlebar .title {
     font: Bold 9;
-    text-shadow: 0 1px @title_shadow_color;
-    icon-shadow: 0 1px @title_shadow_color;
 }
 
 .titlebar .subtitle {
@@ -2666,8 +2671,6 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 }
 
 .titlebar .titlebutton {
-    icon-shadow: 0 1px @title_shadow_color;
-    color: alpha (#000, 0.50);
     background: none;
     padding: 3px;
 
@@ -2679,10 +2682,20 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     box-shadow: none;
 }
 
+.titlebar .title:insensitive,
+.titlebar .subtitle:insensitive,
+.titlebar .titlebutton:insensitive,
+.titlebar .button.image-button GtkImage:insensitive {
+    color: shade (@textColorPrimary, 1.50);
+    text-shadow: 0 1px @textColorPrimaryShadow;
+    icon-shadow: 0 1px @textColorPrimaryShadow;
+}
+
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
-.titlebar .titlebutton:backdrop {
-    color: shade (@title_color, 1.20);
+.titlebar .titlebutton:backdrop,
+.titlebar .button.image-button GtkImage:backdrop {
+    color: shade (@textColorPrimary, 1.30);
     text-shadow: none;
     icon-shadow: none;
 }

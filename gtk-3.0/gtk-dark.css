@@ -18,8 +18,9 @@
 
 /* Brand Colors */
 @define-color colorPrimary @titlebar_color;
-@define-color textColorPrimary shade (@colorPrimary, 0.55);
 @define-color colorAccent @selected_bg_color;
+@define-color textColorPrimary shade (@text_color, 0.90);
+@define-color textColorPrimaryShadow alpha (#000, 0.6);
 
 /* Default color scheme */
 @define-color base_color #383e41;
