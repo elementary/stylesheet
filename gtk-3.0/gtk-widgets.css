@@ -1977,6 +1977,8 @@ GtkIconView.view.cell:selected:focus {
 .list-row.button:selected:backdrop,
 .popover GtkTreeView.view row:selected,
 .view:selected,
+GtkListBoxRow:selected,
+GtkListBoxRow:selected:backdrop,
 GtkPopover GtkTreeView.view row:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
@@ -2089,12 +2091,16 @@ column-header .button:hover:backdrop {
 * List Boxes *
 *************/
 
-EggListBox {
+EggListBox,
+GtkListBox,
+.list {
     background-color: @base_color;
 }
 
-.list {
-    background-color: @base_color;
+GtkPopover EggListBox,
+GtkPopover GtkListBox,
+GtkPopover .list {
+    background-color: transparent;
 }
 
 .list-row:selected {
