@@ -2563,10 +2563,10 @@ GtkModelButton.button:selected {
 
 .titlebar {
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.04),
-                                  shade (@titlebar_color, 0.84)
+                                  shade (@colorPrimary, 1.04),
+                                  shade (@colorPrimary, 0.84)
                                   );
-    border-color: shade (@titlebar_color, 0.56);
+    border-color: shade (@colorPrimary, 0.56);
     border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
@@ -2574,19 +2574,19 @@ GtkModelButton.button:selected {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
-    box-shadow: inset 0 0 0 1px alpha (shade (@titlebar_color, 1.4), 0.20),
-                inset 0 1px 0 0 alpha (shade (@titlebar_color, 1.4), 0.60);
+    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.20),
+                inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.60);
 
     padding: 0 3px;
 }
 
 .titlebar:backdrop {
     background-image: linear-gradient(to bottom,
-                              shade (@titlebar_color, 1.08),
-                              shade (@titlebar_color, 0.98)
+                              shade (@colorPrimary, 1.08),
+                              shade (@colorPrimary, 0.98)
                               );
-    background-color: shade (@titlebar_color, 1.10);
-    border-color: shade (@titlebar_color, 0.64);
+    background-color: shade (@colorPrimary, 1.10);
+    border-color: shade (@colorPrimary, 0.64);
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.40);
     
@@ -2652,7 +2652,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 }
 
 .titlebar .title {
-    color: @title_color;
+    color: @textColorPrimary;
     font: Bold 9;
     text-shadow: 0 1px @title_shadow_color;
     icon-shadow: 0 1px @title_shadow_color;

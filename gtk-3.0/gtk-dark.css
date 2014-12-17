@@ -16,6 +16,11 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+/* Brand Colors */
+@define-color colorPrimary @titlebar_color;
+@define-color textColorPrimary shade (@colorPrimary, 0.55);
+@define-color colorAccent @selected_bg_color;
+
 /* Default color scheme */
 @define-color base_color #383e41;
 @define-color bg_color shade (@base_color, 0.96);
