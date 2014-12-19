@@ -16,3 +16,13 @@ Breaks: libgtk-3-common (<< 3.4.0)
 Description: the elementary GTK theme
  The official elementary GTK theme, elementary-theme.
  Supports GTK+ versions 2 and 3.
+
+Package: plank-theme-pantheon
+Architecture: all
+Depends: elementary-theme
+Description: transitional dummy package
+ This is a transitional dummy package to ease the migration from
+ the standalone Plank theme package for elementary OS now that
+ it is contained in elementary-theme.
+ .
+ You can remove this package safely.
