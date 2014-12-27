@@ -51,7 +51,11 @@
     background-color: @bg_color;
 }
 
-*:selected,
+*:selected {
+    background-color: shade (@base_color, 0.80);
+    color: @text_color;
+}
+
 *:selected:focus {
     /* FIXME: We should set the bg color in each widget */
     background-color: alpha (@selected_bg_color, 0.9);
@@ -2019,6 +2023,13 @@ GtkIconView.view.cell:selected:focus {
     box-shadow: none;
 }
 
+.cell {
+    border-width: 0px;
+    color: @text_color;
+    text-shadow: none;
+}
+
+.cell:selected,
 .list-row.button:selected,
 .list-row.button:selected:backdrop,
 .popover GtkTreeView.view row:selected,
@@ -2030,25 +2041,11 @@ GtkPopover GtkTreeView.view row:selected {
     color: @text_color;
 }
 
+.cell:selected:focus,
 .list-row.button:selected:focus,
 .view:selected:focus {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
-}
-
-.cell {
-    color: @text_color;
-    text-shadow: none;
-}
-
-.cell:selected,
-.cell:selected:focus {
-    background-color: @selected_bg_color;
-    color: @selected_fg_color;
-}
-
-.cell {
-    border-width: 0px;
 }
 
 /* FIXME: This doesn't work with only-child
