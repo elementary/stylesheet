@@ -1044,6 +1044,22 @@ GtkOverlay .linked .button:insensitive:last-child {
 * Notebook and Tabs *
 ********************/
 
+.notebook {
+    border-radius: 2.5px;
+
+    background-clip: border-box;
+    background-color: shade (@titlebar_color, 1.06);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+    border: 1px solid shade (@titlebar_color, 0.60);
+}
+
+.notebook.header {
+    border: none;
+    background-color: transparent;
+}
+
 .dynamic-notebook .notebook.header {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.10),
@@ -1097,6 +1113,17 @@ GtkOverlay .linked .button:insensitive:last-child {
     background-color: alpha (#000, 0.10);
 }
 
+.notebook tab {
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.75),
+                                  shade (@titlebar_color, 0.80)
+                                  );
+
+    border-radius: 2.5px;
+
+    padding: 2px 3px 0;
+}
+
 .dynamic-notebook .notebook tab {
     padding: 3px;
 
@@ -1123,6 +1150,14 @@ GtkOverlay .linked .button:insensitive:last-child {
                                   transparent,
                                   alpha (#000, 0.20)
                                   ) 0 1 0 1;
+}
+
+.notebook tab:active {
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 1.24),
+                                  shade (@titlebar_color, 1.06)
+                                  );
+    color: @text_color;
 }
 
 .dynamic-notebook .notebook tab:active {
@@ -1156,22 +1191,6 @@ GtkOverlay .linked .button:insensitive:last-child {
                 0 0 1px 1px alpha (#000, 0.10);
 }
 
-.notebook.header {
-    border: none;
-    background-color: transparent;
-}
-
-.notebook {
-    border-radius: 2.5px;
-
-    background-clip: border-box;
-    background-color: shade (@titlebar_color, 1.06);
-
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
-    border: 1px solid shade (@titlebar_color, 0.60);
-}
-
 .notebook.frame {
    /*FIXME: Move the border down here so devs have more control*/
 }
@@ -1179,17 +1198,6 @@ GtkOverlay .linked .button:insensitive:last-child {
 .notebook GtkViewport {
     background-color: @base_color;
     border-width : 0;
-}
-
-.notebook tab {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.75),
-                                  shade (@titlebar_color, 0.80)
-                                  );
-
-    border-radius: 4px;
-
-    padding: 2px 3px 0;
 }
 
 .dynamic-notebook .notebook tab > .entry {
@@ -1200,15 +1208,6 @@ GtkOverlay .linked .button:insensitive:last-child {
 .notebook tab > .entry {
     border-radius: 2px;
     padding: 2px 5px;
-}
-
-.notebook tab:active {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.24),
-                                  shade (@titlebar_color, 1.06)
-                                  );
-
-    color: @text_color;
 }
 
 .dynamic-notebook .notebook tab > .button,
@@ -1231,6 +1230,10 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .notebook tab GtkLabel {
     color: alpha(@text_color, 0.75);
+    padding: 3px 6px;
+}
+
+.dynamic-notebook .notebook tab GtkLabel {
     padding: 0 6px;
 }
 
