@@ -700,6 +700,22 @@ GtkComboBox.combobox-entry .button {
     background-color: transparent;
 }
 
+GtkDialog .button.flat,
+GtkDialog .button.flat:backdrop,
+GtkDialog .button.flat:insensitive,
+GtkDialog .button.flat:active {
+    background-color: alpha (#000, 0.4);
+    border-radius: 99px;
+    padding: 2px;
+    color: @bg_color;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+GtkDialog .button.flat:hover {
+    background-color: alpha (#000, 0.5);
+}
+
 .button:active,
 .button:hover:active,
 .button:focus:active,
