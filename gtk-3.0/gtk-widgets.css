@@ -624,6 +624,7 @@ GtkScrolledWindow.frame {
 
 /* avoid borders when a viewport is
  * packed into a ScrolledWindow, Pane, Static Notebook, or Popover */
+.frame.flat,
 GtkScrolledWindow GtkViewport.frame,
 GtkPaned .frame,
 GraniteWidgetsPopOver .frame,
@@ -1353,7 +1354,7 @@ GtkTreeMenu .menuitem {
     background-image: linear-gradient(to bottom,
                                   alpha (@bg_color, 0.98),
                                   alpha (@bg_color, 0.98) 80%,
-                                  alpha (shade(@bg_color, 0.92), 0.98)
+                                  alpha (shade(@bg_color, 0.94), 0.98)
                                   );
     border: 1px solid alpha (#000, 0.4);
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
@@ -1376,7 +1377,7 @@ GtkTreeMenu .menuitem {
 }
 
 .menu .menuitem {
-    padding: 4px 0;
+    padding: 6px;
     text-shadow: none;
     icon-shadow: none;
     border-width: 1px 0;
@@ -1397,24 +1398,7 @@ GtkTreeMenu .menuitem {
 .menu .menuitem:hover,
 .popup .menuitem:active,
 .popup .menuitem:hover {
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  shade (@selected_bg_color, 0.98)
-                                  );
-
-    border-style: solid;
-    border-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.18),
-                                  shade (@selected_bg_color, 0.88)
-                                  ) 1 0 1 0;
-
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
-                inset 0 -1px 0 0 alpha (#fff, 0.15);
-
-    text-shadow: 0 1px 1px alpha (#000, 0.25);
-    icon-shadow: 0 1px 1px alpha (#000, 0.25);
-
-    color: @selected_fg_color;
+    background-color: alpha (@text_color, 0.15);
 }
 
 .menu .menuitem *:insensitive {
@@ -2599,8 +2583,8 @@ GtkModelButton.button:selected {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
-                inset 0 1px 0 0 alpha (#fff, 0.60);
+    box-shadow: inset 0 0 0 1px alpha (shade (@titlebar_color, 1.4), 0.20),
+                inset 0 1px 0 0 alpha (shade (@titlebar_color, 1.4), 0.60);
 
     padding: 0 3px;
 }
