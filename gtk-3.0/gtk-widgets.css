@@ -327,7 +327,6 @@ GraniteWidgetsThinPaned {
 .progressbar,
 .progressbar row,
 .progressbar row:hover {
-
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   shade (@selected_bg_color, 1.20) 50%,
@@ -380,7 +379,6 @@ GraniteWidgetsThinPaned {
 .trough row:hover,
 .trough row:selected:backdrop,
 .trough row:selected:backdrop:hover  {
-
     padding: 0;
 
     border-style: solid;
@@ -795,11 +793,11 @@ GtkComboBox.combobox-entry .button {
     background-color: transparent;
 }
 
-GtkDialog .button.flat,
-GtkDialog .button.flat:backdrop,
-GtkDialog .button.flat:insensitive,
-GtkDialog .button.flat:hover,
-GtkDialog .button.flat:focus:active {
+GtkDialog .button.flat.image-button,
+GtkDialog .button.flat.image-button:backdrop,
+GtkDialog .button.flat.image-button:insensitive,
+GtkDialog .button.flat.image-button:hover,
+GtkDialog .button.flat.image-button:focus:active {
     background-color: alpha (#000, 0.4);
     border-radius: 99px;
     padding: 0;
@@ -808,7 +806,7 @@ GtkDialog .button.flat:focus:active {
     box-shadow: none;
 }
 
-GtkDialog .button.flat:hover {
+GtkDialog .button.flat.image-button:hover {
     background-color: alpha (#000, 0.5);
 }
 
