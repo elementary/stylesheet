@@ -461,6 +461,100 @@ GtkPaned {
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3);
 }
 
+/************
+* Level Bar *
+************/
+
+.level-bar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+}
+
+.level-bar {
+    box-shadow: 0 1px white;
+    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-height: 3;
+}
+
+.level-bar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+}
+
+.level-bar.trough {
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 3px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #f7f7f7, #ffffff 90%);
+    color: black;
+    border-color: #a1a1a1;
+    box-shadow: inset 0 3px rgba(0, 0, 0, 0.02),
+                inset 0 2px rgba(0, 0, 0, 0.03),
+                inset 0 1px rgba(0, 0, 0, 0.08),
+                inset 0 0 0 1px rgba(74, 144, 217, 0),
+                0 1px white;
+}
+    
+.level-bar.trough:backdrop {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #f7f7f7, #ffffff 90%);
+    color: #323232;
+    border-color: #a8a8a8;
+    background-image: linear-gradient(to bottom, white);
+    box-shadow: inset 0 3px transparent,
+                inset 0 2px transparent,
+                inset 0 1px transparent,
+                0 1px rgba(255, 255, 255, 0);
+}
+
+.level-bar.fill-block {
+    border: 1px solid #2a76c6;
+    background-color: #4a90d9;
+    border-radius: 1px;
+}
+
+.level-bar.fill-block:backdrop {
+    border-color: #4a90d9;
+    box-shadow: none;
+}
+
+.level-bar.fill-block.indicator-discrete.horizontal {
+    margin: 0 1px;
+}
+
+.level-bar.fill-block.indicator-discrete.vertical {
+    margin: 1px 0;
+}
+
+.level-bar.fill-block.level-high {
+    border-color: #5aa411;
+    background-color: #73d216;
+}
+
+.level-bar.fill-block.level-high:backdrop {
+    border-color: #73d216;
+}
+
+.level-bar.fill-block.level-low {
+    border-color: #c26000;
+    background-color: #f57900;
+}
+
+.level-bar.fill-block.level-low:backdrop {
+    border-color: #f57900;
+}
+
+.level-bar.fill-block.empty-fill-block {
+    background-color: transparent;
+    border-color: rgba(46, 52, 54, 0.2);
+    box-shadow: none;
+}
+
+.level-bar.fill-block.empty-fill-block:backdrop {
+    border-color: rgba(141, 144, 145, 0.15); 
+}
+
 /********
 * Scale *
 ********/
