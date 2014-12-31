@@ -224,6 +224,7 @@ GraniteWidgetsThinPaned {
     color: @internal_element_color;
 }
 
+GtkHandleBox .entry,
 .titlebar .entry,
 .toolbar .entry {
     background-image: linear-gradient(to bottom,
@@ -239,7 +240,7 @@ GraniteWidgetsThinPaned {
     box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 0 alpha (#fff, 0.30);
 }
-
+GtkHandleBox .entry:backdrop,
 .titlebar .entry:backdrop,
 .toolbar .entry:backdrop {
     background-image: linear-gradient(to bottom,
@@ -1678,6 +1679,7 @@ GtkCheckButton:selected:focus {
 * Toolbars *
 ***********/
 
+GtkHandleBox,
 .toolbar {
     -GtkWidget-window-dragging: true;
     
@@ -1697,6 +1699,7 @@ GtkCheckButton:selected:focus {
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
+GtkHandleBox:backdrop,
 .toolbar:backdrop {
     background-image: linear-gradient(to bottom,
                               @titlebar_color,
