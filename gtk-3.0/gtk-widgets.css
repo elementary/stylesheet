@@ -529,6 +529,7 @@ GraniteWidgetsThinPaned {
 }
 
 .level-bar.fill-block.empty-fill-block {
+    background-color: shade (@bg_color, 0.95);
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.95),
                                   shade (@bg_color, 0.85)
@@ -538,6 +539,17 @@ GraniteWidgetsThinPaned {
                 inset 0 1px 0 0 alpha (#fff, 0.45),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
                 0 1px 0 0 alpha (#fff, 0.15);
+}
+
+.level-bar.fill-block:backdrop {
+    background-image: none;
+    background-color: shade (@bg_color, 0.85);
+    border-color: shade (@bg_color, 0.68);
+}
+
+.level-bar.fill-block.empty-fill-block:backdrop {
+    background-color: shade (@bg_color, 0.95);
+    border-color: shade (@bg_color, 0.75);
 }
 
 .level-bar.fill-block.indicator-discrete.horizontal {
