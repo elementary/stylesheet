@@ -507,6 +507,18 @@ GraniteWidgetsThinPaned {
     border-color: shade (@error_color, 0.90);
 }
 
+.level-bar.fill-block.level-middle {
+    background-image: linear-gradient(to bottom,
+                                  #fdde76,
+                                  #fbd058
+                                  );
+    border-color: #c09e42;
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 0 0 alpha (#fff, 0.15);
+}
+
 .level-bar.fill-block.level-high {
     background-image: linear-gradient(to bottom,
                                   shade (#73d216, 1.10),
@@ -533,7 +545,7 @@ GraniteWidgetsThinPaned {
 }
 
 .level-bar.fill-block.indicator-discrete.vertical {
-    margin: 1px 0;
+    margin: 2px 0;
 }
 
 /********
