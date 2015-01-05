@@ -71,6 +71,10 @@
     color: @error_color;
 }
 
+.success {
+    color: @success_color;
+}
+
 .gtkstyle-fallback {
     background-color: @bg_color;
     color: @fg_color;

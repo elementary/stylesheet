@@ -57,7 +57,7 @@
 @define-color inactive_frame_color #c7ccc1;
 @define-color warning_color #f57900;
 @define-color error_color #c92e34;
-@define-color success_color #4e9a06;
+@define-color success_color #73d216;
 @define-color metacity_color #dedede;
 
 @define-color info_fg_color rgb (0, 136, 204);
