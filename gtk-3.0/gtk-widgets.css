@@ -1244,7 +1244,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 }
 
 .dynamic-notebook GtkImage:insensitive {
-    color: shade (@insensitive_color, 0.75);
+    color: @insensitive_color;
 }
 
 .dynamic-notebook .notebook .button:hover {
