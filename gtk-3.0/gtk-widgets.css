@@ -75,6 +75,10 @@
     color: @error_color;
 }
 
+.success {
+    color: @success_color;
+}
+
 .gtkstyle-fallback {
     background-color: @bg_color;
     color: @fg_color;
@@ -535,8 +539,8 @@ GtkHandleBox .entry:backdrop,
 
 .level-bar.fill-block.level-high {
     background-image: linear-gradient(to bottom,
-                                  shade (#73d216, 1.10),
-                                  #73d216
+                                  shade (@success_color, 1.10),
+                                  @success_color
                                   );
                                   
     border: 1px solid shade (#73d216, 0.90);
