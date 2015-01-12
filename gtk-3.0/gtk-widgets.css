@@ -527,14 +527,16 @@ GtkHandleBox .entry:backdrop,
 
 .level-bar.fill-block.level-middle {
     background-image: linear-gradient(to bottom,
-                                  #fdde76,
-                                  #fbd058
+                                  shade (@warning, 1.30),
+                                  @warning_color
                                   );
-    border-color: #c09e42;
+
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.45),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
                 0 1px 0 0 alpha (#fff, 0.15);
+
+    border-color: shade (@warning_color, 0.90);
 }
 
 .level-bar.fill-block.level-high {
@@ -2591,10 +2593,10 @@ GtkInfoBar.info GtkLabel {
 
 GtkInfoBar.question {
     background-image: linear-gradient(to bottom,
-                                  #55c1ec,
-                                  #44a2e9
+                                  shade (@selected_bg_color, 1.30),
+                                  @selected_bg_color
                                   );
-    border-color: #357fb8;
+    border-color: shade (@selected_bg_color, 0.9);
 }
 
 GtkInfoBar.question GtkLabel {
@@ -2603,10 +2605,10 @@ GtkInfoBar.question GtkLabel {
 
 GtkInfoBar.warning {
     background-image: linear-gradient(to bottom,
-                                  #fdde76,
-                                  #fbd058
+                                  shade (@warning_color, 1.30),
+                                  @warning_color
                                   );
-    border-color: #c09e42;
+    border-color: shade (@warning_color, 0.9);
 }
 
 GtkInfoBar.warning GtkLabel {
@@ -2615,10 +2617,10 @@ GtkInfoBar.warning GtkLabel {
 
 GtkInfoBar.error {
     background-image: linear-gradient(to bottom,
-                                  #e35d4f,
-                                  #d33f3d
+                                  shade (@error_color, 1.30),
+                                  @error_color
                                   );
-    border-color: #a2302e;
+    border-color: shade (@error_color, 0.9);
 }
 
 GtkInfoBar.error GtkLabel {
@@ -3030,6 +3032,13 @@ GtkDialog .toolbar {
 .h1 { font: open sans 24px; }
 .h2 { font: open sans light 18px; }
 .h3 { font: open sans 11px; }
+.h4,
+.category-label {
+    color: mix (@bg_color, @text_color, 0.7);
+    font-weight: 600;
+    text-shadow: 0 1px alpha (#fff, 0.6);
+    padding-bottom: 12px;
+}
 
 @import url("granite-widgets.css");
 @import url("apps.css");
