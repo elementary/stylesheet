@@ -196,17 +196,6 @@ ConversationListView.view.cell:selected {
     icon-shadow: 0 1px 1px alpha (#000, 0.25);
 }
 
-/***************
- * Switchboard *
- **************/
-
-.category-label {
-    color: shade (@bg_color, 0.4);
-    font: open sans 11;
-    font-weight: 600;
-    text-shadow: 0 1px alpha (#fff, 0.6);
-}
-
 /************
  * Terminal *
  ***********/

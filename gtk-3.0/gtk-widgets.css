@@ -2907,6 +2907,13 @@ GtkDialog .toolbar {
 .h1 { font: open sans 24px; }
 .h2 { font: open sans light 18px; }
 .h3 { font: open sans 11px; }
+.h4,
+.category-label {
+    color: mix (@bg_color, @text_color, 0.7);
+    font-weight: 600;
+    text-shadow: 0 1px alpha (#fff, 0.6);
+    padding-bottom: 12px;
+}
 
 @import url("granite-widgets.css");
 @import url("apps.css");
