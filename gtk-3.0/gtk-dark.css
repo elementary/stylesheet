@@ -16,13 +16,19 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+/* Brand Colors */
+@define-color colorPrimary @titlebar_color;
+@define-color colorAccent @selected_bg_color;
+@define-color textColorPrimary shade (@text_color, 0.90);
+@define-color textColorPrimaryShadow alpha (#000, 0.6);
+
 /* Default color scheme */
 @define-color base_color #383e41;
 @define-color bg_color shade (@base_color, 0.96);
 @define-color border_color alpha (#000, 0.22);
 @define-color fg_color #969f9d;
 @define-color headerbar_color #838484;
-@define-color insensitive_color shade (@bg_color, 0.4);
+@define-color insensitive_color mix(@bg_color, @text_color, 0.3);
 @define-color inset_dark_color alpha (#000, 0.03);
 @define-color inset_dark_color_backdrop alpha (#000, 0.03);
 @define-color menu_separator alpha (#000, 0.15);
