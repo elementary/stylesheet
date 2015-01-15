@@ -80,8 +80,9 @@ BirdieWidgetsTweetList * {
 }
 
 .gala-button {
+    padding: 3px;
     color: #fff;
-    border: 1px solid alpha (#000, 0.4);
+    border: none;
     border-radius: 100px;
     background-image: linear-gradient(to bottom,
                                   #7e7e7e,
@@ -90,7 +91,7 @@ BirdieWidgetsTweetList * {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
                 inset 0 1px 0 0 alpha (#fff, 0.07),
                 inset 0 -1px 0 0 alpha (#fff, 0.01),
-                0 0 0 1px alpha (#000, 0.20),
+                0 0 0 1px alpha (#000, 0.40),
                 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
     text-shadow: 0 1px 1px alpha (#000, 0.6);
