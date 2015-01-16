@@ -2186,7 +2186,7 @@ GtkSwitch.slider:insensitive {
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
     -GtkTreeView-horizontal-separator: 6px;
-    -GtkTreeView-expander-size: 8px;
+    -GtkTreeView-expander-size: 14;
     -GtkTreeView-grid-line-pattern: "\000\000";
     border-top-color: @border_color;
 }
@@ -2320,6 +2320,15 @@ column-header .button:hover:backdrop {
 
 .expander {
     color: @fg_color;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+.expander:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+.expander:checked {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 .expander row:selected,
