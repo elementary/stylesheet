@@ -2556,7 +2556,7 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
 .expander {
     color: @fg_color;
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-    -GtkTreeView-expander-size: 14;
+    -GtkTreeView-expander-size: 16;
 }
 
 .expander:dir(rtl) {
@@ -3073,7 +3073,7 @@ GtkDialog .toolbar {
     color: mix (@bg_color, @text_color, 0.7);
     font-weight: 600;
     text-shadow: 0 1px alpha (#fff, 0.6);
-    padding-bottom: 12px;
+    padding-bottom: 6px;
 }
 
 @import url("granite-widgets.css");
