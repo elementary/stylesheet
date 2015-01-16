@@ -2314,28 +2314,6 @@ column-header .button:hover:backdrop {
                                   );
 }
 
-/***********
-* Expander *
-***********/
-
-.expander {
-    color: @fg_color;
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-}
-
-.expander:dir(rtl) {
-    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
-}
-
-.expander:checked {
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-}
-
-.expander row:selected,
-.expander row:selected:focus {
-    color: @selected_fg_color;
-}
-
 /*************
 * List Boxes *
 *************/
@@ -2533,16 +2511,6 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
                                   ) 1 1 1 1;
 }
 
-.source-list.category-expander,
-.source-list.category-expander:backdrop {
-    color: transparent;
-}
-
-.source-list.category-expander,
-.source-list.category-expander:backdrop {
-    color: transparent;
-}
-
 .sidebar .scrollbar.trough,
 .sidebar .scrollbars-junction,
 .source-list .scrollbar.trough,
@@ -2578,6 +2546,37 @@ GtkDialog .sidebar .view:prelight:selected:backdrop {
     color: shade (@titlebar_color, 0.95);
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
+}
+
+/***********
+* Expander *
+***********/
+
+.source-list.category-expander,
+.expander {
+    color: @fg_color;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    -GtkTreeView-expander-size: 14;
+}
+
+.expander:dir(rtl) {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+.source-list.category-expander,
+.source-list.category-expander:backdrop {
+    color: transparent;
+    border: none;
+}
+
+.expander:checked,
+.source-list.category-expander:active {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
+.expander row:selected,
+.expander row:selected:focus {
+    color: @selected_fg_color;
 }
 
 /**************
