@@ -2186,7 +2186,7 @@ GtkSwitch.slider:insensitive {
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
     -GtkTreeView-horizontal-separator: 6px;
-    -GtkTreeView-expander-size: 14;
+    -GtkTreeView-expander-size: 16;
     -GtkTreeView-grid-line-pattern: "\000\000";
     border-top-color: @border_color;
 }
