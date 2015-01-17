@@ -3076,7 +3076,13 @@ GtkDialog .toolbar {
 }
 
 .h4 {
-    padding: 3px 6px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+
+GtkListBox .h4{
+	padding-left: 6px;
 }
 
 @import url("granite-widgets.css");
