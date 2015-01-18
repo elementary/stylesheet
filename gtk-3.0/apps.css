@@ -58,6 +58,16 @@ BirdieWidgetsTweetList * {
     box-shadow: inset 0 0 0 1px alpha (@selected_bg_color, 0.23);
 }
 
+MarlinViewChromeLocationBar .image,
+.pathbar.image {
+    color: @internal_element_color;
+}
+
+MarlinViewChromeLocationBar .image:hover,
+.pathbar.image:hover {
+    color: @internal_element_prelight;
+}
+
 /*******
 * Gala *
 *******/
