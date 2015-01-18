@@ -838,8 +838,13 @@ GtkComboBox.combobox-entry .button {
     box-shadow: none;
     background-image: none;
     background-color: transparent;
+    border-radius: 5px;
 }
 
+.button.flat:focus,
+.button.flat:focus:hover {
+    background-color: alpha (#000, 0.20);
+}
 
 GtkDialog .button.flat.image-button,
 GtkDialog .button.flat.image-button:backdrop,
@@ -3079,7 +3084,6 @@ GtkDialog .toolbar {
     padding-bottom: 6px;
     padding-top: 6px;
 }
-
 
 GtkListBox .h4{
 	padding-left: 6px;
