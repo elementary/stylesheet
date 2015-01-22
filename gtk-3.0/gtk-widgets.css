@@ -527,7 +527,7 @@ GtkHandleBox .entry:backdrop,
 
 .level-bar.fill-block.level-middle {
     background-image: linear-gradient(to bottom,
-                                  shade (@warning, 1.30),
+                                  shade (@warning_color, 1.30),
                                   @warning_color
                                   );
 
