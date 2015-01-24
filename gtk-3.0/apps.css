@@ -149,6 +149,10 @@ ConversationListView.view.cell:selected:focus {
     box-shadow: none;
 }
 
+.panel .menu .spinner {
+    opacity: 1;
+}
+
 .panel .menu .menuitem {
     font-weight: normal;
 }
