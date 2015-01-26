@@ -2421,11 +2421,11 @@ GtkDialog .sidebar GtkScrolledWindow {
 .sidebar,
 .sidebar .view,
 .sidebar .view:selected:backdrop,
-.sidebar .view:prelight:selected:backdrop,
+.sidebar .view:hover:selected:backdrop,
 .source-list,
 .source-list.view,
 .source-list.view:selected:backdrop,
-.source-list.view:prelight:selected:backdrop {
+.source-list.view:hover:selected:backdrop {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 }
@@ -2436,20 +2436,20 @@ GtkDialog .sidebar GtkScrolledWindow {
     -GtkTreeView-vertical-separator: 6px;
 }
 
-.sidebar .view:prelight,
-.source-list.view:prelight {
+.sidebar .view:hover,
+.source-list.view:hover {
     background-color: shade (@titlebar_color, 1.10);
 }
 
 .sidebar .view:selected,
-.sidebar .view:prelight:selected,
+.sidebar .view:selected:hover,
 .sidebar.view:selected,
-.sidebar.view:prelight:selected,
+.sidebar.view:selected:hover,
+.popover .sidebar.view:selected,
 .source-list.view:selected,
-.source-list.view:prelight:selected,
+.source-list.view:selected:hover,
 .source-list.view:selected:focus,
 .source-list.category-expander:hover {
-
     color: shade (@titlebar_color, 0.50);
     border-style: solid;
     border-width: 1px 0 1px 0;
@@ -2470,7 +2470,7 @@ GtkDialog .sidebar GtkScrolledWindow {
 }
 
 GtkDialog .sidebar .view:selected,
-GtkDialog .sidebar .view:prelight:selected {
+GtkDialog .sidebar .view:hover:selected {
     background-image: none;
     background-color: alpha (#000, 0.05);
 
@@ -2492,9 +2492,9 @@ GtkDialog .sidebar .view:prelight:selected {
 }
 
 .sidebar .view:selected:backdrop,
-.sidebar .view:prelight:selected:backdrop,
+.sidebar .view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
-.source-list.view:prelight:selected:backdrop {
+.source-list.view:hover:selected:backdrop {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.04),
                                   alpha (#000, 0.03)
@@ -2507,7 +2507,7 @@ GtkDialog .sidebar .view:prelight:selected {
 }
 
 GtkDialog .sidebar .view:selected:backdrop,
-GtkDialog .sidebar .view:prelight:selected:backdrop {
+GtkDialog .sidebar .view:hover:selected:backdrop {
     background-color: alpha (#000, 0.05);
     background-image: none;
 
@@ -3088,7 +3088,7 @@ GtkDialog .toolbar {
 }
 
 GtkListBox .h4{
-	padding-left: 6px;
+    padding-left: 6px;
 }
 
 @import url("granite-widgets.css");
