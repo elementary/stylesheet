@@ -193,34 +193,10 @@ ConversationListView.view.cell:selected:focus {
  * Slingshot *
  ************/
 
-.button.app {
-    border-width: 0;
-    border-radius: 5px;
-    box-shadow: none;
-}
-
-.app:hover {
-    background-color: alpha (#000, 0.08);
-}
-
-.app:focus,
-.app:focus:hover {
+SlingshotWidgetsSearchView GtkButton.flat:hover,
+SlingshotWidgetsSearchView GtkButton.flat:focus {
     background-color: alpha (#000, 0.20);
-}
- 
-.search-item {
-    border-width: 0;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.search-item:hover,
-.search-item:focus {
-    background-color: @selected_bg_color;
-    color: @selected_fg_color;
-    text-shadow: 0 1px 1px alpha (#000, 0.25);
-    icon-shadow: 0 1px 1px alpha (#000, 0.25);
-    margin: 6px 0;
+    text-shadow: none;
 }
 
 /************
