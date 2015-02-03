@@ -140,6 +140,19 @@ ConversationListView.view.cell:selected:focus {
     border-color: shade (@selected_bg_color, 0.8);
 }
 
+/********
+* Noise *
+********/
+
+NoiseLibraryWindow,
+NoiseLibraryWindow .action-bar  {
+    border-radius: 0 0 4px 4px;
+}
+
+NoiseLibraryWindow.window-frame {
+    border-radius: 3px;
+}
+
 /*********
  * Panel *
  ********/
