@@ -41,6 +41,18 @@ BirdieWidgetsTweetList * {
     box-shadow: none;
 }
 
+/*************
+* Calculator *
+*************/
+
+PantheonCalculatorMainWindow {
+    border-radius: 0 0 4px 4px;
+}
+
+PantheonCalculatorMainWindow.window-frame {
+    border-radius: 4px;
+}
+
 /********
 * Files *
 ********/
