@@ -1358,7 +1358,7 @@ GtkOverlay .linked .button:insensitive:last-child {
                                   );
     border-color: shade (@titlebar_color, 0.70);
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
-                0 0 0 1px shade (@titlebar_color, 0.70);
+                0 0 0 1px alpha (#000, 0.10);
 }
 
 .notebook.header {
