@@ -2838,6 +2838,16 @@ GtkModelButton.button:selected {
     color: @selected_fg_color;
 }
 
+.popover > .location-bar,
+.popover.osd > .toolbar,
+.popover.osd > .inline-toolbar,
+.popover.osd > .search-bar,
+.popover.osd > .location-bar {
+    border-style: none;
+    background-image: none;
+    background-color: transparent;
+}
+
 /*******
  * CSD *
  ******/
