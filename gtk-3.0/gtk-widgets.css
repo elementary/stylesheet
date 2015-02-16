@@ -545,7 +545,7 @@ GtkHandleBox .entry:backdrop,
                                   @success_color
                                   );
                                   
-    border: 1px solid shade (#73d216, 0.90);
+    border: 1px solid shade (@success_color, 0.90);
 }
 
 .level-bar.fill-block.empty-fill-block {
@@ -2641,7 +2641,7 @@ GtkInfoBar.question {
 }
 
 GtkInfoBar.question GtkLabel {
-    color: #004166;
+    color: shade (@selected_bg_color, 0.5);
 }
 
 GtkInfoBar.warning {
@@ -2653,7 +2653,7 @@ GtkInfoBar.warning {
 }
 
 GtkInfoBar.warning GtkLabel {
-    color: #664e00;
+    color: shade (@warning_color, 0.5);
 }
 
 GtkInfoBar.error {
@@ -2665,7 +2665,7 @@ GtkInfoBar.error {
 }
 
 GtkInfoBar.error GtkLabel {
-    color: #660000;
+    color: shade (@error_color, 0.5);
 }
 
 GtkInfoBar GtkLabel {
