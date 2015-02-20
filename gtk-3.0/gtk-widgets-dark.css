@@ -135,6 +135,7 @@
                                   alpha (#000, 0.05),
                                   transparent 5px
                                   );
+    box-shadow: 0 1px 0 0 alpha (#fff, 0.05);
 }
 
 .titlebar .entry:insensitive,
@@ -608,27 +609,27 @@ GtkCheckButton:selected:focus {
 }
 
 .check {
-    background-image: url("assets/check.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/check.svg"),url("assets/check@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .check:focus {
-    background-image: url("assets/check-focus.svg"); 
+    -gtk-icon-source: -gtk-scaled(url("assets/check-focus.svg"),url("assets/check-focus@2.svg"));
 }
 
 .check:active {
-    background-image: url("assets/check-active.svg"); 
+    -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"),url("assets/check-active@2.svg"));
 }
 
 .radio {
-    background-image: url("assets/radio.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/radio.svg"),url("assets/radio@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .radio:active {
-    background-image: url("assets/radio-active.svg"); 
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-active.svg"),url("assets/radio-active@2.svg"));
 }
 
 
@@ -983,7 +984,7 @@ GtkAssistant .sidebar {
  *************/
 
 GtkSwitch.trough {
-    background-image: url("assets/switch-off-dark.svg");
+    background: -gtk-scaled(url("assets/switch-off-dark.svg"),url("assets/switch-off-dark@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 
@@ -991,26 +992,31 @@ GtkSwitch.trough {
 }
 
 GtkSwitch.trough:active {
-    background-image: url("assets/switch-on-dark.svg");
+    background: -gtk-scaled(url("assets/switch-on-dark.svg"),url("assets/switch-on-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.trough:insensitive {
-    background-image: url("assets/switch-off-disabled.svg");
+    background: -gtk-scaled(url("assets/switch-off-disabled-dark.svg"),url("assets/switch-off-disabled-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.trough:active:insensitive {
-    background-image: url("assets/switch-on-disabled.svg");
+    background: -gtk-scaled(url("assets/switch-on-disabled-dark.svg"),url("assets/switch-on-disabled-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.slider {
-    background-image: url("assets/switch-slider-dark.svg");
+  background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider:focus {
-    background-image: url("assets/switch-slider-dark.svg");
-
+    background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
 }
 
 GtkSwitch.slider:insensitive {

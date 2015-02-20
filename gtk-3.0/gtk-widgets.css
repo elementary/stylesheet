@@ -896,27 +896,27 @@ GtkPopover .button.flat.image-button:hover {
 }
 
 .back-button {
-    border-image: url("assets/button-back.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-image: -gtk-scaled(url("assets/button-back.svg"),url("assets/button-back@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
     border-width: 1px 3px 3px 11px;
     border-radius: 0 2.5px 2.5px 0;
     box-shadow: none;
 }
 
 .back-button:dir(rtl) {
-    border-image: url("assets/button-back-rtl.svg") 2 11 3 3 / 2px 11px 3px 3px stretch;
+    border-image: -gtk-scaled(url("assets/button-back-rtl.svg"),url("assets/button-back-rtl@2.svg")) 2 11 3 3 / 2px 11px 3px 3px stretch;
     border-width: 1px 11px 3px 3px;
     border-radius: 2.5px 0 0 2.5px;
 }
 
 .back-button:backdrop {
-    border-image: url("assets/button-back-backdrop.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-image: -gtk-scaled(url("assets/button-back-backdrop.svg"),url("assets/button-back-backdrop@2.svg"))) 2 3 3 11 / 2px 3px 3px 11px stretch;
     border-width: 1px 3px 3px 11px;
     border-radius: 0 2.5px 2.5px 0;
     box-shadow: none;
 }
 
 .back-button:backdrop:dir(rtl) {
-    border-image: url("assets/button-back-backdrop-rtl.svg") 2 11 3 3 / 2px 11px 3px 3px stretch;
+    border-image: -gtk-scaled(url("assets/button-back-backdrop-rtl.svg"),url("assets/button-back-rtl@2.svg")) 2 11 3 3 / 2px 11px 3px 3px stretch;
     border-width: 1px 11px 3px 3px;
     border-radius: 2.5px 0 0 2.5px;
     box-shadow: none;
@@ -925,7 +925,7 @@ GtkPopover .button.flat.image-button:hover {
 .back-button:active,
 .back-button:hover:active,
 .back-button:focus:active {
-    border-image: url("assets/button-back-active.svg") 2 3 3 11 / 2px 3px 3px 11px stretch;
+    border-image: -gtk-scaled(url("assets/button-back-active.svg"),url("assets/button-back-active@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
     border-width: 1px 3px 3px 11px;
     border-radius: 0 2.5px 2.5px 0;
     box-shadow: none;
@@ -934,7 +934,7 @@ GtkPopover .button.flat.image-button:hover {
 .back-button:active:dir(rtl),
 .back-button:hover:active:dir(rtl),
 .back-button:focus:active:dir(rtl) {
-    border-image: url("assets/button-back-active-rtl.svg") 2 11 3 3 / 2px 11px 3px 3px stretch;
+    border-image: -gtk-scaled(url("assets/button-back-active-rtl.svg"),url("assets/button-back-active-rtl@2.svg")) 2 11 3 3 / 2px 11px 3px 3px stretch;
     border-width: 1px 11px 3px 3px;
     border-radius: 2.5px 0 0 2.5px;
     box-shadow: none;
@@ -1682,17 +1682,17 @@ GtkCheckButton:selected:focus {
 }
 
 .check {
-    -gtk-icon-source: url("assets/check.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/check.svg"),url("assets/check@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .check:focus {
-    -gtk-icon-source: url("assets/check-focus.svg"); 
+    -gtk-icon-source: -gtk-scaled(url("assets/check-focus.svg"),url("assets/check-focus@2.svg"));
 }
 
 .radio {
-    -gtk-icon-source: url("assets/radio.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/radio.svg"),url("assets/radio@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1706,14 +1706,14 @@ GtkCheckButton:selected:focus {
 .check:checked,
 .menuitem.check:active,
 .menuitem.check:checked {
-    -gtk-icon-source: url("assets/check-active.svg"); 
+    -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"),url("assets/check-active@2.svg"));
 }
 
 .radio:active,
 .radio:checked,
 .menuitem.radio:active,
 .menuitem.radio:checked {
-    -gtk-icon-source: url("assets/radio-active.svg"); 
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-active.svg"),url("assets/radio-active@2.svg"));
 }
 
 /***********
@@ -2147,7 +2147,7 @@ GtkSwitch {
 }
 
 GtkSwitch.trough {
-    background-image: url("assets/switch-off.svg");
+    background: -gtk-scaled(url("assets/switch-off.svg"),url("assets/switch-off@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 
@@ -2157,25 +2157,31 @@ GtkSwitch.trough {
 }
 
 GtkSwitch.trough:active {
-    background-image: url("assets/switch-on.svg");
+    background: -gtk-scaled(url("assets/switch-on.svg"),url("assets/switch-on@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.trough:insensitive {
-    background-image: url("assets/switch-off-disabled.svg");
+    background: -gtk-scaled(url("assets/switch-off-disabled.svg"),url("assets/switch-off-disabled@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.trough:active:insensitive {
-    background-image: url("assets/switch-on-disabled.svg");
+    background: -gtk-scaled(url("assets/switch-on-disabled.svg"),url("assets/switch-on-disabled@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.slider {
-    background-image: url("assets/switch-slider.svg");
+    background: -gtk-scaled(url("assets/switch-slider.svg"),url("assets/switch-slider@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider:focus {
-    background-image: url("assets/switch-slider-focus.svg");
+    background: -gtk-scaled(url("assets/switch-slider-focus.svg"),url("assets/switch-slider-focus@2.svg"));
 }
 
 GtkSwitch.slider:insensitive {
