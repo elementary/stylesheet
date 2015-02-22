@@ -2182,6 +2182,8 @@ GtkSwitch.slider {
 
 GtkSwitch.slider:focus {
     background: -gtk-scaled(url("assets/switch-slider-focus.svg"),url("assets/switch-slider-focus@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.slider:insensitive {
