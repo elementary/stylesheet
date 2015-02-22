@@ -27,6 +27,10 @@ CheeseThumbView /* Cheese */
     -EogScrollView-shadow-type: none;
 }
 
+CcNetworkPanel GtkNotebook > .frame {
+    border: none;
+}
+
 /**********
  * Birdie *
  *********/
