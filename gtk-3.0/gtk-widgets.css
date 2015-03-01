@@ -1846,7 +1846,7 @@ GtkHandleBox:backdrop,
 .titlebar .button.flat:checked,
 .titlebar .button.flat:hover:checked,
 .titlebar .button.flat:focus:checked {
-    background-color: alpha (#000, 0.12);    
+    background-color: alpha (#000, 0.12);
     border-color: transparent;
     border-radius: 999px;
     box-shadow: none;
@@ -2087,7 +2087,8 @@ GtkOverlay .suggested-action.button {
 * Destructive Action Button *
 ****************************/
 
-.destructive-action.button {
+.destructive-action.button,
+.titlebar .destructive-action.button {
     background-image: linear-gradient(to bottom,
                                   shade (@error_color, 1.30),
                                   @error_color
@@ -2101,15 +2102,38 @@ GtkOverlay .suggested-action.button {
     border-color: shade (@error_color, 0.90);
 }
 
+.destructive-action.button:backdrop,
+.titlebar .destructive-action.button:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@error_color, 1.40),
+                                  shade (@error_color, 1.30)
+                                  );
+    border-color: @error_color;
+}
+
 .destructive-action.button GtkLabel,
-.destructive-action.button Gtklabel:prelight {
+.destructive-action.button Gtklabel:prelight,
+.destructive-action.button GtkImage,
+.destructive-action.button GtkImage:prelight,
+.titlebar .destructive-action.button GtkLabel,
+.titlebar .destructive-action.button Gtklabel:prelight,
+.titlebar .destructive-action.button.image-button GtkImage {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
+.titlebar .destructive-action.button GtkLabel:backdrop,
+.titlebar .destructive-action.button.image-button GtkImage:backdrop {
+    color: shade (@error_color, 1.90);
+    text-shadow: none;
+    icon-shadow: none;
+}
+
 .destructive-action.button:active,
-.destructive-action.button:active:hover {
+.destructive-action.button:active:hover,
+.titlebar .destructive-action.button:active,
+.titlebar .destructive-action.button:active:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@error_color, 1.20),
                                   @error_color
