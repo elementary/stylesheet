@@ -2024,11 +2024,16 @@ EggFindBar.toolbar:backdrop,
     -gtk-image-effect: dim;
 }
 
-GtkDialog .search-bar {
+GtkDialog .search-bar,
+GtkDialog .search-bar:backdrop {
     background-image: none;
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.60);
     box-shadow: none;
+}
+
+GtkAppChooserDialog .search-bar {
+    border: none;
 }
 
 .search-bar .button.close-button {
