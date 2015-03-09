@@ -1143,7 +1143,8 @@ GtkOverlay > .button:focus:active {
 .linked .button:last-child,
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
-.linked .button:insensitive:last-child {
+.linked .button:insensitive:last-child,
+.linked > GtkComboBox:last-child > .button {
     border-left-width: 0;
     border-bottom-right-radius: 2.5px;
     border-top-right-radius: 2.5px;
@@ -1175,6 +1176,7 @@ GtkOverlay .linked .button:insensitive:last-child {
 .linked.vertical .button:active,
 .linked.vertical .button:active:hover,
 .linked.vertical .button:insensitive {
+    border-left-width: 1px;
     border-bottom-width: 0;
     border-radius: 0;
 }
@@ -2247,7 +2249,7 @@ GtkTreeView .entry {
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    background-color: transparent;
+    background-color: @base_color;
     color: @text_color;
 }
 
