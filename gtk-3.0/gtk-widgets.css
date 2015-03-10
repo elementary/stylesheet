@@ -2614,7 +2614,7 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
 }
 
 .expander:checked,
-.source-list.category-expander:active {
+.source-list.category-expander:checked {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
