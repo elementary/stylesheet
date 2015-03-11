@@ -247,6 +247,7 @@ GtkHandleBox .entry,
     box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 0 alpha (#fff, 0.30);
 }
+
 GtkHandleBox .entry:backdrop,
 .titlebar .entry:backdrop,
 .toolbar .entry:backdrop {
