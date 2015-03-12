@@ -45,4 +45,6 @@ There are a few elementary-specific style elements. They are as follows:
 
 ".secondary-toolbar": Used in Midori's Bookmarks bar.
 
+".seek-bar": Used for media playback position controls
+
 ".source-list": Granite SourceList widget
