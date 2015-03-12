@@ -629,7 +629,6 @@ GtkHandleBox .entry:backdrop,
                 0 1px 1px alpha (#000, 0.10);
 }
 
-.titlebar .scale.slider,
 .scale.slider:insensitive {
     background-image: none;
     border: none;
@@ -1987,6 +1986,16 @@ GtkPaned .inline-toolbar.toolbar {
     background-image: none;
     background-color: transparent;
     color: @insensitive_color;
+}
+
+/*************
+ * Seek bars *
+ ************/
+
+.seek-bar .scale.slider {
+    background-image: none;
+    border: none;
+    box-shadow: none;
 }
 
 /***************
