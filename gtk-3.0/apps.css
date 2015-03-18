@@ -228,6 +228,17 @@ SlingshotWidgetsSearchView GtkButton.flat:focus {
     text-shadow: none;
 }
 
+/***************
+ * Switchboard *
+ **************/
+ 
+SwitchboardCategoryView GtkIconView.view.cell:selected,
+SwitchboardCategoryView GtkIconView.view.cell:selected:focus {
+    border: 2px solid @selected_bg_color;
+    border-radius: 6px;
+    color: @text_color;
+} 
+
 /************
  * Terminal *
  ***********/
