@@ -54,6 +54,10 @@
     text-shadow: 0 1px alpha (#000, 0.4);
 }
 
+.entry.progressbar {
+    color: @selected_fg_color;
+}
+
 
 .titlebar .entry,
 .toolbar .entry {
