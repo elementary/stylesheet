@@ -1108,6 +1108,134 @@ GtkOverlay > .button:focus:active {
     border-top: 0;
 }
 
+/*****************
+ * Color Chooser *
+ *****************/
+  
+:selected GtkColorSwatch {
+    box-shadow: none;
+}
+
+GtkColorSwatch.color-dark {
+    color: white;
+    outline-color: rgba(0, 0, 0, 0.3);
+}
+    
+GtkColorSwatch.color-dark:backdrop {
+    color: rgba(255, 255, 255, 0.3);
+}
+      
+GtkColorSwatch.color-light {
+    color: black;
+    outline-color: rgba(255, 255, 255, 0.5);
+}
+    
+GtkColorSwatch.color-light:backdrop {
+    color: rgba(0, 0, 0, 0.3);
+}
+    
+GtkColorSwatch.top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+GtkColorSwatch.bottom {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+GtkColorSwatch.left,
+GtkColorSwatch:first-child,
+GtkColorSwatch:first-child .overlay {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+GtkColorSwatch.right,
+GtkColorSwatch:last-child,
+GtkColorSwatch:last-child .overlay {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+    
+GtkColorSwatch:only-child,
+GtkColorSwatch:only-child .overlay {
+    border-radius: 4px;
+}
+
+GtkColorSwatch:hover {
+    background-image: linear-gradient(135deg,
+                            alpha (#fff, 0.7),
+                            alpha (#fff, 0) 50%
+                            );
+                            
+    box-shadow: inset 0 0 alpha (#fff, 0.4);
+}
+    
+GtkColorSwatch:backdrop,
+GtkColorSwatch:backdrop:selected {
+    background-image: none;
+    box-shadow: none; 
+}
+
+GtkColorSwatch:selected,
+GtkColorSwatch:hover:selected {
+    color: #fff;
+    background-color: @selected_bg_color;
+    background-image: none;
+}
+
+GtkColorEditor GtkColorSwatch {
+    border-radius: 2.5px;
+}
+
+GtkColorEditor GtkColorSwatch:hover {
+    background-image: none;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.1),
+                0 1px white;
+}
+      
+GtkColorEditor GtkColorSwatch:backdrop {
+    box-shadow: none;
+}   
+      
+GtkColorSwatch#add-color-button {
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+
+    background-image: linear-gradient(to bottom,
+                                  transparent,
+                                  transparent 50%,
+                                  alpha (#000, 0.04)
+                                  );
+
+    border: 1px solid alpha (#000, 0.2);
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 0 0 alpha (#fff, 0.15);
+
+    color: @text_color;
+
+    transition: all 100ms ease-in;
+}
+
+GtkColorSwatch#add-color-button .overlay {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+GtkColorScale.scale.slider,
+GtkColorScale.scale.slider:focus {
+	background-image: none;
+	border: 2px solid #fff;
+	box-shadow: 0 1px 3px alpha (#000, 0.3);
+}
+
 /*********
 * Linked *
 *********/
