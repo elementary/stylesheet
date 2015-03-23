@@ -790,13 +790,14 @@ GtkComboBox.combobox-entry .button {
 }
 
 .titlebar .button {
-    color: @textColorPrimary;
+    color: shade (@textColorPrimary, 0.8);
     border-color: alpha (#000, 0.27);
     
-    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
+    /* FIXME: causes problems with files pathbar */
+    /*box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
                 inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.45),
                 inset 0 -1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.15),
-                0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.30);
+                0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.30);*/
 }
 
 .button:backdrop {
