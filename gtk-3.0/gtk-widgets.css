@@ -766,7 +766,8 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-default-border: 0;
 }
 
-.button {
+.button,
+.popover .action-bar .button {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
@@ -830,7 +831,8 @@ GtkComboBox.combobox-entry .button {
     border-color: alpha (#000, 0.20);
 }
 
-.button:focus {
+.button:focus,
+.popover .action-bar .button:focus {
     color:@text_color;
 
     border-color: @selected_bg_color;
@@ -863,11 +865,11 @@ GtkDialog .button.flat.image-button:backdrop,
 GtkDialog .button.flat.image-button:insensitive,
 GtkDialog .button.flat.image-button:hover,
 GtkDialog .button.flat.image-button:focus:active,
-GtkPopover .button.flat.image-button,
-GtkPopover .button.flat.image-button:backdrop,
-GtkPopover .button.flat.image-button:insensitive,
-GtkPopover .button.flat.image-button:hover,
-GtkPopover .button.flat.image-button:focus:active {
+.popover .button.flat.image-button,
+.popover .button.flat.image-button:backdrop,
+.popover .button.flat.image-button:insensitive,
+.popover .button.flat.image-button:hover,
+.popover .button.flat.image-button:focus:active {
     background-color: alpha (@text_color, 0.5);
     border-radius: 99px;
     padding: 2px;
@@ -877,7 +879,7 @@ GtkPopover .button.flat.image-button:focus:active {
 }
 
 GtkDialog .button.flat.image-button:hover,
-GtkPopover .button.flat.image-button:hover {
+.popover .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
 
@@ -886,7 +888,10 @@ GtkPopover .button.flat.image-button:hover {
 .button:focus:active,
 .button:checked,
 .button:hover:checked,
-.button:focus:checked {
+.button:focus:checked,
+.popover .action-bar .button:active,
+.popover .action-bar .button:hover:active,
+.popover .action-bar .button:focus:active {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-color: alpha (#000, 0.25);
@@ -2428,7 +2433,7 @@ GtkIconView.view.cell:selected:focus {
 .view:selected,
 GtkListBoxRow:selected,
 GtkListBoxRow:selected:backdrop,
-GtkPopover GtkTreeView.view row:selected {
+.popover GtkTreeView.view row:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
 }
@@ -2519,9 +2524,9 @@ GtkListBox,
     background-color: @base_color;
 }
 
-GtkPopover EggListBox,
-GtkPopover GtkListBox,
-GtkPopover .list {
+.popover EggListBox,
+.popover GtkListBox,
+.popover .list {
     background-color: transparent;
 }
 
@@ -2978,7 +2983,7 @@ GraniteWidgetsPopOver .button:hover:active {
 }
 
 .popover .view,
-GtkPopover .view {
+.popover .view {
     background-color: transparent;
 }
 
@@ -3006,7 +3011,7 @@ GtkModelButton.button {
     box-shadow: none;
 }
 
-GtkPopover .separator {
+.popover .separator {
     font-size: 80%;
     font-weight: bold;
     color: alpha(@text_color, 0.4);
@@ -3036,6 +3041,20 @@ GtkModelButton.button:selected {
     border-style: none;
     background-image: none;
     background-color: transparent;
+}
+
+.popover .action-bar {
+    background-image: none;
+    padding: 6px;
+    border-color: shade(@base_color, 0.8); 
+}
+
+.popover .action-bar .button {
+    padding: 3px 6px;
+}
+
+GcrCertificateWidget .frame {
+	border: none;
 }
 
 /*******
