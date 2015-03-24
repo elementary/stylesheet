@@ -479,6 +479,10 @@ GtkProgressBar.trough {
                 0 0 0 1px shade (@titlebar_color, 0.56);
 }
 
+.dynamic-notebook .notebook tab .button {
+    padding: 0;
+}
+
 .dynamic-notebook .notebook tab > .button,
 .dynamic-notebook .notebook tab > .button:hover,
 .dynamic-notebook .notebook tab > .button:hover:active,
