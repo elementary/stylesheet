@@ -2293,6 +2293,22 @@ GtkOverlay .suggested-action.button {
     icon-shadow: none;
 }
 
+.destructive-action.button:insensitive {
+    background-image: none;
+    background-color: transparent;
+    border-color: alpha (#000, 0.20);
+}
+
+.toolbar .destructive-action.button:insensitive,
+.titlebar .destructive-action.button:insensitive {
+    background-image: linear-gradient(to bottom,
+                                  alpha (#fff, 0.05),
+                                  alpha (#000, 0.05)
+                                  );
+
+    border-color: alpha (#000, 0.20);
+}
+
 .destructive-action.button:active,
 .destructive-action.button:active:hover,
 .titlebar .destructive-action.button:active,
