@@ -1290,6 +1290,7 @@ GtkInfoBar .button:hover:insensitive {
 
 .header-bar .button.image-button GtkImage:insensitive {
     color: @insensitive_color;
+    icon-shadow: 0 1px alpha (#fff, 0.15);
     -gtk-image-effect: dim;
 }
 
