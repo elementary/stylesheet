@@ -3113,6 +3113,11 @@ GcrCertificateWidget .frame {
     padding: 10px 6px 8px;
 }
 
+.header-bar:last-child {
+	border-left-width: 1px ;
+	border-left-color: shade (@colorPrimary, 0.66);
+}
+
 .maximized .header-bar {
     padding: 7px 6px 5px;
 }
