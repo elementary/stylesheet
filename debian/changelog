@@ -1,3 +1,9 @@
+elementary-theme (4.0.1) trusty; urgency=low
+
+  * Style insensitive destructive action button label correctly (lp:1445336)
+
+ -- Cody Garver <cody@elementaryos.org>  Sat, 18 Apr 2015 18:57:46 -0500
+
 elementary-theme (4.0-0ubuntu1) saucy; urgency=low
 
   * New upstream release
