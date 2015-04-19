@@ -1018,13 +1018,15 @@ GtkSwitch.trough:active:insensitive {
 }
 
 GtkSwitch.slider {
-  background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
+    background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
 }
 
 GtkSwitch.slider:focus {
     background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 
 GtkSwitch.slider:insensitive {
