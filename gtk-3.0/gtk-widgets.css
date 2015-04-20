@@ -884,18 +884,6 @@ GtkDialog .button.flat.image-button:hover,
                 0 1px 0 0 alpha (#fff, 0.30);
 }
 
-.button:active:insensitive {
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.85),
-                                  shade (@bg_color, 0.94) 20%,
-                                  @bg_color
-                                  );
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                0 1px 0 0 alpha (#fff, 0.30);
-
-}
-
 .back-button,
 .titlebar .back-button {
     border-image: -gtk-scaled(url("assets/button-back.svg"),url("assets/button-back@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
@@ -2307,6 +2295,17 @@ GtkOverlay .suggested-action.button {
     background-color: alpha (#000, 0.02);
     background-image: none;
     color: @insensitive_color;
+}
+
+.button:active:insensitive {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.85),
+                                  shade (@bg_color, 0.94) 20%,
+                                  @bg_color
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.02),
+                0 1px 0 0 alpha (#fff, 0.30);
 }
 
 .button.flat:insensitive {

@@ -312,14 +312,20 @@ GtkProgressBar.trough {
 
 .button:active,
 .button:hover:active,
-.button:focus:active {
+.button:focus:active,
+.button:checked,
+.button:hover:checked,
+.button:focus:checked,
+.popover .action-bar .button:active,
+.popover .action-bar .button:hover:active,
+.popover .action-bar .button:focus:active {
     color: shade (@text_color, 0.8);
 
     background-color: alpha (#000, 0.06);
     background-image: none;
     border-color: alpha (#000, 0.40);
 
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.10),
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
                 0 1px 0 0 alpha (#fff, 0.05);
 
     border-color: alpha (#000, 0.37);
@@ -330,7 +336,10 @@ GtkProgressBar.trough {
 
 .toolbar .button:active,
 .toolbar .button:hover:active,
-.toolbar .button:focus:active {
+.toolbar .button:focus:active,
+.toolbar .button:checked,
+.toolbar .button:hover:checked,
+.toolbar .button:focus:checked {
     background-color: alpha (#000, 0.10);  
     background-image: linear-gradient(to bottom,
                                   alpha (@titlebar_color, 0.10),
@@ -339,7 +348,7 @@ GtkProgressBar.trough {
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05);
                 
-    border-color: alpha (#000, 0.22);
+    border-color: alpha (#000, 0.20);
 }
 
 .button:active:insensitive {
@@ -1274,6 +1283,7 @@ GtkInfoBar .button:hover:insensitive {
 .header-bar .title,
 .header-bar .button,
 .header-bar .button:active,
+.header-bar .button:checked,
 .header-bar .button.image-button GtkImage,
 .header-bar .titlebutton GtkImage,
 .header-bar > GtkLabel,
@@ -1289,6 +1299,7 @@ GtkInfoBar .button:hover:insensitive {
 .header-bar .button.image-button GtkImage:backdrop,
 .header-bar .button:backdrop,
 .header-bar .button:active:backdrop,
+.header-bar .button:checked:backdrop,
 .header-bar .titlebutton GtkImage:backdrop,
 .header-bar GtkLabel:backdrop {
     color: shade (@headerbar_color, 0.60);
