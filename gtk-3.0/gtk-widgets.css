@@ -2286,13 +2286,15 @@ GtkOverlay .suggested-action.button {
 
 .toolbar .button:insensitive,
 .toolbar .destructive-action.button:insensitive,
-.titlebar .destructive-action.button:insensitive {
+.titlebar .destructive-action.button:insensitive,
+.titlebar .destructive-action.button.image-button GtkImage:backdrop {
     background-image: linear-gradient(to bottom,
                                   alpha (#fff, 0.05),
                                   alpha (#000, 0.05)
                                   );
 
     border-color: alpha (#000, 0.20);
+    color: @insensitive_color;
 }
 
 .destructive-action.button:insensitive GtkLabel,
