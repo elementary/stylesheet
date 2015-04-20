@@ -816,21 +816,6 @@ GtkComboBox.combobox-entry .button {
     color:@text_color;
 }
 
-.button:insensitive {
-    background-image: none;
-    background-color: transparent;
-    border-color: alpha (#000, 0.20);
-}
-
-.toolbar .button:insensitive {
-    background-image: linear-gradient(to bottom,
-                                  alpha (#fff, 0.05),
-                                  alpha (#000, 0.05)
-                                  );
-
-    border-color: alpha (#000, 0.20);
-}
-
 .button:focus,
 .popover .action-bar .button:focus {
     color:@text_color;
@@ -1075,13 +1060,6 @@ GtkOverlay > .button:focus:active {
     background-image: none;
 }
 
-.spinbutton .button:insensitive,
-.spinbutton .button:focus:insensitive {
-    background-color: alpha (#000, 0.02);
-    background-image: none;
-    color: @insensitive_color;
-}
-
 .spinbutton .button:first-child {
     border-radius: 2px 0 0 2px;
     box-shadow: none;
@@ -1249,9 +1227,9 @@ GtkColorSwatch#add-color-button .overlay {
 
 GtkColorScale.scale.slider,
 GtkColorScale.scale.slider:focus {
-	background-image: none;
-	border: 2px solid #fff;
-	box-shadow: 0 1px 3px alpha (#000, 0.3);
+    background-image: none;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px alpha (#000, 0.3);
 }
 
 /*********
@@ -2224,18 +2202,6 @@ GtkOverlay .suggested-action.button {
     icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
-.suggested-action.button:insensitive {
-    border-color: alpha (#000, 0.20);
-    background-image: none;
-    background-color: transparent;
-}
-
-.suggested-action.button GtkLabel:insensitive {
-    text-shadow: 0 1px alpha (#fff, 0.3);
-    icon-shadow: 0 1px alpha (#fff, 0.3);
-    color: @insensitive_color;
-}
-
 .suggested-action.button:active,
 .suggested-action.button:active:hover {
     background-image: linear-gradient(to bottom,
@@ -2293,27 +2259,6 @@ GtkOverlay .suggested-action.button {
     icon-shadow: none;
 }
 
-.destructive-action.button:insensitive {
-    background-image: none;
-    background-color: transparent;
-    border-color: alpha (#000, 0.20);
-}
-
-.destructive-action.button:insensitive GtkLabel {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    color: @insensitive_color;
-}
-
-.toolbar .destructive-action.button:insensitive,
-.titlebar .destructive-action.button:insensitive {
-    background-image: linear-gradient(to bottom,
-                                  alpha (#fff, 0.05),
-                                  alpha (#000, 0.05)
-                                  );
-
-    border-color: alpha (#000, 0.20);
-}
-
 .destructive-action.button:active,
 .destructive-action.button:active:hover,
 .titlebar .destructive-action.button:active,
@@ -2324,6 +2269,43 @@ GtkOverlay .suggested-action.button {
                                   );
 
     border-color: shade (@error_color, 0.85);
+}
+
+/*********************
+* Insensitive Button *
+**********************/
+
+.button:insensitive,
+.destructive-action.button:insensitive,
+.suggested-action.button:insensitive {
+    background-image: none;
+    background-color: transparent;
+    border-color: alpha (#000, 0.20);
+    color: @insensitive_color;
+}
+
+.toolbar .button:insensitive,
+.toolbar .destructive-action.button:insensitive,
+.titlebar .destructive-action.button:insensitive {
+    background-image: linear-gradient(to bottom,
+                                  alpha (#fff, 0.05),
+                                  alpha (#000, 0.05)
+                                  );
+
+    border-color: alpha (#000, 0.20);
+}
+
+.destructive-action.button:insensitive GtkLabel,
+.suggested-action.button:insensitive GtkLabel {
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    color: @insensitive_color;
+}
+
+.spinbutton .button:insensitive,
+.spinbutton .button:focus:insensitive {
+    background-color: alpha (#000, 0.02);
+    background-image: none;
+    color: @insensitive_color;
 }
 
 /***************
