@@ -895,11 +895,20 @@ EggFindBar.toolbar,
 * Suggested Action Button *
 **************************/
 
+.suggested-action.button {
+    border: 1px solid  shade (@selected_bg_color,  0.35);
+}
+
 .suggested-action.button GtkLabel,
 .suggested-action.button GtkLabel:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
+}
+
+.suggested-action.button:active,
+.suggested-action.button:active:hover {
+    border: 1px solid  shade (@selected_bg_color,  0.25);
 }
 
 /****************************
