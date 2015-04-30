@@ -767,7 +767,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button,
-.popover .action-bar .button {
+.action-bar .button.text-button {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
 
