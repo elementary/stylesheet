@@ -2612,6 +2612,10 @@ GtkListBox,
     -gtk-icon-style: regular;
 }
 
+.popover .sidebar:backdrop {
+    color: shade (@titlebar_color, 0.50);
+}
+
 .sidebar .separator {
     color: transparent;
 }
