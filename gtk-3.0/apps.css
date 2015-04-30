@@ -84,6 +84,25 @@ MarlinViewChromeLocationBar .image:hover,
     color: @internal_element_prelight;
 }
 
+GtkFileChooserDialog .entry.pathbar {
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.93),
+                                  shade (@base_color, 0.97)
+                                  );
+
+    border-color: @border_color;
+
+    box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+                inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+                0 1px 0 0 alpha (#fff, 0.30);
+}
+
+GtkFileChooserDialog .entry.pathbar:focus {
+    border-color: alpha (@selected_bg_color, 0.80);
+    box-shadow: inset 0 0 0 1px alpha (@selected_bg_color, 0.23),
+                0 1px 0 0 alpha (#fff, 0.30);
+}
+
 /*******
 * Gala *
 *******/
