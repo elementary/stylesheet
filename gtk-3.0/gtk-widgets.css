@@ -1327,19 +1327,19 @@ GtkOverlay .linked .button:insensitive:last-child {
 ********************/
 
 .notebook {
-    border-radius: 2.5px;
+    border-radius: 0 0 2.5px 2.5px;
 
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-    border: 1px solid shade (@titlebar_color, 0.60);
+    border: 1px solid shade (@titlebar_color, 0.70);
 }
 
 .notebook.header {
     border: none;
-    background-color: transparent;
+    background-color: @bg_color;
 }
 
 .dynamic-notebook .notebook.header {
@@ -1397,13 +1397,26 @@ GtkOverlay .linked .button:insensitive:last-child {
 
 .notebook tab {
     background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.75),
-                                  shade (@titlebar_color, 0.80)
+                                  shade (@titlebar_color, 0.79),
+                                  shade (@titlebar_color, 0.76)
                                   );
+    color: shade (@text_color, 1.12);
 
+    border: 1px solid shade (@titlebar_color, 0.60);
+    border-bottom-width: 0px;
     border-radius: 2.5px;
-
     padding: 2px 3px 0;
+
+}
+
+.notebook tab:active {
+    background-image: linear-gradient(to bottom,
+                                  shade (@titlebar_color, 1.12),
+                                  shade (@titlebar_color, 1.06)
+                                  );
+    border: 1px solid shade (@titlebar_color, 0.60);
+    border-bottom-width: 0px;
+    color: @text_color;
 }
 
 .dynamic-notebook .notebook tab {
@@ -1434,13 +1447,6 @@ GtkOverlay .linked .button:insensitive:last-child {
                                   ) 0 1 0 1;
 }
 
-.notebook tab:active {
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 1.24),
-                                  shade (@titlebar_color, 1.06)
-                                  );
-    color: @text_color;
-}
 
 .dynamic-notebook .notebook tab:active {
     background-image: linear-gradient(to bottom,
