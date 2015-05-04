@@ -1,3 +1,10 @@
+elementary-theme (4.0.2) trusty; urgency=medium
+
+  * New upstream release
+  * Drop unused dependency gtk3-engines-unico
+
+ -- Cody Garver <cody@elementaryos.org>  Mon, 04 May 2015 15:40:40 -0500
+
 elementary-theme (4.0.1) trusty; urgency=low
 
   * Style insensitive destructive action button label correctly (lp:1445336)
