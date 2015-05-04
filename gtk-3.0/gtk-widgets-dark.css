@@ -1114,25 +1114,25 @@ EggListBox {
 * GtkInfoBar *
 *************/
  
-.info,
-.question,
-.warning,
-.error {
+GtkInfoBar.info,
+GtkInfoBar.question,
+GtkInfoBar.warning,
+GtkInfoBar.error {
     border-style: solid;
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
                 inset 0 -1px 0 0 alpha (#fff, 0.06);
 }
 
-.info {
+GtkInfoBar.info {
     box-shadow: inset 0 1px 0 0 alpha (#fff, 0.15),
                 inset 0 -1px 0 0 alpha (#fff, 0.03);
 }
 
-.info GtkLabel {
+GtkInfoBar.info GtkLabel {
     color: @text_color;
 }
 
-.question {
+GtkInfoBar.question {
     background-image: linear-gradient(to bottom,
                                   #55c1ec,
                                   #44a2e9
@@ -1140,11 +1140,11 @@ EggListBox {
     border-color: #357fb8;
 }
 
-.question GtkLabel {
+GtkInfoBar.question GtkLabel {
     color: #004166;
 }
 
-.warning {
+GtkInfoBar.warning {
     background-image: linear-gradient(to bottom,
                                   #fdde76,
                                   #fbd058
@@ -1152,11 +1152,11 @@ EggListBox {
     border-color: #c09e42;
 }
 
-.warning GtkLabel {
+GtkInfoBar.warning GtkLabel {
     color: #664e00;
 }
 
-.error {
+GtkInfoBar.error {
     background-image: linear-gradient(to bottom,
                                   #e35d4f,
                                   #d33f3d
@@ -1164,7 +1164,7 @@ EggListBox {
     border-color: #a2302e;
 }
 
-.error GtkLabel {
+GtkInfoBar.error GtkLabel {
     color: #660000;
 }
 
