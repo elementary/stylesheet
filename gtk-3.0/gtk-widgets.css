@@ -2475,6 +2475,52 @@ GtkListBoxRow:first-child {
 }
 */
 
+/*********************
+ * App Notifications *
+ *********************/
+
+.app-notification,
+.app-notification.frame {
+    background-color: alpha (@text_color, 0.8);
+    border-radius: 4px;
+    border: none;
+    padding: 6px 12px;
+    text-shadow: 0 1px 2px alpha (@text_color, 0.6);
+    background-clip: padding-box;
+}
+
+.app-notification GtkLabel {
+    color: @bg_color;
+    text-shadow: 0 1px 2px alpha (@text_color, 0.6);
+}
+
+.app-notification .button,
+.app-notification .button.flat.image-button {
+    background-color: alpha (@bg_color, 0.9);
+    padding: 3px 6px;
+    color: @text_color;
+    icon-shadow: none;
+    box-shadow: none;
+    border-width: 0;
+}
+
+.app-notification .button GtkLabel {
+    color: @text_color;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.app-notification .button.flat.image-button {
+    padding: 3px;
+    border-radius: 99px;
+}
+
+.app-notification .button:active {
+    background-color: @bg_color;
+    box-shadow: 0 3px 6px alpha (@text_color, 0.16),
+                            0 3px 6px alpha (@text_color, 0.23);
+}
+
 /******************
  * Column Headers *
  *****************/
