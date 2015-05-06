@@ -1,4 +1,4 @@
-/* Copyright 2011-2014 elementary LLC.
+/* Copyright 2011-2015 elementary LLC.
 *
 * This file is part of the elementary GTK theme.
 *
@@ -3165,8 +3165,8 @@ GcrCertificateWidget .frame {
 }
 
 .header-bar:last-child {
-	border-left-width: 1px ;
-	border-left-color: shade (@colorPrimary, 0.66);
+    border-left-width: 1px ;
+    border-left-color: shade (@colorPrimary, 0.66);
 }
 
 .maximized .header-bar {
