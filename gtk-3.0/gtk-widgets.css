@@ -2702,7 +2702,7 @@ GtkDialog .sidebar .view:hover:selected {
 .sidebar .view:selected:backdrop,
 .source-list:backdrop,
 .source-list.view:selected:backdrop {
-    color: @insensitive_fg_color;
+    color: shade (@titlebar_color, 0.60);
     -gtk-image-effect: dim;
 }
 
