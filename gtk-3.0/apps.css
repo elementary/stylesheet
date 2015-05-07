@@ -182,10 +182,6 @@ NoiseLibraryWindow.window-frame {
 
 .panel {
     background-color: transparent;
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
-    icon-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
 .panel-shadow {
@@ -201,15 +197,6 @@ NoiseLibraryWindow.window-frame {
     opacity: 1;
 }
 
-.panel .menu .menuitem {
-    font-weight: normal;
-}
-
-.panel .window-frame.menu.csd,
-.panel .window-frame.popup.csd {
-    box-shadow: none;
-}
-
 .panel .menu .window-frame.menu.csd,
 .panel .menu .window-frame.popup.csd {
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
@@ -217,9 +204,17 @@ NoiseLibraryWindow.window-frame {
                 0 6px 6px alpha (#000, 0.23);
 }
 
-.composited-indicator {
-    background-color: transparent;
+.panel .window-frame.menu.csd,
+.panel .window-frame.popup.csd {
+    box-shadow: none;
+}
+
+.composited-indicator > GtkBox > GtkImage,
+.composited-indicator > GtkBox > GtkLabel {
     color: #fff;
+    font-weight: bold;
+    text-shadow: 0 1px 2px alpha (#000, 0.6);
+    icon-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
 .composited-indicator > GtkWidget > GtkWidget:first-child {
@@ -228,13 +223,6 @@ NoiseLibraryWindow.window-frame {
 
 .panel-app-button > GtkWidget > GtkWidget:first-child {
     padding: 0 2px 0 4px;
-}
-
-.composited-indicator.menuitem:active,
-.composited-indicator.menuitem:prelight {
-    border-style: none;
-    background-image: none;
-    box-shadow: none;
 }
 
 /*************
