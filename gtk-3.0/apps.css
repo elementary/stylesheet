@@ -210,7 +210,8 @@ NoiseLibraryWindow.window-frame {
 }
 
 .composited-indicator > GtkBox > GtkImage,
-.composited-indicator > GtkBox > GtkLabel {
+.composited-indicator > GtkBox > GtkLabel,
+WingpanelWidgetsDynamicIcon {
     color: #fff;
     font-weight: bold;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
