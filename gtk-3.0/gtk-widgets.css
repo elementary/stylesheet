@@ -1737,7 +1737,7 @@ GtkTreeMenu .menuitem {
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage,
 .popover .menuitem GtkLabel,
-.popover .menuitem GtkImage, {
+.popover .menuitem GtkImage {
     padding: 0 3px;
     -gtk-icon-style: symbolic;
 }
