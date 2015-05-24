@@ -3175,7 +3175,8 @@ GcrCertificateWidget .frame {
     border-left-color: shade (@colorPrimary, 0.66);
 }
 
-.maximized .header-bar {
+.maximized .header-bar,
+.tiled .titlebar {
     padding: 7px 6px 5px;
 }
 
