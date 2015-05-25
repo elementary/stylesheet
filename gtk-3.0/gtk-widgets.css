@@ -3087,7 +3087,7 @@ GtkModelButton.button {
 .popover .separator {
     font-size: 80%;
     font-weight: bold;
-    color: alpha(@text_color, 0.4);
+    color: @menu_separator;
     text-shadow: none;
     background-color: transparent;
     icon-shadow: none;
