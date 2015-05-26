@@ -1772,6 +1772,10 @@ GtkModelMenuItem GtkBox GtkImage {
 .menuitem.separator {
     color: @menu_separator;
     padding: 4px 0;
+    -GtkWidget-separator-height: 2px;
+    -GtkWidget-wide-separators: true;
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid alpha(#fff, 0.8);
 }
 
 .menuitem.check,
@@ -3091,7 +3095,10 @@ GtkModelButton.button {
     text-shadow: none;
     background-color: transparent;
     icon-shadow: none;
-    border: 0;
+    -GtkWidget-separator-height: 2px;
+    -GtkWidget-wide-separators: true;
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
 }
 
 GtkModelButton.button:active:hover,

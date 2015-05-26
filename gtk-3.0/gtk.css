@@ -31,6 +31,7 @@
 @define-color inset_dark_color alpha (#000, 0.06);
 @define-color inset_dark_color_backdrop alpha (#000, 0.03);
 @define-color menu_separator alpha (#000, 0.15);
+@define-color menu_separator_shadow alpha (#fff, 0.8);
 @define-color placeholder_text_color shade(@text_color, 2.5);
 @define-color progress_row_trough_color #DEDEDE;
 @define-color selected_bg_color #3d9bda;

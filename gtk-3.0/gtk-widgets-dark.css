@@ -558,6 +558,8 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .menuitem.separator {
     color: @menu_separator;
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
 }
 
 .menuitem.check,
