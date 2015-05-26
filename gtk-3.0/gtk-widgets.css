@@ -855,7 +855,7 @@ GtkDialog .button.flat.image-button:focus:active,
 .popover .button.flat.image-button:hover,
 .popover .button.flat.image-button:focus:active {
     background-color: alpha (@text_color, 0.5);
-    border-radius: 99px;
+    border-radius: 50%;
     padding: 2px;
     color: @bg_color;
     icon-shadow: none;
@@ -1977,7 +1977,7 @@ GtkHandleBox:backdrop,
 .titlebar .button.flat:focus:checked {
     background-color: alpha (#000, 0.12);
     border-color: transparent;
-    border-radius: 999px;
+    border-radius: 50%;
     box-shadow: none;
 }
 
@@ -2522,7 +2522,7 @@ GtkListBoxRow:first-child {
 
 .app-notification .button.flat.image-button {
     padding: 3px;
-    border-radius: 99px;
+    border-radius: 50%;
 }
 
 .app-notification .button:active {
