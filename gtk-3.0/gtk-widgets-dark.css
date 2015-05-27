@@ -1466,5 +1466,4 @@ GtkDialog.window-frame:backdrop,
                 0 6px 6px alpha (#000, 0.23);
 }
 
-@import url("granite-widgets-dark.css");
 @import url("apps.css");
