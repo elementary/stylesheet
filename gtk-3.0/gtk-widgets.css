@@ -164,6 +164,15 @@ GtkGrid:insensitive {
     color: @menu_separator;
 }
 
+.vertical.separator {
+    color: @menu_separator;
+    padding: 0 4px;
+    -GtkWidget-separator-width: 2px;
+    -GtkWidget-wide-separators: true;
+    border-left: 1px solid @menu_separator;
+    border-right: 1px solid alpha(#fff, 0.8);
+}
+
 GtkPaned {
     margin: 8px;
 }
