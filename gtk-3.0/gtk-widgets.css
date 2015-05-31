@@ -1778,6 +1778,13 @@ GtkModelMenuItem GtkBox GtkImage {
     padding-right: 6px;
 }
 
+/*Moved titlebar sep here to fix seps in titlebar menus*/
+
+.titlebar .separator {
+    color: transparent;
+    border: none;
+}
+
 .menuitem.separator {
     color: @menu_separator;
     padding: 4px 0;
@@ -3240,11 +3247,6 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
                 inset 0 1px 0 0 #fff;
 
     color: shade (@titlebar_color, 1.20);
-}
-
-.titlebar .separator {
-    color: transparent;
-    border: none;
 }
 
 .titlebar .title,
