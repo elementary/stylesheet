@@ -3244,6 +3244,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 
 .titlebar .separator {
     color: transparent;
+    border: none;
 }
 
 .titlebar .title,
