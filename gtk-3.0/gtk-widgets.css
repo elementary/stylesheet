@@ -3066,6 +3066,10 @@ GraniteWidgetsPopOver .button:hover:active {
     text-shadow: none;
 }
 
+.popover GtkImage {
+    color: alpha (@text_color, 0.8);
+}
+
 .popover .view,
 .popover .view {
     background-color: transparent;
