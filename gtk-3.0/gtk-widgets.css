@@ -857,12 +857,7 @@ GtkDialog .button.flat.image-button,
 GtkDialog .button.flat.image-button:backdrop,
 GtkDialog .button.flat.image-button:insensitive,
 GtkDialog .button.flat.image-button:hover,
-GtkDialog .button.flat.image-button:focus:active,
-.popover .button.flat.image-button,
-.popover .button.flat.image-button:backdrop,
-.popover .button.flat.image-button:insensitive,
-.popover .button.flat.image-button:hover,
-.popover .button.flat.image-button:focus:active {
+GtkDialog .button.flat.image-button:focus:active {
     background-color: alpha (@text_color, 0.5);
     border-radius: 50%;
     padding: 2px;
@@ -871,8 +866,7 @@ GtkDialog .button.flat.image-button:focus:active,
     box-shadow: none;
 }
 
-GtkDialog .button.flat.image-button:hover,
-.popover .button.flat.image-button:hover {
+GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
 
@@ -881,10 +875,7 @@ GtkDialog .button.flat.image-button:hover,
 .button:focus:active,
 .button:checked,
 .button:hover:checked,
-.button:focus:checked,
-.popover .action-bar .button:active,
-.popover .action-bar .button:hover:active,
-.popover .action-bar .button:focus:active {
+.button:focus:checked {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-color: alpha (#000, 0.25);
