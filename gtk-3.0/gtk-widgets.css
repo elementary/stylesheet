@@ -622,6 +622,8 @@ GtkHandleBox .entry:backdrop,
     border: 1px solid shade (@warning_color, 0.90);
 
     transition: all 200ms ease-in-out;
+
+    padding: 0 6px;
 }
 
 .storage-bar .fill-block:first-child {
@@ -632,6 +634,14 @@ GtkHandleBox .entry:backdrop,
 .storage-bar .fill-block:last-child {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+}
+
+.storage-bar .fill-block.empty-block {
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.95),
+                                  shade (@bg_color, 0.85)
+                                  );
+    border-color: alpha (#000, 0.25);
 }
 
 .storage-bar .fill-block.apps {
