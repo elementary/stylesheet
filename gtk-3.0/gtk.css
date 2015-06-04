@@ -67,6 +67,8 @@
 @define-color success_color #73d216;
 @define-color metacity_color @titlebar_color;
 
+@define-color orange #ee6221;
+
 @define-color info_fg_color rgb (0, 136, 204);
 @define-color info_bg_color rgb (252, 252, 189);
 @define-color warning_fg_color rgb (173, 120, 41);

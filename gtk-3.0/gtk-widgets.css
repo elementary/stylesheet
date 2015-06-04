@@ -591,6 +591,95 @@ GtkHandleBox .entry:backdrop,
     margin: 2px 0;
 }
 
+/************
+* Storage Bar *
+************/
+
+.storage-bar .trough {
+    background-color: shade (@bg_color, 0.95);
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 0.95),
+                                  shade (@bg_color, 0.85)
+                                  );
+    border-color: alpha (#000, 0.25);
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 0 0 alpha (#fff, 0.15);
+}
+
+.storage-bar .fill-block {
+    background-image: linear-gradient(to bottom,
+                                  shade (@warning_color, 1.30),
+                                  @warning_color
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 0 0 alpha (#fff, 0.15);
+
+    border: 1px solid shade (@warning_color, 0.90);
+
+    transition: all 200ms ease-in-out;
+}
+
+.storage-bar .fill-block:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.storage-bar .fill-block:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.storage-bar .fill-block.apps {
+    background-image: linear-gradient(to bottom,
+                                  shade (@success_color, 1.10),
+                                  @success_color
+                                  );
+                                  
+    border-color: shade (@success_color, 0.90);
+}
+
+.storage-bar .fill-block.audio {
+    background-image: linear-gradient(to bottom,
+                                  shade (@orange, 1.30),
+                                  @orange
+                                  );
+
+    border-color: shade (@orange, 0.90);
+}
+
+.storage-bar .fill-block.photos {
+    background-image: linear-gradient(to bottom,
+                                  shade (@selected_bg_color, 1.30),
+                                  @selected_bg_color
+                                  );
+
+    border-color: shade (@selected_bg_color, 0.90);
+}
+
+.storage-bar .fill-block.video {
+    background-image: linear-gradient(to bottom,
+                                  shade (@error_color, 1.30),
+                                  @error_color
+                                  );
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.25),
+                inset 0 -1px 0 0 alpha (#fff, 0.10),
+                0 1px 0 0 alpha (#fff, 0.15);
+
+    border-color: shade (@error_color, 0.90);
+}
+
+.storage-bar .fill-block.legend {
+    padding: 6px;
+    border-radius: 50%;
+}
+
 /********
 * Scale *
 ********/
