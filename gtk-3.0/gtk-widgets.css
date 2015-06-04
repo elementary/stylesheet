@@ -591,9 +591,9 @@ GtkHandleBox .entry:backdrop,
     margin: 2px 0;
 }
 
-/************
+/**************
 * Storage Bar *
-************/
+**************/
 
 .storage-bar .trough {
     background-color: shade (@bg_color, 0.95);
@@ -644,7 +644,7 @@ GtkHandleBox .entry:backdrop,
     border-color: alpha (#000, 0.25);
 }
 
-.storage-bar .fill-block.apps {
+.storage-bar .fill-block.app {
     background-image: linear-gradient(to bottom,
                                   shade (@success_color, 1.10),
                                   @success_color
@@ -662,7 +662,7 @@ GtkHandleBox .entry:backdrop,
     border-color: shade (@orange, 0.90);
 }
 
-.storage-bar .fill-block.photos {
+.storage-bar .fill-block.photo {
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   @selected_bg_color
