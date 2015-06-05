@@ -605,7 +605,7 @@ GtkHandleBox .entry:backdrop,
                 inset 0 1px 0 0 alpha (#fff, 0.45),
                 inset 0 -1px 0 0 alpha (#fff, 0.15);
 
-    border: 1px solid shade (@warning_color, 0.90);
+    border: 1px solid shade (@warning_color, 0.87);
     border-left-width: 0;
 
     transition: all 200ms ease-in-out;
