@@ -595,19 +595,6 @@ GtkHandleBox .entry:backdrop,
 * Storage Bar *
 **************/
 
-.storage-bar .trough {
-    background-color: shade (@bg_color, 0.95);
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 0.95),
-                                  shade (@bg_color, 0.85)
-                                  );
-    border-color: alpha (#000, 0.25);
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
-}
-
 .storage-bar .fill-block {
     background-image: linear-gradient(to bottom,
                                   shade (@warning_color, 1.30),
@@ -616,10 +603,10 @@ GtkHandleBox .entry:backdrop,
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+                inset 0 -1px 0 0 alpha (#fff, 0.15);
 
     border: 1px solid shade (@warning_color, 0.90);
+    border-left-width: 0;
 
     transition: all 200ms ease-in-out;
 
@@ -627,13 +614,9 @@ GtkHandleBox .entry:backdrop,
 }
 
 .storage-bar .fill-block:first-child {
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
-
-.storage-bar .fill-block:last-child {
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left-width: 1px;
 }
 
 .storage-bar .fill-block.empty-block {
@@ -642,15 +625,25 @@ GtkHandleBox .entry:backdrop,
                                   shade (@bg_color, 0.85)
                                   );
     border-color: alpha (#000, 0.25);
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 2px 3px -1px alpha (#000, 0.15);
 }
 
 .storage-bar .fill-block.app {
     background-image: linear-gradient(to bottom,
-                                  shade (@success_color, 1.10),
-                                  @success_color
+                                  shade (@purple, 1.30),
+                                  @purple
                                   );
-                                  
-    border-color: shade (@success_color, 0.90);
+
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.25),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 0 0 alpha (#fff, 0.15);
+
+    border-color: shade (@purple, 0.90);
 }
 
 .storage-bar .fill-block.audio {
