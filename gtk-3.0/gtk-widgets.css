@@ -2128,6 +2128,7 @@ GtkDialog .action-bar {
     border-width: 0;
     box-shadow: none;
     background-color: transparent;
+    background-image: none;
 }
 
 .action-bar .button.text-button {
