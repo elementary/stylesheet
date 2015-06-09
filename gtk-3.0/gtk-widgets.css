@@ -3149,7 +3149,7 @@ GraniteWidgetsPopOver .button:hover:active {
 
     box-shadow: 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
-    margin: 10px;
+    margin: 10px 6px;
 
     text-shadow: none;
 }
@@ -3237,7 +3237,7 @@ GtkModelButton.button:selected {
 }
 
 GcrCertificateWidget .frame {
-	border: none;
+    border: none;
 }
 
 /*******
