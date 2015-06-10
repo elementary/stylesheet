@@ -2071,6 +2071,10 @@ GtkHandleBox:backdrop,
     box-shadow: none;
 }
 
+.titlebar .button.flat {
+    border-radius: 50%;
+}
+
 .titlebar .button.image-button:active,
 .titlebar .button.image-button:hover:active,
 .titlebar .button.image-button:focus:active,
@@ -2083,9 +2087,8 @@ GtkHandleBox:backdrop,
 .titlebar .button.flat:checked,
 .titlebar .button.flat:hover:checked,
 .titlebar .button.flat:focus:checked {
-    background-color: alpha (#000, 0.12);
+    background-color: alpha (@text_color, 0.15);
     border-color: transparent;
-    border-radius: 50%;
     box-shadow: none;
 }
 
