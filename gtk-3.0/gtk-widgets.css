@@ -2071,7 +2071,9 @@ GtkHandleBox:backdrop,
     box-shadow: none;
 }
 
-.titlebar .button.flat {
+
+.titlebar .button.flat,
+.titlebar .button.image-button { /* FIXME: This is a workaround for Files */
     border-radius: 50%;
 }
 
