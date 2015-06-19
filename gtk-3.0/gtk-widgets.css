@@ -1890,7 +1890,7 @@ GtkModelMenuItem GtkBox GtkImage {
     -GtkWidget-separator-height: 2px;
     -GtkWidget-wide-separators: true;
     border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid alpha(#fff, 0.8);
+    border-bottom: 1px solid @menu_separator_shadow;
 }
 
 .menuitem.check,
