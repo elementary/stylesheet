@@ -170,7 +170,7 @@ GtkGrid:insensitive {
     -GtkWidget-separator-width: 2px;
     -GtkWidget-wide-separators: true;
     border-left: 1px solid @menu_separator;
-    border-right: 1px solid alpha(#fff, 0.8);
+    border-right: 1px solid @menu_separator_shadow;
 }
 
 GtkPaned {
