@@ -848,10 +848,7 @@ GtkScrolledWindow.frame {
 /* avoid borders when a viewport is
  * packed into a ScrolledWindow, Pane, Static Notebook, or Popover */
 .frame.flat,
-GtkScrolledWindow GtkViewport.frame,
-GtkPaned .frame,
-GraniteWidgetsPopOver .frame,
-GraniteWidgetsStaticNotebook .frame {
+GtkScrolledWindow GtkViewport.frame {
     border: none;
 }
 
