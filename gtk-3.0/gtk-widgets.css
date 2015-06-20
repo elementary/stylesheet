@@ -846,6 +846,7 @@ GtkScrolledWindow.frame {
 }
 
 .frame.flat,
+.sidebar .frame, /* FIXME: This is a workaround for Geary */
 GtkScrolledWindow GtkViewport.frame {
     border: none;
 }
