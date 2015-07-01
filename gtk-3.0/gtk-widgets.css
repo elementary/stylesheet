@@ -174,7 +174,7 @@ GtkGrid:insensitive {
 }
 
 GtkPaned {
-    margin: 8px;
+    margin-right: 8px;
 }
 
 .pane-separator,
