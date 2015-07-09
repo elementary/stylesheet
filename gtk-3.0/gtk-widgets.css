@@ -889,6 +889,10 @@ GtkComboBox.combobox-entry .button {
     transition: all 100ms ease-in;
 }
 
+.button GtkLabel {
+    padding: 0 6px;
+}
+
 .titlebar .button {
     color: shade (@textColorPrimary, 0.8);
     border-color: alpha (#000, 0.27);
@@ -942,6 +946,13 @@ GtkComboBox.combobox-entry .button {
 .button.flat:focus:hover {
     background-color: alpha (#000, 0.20);
 }
+
+/* FIXME: style for checked image buttons
+.button:checked GtkImage {
+    color: #08c;
+    icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
+                                 0 1px 0 alpha (#fff, 0.3);
+} */
 
 GtkDialog .button.flat.image-button,
 GtkDialog .button.flat.image-button:backdrop,
@@ -2154,7 +2165,7 @@ GtkDialog .action-bar {
 }
 
 .action-bar .button.text-button {
-    padding: 2px 16px;
+    padding: 2px 12px;
 }
 
 .action-bar .button.image-button {

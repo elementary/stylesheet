@@ -163,6 +163,24 @@ ConversationListView.view.cell:selected:focus {
     border-color: shade (@colorAccent, 0.8);
 }
 
+/**********
+* Greeter *
+**********/
+
+PantheonGreeter .entry,
+PantheonGreeter .entry:focus {
+    border-radius: 3.5px;
+    padding: 6px 3px;
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.93),
+                                  @base_color
+                                  );
+
+    border-color: alpha (@border_color, 0.75);
+    box-shadow: inset 0 1px 1px 0 alpha (#000, 0.20),
+                0 1px 0 alpha (#fff, 0.15);
+}
+
 /********
 * Noise *
 ********/
