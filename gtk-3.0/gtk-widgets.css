@@ -3172,7 +3172,7 @@ GraniteWidgetsPopOver .button:hover:active {
 .popover,
 .popover.osd,
 .popover_bg {
-    border-radius: 5px;
+    border-radius: 4px;
     background-clip: border-box;
     background-color: @bg_color;
 
