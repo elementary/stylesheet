@@ -501,6 +501,7 @@ GtkHandleBox .entry:backdrop,
 }
 
 .level-bar.fill-block {
+    background-color: @selected_bg_color;
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.10),
                                   @selected_bg_color
