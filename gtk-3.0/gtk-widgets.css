@@ -1146,6 +1146,10 @@ GtkOverlay > .button:focus:active {
     padding: 3px 9px;
 }
 
+.help_button GtkLabel {
+    padding: 0;
+}
+
 /*****************
  * GtkSpinButton *
  *****************/
