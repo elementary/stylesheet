@@ -21,7 +21,7 @@
 *********/
 
 .avatar {
-    border: 1px solid alpha (#000, 0.25);
+    border: 1px solid alpha (#000, 0.35);
     border-radius: 50%;
 
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
@@ -181,6 +181,10 @@ ConversationListView.view.cell:selected:focus {
 /**********
 * Greeter *
 **********/
+
+PantheonGreeter .avatar {
+    border-color: alpha (#000, 0.25);
+}
 
 PantheonGreeter .entry,
 PantheonGreeter .entry:focus {
