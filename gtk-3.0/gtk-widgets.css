@@ -2958,6 +2958,22 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
     icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
+.source-list.level-bar,
+.source-list.level-bar:selected,
+.source-list.level-bar:selected:focus {
+    background-color: @base_color;
+    border: 1px solid alpha (#000, 0.15);
+    box-shadow: 0 1px 0 alpha (#fff, 0.25);
+}
+
+.source-list.fill-block,
+.source-list.fill-block:hover,
+.source-list.fill-block:selected,
+.source-list.fill-block:selected:focus {
+    background-image: none;
+    background-color: mix (@colorAccent, @base_color, 0.25);
+}
+
 /***********
 * Expander *
 ***********/
