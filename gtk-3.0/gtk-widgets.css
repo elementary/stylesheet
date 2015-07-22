@@ -986,6 +986,11 @@ GtkDialog .button.flat.image-button:hover {
                 0 1px 0 0 alpha (#fff, 0.30);
 }
 
+.button.flat:active {
+    border-color: transparent;
+    box-shadow: none;
+}
+
 .back-button,
 .titlebar .back-button {
     border-image: -gtk-scaled(url("assets/button-back.svg"),url("assets/button-back@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
