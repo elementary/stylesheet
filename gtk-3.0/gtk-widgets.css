@@ -779,6 +779,16 @@ GtkHandleBox .entry:backdrop,
                                   );
 }
 
+.scale.trough.vertical:insensitive {
+    border-radius: 12px 12px 0 0;
+    border-width: 1px 1px 0 1px;
+}
+
+.scale.trough.vertical.bottom:insensitive {
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 12px 12px;
+}
+
 .scale.mark {
     background-color: alpha (#000, 0.40);
 }
@@ -811,8 +821,7 @@ GtkHandleBox .entry:backdrop,
 }
 
 .scale.highlight.bottom {
-    border: 1px solid alpha (#000, 0.50);
-    border-radius: 0 0 12px 12px;
+    border-color: alpha (#000, 0.50);
 
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.40),
@@ -824,8 +833,7 @@ GtkHandleBox .entry:backdrop,
 }
 
 .scale.highlight.bottom:insensitive {
-    border: 1px solid alpha (#000, 0.40);
-    border-radius: 0 0 12px 12px;
+    border-color: alpha (#000, 0.40);
 
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.30),
