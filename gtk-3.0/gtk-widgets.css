@@ -400,9 +400,9 @@ GtkHandleBox .entry:backdrop,
                 inset 0 -1px 0 0 alpha (#fff, 0.15);
 }
 
-.trough,
-.trough row,
-.trough row:hover {
+GtkProgressBar.trough,
+GtkProgressBar.trough row,
+GtkProgressBar.trough row:hover {
     padding: 0;
 
     border: 1px solid alpha (#000, 0.25);
@@ -418,25 +418,25 @@ GtkHandleBox .entry:backdrop,
                 0 1px 0 0 alpha (shade (@bg_color, 1.4), 0.50);
 }
 
-.trough.vertical {
+GtkProgressBar.trough.vertical {
     background-image: linear-gradient(to right,
                                   @bg_color,
                                   shade (@bg_color, 0.93)
                                   );
 }
 
-.trough:backdrop,
-.trough row:backdrop,
-.trough row:backdrop:hover,
-.trough row:selected:backdrop,
-.trough row:selected:backdrop:hover {
+GtkProgressBar.trough:backdrop,
+GtkProgressBar.trough row:backdrop,
+GtkProgressBar.trough row:backdrop:hover,
+GtkProgressBar.trough row:selected:backdrop,
+GtkProgressBar.trough row:selected:backdrop:hover {
     background-image: none;
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.75);
 }
 
 .progressbar row:selected:focused,
-.trough row:selected:focused  {
+GtkProgressBar.trough row:selected:focused  {
     border: 1px solid shade (@colorAccent, 0.80);
 }
 
@@ -729,7 +729,6 @@ GtkHandleBox .entry:backdrop,
     border: 1px solid alpha (#000, 0.35);
     border-radius: 12px;
 
-    background-color: transparent;
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.15),
                                   alpha (#000, 0.07)
@@ -2454,8 +2453,7 @@ GtkSwitch {
     -GtkSwitch-slider-width: 38;
 }
 
-GtkSwitch.trough,
-GtkSwitch.trough:backdrop {
+GtkSwitch.trough {
     background: -gtk-scaled(url("assets/switch-off.svg"),url("assets/switch-off@2.svg"));
     background-repeat: no-repeat;
     background-position: 0 center;
