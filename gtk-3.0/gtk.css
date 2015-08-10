@@ -25,6 +25,7 @@
 /* Default color scheme */
 @define-color base_color #FFF;
 @define-color bg_color shade (@base_color, 0.96);
+@define-color bg_highlight_color #fff;
 @define-color border_color alpha (#000, 0.22);
 @define-color fg_color #333;
 @define-color insensitive_color mix(@text_color, @bg_color, 0.6);

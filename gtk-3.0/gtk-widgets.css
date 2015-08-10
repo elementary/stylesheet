@@ -217,7 +217,7 @@ GraniteWidgetsThinPaned {
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 
     color: @text_color;
 
@@ -249,7 +249,7 @@ GtkHandleBox .entry,
 
     border-color: alpha (#000, 0.27);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 GtkHandleBox .entry:backdrop,
@@ -268,13 +268,13 @@ GtkHandleBox .entry:backdrop,
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .entry:focus {
     border-color: alpha (@colorAccent, 0.80);
     box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 
     transition: all 200ms ease-in;
 }
@@ -283,7 +283,7 @@ GtkHandleBox .entry:backdrop,
 .entry.error:focus {
     border-color: alpha (@error_color, 0.80);
     box-shadow: inset 0 0 0 1px alpha (@error_color, 0.23),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 
     transition: all 200ms ease-in;
 }
@@ -295,7 +295,7 @@ GtkHandleBox .entry:backdrop,
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.5),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.2),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
                 
     color: @insensitive_color;
 }
@@ -308,7 +308,7 @@ GtkHandleBox .entry:backdrop,
                                   );
     border-color: alpha (#000, 0.25);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .titlebar .entry:insensitive:backdrop,
@@ -323,7 +323,7 @@ GtkHandleBox .entry:backdrop,
                                   );
     border-color: alpha (#000, 0.20);
     box-shadow: inset 0 0 0 1px @inset_dark_color_backdrop,
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .entry.image.left,
@@ -395,9 +395,9 @@ GtkHandleBox .entry:backdrop,
     background-color: shade (@bg_color, 0.85);
     border-color: shade (@bg_color, 0.68);
 
-    box-shadow: inset 0 0 0 1px alpha (shade (@bg_color, 1.4), 0.05),
-                inset 0 1px 0 0 alpha (shade (@bg_color, 1.4), 0.35),
-                inset 0 -1px 0 0 alpha (shade (@bg_color, 1.4), 0.15);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.35),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
 GtkProgressBar.trough,
@@ -412,10 +412,10 @@ GtkProgressBar.trough row:hover {
                                   shade (@bg_color, 0.90)
                                   );
 
-    box-shadow: inset 0 0 0 1px alpha (shade (@bg_color, 1.4), 0.10),
-                inset 0 1px 0 0 shade (@bg_color, 1.4),
-                inset 0 -1px 0 0 alpha (shade (@bg_color, 1.4), 0.50),
-                0 1px 0 0 alpha (shade (@bg_color, 1.4), 0.50);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.10),
+                inset 0 1px 0 0 @bg_highlight_color,
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.50),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.50);
 }
 
 GtkProgressBar.trough.vertical {
@@ -491,7 +491,7 @@ GtkProgressBar.trough row:selected:focused  {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.35),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     transition: all 100ms ease-in;
 
@@ -510,7 +510,7 @@ GtkProgressBar.trough row:selected:focused  {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.25),
                 inset 0 -1px 0 0 alpha (#fff, 0.10),
-                0 1px 0 0 alpha (#fff, 0.15);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     border-color: shade (@error_color, 0.90);
 }
@@ -524,7 +524,7 @@ GtkProgressBar.trough row:selected:focused  {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.45),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     border-color: shade (@warning_color, 0.90);
 }
@@ -545,16 +545,20 @@ GtkProgressBar.trough row:selected:focused  {
                                   shade (@bg_color, 0.85)
                                   );
     border-color: alpha (#000, 0.25);
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
 .level-bar.fill-block:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.85);
     border-color: shade (@bg_color, 0.68);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.35),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
 .level-bar.fill-block.empty-fill-block:backdrop {
@@ -627,7 +631,7 @@ GtkProgressBar.trough row:selected:focused  {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.25),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     border-color: shade (@purple, 0.90);
 }
@@ -659,7 +663,7 @@ GtkProgressBar.trough row:selected:focused  {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.25),
                 inset 0 -1px 0 0 alpha (#fff, 0.10),
-                0 1px 0 0 alpha (#fff, 0.15);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     border-color: shade (@error_color, 0.90);
 }
@@ -735,7 +739,7 @@ GtkProgressBar.trough row:selected:focused  {
                                   );
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.03),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .titlebar .scale.trough {
@@ -781,7 +785,7 @@ GtkProgressBar.trough row:selected:focused  {
                                   );
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .scale.highlight.left:insensitive {
@@ -795,7 +799,7 @@ GtkProgressBar.trough row:selected:focused  {
                                   );
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.03),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .scale.highlight.bottom {
@@ -807,7 +811,7 @@ GtkProgressBar.trough row:selected:focused  {
                                   );
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .scale.highlight.bottom:insensitive {
