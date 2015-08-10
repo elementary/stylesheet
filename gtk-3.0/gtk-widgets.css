@@ -1458,9 +1458,9 @@ GtkOverlay .linked .button:insensitive:last-child {
                                   alpha (#000, 0.10),
                                   alpha (#000, 0.00) 3px
                                   ),
-                        linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.8),
-                                  shade (@titlebar_color, 0.9)
+                      linear-gradient(to bottom,
+                                  shade (@titlebar_color, 0.82),
+                                  shade (@titlebar_color, 0.87)
                                   );
     border-style: solid;
     border-width: 0 0 1px 0;
