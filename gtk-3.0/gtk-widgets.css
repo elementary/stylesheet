@@ -401,8 +401,8 @@ GtkHandleBox .entry:backdrop,
 }
 
 GtkProgressBar.trough,
-GtkProgressBar.trough row,
-GtkProgressBar.trough row:hover {
+.trough row,
+.trough row:hover {
     padding: 0;
 
     border: 1px solid alpha (#000, 0.25);
@@ -426,17 +426,17 @@ GtkProgressBar.trough.vertical {
 }
 
 GtkProgressBar.trough:backdrop,
-GtkProgressBar.trough row:backdrop,
-GtkProgressBar.trough row:backdrop:hover,
-GtkProgressBar.trough row:selected:backdrop,
-GtkProgressBar.trough row:selected:backdrop:hover {
+.trough row:backdrop,
+.trough row:backdrop:hover,
+.trough row:selected:backdrop,
+.trough row:selected:backdrop:hover {
     background-image: none;
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.75);
 }
 
 .progressbar row:selected:focused,
-GtkProgressBar.trough row:selected:focused  {
+.trough row:selected:focused  {
     border: 1px solid shade (@colorAccent, 0.80);
 }
 
