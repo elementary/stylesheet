@@ -1655,6 +1655,11 @@ GtkComboBox .separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
+	border: none;
+}
+
+GtkComboBoxText GtkImage {
+	color: mix(@text_color, @bg_color, 0.3);
 }
 
 GtkComboBox.combobox-entry .entry:first-child,
