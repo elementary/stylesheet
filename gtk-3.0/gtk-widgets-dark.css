@@ -1514,8 +1514,6 @@ GtkDialog.window-frame:backdrop,
 
 .h4,
 .category-label {
-    color: mix (@bg_color, @text_color, 0.7);
-    font-weight: 600;
     text-shadow: 0 1px alpha (#000, 0.2);
 }
 

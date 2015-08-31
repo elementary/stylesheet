@@ -11,11 +11,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="16"
-   height="16"
+   width="32"
+   height="32"
    id="svg7539"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="check-dark.svg">
+   sodipodi:docname="check-focus-dark.svg">
   <sodipodi:namedview
      pagecolor="#363b3e"
      bordercolor="#666666"
@@ -29,9 +29,9 @@
      inkscape:window-height="713"
      id="namedview33"
      showgrid="false"
-     inkscape:zoom="0.5"
-     inkscape:cx="2.6689615"
-     inkscape:cy="2.1787941"
+     inkscape:zoom="1"
+     inkscape:cx="14.36306"
+     inkscape:cy="0.56278263"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -40,7 +40,11 @@
      showborder="false">
     <inkscape:grid
        type="xygrid"
-       id="grid3378" />
+       id="grid3376"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
   </sodipodi:namedview>
   <defs
      id="defs7541">
@@ -212,15 +216,25 @@
          id="stop27422-3-5-1" />
     </linearGradient>
     <linearGradient
-       y2="656.00787"
-       x2="634.26544"
-       y1="631.87756"
-       x1="634.26544"
-       gradientTransform="matrix(3.5286917,0,0,0.97190815,-2144.9726,-586.89905)"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient3825"
+       inkscape:collect="always"
        xlink:href="#linearGradient27416-1-72-0"
-       inkscape:collect="always" />
+       id="linearGradient3469"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.74288252,0,0,0.55537609,-477.67845,-350.22801)"
+       x1="731.05725"
+       y1="654.81543"
+       x2="731.05725"
+       y2="619.30682" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4929-9-0-03-2-2-2-3-9-7-3-7-7-2-6-3-4-7-3"
+       id="linearGradient3471"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.1948052,0,0,0.7142857,-120.79219,-334.99213)"
+       x1="620.06653"
+       y1="446.58899"
+       x2="620.06653"
+       y2="452.189" />
   </defs>
   <metadata
      id="metadata7544">
@@ -230,48 +244,52 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <rect
-     width="12"
-     height="12"
-     rx="1.5"
-     ry="1.5"
-     x="-14"
-     y="2"
-     transform="scale(-1,1)"
-     id="rect6132-8-2-8-0-0-0-10-0-6-0-6-2-0-5-7-3-3-7-8-4-0-2-5-3-6-7-8"
-     style="opacity:0.98999999000000005;color:#000000;fill:url(#linearGradient3012);fill-opacity:1.0;fill-rule:nonzero;stroke:none;stroke-width:0.99999981999999998;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-  <rect
-     width="11"
-     height="11"
-     rx="1"
-     ry="1"
-     x="-13.499836"
-     y="2.4998012"
-     transform="scale(-1,1)"
-     id="rect6132-8-2-8-0-0-0-4-6-9-7-5-4-2-6-1-1-2-7-4-6-3-4-3-0-8-1-1-9"
-     style="opacity:0.05;color:#000000;fill:none;stroke:url(#linearGradient3009);stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-  <rect
-     width="15"
-     height="15"
-     rx="3"
-     ry="3"
-     x="-15.500019"
-     y="-15.499786"
-     transform="scale(-1,-1)"
-     id="rect6132-8-2-8-0-0-0-4-6-9-7-5-4-2-6-1-1-2-7-4-6-3-0-1-0-16-8-3-0-0-3"
-     style="opacity:0.10000000000000001;color:#000000;fill:none;stroke:url(#linearGradient3013);stroke-width:0.99999981999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-  <rect
-     width="13"
-     height="13"
-     rx="2"
-     ry="2"
-     x="-14.499832"
-     y="1.4998016"
-     transform="scale(-1,1)"
-     id="rect6132-8-2-8-0-0-0-10-0-6-0-6-2-0-5-7-3-3-7-8-4-0-2-5-3-6-7-8-6"
-     style="opacity:0.3;color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  <g
+     id="g3463"
+     transform="matrix(2,0,0,2,-1.9162894e-5,2.13e-4)">
+    <rect
+       style="opacity:0.98999999;color:#000000;fill:url(#linearGradient3469);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.99999982;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect6132-8-2-8-0-0-0-10-0-6-0-6-2-0-5-7-3-3-7-8-4-0-2-5-3-6-7-8"
+       transform="scale(-1,1)"
+       y="2"
+       x="-14"
+       ry="1.5"
+       rx="1.5"
+       height="12"
+       width="12" />
+    <rect
+       style="opacity:0.05;color:#000000;fill:none;stroke:#000000;stroke-width:0.99999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect6132-8-2-8-0-0-0-4-6-9-7-5-4-2-6-1-1-2-7-4-6-3-4-3-0-8-1-1-9"
+       transform="scale(-1,1)"
+       y="2.4998012"
+       x="-13.499836"
+       ry="1"
+       rx="1"
+       height="11"
+       width="11" />
+    <rect
+       style="opacity:0.1;color:#000000;fill:none;stroke:url(#linearGradient3471);stroke-width:0.99999982;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect6132-8-2-8-0-0-0-4-6-9-7-5-4-2-6-1-1-2-7-4-6-3-0-1-0-16-8-3-0-0-3"
+       transform="scale(-1,-1)"
+       y="-15.499786"
+       x="-15.500019"
+       ry="3"
+       rx="3"
+       height="15"
+       width="15" />
+    <rect
+       style="opacity:0.5;color:#000000;fill:none;stroke:#3d9bda;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect6132-8-2-8-0-0-0-10-0-6-0-6-2-0-5-7-3-3-7-8-4-0-2-5-3-6-7-8-6"
+       transform="scale(-1,1)"
+       y="1.4998016"
+       x="-14.499832"
+       ry="2"
+       rx="2"
+       height="13"
+       width="13" />
+  </g>
 </svg>

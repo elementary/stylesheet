@@ -30,14 +30,18 @@
      id="namedview33"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="16.478325"
-     inkscape:cy="4.5231458"
+     inkscape:cx="9.2404551"
+     inkscape:cy="1.8108094"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg7539"
      inkscape:showpageshadow="true"
-     showborder="false" />
+     showborder="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3376" />
+  </sodipodi:namedview>
   <defs
      id="defs7541">
     <linearGradient
@@ -182,10 +186,10 @@
        id="linearGradient3013"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.1948052,0,0,0.7142857,-120.79219,-334.99213)"
-       x1="617.50946"
-       y1="446.54532"
-       x2="617.50946"
-       y2="457.80115" />
+       x1="620.06653"
+       y1="446.58899"
+       x2="620.06653"
+       y2="452.189" />
     <linearGradient
        y2="656.00787"
        x2="634.26544"
@@ -249,7 +253,7 @@
      y="-15.499786"
      transform="scale(-1,-1)"
      id="rect6132-8-2-8-0-0-0-4-6-9-7-5-4-2-6-1-1-2-7-4-6-3-0-1-0-16-8-3-0-0-3"
-     style="opacity:0.1;color:#000000;fill:none;stroke:url(#linearGradient3013);stroke-width:0.99999981999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+     style="opacity:0.10000000000000001;color:#000000;fill:none;stroke:url(#linearGradient3013);stroke-width:0.99999981999999998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   <rect
      width="13"
      height="13"
