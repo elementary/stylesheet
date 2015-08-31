@@ -3278,9 +3278,9 @@ GcrCertificateWidget .frame {
 .titlebar {
     background-image: linear-gradient(to bottom,
                                   shade (@colorPrimary, 1.04),
-                                  shade (@colorPrimary, 0.84)
+                                  shade (@colorPrimary, 0.88)
                                   );
-    border-color: shade (@colorPrimary, 0.56);
+    border-color: shade (@colorPrimary, 0.60);
     border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
