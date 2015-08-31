@@ -3308,7 +3308,7 @@ GcrCertificateWidget .frame {
 }
 
 .header-bar {
-    padding: 10px 6px 8px;
+    padding: 8px 6px 6px;
 }
 
 .header-bar:last-child {
@@ -3318,7 +3318,7 @@ GcrCertificateWidget .frame {
 
 .maximized .header-bar,
 .tiled .titlebar {
-    padding: 7px 6px 5px;
+    padding: 4px 6px 3px;
 }
 
 .maximized .titlebar,
