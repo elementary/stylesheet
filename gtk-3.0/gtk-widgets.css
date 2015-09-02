@@ -1639,7 +1639,7 @@ GtkComboBox {
     padding: 2px;
 }
 
-GtkComboBox .separator {
+GtkComboBox .vertical.separator {
     /* always disable separators */
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
