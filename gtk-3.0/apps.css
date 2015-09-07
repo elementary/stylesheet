@@ -286,6 +286,14 @@ NoiseLibraryWindow.window-frame {
     padding: 0 2px 0 4px;
 }
 
+/**********
+ * Photos *
+ *********/
+
+.checkerboard-layout {
+    background-color: #383e41;
+}
+
 /*************
  * Slingshot *
  ************/
