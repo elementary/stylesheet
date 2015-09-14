@@ -294,6 +294,14 @@ NoiseLibraryWindow.window-frame {
     background-color: #383e41;
 }
 
+.checkboard-layout .item {
+    background-color: #eee;
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
+    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+    background-size:60px 60px;
+    background-position:0 0, 30px 30px
+}
+
 /*************
  * Slingshot *
  ************/
@@ -314,6 +322,12 @@ SwitchboardCategoryView GtkIconView.view.cell:selected:focus {
     border-radius: 6px;
     color: @text_color;
 } 
+
+.hotcorner-display {
+    border-radius: 2px;
+    icon-shadow: 0 3px 6px alpha (#000, 0.16),
+                 0 3px 6px alpha (#000, 0.23);
+}
 
 /************
  * Terminal *
