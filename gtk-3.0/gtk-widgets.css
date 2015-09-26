@@ -1741,8 +1741,7 @@ GtkComboBox.combobox-entry .button:last-child {
 .scrollbar.trough,
 .scrollbar.trough:backdrop {
     background-image: none;
-    background-color: @bg_color;
-    background-image: none;
+    background-color: transparent;
     border-width: 0;
     border-radius: 0;
     border-image: none;
