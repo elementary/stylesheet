@@ -3188,11 +3188,8 @@ GraniteWidgetsPopOver .button:hover:active {
     background-clip: border-box;
     background-color: @bg_color;
 
-    border-color: alpha (#000, 0.2);
-    border-width: 1px;
-    border-style: solid;
-
-    box-shadow: 0 3px 6px alpha (#000, 0.16),
+    box-shadow: 0 0 0 1px alpha (#000, 0.2),
+                0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
     margin: 10px 6px;
 
