@@ -1483,7 +1483,7 @@ GtkMessageDialog .titlebar.default-decoration {
 }
 
 GtkDialog .titlebar:backdrop,
-GtkMessageDialog .titlebar:backdrop
+GtkMessageDialog .titlebar:backdrop,
 GtkDialog .titlebar.default-decoration:backdrop,
 GtkMessageDialog .titlebar.default-decoration:backdrop  {
     box-shadow: inset 1px 0 0 0 alpha (#fff, 0.05),

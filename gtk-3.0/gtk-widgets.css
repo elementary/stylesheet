@@ -3367,7 +3367,7 @@ GtkMessageDialog .titlebar.default-decoration {
 }
 
 GtkDialog .titlebar:backdrop,
-GtkMessageDialog .titlebar:backdrop
+GtkMessageDialog .titlebar:backdrop,
 GtkDialog .titlebar.default-decoration:backdrop,
 GtkMessageDialog .titlebar.default-decoration:backdrop {
     border: none;
@@ -3529,7 +3529,7 @@ GtkMessageDialog .titlebar:backdrop {
 }
 
 GtkDialog .titlebar .title {
-    color: @transparent;
+    color: transparent;
     font-size: 0;
     text-shadow: none;
     icon-shadow: none;
