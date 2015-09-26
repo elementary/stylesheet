@@ -3152,40 +3152,9 @@ GraniteWidgetsWelcome .h3 {
  * Popover *
  **********/
 
-GraniteWidgetsPopOver {
-
-    -GraniteWidgetsPopOver-arrow-width: 21;
-    -GraniteWidgetsPopOver-arrow-height: 10;
-    -GraniteWidgetsPopOver-border-radius: 5px;
-    -GraniteWidgetsPopOver-border-width: 1;
-    -GraniteWidgetsPopOver-shadow-size: 12;
-
-    border: 1px solid alpha (#000, 0.2);
-    margin: 0;
-}
-
-GraniteWidgetsPopOver .sidebar.view,
-GraniteWidgetsPopOver * {
-    background-color: transparent;
-}
-
-GraniteWidgetsPopOver .button {
-    background-image: none;
-    background-color: transparent;    
-}
-
-GraniteWidgetsPopOver .button:active,
-GraniteWidgetsPopOver .button:hover:active {
-    background-image: none;
-    background-color: alpha (#000, 0.05);
-    border-color: shade (@base_color, 0.74);
-}
-
 .popover,
-.popover.osd,
-.popover_bg {
+.popover.osd {
     border-radius: 4px;
-    background-clip: border-box;
     background-color: @bg_color;
 
     box-shadow: 0 0 0 1px alpha (#000, 0.2),
