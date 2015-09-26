@@ -1702,7 +1702,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-under-steppers: 1;
-    transition: all 300ms ease-in-out;
+    transition: all 600ms ease-out;
 }
 
 .scrollbar:hover {

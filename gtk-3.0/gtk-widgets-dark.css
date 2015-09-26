@@ -527,16 +527,6 @@ GtkComboBox.combobox-entry .button:last-child {
                 0 1px 0 1px alpha (#fff, 0.05);
 }
 
-/*************
-* Scrollbars *
-*************/
-
-.scrollbar.slider,
-.scrollbar.slider:prelight,
-.scrollbar.button {
-    background-color: alpha (#fff, 0.4);
-}
-
 /********
 * Menus *
 ********/
