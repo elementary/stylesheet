@@ -21,8 +21,6 @@
 
     -GtkTextView-error-underline-color: @error_color;
 
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 1px;
 
     -GtkWidget-link-color: @link_color;
@@ -1696,20 +1694,19 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .scrollbar {
     background-image: none;
-    border-style: solid;
-    -GtkRange-trough-border: 2;
+    -GtkRange-trough-border: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-slider-width: 3;
+    -GtkRange-slider-width: 5;
     -GtkScrollbar-min-slider-length: 30;
 
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-under-steppers: 1;
+    transition: all 300ms ease-in-out;
 }
 
-.scrollbar:backdrop {
-    -GtkRange-trough-border: 5;
-    -GtkRange-slider-width: 0;
+.scrollbar:hover {
+    -GtkRange-slider-width: 10;
 }
 
 .scrollbar.button,
@@ -1718,19 +1715,22 @@ GtkComboBox.combobox-entry .button:last-child {
 .scrollbar.button:insensitive,
 .scrollbar.button:hover:backdrop,
 .scrollbar.button:active:hover:backdrop {
-    border-style: none;
-    border-image: none;
-    border-radius: 0;
+    border: none;
     background-image: none;
     background-color: transparent;
 }
 
 .scrollbar.slider,
-.scrollbar.slider:prelight,
 .scrollbar.button {
-    border-width: 0;
-    background-color: alpha (#000, 0.4);
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
+    background-color: alpha (@text_color, 0.6);
     border-radius: 10px;
+}
+
+.scrollbar.slider:hover {
+    -GtkRange-slider-width: 10;
+    border: 1px solid alpha (@bg_highlight_color, 0.15);
+    background-color: alpha (@text_color, 0.85);
 }
 
 .scrollbar.slider:insensitive {
@@ -1742,10 +1742,15 @@ GtkComboBox.combobox-entry .button:last-child {
 .scrollbar.trough:backdrop {
     background-image: none;
     background-color: transparent;
-    border-width: 0;
-    border-radius: 0;
-    border-image: none;
-    box-shadow: none;
+    border: none;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.scrollbar.trough:hover {
+    background-color: alpha (@text_color, 0.25);
+    box-shadow: inset 0 0 2px alpha (@text_color, 0.15),
+                0 1px 0 alpha (@bg_highlight_color, 0.15);
 }
 
 .scrollbar.trough:insensitive {
