@@ -2478,47 +2478,56 @@ GtkAssistant .sidebar {
 
 GtkSwitch {
     font: 1;
-    -GtkSwitch-slider-width: 38;
+    -GtkSwitch-slider-width: 24;
+    -GtkSwitch-slider-height: 24;
+    transition: all 200ms ease-in;
 }
 
 GtkSwitch.trough {
-    background: -gtk-scaled(url("assets/switch-off.svg"),url("assets/switch-off@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-color: alpha (#000, 0.10);
+    background-image: none;
+    border: 1px solid alpha (#000, 0.25);
+    border-radius: 12px;
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 
     color: transparent;
-    border: none;
-    box-shadow: none;
 }
 
 GtkSwitch.trough:active {
-    background: -gtk-scaled(url("assets/switch-on.svg"),url("assets/switch-on@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-image: linear-gradient(to bottom,
+                                  shade (@colorAccent, 1.20),
+                                  @colorAccent
+                                  );
+
+    border-color: shade (@colorAccent, 0.85);
 }
 
 GtkSwitch.trough:insensitive {
-    background: -gtk-scaled(url("assets/switch-off-disabled.svg"),url("assets/switch-off-disabled@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-color: alpha (#000, 0.05);
 }
 
 GtkSwitch.trough:active:insensitive {
-    background: -gtk-scaled(url("assets/switch-on-disabled.svg"),url("assets/switch-on-disabled@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+ /*FIXME*/
 }
 
 GtkSwitch.slider {
-    background: -gtk-scaled(url("assets/switch-slider.svg"),url("assets/switch-slider@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-image: linear-gradient(to bottom,
+                                  @bg_color,
+                                  shade (@bg_color, 0.90)
+                                  );
+
+    border: 1px solid alpha (#000, 0.2);
+    border-radius: 12px;
+
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
 GtkSwitch.slider:focus {
-    background: -gtk-scaled(url("assets/switch-slider-focus.svg"),url("assets/switch-slider-focus@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+ /*FIXME*/
 }
 
 GtkSwitch.slider:insensitive {
