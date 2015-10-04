@@ -2535,7 +2535,11 @@ GtkSwitch.slider:focus {
 
 GtkSwitch.slider:insensitive {
     background-image: none;
-    background-color: transparent;
+    background-color: @bg_color;
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (#000, 0.15);
 }
 
 
