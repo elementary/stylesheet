@@ -42,10 +42,6 @@ CheeseThumbView /* Cheese */
     -EogScrollView-shadow-type: none;
 }
 
-CcNetworkPanel GtkNotebook > .frame {
-    border: none;
-}
-
 /**********
  * Birdie *
  *********/
@@ -248,9 +244,9 @@ NoiseLibraryWindow.window-frame {
 .panel.color-light .composited-indicator > GtkBox > GtkImage,
 .panel.color-light .composited-indicator > GtkBox > GtkLabel,
 .panel.color-light .composited-indicator > GtkRevealer {
-	color: alpha (#000, 0.65);
-	text-shadow: 0 1px 0 alpha (#fff, 0.25);
-	icon-shadow: 0 1px 0 alpha (#fff, 0.25);
+    color: alpha (#000, 0.65);
+    text-shadow: 0 1px 0 alpha (#fff, 0.25);
+    icon-shadow: 0 1px 0 alpha (#fff, 0.25);
 }
 
 .composited-indicator > GtkWidget > GtkWidget:first-child {
