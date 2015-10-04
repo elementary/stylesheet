@@ -173,6 +173,7 @@ GtkGrid:insensitive {
 
 GtkPaned {
     margin-right: 8px;
+    -gtk-icon-source: none;
 }
 
 .pane-separator,
