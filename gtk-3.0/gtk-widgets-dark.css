@@ -369,6 +369,21 @@
 
 }
 
+/*************
+ * GtkSwitch *
+ *************/
+
+GtkSwitch.trough:active {
+    border-color: shade (@selected_bg_color,  0.30);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.10),
+                            inset 0 1px 2px alpha (#000, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
+}
+
+GtkSwitch.slider:active {
+    border: 1px solid shade (@bg_color, 0.65);
+}
+
 /*************************** 
 * Secondary Toolbar Button *
 ***************************/
