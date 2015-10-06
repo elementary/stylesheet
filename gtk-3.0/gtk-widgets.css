@@ -468,10 +468,10 @@ GtkProgressBar.trough:backdrop,
 .level-bar.fill-block {
     background-color: @selected_bg_color;
     background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.10),
+                                  shade (@selected_bg_color, 1.30),
                                   @selected_bg_color
                                   );
-                                  
+
     border: 1px solid shade (@selected_bg_color, 0.90);
     border-radius: 2.5px;
 
@@ -481,11 +481,6 @@ GtkProgressBar.trough:backdrop,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     transition: all 100ms ease-in;
-
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  @selected_bg_color
-                                  );
 }
 
 .level-bar.fill-block.level-low {
