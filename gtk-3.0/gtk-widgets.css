@@ -1701,10 +1701,6 @@ GtkComboBox.combobox-entry .button:last-child {
     transition: all 600ms ease-out;
 }
 
-.scrollbar:hover {
-    -GtkRange-slider-width: 10;
-}
-
 .scrollbar.button,
 .scrollbar.button:active,
 .scrollbar.button:active:hover,
@@ -1723,12 +1719,6 @@ GtkComboBox.combobox-entry .button:last-child {
     border-radius: 10px;
 }
 
-.scrollbar.slider:hover {
-    -GtkRange-slider-width: 10;
-    border: 1px solid alpha (@bg_highlight_color, 0.15);
-    background-color: alpha (@text_color, 0.85);
-}
-
 .scrollbar.slider:insensitive {
     -GtkRange-slider-width: 0;
 }
@@ -1741,12 +1731,6 @@ GtkComboBox.combobox-entry .button:last-child {
     border: none;
     border-radius: 6px;
     margin: 2px;
-}
-
-.scrollbar.trough:hover {
-    background-color: alpha (@text_color, 0.25);
-    box-shadow: inset 0 0 2px alpha (@text_color, 0.15),
-                0 1px 0 alpha (@bg_highlight_color, 0.15);
 }
 
 .scrollbar.trough:insensitive {
