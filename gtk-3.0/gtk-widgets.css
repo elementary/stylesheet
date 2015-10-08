@@ -1761,9 +1761,9 @@ GtkTreeMenu .menuitem {
                                   alpha (@bg_color, 0.98) 80%,
                                   alpha (shade(@bg_color, 0.94), 0.98)
                                   );
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
-                inset 0 1px 0 0 alpha (#fff, 0.90),
-                inset 0 -1px 0 0 alpha (#fff, 0.30);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.10),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.90),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 .menu.button {
@@ -1950,15 +1950,15 @@ GtkHandleBox,
     border: 1px solid shade (@titlebar_color, 0.56);
     border-width: 0 0 1px 0;
 
-    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.20);
+    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.20);
 
     background-image: linear-gradient(to bottom,
                                   @titlebar_color,
                                   shade (@titlebar_color, 0.84)
                                   );
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 GtkHandleBox:backdrop,
@@ -1969,7 +1969,7 @@ GtkHandleBox:backdrop,
                               );
     border-color: shade (@titlebar_color, 0.64);
 
-    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.40);
+    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.40);
 
     -gtk-image-effect: dim;
 }
@@ -1995,13 +1995,13 @@ GtkHandleBox:backdrop,
                                   shade (@titlebar_color, 0.84)
                                   );
 
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
-                inset 0 -1px 0 0 alpha (#fff, 0.20);
+    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.30),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.20);
 
     border-color: shade (@titlebar_color, 0.54);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 .secondary-toolbar.toolbar:backdrop {
@@ -2019,8 +2019,8 @@ GtkHandleBox:backdrop,
 .secondary-toolbar.toolbar .button {
     border-color: alpha (#000, 0.3);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 
@@ -2039,8 +2039,8 @@ GtkHandleBox:backdrop,
                                   shade (@titlebar_color, 0.88)
                                   );
 
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.50),
-                inset 0 -1px 0 0 alpha (#fff, 0.20);
+    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.50),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.20);
 }
 
 .bottom-toolbar.toolbar .button {
@@ -2105,8 +2105,8 @@ GtkHandleBox:backdrop,
 .action-bar {
     padding: 1px 6px;
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 
     background-image: linear-gradient(to bottom,
                                   @titlebar_color,
@@ -2117,9 +2117,9 @@ GtkHandleBox:backdrop,
     border-width: 1px 0 0 0;
     border-top-color: shade (@bg_color, 0.52);
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
 GtkDialog .action-bar {
@@ -2197,8 +2197,8 @@ GtkPaned .inline-toolbar.toolbar {
     background-color: transparent;
     box-shadow: none;
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 
     color: shade (@text_color, 1.25);
 }
@@ -2243,13 +2243,13 @@ EggFindBar.toolbar,
                                   shade (@titlebar_color, 0.84)
                                   );
 
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
-                inset 0 -1px 0 0 alpha (#fff, 0.20);
+    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.30),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.20);
 
     border-color: shade (@titlebar_color, 0.54);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 EggFindBar.toolbar:backdrop,
@@ -3314,7 +3314,7 @@ GcrCertificateWidget .frame {
                                   );
     border-width: 0;
 
-    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.60);
+    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.60);
 }
 
 GtkDialog .titlebar,
@@ -3326,9 +3326,9 @@ GtkMessageDialog .titlebar.default-decoration {
     background-image: none;
     background-color: @bg_color;
 
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 #fff;
+    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset 0 1px 0 0 @bg_highlight_color;
 }
 
 GtkDialog .titlebar:backdrop,
@@ -3340,9 +3340,9 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     background-image: none;
     background-color: @bg_color;
 
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 #fff;
+    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset 0 1px 0 0 @bg_highlight_color;
 
     color: shade (@titlebar_color, 1.20);
 }
@@ -3474,9 +3474,9 @@ GtkMessageDialog .titlebar {
     background-image: none;
     background-color: @bg_color;
 
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 #fff;
+    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset 0 1px 0 0 @bg_highlight_color;
 }
 
 GtkDialog .titlebar:backdrop,
@@ -3486,9 +3486,9 @@ GtkMessageDialog .titlebar:backdrop {
     background-image: none;
     background-color: @bg_color;
 
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 1px 0 0 #fff;
+    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset 0 1px 0 0 @bg_highlight_color;
 
     color: shade (@titlebar_color, 1.20);
 }
@@ -3502,9 +3502,9 @@ GtkDialog .titlebar .title {
 
 GtkDialog,
 GtkMessageDialog {
-    box-shadow: inset 1px 0 0 0 alpha (#fff, 0.20),
-                inset -1px 0 0 0 alpha (#fff, 0.20),
-                inset 0 -1px 0 0 alpha (#fff, 0.30);
+    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 GtkDialog .toolbar {
