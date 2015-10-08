@@ -380,6 +380,10 @@ GtkSwitch.trough:active {
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
+GtkSwitch.trough:active:insensitive {
+    border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.5);
+}
+
 GtkSwitch.slider:active {
     border: 1px solid shade (@bg_color, 0.65);
 }
