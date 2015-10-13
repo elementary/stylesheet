@@ -21,8 +21,6 @@
 
     -GtkTextView-error-underline-color: @error_color;
 
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
     -GtkPaned-handle-size: 1px;
 
     -GtkWidget-link-color: @link_color;
@@ -175,6 +173,7 @@ GtkGrid:insensitive {
 
 GtkPaned {
     margin-right: 8px;
+    -gtk-icon-source: none;
 }
 
 .pane-separator,
@@ -469,10 +468,10 @@ GtkProgressBar.trough:backdrop,
 .level-bar.fill-block {
     background-color: @selected_bg_color;
     background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.10),
+                                  shade (@selected_bg_color, 1.30),
                                   @selected_bg_color
                                   );
-                                  
+
     border: 1px solid shade (@selected_bg_color, 0.90);
     border-radius: 2.5px;
 
@@ -482,11 +481,6 @@ GtkProgressBar.trough:backdrop,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     transition: all 100ms ease-in;
-
-    background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.30),
-                                  @selected_bg_color
-                                  );
 }
 
 .level-bar.fill-block.level-low {
@@ -1696,20 +1690,15 @@ GtkComboBox.combobox-entry .button:last-child {
 
 .scrollbar {
     background-image: none;
-    border-style: solid;
-    -GtkRange-trough-border: 2;
+    -GtkRange-trough-border: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-slider-width: 3;
+    -GtkRange-slider-width: 5;
     -GtkScrollbar-min-slider-length: 30;
 
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-under-steppers: 1;
-}
-
-.scrollbar:backdrop {
-    -GtkRange-trough-border: 5;
-    -GtkRange-slider-width: 0;
+    transition: all 600ms ease-out;
 }
 
 .scrollbar.button,
@@ -1718,18 +1707,15 @@ GtkComboBox.combobox-entry .button:last-child {
 .scrollbar.button:insensitive,
 .scrollbar.button:hover:backdrop,
 .scrollbar.button:active:hover:backdrop {
-    border-style: none;
-    border-image: none;
-    border-radius: 0;
+    border: none;
     background-image: none;
     background-color: transparent;
 }
 
 .scrollbar.slider,
-.scrollbar.slider:prelight,
 .scrollbar.button {
-    border-width: 0;
-    background-color: alpha (#000, 0.4);
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
+    background-color: alpha (@text_color, 0.6);
     border-radius: 10px;
 }
 
@@ -1742,10 +1728,9 @@ GtkComboBox.combobox-entry .button:last-child {
 .scrollbar.trough:backdrop {
     background-image: none;
     background-color: transparent;
-    border-width: 0;
-    border-radius: 0;
-    border-image: none;
-    box-shadow: none;
+    border: none;
+    border-radius: 6px;
+    margin: 2px;
 }
 
 .scrollbar.trough:insensitive {
@@ -2478,54 +2463,86 @@ GtkAssistant .sidebar {
 
 GtkSwitch {
     font: 1;
-    -GtkSwitch-slider-width: 38;
+    -GtkSwitch-slider-width: 24;
+    -GtkSwitch-slider-height: 24;
+    transition: all 200ms ease-in;
 }
 
 GtkSwitch.trough {
-    background: -gtk-scaled(url("assets/switch-off.svg"),url("assets/switch-off@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-color: alpha (#000, 0.10);
+    background-image: none;
+    border: 1px solid alpha (#000, 0.25);
+    border-radius: 12px;
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 
     color: transparent;
-    border: none;
-    box-shadow: none;
 }
 
 GtkSwitch.trough:active {
-    background: -gtk-scaled(url("assets/switch-on.svg"),url("assets/switch-on@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-image: linear-gradient(to bottom,
+                                  shade (@colorAccent, 1.20),
+                                  @colorAccent
+                                  );
+
+    border-color: shade (@colorAccent, 0.85);
 }
 
 GtkSwitch.trough:insensitive {
-    background: -gtk-scaled(url("assets/switch-off-disabled.svg"),url("assets/switch-off-disabled@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-color: alpha (#000, 0.02);
 }
 
 GtkSwitch.trough:active:insensitive {
-    background: -gtk-scaled(url("assets/switch-on-disabled.svg"),url("assets/switch-on-disabled@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-image: none;
+    background-color: mix (@bg_color, @colorAccent, 0.5);
+    border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
+}
+
+GtkSwitch.trough:active:backdrop {
+    background-image: none;
+    background-color: shade (@bg_color, 0.8);
+    border-color: shade (@bg_color, 0.65);
 }
 
 GtkSwitch.slider {
-    background: -gtk-scaled(url("assets/switch-slider.svg"),url("assets/switch-slider@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-image: linear-gradient(to bottom,
+                                  shade (@bg_color, 1.05),
+                                  shade (@bg_color, 0.95)
+                                  );
+
+    border: 1px solid alpha (#000, 0.2);
+    border-radius: 12px;
+
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (#000, 0.15),
+                0 1px 2px alpha (#000, 0.16);
 }
 
 GtkSwitch.slider:focus {
-    background: -gtk-scaled(url("assets/switch-slider-focus.svg"),url("assets/switch-slider-focus@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
+    background-image: linear-gradient(to bottom,
+                                      shade (@bg_color, 1.05),
+                                      shade (mix (@bg_color, @colorAccent, 0.10), 0.95)
+                                      );
+    border-color: @colorAccent;
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (@colorAccent, 0.35),
+                0 1px 2px alpha (@colorAccent, 0.16);
 }
 
-GtkSwitch.slider:insensitive {
+GtkSwitch.slider:insensitive,
+GtkSwitch.slider:backdrop {
     background-image: none;
-    background-color: transparent;
+    background-color: @bg_color;
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (#000, 0.15);
 }
-
 
 /*****************************
 * Tree, List, and Icon Views *
@@ -3157,45 +3174,12 @@ GraniteWidgetsWelcome .h3 {
  * Popover *
  **********/
 
-GraniteWidgetsPopOver {
-
-    -GraniteWidgetsPopOver-arrow-width: 21;
-    -GraniteWidgetsPopOver-arrow-height: 10;
-    -GraniteWidgetsPopOver-border-radius: 5px;
-    -GraniteWidgetsPopOver-border-width: 1;
-    -GraniteWidgetsPopOver-shadow-size: 12;
-
-    border: 1px solid alpha (#000, 0.2);
-    margin: 0;
-}
-
-GraniteWidgetsPopOver .sidebar.view,
-GraniteWidgetsPopOver * {
-    background-color: transparent;
-}
-
-GraniteWidgetsPopOver .button {
-    background-image: none;
-    background-color: transparent;    
-}
-
-GraniteWidgetsPopOver .button:active,
-GraniteWidgetsPopOver .button:hover:active {
-    background-image: none;
-    background-color: alpha (#000, 0.05);
-    border-color: shade (@base_color, 0.74);
-}
-
 .popover,
-.popover.osd,
-.popover_bg {
-    background-clip: border-box;
+.popover.osd {
+    border-radius: 4px;
     background-color: @bg_color;
 
-    border: 1px solid alpha (#000, 0.2);
-    border-radius: 4px;
-
-    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30),
+    box-shadow: 0 0 0 1px alpha (#000, 0.2),
                 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
     margin: 10px 6px;

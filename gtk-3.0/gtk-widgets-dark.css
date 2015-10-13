@@ -369,6 +369,30 @@
 
 }
 
+/*************
+ * GtkSwitch *
+ *************/
+
+GtkSwitch.trough:active {
+    border-color: shade (@selected_bg_color,  0.30);
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.10),
+                inset 0 1px 2px alpha (#000, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
+}
+
+GtkSwitch.trough:active:backdrop {
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.10),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
+}
+
+GtkSwitch.trough:active:insensitive {
+    border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.5);
+}
+
+GtkSwitch.slider:active {
+    border: 1px solid shade (@bg_color, 0.65);
+}
+
 /*************************** 
 * Secondary Toolbar Button *
 ***************************/
@@ -525,16 +549,6 @@ GtkComboBox.combobox-entry .button:last-child {
                                   
     box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 1px alpha (#fff, 0.05);
-}
-
-/*************
-* Scrollbars *
-*************/
-
-.scrollbar.slider,
-.scrollbar.slider:prelight,
-.scrollbar.button {
-    background-color: alpha (#fff, 0.4);
 }
 
 /********
@@ -1051,53 +1065,6 @@ GtkAssistant .sidebar {
     border-style: solid;
     color: mix (@fg_color, @bg_color, 0.40);
     text-shadow: 0 1px shade (@bg_color, 1.04);
-}
-
-/*************
- * GtkSwitch *
- *************/
-
-GtkSwitch.trough {
-    background: -gtk-scaled(url("assets/switch-off-dark.svg"),url("assets/switch-off-dark@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-
-    color: transparent;
-}
-
-GtkSwitch.trough:active {
-    background: -gtk-scaled(url("assets/switch-on-dark.svg"),url("assets/switch-on-dark@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.trough:insensitive {
-    background: -gtk-scaled(url("assets/switch-off-disabled-dark.svg"),url("assets/switch-off-disabled-dark@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.trough:active:insensitive {
-    background: -gtk-scaled(url("assets/switch-on-disabled-dark.svg"),url("assets/switch-on-disabled-dark@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.slider {
-    background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.slider:focus {
-    background: -gtk-scaled(url("assets/switch-slider-dark.svg"),url("assets/switch-slider-dark@2.svg"));
-    background-repeat: no-repeat;
-    background-position: 0 center;
-}
-
-GtkSwitch.slider:insensitive {
-    background-image: none;
-    background-color: transparent;
 }
 
 /**********************
