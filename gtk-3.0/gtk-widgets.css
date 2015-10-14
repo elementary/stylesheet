@@ -3177,10 +3177,12 @@ GraniteWidgetsWelcome .h3 {
 .popover,
 .popover.osd {
     border-radius: 4px;
+    border: 1px solid alpha (#000, 0.3);
+    background-clip: content-box;
+
     background-color: @bg_color;
 
-    box-shadow: 0 0 0 1px alpha (#000, 0.2),
-                0 3px 6px alpha (#000, 0.16),
+    box-shadow: 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
     margin: 10px 6px;
 
