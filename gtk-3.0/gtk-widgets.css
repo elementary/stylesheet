@@ -1527,7 +1527,7 @@ GtkOverlay .linked .button:insensitive:last-child {
     color: shade (@titlebar_color, 0.35);
 }
 
-.dynamic-notebook .notebook tab:nth-child(first) {
+.dynamic-notebook .notebook tab:first-child {
     border-width: 0 1px 0 1px;
     border-image: linear-gradient(to bottom,
                                   transparent,
@@ -2688,9 +2688,9 @@ column-header .button GtkLabel {
     color: shade (@text_color, 1.8);
 }
 
-column-header:nth-child(first) .button,
-column-header:nth-child(first) .button:backdrop,
-.content-view column-header:nth-child(first) .button {
+column-header:first-child .button,
+column-header:first-child .button:backdrop,
+.content-view column-header:first-child .button {
     border-width: 0 0 1px 0;
 }
 
