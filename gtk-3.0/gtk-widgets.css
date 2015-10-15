@@ -660,34 +660,39 @@ GtkProgressBar.trough:backdrop,
 ********/
 
 .scale {
-    -GtkScale-slider-length: 16;
-    -GtkRange-slider-width: 16;
+    -GtkScale-slider-length: 22;
+    -GtkRange-slider-width: 22;
     -GtkRange-trough-border: 0;
 
 }
 
 .scale.slider {
-    border: 1px solid shade (@border_color, 0.6);
-    border-radius: 10px;
-
     background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.10),
-                                  shade (@bg_color, 0.88)
+                                  shade (@bg_color, 1.05),
+                                  shade (@bg_color, 0.90)
                                   );
-                        
-    box-shadow: inset 0 0 0 1px alpha (shade (@bg_color, 1.60), 0.10),
-                inset 0 1px 0 0 alpha (shade (@bg_color, 1.60), 0.90),
-                inset 0 -1px 0 0 alpha (shade (@bg_color, 1.60), 0.30),
-                0 1px 1px alpha (#000, 0.15);
+
+    border: 1px solid alpha (#000, 0.25);
+    border-radius: 12px;
+
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (#000, 0.12);
+    margin: 3px;
 }
 
 .scale.slider:focus {
-    border: 1px solid alpha (@colorAccent, 0.9);
-
-    box-shadow: inset 0 0 0 1px alpha (shade (@bg_color, 1.80), 0.10),
-                inset 0 1px 0 0 alpha (shade (@bg_color, 1.80), 0.90),
-                inset 0 -1px 0 0 alpha (shade (@bg_color, 1.80), 0.30),
-                0 1px 1px alpha (@colorAccent, 0.65);
+    background-image: linear-gradient(to bottom,
+                                      shade (@bg_color, 1.05),
+                                      shade (mix (@bg_color, @colorAccent, 0.10), 0.95)
+                                      );
+    border-color: alpha (@colorAccent, 0.9);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (@colorAccent, 0.35),
+                0 1px 2px alpha (@colorAccent, 0.16);
 }
 
 .scale.slider:backdrop {
@@ -711,7 +716,7 @@ GtkProgressBar.trough:backdrop,
 }
 
 .scale.trough {
-    margin: 6px 0 5px 0;
+    margin: 9px 0 8px 0;
 
     border: 1px solid alpha (#000, 0.35);
     border-radius: 12px;
