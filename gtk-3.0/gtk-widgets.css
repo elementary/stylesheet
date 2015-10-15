@@ -1257,7 +1257,7 @@ GtkColorSwatch:hover {
                             
     box-shadow: inset 0 0 alpha (#fff, 0.4);
 }
-    
+
 GtkColorSwatch:backdrop,
 GtkColorSwatch:backdrop:selected {
     background-image: none;
@@ -1280,11 +1280,11 @@ GtkColorEditor GtkColorSwatch:hover {
     box-shadow: inset 0 1px rgba(0, 0, 0, 0.1),
                 0 1px white;
 }
-      
+
 GtkColorEditor GtkColorSwatch:backdrop {
     box-shadow: none;
-}   
-      
+}
+
 GtkColorSwatch#add-color-button {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
@@ -1643,11 +1643,11 @@ GtkComboBox .vertical.separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
-	border: none;
+    border: none;
 }
 
 GtkComboBoxText GtkImage {
-	color: mix(@text_color, @bg_color, 0.3);
+    color: mix(@text_color, @bg_color, 0.3);
 }
 
 GtkComboBox.combobox-entry .entry:first-child,
@@ -2671,7 +2671,7 @@ GtkListBoxRow:first-child {
 .app-notification .button:active {
     background-color: @bg_color;
     box-shadow: 0 3px 6px alpha (@text_color, 0.16),
-                            0 3px 6px alpha (@text_color, 0.23);
+                0 3px 6px alpha (@text_color, 0.23);
 }
 
 /******************
