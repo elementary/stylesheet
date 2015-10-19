@@ -42,10 +42,6 @@ CheeseThumbView /* Cheese */
     -EogScrollView-shadow-type: none;
 }
 
-CcNetworkPanel GtkNotebook > .frame {
-    border: none;
-}
-
 /**********
  * Birdie *
  *********/
@@ -131,16 +127,12 @@ GtkFileChooserDialog .entry.pathbar:focus {
                                   alpha (@bg_color, 0.98) 80%,
                                   alpha (shade(@bg_color, 0.94), 0.98)
                                   );
-    box-shadow: inset 0 0 0 1px alpha (@base_color, 0.10),
-                inset 0 1px 0 0 alpha (@base_color, 0.90),
-                inset 0 -1px 0 0 alpha (@base_color, 0.30),
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
+                inset 0 1px 0 0 alpha (#fff, 0.90),
+                inset 0 -1px 0 0 alpha (#fff, 0.30),
                 0 0 0 1px alpha (#000, 0.20),
                 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
-}
-
-.gala-notification .title, .gala-notification .label {
-    color: @text_color;
 }
 
 .gala-button {
@@ -240,31 +232,6 @@ NoiseLibraryWindow.window-frame {
     background-color: transparent;
 }
 
-.panel-shadow {
-    background-image: none;
-    background-color: transparent;
-}
-
-.panel .menu {
-    box-shadow: none;
-}
-
-.panel .menu .spinner {
-    opacity: 1;
-}
-
-.panel .menu .window-frame.menu.csd,
-.panel .menu .window-frame.popup.csd {
-    box-shadow: 0 0 0 1px alpha (#000, 0.20),
-                0 10px 20px alpha (#000, 0.19),
-                0 6px 6px alpha (#000, 0.23);
-}
-
-.panel .window-frame.menu.csd,
-.panel .window-frame.popup.csd {
-    box-shadow: none;
-}
-
 .composited-indicator > GtkBox > GtkImage,
 .composited-indicator > GtkBox > GtkLabel,
 .composited-indicator > GtkRevealer {
@@ -277,9 +244,9 @@ NoiseLibraryWindow.window-frame {
 .panel.color-light .composited-indicator > GtkBox > GtkImage,
 .panel.color-light .composited-indicator > GtkBox > GtkLabel,
 .panel.color-light .composited-indicator > GtkRevealer {
-	color: alpha (#000, 0.65);
-	text-shadow: 0 1px 0 alpha (#fff, 0.25);
-	icon-shadow: 0 1px 0 alpha (#fff, 0.25);
+    color: alpha (#000, 0.65);
+    text-shadow: 0 1px 0 alpha (#fff, 0.25);
+    icon-shadow: 0 1px 0 alpha (#fff, 0.25);
 }
 
 .composited-indicator > GtkWidget > GtkWidget:first-child {
