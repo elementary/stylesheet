@@ -74,7 +74,7 @@ PantheonCalculatorMainWindow.window-frame {
 
 .pathbar:focus {
     box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23),
-                0 1px 0 alpha (#fff, 0.30);
+                0 1px 0 alpha (@bg_highlight_color, 0.30);
     border-color: alpha (@colorAccent, 0.80);
 }
 
@@ -251,14 +251,6 @@ NoiseLibraryWindow.window-frame {
     color: alpha (#000, 0.65);
     text-shadow: 0 1px 0 alpha (#fff, 0.25);
     icon-shadow: 0 1px 0 alpha (#fff, 0.25);
-}
-
-.composited-indicator > GtkWidget > GtkWidget:first-child {
-    padding: 0 2px;
-}
-
-.panel-app-button > GtkWidget > GtkWidget:first-child {
-    padding: 0 2px 0 4px;
 }
 
 /**********
