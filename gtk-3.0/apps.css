@@ -127,12 +127,16 @@ GtkFileChooserDialog .entry.pathbar:focus {
                                   alpha (@bg_color, 0.98) 80%,
                                   alpha (shade(@bg_color, 0.94), 0.98)
                                   );
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
-                inset 0 1px 0 0 alpha (#fff, 0.90),
-                inset 0 -1px 0 0 alpha (#fff, 0.30),
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.10),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.90),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30),
                 0 0 0 1px alpha (#000, 0.20),
                 0 3px 6px alpha (#000, 0.16),
                 0 3px 6px alpha (#000, 0.23);
+}
+
+.gala-notification .title, .gala-notification .label {
+    color: @text_color;
 }
 
 .gala-button {
