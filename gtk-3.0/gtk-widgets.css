@@ -50,7 +50,6 @@
 }
 
 *:selected:focus {
-    /* FIXME: We should set the bg color in each widget */
     background-color: alpha (@colorAccent, 0.9);
     color: @selected_fg_color;
 }
@@ -2579,13 +2578,6 @@ GtkIconView.view.cell:selected:focus {
     background-color: @base_color;
 }
 
-.list-row.button {
-    background-image: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-}
-
 .cell {
     border-width: 0px;
     color: @text_color;
@@ -2593,19 +2585,14 @@ GtkIconView.view.cell:selected:focus {
 }
 
 .cell:selected,
-.list-row.button:selected,
-.list-row.button:selected:backdrop,
 .popover GtkTreeView.view row:selected,
 .view:selected,
-GtkListBoxRow:selected,
-GtkListBoxRow:selected:backdrop,
 .popover GtkTreeView.view row:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
 }
 
 .cell:selected:focus,
-.list-row.button:selected:focus,
 .view:selected:focus {
     background-color: @colorAccent;
     color: @selected_fg_color;
@@ -2742,10 +2729,24 @@ GtkListBox,
     background-color: transparent;
 }
 
-.list-row:selected {
-    background-color: @colorAccent;
+.list-row.button {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.list-row:selected,
+.list-row:selected:backdrop {
+    background-color: shade (@base_color, 0.80);
+    color: @text_color;
     icon-shadow: none;
     text-shadow: none;
+}
+
+.list-row:selected:focus {
+    background-color: @colorAccent;
+    color: @selected_fg_color;
 }
 
 /***************
