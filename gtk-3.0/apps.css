@@ -237,6 +237,10 @@ NoiseLibraryWindow.window-frame {
     transition: all 100ms ease-in-out;
 }
 
+.panel.maximized {
+    background-color: #000;
+}
+
 .composited-indicator > GtkBox > GtkImage,
 .composited-indicator > GtkBox > GtkLabel,
 .composited-indicator > GtkRevealer {
@@ -253,7 +257,6 @@ NoiseLibraryWindow.window-frame {
     text-shadow: 0 1px 0 alpha (#fff, 0.25);
     icon-shadow: 0 1px 0 alpha (#fff, 0.25);
 }
-
 /**********
  * Photos *
  *********/
