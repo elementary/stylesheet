@@ -736,7 +736,7 @@ GtkProgressBar.trough:backdrop,
 }
 
 .scale.trough.vertical {
-    margin: 0 5px 0 6px;
+    margin: 0 9px 0 8px;
 
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.15),
