@@ -66,7 +66,6 @@
 @define-color warning_color #fbc02d;
 @define-color error_color #c92e34;
 @define-color success_color #73d216;
-@define-color metacity_color @titlebar_color;
 
 @define-color orange #ee6221;
 @define-color purple #4a58b1;

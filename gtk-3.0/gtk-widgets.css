@@ -67,6 +67,10 @@
     color: @error_color;
 }
 
+.warning {
+    color: @warning_color;
+}
+
 .success {
     color: @success_color;
 }
