@@ -135,7 +135,8 @@ GtkFileChooserDialog .entry.pathbar:focus {
                 0 3px 6px alpha (#000, 0.23);
 }
 
-.gala-notification .title, .gala-notification .label {
+.gala-notification .title,
+.gala-notification .label {
     color: @text_color;
 }
 
