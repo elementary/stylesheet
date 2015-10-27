@@ -263,8 +263,10 @@ NoiseLibraryWindow.window-frame {
 .panel.color-light .composited-indicator > GtkBox > GtkLabel,
 .panel.color-light .composited-indicator > GtkRevealer {
     color: alpha (#000, 0.65);
-    text-shadow: 0 1px 0 alpha (#fff, 0.25);
-    icon-shadow: 0 1px 0 alpha (#fff, 0.25);
+    text-shadow: 0 0 2px alpha (#fff, 0.3),
+                 0 1px 0 alpha (#fff, 0.25);
+    icon-shadow: 0 0 2px alpha (#fff, 0.3),
+                 0 1px 0 alpha (#fff, 0.25);
 }
 
 /**********
