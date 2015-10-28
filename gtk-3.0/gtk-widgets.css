@@ -3558,6 +3558,10 @@ GtkImage.warning,
     color: @warning_color;
 }
 
+.label.warning {
+    color: shade (@warning_color, 0.75);
+}
+
 GtkImage.success,
 .success {
     color: @success_color;
