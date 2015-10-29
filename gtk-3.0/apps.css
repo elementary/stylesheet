@@ -140,6 +140,10 @@ GtkFileChooserDialog .entry.pathbar:focus {
     color: @text_color;
 }
 
+.gala-notification GtkImage {
+    color: alpha (@text_color, 0.8);
+}
+
 .gala-button {
     padding: 3px;
     color: #fff;
@@ -205,6 +209,14 @@ PantheonGreeter .entry:focus {
     border-color: alpha (@border_color, 0.75);
     box-shadow: inset 0 1px 1px 0 alpha (#000, 0.20),
                 0 1px 0 alpha (#fff, 0.15);
+}
+
+PantheonGreeter .button.flat {
+    color: #fff;
+    text-shadow: 0 0 2px alpha (#000, 0.3),
+                 0 1px 2px alpha (#000, 0.6);
+    icon-shadow: 0 0 2px alpha (#000, 0.3),
+                 0 1px 2px alpha (#000, 0.6);
 }
 
 PantheonGreeter .button.text-button.suggested-action {
