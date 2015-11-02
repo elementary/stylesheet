@@ -2549,11 +2549,11 @@ GtkTreeView {
 }
 
 GtkTreeView row:nth-child(even) {
-    background-color: @base_color;
+    background-color: @bg_color;
 }
 
 GtkTreeView row:nth-child(odd) {
-    background-color: @bg_color;
+    background-color: @base_color;
 }
 
 GtkTreeView .entry {
