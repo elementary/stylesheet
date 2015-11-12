@@ -873,7 +873,7 @@ GtkComboBox.combobox-entry .button {
 .button:backdrop {
     background-image: none;
 
-    border: 1px solid alpha (#000, 0.2);
+    border-color: alpha (#000, 0.2);
 }
 
 .header-bar .button,
@@ -2653,42 +2653,22 @@ GtkListBoxRow:first-child {
  * Column Headers *
  *****************/
 
-column-header .button,
-.content-view column-header .button {
+column-header .button {
+    border-left-width: 0;
     border-radius: 0;
-}
+    border-top-color: shade (@base_color, 0.70);
 
-column-header .button GtkLabel {
-    padding-left: 3px;
-    color: shade (@text_color, 1.8);
-}
-
-column-header:first-child .button,
-column-header:first-child .button:backdrop,
-.content-view column-header:first-child .button {
-    border-width: 0 0 1px 0;
-}
-
-column-header .button,
-column-header .button:backdrop {
+    background-color: @bg_color;
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.88),
                                   @base_color
                                   );
-
-    border-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.88),
-                                  shade (@base_color, 0.70)
-                                  ) 0 0 1 1;
-    border-width: 0 0 1px 1px;
     font: bold;
     padding: 4px 2px 4px 2px;
-    color: shade(@text_color, 1.5);
 }
 
-column-header .button:backdrop {
-    background-image: none;
-    background-color: @bg_color;
+column-header:last-child .button {
+    border-right-width: 0;
 }
 
 column-header .button:hover {
@@ -2698,11 +2678,24 @@ column-header .button:hover {
                                   );
 }
 
-column-header .button:hover:backdrop {
+column-header .button:backdrop {
+    background-image: none;
+}
+
+column-header .button:backdrop:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.92),
                                   @bg_color
                                   );
+}
+
+column-header .button GtkLabel {
+    padding-left: 3px;
+    color: shade (@text_color, 1.8);
+}
+
+column-header .button:backdrop GtkLabel {
+    color: shade (@text_color, 2.8);
 }
 
 /*************
