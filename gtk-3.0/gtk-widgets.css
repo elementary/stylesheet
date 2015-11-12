@@ -163,6 +163,10 @@ GtkPaned {
     -gtk-icon-source: none;
 }
 
+GtkPaned.vertical {
+    margin-bottom: 8px;
+}
+
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
