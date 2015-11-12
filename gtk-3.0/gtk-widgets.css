@@ -817,6 +817,16 @@ GtkScrolledWindow GtkViewport.frame {
     border: none;
 }
 
+.overshoot.left,
+.overshoot.right,
+.overshoot.top,
+.overshoot.bottom {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
 /**********
 * Buttons *
 **********/
