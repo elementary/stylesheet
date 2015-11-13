@@ -171,7 +171,6 @@ GtkPaned.vertical {
 .pane-separator:prelight,
 .pane-separator:selected {
     background-color: shade (@base_color, 0.55);
-    /* background-image: none does not hide the grip handle */
     background-image: linear-gradient(to right,
                                   shade (@base_color, 0.55),
                                   shade (@base_color, 0.55)
@@ -3381,10 +3380,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 }
 
 .titlebar .subtitle {
-    color: shade (@titlebar_color, 0.50);
     font-size: 80%;
-    text-shadow: 0 1px @title_shadow_color;
-    icon-shadow: 0 1px @title_shadow_color;
 }
 
 .titlebar .titlebutton {
