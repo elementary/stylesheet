@@ -2668,8 +2668,8 @@ GtkListBoxRow:first-child {
 
 column-header .button {
     border-left-width: 0;
+    border-top-width: 0;
     border-radius: 0;
-    border-top-color: shade (@base_color, 0.70);
 
     background-color: @bg_color;
     background-image: linear-gradient(to bottom,
