@@ -823,7 +823,11 @@ GtkScrolledWindow GtkViewport.frame {
 .overshoot.left,
 .overshoot.right,
 .overshoot.top,
-.overshoot.bottom {
+.overshoot.bottom,
+.undershoot.left,
+.undershoot.right,
+.undershoot.top,
+.undershoot.bottom {
     background-image: none;
     background-color: transparent;
     border: none;
@@ -1580,12 +1584,11 @@ GtkOverlay .linked .button:insensitive:last-child {
 
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
-
-    border: 1px solid shade (@titlebar_color, 0.60);
+    border: none;
 }
 
 .notebook.frame {
-   /*FIXME: Move the border down here so devs have more control*/
+    border: 1px solid shade (@titlebar_color, 0.60);
 }
 
 .notebook GtkViewport {
@@ -3485,6 +3488,7 @@ GtkDialog.background {
 GtkMessageDialog {
     -GtkDialog-button-spacing: 0;
     -GtkDialog-content-area-border: 12px;
+    -gtk-icon-style: regular;
 }
 
 GtkMessageDialog .button {
