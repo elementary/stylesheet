@@ -2834,12 +2834,18 @@ GtkDialog .sidebar GtkScrolledWindow {
 .sidebar .view,
 .sidebar .view:selected:backdrop,
 .sidebar .view:hover:selected:backdrop,
+.sidebar-row,
+.sidebar-row:selected:backdrop,
+.sidebar-row:hover:selected:backdrop,
 .source-list,
 .source-list.view,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
     text-shadow: 0 1px alpha (#fff, 0.4);
     icon-shadow: 0 1px alpha (#fff, 0.4);
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
 }
 
 .sidebar,
@@ -2848,7 +2854,16 @@ GtkDialog .sidebar GtkScrolledWindow {
     -GtkTreeView-vertical-separator: 6px;
 }
 
+.sidebar-row {
+    padding: 0 6px;
+}
+
+.sidebar-row GtkImage {
+    padding-right: 6px;
+}
+
 .sidebar .view:hover,
+.sidebar-row:hover,
 .source-list.view:hover {
     background-color: shade (@titlebar_color, 1.10);
 }
@@ -2857,14 +2872,15 @@ GtkDialog .sidebar GtkScrolledWindow {
 .sidebar .view:selected:hover,
 .sidebar.view:selected,
 .sidebar.view:selected:hover,
+.sidebar-row:selected,
+.sidebar-row:selected:hover,
+.sidebar-row:selected:focus,
 .popover .sidebar.view:selected,
 .source-list.view:selected,
 .source-list.view:selected:hover,
 .source-list.view:selected:focus,
 .source-list.category-expander:hover {
     color: shade (@titlebar_color, 0.50);
-    border-style: solid;
-    border-width: 1px 0 1px 0;
 
     background-color: transparent;
     background-image: linear-gradient(to bottom,
@@ -2882,6 +2898,7 @@ GtkDialog .sidebar GtkScrolledWindow {
 }
 
 GtkDialog .sidebar .view:selected,
+GtkDialog .sidebar-row:selected,
 GtkDialog .sidebar .view:hover:selected {
     background-image: none;
     background-color: alpha (#000, 0.05);
