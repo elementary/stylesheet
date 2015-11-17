@@ -310,12 +310,13 @@ SlingshotWidgetsSearchView GtkButton.flat:focus {
 /***************
  * Switchboard *
  **************/
- 
-SwitchboardCategoryView GtkIconView.view.cell:selected,
-SwitchboardCategoryView GtkIconView.view.cell:selected:focus {
+
+SwitchboardCategoryView GtkIconView.cell:selected,
+SwitchboardCategoryView GtkIconView.cell:selected:focus {
     border: 2px solid @colorAccent;
     border-radius: 6px;
     color: @text_color;
+    background-color: transparent;
 } 
 
 .hotcorner-display {
