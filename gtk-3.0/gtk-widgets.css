@@ -2750,7 +2750,8 @@ GtkListBox,
     text-shadow: none;
 }
 
-.list-row:selected:focus {
+.list-row:selected:focus,
+.list-row:selected:focus GtkImage {
     background-color: @colorAccent;
     color: @selected_fg_color;
 }
