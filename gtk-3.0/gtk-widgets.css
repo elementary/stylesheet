@@ -2737,6 +2737,11 @@ GtkListBox,
     box-shadow: none;
 }
 
+.list-row:selected:focus .button {
+    background-color: @bg_color;
+    transition: none;
+}
+
 .list-row:selected,
 .list-row:selected:backdrop {
     background-color: shade (@base_color, 0.80);
