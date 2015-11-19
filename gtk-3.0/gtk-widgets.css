@@ -2418,7 +2418,9 @@ GtkOverlay .suggested-action.button {
 }
 
 .destructive-action.button:insensitive GtkLabel,
-.suggested-action.button:insensitive GtkLabel {
+.destructive-action.button:insensitive GtkImage,
+.suggested-action.button:insensitive GtkLabel,
+.suggested-action.button:insensitive GtkImage {
     text-shadow: 0 1px alpha (#fff, 0.4);
     color: @insensitive_color;
 }
