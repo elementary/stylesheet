@@ -2314,7 +2314,9 @@ GtkOverlay .suggested-action.button {
 }
 
 .suggested-action.button GtkLabel,
-.suggested-action.button GtkLabel:prelight {
+.suggested-action.button GtkLabel:prelight,
+.suggested-action.button GtkImage,
+.suggested-action.button GtkImage:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
