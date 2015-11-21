@@ -1342,6 +1342,11 @@ GtkColorScale.scale.slider:focus {
     border-radius: 0;
 }
 
+.linked .button {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 /* Leftmost button */
 .linked .entry:first-child,
 .linked .button:first-child,
