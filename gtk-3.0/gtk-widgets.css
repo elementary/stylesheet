@@ -2018,7 +2018,7 @@ GtkModelMenuItem GtkBox GtkImage {
     border: none;
 }
 
-menuitem separator,
+menu separator,
 .menuitem.separator {
     color: @menu_separator;
     padding: 4px 0;
@@ -2026,6 +2026,11 @@ menuitem separator,
     -GtkWidget-wide-separators: true;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
+}
+
+menu separator {
+    background-color: transparent;
+    background-image: none;
 }
 
 menuitem check,
