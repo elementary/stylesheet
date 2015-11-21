@@ -936,7 +936,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 button,
-actionbar button .text-button,
+actionbar button.text-button,
 .button,
 .action-bar .button.text-button {
     text-shadow: 0 1px alpha (#fff, 0.4);
@@ -3703,6 +3703,7 @@ decoration,
     margin: 12px;
 }
 
+.popup decoration,
 .window-frame.menu.csd,
 .window-frame.popup.csd {
     border-radius: 3px;
@@ -3712,6 +3713,7 @@ decoration,
     margin: 0;
 }
 
+menu .popup decoration,
 .menu .window-frame.menu.csd,
 .menu .window-frame.popup.csd {
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
