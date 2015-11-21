@@ -1941,6 +1941,12 @@ popover .menuitem,
     border-width: 1px 0;
 }
 
+popover .menuitem {
+	background-image: none;
+	border-color: transparent;
+	box-shadow: none;
+}
+
 menu menuitem arrow,
 .menu .menuitem.arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
