@@ -903,11 +903,13 @@ frame,
     color: lighter (@fg_color);
 }
 
+scrolledwindow.frame,
 GtkScrolledWindow.frame {
     border: 1px solid @border_color;
 }
 
 frame.flat,
+scrolledwindow viewport.frame,
 .frame.flat,
 .sidebar .frame, /* FIXME: This is a workaround for Geary */
 GtkScrolledWindow GtkViewport.frame {
@@ -1734,7 +1736,7 @@ notebook,
     border: 1px solid shade (@titlebar_color, 0.60);
 }
 
-notebook GtkViewport,
+notebook viewport,
 .notebook GtkViewport {
     background-color: @base_color;
     border-width : 0;
@@ -3065,6 +3067,7 @@ GtkListBox,
 }
 
 .content-view,
+.content-view viewport,
 .content-view GtkViewport {
     background-color: transparent;
     background-image: none;
