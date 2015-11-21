@@ -265,9 +265,8 @@ NoiseLibraryWindow.window-frame {
     background-color: #000;
 }
 
-.composited-indicator > box > image,
-.composited-indicator > box > label,
-.composited-indicator > revealer,
+.composited-indicator > revealer label,
+.composited-indicator > revealer image,
 .composited-indicator > GtkBox > GtkImage,
 .composited-indicator > GtkBox > GtkLabel,
 .composited-indicator > GtkRevealer {
