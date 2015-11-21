@@ -413,11 +413,7 @@ progressbar.vertical progress,
                                   );
 }
 
-progressbar:backdrop,
-progressbar row:backdrop,
-progressbar row:backdrop:hover,
-progressbar row:selected:backdrop,
-progressbar row:selected:backdrop:hover,
+progressbar progress:backdrop,
 .progressbar:backdrop,
 .progressbar row:backdrop,
 .progressbar row:backdrop:hover,
@@ -451,7 +447,7 @@ GtkProgressBar.trough,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.50);
 }
 
-progressbar trough,vertical,
+progressbar trough.vertical,
 GtkProgressBar.trough.vertical {
     background-image: linear-gradient(to right,
                                   @bg_color,
@@ -475,8 +471,6 @@ GtkProgressBar.trough:backdrop,
     border: 1px solid shade (@colorAccent, 0.80);
 }
 
-entry progressbar,
-entry progressbar:focus,
 .entry.progressbar,
 .entry.progressbar:focus {
     background-image: linear-gradient(to bottom,
