@@ -2522,6 +2522,7 @@ GtkAppChooserDialog .search-bar {
 * Suggested Action Button *
 **************************/
 
+button.suggested-action,
 .suggested-action.button {
     background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.10),
@@ -2536,12 +2537,17 @@ GtkAppChooserDialog .search-bar {
                 0 1px 0 0 alpha (#fff, 0.15);
 }
 
+GtkOverlay button.suggested-action,
 GtkOverlay .suggested-action.button {
     background-image: none;
     background-color: @selected_bg_color;
     border-color: @selected_bg_color;
 }
 
+button.suggested-action label,
+button.suggested-action label:prelight,
+button.suggested-action image,
+button.suggested-action image:prelight,
 .suggested-action.button GtkLabel,
 .suggested-action.button GtkLabel:prelight,
 .suggested-action.button GtkImage,
@@ -2551,6 +2557,8 @@ GtkOverlay .suggested-action.button {
     icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
+button.suggested-action:active,
+button.suggested-action:active:hover,
 .suggested-action.button:active,
 .suggested-action.button:active:hover {
     background-image: linear-gradient(to bottom,
@@ -2641,6 +2649,7 @@ button.destructive-action:active:hover,
 * Insensitive Button *
 **********************/
 
+button:insensitive,
 .button:insensitive,
 .destructive-action.button:insensitive,
 .suggested-action.button:insensitive {
@@ -2650,6 +2659,8 @@ button.destructive-action:active:hover,
     color: @insensitive_color;
 }
 
+toolbar button:insensitive,
+.titlebar .button:insensitive,
 .toolbar .button:insensitive,
 .toolbar .destructive-action.button:insensitive,
 .titlebar .destructive-action.button:insensitive,
@@ -2663,6 +2674,8 @@ button.destructive-action:active:hover,
     color: @insensitive_color;
 }
 
+button:insensitive image,
+button:insensitive label,
 .destructive-action.button:insensitive GtkLabel,
 .destructive-action.button:insensitive GtkImage,
 .suggested-action.button:insensitive GtkLabel,
@@ -2672,6 +2685,8 @@ button.destructive-action:active:hover,
     color: @insensitive_color;
 }
 
+spinbutton button:insensitive,
+spinbutton button:focus:insensitive,
 .spinbutton .button:insensitive,
 .spinbutton .button:focus:insensitive {
     background-color: alpha (#000, 0.02);
