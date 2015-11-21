@@ -480,6 +480,9 @@ GtkProgressBar.trough:backdrop,
     border: 1px solid shade (@colorAccent, 0.80);
 }
 
+entry progress,
+entry progress:focus,
+spinbutton progress,
 .entry.progressbar,
 .entry.progressbar:focus {
     background-image: linear-gradient(to bottom,
@@ -495,6 +498,11 @@ GtkProgressBar.trough:backdrop,
 
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3);
+}
+
+entry progress {
+    border-top-left-radius: 2.5px;
+    border-bottom-left-radius: 2.5px;
 }
 
 /************
