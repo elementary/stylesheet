@@ -2904,6 +2904,7 @@ GtkListBoxRow:first-child {
  * Column Headers *
  *****************/
 
+treeview header button,
 column-header .button {
     border-left-width: 0;
     border-top-width: 0;
@@ -2918,10 +2919,12 @@ column-header .button {
     padding: 4px 2px 4px 2px;
 }
 
+treeview header button:last-child,
 column-header:last-child .button {
     border-right-width: 0;
 }
 
+treeview header button:hover,
 column-header .button:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.80),
@@ -2929,10 +2932,12 @@ column-header .button:hover {
                                   );
 }
 
+treeview header button:backdrop,
 column-header .button:backdrop {
     background-image: none;
 }
 
+treeview header button:backdrop:hover,
 column-header .button:backdrop:hover {
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.92),
@@ -2940,11 +2945,13 @@ column-header .button:backdrop:hover {
                                   );
 }
 
+treeview header button label,
 column-header .button GtkLabel {
     padding-left: 3px;
     color: shade (@text_color, 1.8);
 }
 
+treeview header button:backdrop label,
 column-header .button:backdrop GtkLabel {
     color: shade (@text_color, 2.8);
 }
