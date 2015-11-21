@@ -109,17 +109,20 @@ GtkGrid:insensitive {
     }
 }
 
+spinner,
 .spinner {
     background-image: none;
     opacity: 0;
     -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }
 
+spinner:active,
 .spinner:active {
     opacity: 0.8;
     animation: spin 600ms linear infinite;
 }
 
+.spinner:active:insensitive,
 .spinner:active:insensitive {
     opacity: 0.4;
 }
@@ -158,15 +161,18 @@ GtkGrid:insensitive {
     border-right: 1px solid @menu_separator_shadow;
 }
 
+paned,
 GtkPaned {
     margin-right: 8px;
     -gtk-icon-source: none;
 }
 
+paned.vertical,
 GtkPaned.vertical {
     margin-bottom: 8px;
 }
 
+paned separator,
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
@@ -183,6 +189,7 @@ GraniteWidgetsThinPaned {
     margin: 0;
 }
 
+toolbar .pane-separator,
 .toolbar .pane-separator,
 .titlebar .pane-separator {
     background-color: transparent;
@@ -1188,6 +1195,7 @@ GtkOverlay > .button:focus:active {
  * GtkSpinButton *
  *****************/
 
+spinbutton button,
 .spinbutton .button {
     color: @internal_element_color;
     padding: 2px 6px;
@@ -1201,23 +1209,28 @@ GtkOverlay > .button:focus:active {
     background-image: none;
 }
 
+spinbutton button:first-child,
 .spinbutton .button:first-child {
     border-radius: 2px 0 0 2px;
     box-shadow: none;
 }
 
+spinbutton button:last-child,
 .spinbutton .button:last-child {
     border-radius: 0 2px 2px 0;
 }
 
+spinbutton button:dir(rtl),
 .spinbutton .button:dir(rtl) {
     box-shadow: inset -1px 0 alpha (#000, 0.10);
 }
 
+spinbutton.vertical,
 .spinbutton.vertical {
     border-radius: 0;
 }
 
+spinbutton.vertical button,
 .spinbutton.vertical .button {
     padding-top: 0;
     padding-bottom: 0;
@@ -1235,11 +1248,13 @@ GtkOverlay > .button:focus:active {
                 0 1px 0 0 alpha (#fff, 0.15);
 }
 
+spinbutton.vertical button:first-child,
 .spinbutton.vertical .button:first-child {
     border-radius: 2.5px 2.5px 0 0;
     border-bottom: 0;
 }
 
+spinbutton.vertical button:last-child,
 .spinbutton.vertical .button:last-child {
     border-radius: 0 0 2.5px 2.5px;
     border-top: 0;
@@ -1467,13 +1482,13 @@ notebook,
     border: 1px solid shade (@titlebar_color, 0.70);
 }
 
-notebook.header,
+notebook header,
 .notebook.header {
     border: none;
     background-color: @bg_color;
 }
 
-.dynamic-notebook notebook.header,
+.dynamic-notebook notebook header,
 .dynamic-notebook .notebook.header {
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.10),
@@ -1489,6 +1504,7 @@ notebook.header,
     border-radius: 0;
 }
 
+.dynamic-notebook notebook header:backdrop,
 .dynamic-notebook .notebook.header:backdrop {
     background-color: shade (@titlebar_color, 0.96);
     background-image: linear-gradient(to bottom,
@@ -1499,6 +1515,7 @@ notebook.header,
     border-color: shade (@titlebar_color, 0.70);
 }
 
+.dynamic-notebook notebook,
 .dynamic-notebook .notebook {
     -GtkNotebook-tab-overlap: 1px;
     border-width: 0;
@@ -1512,6 +1529,7 @@ notebook.header,
     color: @insensitive_color;
 }
 
+notebook tab,
 .notebook tab {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.79),
@@ -1526,6 +1544,7 @@ notebook.header,
 
 }
 
+notebook tab:active,
 .notebook tab:active {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 1.12),
@@ -1536,6 +1555,7 @@ notebook.header,
     color: @text_color;
 }
 
+.dynamic-notebook notebook tab,
 .dynamic-notebook .notebook tab {
     padding: 3px;
 
@@ -1552,10 +1572,12 @@ notebook.header,
                                   ) 0 1 0 0;
 }
 
+.dynamic-notebook notebook tab > GtkImage,
 .dynamic-notebook .notebook tab > GtkImage {
     color: shade (@titlebar_color, 0.35);
 }
 
+.dynamic-notebook notebook tab:first-child,
 .dynamic-notebook .notebook tab:first-child {
     border-width: 0 1px 0 1px;
     border-image: linear-gradient(to bottom,
@@ -1565,6 +1587,7 @@ notebook.header,
 }
 
 
+.dynamic-notebook notebook tab:active,
 .dynamic-notebook .notebook tab:active {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.88),
@@ -1586,6 +1609,7 @@ notebook.header,
     color: @text_color;
 }
 
+.dynamic-notebook notebook tab:active:backdrop,
 .dynamic-notebook .notebook tab:active:backdrop {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.98),
@@ -1596,11 +1620,13 @@ notebook.header,
                 0 0 0 1px alpha (#000, 0.10);
 }
 
+notebook header,
 .notebook.header {
     border: none;
     background-color: transparent;
 }
 
+notebook,
 .notebook {
     border-radius: 2.5px;
 
@@ -1616,6 +1642,7 @@ notebook.header,
     border: 1px solid shade (@titlebar_color, 0.60);
 }
 
+notebook GtkViewport,
 .notebook GtkViewport {
     background-color: @base_color;
     border-width : 0;
@@ -1784,6 +1811,7 @@ GtkTreeMenu .menuitem {
     text-shadow: none;
 }
 
+menu,
 .content-view .menu,
 .menu,
 .popup {
@@ -1804,16 +1832,20 @@ GtkTreeMenu .menuitem {
     background-image: none;
 }
 
+menubar,
 .menubar {
     color: @text_color;
     background-color: @titlebar_color;
     -GtkWidget-window-dragging: true;
 }
 
+menubar menuitem,
 .menubar .menuitem {
     padding: 3px 6px;
 }
 
+menu menuitem,
+popover menuitem,
 .menu .menuitem,
 .popover .menuitem {
     padding: 6px;
@@ -1822,14 +1854,20 @@ GtkTreeMenu .menuitem {
     border-width: 1px 0;
 }
 
+menu menuitem arrow,
 .menu .menuitem.arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
+menu menuitem arrow:dir(rtl),
 .menu .menuitem.arrow:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
+menu menuitem GtkLabel,
+menu menuitem GtkImage,
+popover menuitem GtkLabel,
+popover menuitem GtkImage,
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage,
 .popover .menuitem GtkLabel,
@@ -1838,6 +1876,12 @@ GtkTreeMenu .menuitem {
     -gtk-icon-style: symbolic;
 }
 
+menu menuitem:active,
+menu menuitem:hover,
+popup menuitem:active,
+popup menuitem:hover,
+popover menuitem:active,
+popover menuitem:hover,
 .menu .menuitem:active,
 .menu .menuitem:hover,
 .popup .menuitem:active,
@@ -1867,11 +1911,13 @@ GtkModelMenuItem GtkBox GtkImage {
 
 /*Moved titlebar sep here to fix seps in titlebar menus*/
 
+.titlebar separator,
 .titlebar .separator {
     color: transparent;
     border: none;
 }
 
+menuitem separator,
 .menuitem.separator {
     color: @menu_separator;
     padding: 4px 0;
@@ -1881,6 +1927,14 @@ GtkModelMenuItem GtkBox GtkImage {
     border-bottom: 1px solid @menu_separator_shadow;
 }
 
+menuitem check,
+menuitem radio,
+menuitem check:active,
+menuitem radio:active,
+menuitem check:hover,
+menuitem radio:hover,
+menuitem check:insensitive,
+menuitem radio:insensitive,
 .menuitem.check,
 .menuitem.radio,
 .menuitem.check:active,
@@ -1898,6 +1952,10 @@ GtkModelMenuItem GtkBox GtkImage {
  * Check and Radio items *
  *************************/
 
+check,
+radio,
+check:insensitive,
+radio:insensitive ,
 .check,
 .radio,
 .check:insensitive,
@@ -1913,35 +1971,45 @@ GtkCheckButton:selected:focus {
     background-color: transparent;
 }
 
+check,
 .check {
     -gtk-icon-source: -gtk-scaled(url("assets/check.svg"),url("assets/check@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
+check:focus,
 .check:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-focus.svg"),url("assets/check-focus@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
+radio,
 .radio {
     -gtk-icon-source: -gtk-scaled(url("assets/radio.svg"),url("assets/radio@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
+radio:focus,
 .radio:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-focus.svg"),url("assets/radio-focus@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
+menuitem check,
+menuitem radio,
 .menuitem.check,
 .menuitem.radio {
     background-image: none;
 }
 
+check:active,
+check:checked,
+menuitem check:active,
+menuitem check:checked,
 .check:active,
 .check:checked,
 .menuitem.check:active,
@@ -1949,6 +2017,10 @@ GtkCheckButton:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"),url("assets/check-active@2.svg"));
 }
 
+check:active:focus,
+check:checked:focus,
+menuitem check:active:focus,
+menuitem check:checked:focus,
 .check:active:focus,
 .check:checked:focus,
 .menuitem.check:active:focus,
@@ -1956,6 +2028,10 @@ GtkCheckButton:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active-focus.svg"),url("assets/check-active-focus@2.svg"));
 }
 
+radio:active,
+radio:checked,
+menuitem radio:active,
+menuitem radio:checked,
 .radio:active,
 .radio:checked,
 .menuitem.radio:active,
@@ -1963,6 +2039,10 @@ GtkCheckButton:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-active.svg"),url("assets/radio-active@2.svg"));
 }
 
+radio:active:focus,
+radio:checked:focus,
+menuitem radio:active:focus,
+menuitem radio:checked:focus,
 .radio:active:focus,
 .radio:checked:focus,
 .menuitem.radio:active:focus,
@@ -1975,6 +2055,7 @@ GtkCheckButton:selected:focus {
 * Toolbars *
 ***********/
 
+toolbar,
 GtkHandleBox,
 .toolbar {
     -GtkWidget-window-dragging: true;
@@ -1995,6 +2076,7 @@ GtkHandleBox,
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
+toolbar:backdrop,
 GtkHandleBox:backdrop,
 .toolbar:backdrop {
     background-image: linear-gradient(to bottom,
@@ -2008,6 +2090,7 @@ GtkHandleBox:backdrop,
     -gtk-image-effect: dim;
 }
 
+toolbar separator,
 .toolbar .separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
@@ -3096,6 +3179,7 @@ GtkCalendar.highlight {
 * GtkInfoBar *
 *************/
 
+infobar,
 GtkInfoBar {
     border-style: solid;
     border-width: 0 0 1px 0;
@@ -3235,6 +3319,8 @@ GraniteWidgetsWelcome .h3 {
  * Popover *
  **********/
 
+popover,
+popover.osd,
 .popover,
 .popover.osd {
     border-radius: 4px;
@@ -3369,6 +3455,7 @@ GcrCertificateWidget .frame {
     -gtk-image-effect: dim;
 }
 
+headerbar,
 .header-bar {
     padding: 8px 6px 6px;
 }
@@ -3396,6 +3483,8 @@ GcrCertificateWidget .frame {
 
 dialog .titlebar,
 GtkDialog .titlebar.default-decoration,
+messagedialog .titlebar,
+messagedialog .titlebar.default-decoration,
 GtkMessageDialog .titlebar,
 GtkMessageDialog .titlebar.default-decoration {
     border: none;
@@ -3471,6 +3560,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     icon-shadow: none;
 }
 
+decoration,
 .window-frame {
     border-radius: 4px 4px 0 0;
 
@@ -3503,6 +3593,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     margin: 0;
 }
 
+decoration:backdrop,
 .window-frame:backdrop {
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
                 0 3px 6px alpha (#000, 0.16),
