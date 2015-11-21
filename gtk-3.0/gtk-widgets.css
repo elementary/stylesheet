@@ -212,6 +212,7 @@ toolbar paned separator,
 *************/
 
 entry,
+spinbutton,
 .entry {
     background-image: linear-gradient(to bottom,
                                   shade (@base_color, 0.93),
@@ -238,6 +239,8 @@ entry,
 
 entry:selected,
 entry:selected:focus,
+spinbutton:selected,
+spinbutton:selected:focus,
 .entry:selected,
 .entry:selected:focus {
     background-color: @colorAccent;
@@ -245,6 +248,8 @@ entry:selected:focus,
 
 .titlebar entry,
 toolbar entry,
+.titlebar spinbutton,
+toolbar spinbutton,
 GtkHandleBox .entry,
 .titlebar .entry,
 .toolbar .entry {
@@ -264,6 +269,8 @@ GtkHandleBox .entry,
 
 .titlebar entry:backdrop,
 toolbar entry:backdrop,
+.titlebar spinbutton:backdrop,
+toolbar spinbutton:backdrop,
 GtkHandleBox .entry:backdrop,
 .titlebar .entry:backdrop,
 .toolbar .entry:backdrop {
@@ -284,6 +291,7 @@ GtkHandleBox .entry:backdrop,
 }
 
 entry:focus,
+spinbutton:focus,
 .entry:focus {
     border-color: alpha (@colorAccent, 0.80);
     box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23),
@@ -294,6 +302,8 @@ entry:focus,
 
 entry.error,
 entry.error:focus,
+spinbutton.error,
+spinbutton.error:focus,
 .entry.error,
 .entry.error:focus {
     border-color: alpha (@error_color, 0.80);
@@ -304,6 +314,7 @@ entry.error:focus,
 }
 
 entry:insensitive,
+spinbutton:insensitive,
 .entry:insensitive {
     background-image: none;
 
@@ -318,6 +329,8 @@ entry:insensitive,
 
 .titlebar entry:insensitive,
 toolbar entry:insensitive,
+.titlebar spinbutton:insensitive,
+toolbar spinbutton:insensitive,
 .titlebar .entry:insensitive,
 .toolbar .entry:insensitive {
     background: transparent;
@@ -326,7 +339,9 @@ toolbar entry:insensitive,
 }
 
 .titlebar entry:insensitive:backdrop,
-toolbar entry:insensitive:backdrop
+toolbar entry:insensitive:backdrop,
+.titlebar spinbutton:insensitive:backdrop,
+toolbar spinbutton:insensitive:backdrop,
 .titlebar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
     background-image: none;
@@ -3587,7 +3602,7 @@ GcrCertificateWidget .frame {
     -gtk-image-effect: dim;
 }
 
-headerbar,
+headerbar.titlebar,
 .header-bar {
     padding: 8px 6px 6px;
 }
@@ -3763,6 +3778,7 @@ GtkDialog.window-frame:backdrop,
  * Dialog      *
  ***************/
 
+messagedialog.csd,
 GtkDialog.csd,
 GtkMessageDialog.csd {
     border-radius: 3px;
