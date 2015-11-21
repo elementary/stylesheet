@@ -3591,6 +3591,10 @@ GtkListBox .h4{
     padding-left: 6px;
 }
 
+.dim-label {
+    opacity: 0.75;
+}
+
 GtkImage.error,
 .error {
     color: @error_color;
