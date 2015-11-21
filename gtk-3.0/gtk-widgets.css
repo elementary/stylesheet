@@ -2058,9 +2058,9 @@ radio,
 check:insensitive,
 radio:insensitive ,
 .check,
-.radio,
+GtkRadioButton.radio,
 .check:insensitive,
-.radio:insensitive {
+GtkRadioButton.radio:insensitive {
     background-color: transparent;
     border-style: none;
 }
