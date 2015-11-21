@@ -3017,20 +3017,24 @@ column-header .button:backdrop GtkLabel {
 * List Boxes *
 *************/
 
+list,
 GtkListBox,
 .list {
     background-color: @base_color;
 }
 
+popover list,
 .popover GtkListBox,
 .popover .list {
     background-color: transparent;
 }
 
+list row,
 .list-row {
     border-color: @border_color;
 }
 
+list row button,
 .list-row.button {
     background-image: none;
     border: none;
@@ -3038,11 +3042,14 @@ GtkListBox,
     box-shadow: none;
 }
 
+list row:selected button,
 .list-row:selected:focus .button {
     background-color: @bg_color;
     transition: none;
 }
 
+list row:selected,
+list row:selected:backdrop,
 .list-row:selected,
 .list-row:selected:backdrop {
     background-color: shade (@base_color, 0.80);
@@ -3051,6 +3058,8 @@ GtkListBox,
     text-shadow: none;
 }
 
+list row:selected:focus,
+list row:selected:focus image,
 .list-row:selected:focus,
 .list-row:selected:focus GtkImage {
     background-color: @colorAccent;
