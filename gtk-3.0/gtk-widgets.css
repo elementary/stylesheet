@@ -2388,6 +2388,7 @@ GtkDialog .action-bar {
 * Inline Toolbars *
 ******************/
 
+toolbar.inline-toolbar,
 .inline-toolbar.toolbar {
 
     border-radius: 0;
@@ -2405,6 +2406,7 @@ GtkDialog .action-bar {
                 inset 0 -1px 0 0 @inset_dark_color;
 }
 
+paned toolbar.inline-toolbar,
 GtkPaned .inline-toolbar.toolbar {
     border-width: 1px 0 0 0;
 }
@@ -2419,6 +2421,7 @@ GtkPaned .inline-toolbar.toolbar {
                                   );
 }
 
+toolbar.inline-toolbar button,
 .inline-toolbar.toolbar .button {
     border-radius: 0;
     border-width: 0;
@@ -2432,12 +2435,17 @@ GtkPaned .inline-toolbar.toolbar {
     color: shade (@text_color, 1.25);
 }
 
+toolbar.inline-toolbar button:active,
+toolbar.inline-toolbar button:active:hover,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:active:hover {
     background-color: alpha (#000, 0.05);
     background-image: none;
 }
 
+toolbar.inline-toolbar button image:insensitive,
+toolbar.inline-toolbar button label:insensitive,
+toolbar.inline-toolbar button:insensitive,
 .inline-toolbar.toolbar .button GtkImage:insensitive,
 .inline-toolbar.toolbar .button GtkLabel:insensitive,
 .inline-toolbar.toolbar .button:insensitive {
