@@ -570,7 +570,7 @@ levelbar block.filled.middle,
     border-color: shade (@warning_color, 0.90);
 }
 
-levlebar block.filled.high,
+levelbar block.filled.high,
 .level-bar.fill-block.level-high {
     background-image: linear-gradient(to bottom,
                                   shade (@success_color, 1.10),
