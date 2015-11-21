@@ -96,6 +96,7 @@ tooltip.background,
 }
 
 tooltip label,
+.overlay-bar label,
 .tooltip GtkLabel,
 .overlay-bar GtkLabel {
     color: white;
@@ -157,10 +158,12 @@ spinner:active,
  * Separators *
  *************/
 
+separator,
 .separator {
     color: @menu_separator;
 }
 
+separator.vertical,
 .vertical.separator {
     color: @menu_separator;
     padding: 0 4px;
@@ -182,6 +185,8 @@ GtkPaned.vertical {
 }
 
 paned separator,
+paned separator:prelight,
+paned separator:selected,
 .pane-separator,
 .pane-separator:prelight,
 .pane-separator:selected {
@@ -198,7 +203,7 @@ GraniteWidgetsThinPaned {
     margin: 0;
 }
 
-toolbar .pane-separator,
+toolbar paned separator,
 .toolbar .pane-separator,
 .titlebar .pane-separator {
     background-color: transparent;
@@ -334,7 +339,7 @@ toolbar entry:insensitive:backdrop
     box-shadow:  0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-entry.image.left,
+entry image.left,
 entry:insensitive:backdrop.image.left,
 .entry.image.left,
 .entry:insensitive:backdrop.image.left {
@@ -346,26 +351,35 @@ entry:insensitive:backdrop.image.left,
  * Symbolic images *
  *******************/
 
+image,
+image:selected,
 .image,
 .image:selected {
     color: @internal_element_color;
 }
 
+image:hover,
 .image:hover {
     color: @internal_element_prelight;
 }
 
+image:selected:focus,
+image:selected:hover,
 .image:selected:focus,
 .image:selected:hover {
     color: @selected_fg_color;
 }
 
+view image,
+view image:hover,
+view image:selected,
 .view.image,
 .view.image:hover,
 .view.image:selected {
     color: @view_symbolic_color;
 }
 
+view image:selected:focus,
 .view.image:selected:focus {
     color: @selected_fg_color;
 }
@@ -460,6 +474,8 @@ GtkProgressBar.trough:backdrop,
     border: 1px solid shade (@colorAccent, 0.80);
 }
 
+entry progressbar,
+entry progressbar:focus,
 .entry.progressbar,
 .entry.progressbar:focus {
     background-image: linear-gradient(to bottom,
@@ -2480,6 +2496,8 @@ GtkOverlay .suggested-action.button {
 * Destructive Action Button *
 ****************************/
 
+button.destructive-action,
+.titlebar button.destructive-action,
 .destructive-action.button,
 .titlebar .destructive-action.button {
     background-image: linear-gradient(to bottom,
@@ -2495,6 +2513,8 @@ GtkOverlay .suggested-action.button {
     border-color: shade (@error_color, 0.90);
 }
 
+button.destructive-action:backdrop,
+.titlebar button.destructive-action:backdrop,
 .destructive-action.button:backdrop,
 .titlebar .destructive-action.button:backdrop {
     background-image: linear-gradient(to bottom,
@@ -2504,6 +2524,13 @@ GtkOverlay .suggested-action.button {
     border-color: @error_color;
 }
 
+button.destructive-action label,
+button.destructive-action label:prelight,
+button.destructive-action image,
+button.destructive-action image:prelight,
+.titlebar button.destructive-action label,
+.titlebar button.destructive-action label:prelight,
+.titlebar button.destructive-action.image-button image,
 .destructive-action.button GtkLabel,
 .destructive-action.button Gtklabel:prelight,
 .destructive-action.button GtkImage,
@@ -2516,6 +2543,8 @@ GtkOverlay .suggested-action.button {
     icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
+.titlebar button.destructive-action label:backdrop,
+.titlebar button.destructive-action.image-button image:backdrop,
 .titlebar .destructive-action.button GtkLabel:backdrop,
 .titlebar .destructive-action.button.image-button GtkImage:backdrop {
     color: shade (@error_color, 1.90);
@@ -2523,6 +2552,10 @@ GtkOverlay .suggested-action.button {
     icon-shadow: none;
 }
 
+button.destructive-action:active,
+button.destructive-action:active:hover,
+.titlebar button.destructive-action:active,
+.titlebar button.destructive-action:active:hover,
 .destructive-action.button:active,
 .destructive-action.button:active:hover,
 .titlebar .destructive-action.button:active,
