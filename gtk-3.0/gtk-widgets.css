@@ -132,7 +132,7 @@ spinner:active,
     animation: spin 600ms linear infinite;
 }
 
-.spinner:active:insensitive,
+spinner:active:insensitive,
 .spinner:active:insensitive {
     opacity: 0.4;
 }
@@ -389,9 +389,7 @@ view image:selected:focus,
  * Progress bar *
  ****************/
 
-progressbar,
-progressbar row,
-progressbar row:hover,
+progressbar progress,
 .progressbar,
 .progressbar row,
 .progressbar row:hover {
@@ -407,7 +405,7 @@ progressbar row:hover,
                 inset 0 -1px 0 0 alpha (#fff, 0.15);
 }
 
-progressbar.vertical,
+progressbar.vertical progress,
 .progressbar.vertical {
     background-image: linear-gradient(to right,
                                   shade (@colorAccent, 1.25),
@@ -434,7 +432,7 @@ progressbar row:selected:backdrop:hover,
                 inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
-progressbar.trough,
+progressbar trough,
 GtkProgressBar.trough,
 .trough row,
 .trough row:hover {
@@ -453,6 +451,7 @@ GtkProgressBar.trough,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.50);
 }
 
+progressbar trough,vertical,
 GtkProgressBar.trough.vertical {
     background-image: linear-gradient(to right,
                                   @bg_color,
@@ -460,6 +459,7 @@ GtkProgressBar.trough.vertical {
                                   );
 }
 
+progressbar trough:backdrop,
 GtkProgressBar.trough:backdrop,
 .trough row:backdrop,
 .trough row:backdrop:hover,
@@ -881,6 +881,14 @@ GtkScrolledWindow GtkViewport.frame {
     border: none;
 }
 
+overshoot.left,
+overshoot.right,
+overshoot.top,
+overshoot.bottom,
+undershoot.left,
+undershoot.right,
+undershoot.top,
+undershoot.bottom,
 .overshoot.left,
 .overshoot.right,
 .overshoot.top,
@@ -911,6 +919,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 button,
+actionbar button .text-button,
 .button,
 .action-bar .button.text-button {
     text-shadow: 0 1px alpha (#fff, 0.4);
@@ -959,6 +968,8 @@ button:backdrop,
     border-color: alpha (#000, 0.2);
 }
 
+headerbar button,
+toolbar button,
 .header-bar .button,
 .toolbar .button {
     padding: 3px;
@@ -970,6 +981,7 @@ button:hover,
 }
 
 button:focus,
+popover actionbar button:focus,
 .button:focus,
 .popover .action-bar .button:focus {
     color:@text_color;
@@ -1009,6 +1021,11 @@ button.flat:focus:hover,
                                  0 1px 0 alpha (#fff, 0.3);
 } */
 
+GtkDialog button.flat.image-button,
+GtkDialog button.flat.image-button:backdrop,
+GtkDialog button.flat.image-button:insensitive,
+GtkDialog button.flat.image-button:hover,
+GtkDialog button.flat.image-button:focus:active,
 GtkDialog .button.flat.image-button,
 GtkDialog .button.flat.image-button:backdrop,
 GtkDialog .button.flat.image-button:insensitive,
@@ -1022,6 +1039,7 @@ GtkDialog .button.flat.image-button:focus:active {
     box-shadow: none;
 }
 
+GtkDialog button.flat.image-button:hover,
 GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
@@ -1053,7 +1071,6 @@ button.flat:active,
 }
 
 .back-button,
-titlebar .back-button,
 .titlebar .back-button {
     border-image: -gtk-scaled(url("assets/button-back.svg"),url("assets/button-back@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
     border-width: 1px 3px 3px 11px;
@@ -1062,7 +1079,6 @@ titlebar .back-button,
 }
 
 .back-button:focus,
-titlebar .back-button:focus,
 .titlebar .back-button:focus {
     border-image: -gtk-scaled(url("assets/button-back-focus.svg"),url("assets/button-back-focus@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
     border-width: 1px 3px 3px 11px;
