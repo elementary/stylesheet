@@ -3700,7 +3700,7 @@ decoration,
                 0 14px 28px rgba(0,0,0,0.35),
                 0 10px 10px rgba(0,0,0,0.22);
 
-    margin: 8px;
+    margin: 12px;
 }
 
 .window-frame.menu.csd,
@@ -3723,6 +3723,7 @@ tooltip decoration {
     border-radius: 3px;
     box-shadow: 0 1px 3px alpha (#000, 0.12),
                 0 1px 2px alpha (#000, 0.24);
+    margin: 0;
 }
 
 .window-frame.tooltip.csd {
@@ -3735,7 +3736,8 @@ decoration:backdrop,
 .window-frame:backdrop {
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
                 0 3px 6px alpha (#000, 0.16),
-                0 3px 6px alpha (#000, 0.23);
+                0 3px 6px alpha (#000, 0.23),
+                0 14px 28px transparent;
 }
 
 GtkDialog.window-frame,
