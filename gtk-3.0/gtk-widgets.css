@@ -83,6 +83,8 @@ GtkGrid:insensitive {
  * Tooltips *
  ************/
 
+tooltip,
+tooltip.background,
 .tooltip,
 .overlay-bar {
     background-color: alpha (#000, 0.7);
@@ -93,10 +95,17 @@ GtkGrid:insensitive {
     text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
+tooltip label,
 .tooltip GtkLabel,
 .overlay-bar GtkLabel {
     color: white;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
+}
+
+tooltip decoration {
+    border-radius: 3px;
+    box-shadow: 0 1px 3px alpha (#000, 0.12),
+                0 1px 2px alpha (#000, 0.24);
 }
 
 /*****************
