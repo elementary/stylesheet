@@ -103,12 +103,6 @@ tooltip label,
     text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
-tooltip decoration {
-    border-radius: 3px;
-    box-shadow: 0 1px 3px alpha (#000, 0.12),
-                0 1px 2px alpha (#000, 0.24);
-}
-
 /*****************
  * Miscellaneous *
  ****************/
@@ -1507,6 +1501,8 @@ GtkColorScale.scale.slider:focus {
 }
 
 /* Middle button (vertical) */
+.linked.vertical entry,
+.linked.vertical button,
 .linked.vertical .entry,
 .linked.vertical .button {
     border-left-width: 1px;
@@ -1515,12 +1511,16 @@ GtkColorScale.scale.slider:focus {
 }
 
 /* Top button (vertical) */
+.linked.vertical entry:first-child,
+.linked.vertical button:first-child,
 .linked.vertical .entry:first-child,
 .linked.vertical .button:first-child {
     border-radius: 2.5px 2.5px 0 0;
 }
 
 /* Bottom button (vertical) */
+.linked.vertical entry:last-child,
+.linked.vertical button:last-child,
 .linked.vertical .entry:last-child,
 .linked.vertical .button:last-child {
     border-bottom-width: 1px;
@@ -1528,6 +1528,8 @@ GtkColorScale.scale.slider:focus {
 }
 
 /* Linked single button (vertical) */
+.linked.vertical entry:only-child,
+.linked.vertical button:only-child,
 .linked.vertical .entry:only-child,
 .linked.vertical .button:only-child {
     border-top-width: 1px;
@@ -1914,7 +1916,7 @@ menubar menuitem,
 }
 
 menu menuitem,
-popover menuitem,
+popover .menuitem,
 .menu .menuitem,
 .popover .menuitem {
     padding: 6px;
@@ -1933,10 +1935,10 @@ menu menuitem arrow:dir(rtl),
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
-menu menuitem GtkLabel,
-menu menuitem GtkImage,
-popover menuitem GtkLabel,
-popover menuitem GtkImage,
+menu menuitem label,
+menu menuitem image,
+popover .menuitem label,
+popover .menuitem image,
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage,
 .popover .menuitem GtkLabel,
@@ -1947,10 +1949,10 @@ popover menuitem GtkImage,
 
 menu menuitem:active,
 menu menuitem:hover,
-popup menuitem:active,
-popup menuitem:hover,
-popover menuitem:active,
-popover menuitem:hover,
+popup .menuitem:active,
+popup .menuitem:hover,
+popover .menuitem:active,
+popover .menuitem:hover,
 .menu .menuitem:active,
 .menu .menuitem:hover,
 .popup .menuitem:active,
@@ -2653,6 +2655,7 @@ button.destructive-action:active:hover,
     color: @insensitive_color;
 }
 
+button:active:insensitive,
 .button:active:insensitive {
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.85),
@@ -2664,6 +2667,7 @@ button.destructive-action:active:hover,
                 0 1px 0 0 alpha (#fff, 0.30);
 }
 
+button.flat:insensitive,
 .button.flat:insensitive {
     border-color: transparent;
     box-shadow: none;
@@ -2960,13 +2964,11 @@ column-header .button:backdrop GtkLabel {
 * List Boxes *
 *************/
 
-EggListBox,
 GtkListBox,
 .list {
     background-color: @base_color;
 }
 
-.popover EggListBox,
 .popover GtkListBox,
 .popover .list {
     background-color: transparent;
@@ -3068,6 +3070,7 @@ GtkListBox,
     -gtk-icon-style: regular;
 }
 
+popover .sidebar:backdrop,
 .popover .sidebar:backdrop {
     color: shade (@titlebar_color, 0.50);
 }
@@ -3713,6 +3716,12 @@ decoration,
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
                 0 10px 20px alpha (#000, 0.19),
                 0 6px 6px alpha (#000, 0.23);
+}
+
+tooltip decoration {
+    border-radius: 3px;
+    box-shadow: 0 1px 3px alpha (#000, 0.12),
+                0 1px 2px alpha (#000, 0.24);
 }
 
 .window-frame.tooltip.csd {
