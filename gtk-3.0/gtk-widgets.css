@@ -1163,6 +1163,9 @@ button.flat:active,
     box-shadow: none;
 }
 
+button.link,
+button.link:active,
+button.link:focus:active
 GtkLinkButton.button,
 GtkLinkButton.button:active,
 GtkLinkButton.button:focus:active {
@@ -1173,6 +1176,7 @@ GtkLinkButton.button:focus:active {
     background-color: transparent;
 }
 
+button.link label,
 GtkLinkButton GtkLabel {
     color: @link_color;
 }
