@@ -2033,14 +2033,6 @@ menu separator {
     background-image: none;
 }
 
-menuitem check,
-menuitem radio,
-menuitem check:active,
-menuitem radio:active,
-menuitem check:hover,
-menuitem radio:hover,
-menuitem check:insensitive,
-menuitem radio:insensitive,
 .menuitem.check,
 .menuitem.radio,
 .menuitem.check:active,
@@ -2105,8 +2097,6 @@ radio:focus,
     background-position: center;
 }
 
-menuitem check,
-menuitem radio,
 .menuitem.check,
 .menuitem.radio {
     background-image: none;
@@ -2114,8 +2104,6 @@ menuitem radio,
 
 check:active,
 check:checked,
-menuitem check:active,
-menuitem check:checked,
 .check:active,
 .check:checked,
 .menuitem.check:active,
@@ -2125,8 +2113,6 @@ menuitem check:checked,
 
 check:active:focus,
 check:checked:focus,
-menuitem check:active:focus,
-menuitem check:checked:focus,
 .check:active:focus,
 .check:checked:focus,
 .menuitem.check:active:focus,
@@ -2136,8 +2122,6 @@ menuitem check:checked:focus,
 
 radio:active,
 radio:checked,
-menuitem radio:active,
-menuitem radio:checked,
 .radio:active,
 .radio:checked,
 .menuitem.radio:active,
@@ -2147,8 +2131,6 @@ menuitem radio:checked,
 
 radio:active:focus,
 radio:checked:focus,
-menuitem radio:active:focus,
-menuitem radio:checked:focus,
 .radio:active:focus,
 .radio:checked:focus,
 .menuitem.radio:active:focus,
@@ -3833,16 +3815,18 @@ GtkDialog.window-frame:backdrop,
  * Dialog      *
  ***************/
 
-messagedialog.csd,
+messagedialog decoration,
 GtkDialog.csd,
 GtkMessageDialog.csd {
     border-radius: 3px;
 }
 
+messagedialog,
 GtkDialog.background {
     border-radius: 0 0 4px 4px;
 }
 
+messagedialog,
 .prompt,
 GtkMessageDialog {
     -GtkDialog-button-spacing: 0;
@@ -3850,10 +3834,12 @@ GtkMessageDialog {
     -gtk-icon-style: regular;
 }
 
+messagedialog button,
 GtkMessageDialog .button {
     padding: 6px;
 }
 
+messagedialog .titlebar,
 GtkDialog .titlebar,
 GtkMessageDialog .titlebar {
     border: none;
@@ -3866,6 +3852,7 @@ GtkMessageDialog .titlebar {
                 inset 0 1px 0 0 @bg_highlight_color;
 }
 
+messagedialog .titlebar:backdrop,
 GtkDialog .titlebar:backdrop,
 GtkMessageDialog .titlebar:backdrop {
     border: none;
@@ -3887,6 +3874,7 @@ GtkDialog .titlebar .title {
     icon-shadow: none;
 }
 
+messagedialog,
 GtkDialog,
 GtkMessageDialog {
     box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
