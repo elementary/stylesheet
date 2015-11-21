@@ -492,16 +492,19 @@ GtkProgressBar.trough:backdrop,
 * Level Bar *
 ************/
 
+levelbar,
 .level-bar {
     -GtkLevelBar-min-block-width: 24;
     -GtkLevelBar-min-block-height: 6;
 }
 
+levelbar.vertical,
 .level-bar.vertical {
     -GtkLevelBar-min-block-width: 6;
     -GtkLevelBar-min-block-height: 34;
 }
 
+levelbar trough,
 .level-bar.trough {
     background-image: none;
     background-color: transparent;
@@ -509,6 +512,7 @@ GtkProgressBar.trough:backdrop,
     padding: 0;
 }
 
+levelbar block,
 .level-bar.fill-block {
     background-color: @selected_bg_color;
     background-image: linear-gradient(to bottom,
@@ -527,6 +531,7 @@ GtkProgressBar.trough:backdrop,
     transition: all 100ms ease-in;
 }
 
+levelbar block.filled.low,
 .level-bar.fill-block.level-low {
     background-image: linear-gradient(to bottom,
                                   shade (@error_color, 1.30),
@@ -541,6 +546,7 @@ GtkProgressBar.trough:backdrop,
     border-color: shade (@error_color, 0.90);
 }
 
+levelbar block.filled.middle,
 .level-bar.fill-block.level-middle {
     background-image: linear-gradient(to bottom,
                                   shade (@warning_color, 1.30),
@@ -555,6 +561,7 @@ GtkProgressBar.trough:backdrop,
     border-color: shade (@warning_color, 0.90);
 }
 
+levlebar block.filled.high,
 .level-bar.fill-block.level-high {
     background-image: linear-gradient(to bottom,
                                   shade (@success_color, 1.10),
@@ -564,6 +571,7 @@ GtkProgressBar.trough:backdrop,
     border: 1px solid shade (@success_color, 0.90);
 }
 
+levelbar block.empty,
 .level-bar.fill-block.empty-fill-block {
     background-color: shade (@bg_color, 0.95);
     background-image: linear-gradient(to bottom,
@@ -577,6 +585,7 @@ GtkProgressBar.trough:backdrop,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
+levelbar block:backdrop,
 .level-bar.fill-block:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.85);
@@ -587,15 +596,18 @@ GtkProgressBar.trough:backdrop,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
+levelbar block.empty:backdrop,
 .level-bar.fill-block.empty-fill-block:backdrop {
     background-color: shade (@bg_color, 0.95);
     border-color: shade (@bg_color, 0.75);
 }
 
+levelbar block.discrete.horizontal,
 .level-bar.fill-block.indicator-discrete.horizontal {
     margin: 0 2px;
 }
 
+levelbar block.discrete.vertical,
 .level-bar.fill-block.indicator-discrete.vertical {
     margin: 2px 0;
 }
