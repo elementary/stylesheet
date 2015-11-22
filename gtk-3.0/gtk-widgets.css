@@ -228,8 +228,8 @@ spinbutton,
 
     color: @text_color;
 
-    icon-shadow: 0 1px alpha (#fff, 0.4);
-    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px @text_shadow_color;
+    text-shadow: 0 1px @text_shadow_color;
 
     padding: 4px;
 
@@ -964,8 +964,8 @@ button,
 actionbar button.text-button,
 .button,
 .action-bar .button.text-button {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
 
     background-image: linear-gradient(to bottom,
                                   transparent,
@@ -1445,8 +1445,8 @@ GtkColorEditor GtkColorSwatch:backdrop {
 }
 
 GtkColorSwatch#add-color-button {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
 
     background-image: linear-gradient(to bottom,
                                   transparent,
@@ -1578,8 +1578,8 @@ notebook,
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
     border: 1px solid shade (@titlebar_color, 0.70);
 }
 
@@ -1622,10 +1622,12 @@ notebook header,
     border-width: 0;
 }
 
+.dynamic-notebook image,
 .dynamic-notebook GtkImage {
     color: shade (@title_color, 0.75);
 }
 
+.dynamic-notebook image:insensitive,
 .dynamic-notebook GtkImage:insensitive {
     color: @insensitive_color;
 }
@@ -1673,7 +1675,7 @@ notebook tab:active,
                                   ) 0 1 0 0;
 }
 
-.dynamic-notebook notebook tab > GtkImage,
+.dynamic-notebook notebook tab > image,
 .dynamic-notebook .notebook tab > GtkImage {
     color: shade (@titlebar_color, 0.35);
 }
@@ -1699,10 +1701,10 @@ notebook tab:active,
     border-style: solid;
     border-width: 0 1px 1px;
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.20),
                 0 0 1px 1px alpha (#000, 0.10);
 
     border-image: none;
@@ -1717,7 +1719,7 @@ notebook tab:active,
                                   shade (@titlebar_color, 0.96)
                                   );
     border-color: shade (@titlebar_color, 0.70);
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.20),
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.20),
                 0 0 0 1px alpha (#000, 0.10);
 }
 
@@ -1734,8 +1736,8 @@ notebook,
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
     border: none;
 }
 
@@ -2688,8 +2690,8 @@ button:insensitive label,
 .destructive-action.button:insensitive GtkImage,
 .suggested-action.button:insensitive GtkLabel,
 .suggested-action.button:insensitive GtkImage {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
 }
 
@@ -3099,7 +3101,7 @@ list row:selected:focus image,
 .content-view .subtitle,
 .content-view .option-description {
     color: alpha (@text_color, 0.5);
-    text-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
 }
 
 .content-view .toolbar {
@@ -3155,8 +3157,8 @@ sidebar,
 .source-list.view,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow_color;
+    icon-shadow: 0 1px @text_shadow_color;
     border-color: transparent;
     border-style: solid;
     border-width: 1px 0 1px 0;

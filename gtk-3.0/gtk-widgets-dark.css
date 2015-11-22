@@ -476,21 +476,6 @@ GtkSwitch.slider:active {
 * Notebook and Tabs *
 ********************/
 
-.dynamic-notebook .notebook tab:active {
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                0 0 1px 1px alpha (#000, 0.15);
-}
-
-.dynamic-notebook .notebook tab:active:backdrop {
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                0 0 0 1px shade (@titlebar_color, 0.70);
-}
-
-.notebook {
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
-}
-
 .notebook tab:active {
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
                 0 0 0 1px shade (@titlebar_color, 0.56);
@@ -506,13 +491,13 @@ GtkSwitch.slider:active {
 .notebook tab .button:hover,
 .notebook tab .button:hover:active {
     padding: 0;
-    background-color:   alpha (#000, 0.02);
+    background-color: alpha (#000, 0.02);
     border-color: alpha (#000, 0.29);
 }
 
 .dynamic-notebook .notebook tab > .button:hover:active,
 .notebook tab > .button:hover:active {
-    background-color:   alpha (#000, 0.10);
+    background-color: alpha (#000, 0.10);
 }
 
 /*************

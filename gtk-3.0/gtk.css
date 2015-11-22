@@ -38,6 +38,7 @@
 @define-color selected_bg_color #3d9bda;
 @define-color selected_fg_color #FFF;
 @define-color text_color #333;
+@define-color text_shadow_color alpha (#fff, 0.4);
 @define-color titlebar_color #DEDEDE;
 @define-color title_color shade (@titlebar_color, 0.55);
 @define-color title_shadow_color alpha (#fff, 0.6);
