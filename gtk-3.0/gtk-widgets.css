@@ -809,13 +809,12 @@ scale trough,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-.titlebar scale trough,
+headerbar scale trough,
 .titlebar .scale.trough {
     border-radius: 0 12px 12px 0;
     border-width: 1px 1px 1px 0;
 }
 
-scale trough:insensitive,
 .scale.trough:insensitive {
     border-radius: 0 12px 12px 0;
     border-width: 1px 1px 1px 0;
@@ -831,13 +830,11 @@ scale.vertical trough,
                                   );
 }
 
-scale.vertical trough:insensitive,
 .scale.trough.vertical:insensitive {
     border-radius: 12px 12px 0 0;
     border-width: 1px 1px 0 1px;
 }
 
-scale.vertical trough:insensitive,
 .scale.trough.vertical.bottom:insensitive {
     border-width: 0 1px 1px 1px;
     border-radius: 0 0 12px 12px;
@@ -880,6 +877,7 @@ scale highlight:insensitive,
 scale.vertical highlight,
 .scale.highlight.bottom {
     border-color: alpha (#000, 0.50);
+    border-radius: 12px 12px 0 0;
 
     background-image: linear-gradient(to right,
                                   alpha (#000, 0.40),
