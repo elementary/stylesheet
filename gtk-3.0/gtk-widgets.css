@@ -246,9 +246,9 @@ spinbutton:selected:focus,
     background-color: @colorAccent;
 }
 
-.titlebar entry,
+headerbar entry,
+headerbar spinbutton,
 toolbar entry,
-.titlebar spinbutton,
 toolbar spinbutton,
 GtkHandleBox .entry,
 .titlebar .entry,
@@ -267,9 +267,9 @@ GtkHandleBox .entry,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-.titlebar entry:backdrop,
+headerbar entry:backdrop,
+headerbar spinbutton:backdrop,
 toolbar entry:backdrop,
-.titlebar spinbutton:backdrop,
 toolbar spinbutton:backdrop,
 GtkHandleBox .entry:backdrop,
 .titlebar .entry:backdrop,
@@ -327,9 +327,9 @@ spinbutton:insensitive,
     color: @insensitive_color;
 }
 
-.titlebar entry:insensitive,
+headerbar entry:insensitive,
+headerbar spinbutton:insensitive,
 toolbar entry:insensitive,
-.titlebar spinbutton:insensitive,
 toolbar spinbutton:insensitive,
 .titlebar .entry:insensitive,
 .toolbar .entry:insensitive {
@@ -338,9 +338,9 @@ toolbar spinbutton:insensitive,
     box-shadow: inset 0  0 0 1px alpha (@inset_dark_color, 0.25), 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-.titlebar entry:insensitive:backdrop,
+headerbar entry:insensitive:backdrop,
+headerbar spinbutton:insensitive:backdrop,
 toolbar entry:insensitive:backdrop,
-.titlebar spinbutton:insensitive:backdrop,
 toolbar spinbutton:insensitive:backdrop,
 .titlebar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
@@ -350,7 +350,7 @@ toolbar spinbutton:insensitive:backdrop,
 }
 
 entry image.left,
-entry:insensitive:backdrop.image.left,
+entry:insensitive:backdrop image.left,
 .entry.image.left,
 .entry:insensitive:backdrop.image.left {
     padding-right: 6px;
