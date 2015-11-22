@@ -1958,7 +1958,8 @@ popover .menuitem,
     border-width: 1px 0;
 }
 
-popover .menuitem {
+popover .menuitem,
+popover .menuitem:insensitive  {
 	background-image: none;
 	border-color: transparent;
 	box-shadow: none;
@@ -1976,14 +1977,17 @@ menu menuitem arrow:dir(rtl),
 
 menu menuitem label,
 menu menuitem image,
-popover .menuitem label,
-popover .menuitem image,
 .menu .menuitem GtkLabel,
 .menu .menuitem GtkImage,
 .popover .menuitem GtkLabel,
 .popover .menuitem GtkImage {
     padding: 0 3px;
     -gtk-icon-style: symbolic;
+}
+
+popover .menuitem label,
+popover .menuitem image {
+    padding: 3px;
 }
 
 menu menuitem:active,
@@ -2001,6 +2005,7 @@ popover .menuitem:hover,
     background-color: alpha (@text_color, 0.15);
 }
 
+popover .menuitem *:insensitive,
 .menu .menuitem *:insensitive,
 .popover .menuitem *:insensitive {
     color: @insensitive_color;
