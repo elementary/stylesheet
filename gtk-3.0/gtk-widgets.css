@@ -68,6 +68,14 @@
     color: @fg_color;
 }
 
+image,
+image:insensitive,
+label,
+label:insensitive,
+box,
+box:insensitive,
+grid,
+grid:insensitive,
 GtkImage,
 GtkImage:insensitive,
 GtkLabel,
@@ -3940,6 +3948,7 @@ GtkDialog .toolbar {
     padding-top: 6px;
 }
 
+list .h4,
 GtkListBox .h4{
     padding-left: 6px;
 }
@@ -3948,11 +3957,13 @@ GtkListBox .h4{
     opacity: 0.75;
 }
 
+image.eror,
 GtkImage.error,
 .error {
     color: @error_color;
 }
 
+image.warning,
 GtkImage.warning,
 .warning {
     color: @warning_color;
@@ -3962,11 +3973,13 @@ GtkImage.warning,
     color: shade (@warning_color, 0.75);
 }
 
+image.success,
 GtkImage.success,
 .success {
     color: @success_color;
 }
 
+label.success,
 .label.success {
     color: shade (@success_color, 0.75);
 }
