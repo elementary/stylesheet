@@ -160,6 +160,11 @@
  * Progress bar *
  ****************/
 
+progressbar progress,
+levelbar block,
+levelbar block.filled.low,
+levelbar block.filled.middle,
+levelbar block.filled.high,
 .progressbar,
 .level-bar.fill-block,
 .level-bar.fill-block.level-low,
@@ -168,14 +173,17 @@
     border-color: transparent;
 }
 
+levelbar block.empty,
 .level-bar.fill-block.empty-fill-block {
     border-color: alpha (#000, 0.25);
 }
 
+levelbar block:backdrop,
 .level-bar.fill-block:backdrop {
     border-color: shade (@bg_color, 0.68);
 }
 
+levelbar block.empty:backdrop,
 .level-bar.fill-block.empty-fill-block:backdrop {
     border-color: shade (@bg_color, 0.75);
 }
@@ -189,13 +197,8 @@
                                   shade (@bg_color, 1.05),
                                   shade (@bg_color, 0.95)
                                   );
-                                  
+
     border-color: alpha (#000, 0.20);
-    
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.01),
-                inset 0 1px 0 0 alpha (#fff, 0.10),
-                inset 0 -1px 0 0 alpha (#fff, 0.03),
-                0 1px 2px alpha (#000, 0.10);
 }
 
 .titlebar .scale.slider,
@@ -260,9 +263,6 @@
 **********/
 
 .button {
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
-
     background-image: linear-gradient(to bottom,
                                   shade (@bg_color, 0.9),
                                   shade (@bg_color, 0.9) 50%,
@@ -270,11 +270,6 @@
                                   );
                                   
     border-color: shade (@bg_color, 0.5);
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.02),
-                inset 0 1px 0 0 alpha (#fff, 0.07),
-                inset 0 -1px 0 0 alpha (#fff, 0.01),
-                0 1px 0 0 alpha (#fff, 0.05);
 
     color: @text_color;
 }
@@ -329,10 +324,6 @@
 
     background-color: alpha (#000, 0.06);
     background-image: none;
-    border-color: alpha (#000, 0.40);
-
-    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                0 1px 0 0 alpha (#fff, 0.05);
 
     border-color: alpha (#000, 0.37);
 

@@ -788,9 +788,9 @@ scale slider:backdrop,
 
     border-color: alpha (#000, 0.15);
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.10),
-                inset 0 1px 0 0 alpha (#fff, 0.90),
-                inset 0 -1px 0 0 alpha (#fff, 0.30),
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.10),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.90),
+                inset 0 -1px 0 0 alpha (b@g_highlight_color, 0.30),
                 0 1px 1px alpha (#000, 0.10);
 }
 
@@ -982,10 +982,10 @@ actionbar button.text-button,
     border: 1px solid alpha (#000, 0.2);
     border-radius: 2.5px;
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 
     color: @text_color;
 
@@ -1012,7 +1012,6 @@ titlebar button,
 button:backdrop,
 .button:backdrop {
     background-image: none;
-
     border-color: alpha (#000, 0.2);
 }
 
@@ -1109,7 +1108,7 @@ button:focus:checked,
     border-color: alpha (#000, 0.25);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
-                0 1px 0 0 alpha (#fff, 0.30);
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 button.flat:active,
