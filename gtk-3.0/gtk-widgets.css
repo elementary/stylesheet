@@ -2488,7 +2488,7 @@ toolbar.inline-toolbar button:insensitive,
  * Search bars *
  ***************/
 
-EggFindBar.toolbar,
+searchbar,
 .search-bar {
     border-width: 0 0 1px;
     border-style: solid;
@@ -2509,7 +2509,7 @@ EggFindBar.toolbar,
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
-EggFindBar.toolbar:backdrop,
+searchbar:backdrop,
 .search-bar:backdrop {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.98),
