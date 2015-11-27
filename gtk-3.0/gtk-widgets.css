@@ -262,15 +262,15 @@ GtkHandleBox .entry,
 .titlebar .entry,
 .toolbar .entry {
     background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.08),
-                                  transparent 5px
+                                  alpha (#000, 0.05),
+                                  transparent 3px
                                   ),
                         linear-gradient(to bottom,
                                   shade (@base_color, 0.93),
                                   @base_color
                                   );
 
-    border-color: alpha (#000, 0.27);
+    border-color: alpha (#000, 0.24);
     box-shadow: inset 0 0 0 1px @inset_dark_color,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
@@ -979,7 +979,7 @@ actionbar button.text-button,
                                   alpha (#000, 0.04)
                                   );
 
-    border: 1px solid alpha (#000, 0.2);
+    border: 1px solid @border_color;
     border-radius: 2.5px;
 
     box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
