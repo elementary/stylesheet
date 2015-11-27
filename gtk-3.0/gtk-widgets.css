@@ -1882,11 +1882,13 @@ scrollbar,
     background-color: transparent;
 }
 
+scrollbar.overlay-indicator slider,
 .scrollbar.slider,
 .scrollbar.button {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
     background-color: alpha (@text_color, 0.6);
     border-radius: 10px;
+    -GtkRange-slider-width: 5;
 }
 
 .scrollbar.slider:insensitive {
@@ -3130,6 +3132,8 @@ list row:selected:focus image,
 ************************/
 
 sidebar,
+sidebar .view,
+sidebar scrolledwindow,
 .sidebar,
 .sidebar .view,
 .sidebar GtkScrolledWindow,
@@ -3140,7 +3144,7 @@ sidebar,
     -gtk-icon-style: regular;
 }
 
-popover .sidebar:backdrop,
+popover sidebar:backdrop,
 .popover .sidebar:backdrop {
     color: shade (@titlebar_color, 0.50);
 }
@@ -3149,6 +3153,9 @@ popover .sidebar:backdrop,
     color: transparent;
 }
 
+dialog sidebar,
+dialog sidebar .view,
+dialog sidebar scrolledwindow,
 GtkDialog .sidebar,
 GtkDialog .sidebar .view,
 GtkDialog .sidebar GtkScrolledWindow {
@@ -3202,6 +3209,7 @@ sidebar,
 .sidebar-row:selected,
 .sidebar-row:selected:hover,
 .sidebar-row:selected:focus,
+popover .sidebar.view:selected,
 .popover .sidebar.view:selected,
 .source-list.view:selected,
 .source-list.view:selected:hover,
@@ -3224,6 +3232,9 @@ sidebar,
                 inset 0 -1px 0 0 alpha (#000, 0.10);
 }
 
+dialog .sidebar .view:selected,
+dialog .sidebar-row:selected,
+dialog .sidebar .view:hover:selected,
 GtkDialog .sidebar .view:selected,
 GtkDialog .sidebar-row:selected,
 GtkDialog .sidebar .view:hover:selected {
@@ -3262,6 +3273,8 @@ GtkDialog .sidebar .view:hover:selected {
                                   ) 1 1 1 1;
 }
 
+dialog .sidebar .view:selected:backdrop,
+dialog .sidebar .view:hover:selected:backdrop,
 GtkDialog .sidebar .view:selected:backdrop,
 GtkDialog .sidebar .view:hover:selected:backdrop {
     background-color: alpha (#000, 0.05);
@@ -3561,19 +3574,23 @@ popover.osd,
     text-shadow: none;
 }
 
+popover image,
 .popover GtkImage {
     color: alpha (@text_color, 0.8);
 }
 
+popover image:insensitive,
 .popover GtkImage:insensitive {
     color: @insensitive_color;
 }
 
-.popover .view,
+popover .view,
+popover .sidebar.view,
 .popover .view {
     background-color: transparent;
 }
 
+popover.menu,
 .popover.menu {
     background-image: none;
 }
@@ -3598,6 +3615,7 @@ GtkModelButton.button {
     box-shadow: none;
 }
 
+popover separator,
 .popover .separator {
     font-size: 80%;
     font-weight: bold;
