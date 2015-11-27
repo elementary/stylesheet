@@ -1068,11 +1068,11 @@ button.flat:focus:hover,
                                  0 1px 0 alpha (#fff, 0.3);
 } */
 
-GtkDialog button.flat.image-button,
-GtkDialog button.flat.image-button:backdrop,
-GtkDialog button.flat.image-button:insensitive,
-GtkDialog button.flat.image-button:hover,
-GtkDialog button.flat.image-button:focus:active,
+dialog button.flat.image-button,
+dialog button.flat.image-button:backdrop,
+dialog button.flat.image-button:insensitive,
+dialog button.flat.image-button:hover,
+dialog button.flat.image-button:focus:active,
 GtkDialog .button.flat.image-button,
 GtkDialog .button.flat.image-button:backdrop,
 GtkDialog .button.flat.image-button:insensitive,
@@ -1086,7 +1086,7 @@ GtkDialog .button.flat.image-button:focus:active {
     box-shadow: none;
 }
 
-GtkDialog button.flat.image-button:hover,
+dialog button.flat.image-button:hover,
 GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
@@ -3719,10 +3719,10 @@ headerbar.titlebar,
     box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.60);
 }
 
-dialog .titlebar,
-GtkDialog .titlebar.default-decoration,
+dialog .titlebar.default-decoration,
 messagedialog .titlebar,
 messagedialog .titlebar.default-decoration,
+GtkDialog .titlebar.default-decoration,
 GtkMessageDialog .titlebar,
 GtkMessageDialog .titlebar.default-decoration {
     border: none;
@@ -3735,6 +3735,10 @@ GtkMessageDialog .titlebar.default-decoration {
                 inset 0 1px 0 0 @bg_highlight_color;
 }
 
+dialog .titlebar:backdrop,
+messagedialog .titlebar:backdrop,
+dialog .titlebar.default-decoration:backdrop,
+messagedialog .titlebar.default-decoration:backdrop
 GtkDialog .titlebar:backdrop,
 GtkMessageDialog .titlebar:backdrop,
 GtkDialog .titlebar.default-decoration:backdrop,
@@ -3848,8 +3852,8 @@ decoration:backdrop,
                 0 14px 28px transparent;
 }
 
-GtkDialog.window-frame,
-GtkDialog.window-frame:backdrop,
+dialog decoration,
+dialog decoration:backdrop,
 .window-frame.dialog,
 .window-frame.dialog:backdrop {
     border-radius: 4px;
@@ -3870,12 +3874,14 @@ GtkDialog.window-frame:backdrop,
  ***************/
 
 messagedialog decoration,
+dialog decoration,
 GtkDialog.csd,
 GtkMessageDialog.csd {
     border-radius: 3px;
 }
 
 messagedialog,
+dialog,
 GtkDialog.background {
     border-radius: 0 0 4px 4px;
 }
@@ -3894,6 +3900,7 @@ GtkMessageDialog .button {
 }
 
 messagedialog .titlebar,
+dialog .titlebar,
 GtkDialog .titlebar,
 GtkMessageDialog .titlebar {
     border: none;
@@ -3907,6 +3914,7 @@ GtkMessageDialog .titlebar {
 }
 
 messagedialog .titlebar:backdrop,
+dialog .titlebar:backdrop,
 GtkDialog .titlebar:backdrop,
 GtkMessageDialog .titlebar:backdrop {
     border: none;
@@ -3921,6 +3929,7 @@ GtkMessageDialog .titlebar:backdrop {
     color: shade (@titlebar_color, 1.20);
 }
 
+dialog .titlebar .title,
 GtkDialog .titlebar .title {
     color: transparent;
     font-size: 0;
@@ -3929,6 +3938,7 @@ GtkDialog .titlebar .title {
 }
 
 messagedialog,
+dialog,
 GtkDialog,
 GtkMessageDialog {
     box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
@@ -3936,6 +3946,7 @@ GtkMessageDialog {
                 inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
+dialog toolbar,
 GtkDialog .toolbar {
     background-image: none;
     background-color: @bg_color;
