@@ -297,6 +297,8 @@ NoiseLibraryWindow.window-frame {
  * Slingshot *
  ************/
 
+SlingshotWidgetsSearchView button.flat:hover,
+SlingshotWidgetsSearchView button.flat:focus,
 SlingshotWidgetsSearchView GtkButton.flat:hover,
 SlingshotWidgetsSearchView GtkButton.flat:focus {
     background-color: alpha (#000, 0.20);

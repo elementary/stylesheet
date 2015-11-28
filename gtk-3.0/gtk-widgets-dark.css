@@ -36,23 +36,6 @@
 * Text Entry *
 *************/
 
-entry,
-.entry {
-    background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.93),
-                                  shade (@base_color, 0.97)
-                                  );
-
-    box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-                inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 0 alpha (#fff, 0.05);
-                
-    color: @text_color;
-
-    icon-shadow: 0 1px alpha (#000, 0.4);
-    text-shadow: 0 1px alpha (#000, 0.4);
-}
-
 .entry.progressbar {
     color: @selected_fg_color;
 }
@@ -180,12 +163,8 @@ levelbar block.empty:backdrop,
 * Scale *
 ********/
 
+scale slider:backdrop,
 .scale.slider:backdrop {
-    background-image: linear-gradient(to bottom,
-                                  shade (@bg_color, 1.05),
-                                  shade (@bg_color, 0.95)
-                                  );
-
     border-color: alpha (#000, 0.20);
 }
 
@@ -194,15 +173,6 @@ levelbar block.empty:backdrop,
     background-image: none;
     border: none;
     box-shadow: none;
-}
-
-.scale.trough {
-    border-color: alpha (#000, 0.35);
-
-    background-image: linear-gradient(to bottom,
-                                  alpha (#000, 0.15),
-                                  alpha (#000, 0.07)
-                                  );
 }
 
 .scale.trough:insensitive {
@@ -222,10 +192,6 @@ levelbar block.empty:backdrop,
                                   alpha (#000, 0.10),
                                   alpha (#000, 0.02)
                                   );
-}
-
-.scale.mark {
-    background-color: alpha (#000, 0.40);
 }
 
 .scale.highlight.left {
@@ -257,8 +223,6 @@ button,
                                   shade (@bg_color, 0.9) 50%,
                                   shade (@bg_color, 0.8)
                                   );
-
-
     color: @text_color;
 }
 
@@ -580,12 +544,14 @@ GtkCheckButton:selected:focus {
     background-color: transparent;
 }
 
+check,
 .check {
     -gtk-icon-source: -gtk-scaled(url("assets/check-dark.svg"),url("assets/check@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
+check:focus
 .check:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-focus-dark.svg"),url("assets/check-focus@2.svg"));
     background-repeat: no-repeat;
@@ -593,12 +559,14 @@ GtkCheckButton:selected:focus {
 }
 
 
+radio,
 .radio {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-dark.svg"),url("assets/radio@2.svg"));
     background-repeat: no-repeat;
     background-position: center;
 }
 
+radio:focus,
 .radio:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-focus-dark.svg"),url("assets/radio-focus@2.svg"));
     background-repeat: no-repeat;
@@ -610,7 +578,7 @@ GtkCheckButton:selected:focus {
     background-image: none;
 }
 
-
+check:checked,
 .check:active,
 .check:checked,
 .menuitem.check:active,
@@ -618,6 +586,7 @@ GtkCheckButton:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active-dark.svg"),url("assets/check-active@2.svg"));
 }
 
+check:checked:focus,
 .check:active:focus,
 .check:checked:focus,
 .menuitem.check:active:focus,
@@ -625,6 +594,7 @@ GtkCheckButton:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active-focus-dark.svg"),url("assets/check-active@2.svg"));
 }
 
+radio:checked,
 .radio:active,
 .radio:checked,
 .menuitem.radio:active,
@@ -632,6 +602,7 @@ GtkCheckButton:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-active-dark.svg"),url("assets/radio-active@2.svg"));
 }
 
+radio:checked:focus,
 .radio:active:focus,
 .radio:checked:focus,
 .menuitem.radio:active:focus,
@@ -896,6 +867,7 @@ EggFindBar.toolbar,
 * Destructive Action Button *
 ****************************/
 
+button.destructive-action,
 .destructive-action.button {
     background-image: linear-gradient(to bottom,
                                   shade (@error_color, 1.20),
@@ -910,6 +882,8 @@ EggFindBar.toolbar,
     border-color: shade (@error_color, 0.30);
 }
 
+button.destructive-action label,
+button.destructive-action label:hover,
 .destructive-action.button GtkLabel,
 .destructive-action.button Gtklabel:prelight {
     color: @selected_fg_color;
@@ -917,6 +891,8 @@ EggFindBar.toolbar,
     icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
+button.destructive-action:active,
+button.destructive-action:active:hover
 .destructive-action.button:active,
 .destructive-action.button:active:hover {
     background-image: linear-gradient(to bottom,

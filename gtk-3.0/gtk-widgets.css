@@ -850,7 +850,7 @@ scale.vertical trough,
 
 scale mark,
 .scale.mark {
-    background-color: alpha (#000, 0.40);
+	color: mix (@bg_color, @text_color, 0.3);
 }
 
 scale highlight,
@@ -1351,12 +1351,12 @@ spinbutton.vertical button,
                                   alpha (#000, 0.04)
                                   );
 
-    border: 1px solid alpha (#000, 0.2);
+    border: 1px solid @border_color;
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 0 0 alpha (#fff, 0.15);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
 spinbutton.vertical button:first-child,
