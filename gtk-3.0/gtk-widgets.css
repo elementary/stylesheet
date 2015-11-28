@@ -2152,38 +2152,26 @@ radio:focus,
     background-image: none;
 }
 
-check:active,
 check:checked,
-.check:active,
 .check:checked,
-.menuitem.check:active,
 .menuitem.check:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"),url("assets/check-active@2.svg"));
 }
 
-check:active:focus,
 check:checked:focus,
-.check:active:focus,
 .check:checked:focus,
-.menuitem.check:active:focus,
 .menuitem.check:checked:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active-focus.svg"),url("assets/check-active-focus@2.svg"));
 }
 
-radio:active,
 radio:checked,
-.radio:active,
 .radio:checked,
-.menuitem.radio:active,
 .menuitem.radio:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-active.svg"),url("assets/radio-active@2.svg"));
 }
 
-radio:active:focus,
 radio:checked:focus,
-.radio:active:focus,
 .radio:checked:focus,
-.menuitem.radio:active:focus,
 .menuitem.radio:checked:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/radio-active-focus.svg"),url("assets/radio-active-focus@2.svg"));
 }
@@ -3384,10 +3372,15 @@ GtkDialog .source-list .view:selected:backdrop {
 * GtkCalendar *
 **************/
 
+calendar,
 GtkCalendar {
     border-radius: 2px;
 }
 
+calendar button,
+calendar button:insensitive,
+calendar header,
+calendar .view,
 GtkCalendar.button,
 GtkCalendar.button:insensitive,
 GtkCalendar.header,
