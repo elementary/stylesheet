@@ -924,7 +924,6 @@ GtkScrolledWindow.frame {
 frame.flat,
 scrolledwindow viewport.frame,
 .frame.flat,
-.sidebar .frame, /* FIXME: This is a workaround for Geary */
 GtkScrolledWindow GtkViewport.frame {
     border: none;
 }
@@ -3161,89 +3160,53 @@ list row:selected:focus image,
 * Sidebar & Source List *
 ************************/
 
-sidebar,
-sidebar .view,
-sidebar scrolledwindow,
 .sidebar,
-.sidebar .view,
-.sidebar GtkScrolledWindow,
-.source-list,
-.source-list.view {
+.sidebar list,
+.sidebar GtkList,
+.source-list {
     background-color: shade (@bg_color, 0.92);
     color: mix (@titlebar_color, @text_color, 0.60);
     -gtk-icon-style: regular;
-}
-
-popover sidebar:backdrop,
-.popover .sidebar:backdrop {
-    color: shade (@titlebar_color, 0.50);
-}
-
-.sidebar .separator {
-    color: transparent;
-}
-
-dialog sidebar,
-dialog sidebar .view,
-dialog sidebar scrolledwindow,
-GtkDialog .sidebar,
-GtkDialog .sidebar .view,
-GtkDialog .sidebar GtkScrolledWindow {
-    background-color: shade (@titlebar_color, 1.07);
-}
-
-sidebar,
-.sidebar,
-.sidebar .view,
-.sidebar .view:selected:backdrop,
-.sidebar .view:hover:selected:backdrop,
-.sidebar-row,
-.sidebar-row:selected:backdrop,
-.sidebar-row:hover:selected:backdrop,
-.source-list,
-.source-list.view,
-.source-list.view:selected:backdrop,
-.source-list.view:hover:selected:backdrop {
-    text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 1px 0 1px 0;
-}
-
-sidebar,
-.sidebar,
-.source-list {
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
+}
+
+dialog .sidebar,
+dialog .sidebar list,
+dialog .source-list,
+GtkDialog .sidebar,
+GtkDialog .sidebar GtkList,
+GtkDialog .source-list {
+    background-color: shade (@titlebar_color, 1.07);
 }
 
 .sidebar-row {
     padding: 0 6px;
 }
 
+.sidebar-row image,
 .sidebar-row GtkImage {
     padding-right: 6px;
 }
 
+.sidebar .view,
+.sidebar-row,
+.source-list .view {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    text-shadow: 0 1px @text_shadow_color;
+}
+
 .sidebar .view:hover,
 .sidebar-row:hover,
-.source-list.view:hover {
+.source-list .view:hover {
     background-color: shade (@titlebar_color, 1.10);
 }
 
 .sidebar .view:selected,
-.sidebar .view:selected:hover,
-.sidebar.view:selected,
-.sidebar.view:selected:hover,
 .sidebar-row:selected,
-.sidebar-row:selected:hover,
-.sidebar-row:selected:focus,
-popover .sidebar.view:selected,
-.popover .sidebar.view:selected,
-.source-list.view:selected,
-.source-list.view:selected:hover,
-.source-list.view:selected:focus,
+.source-list .view:selected,
 .source-list.category-expander:hover {
     color: mix (@titlebar_color, @text_color, 0.60);
 
@@ -3264,10 +3227,13 @@ popover .sidebar.view:selected,
 
 dialog .sidebar .view:selected,
 dialog .sidebar-row:selected,
-dialog .sidebar .view:hover:selected,
+dialog .sidebar-row:selected:focus,
+dialog .source-list .view:selected,
 GtkDialog .sidebar .view:selected,
 GtkDialog .sidebar-row:selected,
-GtkDialog .sidebar .view:hover:selected {
+GtkDialog .sidebar-row:selected:focus,
+GtkDialog .source-list .view:selected {
+    color: mix (@titlebar_color, @text_color, 0.60);
     background-image: none;
     background-color: alpha (#000, 0.05);
 
@@ -3280,18 +3246,24 @@ GtkDialog .sidebar .view:hover:selected {
                 inset 0 -1px 0 0 alpha (#000, 0.10);
 }
 
+dialog .sidebar-row:selected:focus image,
+GtkDialog .sidebar-row:selected:focus GtkImage {
+    background-color: transparent;
+}
+
 .sidebar:backdrop,
-.sidebar .view:selected:backdrop,
+.sidebar-row:backdrop,
+.sidebar .view:backdrop,
 .source-list:backdrop,
-.source-list.view:selected:backdrop {
+.source-list .view:backdrop {
     color: mix (@titlebar_color, @text_color, 0.40);
     -gtk-image-effect: dim;
 }
 
 .sidebar .view:selected:backdrop,
-.sidebar .view:hover:selected:backdrop,
-.source-list.view:selected:backdrop,
-.source-list.view:hover:selected:backdrop {
+.sidebar-row:selected:backdrop,
+.source-list .view:selected:backdrop {
+    color: mix (@titlebar_color, @text_color, 0.40);
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.04),
                                   alpha (#000, 0.03)
@@ -3304,9 +3276,11 @@ GtkDialog .sidebar .view:hover:selected {
 }
 
 dialog .sidebar .view:selected:backdrop,
-dialog .sidebar .view:hover:selected:backdrop,
+dialog .sidebar-row:selected:backdrop,
+dialog .source-list .view:selected:backdrop,
 GtkDialog .sidebar .view:selected:backdrop,
-GtkDialog .sidebar .view:hover:selected:backdrop {
+GtkDialog .sidebar-row:selected:backdrop,
+GtkDialog .source-list .view:selected:backdrop {
     background-color: alpha (#000, 0.05);
     background-image: none;
 
@@ -3316,11 +3290,17 @@ GtkDialog .sidebar .view:hover:selected:backdrop {
                                   ) 1 1 1 1;
 }
 
-.sidebar .scrollbar.trough,
-.sidebar .scrollbars-junction,
-.source-list .scrollbar.trough,
-.source-list .scrollbars-junction {
-    background-color: @titlebar_color;
+.sidebar.frame {
+    border-width: 1px 0 1px 0;
+}
+
+.sidebar .frame {
+    border: none;
+}
+
+.sidebar separator,
+.sidebar .separator {
+    color: transparent;
 }
 
 .source-list.badge,
