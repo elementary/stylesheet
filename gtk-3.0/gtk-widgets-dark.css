@@ -43,8 +43,6 @@ entry,
                                   shade (@base_color, 0.97)
                                   );
 
-    border-color: alpha (#000, 0.30);
-
     box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
                 inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
                 0 1px 0 0 alpha (#fff, 0.05);
@@ -259,8 +257,7 @@ button,
                                   shade (@bg_color, 0.9) 50%,
                                   shade (@bg_color, 0.8)
                                   );
-                                  
-    border-color: shade (@bg_color, 0.5);
+
 
     color: @text_color;
 }
@@ -575,14 +572,6 @@ GtkHandleBox:backdrop,
 /*************************
  * Check and Radio items *
  *************************/
-
-.check,
-.radio,
-.check:insensitive,
-.radio:insensitive {
-    background-color: transparent;
-    border-style: none;
-}
 
 GtkCheckButton:hover,
 GtkCheckButton:active:hover,
