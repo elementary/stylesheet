@@ -220,7 +220,6 @@ toolbar paned separator,
 *************/
 
 entry,
-textview,
 spinbutton,
 .entry {
     background-image: linear-gradient(to bottom,
@@ -244,20 +243,6 @@ spinbutton,
 
     transition: all 200ms ease-out;
     -gtk-icon-style: symbolic;
-}
-
-textview {
-    border: none;
-    border-radius: 0;
-}
-
-textview.frame {
-    border: 1px solid @border_color;
-    border-radius: 2.5px;
-
-    box-shadow: inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-                inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 entry:selected,
@@ -314,7 +299,6 @@ GtkHandleBox .entry:backdrop,
 }
 
 entry:focus,
-textview:focus,
 spinbutton:focus,
 .entry:focus {
     border-color: alpha (@colorAccent, 0.80);
