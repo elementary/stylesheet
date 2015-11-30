@@ -3193,6 +3193,7 @@ GtkDialog .source-list {
     background-color: shade (@titlebar_color, 1.10);
 }
 
+.popover .sidebar.view:selected,
 .sidebar .view:selected,
 .sidebar-row:selected,
 .source-list .view:selected,
