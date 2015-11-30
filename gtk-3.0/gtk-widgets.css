@@ -3149,9 +3149,11 @@ list row:selected:focus image,
 ************************/
 
 .sidebar,
+.sidebar.view,
 .sidebar list,
 .sidebar GtkList,
-.source-list {
+.source-list,
+.source-list.view {
     background-color: shade (@bg_color, 0.92);
     color: mix (@titlebar_color, @text_color, 0.60);
     -gtk-icon-style: regular;
