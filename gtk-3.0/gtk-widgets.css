@@ -2310,7 +2310,7 @@ headerbar button.image-button,
 .titlebar button.flat,
 .titlebar button.image-button,
 .titlebar .button.flat,
-.titlebar .button.image-button { /* FIXME: This is a workaround for Files */
+.titlebar .button.image-button {
     border-radius: 50%;
 }
 
@@ -2699,7 +2699,6 @@ button:insensitive,
 }
 
 toolbar button:insensitive,
-.titlebar .button:insensitive,
 .toolbar .button:insensitive,
 .toolbar .destructive-action.button:insensitive,
 .titlebar .destructive-action.button:insensitive,
