@@ -19,17 +19,9 @@
  * Base States *
  **************/
 
-.background {
-    color: @text_color;
-}
-
 *:insensitive {
     text-shadow: 0 1px alpha (#000, 0.15);
     icon-shadow: 0 1px alpha (#000, 0.15);
-}
-
-*:backdrop {
-    color: shade (@text_color, 0.70);
 }
 
 /*************
@@ -205,7 +197,7 @@ scale slider:backdrop,
 
 .scale.highlight.left:insensitive {
     border-color: alpha (#000, 0.40);
-    
+
     background-image: linear-gradient(to bottom,
                                   alpha (#000, 0.30),
                                   alpha (#000, 0.20)
@@ -223,12 +215,6 @@ button,
                                   shade (@bg_color, 0.9) 50%,
                                   shade (@bg_color, 0.8)
                                   );
-    color: @text_color;
-}
-
-button:hover,
-.button:hover {
-    color:@text_color;
 }
 
 button:focus,
@@ -273,8 +259,6 @@ popover actionbar button:focus:active,
 .popover .action-bar .button:active,
 .popover .action-bar .button:hover:active,
 .popover .action-bar .button:focus:active {
-    color: shade (@text_color, 0.8);
-
     background-color: alpha (#000, 0.06);
     background-image: none;
 
@@ -346,9 +330,6 @@ GtkSwitch.slider:active {
 ***************************/
 
 .secondary-toolbar.toolbar .button:hover {
-
-    color: shade (@colorAccent, 0.65);
-
     border-color: transparent;
     background-image: none;
     background-color: transparent;
@@ -370,7 +351,6 @@ GtkSwitch.slider:active {
  *****************/
 
 .spinbutton .button {
-    color: @internal_element_color;
     border-style: none;
     border-image: none;
     box-shadow: inset 1px 0 alpha (#000, 0.10);
@@ -496,19 +476,6 @@ GtkComboBox.combobox-entry .button:last-child {
                 inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
-.menu .menuitem *:insensitive {
-    color: @insensitive_color;
-}
-
-.menuitem .accelerator {
-    color: alpha (@text_color, 0.4);
-}
-
-.menuitem .accelerator:hover,
-.menuitem .accelerator:active {
-    color: alpha (@fg_color, 0.3);
-}
-
 .menuitem.check,
 .menuitem.radio,
 .menuitem.check:hover,
@@ -632,7 +599,6 @@ radio:checked:focus,
 *********************/
 
 .secondary-toolbar.toolbar {
-    color: shade (@text_color, 0.90);   
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.84),
                                   shade (@titlebar_color, 0.80)
@@ -687,10 +653,6 @@ radio:checked:focus,
     box-shadow: none;
     background-image: none;
     background-color: transparent;
-}
-
-.action-bar GtkLabel {
-    color: @text_color;
 }
 
 /******************
@@ -765,8 +727,6 @@ EggFindBar.toolbar,
 .source-list.view:prelight:selected,
 .source-list.view:focus:selected,
 .source-list.category-expander:hover {
-
-    color: shade (@text_color, 0.90);
     border-style: solid;
 
     background-color: transparent;
@@ -813,21 +773,14 @@ EggFindBar.toolbar,
 .source-list.badge:prelight:selected {
     background-image: none;
     background-color: alpha (#fff, 0.4);
-    color: @bg_color;
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
-}
-
-.source-list.badge:selected,
-.source-list.badge:prelight:selected {
-    color: @bg_color;
 }
 
 .source-list.badge:selected:backdrop,
 .source-list.badge:selected:prelight:backdrop {
     background-image: none;
     background-color: alpha (#000, 0.2);
-    color: shade (@bg_color, 0.95);
     text-shadow: 0 1px alpha (#000, 0.1);
     icon-shadow: 0 1px alpha (#000, 0.1);
 }
@@ -853,7 +806,6 @@ EggFindBar.toolbar,
 
 .suggested-action.button GtkLabel,
 .suggested-action.button GtkLabel:prelight {
-    color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
 }
@@ -886,7 +838,6 @@ button.destructive-action label,
 button.destructive-action label:hover,
 .destructive-action.button GtkLabel,
 .destructive-action.button Gtklabel:prelight {
-    color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     icon-shadow: 0 1px alpha (#000, 0.2);
 }
@@ -932,7 +883,6 @@ button.destructive-action:active:hover
 }
 
 .titlebar .button GtkLabel:insensitive {
-    color: shade (@headerbar_color, 0.60);
     text-shadow: 0 1px alpha (#fff, 0.15);
 }
 
@@ -947,7 +897,6 @@ button.destructive-action:active:hover
 .inline-toolbar.toolbar .button:insensitive {
     background-image: none;
     background-color: alpha (#000, 0.02);
-    color: @insensitive_color;
 }
 
 .button.flat:insensitive {
@@ -962,7 +911,6 @@ button.destructive-action:active:hover
 ***************/
 
 GtkAssistant .sidebar .highlight {
-    color: @fg_color;
     font: bold;
 }
 
@@ -970,7 +918,6 @@ GtkAssistant .sidebar {
     background-color: shade (@bg_color, 0.97);
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
-    color: mix (@fg_color, @bg_color, 0.40);
     text-shadow: 0 1px shade (@bg_color, 1.04);
 }
 
@@ -995,19 +942,6 @@ column-header .button:hover {
                                   shade ( @titlebar_color, 0.80),
                                    @titlebar_color
                                   );
-}
-
-/***********
-* Expander *
-***********/
-
-.expander {
-    color: @fg_color;
-}
-
-.expander row:selected,
-.expander row:selected:focus {
-    color: @selected_fg_color;
 }
 
 /*************
@@ -1044,20 +978,12 @@ GtkInfoBar.info {
                 inset 0 -1px 0 0 alpha (#fff, 0.03);
 }
 
-GtkInfoBar.info GtkLabel {
-    color: @text_color;
-}
-
 GtkInfoBar.question {
     background-image: linear-gradient(to bottom,
                                   #55c1ec,
                                   #44a2e9
                                   );
     border-color: #357fb8;
-}
-
-GtkInfoBar.question GtkLabel {
-    color: #004166;
 }
 
 GtkInfoBar.warning {
@@ -1068,10 +994,6 @@ GtkInfoBar.warning {
     border-color: #c09e42;
 }
 
-GtkInfoBar.warning GtkLabel {
-    color: #664e00;
-}
-
 GtkInfoBar.error {
     background-image: linear-gradient(to bottom,
                                   #e35d4f,
@@ -1080,24 +1002,9 @@ GtkInfoBar.error {
     border-color: #a2302e;
 }
 
-GtkInfoBar.error GtkLabel {
-    color: #660000;
-}
-
 GtkInfoBar GtkLabel {
     icon-shadow: 0 1px alpha (#fff, 0.3);
     text-shadow: 0 1px alpha (#fff, 0.3);
-}
-
-GtkInfoBar .entry,
-GtkInfoBar .menu {
-    color: @text_color;
-}
-
-
-GtkInfoBar GtkLabel:insensitive {
-    color: @insensitive_color;
-
 }
 
 GtkInfoBar .button,
@@ -1106,12 +1013,12 @@ GtkInfoBar .button:focus,
 
     text-shadow: none;
     icon-shadow: none;
-    
+
     background-image: none; 
     background-color: transparent;  
 
     border-color: alpha (#000, 0.3);
-    
+
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.45),
                 inset 0 -1px 0 0 alpha (#fff, 0.15),
@@ -1154,13 +1061,6 @@ GtkInfoBar .button:hover:insensitive {
     box-shadow: none;
 }
 
-.titlebar .title:backdrop,
-.titlebar .subtitle:backdrop,
-.titlebar .titlebutton:backdrop,
-.titlebar .button.image-button GtkImage:backdrop {
-    color: shade (@title_color, 0.80);
-}
-
 decoration,
 .window-frame {
     box-shadow: 0 0 0 1px alpha (#000, 0.75),
@@ -1193,7 +1093,6 @@ decoration:backdrop,
 }
 
 .titlebar .subtitle {
-    color: shade (@headerbar_color, 0.30);
     text-shadow: 0 1px alpha (#fff, 0.15);
     icon-shadow: 0 1px alpha (#fff, 0.15);
 }
