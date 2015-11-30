@@ -31,17 +31,6 @@
                 0 1px 2px alpha (#000, 0.24);
 }
 
-/**************
- * GNOME Crap *
- *************/
-
-ApDocView, /* Abiword */
-EogScrollView, /* Eog */
-CheeseThumbView /* Cheese */
-{
-    -EogScrollView-shadow-type: none;
-}
-
 /**********
  * Birdie *
  *********/
@@ -265,6 +254,8 @@ NoiseLibraryWindow.window-frame {
     background-color: #000;
 }
 
+.composited-indicator > revealer label,
+.composited-indicator > revealer image,
 .composited-indicator > GtkBox > GtkImage,
 .composited-indicator > GtkBox > GtkLabel,
 .composited-indicator > GtkRevealer {
@@ -306,6 +297,8 @@ NoiseLibraryWindow.window-frame {
  * Slingshot *
  ************/
 
+SlingshotWidgetsSearchView button.flat:hover,
+SlingshotWidgetsSearchView button.flat:focus,
 SlingshotWidgetsSearchView GtkButton.flat:hover,
 SlingshotWidgetsSearchView GtkButton.flat:focus {
     background-color: alpha (#000, 0.20);
