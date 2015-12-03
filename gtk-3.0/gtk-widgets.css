@@ -52,6 +52,7 @@
 *:selected:focus {
     background-color: alpha (@colorAccent, 0.9);
     color: @selected_fg_color;
+    text-shadow: none;
 }
 
 *:insensitive {
@@ -2912,6 +2913,7 @@ GtkIconView.view.cell:selected:focus {
     text-shadow: none;
 }
 
+GtkTreeView row:focus,
 .cell:selected,
 .popover GtkTreeView.view row:selected,
 .view:selected,
