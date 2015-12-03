@@ -1059,7 +1059,7 @@ popover actionbar button:focus,
 button.flat,
 button.flat:backdrop,
 .button.flat,
-.button.flat:backdrop {button
+.button.flat:backdrop {
     border-color: transparent;
     box-shadow: none;
     background-image: none;
