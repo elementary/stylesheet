@@ -1059,7 +1059,7 @@ popover actionbar button:focus,
 button.flat,
 button.flat:backdrop,
 .button.flat,
-.button.flat:backdrop {
+.button.flat:backdrop {button
     border-color: transparent;
     box-shadow: none;
     background-image: none;
@@ -2695,6 +2695,10 @@ button:insensitive,
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.20);
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.15);
     color: @insensitive_color;
 }
 
