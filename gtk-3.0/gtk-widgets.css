@@ -202,8 +202,7 @@ paned separator:selected,
 }
 
 GraniteWidgetsThinPaned {
-    background-color: transparent;
-    background-image: none;
+    background-color: red;
     margin: 0;
 }
 
