@@ -186,11 +186,6 @@ ConversationListView.view.cell:selected:focus {
     border-color: shade (@colorAccent, 0.8);
 }
 
-PillHeaderbar:last-child {
-    border-left-width: 1px;
-    border-left-color: shade(@colorPrimary, 0.8);
-}
-
 /**********
 * Greeter *
 **********/
