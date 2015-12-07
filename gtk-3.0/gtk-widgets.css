@@ -2876,6 +2876,7 @@ GtkSwitch.slider:backdrop {
 * Tree, List, and Icon Views *
 *****************************/
 
+treeview,
 GtkTreeView {
     -GtkTreeView-vertical-separator: 5px;
     -GtkTreeView-horizontal-separator: 6px;
@@ -2892,10 +2893,15 @@ GtkTreeView row:nth-child(odd) {
     background-color: @base_color;
 }
 
+treeview entry,
 GtkTreeView .entry {
     border-radius: 0;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
+iconview.view.cell:selected,
+iconview.view.cell:selected:focus,
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     background-color: @base_color;
@@ -2912,10 +2918,10 @@ GtkIconView.view.cell:selected:focus {
     text-shadow: none;
 }
 
-GtkTreeView row:focus,
+popover treeview.view row:selected,
 .cell:selected,
-.popover GtkTreeView.view row:selected,
 .view:selected,
+GtkTreeView row:focus,
 .popover GtkTreeView.view row:selected {
     background-color: shade (@base_color, 0.80);
     color: @text_color;
@@ -2954,11 +2960,14 @@ GtkListBoxRow:first-child {
     background-clip: padding-box;
 }
 
+.app-notification label,
 .app-notification GtkLabel {
     color: @bg_color;
     text-shadow: 0 1px 2px alpha (@text_color, 0.6);
 }
 
+.app-notification button,
+.app-notification button.flat.image-button,
 .app-notification .button,
 .app-notification .button.flat.image-button {
     background-color: alpha (@bg_color, 0.9);
@@ -2969,17 +2978,20 @@ GtkListBoxRow:first-child {
     border-width: 0;
 }
 
+.app-notification button label,
 .app-notification .button GtkLabel {
     color: @text_color;
     text-shadow: none;
     icon-shadow: none;
 }
 
+.app-notification button.flat.image-button,
 .app-notification .button.flat.image-button {
     padding: 3px;
     border-radius: 50%;
 }
 
+.app-notification button:active,
 .app-notification .button:active {
     background-color: @bg_color;
     box-shadow: 0 3px 6px alpha (@text_color, 0.16),
