@@ -33,6 +33,8 @@
 
     -GtkButtonBox-child-min-height: 20;
     -GtkButtonBox-child-internal-pad-y: 1;
+
+    -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color;
 }
 
 /***************
@@ -3889,6 +3891,7 @@ dialog decoration:backdrop,
                 0 6px 6px alpha (#000, 0.23);
 }
 
+.tiled decoration,
 .tiled .window-frame {
     border-radius: 0;
     box-shadow: 0 0 0 1px alpha (#000, 0.20),
