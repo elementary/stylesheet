@@ -3728,7 +3728,8 @@ headerbar.titlebar,
     padding: 8px 6px 6px;
 }
 
-headerbar.compact {
+headerbar.compact,
+.titlebar.compact {
     padding: 0 3px;
 }
 
