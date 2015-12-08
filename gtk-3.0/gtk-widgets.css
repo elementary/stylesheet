@@ -2392,6 +2392,7 @@ actionbar,
                 inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
+dialog .action-bar,
 GtkDialog .action-bar {
     background-image: none;
     background-color: @bg_color;
@@ -3791,6 +3792,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .title,
 .titlebar .subtitle,
 .titlebar .titlebutton,
+.titlebar .button.image-button image,
 .titlebar .button.image-button GtkImage {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
