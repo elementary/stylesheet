@@ -3733,8 +3733,9 @@ headerbar.compact,
     padding: 0 3px;
 }
 
-.maximized .header-bar,
-.tiled .titlebar {
+.maximized .titlebar,
+.tiled .titlebar,
+.maximized .header-bar {
     padding: 4px 6px 3px;
 }
 
@@ -3823,6 +3824,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .title:insensitive,
 .titlebar .subtitle:insensitive,
 .titlebar .titlebutton:insensitive,
+.titlebar button.image-button image:insensitive,
 .titlebar .button.image-button GtkImage:insensitive {
     color: shade (@textColorPrimary, 1.50);
     text-shadow: 0 1px @textColorPrimaryShadow;
@@ -3832,6 +3834,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
+.titlebar button.image-button image:backdrop,
 .titlebar .button.image-button GtkImage:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
@@ -3910,15 +3913,15 @@ dialog decoration:backdrop,
  * Dialog      *
  ***************/
 
-messagedialog decoration,
 dialog decoration,
+messagedialog decoration,
 GtkDialog.csd,
 GtkMessageDialog.csd {
     border-radius: 3px;
 }
 
-messagedialog,
 dialog,
+messagedialog,
 GtkDialog.background {
     border-radius: 0 0 4px 4px;
 }
