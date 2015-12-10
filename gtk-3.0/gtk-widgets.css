@@ -142,6 +142,7 @@ spinner:active:insensitive,
     opacity: 0.4;
 }
 
+rubberband,
 .view.rubberband,
 .rubberband {
     background-color: alpha (@colorAccent, 0.35);
