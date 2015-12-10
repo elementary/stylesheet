@@ -2950,6 +2950,14 @@ GtkListBoxRow:first-child {
 }
 */
 
+/***********
+ * FlowBox *
+ ***********/
+
+flowboxchild {
+    border-radius: 3px;
+}
+
 /*********************
  * App Notifications *
  *********************/
