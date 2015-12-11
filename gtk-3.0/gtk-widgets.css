@@ -98,7 +98,7 @@ tooltip,
 tooltip.background,
 .tooltip,
 .overlay-bar {
-    background-color: alpha (#000, 0.7);
+    background-color: alpha (#111, 0.8);
     border-radius: 3px;
     border-width: 0;
     padding: 3px 6px;
@@ -111,6 +111,7 @@ tooltip label,
 .tooltip GtkLabel,
 .overlay-bar GtkLabel {
     color: white;
+    font-family: 'Open Sans';
     text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
