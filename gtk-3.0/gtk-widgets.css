@@ -258,10 +258,10 @@ spinbutton:selected:focus,
     background-color: @colorAccent;
 }
 
-headerbar entry,
-headerbar spinbutton,
 toolbar entry,
 toolbar spinbutton,
+.titlebar entry,
+.titlebar spinbutton,
 GtkHandleBox .entry,
 .titlebar .entry,
 .toolbar .entry {
@@ -279,10 +279,10 @@ GtkHandleBox .entry,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-headerbar entry:backdrop,
-headerbar spinbutton:backdrop,
 toolbar entry:backdrop,
 toolbar spinbutton:backdrop,
+.titlebar entry:backdrop,
+.titlebar spinbutton:backdrop,
 GtkHandleBox .entry:backdrop,
 .titlebar .entry:backdrop,
 .toolbar .entry:backdrop {
@@ -339,10 +339,10 @@ spinbutton:insensitive,
     color: @insensitive_color;
 }
 
-headerbar entry:insensitive,
-headerbar spinbutton:insensitive,
 toolbar entry:insensitive,
 toolbar spinbutton:insensitive,
+.titlebar entry:insensitive,
+.titlebar spinbutton:insensitive,
 .titlebar .entry:insensitive,
 .toolbar .entry:insensitive {
     background: transparent;
@@ -350,10 +350,10 @@ toolbar spinbutton:insensitive,
     box-shadow: inset 0  0 0 1px alpha (@inset_dark_color, 0.25), 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-headerbar entry:insensitive:backdrop,
-headerbar spinbutton:insensitive:backdrop,
 toolbar entry:insensitive:backdrop,
 toolbar spinbutton:insensitive:backdrop,
+.titlebar entry:insensitive:backdrop,
+.titlebar spinbutton:insensitive:backdrop,
 .titlebar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
     background-image: none;
@@ -821,7 +821,7 @@ scale trough,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
-headerbar scale trough,
+.titlebar scale trough,
 .titlebar .scale.trough {
     border-radius: 0 12px 12px 0;
     border-width: 1px 1px 1px 0;
@@ -1000,7 +1000,7 @@ button label,
     padding: 0 6px;
 }
 
-titlebar button,
+.titlebar button,
 .titlebar .button {
     color: shade (@textColorPrimary, 0.8);
     border-color: alpha (#000, 0.27);
@@ -1032,9 +1032,9 @@ button:backdrop,
     border-color: alpha (#000, 0.2);
 }
 
-headerbar button,
 toolbar button,
-.header-bar .button,
+.titlebar button,
+.titlebar .button,
 .toolbar .button {
     padding: 3px;
 }
@@ -1806,21 +1806,28 @@ notebook viewport,
 
 /*Label Trickery*/
 
+notebook tab label,
 .notebook tab GtkLabel {
     color: alpha(@text_color, 0.75);
     padding: 3px 6px;
 }
 
+.dynamic-notebook notebook tab label,
 .dynamic-notebook .notebook tab GtkLabel {
     padding: 0 6px;
 }
 
+notebook tab:active label,
+notebook .active-page,
+notebook tab .active-page label,
 .notebook tab:active GtkLabel,
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
     color: @text_color;
 }
 
+notebook tab:backdrop label,
+notebook tab label:backdrop,
 .notebook tab:backdrop GtkLabel,
 .notebook tab GtkLabel:backdrop {
     color: alpha(@text_color, 0.75);
@@ -1835,7 +1842,7 @@ GtkComboBox {
     -GtkComboBox-shadow-type: none;
 }
 
-.header-bar GtkComboBox .button {
+.titlebar GtkComboBox .button {
     padding: 2px;
 }
 
@@ -2303,8 +2310,8 @@ toolbar.bottom-toolbar button,
  * Header Bars *
  **************/
 
-headerbar button.image-button,
-.header-bar .button.image-button {
+.titlebar button.image-button,
+.titlebar .button.image-button {
     padding: 3px;
     border: 1px solid transparent;
     background-image: none;
@@ -3717,7 +3724,7 @@ GcrCertificateWidget .frame {
     box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.20),
                 inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.60);
 
-    padding: 0 3px;
+    padding: 8px 6px 6px;
 }
 
 .titlebar:backdrop {
@@ -3733,19 +3740,12 @@ GcrCertificateWidget .frame {
     -gtk-image-effect: dim;
 }
 
-headerbar.titlebar,
-.header-bar {
-    padding: 8px 6px 6px;
-}
-
-headerbar.compact,
 .titlebar.compact {
     padding: 0 3px;
 }
 
 .maximized .titlebar,
-.tiled .titlebar,
-.maximized .header-bar {
+.tiled .titlebar {
     padding: 4px 6px 3px;
 }
 
