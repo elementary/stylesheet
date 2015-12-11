@@ -869,10 +869,13 @@ EggFindBar.toolbar,
 * Suggested Action Button *
 **************************/
 
+button.suggested-action,
 .suggested-action.button {
     border: 1px solid  shade (@selected_bg_color,  0.35);
 }
 
+button.suggested-action:active,
+button.suggested-action:active:hover,
 .suggested-action.button:active,
 .suggested-action.button:active:hover {
     border: 1px solid  shade (@selected_bg_color,  0.25);
