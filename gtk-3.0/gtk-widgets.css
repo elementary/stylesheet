@@ -411,6 +411,7 @@ view image:selected:focus,
  ****************/
 
 progressbar progress,
+treeview .progressbar,
 .progressbar,
 .progressbar row,
 .progressbar row:hover {
@@ -435,6 +436,7 @@ progressbar.vertical progress,
 }
 
 progressbar progress:backdrop,
+treeview .progressbar:backdrop,
 .progressbar:backdrop,
 .progressbar row:backdrop,
 .progressbar row:backdrop:hover,
@@ -450,6 +452,7 @@ progressbar progress:backdrop,
 }
 
 progressbar trough,
+treeview .trough,
 GtkProgressBar.trough,
 .trough row,
 .trough row:hover {
@@ -477,6 +480,7 @@ GtkProgressBar.trough.vertical {
 }
 
 progressbar trough:backdrop,
+treeview .trough:backdrop,
 GtkProgressBar.trough:backdrop,
 .trough row:backdrop,
 .trough row:backdrop:hover,
@@ -487,8 +491,10 @@ GtkProgressBar.trough:backdrop,
     border-color: shade (@bg_color, 0.75);
 }
 
-.progressbar row:selected:focused,
-.trough row:selected:focused  {
+treeview .progressbar:selected:focus,
+treeview .trough:selected:focus,
+.progressbar row:selected:focus,
+.trough row:selected:focus  {
     border: 1px solid shade (@colorAccent, 0.80);
 }
 
