@@ -2619,11 +2619,11 @@ button.suggested-action:active:hover,
 .suggested-action.button:active,
 .suggested-action.button:active:hover {
     background-image: linear-gradient(to bottom,
-                                  shade (@selected_bg_color, 1.2),
-                                  @selected_bg_color
+                                  shade (@selected_bg_color, 1.05),
+                                  shade (@selected_bg_color, 0.95)
                                   );
 
-    border-color: shade (@selected_bg_color, 0.9);
+    border-color: shade (@selected_bg_color, 0.8);
 }
 
 /****************************
