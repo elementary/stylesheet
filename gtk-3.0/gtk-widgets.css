@@ -1668,6 +1668,10 @@ notebook header:backdrop,
     border-color: shade (@titlebar_color, 0.70);
 }
 
+.header separator.vertical {
+    border-right-color: alpha (#fff, 0.2);
+}
+
 notebook image,
 .notebook GtkImage {
     color: shade (@title_color, 0.75);
