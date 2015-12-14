@@ -3073,10 +3073,13 @@ list row:selected:backdrop,
 }
 
 list row:selected:focus,
-list row:selected:focus image,
-.list-row:selected:focus,
-.list-row:selected:focus GtkImage {
+.list-row:selected:focus {
     background-color: @colorAccent;
+    color: @selected_fg_color;
+}
+
+list row:selected:focus image,
+.list-row:selected:focus GtkImage  {
     color: @selected_fg_color;
 }
 
