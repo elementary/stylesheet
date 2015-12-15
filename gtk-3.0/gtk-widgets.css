@@ -1857,18 +1857,17 @@ GtkComboBox.combobox-entry .button:last-child {
 
 scrollbar,
 .scrollbar {
-    background-image: none;
+    transition: all 600ms ease-out;
+    -GtkRange-slider-width: 5;
+    -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 1;
+    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-slider-width: 5;
     -GtkScrollbar-min-slider-length: 30;
-
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-under-steppers: 1;
-    transition: all 600ms ease-out;
 }
 
+scrollbar button,
 .scrollbar.button,
 .scrollbar.button:active,
 .scrollbar.button:active:hover,
@@ -1881,30 +1880,16 @@ scrollbar,
 }
 
 scrollbar.overlay-indicator slider,
-.scrollbar.slider,
-.scrollbar.button {
+.scrollbar.slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
     background-color: alpha (@text_color, 0.6);
     border-radius: 10px;
-    -GtkRange-slider-width: 5;
 }
 
-.scrollbar.slider:insensitive {
-    -GtkRange-slider-width: 0;
-}
-
-.scrollbars-junction,
-.scrollbar.trough,
-.scrollbar.trough:backdrop {
-    background-image: none;
+scrollbar trough,
+.scrollbar.trough {
     background-color: transparent;
-    border: none;
-    border-radius: 6px;
     margin: 2px;
-}
-
-.scrollbar.trough:insensitive {
-    -GtkRange-trough-border: 0;
 }
 
 /********
@@ -1960,9 +1945,9 @@ popover .menuitem,
 
 popover .menuitem,
 popover .menuitem:insensitive  {
-	background-image: none;
-	border-color: transparent;
-	box-shadow: none;
+    background-image: none;
+    border-color: transparent;
+    box-shadow: none;
 }
 
 menu menuitem arrow,
