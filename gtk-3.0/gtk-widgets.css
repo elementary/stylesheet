@@ -1132,7 +1132,6 @@ button:focus:checked,
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
-    margin: 1px;
 }
 
 button.flat:active,
