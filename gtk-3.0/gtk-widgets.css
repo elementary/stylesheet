@@ -425,6 +425,9 @@ treeview .progressbar,
     box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
                 inset 0 1px 0 0 alpha (#fff, 0.35),
                 inset 0 -1px 0 0 alpha (#fff, 0.15);
+
+    margin-left: -1px;
+    margin-right: -1px
 }
 
 progressbar.vertical progress,
@@ -433,6 +436,7 @@ progressbar.vertical progress,
                                   shade (@colorAccent, 1.25),
                                   shade (@colorAccent, 1.18)
                                   );
+    margin: -1px 0 -1px 0;
 }
 
 progressbar progress:backdrop,
@@ -471,7 +475,7 @@ GtkProgressBar.trough,
                 0 1px 0 0 alpha (@bg_highlight_color, 0.50);
 }
 
-progressbar trough.vertical,
+progressbar.vertical trough,
 GtkProgressBar.trough.vertical {
     background-image: linear-gradient(to right,
                                   @bg_color,
@@ -2731,6 +2735,8 @@ GtkAssistant .sidebar {
 switch,
 GtkSwitch {
     font: 1;
+    min-height: 24px;
+    min-width: 24px;
     -GtkSwitch-slider-width: 24;
     -GtkSwitch-slider-height: 24;
     transition: all 200ms ease-in;
@@ -2786,13 +2792,14 @@ GtkSwitch.slider {
                                   );
 
     border: 1px solid alpha (#000, 0.2);
-    border-radius: 12px;
+    border-radius: 50%;
 
     box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
                 inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
                 inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
                 0 1px 1px alpha (#000, 0.15),
                 0 1px 2px alpha (#000, 0.16);
+    margin: -1px;
 }
 
 switch:focus slider,
