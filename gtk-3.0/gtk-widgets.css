@@ -2906,7 +2906,8 @@ GtkListBoxRow:first-child {
  * FlowBox *
  ***********/
 
-flowboxchild {
+flowboxchild,
+GtkFlowBox .grid-child {
     border-radius: 3px;
 }
 
