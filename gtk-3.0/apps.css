@@ -321,10 +321,9 @@ SlingshotWidgetsSearchView GtkButton.flat:focus {
 
 SwitchboardCategoryView GtkIconView.cell:selected,
 SwitchboardCategoryView GtkIconView.cell:selected:focus {
-    border: 2px solid @colorAccent;
+    background-color: alpha (#000, 0.20);
     border-radius: 6px;
     color: @text_color;
-    background-color: transparent;
 } 
 
 .hotcorner-display {
