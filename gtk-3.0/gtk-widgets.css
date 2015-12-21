@@ -1113,6 +1113,11 @@ GtkDialog .button.flat.image-button:focus:active {
     box-shadow: none;
 }
 
+dialog .inline-toolbar button,
+GtkDialog .inline-toolbar .button.flat.image-button {
+	background-color: transparent;
+}
+
 dialog button.flat.image-button:hover,
 GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
