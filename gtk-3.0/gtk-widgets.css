@@ -34,7 +34,7 @@
     -GtkButtonBox-child-min-height: 20;
     -GtkButtonBox-child-internal-pad-y: 1;
 
-    -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color;
+    /* -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; FIXME: Uncomment for 3.19 */
 }
 
 /***************
@@ -2740,8 +2740,8 @@ GtkAssistant .sidebar {
 switch,
 GtkSwitch {
     font: 1;
-    min-height: 24px;
-    min-width: 24px;
+    /*min-height: 24px;
+    min-width: 24px; FIXME: Uncomment for 3.19 */
     -GtkSwitch-slider-width: 24;
     -GtkSwitch-slider-height: 24;
     transition: all 200ms ease-in;
