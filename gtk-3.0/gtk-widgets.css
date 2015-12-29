@@ -3818,11 +3818,9 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 decoration,
 .window-frame {
     border-radius: 4px 4px 0 0;
-
     box-shadow: 0 0 0 1px alpha (#000, 0.3),
                 0 14px 28px rgba(0,0,0,0.35),
                 0 10px 10px rgba(0,0,0,0.22);
-
     margin: 12px;
 }
 
@@ -3865,16 +3863,6 @@ decoration:backdrop,
                 0 14px 28px transparent;
 }
 
-dialog decoration,
-dialog decoration:backdrop,
-.window-frame.dialog,
-.window-frame.dialog:backdrop {
-    border-radius: 4px;
-    box-shadow: 0 0 0 1px alpha (#000, 0.20),
-                0 10px 20px alpha (#000, 0.19),
-                0 6px 6px alpha (#000, 0.23);
-}
-
 .tiled decoration,
 .tiled .window-frame {
     border-radius: 0;
@@ -3883,21 +3871,29 @@ dialog decoration:backdrop,
                 0 1px 2px alpha (#000, 0.24);
 }
 
-/***************
- * Dialog      *
- ***************/
+/**********
+ * Dialog *
+ **********/
 
 dialog decoration,
 messagedialog decoration,
-GtkDialog.csd,
-GtkMessageDialog.csd {
-    border-radius: 3px;
+GtkDialog .window-frame {
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px alpha (#000, 0.20),
+                0 8px 10px 1px alpha (#000, 0.14),
+                0 3px 14px 2px alpha (#000, 0.12),
+                0 5px 5px -3px alpha (#000, 0.4),
+                0 14px 28px transparent;
 }
 
 dialog,
 messagedialog,
-GtkDialog.background {
+GtkDialog,
+GtkMessageDialog {
     border-radius: 0 0 4px 4px;
+    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 messagedialog,
@@ -3927,8 +3923,8 @@ GtkMessageDialog .titlebar {
                 inset 0 1px 0 0 @bg_highlight_color;
 }
 
-messagedialog .titlebar:backdrop,
 dialog .titlebar:backdrop,
+messagedialog .titlebar:backdrop,
 GtkDialog .titlebar:backdrop,
 GtkMessageDialog .titlebar:backdrop {
     border: none;
@@ -3947,15 +3943,6 @@ GtkDialog .titlebar .title {
     font-size: 0;
     text-shadow: none;
     icon-shadow: none;
-}
-
-messagedialog,
-dialog,
-GtkDialog,
-GtkMessageDialog {
-    box-shadow: inset 1px 0 0 0 alpha (@bg_highlight_color, 0.20),
-                inset -1px 0 0 0 alpha (@bg_highlight_color, 0.20),
-                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 dialog toolbar,
