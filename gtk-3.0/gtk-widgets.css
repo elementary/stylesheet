@@ -1758,6 +1758,13 @@ notebook tab > image,
     color: shade (@titlebar_color, 0.35);
 }
 
+/*Add extra padding for pinned Midori tabs*/
+.notebook tab GtkHBox > GtkImage:only-child {
+    padding: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 notebook viewport,
 .notebook GtkViewport {
     background-color: @base_color;
