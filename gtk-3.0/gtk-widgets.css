@@ -527,6 +527,10 @@ entry progress {
     border-bottom-left-radius: 2.5px;
 }
 
+.entry.progressbar {
+    margin: 0;
+}
+
 /************
 * Level Bar *
 ************/
