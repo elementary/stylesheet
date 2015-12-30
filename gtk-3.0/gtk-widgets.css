@@ -98,12 +98,19 @@ tooltip,
 tooltip.background,
 .tooltip,
 .overlay-bar {
-    background-color: alpha (#111, 0.8);
+    background-color: alpha (#333, 0.8);
     border-radius: 3px;
     border-width: 0;
+    box-shadow: 0 1px 3px alpha (#000, 0.12),
+                0 1px 2px alpha (#000, 0.24);
     padding: 3px 6px;
-    margin: 3px;
+    margin: 6px;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
+}
+
+.overlay-bar {
+    background-color: alpha (#222, 0.9);
+    margin: 3px;
 }
 
 tooltip label,
