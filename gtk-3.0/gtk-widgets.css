@@ -1073,9 +1073,9 @@ popover actionbar button:focus,
 
     border-color: @colorAccent;
 
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
+    box-shadow: inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
                 0 0 0 1px alpha (@colorAccent, 0.25);
 
     transition: all 100ms ease-out;
@@ -1126,7 +1126,7 @@ GtkDialog .button.flat.image-button:focus:active {
 
 dialog .inline-toolbar button,
 GtkDialog .inline-toolbar .button.flat.image-button {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 dialog button.flat.image-button:hover,
@@ -1148,7 +1148,7 @@ button:focus:checked,
 .button:focus:checked {
     background-color: alpha (#000, 0.05);
     background-image: none;
-    border-color: alpha (#000, 0.25);
+    border-color: alpha (#000, 0.27);
 
     box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
                 0 1px 0 0 alpha (@bg_highlight_color, 0.30);
