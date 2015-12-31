@@ -2404,7 +2404,8 @@ GtkDialog .action-bar {
 ******************/
 
 toolbar.inline-toolbar,
-.inline-toolbar.toolbar {
+.inline-toolbar .action-bar,
+.toolbar.inline-toolbar {
     border-color: shade (@bg_color, 0.75);
     border-radius: 0;
     border-width: 0 1px 1px 1px;
@@ -2421,6 +2422,7 @@ toolbar.inline-toolbar,
 }
 
 paned toolbar.inline-toolbar,
+.inline-toolbar .action-bar,
 GtkPaned .inline-toolbar.toolbar,
 .sidebar.inline-toolbar.toolbar,
 .source-list.inline-toolbar.toolbar {
