@@ -199,22 +199,13 @@ GtkPaned.vertical {
 }
 
 paned separator,
-paned separator:prelight,
-paned separator:selected,
-.pane-separator,
-.pane-separator:prelight,
-.pane-separator:selected {
-    background-color: shade (@base_color, 0.55);
+.pane-separator {
+    background-color: shade (@base_color, 0.65);
     background-image: linear-gradient(to right,
-                                  shade (@base_color, 0.55),
-                                  shade (@base_color, 0.55)
+                                  shade (@base_color, 0.65),
+                                  shade (@base_color, 0.65)
                                   );
     -gtk-icon-source: none;
-}
-
-GraniteWidgetsThinPaned {
-    background-color: red;
-    margin: 0;
 }
 
 toolbar paned separator,
@@ -2435,7 +2426,7 @@ toolbar.inline-toolbar button,
 
     color: shade (@text_color, 1.25);
 
-    padding: 3;
+    padding: 3px;
 
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
