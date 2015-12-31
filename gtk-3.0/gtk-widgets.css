@@ -2433,7 +2433,7 @@ toolbar.inline-toolbar button,
 
     color: shade (@text_color, 1.25);
 
-    padding: 6;
+    padding: 3;
 
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
