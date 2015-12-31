@@ -2405,57 +2405,46 @@ GtkDialog .action-bar {
 
 toolbar.inline-toolbar,
 .inline-toolbar.toolbar {
-
+    border-color: shade (@bg_color, 0.75);
     border-radius: 0;
     border-width: 0 1px 1px 1px;
-    padding: 0;
 
-    border-color: shade (@titlebar_color, 0.70);
+    box-shadow: none;
 
+    background-color: @bg_color;
     background-image: linear-gradient(to bottom,
-                                  shade (@base_color, 0.92),
-                                  shade (@base_color, 0.98)
+                                  alpha (#000, 0.12),
+                                  alpha (#000, 0.00) 2px
                                   );
 
-    box-shadow: inset 0 1px 0 0 alpha (#000, 0.10),
-                inset 0 -1px 0 0 @inset_dark_color;
+    padding: 0;
 }
 
 paned toolbar.inline-toolbar,
-GtkPaned .inline-toolbar.toolbar {
-    border-width: 1px 0 0 0;
-}
-
+GtkPaned .inline-toolbar.toolbar,
 .sidebar.inline-toolbar.toolbar,
 .source-list.inline-toolbar.toolbar {
     border-width: 1px 0 0 0;
-    /*FIXME: This should probably use alpha just in case */
-    background-image: linear-gradient(to bottom,
-                                  shade (@titlebar_color, 0.92),
-                                  shade (@titlebar_color, 0.98)
-                                  );
 }
 
 toolbar.inline-toolbar button,
 .inline-toolbar.toolbar .button {
     border-radius: 0;
-    border-width: 0;
-    background-image: none;
-    background-color: transparent;
-    box-shadow: none;
+
+    color: shade (@text_color, 1.25);
+
+    padding: 6;
 
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-
-    color: shade (@text_color, 1.25);
 }
 
 toolbar.inline-toolbar button:active,
 toolbar.inline-toolbar button:active:hover,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:active:hover {
-    background-color: alpha (#000, 0.05);
-    background-image: none;
+    border-style: none;
+    background-color: alpha (#000, 0.10);
 }
 
 toolbar.inline-toolbar button image:insensitive,
