@@ -260,7 +260,6 @@ toolbar entry,
 toolbar spinbutton,
 .titlebar entry,
 .titlebar spinbutton,
-GtkHandleBox .entry,
 .titlebar .entry,
 .toolbar .entry {
     background-image: linear-gradient(to bottom,
@@ -281,7 +280,6 @@ toolbar entry:backdrop,
 toolbar spinbutton:backdrop,
 .titlebar entry:backdrop,
 .titlebar spinbutton:backdrop,
-GtkHandleBox .entry:backdrop,
 .titlebar .entry:backdrop,
 .toolbar .entry:backdrop {
     background-image: linear-gradient(to bottom,
@@ -2148,7 +2146,6 @@ radio:checked:focus,
 ***********/
 
 toolbar,
-GtkHandleBox,
 .toolbar {
     -GtkWidget-window-dragging: true;
 
@@ -2169,7 +2166,6 @@ GtkHandleBox,
 }
 
 toolbar:backdrop,
-GtkHandleBox:backdrop,
 .toolbar:backdrop {
     background-image: linear-gradient(to bottom,
                               @titlebar_color,
