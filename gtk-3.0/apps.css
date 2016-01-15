@@ -31,20 +31,6 @@
                 0 1px 2px alpha (#000, 0.24);
 }
 
-/**********
- * Birdie *
- *********/
-
-BirdieWidgetsTweetList * {
-    background-image: none;
-    background-color: transparent;
-}
-
-.tweet {
-    padding: 0;
-    box-shadow: none;
-}
-
 /*************
 * Calculator *
 *************/
@@ -301,18 +287,6 @@ NoiseLibraryWindow.window-frame {
     linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
     background-size:60px 60px;
     background-position:0 0, 30px 30px
-}
-
-/*************
- * Slingshot *
- ************/
-
-SlingshotWidgetsSearchView button.flat:hover,
-SlingshotWidgetsSearchView button.flat:focus,
-SlingshotWidgetsSearchView GtkButton.flat:hover,
-SlingshotWidgetsSearchView GtkButton.flat:focus {
-    background-color: alpha (#000, 0.20);
-    text-shadow: none;
 }
 
 /***************
