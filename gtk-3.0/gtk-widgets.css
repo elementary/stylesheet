@@ -810,6 +810,7 @@ scale slider:backdrop,
 
 scale slider:insensitive,
 .scale.slider:insensitive {
+    background-color: transparent;
     background-image: none;
     border: none;
     box-shadow: none;
@@ -1895,7 +1896,7 @@ scrollbar button,
 }
 
 scrollbar.overlay-indicator slider,
-.scrollbar.slider {
+.slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
     background-color: alpha (@text_color, 0.6);
     border-radius: 10px;
@@ -1905,6 +1906,10 @@ scrollbar trough,
 .scrollbar.trough {
     background-color: transparent;
     margin: 2px;
+}
+
+.trough {
+    background-color: @base_color;
 }
 
 /********
