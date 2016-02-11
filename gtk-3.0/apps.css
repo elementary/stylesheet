@@ -291,8 +291,8 @@ NoiseLibraryWindow.window-frame {
                                 transparent 75%,
                                 alpha (#000, 0.10) 75%,
                                 alpha (#000, 0.10));
-    background-size: 32px 32px;
-    background-position: 0 0, 16px 16px
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px
 }
 
 .checkboard-layout .item {
