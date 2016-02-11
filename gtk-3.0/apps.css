@@ -279,14 +279,24 @@ NoiseLibraryWindow.window-frame {
 
 .checkerboard-layout {
     background-color: #383e41;
+    background-image: linear-gradient(45deg,
+                                alpha (#000, 0.10) 25%,
+                                transparent 25%,
+                                transparent 75%,
+                                alpha (#000, 0.10) 75%,
+                                alpha (#000, 0.10)),
+                      linear-gradient(45deg,
+                                alpha (#000, 0.10) 25%,
+                                transparent 25%,
+                                transparent 75%,
+                                alpha (#000, 0.10) 75%,
+                                alpha (#000, 0.10));
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px
 }
 
 .checkboard-layout .item {
     background-color: #eee;
-    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
-    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-    background-size:60px 60px;
-    background-position:0 0, 30px 30px
 }
 
 /***************
