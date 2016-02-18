@@ -1988,7 +1988,6 @@ menu menuitem image,
 .popover .menuitem GtkLabel,
 .popover .menuitem GtkImage {
     padding: 0 3px;
-    -gtk-icon-style: symbolic;
 }
 
 popover .menuitem label,
