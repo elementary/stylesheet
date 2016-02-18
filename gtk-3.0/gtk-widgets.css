@@ -2469,6 +2469,7 @@ toolbar.inline-toolbar button:insensitive,
  ***************/
 
 searchbar,
+.location-bar,
 .search-bar {
     border-width: 0 0 1px;
     border-style: solid;
@@ -2490,6 +2491,7 @@ searchbar,
 }
 
 searchbar:backdrop,
+.location-bar:backdrop,
 .search-bar:backdrop {
     background-image: linear-gradient(to bottom,
                                   shade (@titlebar_color, 0.98),
@@ -2502,6 +2504,7 @@ searchbar:backdrop,
     -gtk-image-effect: dim;
 }
 
+GtkDialog .location-bar,
 GtkDialog .search-bar,
 GtkDialog .search-bar:backdrop {
     background-image: none;
