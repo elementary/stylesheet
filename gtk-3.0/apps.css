@@ -251,6 +251,10 @@ NoiseLibraryWindow.window-frame {
     background-color: #000;
 }
 
+.panel.translucent {
+    background-color: alpha(#000, 0.5);
+}
+
 .composited-indicator > revealer label,
 .composited-indicator > revealer image,
 .composited-indicator > GtkRevealer {
