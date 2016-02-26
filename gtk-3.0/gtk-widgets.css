@@ -3403,6 +3403,16 @@ GtkInfoBar {
                 inset 0 -1px 0 0 alpha (#fff, 0.06);
 }
 
+infobar.frame,
+GtkInfoBar.frame {
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.45),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 1px alpha (#000, 0.03),
+                0 1px 2px alpha (#000, 0.1);
+}
+
 infobar label,
 GtkInfoBar GtkLabel {
     padding: 3px;
@@ -3453,6 +3463,15 @@ GtkInfoBar.warning {
                 inset 0 -1px 0 0 alpha (#fff, 0.25);
 
     border-color: shade (@warning_color, 0.8);
+}
+
+infobar.warning.frame,
+GtkInfoBar.warning.frame {
+    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
+                inset 0 1px 0 0 alpha (#fff, 0.55),
+                inset 0 -1px 0 0 alpha (#fff, 0.15),
+                0 1px 1px alpha (#000, 0.03),
+                0 1px 2px alpha (#000, 0.1);
 }
 
 infobar.warning label,
