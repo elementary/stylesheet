@@ -31,18 +31,6 @@
                 0 1px 2px alpha (#000, 0.24);
 }
 
-/*************
-* Calculator *
-*************/
-
-PantheonCalculatorMainWindow {
-    border-radius: 0 0 4px 4px;
-}
-
-PantheonCalculatorMainWindow.window-frame {
-    border-radius: 4px;
-}
-
 /********
 * Cards *
 ********/
@@ -64,8 +52,6 @@ PantheonCalculatorMainWindow.window-frame {
     box-shadow: 0 0 0 1px alpha (#000, 0.05),
                 0 1px 2px alpha (#000, 0.22);
 }
-
-.card
 
 /********
 * Files *
@@ -235,16 +221,18 @@ PantheonGreeter .button.text-button.suggested-action:active {
                 0 1px 0 0 alpha (#fff, 0.15);
 }
 
-/********
-* Noise *
-********/
+/*************
+* Round Apps *
+*************/
 
 NoiseLibraryWindow,
-NoiseLibraryWindow .action-bar  {
+NoiseLibraryWindow .action-bar,
+PantheonCalculatorMainWindow {
     border-radius: 0 0 4px 4px;
 }
 
-NoiseLibraryWindow.window-frame {
+NoiseLibraryWindow.window-frame,
+PantheonCalculatorMainWindow.window-frame {
     border-radius: 3px;
 }
 
