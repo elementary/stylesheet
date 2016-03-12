@@ -178,13 +178,28 @@ separator,
 }
 
 separator.vertical,
-.vertical.separator {
-    color: @menu_separator;
+.vertical.separator,
+.titlebar separator:first-child,
+.titlebar separator:last-child,
+.titlebar .separator:first-child,
+.titlebar .separator:last-child {
     padding: 0 4px;
     -GtkWidget-separator-width: 2px;
     -GtkWidget-wide-separators: true;
+    border-width: 1px;
+}
+
+separator.vertical,
+.vertical.separator {
+    color: @menu_separator;
     border-left: 1px solid @menu_separator;
     border-right: 1px solid @menu_separator_shadow;
+}
+
+.titlebar .separator {
+    -GtkWidget-separator-width: 18px;
+    padding: 0 18px;
+    border-width: 18px;
 }
 
 paned,
@@ -363,6 +378,15 @@ entry:insensitive:backdrop image.left,
 .entry:insensitive:backdrop.image.left {
     padding-right: 6px;
     color: alpha (@text_color, 0.4);
+}
+
+entry.flat,
+.entry.flat {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    background-color: @base_color;
+    background-image: none;
+    box-shadow: none;
 }
 
  /*******************
