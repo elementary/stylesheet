@@ -1111,7 +1111,7 @@ button.flat:focus,
 button.flat:focus:hover,
 .button.flat:focus,
 .button.flat:focus:hover {
-    background-color: alpha (#000, 0.20);
+    background-color: alpha (@text_color, 0.15);
 }
 
 /* FIXME: style for checked image buttons
