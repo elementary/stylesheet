@@ -971,4 +971,14 @@ decoration:backdrop,
     icon-shadow: 0 1px alpha (#fff, 0.15);
 }
 
+dialog decoration,
+messagedialog decoration,
+GtkDialog .window-frame {
+    box-shadow: 0 0 0 1px alpha (#000, 0.75),
+                0 8px 10px 1px alpha (#000, 0.14),
+                0 3px 14px 2px alpha (#000, 0.12),
+                0 5px 5px -3px alpha (#000, 0.4),
+                0 14px 28px transparent;
+}
+
 @import url("apps.css");
