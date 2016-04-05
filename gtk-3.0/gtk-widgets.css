@@ -118,7 +118,6 @@ tooltip label,
 .tooltip GtkLabel,
 .overlay-bar GtkLabel {
     color: white;
-    font-family: 'Open Sans';
     text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
 
@@ -3600,7 +3599,7 @@ GraniteWidgetsWelcome {
 
 GraniteWidgetsWelcome GtkLabel {
     color: @placeholder_text_color;
-    font: open sans 11;
+    font-size: 11;
     text-shadow: none;
 }
 
@@ -4005,13 +4004,23 @@ GtkDialog .toolbar {
 * Text Styles *
 **************/
 
-.h1 { font: open sans 24px; }
-.h2 { font: open sans light 18px; }
-.h3 { font: open sans 11px; }
+.h1 {
+    font-size: 24px;
+}
+
+.h2 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.h3 {
+    font-size: 11px;
+}
+
 .h4,
 .category-label {
     color: mix (@bg_color, @text_color, 0.7);
-    font-weight: 600;
+    font-weight: bold;
     text-shadow: 0 1px @text_shadow_color;
 }
 
