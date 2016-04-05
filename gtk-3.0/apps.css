@@ -256,7 +256,6 @@ PantheonCalculatorMainWindow.window-frame {
 .composited-indicator > revealer label,
 .composited-indicator > revealer image,
 .composited-indicator > GtkRevealer {
-    font-family: 'Open Sans';
     color: #fff;
     font-weight: bold;
     text-shadow: 0 0 2px alpha (#000, 0.3),
