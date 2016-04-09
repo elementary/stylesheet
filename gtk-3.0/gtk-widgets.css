@@ -1907,6 +1907,12 @@ scrollbar,
     -GtkScrollbar-min-slider-length: 30;
 }
 
+scrollbar:hover,
+.scrollbar:hover {
+    transition: all 200ms ease-in-out;
+    -GtkRange-slider-width: 10;
+}
+
 scrollbar button,
 .scrollbar.button,
 .scrollbar.button:active,
@@ -1926,10 +1932,21 @@ scrollbar.overlay-indicator slider,
     border-radius: 10px;
 }
 
+scrollbar.overlay-indicator slider:hover,
+.slider:hover {
+    border-radius: 20px;
+}
+
 scrollbar trough,
 .scrollbar.trough {
     background-color: transparent;
     margin: 2px;
+}
+
+scrollbar:hover trough,
+.scrollbar:hover.trough {
+    background-color: alpha (#000, 0.10);
+    border-radius: 20px;
 }
 
 .trough {
