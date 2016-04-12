@@ -1120,16 +1120,16 @@ button.flat:focus:hover,
                                  0 1px 0 alpha (#fff, 0.3);
 } */
 
-dialog button.flat.image-button,
-dialog button.flat.image-button:backdrop,
-dialog button.flat.image-button:insensitive,
-dialog button.flat.image-button:hover,
-dialog button.flat.image-button:focus:active,
-GtkDialog .button.flat.image-button,
-GtkDialog .button.flat.image-button:backdrop,
-GtkDialog .button.flat.image-button:insensitive,
-GtkDialog .button.flat.image-button:hover,
-GtkDialog .button.flat.image-button:focus:active {
+button.circular-button.flat.image-button,
+button.circular-button.flat.image-button:backdrop,
+button.circular-button.flat.image-button:insensitive,
+button.circular-button.flat.image-button:hover,
+button.circular-button.flat.image-button:focus:active,
+.button.circular-button.flat.image-button,
+.button.circular-button.flat.image-button:backdrop,
+.button.circular-button.flat.image-button:insensitive,
+.button.circular-button.flat.image-button:hover,
+.button.circular-button.flat.image-button:focus:active {
     background-color: alpha (@text_color, 0.5);
     border-radius: 50%;
     padding: 2px;
