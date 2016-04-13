@@ -1337,17 +1337,16 @@ toolbar.secondary-toolbar button.flat:insensitive,
 * Help Button *
 **************/
 
+button.circular,
+.button.circular,
 .circular-button {
     border-radius: 50%;
     padding: 3px;
 }
 
-.help_button {
-    border-radius: 50%;
-    padding: 3px 9px;
-}
-.circular-button GtkLabel,
-.help_button GtkLabel {
+button.circular label,
+.button.circular GtkLabel,
+.circular-button GtkLabel {
     padding: 0;
 }
 
