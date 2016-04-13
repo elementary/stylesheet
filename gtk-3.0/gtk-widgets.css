@@ -1120,16 +1120,16 @@ button.flat:focus:hover,
                                  0 1px 0 alpha (#fff, 0.3);
 } */
 
-button.circular-button.flat.image-button,
-button.circular-button.flat.image-button:backdrop,
-button.circular-button.flat.image-button:insensitive,
-button.circular-button.flat.image-button:hover,
-button.circular-button.flat.image-button:focus:active,
-.button.circular-button.flat.image-button,
-.button.circular-button.flat.image-button:backdrop,
-.button.circular-button.flat.image-button:insensitive,
-.button.circular-button.flat.image-button:hover,
-.button.circular-button.flat.image-button:focus:active {
+button.circular.flat.image-button,
+button.circular.flat.image-button:backdrop,
+button.circular.flat.image-button:insensitive,
+button.circular.flat.image-button:hover,
+button.circular.flat.image-button:focus:active,
+.button.circular.flat.image-button,
+.button.circular.flat.image-button:backdrop,
+.button.circular.flat.image-button:insensitive,
+.button.circular.flat.image-button:hover,
+.button.circular.flat.image-button:focus:active {
     background-color: alpha (@text_color, 0.5);
     border-radius: 50%;
     padding: 2px;
@@ -1347,7 +1347,7 @@ button.circular,
 button.circular label,
 .button.circular GtkLabel,
 .circular-button GtkLabel {
-    padding: 0;
+    padding: 0 3px;
 }
 
 /*****************
