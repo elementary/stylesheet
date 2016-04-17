@@ -981,4 +981,5 @@ GtkDialog .window-frame {
                 0 14px 28px transparent;
 }
 
+@import url("granite-widgets.css");
 @import url("apps.css");
