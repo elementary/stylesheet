@@ -1,35 +1,23 @@
-/* Copyright 2011-2015 elementary LLC.
+/*
+* Copyright (c) 2011-2016 elementary LLC. (http://launchpad.net/egtk)
 *
-* This file is part of the elementary GTK theme.
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or (at your option) any later version.
 *
-* The elementary GTK theme is free software: you can redistribute it
-* and/or modify it under the terms of the GNU General Public License as
-* published by the Free Software Foundation, either version 3 of the
-* License, or (at your option) any later version.
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
 *
-* The elementary GTK theme is distributed in the hope that it will be
-* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-* Public License for more details.
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+* Boston, MA 02111-1307, USA.
 *
-* You should have received a copy of the GNU General Public License along
-* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+* Authored by: Daniel Foré <daniel@elementary.io>
 */
-
-/*********
-* Avatar *
-*********/
-
-.avatar {
-    border: 1px solid alpha (#000, 0.35);
-    border-radius: 50%;
-
-    box-shadow: inset 0 0 0 1px alpha (#fff, 0.05),
-                inset 0 1px 0 0 alpha (#fff, 0.45),
-                inset 0 -1px 0 0 alpha (#fff, 0.15),
-                0 1px 3px alpha (#000, 0.12),
-                0 1px 2px alpha (#000, 0.24);
-}
 
 /********
 * Cards *

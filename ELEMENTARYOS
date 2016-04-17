@@ -1,29 +1,26 @@
 There are a few elementary-specific style elements. They are as follows:
 
-"GraniteWidgetsPopOver" [DEPRECATED]: Granite Popover widget. Accepts proprietary properties:
-    -GraniteWidgetsPopOver-arrow-width
-    -GraniteWidgetsPopOver-arrow-height
-    -GraniteWidgetsPopOver-border-radius
-    -GraniteWidgetsPopOver-border-width
-    -GraniteWidgetsPopOver-shadow-size
+/******************
+* gtk-widgets.css *
+******************/
 
-"GraniteWidgetsThinPaned" [DEPRECATED]: Granite ThinPaned widget handle.
+".content-view" [DEPRECATED]: "light" app areas; overriding a grey background color. Should no longer be necessary in this stylesheet
+
+".overlay-bar": Overlay statusbar as seen in Files.
+
+".secondary-toolbar": Used in Midori's Bookmarks bar.
+
+".source-list": Granite SourceList widget; shares with ".sidebar"
+
+/**********************
+* granite-widgets.css *
+**********************/
 
 "GraniteWidgetsWelcome": Granite Welcome widget as seen in Scratch, Photos, Noise.
-
-"MarlinViewChromeLocationBar": Files Pathbar widget
 
 ".back-button": Shaped back buttons as seen in Switchboard
 
 ".category-label" [DEPRECATED] Please use ".h4"
-
-".composited-indicator": An indicator menubar item in Wingpanel
-
-".content-view" [DEPRECATED]: "light" app areas; overriding a grey background color. Should no longer be necessary in this stylesheet
-
-".dynamic-notebook": Tab bar widget as seen in Scratch, Terminal, Files, etc.
-
-".gala-notification": Notifications in Gala
 
 ".h1": Large primary text as seen in Welcome
 
@@ -33,18 +30,18 @@ There are a few elementary-specific style elements. They are as follows:
 
 ".h4": Typically used for category labels
 
-".help_button": Simple (?) buttons.
+".seek-bar": Used for media playback position controls
+
+".source-list.badge": Granite SourceList widget badges
+
+/***********
+* apps.css *
+***********/
+
+".composited-indicator": An indicator menubar item in Wingpanel
+
+".gala-notification": Notifications in Gala
 
 ".pathbar": Files Pathbar widget
 
 ".panel": Wingpanel
-
-".panel-shadow": Shadow below wingpanel
-
-".overlay-bar": Overlay statusbar as seen in Files.
-
-".secondary-toolbar": Used in Midori's Bookmarks bar.
-
-".seek-bar": Used for media playback position controls
-
-".source-list": Granite SourceList widget
