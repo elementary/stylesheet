@@ -3849,5 +3849,3 @@ label.success,
 .label.success {
     color: shade (@success_color, 0.75);
 }
-@import url("granite-widgets.css");
-@import url("apps.css");
