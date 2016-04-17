@@ -30,6 +30,8 @@ There are a few elementary-specific style elements. They are as follows:
 
 ".h4": Typically used for category labels
 
+".seek-bar": Used for media playback position controls
+
 ".source-list.badge": Granite SourceList widget badges
 
 /***********
@@ -43,5 +45,3 @@ There are a few elementary-specific style elements. They are as follows:
 ".pathbar": Files Pathbar widget
 
 ".panel": Wingpanel
-
-".seek-bar": Used for media playback position controls
