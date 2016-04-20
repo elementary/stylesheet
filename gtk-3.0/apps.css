@@ -267,6 +267,24 @@ PantheonCalculatorMainWindow.window-frame {
                  0 1px 0 alpha (#fff, 0.25);
 }
 
+.keyboard-indicator {
+    background-color: #fff;
+    border-radius: 2px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 2px alpha (#000, 0.3),
+                0 1px 2px alpha (#000, 0.6);
+    text-shadow: none;
+}
+
+.panel.color-light .keyboard-indicator {
+    background-color: alpha (#000, 0.65);
+    color: #fff;
+    box-shadow: 0 0 2px alpha (#fff, 0.3),
+                0 1px 0 alpha (#fff, 0.25);
+    text-shadow: none;
+}
+
 /**********
  * Photos *
  *********/
