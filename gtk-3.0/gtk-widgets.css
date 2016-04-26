@@ -680,7 +680,7 @@ levelbar block.discrete.vertical,
 
 scale,
 .scale {
-    -GtkScale-slider-length: 22;
+    -GtkScale-slider-length: 16;
     -GtkRange-slider-width: 22;
     -GtkRange-trough-border: 0;
 
@@ -700,7 +700,12 @@ scale slider,
                 inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
                 inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
                 0 1px 1px alpha (#000, 0.12);
-    margin: 3px;
+    margin: 3px 0;
+}
+
+scale.vertical slider,
+.scale.vertical.slider {
+    margin: 0 3px;
 }
 
 scale slider:focus,
