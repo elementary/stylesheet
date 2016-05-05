@@ -1082,19 +1082,6 @@ button.flat:active,
     box-shadow: none;
 }
 
-button.link,
-button.link:active,
-button.link:focus:active
-GtkLinkButton.button,
-GtkLinkButton.button:active,
-GtkLinkButton.button:focus:active {
-    padding: 0;
-    box-shadow: none;
-    border: none;
-    background-image: none;
-    background-color: transparent;
-}
-
 button.link label,
 GtkLinkButton GtkLabel {
     color: @link_color;
