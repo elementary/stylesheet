@@ -328,7 +328,7 @@ SwitchboardCategoryView GtkIconView.cell:selected:focus {
     background-color: alpha (#000, 0.20);
     border-radius: 6px;
     color: @text_color;
-} 
+}
 
 .hotcorner-display {
     border-radius: 2px;

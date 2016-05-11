@@ -2794,6 +2794,12 @@ GtkFlowBox .grid-child {
     border-radius: 3px;
 }
 
+flowboxchild:focus,
+GtkFlowBox .grid-child:focus {
+    background-color: alpha (#000, 0.20);
+    color: @text_color;
+} 
+
 /*********************
  * App Notifications *
  *********************/
