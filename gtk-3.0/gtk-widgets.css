@@ -2806,10 +2806,10 @@ GtkFlowBox .grid-child:focus {
 
 .app-notification,
 .app-notification.frame {
-    background-color: alpha (@text_color, 0.8);
+    background-color: alpha (@text_color, 0.85);
     border-radius: 4px;
     border: none;
-    padding: 6px 12px;
+    padding: 6px;
     text-shadow: 0 1px 2px alpha (@text_color, 0.6);
     background-clip: padding-box;
 }
@@ -2836,6 +2836,14 @@ GtkFlowBox .grid-child:focus {
     color: @text_color;
     text-shadow: none;
     icon-shadow: none;
+}
+
+.app-notification button.close-button,
+.app-notification .button.close-button {
+    background-color: @text_color;
+    border-radius: 50%;
+    padding: 4px;
+    color: alpha (@bg_color, 0.9); 
 }
 
 .app-notification button:active,
