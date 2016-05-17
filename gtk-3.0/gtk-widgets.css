@@ -1174,7 +1174,7 @@ toolbar.secondary-toolbar button.flat:insensitive,
 button.circular,
 .button.circular {
     border-radius: 50%;
-    padding: 3px;
+    padding: 4px;
 }
 
 button.circular label,
@@ -2825,7 +2825,6 @@ GtkFlowBox .grid-child:focus {
 .app-notification .button,
 .app-notification .button.flat.image-button {
     background-color: alpha (@bg_color, 0.9);
-    padding: 3px 6px;
     color: @text_color;
     icon-shadow: none;
     box-shadow: none;
@@ -2837,12 +2836,6 @@ GtkFlowBox .grid-child:focus {
     color: @text_color;
     text-shadow: none;
     icon-shadow: none;
-}
-
-.app-notification button.flat.image-button,
-.app-notification .button.flat.image-button {
-    padding: 3px;
-    border-radius: 50%;
 }
 
 .app-notification button:active,
