@@ -1777,8 +1777,12 @@ scrollbar.overlay-indicator slider:hover,
 
 scrollbar trough,
 .scrollbar.trough {
-    background-color: transparent;
     margin: 2px;
+}
+
+scrollbar.overlay-indicator trough,
+.scrollbar.overlay-indicator.trough {
+    background-color: transparent;
 }
 
 scrollbar:hover trough,
