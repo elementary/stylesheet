@@ -2323,6 +2323,11 @@ toolbar.inline-toolbar button:active:hover,
     background-color: alpha (#000, 0.10);
 }
 
+.inline-toolbar button.image-button:focus,
+.inline-toolbar .button.image-button:focus {
+	background-color: alpha (@text_color, 0.15);
+}
+
 toolbar.inline-toolbar button image:insensitive,
 toolbar.inline-toolbar button label:insensitive,
 toolbar.inline-toolbar button:insensitive,
