@@ -3802,6 +3802,12 @@ GtkDialog .toolbar {
     background-color: @bg_color;
 }
 
+dialog label.primary,
+GtkDialog GtkLabel.primary {
+    font-weight: 700;
+    font-size: 11px;
+}
+
 /**************
 * Text Styles *
 **************/
