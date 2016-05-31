@@ -336,6 +336,15 @@ SwitchboardCategoryView GtkIconView.cell:selected:focus {
                  0 2px 2px alpha (#000, 0.30);
 }
 
+.login .entry {
+    border-radius: 3.5px;
+    padding: 6px;
+    background-image: linear-gradient(to bottom,
+                                  shade (@base_color, 0.93),
+                                  @base_color
+                                  );
+}
+
 /************
  * Terminal *
  ***********/
