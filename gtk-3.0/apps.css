@@ -41,6 +41,30 @@
                 0 1px 2px alpha (#000, 0.22);
 }
 
+/***********
+* Epiphany *
+***********/
+
+.incognito.titlebar {
+    background-image: -gtk-icontheme("user-not-tracked-symbolic"),
+                      linear-gradient(to bottom,
+                                  shade (@colorPrimary, 1.04),
+                                  shade (@colorPrimary, 0.88)
+                                  );
+    background-size: 64px 64px, 100% 100%;
+    background-position: 100px, 0, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    color: alpha (@text_color, 0.2);
+}
+
+.incognito.titlebar:backdrop {
+    background-image: -gtk-icontheme("user-not-tracked-symbolic"),
+                      linear-gradient(to bottom,
+                              shade (@colorPrimary, 1.08),
+                              shade (@colorPrimary, 0.98)
+                              );
+}
+
 /********
 * Files *
 ********/
