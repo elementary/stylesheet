@@ -54,7 +54,7 @@
     background-size: 64px 64px, 100% 100%;
     background-position: 100px, 0, 0 0;
     background-repeat: no-repeat, no-repeat;
-    color: alpha (@text_color, 0.2);
+    color: @text_shadow_color;
 }
 
 .incognito.titlebar:backdrop {
