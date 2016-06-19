@@ -114,6 +114,7 @@
 * Source List *
 **************/
 
+.sidebar .badge,
 .source-list.badge,
 .source-list.badge:prelight,
 .source-list.badge:selected,
@@ -130,11 +131,13 @@
     border-width: 0;
 }
 
+.sidebar .badge:selected,
 .source-list.badge:selected,
 .source-list.badge:prelight:selected {
     color: @titlebar_color;
 }
 
+.sidebar .badge:selected:backdrop,
 .source-list.badge:selected:backdrop,
 .source-list.badge:selected:prelight:backdrop {
     background-image: none;
