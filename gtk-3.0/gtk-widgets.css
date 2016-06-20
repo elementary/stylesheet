@@ -3070,11 +3070,17 @@ GtkDialog .source-list {
     background-color: shade (@titlebar_color, 1.07);
 }
 
+.sidebar .list-row,
 .sidebar-item,
 .sidebar-row {
     padding: 0 6px;
 }
 
+.sidebar .button {
+    padding: 3px;
+}
+
+.sidebar .label,
 .sidebar-item GtkLabel {
     padding: 4px;
 }
@@ -3086,6 +3092,7 @@ GtkDialog .source-list {
     padding-right: 6px;
 }
 
+.sidebar .list-row,
 .sidebar .view,
 .sidebar-item,
 .sidebar-row,
@@ -3096,6 +3103,7 @@ GtkDialog .source-list {
     text-shadow: 0 1px @text_shadow_color;
 }
 
+.sidebar .list-row:hover,
 .sidebar .view:hover,
 .sidebar-item:hover,
 .sidebar-row:hover,
@@ -3104,6 +3112,7 @@ GtkDialog .source-list {
 }
 
 .popover .sidebar.view:selected,
+.sidebar .list-row:selected,
 .sidebar .view:selected,
 .sidebar-item.list-row:selected,
 .sidebar-row:selected,
@@ -3152,6 +3161,7 @@ GtkDialog .sidebar-row:selected:focus GtkImage {
     background-color: transparent;
 }
 
+.sidebar .list-row:backdrop,
 .sidebar:backdrop,
 .sidebar-item:backdrop,
 .sidebar-row:backdrop,
@@ -3162,6 +3172,7 @@ GtkDialog .sidebar-row:selected:focus GtkImage {
     -gtk-image-effect: dim;
 }
 
+.sidebar .list-row:selected:backdrop,
 .sidebar .view:selected:backdrop,
 .sidebar-item:selected:backdrop,
 .sidebar-row:selected:backdrop,
