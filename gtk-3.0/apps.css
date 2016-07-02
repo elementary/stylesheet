@@ -358,13 +358,6 @@ PantheonCalculatorMainWindow.window-frame {
  * Switchboard *
  **************/
 
-SwitchboardCategoryView GtkIconView.cell:selected,
-SwitchboardCategoryView GtkIconView.cell:selected:focus {
-    background-color: alpha (#000, 0.20);
-    border-radius: 6px;
-    color: @text_color;
-}
-
 .hotcorner-display {
     border-radius: 2px;
     icon-shadow: 0 3px 4px alpha (#000, 0.20),
