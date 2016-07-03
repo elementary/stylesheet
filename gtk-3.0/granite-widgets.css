@@ -235,19 +235,19 @@
 
 .storage-bar .fill-block.files {
     background-image: linear-gradient(to bottom,
-                                  shade (@warning_color, 1.30),
-                                  @warning_color
-                                  );
-    border-color: shade (@warning_color, 0.87);
-}
-
-.storage-bar .fill-block.photo {
-    background-image: linear-gradient(to bottom,
                                   shade (@selected_bg_color, 1.30),
                                   @selected_bg_color
                                   );
 
     border-color: shade (@selected_bg_color, 0.90);
+}
+
+.storage-bar .fill-block.photo {
+    background-image: linear-gradient(to bottom,
+                                  shade (@warning_color, 1.30),
+                                  @warning_color
+                                  );
+    border-color: shade (@warning_color, 0.87);
 }
 
 .storage-bar .fill-block.video {
