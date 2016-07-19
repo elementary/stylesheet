@@ -1082,9 +1082,15 @@ button.flat:active,
     box-shadow: none;
 }
 
+button.link,
+GtkLinkButton.flat {
+	padding: 0;
+}
+
 button.link label,
-GtkLinkButton GtkLabel {
+GtkLinkButton.flat GtkLabel {
     color: @link_color;
+    padding: 0;
 }
 
 /***************************
