@@ -373,6 +373,17 @@ PantheonCalculatorMainWindow.window-frame {
                                   );
 }
 
+.login .entry *:selected {
+    background-color: shade (@base_color, 0.80);
+    color: @text_color;
+}
+
+.login .entry *:selected:focus {
+    background-color: alpha (@colorAccent, 0.9);
+    color: @selected_fg_color;
+    text-shadow: none;
+}
+
 /************
  * Terminal *
  ***********/
