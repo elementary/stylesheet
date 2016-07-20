@@ -1122,6 +1122,13 @@ GtkOverlay > .button:focus {
     background-clip: border-box;
 }
 
+GtkOverlay > button.suggested-action,
+GtkOverlay > .button.suggested-action {
+    background-image: none;
+    background-color: @selected_bg_color;
+    border-color: @selected_bg_color;
+}
+
 GtkOverlay > .button:active,
 GtkOverlay > .button:hover:active {
     background-color: #fff;
@@ -2446,13 +2453,6 @@ button.suggested-action,
                 inset 0 1px 0 0 alpha (#fff, 0.25),
                 inset 0 -1px 0 0 alpha (#fff, 0.10),
                 0 1px 0 0 alpha (#fff, 0.15);
-}
-
-GtkOverlay button.suggested-action,
-GtkOverlay .suggested-action.button {
-    background-image: none;
-    background-color: @selected_bg_color;
-    border-color: @selected_bg_color;
 }
 
 button.suggested-action label,
