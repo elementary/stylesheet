@@ -61,6 +61,7 @@
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
 
+@define-color attention_color #3d9bda;
 @define-color link_color #08C;
 @define-color frame_color #8a9580;
 @define-color inactive_frame_color #c7ccc1;
@@ -86,3 +87,4 @@
 @import url("gtk-widgets-dark.css");
 @import url("granite-widgets.css");
 @import url("apps.css");
+@import url("animate.css");
