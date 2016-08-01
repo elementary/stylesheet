@@ -17,7 +17,7 @@
 */
 
 .pulse {
-    animation: pulse 500ms infinite;
+    animation: pulse 500ms ease-in-out infinite;
     animation-direction: alternate;
 }
 
@@ -41,4 +41,14 @@
     0% {
         color: inherit;
     }  
+}
+
+.spin {
+    animation: spin 600ms linear infinite;
+}
+
+@keyframes spin {
+    to {
+        -gtk-icon-transform: rotate(1turn);
+    }
 }
