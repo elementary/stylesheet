@@ -648,10 +648,3 @@ style "chrome-gtk-frame" {
 }
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"
-
-##################################
-# Per-App Styles
-##################################
-
-include "Apps/steadyflow.rc"
-include "Apps/xfce-panel.rc"
