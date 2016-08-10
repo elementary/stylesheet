@@ -265,6 +265,10 @@ style "murrine-entry" = "murrine-widest"
 
 style "murrine-frame-title" { fg[NORMAL] = lighter (@fg_color) }
 
+style "murrine-menu" = "murrine-thin" {
+	bg[NORMAL] = shade (0.96, @base_color)
+}
+
 style "murrine-menu-item" = "murrine-wider"
 {
 	fg[PRELIGHT]				= @selected_fg_color
@@ -272,7 +276,7 @@ style "murrine-menu-item" = "murrine-wider"
 	fg[ACTIVE]                              = @fg_color
 	fg[INSENSITIVE]                         = darker (@bg_color)
 
-	bg[SELECTED]				= shade (1.30, @selected_bg_color)
+	bg[SELECTED]				= shade (1.10, @selected_bg_color)
 
 	engine "murrine"
 	{
@@ -547,7 +551,7 @@ widget_class "*<GtkStatusbar>"                  style "murrine-default"
 widget_class "*<GtkComboBoxEntry>*"             style "murrine-comboboxentry"
 widget_class "*<GtkCombo>*"                     style "murrine-combo"
 
-widget_class "*<GtkMenu>*"                      style "murrine-thin"
+widget_class "*<GtkMenu>*"                      style "murrine-menu"
 widget_class "*<GtkMenuBar>*"                   style "murrine-menubar"
 widget_class "*<GtkMenuItem>*"                  style "murrine-menu-item"
 widget_class "*<GtkMenuItem>.*.<GtkScale>"      style "murrine-scale"
