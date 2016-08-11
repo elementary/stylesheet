@@ -3712,6 +3712,13 @@ decoration,
     margin: 12px;
 }
 
+.window-frame.ssd,
+.window-frame.ssd:backdrop {
+    box-shadow: 0 0 0 1px alpha (#000, 0.3),
+                0 1px 6px alpha (#000, 0.12),
+                0 1px 4px alpha (#000, 0.24);
+}
+
 .popup decoration,
 .window-frame.menu.csd,
 .window-frame.popup.csd {
