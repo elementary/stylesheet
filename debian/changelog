@@ -1,8 +1,8 @@
-elementary-theme (5.0.0) UNRELEASED; urgency=medium
+elementary-theme (5.0.0) xenial; urgency=medium
 
   * New upstrem release.
 
- -- Cody Garver <cody@elementary.io>  Tue, 24 Nov 2015 22:17:52 -0600
+ -- Cody Garver <cody@elementary.io>  Sat, 13 Aug 2016 08:24:52 -0500
 
 elementary-theme (4.0.6) trusty; urgency=medium
 
