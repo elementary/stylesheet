@@ -2465,8 +2465,10 @@ button.suggested-action image:prelight,
 
 button.suggested-action:active,
 button.suggested-action:active:hover,
+button.suggested-action:checked,
 .suggested-action.button:active,
 .suggested-action.button:active:hover,
+.suggested-action.button:checked,
 .action-bar .button.suggested-action.text-button:active,
 .action-bar .button.suggested-action.text-button:active:hover {
     background-image: linear-gradient(to bottom,
@@ -2475,6 +2477,9 @@ button.suggested-action:active:hover,
                                   );
 
     border-color: shade (@selected_bg_color, 0.8);
+
+    box-shadow: inset 0 0 0 1px alpha (#000, 0.05),
+                0 1px 0 0 alpha (@bg_highlight_color, 0.30);
 }
 
 /****************************
