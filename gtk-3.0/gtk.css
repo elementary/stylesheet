@@ -1,4 +1,4 @@
-    /* Copyright 2011-2015 elementary LLC.
+/* Copyright 2011-2015 elementary LLC.
 *
 * This file is part of the elementary GTK theme.
 *
@@ -19,7 +19,7 @@
 /* Brand Colors */
 @define-color colorPrimary @titlebar_color;
 @define-color colorAccent @selected_bg_color;
-@define-color textColorPrimary shade (@colorPrimary, 0.50);
+@define-color textColorPrimary shade (@colorPrimary, 0.5);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.6);
 
 /* Default color scheme */
@@ -44,12 +44,10 @@
 @define-color title_shadow_color alpha (#fff, 0.6);
 @define-color tooltip_bg_color #000;
 @define-color tooltip_fg_color #FFF;
-
 @define-color internal_element_color mix(@text_color, @base_color, 0.4);
 @define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
 @define-color internal_element_insensitive mix(@internal_element_color, @base_color, 0.7);
-
-@define-color view_symbolic_color shade(@internal_element_color, 0.80);
+@define-color view_symbolic_color shade(@internal_element_color, 0.8);
 
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_base_color @base_color;
@@ -60,7 +58,6 @@
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
 @define-color theme_selected_bg_color @selected_bg_color;
 @define-color theme_selected_fg_color @selected_fg_color;
-
 @define-color attention_color #3d9bda;
 @define-color link_color #08C;
 @define-color frame_color #8a9580;
@@ -68,10 +65,8 @@
 @define-color warning_color #fbc02d;
 @define-color error_color #c92e34;
 @define-color success_color #73d216;
-
 @define-color orange #ee6221;
 @define-color purple #4a58b1;
-
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
 
