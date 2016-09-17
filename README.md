@@ -11,3 +11,10 @@ If you feel the desire to compensate the designers who maintain this stylesheet 
 ## Not a General Purpose Stylesheet
 
 Special fixes for GNOME apps (Nautilus, GNOME Control Center, GNOME Shell, etc) or other desktop environments will not be implemented. The aim of style classes should be to be generic across applications. If an application needs a unique style,  it should be bundled with that application.
+
+## Testing
+
+We use [stylelint](http://stylelint.io/) for CSS linting. For testing locally:
+* You will need `npm` installed.
+* Run `npm install` to grab stylelint. You will only need to do this once.
+* Run `npm test` and it will lint all the CSS files.
