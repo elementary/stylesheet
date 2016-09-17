@@ -323,6 +323,19 @@ GraniteWidgetsWelcome .h3 {
     color: alpha(@text_color, 0.8);
 }
 
+/*************
+* Round Apps *
+*************/
+
+.rounded,
+.rounded .action-bar {
+    border-radius: 0 0 4px 4px;
+}
+
+.rounded.window-frame {
+    border-radius: 3px;
+}
+
 /**************
 * Text Styles *
 **************/
