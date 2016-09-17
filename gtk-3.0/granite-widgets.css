@@ -327,12 +327,12 @@ GraniteWidgetsWelcome .h3 {
 * Round Apps *
 *************/
 
-.rounded,
-.rounded .action-bar {
+GtkWindow.rounded,
+GtkWindow.rounded .action-bar {
     border-radius: 0 0 4px 4px;
 }
 
-.rounded.window-frame {
+GtkWindow.rounded.window-frame {
     border-radius: 3px;
 }
 
