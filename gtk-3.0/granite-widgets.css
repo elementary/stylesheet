@@ -332,18 +332,17 @@
  * Welcome *
  **********/
 
-GraniteWidgetsWelcome {
-    background-color: @base_color;
-}
-
-GraniteWidgetsWelcome GtkLabel {
-    color: @placeholder_text_color;
+.welcome {
     font-size: 10px;
     text-shadow: none;
 }
 
-GraniteWidgetsWelcome .h1,
-GraniteWidgetsWelcome .h3 {
+.welcome .dim-label {
+    color: @placeholder_text_color;
+}
+
+.welcome .h1,
+.welcome .h3 {
     color: alpha(@text_color, 0.8);
 }
 
