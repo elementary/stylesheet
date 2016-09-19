@@ -274,21 +274,6 @@ ConversationListView.view.cell:selected:focus {
         0 1px 0 0 alpha (#fff, 0.15);
 }
 
-/*************
-* Round Apps *
-*************/
-
-NoiseLibraryWindow,
-NoiseLibraryWindow .action-bar,
-PantheonCalculatorMainWindow {
-    border-radius: 0 0 4px 4px;
-}
-
-NoiseLibraryWindow.window-frame,
-PantheonCalculatorMainWindow.window-frame {
-    border-radius: 3px;
-}
-
 /*********
  * Panel *
  ********/
