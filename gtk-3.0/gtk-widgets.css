@@ -2000,6 +2000,7 @@ notebook tab label:backdrop,
 
 scrollbar,
 .scrollbar {
+    background-color: transparent;
     transition: all 600ms ease-out;
     -GtkRange-slider-width: 5;
     -GtkRange-stepper-spacing: 0;
@@ -2042,7 +2043,7 @@ scrollbar.overlay-indicator slider:hover,
 
 scrollbar trough,
 .scrollbar.trough {
-    margin: 2px;
+    padding: 0;
 }
 
 scrollbar.overlay-indicator trough,
@@ -2052,8 +2053,8 @@ scrollbar.overlay-indicator trough,
 
 scrollbar:hover trough,
 .scrollbar:hover.trough {
-    background-color: alpha (#000, 0.1);
-    border-radius: 20px;
+    background-color: transparent;
+    border-radius: 0;
 }
 
 .trough {
