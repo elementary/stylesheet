@@ -2054,7 +2054,7 @@ scrollbar.overlay-indicator trough,
 
 scrollbar:hover trough,
 .scrollbar:hover.trough {
-    background-color: transparent;
+    background-color: alpha (#000, 0.05);
     border-radius: 0;
 }
 
