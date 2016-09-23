@@ -3358,7 +3358,7 @@ list row:selected:focus image,
 }
 
 .list-row GtkTextView {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 /***************
