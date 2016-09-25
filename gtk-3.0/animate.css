@@ -48,11 +48,11 @@
 }
 
 @keyframes shake {
-    0% { padding-left: 0 }
-    25% { padding-left: 64px }
-    50% { padding-left: 0 }
-    75% { padding-left: 32px }
-    100% { padding-left: 0}
+    0% { padding-left: 0; }
+    25% { padding-left: 64px; }
+    50% { padding-left: 0; }
+    75% { padding-left: 32px; }
+    100% { padding-left: 0; }
 }
 
 .spin {
