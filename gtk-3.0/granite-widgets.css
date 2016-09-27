@@ -189,7 +189,7 @@
 }
 
 .source-list.level-bar.fill-block {
-    border-width: 0px;
+    border: none;
 }
 
 /**************
