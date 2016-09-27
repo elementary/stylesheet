@@ -171,6 +171,7 @@
     icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
+
 .source-list.level-bar,
 .source-list.level-bar:selected,
 .source-list.level-bar:selected:focus {
@@ -185,6 +186,11 @@
 .source-list.fill-block:selected:focus {
     background-image: none;
     background-color: mix (@colorAccent, @base_color, 0.25);
+}
+
+.source-list.level-bar.fill-block {
+    border-top-width: 0px;
+    border-bottom-width: 0px;
 }
 
 /**************
