@@ -2103,6 +2103,10 @@ menubar,
     -GtkWidget-window-dragging: true;
 }
 
+.titlebar .menubar {
+	background-color: transparent;
+}
+
 menubar menuitem,
 .menubar .menuitem {
     padding: 3px 6px;
