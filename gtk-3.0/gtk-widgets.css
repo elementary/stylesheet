@@ -237,7 +237,6 @@ spinbutton,
 .entry {
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @base_color,
                 0.93
@@ -278,7 +277,6 @@ toolbar spinbutton,
 .toolbar .entry {
     background-image:
         linear-gradient(
-            to bottom,
             alpha (
                 #000,
                 0.05
@@ -286,7 +284,6 @@ toolbar spinbutton,
             transparent 3px
         ),
         linear-gradient(
-            to bottom,
             shade (
                 @base_color,
                 0.93
@@ -307,7 +304,6 @@ toolbar spinbutton:backdrop,
 .toolbar .entry:backdrop {
     background-image:
         linear-gradient(
-            to bottom,
             alpha (
                 #000,
                 0.02
@@ -315,7 +311,6 @@ toolbar spinbutton:backdrop,
             transparent 5px
         ),
         linear-gradient(
-            to bottom,
             shade (
                 @base_color,
                 0.94
@@ -454,7 +449,6 @@ treeview .progressbar,
 .progressbar row:hover {
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @colorAccent,
                 1.3
@@ -515,7 +509,6 @@ GtkProgressBar.trough,
     border: 1px solid alpha (#000, 0.25);
     background-image:
         linear-gradient(
-            to bottom,
             @bg_color,
             shade (
                 @bg_color,
@@ -568,7 +561,6 @@ spinbutton progress,
 .entry.progressbar:focus {
     background-image:
         linear-gradient(
-            to bottom,
             mix(
                 @colorAccent,
                 @base_color,
@@ -627,7 +619,6 @@ levelbar block,
     background-color: @selected_bg_color;
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @selected_bg_color,
                 1.3
@@ -648,7 +639,6 @@ levelbar block.filled.low,
 .level-bar.fill-block.level-low {
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @error_color,
                 1.3
@@ -667,7 +657,6 @@ levelbar block.filled.middle,
 .level-bar.fill-block.level-middle {
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @warning_color,
                 1.3
@@ -686,7 +675,6 @@ levelbar block.filled.high,
 .level-bar.fill-block.level-high {
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @success_color,
                 1.1
@@ -701,7 +689,6 @@ levelbar block.empty,
     background-color: shade (@bg_color, 0.95);
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @bg_color,
                 0.95
