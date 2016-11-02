@@ -29,7 +29,6 @@
             "user-not-tracked-symbolic"
         ),
         linear-gradient(
-            to bottom,
             shade (
                 @colorPrimary,
                 1.04
@@ -51,7 +50,6 @@
             "user-not-tracked-symbolic"
         ),
         linear-gradient(
-            to bottom,
             shade (
                 @colorPrimary,
                 1.08
