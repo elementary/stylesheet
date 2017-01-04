@@ -4074,7 +4074,7 @@ GcrCertificateWidget .frame {
 }
 
 .titlebar.default-decoration:backdrop {
-    border-color: shade (@titlebar_color, 0.78)
+    border-color: shade (@titlebar_color, 0.78);
 }
 
 dialog .titlebar.default-decoration,
