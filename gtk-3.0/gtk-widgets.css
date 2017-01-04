@@ -3340,6 +3340,13 @@ list row:selected button,
     transition: none;
 }
 
+list row:selected button.flat,
+.list-row:selected:focus .button.flat {
+    background-color: alpha (@text_color, 0.3);
+    icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
+    text-shadow: 0 1px 1px alpha (@text_color, 0.15);
+}
+
 list row:selected,
 list row:selected:backdrop,
 .list-row:selected,
