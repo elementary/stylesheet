@@ -4068,18 +4068,7 @@ GcrCertificateWidget .frame {
 }
 
 .titlebar.default-decoration {
-    padding: 1px 3px;
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @titlebar_color,
-                1.04
-            ),
-            @titlebar_color
-        );
-    border-width: 0;
-    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.6);
+    padding: 4px 3px;
 }
 
 dialog .titlebar.default-decoration,
@@ -4095,6 +4084,7 @@ GtkMessageDialog .titlebar.default-decoration {
         inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 1px 0 0 @bg_highlight_color;
+    padding: 1px 3px;
 }
 
 dialog .titlebar:backdrop,
