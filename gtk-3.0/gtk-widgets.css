@@ -2100,13 +2100,18 @@ menubar,
 .menubar {
     color: @text_color;
     background-color: shade (@titlebar_color, 0.88);
-    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2);
+    border: 1px solid shade (@titlebar_color, 0.58);
+    border-width: 0 0 1px;
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     -GtkWidget-window-dragging: true;
 }
 
 menubar:backdrop,
 .menubar:backdrop {
     background-color: shade (@titlebar_color, 0.98);
+    border: 1px solid shade (@titlebar_color, 0.68);
 }
 
 .titlebar .menubar {
@@ -2319,7 +2324,9 @@ toolbar,
     padding: 3px;
     border: 1px solid shade (@titlebar_color, 0.56);
     border-width: 0 0 1px;
-    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     background-image:
         linear-gradient(
             to bottom,
