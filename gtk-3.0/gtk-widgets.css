@@ -2111,7 +2111,7 @@ menubar,
 menubar:backdrop,
 .menubar:backdrop {
     background-color: shade (@titlebar_color, 0.98);
-    border: 1px solid shade (@titlebar_color, 0.68);
+    border-color: shade (@titlebar_color, 0.78);
 }
 
 .titlebar .menubar {
@@ -2348,7 +2348,9 @@ toolbar:backdrop,
     background-color: shade (@titlebar_color, 0.98);
     background-image: none;
     border-color: shade (@titlebar_color, 0.64);
-    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
     -gtk-image-effect: dim;
 }
 
