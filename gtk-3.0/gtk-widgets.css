@@ -1206,6 +1206,7 @@ button:focus:checked,
 .button:checked,
 .button:hover:checked,
 .button:focus:checked,
+.titlebar .titlebutton:active, /* Mutter needs this exact match*/
 .action-bar .button.suggested-action.text-button:active {
     background-color: alpha (#000, 0.05);
     background-image: none;
