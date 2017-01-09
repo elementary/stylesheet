@@ -2100,8 +2100,19 @@ menu,
 menubar,
 .menubar {
     color: @text_color;
-    background-color: @titlebar_color;
+    background-color: shade (@titlebar_color, 0.88);
+    border: 1px solid shade (@titlebar_color, 0.58);
+    border-width: 0 0 1px;
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     -GtkWidget-window-dragging: true;
+}
+
+menubar:backdrop,
+.menubar:backdrop {
+    background-color: shade (@titlebar_color, 0.98);
+    border-color: shade (@titlebar_color, 0.78);
 }
 
 .titlebar .menubar {
@@ -2311,14 +2322,19 @@ radio:checked:focus,
 toolbar,
 .toolbar {
     -GtkWidget-window-dragging: true;
-    padding: 0 3px 3px;
+    padding: 3px;
     border: 1px solid shade (@titlebar_color, 0.56);
     border-width: 0 0 1px;
-    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     background-image:
         linear-gradient(
             to bottom,
-            @titlebar_color,
+            shade (
+                @titlebar_color,
+                0.88
+            ),
             shade (
                 @titlebar_color,
                 0.84
@@ -2330,17 +2346,12 @@ toolbar,
 
 toolbar:backdrop,
 .toolbar:backdrop {
-    background-image:
-        linear-gradient(
-            to bottom,
-            @titlebar_color,
-            shade (
-                @titlebar_color,
-                0.98
-            )
-        );
+    background-color: shade (@titlebar_color, 0.98);
+    background-image: none;
     border-color: shade (@titlebar_color, 0.64);
-    box-shadow: inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
     -gtk-image-effect: dim;
 }
 
@@ -4069,18 +4080,11 @@ GcrCertificateWidget .frame {
 }
 
 .titlebar.default-decoration {
-    padding: 1px 3px;
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @titlebar_color,
-                1.04
-            ),
-            @titlebar_color
-        );
-    border-width: 0;
-    box-shadow: inset 0 1px 0 0 alpha (@bg_highlight_color, 0.6);
+    padding: 4px 3px;
+}
+
+.titlebar.default-decoration:backdrop {
+    border-color: shade (@titlebar_color, 0.78);
 }
 
 dialog .titlebar.default-decoration,
@@ -4096,6 +4100,7 @@ GtkMessageDialog .titlebar.default-decoration {
         inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 1px 0 0 @bg_highlight_color;
+    padding: 1px 3px;
 }
 
 dialog .titlebar:backdrop,
