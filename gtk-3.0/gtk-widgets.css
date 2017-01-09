@@ -2973,7 +2973,7 @@ GtkAssistant .sidebar {
     background-color: shade (@bg_color, 0.97);
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
-    border-width: 1px 1px 0 0;
+    border-width: 0 1px 0 0;
     color: mix (@fg_color, @bg_color, 0.4);
     padding: 12px;
     text-shadow: 0 1px shade (@bg_color, 1.04);
@@ -3659,7 +3659,7 @@ GtkDialog .source-list .view:selected:backdrop {
 }
 
 .sidebar.frame {
-    border-width: 1px 0;
+    border-width: 0 1px 0 0;
 }
 
 .sidebar .frame {
