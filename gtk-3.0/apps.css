@@ -433,11 +433,3 @@ ConversationListView.view.cell:selected:focus {
     color: @selected_fg_color;
     text-shadow: none;
 }
-
-/************
- * Terminal *
- ***********/
-
-PantheonTerminalPantheonTerminalWindow.background {
-    background-color: transparent;
-}
