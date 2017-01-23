@@ -2033,6 +2033,11 @@ scrollbar button,
 scrollbar slider {
     min-height: 30px;
     min-width: 5px;
+    transition: all 200ms ease-in-out;
+}
+
+scrollbar slider:hover {
+    min-width: 10px;
 }
 
 scrollbar.overlay-indicator slider,
@@ -4364,4 +4369,4 @@ GtkImage.success,
 label.success,
 .label.success {
     color: shade (@success_color, 0.75);
-}
+}                       
