@@ -1912,7 +1912,7 @@ notebook tab:checked,
         );
     border-color: shade (@titlebar_color, 0.56);
     border-image: none;
-    border-radius: 4px 4px 0;
+    border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 1px 1px;
     box-shadow:
