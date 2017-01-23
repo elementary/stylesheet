@@ -2030,6 +2030,11 @@ scrollbar button,
     background-color: transparent;
 }
 
+scrollbar slider {
+    min-height: 30px;
+    min-width: 5px;
+}
+
 scrollbar.overlay-indicator slider,
 .slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
