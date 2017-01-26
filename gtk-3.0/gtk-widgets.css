@@ -2030,6 +2030,17 @@ scrollbar button,
     background-color: transparent;
 }
 
+scrollbar slider {
+    margin: 1px;
+    min-height: 30px;
+    min-width: 3px;
+    transition: all 200ms ease-in-out;
+}
+
+scrollbar:hover slider {
+    min-width: 8px;
+}
+
 scrollbar.overlay-indicator slider,
 .slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
@@ -2052,7 +2063,7 @@ scrollbar.overlay-indicator trough,
     background-color: transparent;
 }
 
-scrollbar.overlay-indicator trough:hover,
+scrollbar.overlay-indicator:hover trough,
 .scrollbar.overlay-indicator.trough:hover {
     background-color: alpha (#000, 0.1);
 }
