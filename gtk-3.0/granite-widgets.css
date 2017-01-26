@@ -116,6 +116,10 @@
     transition: all 150ms ease-in-out;
 }
 
+.card:checked {
+    border: 3px solid @selected_bg_color;
+}
+
 .card.collapsed {
     background-color: @bg_color;
     box-shadow:
