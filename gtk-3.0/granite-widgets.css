@@ -118,6 +118,7 @@
 
 .card:checked {
     border: 3px solid @selected_bg_color;
+    border-radius: 3px;
 }
 
 .card.collapsed {
