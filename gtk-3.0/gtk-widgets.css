@@ -1051,9 +1051,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 button,
-actionbar button.text-button,
 .button,
-.action-bar .button.text-button,
 .titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
     icon-shadow: 0 1px @text_shadow_color;
@@ -1210,7 +1208,6 @@ button:focus:checked,
 .button:hover:checked,
 .button:focus:checked,
 .titlebar .titlebutton:active, /* Mutter needs this exact match*/
-.action-bar .button.suggested-action.text-button:active,
 .titlebar .stack-switcher .button.image-button:active,
 .titlebar .stack-switcher .button.image-button:hover:active,
 .titlebar .stack-switcher .button.image-button:checked,
@@ -2572,19 +2569,12 @@ GtkDialog .action-bar {
     border-radius: 0 0 4px 4px;
 }
 
-.action-bar .button {
+.action-bar .button.image-button {
+    background-color: transparent;
+    background-image: none;
     border-radius: 0;
     border-width: 0;
     box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-}
-
-.action-bar .button.text-button {
-    padding: 2px 12px;
-}
-
-.action-bar .button.image-button {
     padding: 5px 5px 4px;
 }
 
@@ -2738,8 +2728,7 @@ GtkAppChooserDialog .search-bar {
 **************************/
 
 button.suggested-action,
-.suggested-action.button,
-.action-bar .button.suggested-action.text-button {
+.suggested-action.button {
     background-image:
         linear-gradient(
             to bottom,
@@ -2767,8 +2756,7 @@ button.suggested-action image:prelight,
 .suggested-action.button GtkLabel,
 .suggested-action.button GtkLabel:prelight,
 .suggested-action.button GtkImage,
-.suggested-action.button GtkImage:prelight,
-.action-bar .button.suggested-action.text-button GtkLabel {
+.suggested-action.button GtkImage:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2779,9 +2767,7 @@ button.suggested-action:active:hover,
 button.suggested-action:checked,
 .suggested-action.button:active,
 .suggested-action.button:active:hover,
-.suggested-action.button:checked,
-.action-bar .button.suggested-action.text-button:active,
-.action-bar .button.suggested-action.text-button:active:hover {
+.suggested-action.button:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -2899,8 +2885,7 @@ button.destructive-action:active:hover,
 button:insensitive,
 .button:insensitive,
 .destructive-action.button:insensitive,
-.suggested-action.button:insensitive,
-.action-bar .button.suggested-action.text-button:insensitive {
+.suggested-action.button:insensitive {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.2);
@@ -2938,8 +2923,7 @@ button:insensitive label,
 .destructive-action.button:insensitive GtkLabel,
 .destructive-action.button:insensitive GtkImage,
 .suggested-action.button:insensitive GtkLabel,
-.suggested-action.button:insensitive GtkImage,
-.action-bar .button.suggested-action.text-button:insensitive GtkLabel {
+.suggested-action.button:insensitive GtkImage {
     text-shadow: 0 1px @text_shadow_color;
     icon-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
