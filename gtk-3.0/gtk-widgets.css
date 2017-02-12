@@ -1051,9 +1051,8 @@ GtkComboBox.combobox-entry .button {
 }
 
 button,
-actionbar button.text-button,
 .button,
-.action-bar .button.text-button {
+.titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
     icon-shadow: 0 1px @text_shadow_color;
     background-image:
@@ -1123,14 +1122,16 @@ toolbar button,
 }
 
 button:hover,
-.button:hover {
+.button:hover,
+.titlebar .stack-switcher .button.image-button:hover {
     color: @text_color;
 }
 
 button:focus,
 popover actionbar button:focus,
 .button:focus,
-.popover .action-bar .button:focus {
+.popover .action-bar .button:focus,
+.titlebar .stack-switcher .button.image-button:focus {
     color: @text_color;
     border-color: @colorAccent;
     box-shadow:
@@ -1207,7 +1208,10 @@ button:focus:checked,
 .button:hover:checked,
 .button:focus:checked,
 .titlebar .titlebutton:active, /* Mutter needs this exact match*/
-.action-bar .button.suggested-action.text-button:active {
+.titlebar .stack-switcher .button.image-button:active,
+.titlebar .stack-switcher .button.image-button:hover:active,
+.titlebar .stack-switcher .button.image-button:checked,
+.titlebar .stack-switcher .button.image-button:hover:checked {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-color: alpha (#000, 0.27);
@@ -1660,7 +1664,8 @@ GtkComboBox.combobox-entry .button:last-child {
 .linked button,
 .linked .entry,
 .linked .button,
-.linked > GtkComboBox .button.the-button-in-the-combobox {
+.linked > GtkComboBox .button.the-button-in-the-combobox,
+.titlebar .stack-switcher .button.image-button {
     border-left-width: 0;
     border-radius: 0;
 }
@@ -1670,7 +1675,8 @@ GtkComboBox.combobox-entry .button:last-child {
 .linked button:first-child,
 .linked .entry:first-child,
 .linked .button:first-child,
-.linked > GtkComboBox:first-child > .button.the-button-in-the-combobox {
+.linked > GtkComboBox:first-child > .button.the-button-in-the-combobox,
+.titlebar .stack-switcher .button.image-button:first-child {
     border-width: 1px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -1683,7 +1689,8 @@ GtkComboBox.combobox-entry .button:last-child {
 .linked button:last-child,
 .linked .entry:last-child,
 .linked .button:last-child,
-.linked > GtkComboBox:last-child > .button.the-button-in-the-combobox {
+.linked > GtkComboBox:last-child > .button.the-button-in-the-combobox,
+.titlebar .stack-switcher .button.image-button:last-child {
     border-left-width: 0;
     border-bottom-right-radius: 2.5px;
     border-top-right-radius: 2.5px;
@@ -1696,7 +1703,8 @@ GtkComboBox.combobox-entry .button:last-child {
 .linked button:only-child,
 .linked .entry:only-child,
 .linked .button:only-child,
-.linked > GtkComboBox:only-child > .button.the-button-in-the-combobox {
+.linked > GtkComboBox:only-child > .button.the-button-in-the-combobox,
+.titlebar .stack-switcher .button.image-button:only-child {
     border-right-width: 1px;
     border-left-width: 1px;
     border-radius: 2.5px;
@@ -2030,6 +2038,17 @@ scrollbar button,
     background-color: transparent;
 }
 
+scrollbar slider {
+    margin: 1px;
+    min-height: 30px;
+    min-width: 3px;
+    transition: all 200ms ease-in-out;
+}
+
+scrollbar:hover slider {
+    min-width: 8px;
+}
+
 scrollbar.overlay-indicator slider,
 .slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
@@ -2052,7 +2071,7 @@ scrollbar.overlay-indicator trough,
     background-color: transparent;
 }
 
-scrollbar.overlay-indicator trough:hover,
+scrollbar.overlay-indicator:hover trough,
 .scrollbar.overlay-indicator.trough:hover {
     background-color: alpha (#000, 0.1);
 }
@@ -2550,19 +2569,12 @@ GtkDialog .action-bar {
     border-radius: 0 0 4px 4px;
 }
 
-.action-bar .button {
+.action-bar .button.image-button {
+    background-color: transparent;
+    background-image: none;
     border-radius: 0;
     border-width: 0;
     box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-}
-
-.action-bar .button.text-button {
-    padding: 2px 12px;
-}
-
-.action-bar .button.image-button {
     padding: 5px 5px 4px;
 }
 
@@ -2716,8 +2728,7 @@ GtkAppChooserDialog .search-bar {
 **************************/
 
 button.suggested-action,
-.suggested-action.button,
-.action-bar .button.suggested-action.text-button {
+.suggested-action.button {
     background-image:
         linear-gradient(
             to bottom,
@@ -2745,8 +2756,7 @@ button.suggested-action image:prelight,
 .suggested-action.button GtkLabel,
 .suggested-action.button GtkLabel:prelight,
 .suggested-action.button GtkImage,
-.suggested-action.button GtkImage:prelight,
-.action-bar .button.suggested-action.text-button GtkLabel {
+.suggested-action.button GtkImage:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2757,9 +2767,7 @@ button.suggested-action:active:hover,
 button.suggested-action:checked,
 .suggested-action.button:active,
 .suggested-action.button:active:hover,
-.suggested-action.button:checked,
-.action-bar .button.suggested-action.text-button:active,
-.action-bar .button.suggested-action.text-button:active:hover {
+.suggested-action.button:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -2877,8 +2885,7 @@ button.destructive-action:active:hover,
 button:insensitive,
 .button:insensitive,
 .destructive-action.button:insensitive,
-.suggested-action.button:insensitive,
-.action-bar .button.suggested-action.text-button:insensitive {
+.suggested-action.button:insensitive {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.2);
@@ -2916,8 +2923,7 @@ button:insensitive label,
 .destructive-action.button:insensitive GtkLabel,
 .destructive-action.button:insensitive GtkImage,
 .suggested-action.button:insensitive GtkLabel,
-.suggested-action.button:insensitive GtkImage,
-.action-bar .button.suggested-action.text-button:insensitive GtkLabel {
+.suggested-action.button:insensitive GtkImage {
     text-shadow: 0 1px @text_shadow_color;
     icon-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
