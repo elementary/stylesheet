@@ -110,10 +110,16 @@
 .card {
     background-color: @base_color;
     border: none;
+    border-color: transparent;
     box-shadow:
         0 0 0 1px alpha (#000, 0.05),
         0 3px 3px alpha (#000, 0.22);
     transition: all 150ms ease-in-out;
+}
+
+.card:checked {
+    border: 3px solid @selected_bg_color;
+    border-radius: 3px;
 }
 
 .card.collapsed {
