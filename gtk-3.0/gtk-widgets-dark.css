@@ -43,7 +43,7 @@
             ),
             shade (
                 @colorAccent,
-                2
+                1.37
             )
         );
     border-color: @border_color;
@@ -58,10 +58,12 @@ entry:focus,
         0 1px 0 0 alpha (#fff, 0.05);
 }
 
-entry selection {
-    color: shade (
-        @text_color,
-        1.23
+entry selection,
+textview selection {
+    color:
+        shade (
+            @text_color,
+            1.23
         );
 }
 
