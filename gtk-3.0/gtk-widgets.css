@@ -261,8 +261,8 @@ spinbutton,
     -gtk-icon-style: symbolic;
 }
 
-entry:selected,
-entry:selected:focus,
+entry selection,
+entry selection:focus,
 spinbutton:selected,
 spinbutton:selected:focus,
 .entry:selected,

@@ -43,7 +43,7 @@
             ),
             shade (
                 @colorAccent,
-                1.37
+                2
             )
         );
     border-color: @border_color;
@@ -56,6 +56,13 @@ entry:focus,
         inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
         0 1px 0 0 alpha (#fff, 0.05);
+}
+
+entry selection {
+    color: shade (
+        @text_color,
+        1.23
+        );
 }
 
 .titlebar entry:insensitive,
