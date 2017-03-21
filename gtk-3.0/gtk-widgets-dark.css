@@ -890,6 +890,22 @@ EggListBox {
 * GtkInfoBar *
 *************/
 
+infobar.error button,
+GtkInfoBar.error .button {
+    color: #fff;
+    text-shadow: 0 1px 1px @error_color;
+}
+
+infobar.question button,
+GtkInfoBar.question .button {
+    color: shade (@selected_bg_color, 0.25);
+}
+
+infobar.warning button,
+GtkInfoBar.warning .button {
+    color: shade (@warning_color, 0.25);
+}
+
 GtkInfoBar .button,
 GtkInfoBar .button:focus,
 .dynamic-notebook GtkInfoBar .button {

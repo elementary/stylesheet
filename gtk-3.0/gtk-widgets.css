@@ -3831,6 +3831,10 @@ GtkInfoBar .button:focus,
     text-shadow: none;
 }
 
+GtkInfoBar .button .label {
+    padding: 0 6px;
+}
+
 infobar button:insensitive,
 infobar button:hover:insensitive,
 GtkInfoBar .button:insensitive,
