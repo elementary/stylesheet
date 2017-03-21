@@ -3768,7 +3768,7 @@ GtkInfoBar .label {
 
 infobar.error,
 GtkInfoBar.error {
-    background-color:shade (@error_color, 1.2);
+    background-color: shade (@error_color, 1.2);
     border-color: shade (@error_color, 0.8);
     box-shadow:
         inset 0 1px 0 0 alpha (@error_color, 0.3),
@@ -3776,14 +3776,14 @@ GtkInfoBar.error {
 }
 
 infobar.error label,
-GtkInfoBar.error .label{
+GtkInfoBar.error .label {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
 }
 
 infobar.question,
 GtkInfoBar.question {
-    background-color:shade (@selected_bg_color, 1.2);
+    background-color: shade (@selected_bg_color, 1.2);
     border-color: shade (@selected_bg_color, 0.8);
     box-shadow:
         inset 0 1px 0 0 alpha (@selected_bg_color, 0.3),
@@ -3791,13 +3791,13 @@ GtkInfoBar.question {
 }
 
 infobar.question label,
-GtkInfoBar.question .label{
+GtkInfoBar.question .label {
     color: shade (@selected_bg_color, 0.25);
 }
 
 infobar.warning,
 GtkInfoBar.warning {
-    background-color:shade (@warning_color, 1.2);
+    background-color: shade (@warning_color, 1.2);
     border-color: shade (@warning_color, 0.8);
     box-shadow:
         inset 0 1px 0 0 alpha (@warning_color, 0.3),
@@ -3805,7 +3805,7 @@ GtkInfoBar.warning {
 }
 
 infobar.warning label,
-GtkInfoBar.warning .label{
+GtkInfoBar.warning .label {
     color: shade (@warning_color, 0.25);
 }
 
