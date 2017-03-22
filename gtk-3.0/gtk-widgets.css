@@ -261,8 +261,10 @@ spinbutton,
     -gtk-icon-style: symbolic;
 }
 
-entry:selected,
-entry:selected:focus,
+entry selection,
+entry selection:focus,
+textview selection,
+textview selection:focus,
 spinbutton:selected,
 spinbutton:selected:focus,
 .entry:selected,
@@ -3012,8 +3014,8 @@ GtkSwitch.trough {
     color: transparent;
 }
 
-switch:active,
-GtkSwitch.trough:active {
+switch:checked,
+GtkSwitch.trough:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -3031,15 +3033,15 @@ GtkSwitch.trough:insensitive {
     background-color: alpha (#000, 0.02);
 }
 
-switch:active:insensitive,
+switch:checked:insensitive,
 GtkSwitch.trough:active:insensitive {
     background-image: none;
     background-color: mix (@bg_color, @colorAccent, 0.5);
     border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
 }
 
-switch:active:backdrop,
-GtkSwitch.trough:active:backdrop {
+switch:checked:backdrop,
+GtkSwitch.trough:checked:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.8);
     border-color: shade (@bg_color, 0.65);
