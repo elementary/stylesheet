@@ -60,11 +60,7 @@ entry:focus,
 
 entry selection,
 textview selection {
-    color:
-        shade (
-            @text_color,
-            1.23
-        );
+    color: shade (@text_color, 1.23);
 }
 
 .titlebar entry:insensitive,
