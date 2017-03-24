@@ -2829,7 +2829,10 @@ button.destructive-action:backdrop,
                 1.3
             )
         );
-    border-color: @error_color;
+    box-shadow:
+        inset 0 0 0 1px alpha (#fff, 0.05),
+        inset 0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 -1px 0 0 alpha (#fff, 0.1);
 }
 
 button.destructive-action label,
@@ -2878,6 +2881,31 @@ button.destructive-action:active:hover,
             @error_color
         );
     border-color: shade (@error_color, 0.85);
+}
+
+button.destructive-action:focus,
+.titlebar button.destructive-action:focus,
+.destructive-action.button:focus,
+.titlebar .destructive-action.button:focus {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @error_color,
+                1.4
+            ),
+            shade (
+                @error_color,
+                1.1
+            )
+        );
+    box-shadow:
+        inset 0 1px 0 0 alpha (#fff, 0.3),
+        inset 0 -1px 0 0 alpha (#fff, 0.2),
+        0 1px 0 0 alpha (#fff, 0.25),
+        0 1px 2px 0 alpha (@error_color, 0.05);
+    transition: all 100ms ease-out;
+    border-color: @error_color;
 }
 
 /*********************
