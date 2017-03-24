@@ -14,6 +14,23 @@ Special fixes for GNOME apps (Nautilus, GNOME Control Center, GNOME Shell, etc) 
 
 ## Testing
 
+This stylesheet doesn't need to be compiled. It is recommended to make a
+symbolic link from the source directory to /usr/share/themes for testing:
+
+    ln -s /path/to/your/branch /usr/share/themes/
+    
+Apps will need to be restarted or the system stylesheet will need to be
+changed for your changes to take effect.
+
+You can also test changes live with Gtk Inspector. Make sure you have Gtk
+development libraries installed:
+
+    apt-get install libgtk-3-dev
+    
+Open an app you wish to test your changes on. Open Gtk Inspector with the
+keyboard shortcut Shift + Ctrl + D, then navigate to the tab "Custom CSS".
+Your changes here will take immediate effect on the focused app.
+
 We use [stylelint](http://stylelint.io/) for CSS linting. For testing locally:
 * You will need `npm` installed.
 * Run `npm install` to grab stylelint. You will only need to do this once.
