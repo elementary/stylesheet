@@ -110,6 +110,7 @@
 .card {
     background-color: @base_color;
     border: none;
+    border-color: transparent;
     box-shadow:
         0 0 0 1px alpha (#000, 0.05),
         0 3px 3px alpha (#000, 0.22);
