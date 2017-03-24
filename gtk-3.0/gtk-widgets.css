@@ -2905,7 +2905,6 @@ button.destructive-action:focus,
     border-color: shade (@error_color, 1);
 }
 
-
 /*********************
 * Insensitive Button *
 **********************/
