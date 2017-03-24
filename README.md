@@ -15,7 +15,7 @@ Special fixes for GNOME apps (Nautilus, GNOME Control Center, GNOME Shell, etc) 
 ## Testing
 
 This stylesheet doesn't need to be compiled. It is recommended to make a
-symbolic link from the source directory to /usr/share/themes for testing:
+symbolic link from the source directory to "/usr/share/themes" for testing:
 
     ln -s /path/to/your/branch /usr/share/themes/
     
@@ -25,7 +25,7 @@ changed for your changes to take effect.
 You can also test changes live with Gtk Inspector. Make sure you have Gtk
 development libraries installed:
 
-    apt-get install libgtk-3-dev
+    apt install libgtk-3-dev
     
 Open an app you wish to test your changes on. Open Gtk Inspector with the
 keyboard shortcut Shift + Ctrl + D, then navigate to the tab "Custom CSS".
