@@ -3842,7 +3842,7 @@ GtkInfoBar.warning {
 
 infobar.warning button,
 GtkInfoBar.warning .button {
-    border-color: shade (@warning_color, 0.9);
+    border-color: shade (@warning_color, 0.8);
 }
 
 infobar.warning button:backdrop,
