@@ -3043,7 +3043,7 @@ GtkSwitch.trough {
 }
 
 switch:checked,
-GtkSwitch.trough:checked {
+GtkSwitch.trough:active {
     background-image:
         linear-gradient(
             to bottom,
@@ -3069,7 +3069,7 @@ GtkSwitch.trough:active:insensitive {
 }
 
 switch:checked:backdrop,
-GtkSwitch.trough:checked:backdrop {
+GtkSwitch.trough:active:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.8);
     border-color: shade (@bg_color, 0.65);
