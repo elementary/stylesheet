@@ -22,6 +22,10 @@
 @define-color textColorPrimary shade (@text_color, 0.9);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 0.5), 0.6);
 
+/* Common */
+@define-color black #000;
+@define-color white #fff;
+
 /* Default color scheme */
 @define-color base_color #383e41;
 @define-color bg_color shade (@base_color, 0.96);

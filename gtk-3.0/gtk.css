@@ -22,6 +22,10 @@
 @define-color textColorPrimary shade (@colorPrimary, 0.5);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.6);
 
+/* Common */
+@define-color black #000;
+@define-color white #fff;
+
 /* Default color scheme */
 @define-color base_color #FFF;
 @define-color bg_color shade (@base_color, 0.96);
@@ -69,6 +73,11 @@
 @define-color purple #4a58b1;
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
+
+/* Extras */
+@define-color overlaybar_bg #222;
+@define-color tooltip_overlaybar_bg #333;
+@define-color gtkcalendar_highlight #777;
 
 @import url("gtk-widgets.css");
 @import url("granite-widgets.css");
