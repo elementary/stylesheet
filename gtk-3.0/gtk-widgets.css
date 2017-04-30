@@ -1906,7 +1906,7 @@ notebook tab:first-child,
         ) 0 1 0 1;
 }
 
-notebook tab:active,
+notebook tab:checked,
 .notebook tab:active {
     background-image:
         linear-gradient(
@@ -1922,7 +1922,7 @@ notebook tab:active,
         );
     border-color: shade (@titlebar_color, 0.56);
     border-image: none;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 1px 1px;
     box-shadow:
@@ -2491,6 +2491,7 @@ toolbar.bottom-toolbar button,
 .titlebar .button.flat,
 .titlebar .button.image-button {
     border-radius: 50%;
+    background-color: transparent;
 }
 
 .titlebar button.image-button:active,
@@ -3558,9 +3559,6 @@ GtkDialog .source-list {
 .sidebar-item,
 .sidebar-row,
 .source-list .view {
-    border-color: transparent;
-    border-style: solid;
-    border-width: 1px 0;
     text-shadow: 0 1px @text_shadow_color;
 }
 
@@ -3605,6 +3603,8 @@ GtkDialog .source-list {
                 0.3
             )
         ) 1 1 1 1;
+    border-style: solid;
+    border-width: 1px 0;
     box-shadow:
         inset 0 1px 0 0 alpha (#000, 0.03),
         inset 0 -1px 0 0 alpha (#000, 0.1);
@@ -3784,13 +3784,13 @@ GtkCalendar.highlight {
 
 infobar,
 GtkInfoBar {
-    background-color: @base_color;
-    border-color: shade (@base_color, 0.8);
+    background-color: @bg_color;
+    border-color: shade (@bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
     box-shadow:
-        inset 0 1px 0 0 shade (@base_color, 0.9),
-        inset 0 -1px 0 0 shade (@base_color, 1.2);
+        inset 0 1px 0 0 shade (@bg_color, 0.92),
+        inset 0 -1px 0 0 shade (@bg_color, 1.2);
 }
 
 infobar.frame,
@@ -3813,7 +3813,7 @@ GtkInfoBar .label {
 infobar.error,
 GtkInfoBar.error {
     background-color: shade (@error_color, 1.2);
-    border-color: shade (@error_color, 0.8);
+    border-color: @error_color;
     box-shadow:
         inset 0 1px 0 0 alpha (@error_color, 0.3),
         inset 0 -1px 0 0 alpha (#fff, 0.3);
@@ -3828,7 +3828,7 @@ GtkInfoBar.error .label {
 infobar.question,
 GtkInfoBar.question {
     background-color: shade (@selected_bg_color, 1.2);
-    border-color: shade (@selected_bg_color, 0.8);
+    border-color: shade (@selected_bg_color, 0.9);
     box-shadow:
         inset 0 1px 0 0 alpha (@selected_bg_color, 0.3),
         inset 0 -1px 0 0 alpha (#fff, 0.3);
@@ -3842,10 +3842,20 @@ GtkInfoBar.question .label {
 infobar.warning,
 GtkInfoBar.warning {
     background-color: shade (@warning_color, 1.2);
-    border-color: shade (@warning_color, 0.8);
+    border-color: shade (@warning_color, 0.9);
     box-shadow:
-        inset 0 1px 0 0 alpha (@warning_color, 0.3),
-        inset 0 -1px 0 0 alpha (#fff, 0.5);
+        inset 0 1px 0 0 @warning_color,
+        inset 0 -1px 0 0 alpha (#fff, 0.4);
+}
+
+infobar.warning button,
+GtkInfoBar.warning .button {
+    border-color: shade (@warning_color, 0.8);
+}
+
+infobar.warning button:backdrop,
+GtkInfoBar.warning .button:backdrop {
+    border-color: shade (@warning_color, 0.9);
 }
 
 infobar.warning label,
