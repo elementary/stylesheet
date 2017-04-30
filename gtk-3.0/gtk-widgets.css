@@ -2483,6 +2483,7 @@ toolbar.bottom-toolbar button,
 .titlebar .button.flat,
 .titlebar .button.image-button {
     border-radius: 50%;
+    background-color: transparent;
 }
 
 .titlebar button.image-button:active,
