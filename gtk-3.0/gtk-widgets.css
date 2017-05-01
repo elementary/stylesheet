@@ -2256,6 +2256,14 @@ menu separator {
     box-shadow: none;
 }
 
+menuitem check,
+menuitem radio {
+    min-height: 16px;
+    min-width: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
 /*************************
  * Check and Radio items *
  *************************/
