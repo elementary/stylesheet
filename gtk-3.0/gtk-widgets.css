@@ -156,6 +156,10 @@ rubberband,
     margin: 3px;
 }
 
+.monospace {
+    font-family: monospace;
+}
+
 /**************
  * Separators *
  *************/
