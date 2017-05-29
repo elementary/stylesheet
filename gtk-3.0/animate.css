@@ -17,7 +17,7 @@
 */
 
 .pulse {
-    animation: pulse 500ms ease-in-out infinite;
+    animation: pulse 500ms ease-in-out 11;
     animation-direction: alternate;
 }
 
