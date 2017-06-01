@@ -93,7 +93,6 @@ dialog entry.pathbar,
 GtkFileChooserDialog .entry.pathbar {
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @base_color,
                 0.93
@@ -128,7 +127,6 @@ GtkFileChooserDialog .entry.pathbar:focus {
     background-color: transparent;
     background-image:
         linear-gradient(
-            to bottom,
             @bg_color,
             @bg_color 80%,
             shade (
@@ -161,7 +159,6 @@ GtkFileChooserDialog .entry.pathbar:focus {
     border-radius: 100px;
     background-image:
         linear-gradient(
-            to bottom,
             #7e7e7e,
             #3e3e3e
         );
@@ -216,7 +213,6 @@ ConversationListView.view.cell:selected:focus {
     padding: 6px 3px;
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @base_color,
                 0.93
@@ -416,7 +412,6 @@ menubar.panel,
     padding: 6px;
     background-image:
         linear-gradient(
-            to bottom,
             shade (
                 @base_color,
                 0.93
