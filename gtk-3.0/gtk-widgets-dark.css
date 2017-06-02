@@ -20,8 +20,8 @@
  **************/
 
 *:insensitive {
-    text-shadow: 0 1px alpha (#000, 0.15);
-    icon-shadow: 0 1px alpha (#000, 0.15);
+    text-shadow: 0 1px alpha (@black, 0.15);
+    icon-shadow: 0 1px alpha (@black, 0.15);
 }
 
 /*************
@@ -51,11 +51,11 @@
 
 entry:focus,
 .entry:focus {
-    border-color: alpha (#000, 0.3);
+    border-color: alpha (@black, 0.3);
     box-shadow:
         inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (#fff, 0.05);
+        0 1px 0 0 alpha (@white, 0.05);
 }
 
 entry selection,
@@ -67,14 +67,14 @@ textview selection {
 toolbar entry:insensitive,
 .titlebar .entry:insensitive,
 .toolbar .entry:insensitive {
-    border-color: alpha (#000, 0.25);
+    border-color: alpha (@black, 0.25);
 }
 
 .titlebar entry:insensitive:backdrop,
 toolbar entry:insensitive:backdrop,
 .titlebar .entry:insensitive:backdrop,
 .toolbar .entry:insensitive:backdrop {
-    border-color: alpha (#000, 0.2);
+    border-color: alpha (@black, 0.2);
 }
 
 /****************
@@ -96,7 +96,7 @@ levelbar block.filled.high,
 
 levelbar block.empty,
 .level-bar.fill-block.empty-fill-block {
-    border-color: alpha (#000, 0.25);
+    border-color: alpha (@black, 0.25);
 }
 
 levelbar block:backdrop,
@@ -115,7 +115,7 @@ levelbar block.empty:backdrop,
 
 scale slider:backdrop,
 .scale.slider:backdrop {
-    border-color: alpha (#000, 0.2);
+    border-color: alpha (@black, 0.2);
 }
 
 .titlebar .scale.slider,
@@ -127,7 +127,7 @@ scale slider:backdrop,
 
 .scale.trough:insensitive {
     background-color: shade (@theme_bg_color, 1.25);
-    border-color: alpha (#000, 0.35);
+    border-color: alpha (@black, 0.35);
 }
 
 .scale.trough.vertical {
@@ -135,11 +135,11 @@ scale slider:backdrop,
         linear-gradient(
             to right,
             alpha (
-                #000,
+                @black,
                 0.15
             ),
             alpha (
-                #000,
+                @black,
                 0.07
             )
         );
@@ -150,43 +150,43 @@ scale slider:backdrop,
         linear-gradient(
             to right,
             alpha (
-                #000,
+                @black,
                 0.1
             ),
             alpha (
-                #000,
+                @black,
                 0.02
             )
         );
 }
 
 .scale.highlight.left {
-    border-color: alpha (#000, 0.5);
+    border-color: alpha (@black, 0.5);
     background-image:
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                @black,
                 0.4
             ),
             alpha (
-                #000,
+                @black,
                 0.3
             )
         );
 }
 
 .scale.highlight.left:insensitive {
-    border-color: alpha (#000, 0.4);
+    border-color: alpha (@black, 0.4);
     background-image:
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                @black,
                 0.3
             ),
             alpha (
-                #000,
+                @black,
                 0.2
             )
         );
@@ -213,8 +213,8 @@ button.flat:backdrop,
 button:active:insensitive,
 .button:active:insensitive {
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 1px alpha (#fff, 0.3);
+        inset 0 0 0 1px alpha (@black, 0.05),
+        0 1px 0 1px alpha (@white, 0.3);
 }
 
 /*************
@@ -225,15 +225,15 @@ switch:checked,
 GtkSwitch.trough:active {
     border-color: shade (@selected_bg_color, 0.3);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.1),
-        inset 0 1px 2px alpha (#000, 0.15),
+        inset 0 0 0 1px alpha (@black, 0.1),
+        inset 0 1px 2px alpha (@black, 0.15),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
 switch:checked:backdrop,
 GtkSwitch.trough:active:backdrop {
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.1),
+        inset 0 0 0 1px alpha (@black, 0.1),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
@@ -260,11 +260,11 @@ GtkSwitch.slider:active {
 .secondary-toolbar.toolbar .button:active,
 .secondary-toolbar.toolbar .button:hover:active {
     background-image: none;
-    background-color: alpha (#000, 0.1);
+    background-color: alpha (@black, 0.1);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        inset 0 1px 0 0 alpha (#000, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.4);
+        inset 0 0 0 1px alpha (@black, 0.05),
+        inset 0 1px 0 0 alpha (@black, 0.25),
+        inset 0 -1px 0 0 alpha (@white, 0.4);
 }
 
 /*****************
@@ -274,7 +274,7 @@ GtkSwitch.slider:active {
 .spinbutton .button {
     border-style: none;
     border-image: none;
-    box-shadow: inset 1px 0 alpha (#000, 0.1);
+    box-shadow: inset 1px 0 alpha (@black, 0.1);
     background-color: transparent;
     background-image: none;
 }
@@ -284,7 +284,7 @@ GtkSwitch.slider:active {
 }
 
 .spinbutton .button:dir(rtl) {
-    box-shadow: inset -1px 0 alpha (#000, 0.1);
+    box-shadow: inset -1px 0 alpha (@black, 0.1);
 }
 
 /*********
@@ -328,9 +328,9 @@ GtkSwitch.slider:active {
 .menu,
 .popup {
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.02),
-        inset 0 1px 0 0 alpha (#fff, 0.07),
-        inset 0 -1px 0 0 alpha (#fff, 0.01);
+        inset 0 0 0 1px alpha (@white, 0.02),
+        inset 0 1px 0 0 alpha (@white, 0.07),
+        inset 0 -1px 0 0 alpha (@white, 0.01);
 }
 
 .menuitem.check,
@@ -354,7 +354,7 @@ GtkSwitch.slider:active {
 
 GtkHandleBox:backdrop,
 .toolbar:backdrop {
-    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.07);
+    box-shadow: inset 0 -1px 0 0 alpha (@white, 0.07);
 }
 
 /*************************
@@ -438,9 +438,9 @@ radio:checked:focus,
 ***********/
 
 .toolbar {
-    box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.1);
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    box-shadow: inset 0 -1px 0 0 alpha (@white, 0.1);
+    text-shadow: 0 1px alpha (@black, 0.4);
+    icon-shadow: 0 1px alpha (@black, 0.4);
 }
 
 .toolbar .separator {
@@ -467,17 +467,17 @@ radio:checked:focus,
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (#fff, 0.05),
-        inset 0 -1px 0 0 alpha (#fff, 0.05);
+        inset 0 1px 0 0 alpha (@white, 0.05),
+        inset 0 -1px 0 0 alpha (@white, 0.05);
     border-color: shade (@titlebar_color, 0.5);
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    text-shadow: 0 1px alpha (@black, 0.4);
+    icon-shadow: 0 1px alpha (@black, 0.4);
 }
 
 .secondary-toolbar.toolbar .button {
-    border-color: alpha (#000, 0.3);
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    border-color: alpha (@black, 0.3);
+    text-shadow: 0 1px alpha (@black, 0.4);
+    icon-shadow: 0 1px alpha (@black, 0.4);
 }
 
 /******************
@@ -496,8 +496,8 @@ radio:checked:focus,
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (#fff, 0.12),
-        inset 0 -1px 0 0 alpha (#fff, 0.05);
+        inset 0 1px 0 0 alpha (@white, 0.12),
+        inset 0 -1px 0 0 alpha (@white, 0.05);
 }
 
 /***************
@@ -505,11 +505,11 @@ radio:checked:focus,
  ***************/
 
 .action-bar {
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    text-shadow: 0 1px alpha (@black, 0.4);
+    icon-shadow: 0 1px alpha (@black, 0.4);
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.08);
+        inset 0 0 0 1px alpha (@white, 0.05),
+        inset 0 1px 0 0 alpha (@white, 0.08);
 }
 
 .action-bar .button {
@@ -538,7 +538,7 @@ radio:checked:focus,
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (#000, 0.1),
+        inset 0 1px 0 0 alpha (@black, 0.1),
         inset 0 -1px 0 0 @inset_dark_color;
 }
 
@@ -562,13 +562,13 @@ GtkPaned .inline-toolbar.toolbar {
     background-image: none;
     background-color: transparent;
     box-shadow: none;
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    text-shadow: 0 1px alpha (@black, 0.4);
+    icon-shadow: 0 1px alpha (@black, 0.4);
 }
 
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:active:hover {
-    background-color: alpha (#000, 0.05);
+    background-color: alpha (@black, 0.05);
     background-image: none;
     border-color: shade (@base_color, 0.74);
 }
@@ -580,9 +580,9 @@ GtkPaned .inline-toolbar.toolbar {
 EggFindBar.toolbar,
 .search-bar {
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.01),
-        inset 0 1px 0 0 alpha (#fff, 0.05),
-        inset 0 -1px 0 0 alpha (#fff, 0.03);
+        inset 0 0 0 1px alpha (@white, 0.01),
+        inset 0 1px 0 0 alpha (@white, 0.05),
+        inset 0 -1px 0 0 alpha (@white, 0.03);
 }
 
 /************************
@@ -609,11 +609,11 @@ EggFindBar.toolbar,
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                @black,
                 0.11
             ),
             alpha (
-                #000,
+                @black,
                 0.07
             )
         );
@@ -621,17 +621,17 @@ EggFindBar.toolbar,
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                @black,
                 0.25
             ),
             alpha (
-                #fff,
+                @white,
                 0.05
             )
         ) 1 1 1 1;
     box-shadow:
-        inset 0 1px 0 0 alpha (#000, 0.03),
-        inset 0 -1px 0 0 alpha (#000, 0.1);
+        inset 0 1px 0 0 alpha (@black, 0.03),
+        inset 0 -1px 0 0 alpha (@black, 0.1);
 }
 
 .sidebar .view:selected:backdrop,
@@ -644,11 +644,11 @@ EggFindBar.toolbar,
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                @black,
                 0.08
             ),
             alpha (
-                #000,
+                @black,
                 0.04
             )
         );
@@ -656,11 +656,11 @@ EggFindBar.toolbar,
         linear-gradient(
             to bottom,
             alpha (
-                #000,
+                @black,
                 0.19
             ),
             alpha (
-                #fff,
+                @white,
                 0.1
             )
         ) 1 1 1 1;
@@ -678,17 +678,17 @@ EggFindBar.toolbar,
 .source-list.badge:selected,
 .source-list.badge:prelight:selected {
     background-image: none;
-    background-color: alpha (#fff, 0.4);
-    text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
+    background-color: alpha (@white, 0.4);
+    text-shadow: 0 1px alpha (@black, 0.1);
+    icon-shadow: 0 1px alpha (@black, 0.1);
 }
 
 .source-list.badge:selected:backdrop,
 .source-list.badge:selected:prelight:backdrop {
     background-image: none;
-    background-color: alpha (#000, 0.2);
-    text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
+    background-color: alpha (@black, 0.2);
+    text-shadow: 0 1px alpha (@black, 0.1);
+    icon-shadow: 0 1px alpha (@black, 0.1);
 }
 
 /***************
@@ -698,9 +698,9 @@ EggFindBar.toolbar,
 EggFindBar.toolbar,
 .search-bar {
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.01),
-        inset 0 1px 0 0 alpha (#fff, 0.05),
-        inset 0 -1px 0 0 alpha (#fff, 0.03);
+        inset 0 0 0 1px alpha (@white, 0.01),
+        inset 0 1px 0 0 alpha (@white, 0.05),
+        inset 0 -1px 0 0 alpha (@white, 0.03);
 }
 
 /**************************
@@ -735,10 +735,10 @@ button.destructive-action,
             @error_color
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (#fff, 0.05);
+        inset 0 0 0 1px alpha (@white, 0.05),
+        inset 0 1px 0 0 alpha (@white, 0.25),
+        inset 0 -1px 0 0 alpha (@white, 0.1),
+        0 1px 0 0 alpha (@white, 0.05);
     border-color: shade (@error_color, 0.3);
 }
 
@@ -746,8 +746,8 @@ button.destructive-action label,
 button.destructive-action label:hover,
 .destructive-action.button GtkLabel,
 .destructive-action.button Gtklabel:prelight {
-    text-shadow: 0 1px alpha (#000, 0.2);
-    icon-shadow: 0 1px alpha (#000, 0.2);
+    text-shadow: 0 1px alpha (@black, 0.2);
+    icon-shadow: 0 1px alpha (@black, 0.2);
 }
 
 button.destructive-action:active,
@@ -764,8 +764,8 @@ button.destructive-action:active:hover
             )
         );
     box-shadow:
-        inset 0 0 1px 1px alpha (#000, 0.15),
-        0 1px 0 0 alpha (#fff, 0.09);
+        inset 0 0 1px 1px alpha (@black, 0.15),
+        0 1px 0 0 alpha (@white, 0.09);
     border-color: alpha (shade (@error_color, 0.3), 0.7);
 }
 
@@ -774,8 +774,8 @@ button.destructive-action:focus,
 .destructive-action.button:focus,
 .titlebar .destructive-action.button:focus {
     box-shadow:
-        inset 0 1px 0 0 alpha (#fff, 0.3),
-        inset 0 -1px 0 0 alpha (#fff, 0.2),
+        inset 0 1px 0 0 alpha (@white, 0.3),
+        inset 0 -1px 0 0 alpha (@white, 0.2),
         0 1px 2px 0 alpha (@error_color, 0.05);
 }
 
@@ -787,7 +787,7 @@ button.destructive-action:focus,
 .suggested-action.button:insensitive {
     background-image: none;
     background-color: transparent;
-    border-color: alpha (#000, 0.2);
+    border-color: alpha (@black, 0.2);
 }
 
 .toolbar .button:insensitive {
@@ -795,24 +795,24 @@ button.destructive-action:focus,
         linear-gradient(
             to bottom,
             alpha (
-                #fff,
+                @white,
                 0.05
             ),
             alpha (
-                #000,
+                @black,
                 0.05
             )
         );
-    border-color: alpha (#000, 0.2);
+    border-color: alpha (@black, 0.2);
 }
 
 .titlebar .button GtkLabel:insensitive {
-    text-shadow: 0 1px alpha (#fff, 0.15);
+    text-shadow: 0 1px alpha (@white, 0.15);
 }
 
 .spinbutton .button:insensitive,
 .spinbutton .button:focus:insensitive {
-    background-color: alpha (#000, 0.02);
+    background-color: alpha (@black, 0.02);
     background-image: none;
     color: @insensitive_color;
 }
@@ -820,7 +820,7 @@ button.destructive-action:focus,
 .inline-toolbar.toolbar .button *:insensitive,
 .inline-toolbar.toolbar .button:insensitive {
     background-image: none;
-    background-color: alpha (#000, 0.02);
+    background-color: alpha (@black, 0.02);
 }
 
 .button.flat:insensitive {
@@ -907,7 +907,7 @@ EggListBox {
 
 infobar.error button,
 GtkInfoBar.error .button {
-    color: #fff;
+    color: @white;
     text-shadow: 0 1px 1px @error_color;
 }
 
@@ -928,26 +928,26 @@ GtkInfoBar .button:focus,
     icon-shadow: none;
     background-image: none;
     background-color: transparent;
-    border-color: alpha (#000, 0.3);
+    border-color: alpha (@black, 0.3);
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 1px 0 1px alpha (#fff, 0.15);
+        inset 0 0 0 1px alpha (@white, 0.05),
+        inset 0 1px 0 0 alpha (@white, 0.45),
+        inset 0 -1px 0 0 alpha (@white, 0.15),
+        0 1px 0 1px alpha (@white, 0.15);
 }
 
 GtkInfoBar .button:active,
 GtkInfoBar .button:hover:active {
     background-image: none;
-    background-color: alpha (#000, 0.05);
-    border-color: alpha (#000, 0.35);
+    background-color: alpha (@black, 0.05);
+    border-color: alpha (@black, 0.35);
 }
 
 GtkInfoBar .button:insensitive,
 GtkInfoBar .button:hover:insensitive {
     background-image: none;
     background-color: transparent;
-    border-color: alpha (#000, 0.18);
+    border-color: alpha (@black, 0.18);
 }
 
 /*******
@@ -956,10 +956,10 @@ GtkInfoBar .button:hover:insensitive {
 
 .titlebar {
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.08);
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+        inset 0 0 0 1px alpha (@white, 0.05),
+        inset 0 1px 0 0 alpha (@white, 0.08);
+    text-shadow: 0 1px alpha (@black, 0.4);
+    icon-shadow: 0 1px alpha (@black, 0.4);
 }
 
 .titlebar .titlebutton {
@@ -973,7 +973,7 @@ GtkInfoBar .button:hover:insensitive {
 decoration,
 .window-frame {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.75),
+        0 0 0 1px alpha (@black, 0.75),
         0 14px 28px rgba(0, 0, 0, 0.35),
         0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -982,41 +982,41 @@ decoration,
 .window-frame.menu.csd,
 .window-frame.popup.csd {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.6),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23);
+        0 0 0 1px alpha (@black, 0.6),
+        0 3px 6px alpha (@black, 0.16),
+        0 3px 6px alpha (@black, 0.23);
 }
 
 menu .popup decoration,
 .menu .window-frame.menu.csd,
 .menu .window-frame.popup.csd {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.6),
-        0 10px 20px alpha (#000, 0.19),
-        0 6px 6px alpha (#000, 0.23);
+        0 0 0 1px alpha (@black, 0.6),
+        0 10px 20px alpha (@black, 0.19),
+        0 6px 6px alpha (@black, 0.23);
 }
 
 decoration:backdrop,
 .window-frame:backdrop {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.75),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23),
+        0 0 0 1px alpha (@black, 0.75),
+        0 3px 6px alpha (@black, 0.16),
+        0 3px 6px alpha (@black, 0.23),
         0 14px 28px transparent;
 }
 
 .titlebar .subtitle {
-    text-shadow: 0 1px alpha (#fff, 0.15);
-    icon-shadow: 0 1px alpha (#fff, 0.15);
+    text-shadow: 0 1px alpha (@white, 0.15);
+    icon-shadow: 0 1px alpha (@white, 0.15);
 }
 
 dialog decoration,
 messagedialog decoration,
 GtkDialog .window-frame {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.75),
-        0 8px 10px 1px alpha (#000, 0.14),
-        0 3px 14px 2px alpha (#000, 0.12),
-        0 5px 5px -3px alpha (#000, 0.4),
+        0 0 0 1px alpha (@black, 0.75),
+        0 8px 10px 1px alpha (@black, 0.14),
+        0 3px 14px 2px alpha (@black, 0.12),
+        0 5px 5px -3px alpha (@black, 0.4),
         0 14px 28px transparent;
 }
