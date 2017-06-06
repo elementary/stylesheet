@@ -1,6 +1,7 @@
 # The Gtk+ Stylesheet for elementary OS
 
 [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=45189256)](https://www.bountysource.com/trackers/45189256-elementary-stylesheet)
+[![Build Status](https://travis-ci.org/elementary/stylesheet.svg?branch=master)](https://travis-ci.org/elementary/stylesheet)
 
 An original Gtk.CSS stylesheet designed specifically for [elementary OS](https://elementary.io) and its desktop environment: Pantheon.
 
