@@ -4065,7 +4065,6 @@ GcrCertificateWidget .frame {
     padding: 4px 6px 3px;
 }
 
-.maximized .titlebar,
 .tiled .titlebar {
     border-radius: 0;
 }
@@ -4220,6 +4219,13 @@ decoration:backdrop,
         0 3px 6px alpha (#000, 0.16),
         0 3px 6px alpha (#000, 0.23),
         0 14px 28px transparent;
+}
+
+.maximized decoration,
+.maximized .window-frame {
+    background-color: #000;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 .tiled decoration,
