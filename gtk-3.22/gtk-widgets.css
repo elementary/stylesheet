@@ -174,7 +174,7 @@ separator.horizontal {
             @menu_separator_shadow calc(50% + 2px),
             transparent calc(50% + 2px)
         );
-	min-height: 4px;
+    min-height: 4px;
 }
 
 separator.vertical
@@ -193,7 +193,7 @@ separator.vertical {
             @menu_separator_shadow calc(50% + 2px),
             transparent calc(50% + 2px)
         );
-	min-width: 4px;
+    min-width: 4px;
 }
 
 .titlebar separator {
