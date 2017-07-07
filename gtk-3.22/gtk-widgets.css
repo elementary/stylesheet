@@ -757,13 +757,6 @@ levelbar block.discrete.vertical,
 * Scale *
 ********/
 
-scale,
-.scale {
-    -GtkScale-slider-length: 16;
-    -GtkRange-slider-width: 22;
-    -GtkRange-trough-border: 0;
-}
-
 scale slider,
 .scale.slider {
     background-image:
@@ -785,12 +778,9 @@ scale slider,
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
         0 1px 1px alpha (#000, 0.12);
-    margin: 3px 0;
-}
-
-scale.vertical slider,
-.scale.vertical.slider {
-    margin: 0 3px;
+    margin: -7px 0;
+    min-height: 14px;
+    min-width: 14px;
 }
 
 scale slider:focus,
@@ -852,7 +842,6 @@ scale slider:insensitive,
 
 scale trough,
 .scale.trough {
-    margin: 9px 0 8px;
     border: 1px solid alpha (#000, 0.35);
     border-radius: 12px;
     background-color: transparent;
@@ -871,6 +860,9 @@ scale trough,
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.03),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    margin: 7px 0;
+    min-height: 3px;
+    min-width: 3px;
 }
 
 .titlebar scale trough,
@@ -884,9 +876,11 @@ scale trough,
     border-width: 1px 1px 1px 0;
 }
 
-scale.vertical trough,
-.scale.trough.vertical {
-    margin: 0 9px 0 8px;
+scale.vertical slider {
+    margin: 0 -7px;
+}
+
+scale.vertical trough {
     background-image:
         linear-gradient(
             to right,
@@ -899,6 +893,7 @@ scale.vertical trough,
                 0.07
             )
         );
+    margin: 0 7px;
 }
 
 .scale.trough.vertical:insensitive {
@@ -935,6 +930,7 @@ scale highlight,
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+	margin: -1px;
 }
 
 scale highlight:insensitive,
