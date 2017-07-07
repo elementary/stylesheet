@@ -2600,7 +2600,7 @@ GtkDialog .action-bar {
 }
 
 .action-bar .subtitle {
-    font: 9pt;
+    font-size: 9pt;
     padding: 0 12px;
 }
 
