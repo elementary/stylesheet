@@ -187,7 +187,7 @@ separator.vertical {
             @menu_separator_shadow calc(50% + 1px),
             transparent calc(50% + 1px)
         );
-	margin-right: -1px;
+    margin-right: -1px;
     min-width: 2px;
 }
 
