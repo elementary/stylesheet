@@ -236,7 +236,7 @@ ConversationListView.view.cell:selected:focus {
     text-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
-    icon-shadow:
+    -gtk-icon-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
 }
@@ -305,10 +305,10 @@ menubar.panel,
     text-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
-    icon-shadow:
+    transition: all 200ms ease-in-out;
+    -gtk-icon-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
-    transition: all 200ms ease-in-out;
 }
 
 .composited-indicator .keyboard {
@@ -330,7 +330,7 @@ menubar.panel,
     text-shadow:
         0 0 2px alpha (#fff, 0.3),
         0 1px 0 alpha (#fff, 0.25);
-    icon-shadow:
+    -gtk-icon-shadow:
         0 0 2px alpha (#fff, 0.3),
         0 1px 0 alpha (#fff, 0.25);
 }
@@ -406,7 +406,7 @@ menubar.panel,
 
 .hotcorner-display {
     border-radius: 2px;
-    icon-shadow:
+    -gtk-icon-shadow:
         0 3px 4px alpha (#000, 0.2),
         0 2px 2px alpha (#000, 0.3);
 }
