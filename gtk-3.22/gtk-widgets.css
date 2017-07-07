@@ -168,13 +168,13 @@ separator.horizontal {
     background-image:
         linear-gradient(
             to bottom,
-            transparent 50%,
-            @menu_separator 50%,
+            transparent calc(50% - 1px),
+            @menu_separator calc(50% - 1px),
+            @menu_separator_shadow 50%,
             @menu_separator_shadow calc(50% + 1px),
-            @menu_separator_shadow calc(50% + 2px),
-            transparent calc(50% + 2px)
+            transparent calc(50% + 1px)
         );
-    min-height: 4px;
+    min-height: 2px;
 }
 
 separator.vertical
@@ -187,13 +187,13 @@ separator.vertical {
     background-image:
         linear-gradient(
             to right,
-            transparent 50%,
-            @menu_separator 50%,
+            transparent calc(50% - 1px),
+            @menu_separator calc(50% - 1px),
+            @menu_separator_shadow 50%,
             @menu_separator_shadow calc(50% + 1px),
-            @menu_separator_shadow calc(50% + 2px),
-            transparent calc(50% + 2px)
+            transparent calc(50% + 1px)
         );
-    min-width: 4px;
+    min-width: 2px;
 }
 
 .titlebar separator {
