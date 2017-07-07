@@ -2594,13 +2594,12 @@ GtkDialog .action-bar {
 }
 
 .action-bar .title {
-    font-size: 11pt;
-    font-weight: bold;
+    font: Bold 11;
     padding: 0 12px;
 }
 
 .action-bar .subtitle {
-    font: 9pt;
+    font: 9;
     padding: 0 12px;
 }
 
@@ -3016,7 +3015,7 @@ button.flat:insensitive,
 
 GtkAssistant .sidebar .highlight {
     color: @fg_color;
-    font-weight: bold;
+    font: bold;
 }
 
 GtkAssistant .sidebar {
@@ -3035,7 +3034,7 @@ GtkAssistant .sidebar {
 
 switch,
 GtkSwitch {
-    font-size: 0;
+    font: 1;
 
     /* min-height: 24px;
     min-width: 24px; FIXME: Uncomment for 3.19 */
@@ -3322,7 +3321,7 @@ column-header .button {
             ),
             @base_color
         );
-    font-weight: bold;
+    font: bold;
     padding: 4px 2px;
 }
 
@@ -4123,8 +4122,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 }
 
 .titlebar .title {
-    font-size: 9pt;
-    font-weight: bold;
+    font: Bold 9;
 }
 
 .titlebar .subtitle {

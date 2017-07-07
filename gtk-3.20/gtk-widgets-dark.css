@@ -835,7 +835,7 @@ button.destructive-action:focus,
 ***************/
 
 GtkAssistant .sidebar .highlight {
-    font-weight: bold;
+    font: bold;
 }
 
 GtkAssistant .sidebar {
@@ -870,7 +870,7 @@ column-header .button {
                 0.7
             )
         ) 0 0 1 1;
-    font-weight: bold;
+    font: bold;
 }
 
 column-header .button:hover {
