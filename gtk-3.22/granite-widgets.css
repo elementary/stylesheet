@@ -157,8 +157,8 @@
     padding: 0 6px;
     margin: 0 3px;
     text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
     border-width: 0;
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 .sidebar .badge:selected,
@@ -174,7 +174,7 @@
     background-color: alpha (#000, 0.2);
     color: shade (@titlebar_color, 0.95);
     text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 .source-list.level-bar,
