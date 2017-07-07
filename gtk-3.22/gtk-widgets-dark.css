@@ -21,7 +21,7 @@
 
 *:disabled {
     text-shadow: 0 1px alpha (#000, 0.15);
-    icon-shadow: 0 1px alpha (#000, 0.15);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.15);
 }
 
 /*************
@@ -440,7 +440,7 @@ radio:checked:focus,
 .toolbar {
     box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.1);
     text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .toolbar .separator {
@@ -471,13 +471,13 @@ radio:checked:focus,
         inset 0 -1px 0 0 alpha (#fff, 0.05);
     border-color: shade (@titlebar_color, 0.5);
     text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .secondary-toolbar.toolbar .button {
     border-color: alpha (#000, 0.3);
     text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 /******************
@@ -506,10 +506,10 @@ radio:checked:focus,
 
 .action-bar {
     text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
     box-shadow:
         inset 0 0 0 1px alpha (#fff, 0.05),
         inset 0 1px 0 0 alpha (#fff, 0.08);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .action-bar .button {
@@ -563,7 +563,7 @@ GtkPaned .inline-toolbar.toolbar {
     background-color: transparent;
     box-shadow: none;
     text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .inline-toolbar.toolbar .button:active,
@@ -680,7 +680,7 @@ EggFindBar.toolbar,
     background-image: none;
     background-color: alpha (#fff, 0.4);
     text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 .source-list.badge:selected:backdrop,
@@ -688,7 +688,7 @@ EggFindBar.toolbar,
     background-image: none;
     background-color: alpha (#000, 0.2);
     text-shadow: 0 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px alpha (#000, 0.1);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 /***************
@@ -747,7 +747,7 @@ button.destructive-action label:hover,
 .destructive-action.button GtkLabel,
 .destructive-action.button Gtklabel:prelight {
     text-shadow: 0 1px alpha (#000, 0.2);
-    icon-shadow: 0 1px alpha (#000, 0.2);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 button.destructive-action:active,
@@ -925,7 +925,6 @@ GtkInfoBar .button,
 GtkInfoBar .button:focus,
 .dynamic-notebook GtkInfoBar .button {
     text-shadow: none;
-    icon-shadow: none;
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.3);
@@ -934,6 +933,7 @@ GtkInfoBar .button:focus,
         inset 0 1px 0 0 alpha (#fff, 0.45),
         inset 0 -1px 0 0 alpha (#fff, 0.15),
         0 1px 0 1px alpha (#fff, 0.15);
+    -gtk-icon-shadow: none;
 }
 
 GtkInfoBar .button:active,
@@ -959,7 +959,7 @@ GtkInfoBar .button:hover:disabled {
         inset 0 0 0 1px alpha (#fff, 0.05),
         inset 0 1px 0 0 alpha (#fff, 0.08);
     text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
 }
 
 .titlebar .titlebutton {
@@ -1007,7 +1007,7 @@ decoration:backdrop,
 
 .titlebar .subtitle {
     text-shadow: 0 1px alpha (#fff, 0.15);
-    icon-shadow: 0 1px alpha (#fff, 0.15);
+    -gtk-icon-shadow: 0 1px alpha (#fff, 0.15);
 }
 
 dialog decoration,
