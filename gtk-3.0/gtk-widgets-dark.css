@@ -1020,3 +1020,10 @@ GtkDialog .window-frame {
         0 5px 5px -3px alpha (#000, 0.4),
         0 14px 28px transparent;
 }
+
+.maximized decoration,
+.maximized .window-frame {
+    background-color: #000;
+    box-shadow: none;
+    border-radius: 0;
+}
