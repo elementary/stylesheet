@@ -164,35 +164,38 @@ rubberband,
  * Separators *
  *************/
 
-separator,
-.separator {
-    color: @menu_separator;
-}
-
 separator.horizontal {
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
-    margin-bottom: -1px;
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent 50%,
+            @menu_separator 50%,
+            @menu_separator_shadow calc(50% + 1px),
+            @menu_separator_shadow calc(50% + 2px),
+            transparent calc(50% + 2px)
+        );
 }
 
-separator.vertical,
-.vertical.separator,
+separator.vertical
 .titlebar separator:first-child,
-.titlebar separator:last-child,
-.titlebar .separator:first-child,
-.titlebar .separator:last-child {
+.titlebar separator:last-child {
     margin: 0 4px;
     border-width: 1px;
 }
 
-separator.vertical,
-.vertical.separator {
-    color: @menu_separator;
-    border-left: 1px solid @menu_separator;
-    border-right: 1px solid @menu_separator_shadow;
+separator.vertical {
+    background-image:
+        linear-gradient(
+            to right,
+            transparent 50%,
+            @menu_separator 50%,
+            @menu_separator_shadow calc(50% + 1px),
+            @menu_separator_shadow calc(50% + 2px),
+            transparent calc(50% + 2px)
+        );
 }
 
-.titlebar .separator {
+.titlebar separator {
     -GtkWidget-separator-width: 18px;
     padding: 0 18px;
     border-width: 18px;
