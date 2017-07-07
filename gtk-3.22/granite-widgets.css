@@ -375,16 +375,16 @@ GtkWindow.rounded.window-frame {
 **************/
 
 .h1 {
-    font-size: 24px;
+    font-size: 24pt;
 }
 
 .h2 {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 18pt;
 }
 
 .h3 {
-    font-size: 11px;
+    font-size: 11pt;
 }
 
 .h4,
