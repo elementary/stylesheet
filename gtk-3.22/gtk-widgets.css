@@ -2608,6 +2608,7 @@ GtkDialog .action-bar {
 * Inline Toolbars *
 ******************/
 
+actionbar.inline-toolbar,
 toolbar.inline-toolbar,
 .inline-toolbar .action-bar,
 .toolbar.inline-toolbar {
@@ -2631,6 +2632,7 @@ toolbar.inline-toolbar,
     padding: 0;
 }
 
+paned actionbar.inline-toolbar,
 paned toolbar.inline-toolbar,
 .inline-toolbar .action-bar,
 GtkPaned .inline-toolbar.toolbar,
