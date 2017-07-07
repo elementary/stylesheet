@@ -2765,13 +2765,13 @@ button.suggested-action,
 }
 
 button.suggested-action label,
-button.suggested-action label:prelight,
+button.suggested-action label:hover,
 button.suggested-action image,
-button.suggested-action image:prelight,
+button.suggested-action image:hover,
 .suggested-action.button GtkLabel,
-.suggested-action.button GtkLabel:prelight,
+.suggested-action.button GtkLabel:hover,
 .suggested-action.button GtkImage,
-.suggested-action.button GtkImage:prelight {
+.suggested-action.button GtkImage:hover {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2849,18 +2849,18 @@ button.destructive-action:backdrop,
 }
 
 button.destructive-action label,
-button.destructive-action label:prelight,
+button.destructive-action label:hover,
 button.destructive-action image,
-button.destructive-action image:prelight,
+button.destructive-action image:hover,
 .titlebar button.destructive-action label,
-.titlebar button.destructive-action label:prelight,
+.titlebar button.destructive-action label:hover,
 .titlebar button.destructive-action.image-button image,
 .destructive-action.button GtkLabel,
-.destructive-action.button Gtklabel:prelight,
+.destructive-action.button Gtklabel:hover,
 .destructive-action.button GtkImage,
-.destructive-action.button GtkImage:prelight,
+.destructive-action.button GtkImage:hover,
 .titlebar .destructive-action.button GtkLabel,
-.titlebar .destructive-action.button Gtklabel:prelight,
+.titlebar .destructive-action.button Gtklabel:hover,
 .titlebar .destructive-action.button.image-button GtkImage {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
