@@ -174,13 +174,13 @@ separator.horizontal {
             @menu_separator_shadow calc(50% + 2px),
             transparent calc(50% + 2px)
         );
+	min-height: 4px;
 }
 
 separator.vertical
 .titlebar separator:first-child,
 .titlebar separator:last-child {
     margin: 0 4px;
-    border-width: 1px;
 }
 
 separator.vertical {
@@ -193,6 +193,7 @@ separator.vertical {
             @menu_separator_shadow calc(50% + 2px),
             transparent calc(50% + 2px)
         );
+	min-width: 4px;
 }
 
 .titlebar separator {
