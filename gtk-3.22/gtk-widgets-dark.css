@@ -589,18 +589,18 @@ EggFindBar.toolbar,
 * Sidebar & Source List *
 ************************/
 
-.sidebar .view:prelight,
-.sidebar.view:prelight,
-.source-list.view:prelight {
+.sidebar .view:hover,
+.sidebar.view:hover,
+.source-list.view:hover {
     background-color: shade (@bg_color, 1.1);
 }
 
 .sidebar .view:selected,
-.sidebar .view:prelight:selected,
+.sidebar .view:hover:selected,
 .sidebar.view:selected,
-.sidebar.view:prelight:selected,
+.sidebar.view:hover:selected,
 .source-list.view:selected,
-.source-list.view:prelight:selected,
+.source-list.view:hover:selected,
 .source-list.view:focus:selected,
 .source-list.category-expander:hover {
     border-style: solid;
@@ -635,11 +635,11 @@ EggFindBar.toolbar,
 }
 
 .sidebar .view:selected:backdrop,
-.sidebar .view:prelight:selected:backdrop,
+.sidebar .view:hover:selected:backdrop,
 .sidebar.view:selected:backdrop,
-.sidebar.view:prelight:selected:backdrop,
+.sidebar.view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
-.source-list.view:prelight:selected:backdrop {
+.source-list.view:hover:selected:backdrop {
     background-image:
         linear-gradient(
             to bottom,
@@ -667,16 +667,16 @@ EggFindBar.toolbar,
 }
 
 .sidebar-pane-separator,
-.sidebar-pane-separator:prelight,
+.sidebar-pane-separator:hover,
 .sidebar-pane-separator:selected {
     background-image: none;
     background-color: shade (@bg_color, 0.75);
 }
 
 .source-list.badge,
-.source-list.badge:prelight,
+.source-list.badge:hover,
 .source-list.badge:selected,
-.source-list.badge:prelight:selected {
+.source-list.badge:hover:selected {
     background-image: none;
     background-color: alpha (#fff, 0.4);
     text-shadow: 0 1px alpha (#000, 0.1);
@@ -684,7 +684,7 @@ EggFindBar.toolbar,
 }
 
 .source-list.badge:selected:backdrop,
-.source-list.badge:selected:prelight:backdrop {
+.source-list.badge:selected:hover:backdrop {
     background-image: none;
     background-color: alpha (#000, 0.2);
     text-shadow: 0 1px alpha (#000, 0.1);
@@ -745,7 +745,7 @@ button.destructive-action,
 button.destructive-action label,
 button.destructive-action label:hover,
 .destructive-action.button GtkLabel,
-.destructive-action.button Gtklabel:prelight {
+.destructive-action.button Gtklabel:hover {
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
@@ -835,7 +835,7 @@ button.destructive-action:focus,
 ***************/
 
 GtkAssistant .sidebar .highlight {
-    font: bold;
+    font-weight: bold;
 }
 
 GtkAssistant .sidebar {
@@ -870,7 +870,7 @@ column-header .button {
                 0.7
             )
         ) 0 0 1 1;
-    font: bold;
+    font-weight: bold;
 }
 
 column-header .button:hover {
