@@ -258,10 +258,10 @@ spinbutton,
         inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     color: @text_color;
-    icon-shadow: 0 1px @text_shadow_color;
     text-shadow: 0 1px @text_shadow_color;
     padding: 3px;
     transition: all 200ms ease-out;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
     -gtk-icon-style: symbolic;
 }
 
@@ -1060,7 +1060,6 @@ button,
 .button,
 .titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
@@ -1080,6 +1079,7 @@ button,
         0 1px 0 0 alpha (@bg_highlight_color, 0.15);
     color: @text_color;
     transition: all 100ms ease-in;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 button label,
@@ -1169,7 +1169,7 @@ button.flat:focus:hover,
 /* FIXME: style for checked image buttons
 .button:checked GtkImage {
     color: #08c;
-    icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
+    -gtk-icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
                                  0 1px 0 alpha (#fff, 0.3);
 } */
 
@@ -1187,8 +1187,8 @@ button.circular.flat.image-button:focus:active,
     border-radius: 50%;
     padding: 2px;
     color: @bg_color;
-    icon-shadow: none;
     box-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 dialog .inline-toolbar button,
@@ -1543,7 +1543,6 @@ GtkColorEditor GtkColorSwatch:backdrop {
 colorswatch#add-color-button,
 GtkColorSwatch#add-color-button {
     text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
@@ -1562,6 +1561,7 @@ GtkColorSwatch#add-color-button {
         0 1px 0 0 alpha (#fff, 0.15);
     color: @text_color;
     transition: all 100ms ease-in;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 colorswatch#add-color-button .overlay,
@@ -1570,7 +1570,7 @@ GtkColorSwatch#add-color-button .overlay {
     background-color: transparent;
     background-image: none;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 GtkColorScale.scale.slider,
@@ -1803,8 +1803,8 @@ notebook,
     background-color: shade (@titlebar_color, 1.06);
     border: none;
     border-radius: 0 0 2.5px 2.5px;
-    icon-shadow: 0 1px @text_shadow_color;
     text-shadow: 0 1px @text_shadow_color;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
     -GtkNotebook-tab-overlap: 1px;
 }
 
@@ -1932,9 +1932,9 @@ notebook tab:checked,
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
         0 0 1px 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px @text_shadow_color;
     text-shadow: 0 1px @text_shadow_color;
     color: @text_color;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 notebook tab:active:backdrop,
@@ -2155,8 +2155,8 @@ popover .menuitem,
 .popover .menuitem {
     padding: 6px;
     text-shadow: none;
-    icon-shadow: none;
     border-width: 1px 0;
+    -gtk-icon-shadow: none;
 }
 
 popover .menuitem,
@@ -2374,7 +2374,7 @@ toolbar,
             )
         );
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 toolbar:backdrop,
@@ -2421,7 +2421,7 @@ toolbar.secondary-toolbar,
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     border-color: shade (@titlebar_color, 0.54);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 toolbar.secondary-toolbar:backdrop,
@@ -2447,7 +2447,7 @@ toolbar.secondary-toolbar button,
 .secondary-toolbar.toolbar .button {
     border-color: alpha (#000, 0.3);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 /******************
@@ -2530,7 +2530,7 @@ toolbar.bottom-toolbar button,
 toolbar button.image-button image,
 .toolbar .button.image-button GtkImage {
     color: shade (@title_color, 0.75);
-    icon-shadow: 0 1px @title_shadow_color;
+    -gtk-icon-shadow: 0 1px @title_shadow_color;
 }
 
 .titlebar button.image-button image:insensitive,
@@ -2546,7 +2546,7 @@ toolbar button.image-button image:backdrop,
 .titlebar .button.image-button GtkImage:backdrop,
 .toolbar .button.image-button GtkImage:backdrop {
     color: shade (@titlebar_color, 0.8);
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 /***************
@@ -2557,7 +2557,6 @@ actionbar,
 .action-bar {
     padding: 1px 6px;
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     background-image:
         linear-gradient(
             to bottom,
@@ -2574,6 +2573,7 @@ actionbar,
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 dialog .action-bar,
@@ -2644,7 +2644,7 @@ toolbar.inline-toolbar button,
     color: shade (@text_color, 1.25);
     padding: 3px;
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 toolbar.inline-toolbar button:active,
@@ -2698,7 +2698,7 @@ searchbar,
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     border-color: shade (@titlebar_color, 0.54);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 searchbar:backdrop,
@@ -2774,7 +2774,7 @@ button.suggested-action image:prelight,
 .suggested-action.button GtkImage:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
-    icon-shadow: 0 1px alpha (#000, 0.3);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
 button.suggested-action:active,
@@ -2864,7 +2864,7 @@ button.destructive-action image:prelight,
 .titlebar .destructive-action.button.image-button GtkImage {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
-    icon-shadow: 0 1px alpha (#000, 0.2);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 .titlebar button.destructive-action label:backdrop,
@@ -2873,7 +2873,7 @@ button.destructive-action image:prelight,
 .titlebar .destructive-action.button.image-button GtkImage:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 button.destructive-action:active,
@@ -2968,8 +2968,8 @@ button:insensitive label,
 .suggested-action.button:insensitive GtkLabel,
 .suggested-action.button:insensitive GtkImage {
     text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 spinbutton button:insensitive,
@@ -3268,16 +3268,16 @@ GtkFlowBox .grid-child:focus {
 .app-notification .button.flat.image-button {
     background-color: alpha (@bg_color, 0.9);
     color: @text_color;
-    icon-shadow: none;
     box-shadow: none;
     border-width: 0;
+    -gtk-icon-shadow: none;
 }
 
 .app-notification button label,
 .app-notification .button GtkLabel {
     color: @text_color;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .app-notification button.close-button,
@@ -3410,8 +3410,8 @@ list row:selected button,
 list row:selected button.flat,
 .list-row:selected:focus .button.flat {
     background-color: alpha (@text_color, 0.3);
-    icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
     text-shadow: 0 1px 1px alpha (@text_color, 0.15);
+    -gtk-icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
 }
 
 list row:selected,
@@ -3420,8 +3420,8 @@ list row:selected:backdrop,
 .list-row:selected:backdrop {
     background-color: shade (@base_color, 0.8);
     color: @text_color;
-    icon-shadow: none;
     text-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 list row:selected:focus,
@@ -3968,11 +3968,11 @@ popover separator,
     color: @menu_separator;
     text-shadow: none;
     background-color: transparent;
-    icon-shadow: none;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
+    -gtk-icon-shadow: none;
+    -GtkWidget-separator-height: 2px;
+    -GtkWidget-wide-separators: true;
 }
 
 GtkModelButton.button:active:hover,
@@ -4030,11 +4030,11 @@ GcrCertificateWidget .frame {
     border-style: solid;
     border-width: 0 0 1px;
     text-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
-    icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
     box-shadow:
         inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.2),
         inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.6);
     padding: 8px 6px 6px;
+    -gtk-icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
 }
 
 .titlebar:backdrop {
@@ -4118,7 +4118,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .button.image-button GtkImage {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
-    icon-shadow: 0 1px @textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
 
 .titlebar .title {
@@ -4147,7 +4147,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .button.image-button GtkImage:insensitive {
     color: shade (@textColorPrimary, 1.5);
     text-shadow: 0 1px @textColorPrimaryShadow;
-    icon-shadow: 0 1px @textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
 
 .titlebar .title:backdrop,
@@ -4157,7 +4157,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .button.image-button GtkImage:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 decoration,
@@ -4308,7 +4308,7 @@ GtkDialog .titlebar .title {
     color: transparent;
     font-size: 0;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 dialog toolbar,
