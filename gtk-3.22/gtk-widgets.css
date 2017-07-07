@@ -52,7 +52,7 @@
     text-shadow: none;
 }
 
-*:insensitive {
+*:disabled {
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -67,21 +67,21 @@
 }
 
 image,
-image:insensitive,
+image:disabled,
 label,
-label:insensitive,
+label:disabled,
 box,
-box:insensitive,
+box:disabled,
 grid,
-grid:insensitive,
+grid:disabled,
 GtkImage,
-GtkImage:insensitive,
+GtkImage:disabled,
 GtkLabel,
-GtkLabel:insensitive,
+GtkLabel:disabled,
 GtkBox,
-GtkBox:insensitive,
+GtkBox:disabled,
 GtkGrid,
-GtkGrid:insensitive {
+GtkGrid:disabled {
     background-color: transparent;
 }
 
@@ -135,8 +135,8 @@ spinner:active,
     animation: spin 600ms linear infinite;
 }
 
-spinner:active:insensitive,
-.spinner:active:insensitive {
+spinner:active:disabled,
+.spinner:active:disabled {
     opacity: 0.4;
 }
 
@@ -258,10 +258,10 @@ spinbutton,
         inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     color: @text_color;
-    icon-shadow: 0 1px @text_shadow_color;
     text-shadow: 0 1px @text_shadow_color;
     padding: 3px;
     transition: all 200ms ease-out;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
     -gtk-icon-style: symbolic;
 }
 
@@ -361,9 +361,9 @@ spinbutton.error:focus,
     transition: all 200ms ease-in;
 }
 
-entry:insensitive,
-spinbutton:insensitive,
-.entry:insensitive {
+entry:disabled,
+spinbutton:disabled,
+.entry:disabled {
     background-image: none;
     border: 1px solid alpha(@border_color, 0.75);
     box-shadow:
@@ -373,32 +373,32 @@ spinbutton:insensitive,
     color: @insensitive_color;
 }
 
-toolbar entry:insensitive,
-toolbar spinbutton:insensitive,
-.titlebar entry:insensitive,
-.titlebar spinbutton:insensitive,
-.titlebar .entry:insensitive,
-.toolbar .entry:insensitive {
+toolbar entry:disabled,
+toolbar spinbutton:disabled,
+.titlebar entry:disabled,
+.titlebar spinbutton:disabled,
+.titlebar .entry:disabled,
+.toolbar .entry:disabled {
     background: transparent;
     border-color: alpha (#000, 0.2);
     box-shadow: inset 0  0 0 1px alpha (@inset_dark_color, 0.25), 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-toolbar entry:insensitive:backdrop,
-toolbar spinbutton:insensitive:backdrop,
-.titlebar entry:insensitive:backdrop,
-.titlebar spinbutton:insensitive:backdrop,
-.titlebar .entry:insensitive:backdrop,
-.toolbar .entry:insensitive:backdrop {
+toolbar entry:disabled:backdrop,
+toolbar spinbutton:disabled:backdrop,
+.titlebar entry:disabled:backdrop,
+.titlebar spinbutton:disabled:backdrop,
+.titlebar .entry:disabled:backdrop,
+.toolbar .entry:disabled:backdrop {
     background-image: none;
     border-color: alpha (#000, 0.2);
     box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
 entry image.left,
-entry:insensitive:backdrop image.left,
+entry:disabled:backdrop image.left,
 .entry.image.left,
-.entry:insensitive:backdrop.image.left {
+.entry:disabled:backdrop.image.left {
     padding-right: 6px;
     color: alpha (@text_color, 0.4);
 }
@@ -832,8 +832,8 @@ scale slider:backdrop,
         0 1px 1px alpha (#000, 0.1);
 }
 
-scale slider:insensitive,
-.scale.slider:insensitive {
+scale slider:disabled,
+.scale.slider:disabled {
     background-color: transparent;
     background-image: none;
     border: none;
@@ -871,7 +871,7 @@ scale trough,
     border-width: 1px 1px 1px 0;
 }
 
-.scale.trough:insensitive {
+.scale.trough:disabled {
     border-radius: 0 12px 12px 0;
     border-width: 1px 1px 1px 0;
 }
@@ -896,12 +896,12 @@ scale.vertical trough {
     margin: 0 7px;
 }
 
-.scale.trough.vertical:insensitive {
+.scale.trough.vertical:disabled {
     border-radius: 12px 12px 0 0;
     border-width: 1px 1px 0;
 }
 
-.scale.trough.vertical.bottom:insensitive {
+.scale.trough.vertical.bottom:disabled {
     border-width: 0 1px 1px;
     border-radius: 0 0 12px 12px;
 }
@@ -933,8 +933,8 @@ scale highlight,
     margin: -1px;
 }
 
-scale highlight:insensitive,
-.scale.highlight.left:insensitive {
+scale highlight:disabled,
+.scale.highlight.left:disabled {
     border-color: alpha (#000, 0.35);
     border-radius: 12px 0 0 12px;
     border-width: 1px 0 1px 1px;
@@ -976,8 +976,8 @@ scale.vertical highlight,
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-scale.vertical highlight:insensitive,
-.scale.highlight.bottom:insensitive {
+scale.vertical highlight:disabled,
+.scale.highlight.bottom:disabled {
     border-color: alpha (#000, 0.4);
     background-image:
         linear-gradient(
@@ -1056,7 +1056,6 @@ button,
 .button,
 .titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
@@ -1076,6 +1075,7 @@ button,
         0 1px 0 0 alpha (@bg_highlight_color, 0.15);
     color: @text_color;
     transition: all 100ms ease-in;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 button label,
@@ -1165,26 +1165,26 @@ button.flat:focus:hover,
 /* FIXME: style for checked image buttons
 .button:checked GtkImage {
     color: #08c;
-    icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
+    -gtk-icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
                                  0 1px 0 alpha (#fff, 0.3);
 } */
 
 button.circular.flat.image-button,
 button.circular.flat.image-button:backdrop,
-button.circular.flat.image-button:insensitive,
+button.circular.flat.image-button:disabled,
 button.circular.flat.image-button:hover,
 button.circular.flat.image-button:focus:active,
 .button.circular.flat.image-button,
 .button.circular.flat.image-button:backdrop,
-.button.circular.flat.image-button:insensitive,
+.button.circular.flat.image-button:disabled,
 .button.circular.flat.image-button:hover,
 .button.circular.flat.image-button:focus:active {
     background-color: alpha (@text_color, 0.5);
     border-radius: 50%;
     padding: 2px;
     color: @bg_color;
-    icon-shadow: none;
     box-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 dialog .inline-toolbar button,
@@ -1301,10 +1301,10 @@ toolbar.secondary-toolbar button,
 
 toolbar.secondary-toolbar button.flat,
 toolbar.secondary-toolbar button.flat:backdrop,
-toolbar.secondary-toolbar button.flat:insensitive,
+toolbar.secondary-toolbar button.flat:disabled,
 .secondary-toolbar.toolbar .button.flat,
 .secondary-toolbar.toolbar .button.flat:backdrop,
-.secondary-toolbar.toolbar .button.flat:insensitive {
+.secondary-toolbar.toolbar .button.flat:disabled {
     border-color: transparent;
     box-shadow: none;
     background-image: none;
@@ -1539,7 +1539,6 @@ GtkColorEditor GtkColorSwatch:backdrop {
 colorswatch#add-color-button,
 GtkColorSwatch#add-color-button {
     text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
@@ -1558,6 +1557,7 @@ GtkColorSwatch#add-color-button {
         0 1px 0 0 alpha (#fff, 0.15);
     color: @text_color;
     transition: all 100ms ease-in;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 colorswatch#add-color-button .overlay,
@@ -1566,7 +1566,7 @@ GtkColorSwatch#add-color-button .overlay {
     background-color: transparent;
     background-image: none;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 GtkColorScale.scale.slider,
@@ -1799,8 +1799,8 @@ notebook,
     background-color: shade (@titlebar_color, 1.06);
     border: none;
     border-radius: 0 0 2.5px 2.5px;
-    icon-shadow: 0 1px @text_shadow_color;
     text-shadow: 0 1px @text_shadow_color;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
     -GtkNotebook-tab-overlap: 1px;
 }
 
@@ -1868,8 +1868,8 @@ notebook image,
     color: shade (@title_color, 0.75);
 }
 
-notebook image:insensitive,
-.notebook GtkImage:insensitive {
+notebook image:disabled,
+.notebook GtkImage:disabled {
     color: @insensitive_color;
 }
 
@@ -1928,9 +1928,9 @@ notebook tab:checked,
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
         0 0 1px 1px alpha (#000, 0.1);
-    icon-shadow: 0 1px @text_shadow_color;
     text-shadow: 0 1px @text_shadow_color;
     color: @text_color;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 notebook tab:active:backdrop,
@@ -2032,7 +2032,7 @@ scrollbar button,
 .scrollbar.button,
 .scrollbar.button:active,
 .scrollbar.button:active:hover,
-.scrollbar.button:insensitive,
+.scrollbar.button:disabled,
 .scrollbar.button:hover:backdrop,
 .scrollbar.button:active:hover:backdrop {
     border: none;
@@ -2151,12 +2151,12 @@ popover .menuitem,
 .popover .menuitem {
     padding: 6px;
     text-shadow: none;
-    icon-shadow: none;
     border-width: 1px 0;
+    -gtk-icon-shadow: none;
 }
 
 popover .menuitem,
-popover .menuitem:insensitive {
+popover .menuitem:disabled {
     background-image: none;
     border-color: transparent;
     box-shadow: none;
@@ -2201,9 +2201,9 @@ popover .menuitem:hover,
     background-color: alpha (@text_color, 0.15);
 }
 
-popover .menuitem *:insensitive,
-.menu .menuitem *:insensitive,
-.popover .menuitem *:insensitive {
+popover .menuitem *:disabled,
+.menu .menuitem *:disabled,
+.popover .menuitem *:disabled {
     color: @insensitive_color;
 }
 
@@ -2249,8 +2249,8 @@ menu separator {
 .menuitem.radio:active,
 .menuitem.check:hover,
 .menuitem.radio:hover,
-.menuitem.check:insensitive,
-.menuitem.radio:insensitive {
+.menuitem.check:disabled,
+.menuitem.radio:disabled {
     -gtk-icon-source: none;
     background-color: transparent;
     box-shadow: none;
@@ -2270,12 +2270,12 @@ menuitem radio {
 
 check,
 radio,
-check:insensitive,
-radio:insensitive,
+check:disabled,
+radio:disabled,
 .check,
 GtkRadioButton.radio,
-.check:insensitive,
-GtkRadioButton.radio:insensitive {
+.check:disabled,
+GtkRadioButton.radio:disabled {
     background-color: transparent;
     border-style: none;
 }
@@ -2370,7 +2370,7 @@ toolbar,
             )
         );
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 toolbar:backdrop,
@@ -2417,7 +2417,7 @@ toolbar.secondary-toolbar,
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     border-color: shade (@titlebar_color, 0.54);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 toolbar.secondary-toolbar:backdrop,
@@ -2443,7 +2443,7 @@ toolbar.secondary-toolbar button,
 .secondary-toolbar.toolbar .button {
     border-color: alpha (#000, 0.3);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 /******************
@@ -2526,13 +2526,13 @@ toolbar.bottom-toolbar button,
 toolbar button.image-button image,
 .toolbar .button.image-button GtkImage {
     color: shade (@title_color, 0.75);
-    icon-shadow: 0 1px @title_shadow_color;
+    -gtk-icon-shadow: 0 1px @title_shadow_color;
 }
 
-.titlebar button.image-button image:insensitive,
-toolbar button.image-button image:insensitive,
-.titlebar .button.image-button GtkImage:insensitive,
-.toolbar .button.image-button GtkImage:insensitive {
+.titlebar button.image-button image:disabled,
+toolbar button.image-button image:disabled,
+.titlebar .button.image-button GtkImage:disabled,
+.toolbar .button.image-button GtkImage:disabled {
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -2542,7 +2542,7 @@ toolbar button.image-button image:backdrop,
 .titlebar .button.image-button GtkImage:backdrop,
 .toolbar .button.image-button GtkImage:backdrop {
     color: shade (@titlebar_color, 0.8);
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 /***************
@@ -2553,7 +2553,6 @@ actionbar,
 .action-bar {
     padding: 1px 6px;
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     background-image:
         linear-gradient(
             to bottom,
@@ -2570,6 +2569,7 @@ actionbar,
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 dialog .action-bar,
@@ -2640,7 +2640,7 @@ toolbar.inline-toolbar button,
     color: shade (@text_color, 1.25);
     padding: 3px;
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 toolbar.inline-toolbar button:active,
@@ -2656,12 +2656,12 @@ toolbar.inline-toolbar button:active:hover,
     background-color: alpha (@text_color, 0.15);
 }
 
-toolbar.inline-toolbar button image:insensitive,
-toolbar.inline-toolbar button label:insensitive,
-toolbar.inline-toolbar button:insensitive,
-.inline-toolbar.toolbar .button GtkImage:insensitive,
-.inline-toolbar.toolbar .button GtkLabel:insensitive,
-.inline-toolbar.toolbar .button:insensitive {
+toolbar.inline-toolbar button image:disabled,
+toolbar.inline-toolbar button label:disabled,
+toolbar.inline-toolbar button:disabled,
+.inline-toolbar.toolbar .button GtkImage:disabled,
+.inline-toolbar.toolbar .button GtkLabel:disabled,
+.inline-toolbar.toolbar .button:disabled {
     background-image: none;
     background-color: transparent;
     color: @insensitive_color;
@@ -2694,7 +2694,7 @@ searchbar,
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
     border-color: shade (@titlebar_color, 0.54);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
 searchbar:backdrop,
@@ -2770,7 +2770,7 @@ button.suggested-action image:prelight,
 .suggested-action.button GtkImage:prelight {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
-    icon-shadow: 0 1px alpha (#000, 0.3);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
 }
 
 button.suggested-action:active,
@@ -2860,7 +2860,7 @@ button.destructive-action image:prelight,
 .titlebar .destructive-action.button.image-button GtkImage {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
-    icon-shadow: 0 1px alpha (#000, 0.2);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 .titlebar button.destructive-action label:backdrop,
@@ -2869,7 +2869,7 @@ button.destructive-action image:prelight,
 .titlebar .destructive-action.button.image-button GtkImage:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 button.destructive-action:active,
@@ -2921,10 +2921,10 @@ button.destructive-action:focus,
 * Insensitive Button *
 **********************/
 
-button:insensitive,
-.button:insensitive,
-.destructive-action.button:insensitive,
-.suggested-action.button:insensitive {
+button:disabled,
+.button:disabled,
+.destructive-action.button:disabled,
+.suggested-action.button:disabled {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.2);
@@ -2936,10 +2936,10 @@ button:insensitive,
     color: @insensitive_color;
 }
 
-toolbar button:insensitive,
-.toolbar .button:insensitive,
-.toolbar .destructive-action.button:insensitive,
-.titlebar .destructive-action.button:insensitive,
+toolbar button:disabled,
+.toolbar .button:disabled,
+.toolbar .destructive-action.button:disabled,
+.titlebar .destructive-action.button:disabled,
 .titlebar .destructive-action.button.image-button GtkImage:backdrop {
     background-image:
         linear-gradient(
@@ -2957,28 +2957,28 @@ toolbar button:insensitive,
     color: @insensitive_color;
 }
 
-button:insensitive image,
-button:insensitive label,
-.destructive-action.button:insensitive GtkLabel,
-.destructive-action.button:insensitive GtkImage,
-.suggested-action.button:insensitive GtkLabel,
-.suggested-action.button:insensitive GtkImage {
+button:disabled image,
+button:disabled label,
+.destructive-action.button:disabled GtkLabel,
+.destructive-action.button:disabled GtkImage,
+.suggested-action.button:disabled GtkLabel,
+.suggested-action.button:disabled GtkImage {
     text-shadow: 0 1px @text_shadow_color;
-    icon-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
+    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
-spinbutton button:insensitive,
-spinbutton button:focus:insensitive,
-.spinbutton .button:insensitive,
-.spinbutton .button:focus:insensitive {
+spinbutton button:disabled,
+spinbutton button:focus:disabled,
+.spinbutton .button:disabled,
+.spinbutton .button:focus:disabled {
     background-color: alpha (#000, 0.02);
     background-image: none;
     color: @insensitive_color;
 }
 
-button:active:insensitive,
-.button:active:insensitive {
+button:active:disabled,
+.button:active:disabled {
     background-image:
         linear-gradient(
             to bottom,
@@ -2997,8 +2997,8 @@ button:active:insensitive,
         0 1px 0 0 alpha (#fff, 0.3);
 }
 
-button.flat:insensitive,
-.button.flat:insensitive {
+button.flat:disabled,
+.button.flat:disabled {
     border-color: transparent;
     box-shadow: none;
     background-image: none;
@@ -3065,13 +3065,13 @@ GtkSwitch.trough:active {
     border-color: shade (@colorAccent, 0.85);
 }
 
-switch:insensitive,
-GtkSwitch.trough:insensitive {
+switch:disabled,
+GtkSwitch.trough:disabled {
     background-color: alpha (#000, 0.02);
 }
 
-switch:checked:insensitive,
-GtkSwitch.trough:active:insensitive {
+switch:checked:disabled,
+GtkSwitch.trough:active:disabled {
     background-image: none;
     background-color: mix (@bg_color, @colorAccent, 0.5);
     border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
@@ -3136,9 +3136,9 @@ GtkSwitch.slider:focus {
         0 1px 2px alpha (@colorAccent, 0.16);
 }
 
-switch slider:insensitive,
+switch slider:disabled,
 switch slider:backdrop,
-GtkSwitch.slider:insensitive,
+GtkSwitch.slider:disabled,
 GtkSwitch.slider:backdrop {
     background-image: none;
     background-color: @bg_color;
@@ -3264,16 +3264,16 @@ GtkFlowBox .grid-child:focus {
 .app-notification .button.flat.image-button {
     background-color: alpha (@bg_color, 0.9);
     color: @text_color;
-    icon-shadow: none;
     box-shadow: none;
     border-width: 0;
+    -gtk-icon-shadow: none;
 }
 
 .app-notification button label,
 .app-notification .button GtkLabel {
     color: @text_color;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 .app-notification button.close-button,
@@ -3406,8 +3406,8 @@ list row:selected button,
 list row:selected button.flat,
 .list-row:selected:focus .button.flat {
     background-color: alpha (@text_color, 0.3);
-    icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
     text-shadow: 0 1px 1px alpha (@text_color, 0.15);
+    -gtk-icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
 }
 
 list row:selected,
@@ -3416,8 +3416,8 @@ list row:selected:backdrop,
 .list-row:selected:backdrop {
     background-color: shade (@base_color, 0.8);
     color: @text_color;
-    icon-shadow: none;
     text-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 list row:selected:focus,
@@ -3762,11 +3762,11 @@ GtkCalendar {
 }
 
 calendar button,
-calendar button:insensitive,
+calendar button:disabled,
 calendar header,
 calendar .view,
 GtkCalendar.button,
-GtkCalendar.button:insensitive,
+GtkCalendar.button:disabled,
 GtkCalendar.header,
 GtkCalendar.view {
     background-color: transparent;
@@ -3870,8 +3870,8 @@ GtkInfoBar .menu {
     color: @text_color;
 }
 
-infobar label:insensitive,
-GtkInfoBar GtkLabel:insensitive {
+infobar label:disabled,
+GtkInfoBar GtkLabel:disabled {
     color: @insensitive_color;
 }
 
@@ -3889,10 +3889,10 @@ GtkInfoBar .button .label {
     padding: 0 6px;
 }
 
-infobar button:insensitive,
-infobar button:hover:insensitive,
-GtkInfoBar .button:insensitive,
-GtkInfoBar .button:hover:insensitive {
+infobar button:disabled,
+infobar button:hover:disabled,
+GtkInfoBar .button:disabled,
+GtkInfoBar .button:hover:disabled {
     opacity: 0.7;
 }
 
@@ -3921,8 +3921,8 @@ popover image,
     color: alpha (@text_color, 0.8);
 }
 
-popover image:insensitive,
-.popover GtkImage:insensitive {
+popover image:disabled,
+.popover GtkImage:disabled {
     color: @insensitive_color;
 }
 
@@ -3946,8 +3946,8 @@ GtkModelButton.button {
 }
 
 GtkModelButton.button:active,
-GtkModelButton.button:insensitive,
-GtkModelButton.button:active:insensitive,
+GtkModelButton.button:disabled,
+GtkModelButton.button:active:disabled,
 GtkModelButton.button {
     background-color: transparent;
     background-image: none;
@@ -3964,11 +3964,11 @@ popover separator,
     color: @menu_separator;
     text-shadow: none;
     background-color: transparent;
-    icon-shadow: none;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
+    -gtk-icon-shadow: none;
+    -GtkWidget-separator-height: 2px;
+    -GtkWidget-wide-separators: true;
 }
 
 GtkModelButton.button:active:hover,
@@ -4026,11 +4026,11 @@ GcrCertificateWidget .frame {
     border-style: solid;
     border-width: 0 0 1px;
     text-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
-    icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
     box-shadow:
         inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.2),
         inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.6);
     padding: 8px 6px 6px;
+    -gtk-icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
 }
 
 .titlebar:backdrop {
@@ -4114,7 +4114,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .button.image-button GtkImage {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
-    icon-shadow: 0 1px @textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
 
 .titlebar .title {
@@ -4136,14 +4136,14 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
     box-shadow: none;
 }
 
-.titlebar .title:insensitive,
-.titlebar .subtitle:insensitive,
-.titlebar .titlebutton:insensitive,
-.titlebar button.image-button image:insensitive,
-.titlebar .button.image-button GtkImage:insensitive {
+.titlebar .title:disabled,
+.titlebar .subtitle:disabled,
+.titlebar .titlebutton:disabled,
+.titlebar button.image-button image:disabled,
+.titlebar .button.image-button GtkImage:disabled {
     color: shade (@textColorPrimary, 1.5);
     text-shadow: 0 1px @textColorPrimaryShadow;
-    icon-shadow: 0 1px @textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
 
 .titlebar .title:backdrop,
@@ -4153,7 +4153,7 @@ GtkMessageDialog .titlebar.default-decoration:backdrop {
 .titlebar .button.image-button GtkImage:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 decoration,
@@ -4304,7 +4304,7 @@ GtkDialog .titlebar .title {
     color: transparent;
     font-size: 0;
     text-shadow: none;
-    icon-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 dialog toolbar,
