@@ -169,15 +169,19 @@ separator,
     color: @menu_separator;
 }
 
+separator.horizontal {
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
+    margin-bottom: -1px;
+}
+
 separator.vertical,
 .vertical.separator,
 .titlebar separator:first-child,
 .titlebar separator:last-child,
 .titlebar .separator:first-child,
 .titlebar .separator:last-child {
-    padding: 0 4px;
-    -GtkWidget-separator-width: 2px;
-    -GtkWidget-wide-separators: true;
+    margin: 0 4px;
     border-width: 1px;
 }
 
@@ -2242,9 +2246,7 @@ GtkModelMenuItem GtkBox GtkImage {
 menu separator,
 .menuitem.separator {
     color: @menu_separator;
-    padding: 4px 0;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
+    margin: 4px 0;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
 }
