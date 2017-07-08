@@ -1687,10 +1687,7 @@ GtkComboBox.combobox-entry .button:last-child {
 .linked > combobox:first-child button.combo,
 .titlebar .stack-switcher .button.image-button:first-child {
     border-width: 1px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 2.5px;
-    border-top-left-radius: 2.5px;
+    border-radius: 2.5px 0 0 2.5px;
 }
 
 /* Rightmost button */
@@ -1699,10 +1696,7 @@ GtkComboBox.combobox-entry .button:last-child {
 .linked > combobox:last-child button.combo,
 .titlebar .stack-switcher .button.image-button:last-child {
     border-left-width: 0;
-    border-bottom-right-radius: 2.5px;
-    border-top-right-radius: 2.5px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border-radius: 0 2.5px 2.5px 0;
 }
 
 /* Linked single button */
