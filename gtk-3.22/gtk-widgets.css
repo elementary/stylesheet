@@ -2173,6 +2173,8 @@ popover .menuitem:disabled {
 menu menuitem arrow,
 .menu .menuitem.arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    min-height: 16px;
+    min-width: 16px;
 }
 
 menu menuitem arrow:dir(rtl),
