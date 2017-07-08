@@ -122,21 +122,18 @@ tooltip label,
  * Miscellaneous *
  ****************/
 
-spinner,
-.spinner {
+spinner {
     background-image: none;
     opacity: 0;
     -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }
 
-spinner:active,
-.spinner:active {
+spinner:checked {
     opacity: 0.8;
     animation: spin 600ms linear infinite;
 }
 
-spinner:active:disabled,
-.spinner:active:disabled {
+spinner:checked:disabled {
     opacity: 0.4;
 }
 
@@ -2176,6 +2173,8 @@ popover .menuitem:disabled {
 menu menuitem arrow,
 .menu .menuitem.arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    min-height: 16px;
+    min-width: 16px;
 }
 
 menu menuitem arrow:dir(rtl),
