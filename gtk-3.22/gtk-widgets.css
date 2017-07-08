@@ -3528,7 +3528,7 @@ GtkDialog .source-list {
 }
 
 .sidebar .label,
-.sidebat-item label {
+.sidebar-item label {
     padding: 4px;
 }
 
