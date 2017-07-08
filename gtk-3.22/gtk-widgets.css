@@ -1701,7 +1701,7 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Linked single button */
 .linked entry:only-child,
-.linked button:only-child,,
+.linked button:only-child,
 .linked > combobox:only-child button.combo,
 .titlebar .stack-switcher .button.image-button:only-child {
     border-right-width: 1px;
