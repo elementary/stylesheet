@@ -1675,9 +1675,7 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Middle button */
 .linked entry,
 .linked button,
-.linked .entry,
-.linked .button,
-.linked > GtkComboBox .button.the-button-in-the-combobox,
+.linked > combobox button.combo,
 .titlebar .stack-switcher .button.image-button {
     border-left-width: 0;
     border-radius: 0;
@@ -1686,9 +1684,7 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Leftmost button */
 .linked entry:first-child,
 .linked button:first-child,
-.linked .entry:first-child,
-.linked .button:first-child,
-.linked > GtkComboBox:first-child > .button.the-button-in-the-combobox,
+.linked > combobox:first-child button.combo,
 .titlebar .stack-switcher .button.image-button:first-child {
     border-width: 1px;
     border-bottom-right-radius: 0;
@@ -1700,9 +1696,7 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Rightmost button */
 .linked entry:last-child,
 .linked button:last-child,
-.linked .entry:last-child,
-.linked .button:last-child,
-.linked > GtkComboBox:last-child > .button.the-button-in-the-combobox,
+.linked > combobox:last-child button.combo,
 .titlebar .stack-switcher .button.image-button:last-child {
     border-left-width: 0;
     border-bottom-right-radius: 2.5px;
@@ -1713,10 +1707,8 @@ GtkComboBox.combobox-entry .button:last-child {
 
 /* Linked single button */
 .linked entry:only-child,
-.linked button:only-child,
-.linked .entry:only-child,
-.linked .button:only-child,
-.linked > GtkComboBox:only-child > .button.the-button-in-the-combobox,
+.linked button:only-child,,
+.linked > combobox:only-child button.combo,
 .titlebar .stack-switcher .button.image-button:only-child {
     border-right-width: 1px;
     border-left-width: 1px;
