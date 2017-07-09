@@ -217,12 +217,29 @@ button:active:disabled,
         0 1px 0 1px alpha (#fff, 0.3);
 }
 
-/*************
- * GtkSwitch *
- *************/
+/****************************
+ * Check, Radio, and Switch *
+ ***************************/
 
-switch:checked,
-GtkSwitch.trough:active {
+check,
+radio {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @bg_color,
+                0.93
+            ),
+            shade (
+                @bg_color,
+                0.97
+            )
+        );
+}
+
+check:checked,
+radio:checked,
+switch:checked {
     border-color: shade (@selected_bg_color, 0.3);
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.1),
@@ -230,15 +247,17 @@ GtkSwitch.trough:active {
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-switch:checked:backdrop,
-GtkSwitch.trough:active:backdrop {
+check:checked:backdrop,
+radio:checked:backdrop,
+switch:checked:backdrop {
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.1),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-switch:checked:disabled,
-GtkSwitch.trough:active:disabled {
+check:checked:disabled,
+radio:checked:disabled,
+switch:checked:disabled {
     border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.5);
 }
 
@@ -333,21 +352,6 @@ GtkSwitch.slider:active {
         inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
-.menuitem.check,
-.menuitem.radio,
-.menuitem.check:hover,
-.menuitem.radio:hover,
-.menuitem.check:disabled,
-.menuitem.radio:disabled {
-    background-image: none;
-    background-color: transparent;
-}
-
-.menuitem.check:active,
-.menuitem.radio:active {
-    background-color: transparent;
-}
-
 /***********
 * Toolbars *
 ***********/
@@ -355,82 +359,6 @@ GtkSwitch.slider:active {
 GtkHandleBox:backdrop,
 .toolbar:backdrop {
     box-shadow: inset 0 -1px 0 0 alpha (#fff, 0.07);
-}
-
-/*************************
- * Check and Radio items *
- *************************/
-
-GtkCheckButton:hover,
-GtkCheckButton:active:hover,
-GtkCheckButton:selected,
-GtkCheckButton:selected:focus {
-    background-color: transparent;
-}
-
-check,
-.check {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-dark.svg"), url("assets/check@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-check:focus
-.check:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-focus-dark.svg"), url("assets/check-focus@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-radio,
-.radio {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-dark.svg"), url("assets/radio@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-radio:focus,
-.radio:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-focus-dark.svg"), url("assets/radio-focus@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.menuitem.check,
-.menuitem.radio {
-    background-image: none;
-}
-
-check:checked,
-.check:active,
-.check:checked,
-.menuitem.check:active,
-.menuitem.check:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-active-dark.svg"), url("assets/check-active@2.svg"));
-}
-
-check:checked:focus,
-.check:active:focus,
-.check:checked:focus,
-.menuitem.check:active:focus,
-.menuitem.check:checked:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-active-focus-dark.svg"), url("assets/check-active@2.svg"));
-}
-
-radio:checked,
-.radio:active,
-.radio:checked,
-.menuitem.radio:active,
-.menuitem.radio:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-active-dark.svg"), url("assets/radio-active@2.svg"));
-}
-
-radio:checked:focus,
-.radio:active:focus,
-.radio:checked:focus,
-.menuitem.radio:active:focus,
-.menuitem.radio:checked:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-active-focus-dark.svg"), url("assets/radio-active-focus-dark@2.svg"));
 }
 
 /***********
