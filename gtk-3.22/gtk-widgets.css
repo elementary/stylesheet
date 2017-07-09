@@ -185,7 +185,6 @@ separator.vertical {
 }
 
 .titlebar separator {
-    -GtkWidget-separator-width: 18px;
     padding: 0 18px;
     border-width: 18px;
 }
@@ -1598,10 +1597,6 @@ GtkComboBox .button {
 }
 
 GtkComboBox .vertical.separator {
-    /* always disable separators */
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
     border: none;
 }
 
@@ -2393,13 +2388,6 @@ toolbar:backdrop,
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
     -gtk-icon-effect: dim;
-}
-
-toolbar separator,
-.toolbar .separator {
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
 }
 
 /*********************
@@ -3955,18 +3943,13 @@ GtkModelButton.button {
     box-shadow: none;
 }
 
-popover separator,
-.popover .separator {
+popover separator {
     font-size: 80%;
     font-weight: bold;
     color: @menu_separator;
     text-shadow: none;
     background-color: transparent;
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
     -gtk-icon-shadow: none;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
 }
 
 GtkModelButton.button:active:hover,
