@@ -184,17 +184,6 @@ separator.vertical {
     min-width: 2px;
 }
 
-.titlebar separator {
-    -GtkWidget-separator-width: 18px;
-    padding: 0 18px;
-    border-width: 18px;
-}
-
-.titlebar separator:first-child,
-.titlebar separator:last-child {
-    margin: 0 4px;
-}
-
 paned,
 GtkPaned {
     margin-right: 8px;
@@ -224,12 +213,22 @@ paned separator,
     -gtk-icon-source: none;
 }
 
+toolbar separator,
+.titlebar separator {
+    background: none;
+    margin: 0 18px;
+}
+
+.titlebar separator:first-child,
+.titlebar separator:last-child {
+    margin: 0 4px;
+}
+
 toolbar paned separator,
 .toolbar .pane-separator,
 .titlebar .pane-separator {
     background-color: transparent;
     background-image: url("assets/pane-handle.svg");
-    border: none;
     box-shadow: none;
 }
 
@@ -1603,14 +1602,6 @@ GtkComboBox .button {
     padding: 2px 6px;
 }
 
-GtkComboBox .vertical.separator {
-    /* always disable separators */
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
-    border: none;
-}
-
 GtkComboBoxText GtkImage {
     color: mix(@text_color, @bg_color, 0.3);
 }
@@ -2217,23 +2208,17 @@ GtkModelMenuItem GtkBox GtkImage {
 
 /* Moved titlebar sep here to fix seps in titlebar menus */
 
-.titlebar separator,
-.titlebar .separator {
+.titlebar separator {
     color: transparent;
     border: none;
 }
 
-menu separator,
-.menuitem.separator {
+menu separator {
     color: @menu_separator;
     margin: 4px 0;
+    background: none;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
-}
-
-menu separator {
-    background-color: transparent;
-    background-image: none;
 }
 
 /*************************
@@ -2379,13 +2364,6 @@ toolbar:backdrop,
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
     -gtk-icon-effect: dim;
-}
-
-toolbar separator,
-.toolbar .separator {
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0;
 }
 
 /*********************
@@ -3702,9 +3680,8 @@ GtkDialog .source-list .view:selected:backdrop {
     border: none;
 }
 
-.sidebar separator,
-.sidebar .separator {
-    color: transparent;
+.sidebar separator {
+    background: none;
 }
 
 /***********
@@ -3939,20 +3916,6 @@ GtkModelButton.button {
     border-image: none;
     border-style: none;
     box-shadow: none;
-}
-
-popover separator,
-.popover .separator {
-    font-size: 80%;
-    font-weight: bold;
-    color: @menu_separator;
-    text-shadow: none;
-    background-color: transparent;
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
-    -gtk-icon-shadow: none;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
 }
 
 GtkModelButton.button:active:hover,
