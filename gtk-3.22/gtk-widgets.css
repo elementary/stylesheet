@@ -184,16 +184,6 @@ separator.vertical {
     min-width: 2px;
 }
 
-.titlebar separator {
-    padding: 0 18px;
-    border-width: 18px;
-}
-
-.titlebar separator:first-child,
-.titlebar separator:last-child {
-    margin: 0 4px;
-}
-
 paned,
 GtkPaned {
     margin-right: 8px;
@@ -223,12 +213,22 @@ paned separator,
     -gtk-icon-source: none;
 }
 
+toolbar separator,
+.titlebar separator {
+    background: none;
+    margin: 0 18px;
+}
+
+.titlebar separator:first-child,
+.titlebar separator:last-child {
+    margin: 0 4px;
+}
+
 toolbar paned separator,
 .toolbar .pane-separator,
 .titlebar .pane-separator {
     background-color: transparent;
     background-image: url("assets/pane-handle.svg");
-    border: none;
     box-shadow: none;
 }
 
@@ -1596,10 +1596,6 @@ GtkComboBox .button {
     padding: 2px 6px;
 }
 
-GtkComboBox .vertical.separator {
-    border: none;
-}
-
 GtkComboBoxText GtkImage {
     color: mix(@text_color, @bg_color, 0.3);
 }
@@ -2220,23 +2216,17 @@ GtkModelMenuItem GtkBox GtkImage {
 
 /* Moved titlebar sep here to fix seps in titlebar menus */
 
-.titlebar separator,
-.titlebar .separator {
+.titlebar separator {
     color: transparent;
     border: none;
 }
 
-menu separator,
-.menuitem.separator {
+menu separator {
     color: @menu_separator;
     margin: 4px 0;
+    background: none;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
-}
-
-menu separator {
-    background-color: transparent;
-    background-image: none;
 }
 
 .menuitem.check,
@@ -3704,9 +3694,8 @@ GtkDialog .source-list .view:selected:backdrop {
     border: none;
 }
 
-.sidebar separator,
-.sidebar .separator {
-    color: transparent;
+.sidebar separator {
+    background: none;
 }
 
 /***********
@@ -3941,15 +3930,6 @@ GtkModelButton.button {
     border-image: none;
     border-style: none;
     box-shadow: none;
-}
-
-popover separator {
-    font-size: 80%;
-    font-weight: bold;
-    color: @menu_separator;
-    text-shadow: none;
-    background-color: transparent;
-    -gtk-icon-shadow: none;
 }
 
 GtkModelButton.button:active:hover,
