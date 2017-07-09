@@ -221,6 +221,17 @@ toolbar separator,
     margin: 0 4px;
 }
 
+toolbar separator,
+.titlebar separator {
+    background: none;
+    margin: 0 18px;
+}
+
+.titlebar separator:first-child,
+.titlebar separator:last-child {
+    margin: 0 4px;
+}
+
 toolbar paned separator,
 .toolbar .pane-separator,
 .titlebar .pane-separator {
