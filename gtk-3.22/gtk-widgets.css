@@ -76,8 +76,6 @@ grid,
 grid:disabled,
 GtkImage,
 GtkImage:disabled,
-GtkLabel,
-GtkLabel:disabled,
 GtkBox,
 GtkBox:disabled,
 GtkGrid,
@@ -111,9 +109,7 @@ tooltip.background,
 }
 
 tooltip label,
-.overlay-bar label,
-.tooltip GtkLabel,
-.overlay-bar GtkLabel {
+.overlay-bar label {
     color: #fff;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
 }
@@ -161,34 +157,42 @@ rubberband,
  * Separators *
  *************/
 
-separator,
-.separator {
-    color: @menu_separator;
+separator.horizontal {
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent calc(50% - 1px),
+            @menu_separator calc(50% - 1px),
+            @menu_separator_shadow 50%,
+            @menu_separator_shadow calc(50% + 1px),
+            transparent calc(50% + 1px)
+        );
+    min-height: 2px;
 }
 
-separator.vertical,
-.vertical.separator,
-.titlebar separator:first-child,
-.titlebar separator:last-child,
-.titlebar .separator:first-child,
-.titlebar .separator:last-child {
-    padding: 0 4px;
-    -GtkWidget-separator-width: 2px;
-    -GtkWidget-wide-separators: true;
-    border-width: 1px;
+separator.vertical {
+    background-image:
+        linear-gradient(
+            to right,
+            transparent calc(50% - 1px),
+            @menu_separator calc(50% - 1px),
+            @menu_separator_shadow 50%,
+            @menu_separator_shadow calc(50% + 1px),
+            transparent calc(50% + 1px)
+        );
+    margin-right: -1px;
+    min-width: 2px;
 }
 
-separator.vertical,
-.vertical.separator {
-    color: @menu_separator;
-    border-left: 1px solid @menu_separator;
-    border-right: 1px solid @menu_separator_shadow;
-}
-
-.titlebar .separator {
+.titlebar separator {
     -GtkWidget-separator-width: 18px;
     padding: 0 18px;
     border-width: 18px;
+}
+
+.titlebar separator:first-child,
+.titlebar separator:last-child {
+    margin: 0 4px;
 }
 
 paned,
@@ -1079,8 +1083,7 @@ button,
     -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
-button label,
-.button GtkLabel {
+button label {
     padding: 0 6px;
 }
 
@@ -1239,14 +1242,12 @@ GtkLinkButton.flat.text-button:focus {
     background-color: transparent;
 }
 
-button.link label,
-GtkLinkButton.flat GtkLabel {
+button.link label {
     color: @link_color;
     padding: 0;
 }
 
-button.link:focus label,
-GtkLinkButton.flat:focus GtkLabel {
+button.link:focus label {
     text-decoration: underline;
 }
 
@@ -1342,8 +1343,7 @@ button.circular,
     padding: 4px;
 }
 
-button.circular label,
-.button.circular GtkLabel {
+button.circular label {
     padding: 0 3px;
 }
 
@@ -1991,8 +1991,7 @@ notebook tab button,
 
 /* Label Trickery */
 
-notebook tab label,
-.notebook tab GtkLabel {
+notebook tab label {
     color: alpha(@text_color, 0.75);
     padding: 3px 6px;
 }
@@ -2000,16 +1999,12 @@ notebook tab label,
 notebook tab:active label,
 notebook .active-page,
 notebook tab .active-page label,
-.notebook tab:active GtkLabel,
-.notebook .active-page,
-.notebook tab .active-page GtkLabel {
+.notebook .active-page {
     color: @text_color;
 }
 
 notebook tab:backdrop label,
-notebook tab label:backdrop,
-.notebook tab:backdrop GtkLabel,
-.notebook tab GtkLabel:backdrop {
+notebook tab label:backdrop {
     color: alpha(@text_color, 0.75);
 }
 
@@ -2184,10 +2179,8 @@ menu menuitem arrow:dir(rtl),
 
 menu menuitem label,
 menu menuitem image,
-.menu .menuitem GtkLabel,
-.menu .menuitem GtkImage,
-.popover .menuitem GtkLabel,
-.popover .menuitem GtkImage {
+popover menuitem label,
+popover menuitem image {
     padding: 0 3px;
 }
 
@@ -2241,9 +2234,7 @@ GtkModelMenuItem GtkBox GtkImage {
 menu separator,
 .menuitem.separator {
     color: @menu_separator;
-    padding: 4px 0;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
+    margin: 4px 0;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
 }
@@ -2683,7 +2674,6 @@ toolbar.inline-toolbar button image:disabled,
 toolbar.inline-toolbar button label:disabled,
 toolbar.inline-toolbar button:disabled,
 .inline-toolbar.toolbar .button GtkImage:disabled,
-.inline-toolbar.toolbar .button GtkLabel:disabled,
 .inline-toolbar.toolbar .button:disabled {
     background-image: none;
     background-color: transparent;
@@ -2787,8 +2777,6 @@ button.suggested-action label,
 button.suggested-action label:hover,
 button.suggested-action image,
 button.suggested-action image:hover,
-.suggested-action.button GtkLabel,
-.suggested-action.button GtkLabel:hover,
 .suggested-action.button GtkImage,
 .suggested-action.button GtkImage:hover {
     color: @selected_fg_color;
@@ -2874,12 +2862,8 @@ button.destructive-action image:hover,
 .titlebar button.destructive-action label,
 .titlebar button.destructive-action label:hover,
 .titlebar button.destructive-action.image-button image,
-.destructive-action.button GtkLabel,
-.destructive-action.button Gtklabel:hover,
 .destructive-action.button GtkImage,
 .destructive-action.button GtkImage:hover,
-.titlebar .destructive-action.button GtkLabel,
-.titlebar .destructive-action.button Gtklabel:hover,
 .titlebar .destructive-action.button.image-button GtkImage {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
@@ -2888,7 +2872,6 @@ button.destructive-action image:hover,
 
 .titlebar button.destructive-action label:backdrop,
 .titlebar button.destructive-action.image-button image:backdrop,
-.titlebar .destructive-action.button GtkLabel:backdrop,
 .titlebar .destructive-action.button.image-button GtkImage:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
@@ -2982,9 +2965,7 @@ toolbar button:disabled,
 
 button:disabled image,
 button:disabled label,
-.destructive-action.button:disabled GtkLabel,
 .destructive-action.button:disabled GtkImage,
-.suggested-action.button:disabled GtkLabel,
 .suggested-action.button:disabled GtkImage {
     text-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
@@ -3275,8 +3256,7 @@ GtkFlowBox .grid-child:focus {
     background-clip: padding-box;
 }
 
-.app-notification label,
-.app-notification GtkLabel {
+.app-notification label {
     color: @bg_color;
     text-shadow: 0 1px 2px alpha (@text_color, 0.6);
 }
@@ -3292,8 +3272,7 @@ GtkFlowBox .grid-child:focus {
     -gtk-icon-shadow: none;
 }
 
-.app-notification button label,
-.app-notification .button GtkLabel {
+.app-notification button label {
     color: @text_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -3380,14 +3359,12 @@ column-header .button:backdrop:hover {
         );
 }
 
-treeview header button label,
-column-header .button GtkLabel {
+treeview header button label {
     padding-left: 3px;
     color: shade (@text_color, 1.8);
 }
 
-treeview header button:backdrop label,
-column-header .button:backdrop GtkLabel {
+treeview header button:backdrop label {
     color: shade (@text_color, 2.8);
 }
 
@@ -3566,7 +3543,7 @@ GtkDialog .source-list {
 }
 
 .sidebar .label,
-.sidebar-item GtkLabel {
+.sidebar-item label {
     padding: 4px;
 }
 
@@ -3893,8 +3870,7 @@ GtkInfoBar .menu {
     color: @text_color;
 }
 
-infobar label:disabled,
-GtkInfoBar GtkLabel:disabled {
+infobar label:disabled {
     color: @insensitive_color;
 }
 
@@ -4337,8 +4313,7 @@ GtkDialog .toolbar {
     background-color: @bg_color;
 }
 
-dialog label.primary,
-GtkDialog GtkLabel.primary {
+dialog label.primary {
     font-weight: 700;
     font-size: 11px;
 }
@@ -4351,7 +4326,7 @@ GtkDialog GtkLabel.primary {
     opacity: 0.75;
 }
 
-image.eror,
+image.error,
 GtkImage.error,
 .error {
     color: @error_color;
@@ -4363,6 +4338,7 @@ GtkImage.warning,
     color: @warning_color;
 }
 
+label.warning,
 .label.warning {
     color: shade (@warning_color, 0.75);
 }
