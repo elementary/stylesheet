@@ -157,34 +157,42 @@ rubberband,
  * Separators *
  *************/
 
-separator,
-.separator {
-    color: @menu_separator;
+separator.horizontal {
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent calc(50% - 1px),
+            @menu_separator calc(50% - 1px),
+            @menu_separator_shadow 50%,
+            @menu_separator_shadow calc(50% + 1px),
+            transparent calc(50% + 1px)
+        );
+    min-height: 2px;
 }
 
-separator.vertical,
-.vertical.separator,
-.titlebar separator:first-child,
-.titlebar separator:last-child,
-.titlebar .separator:first-child,
-.titlebar .separator:last-child {
-    padding: 0 4px;
-    -GtkWidget-separator-width: 2px;
-    -GtkWidget-wide-separators: true;
-    border-width: 1px;
+separator.vertical {
+    background-image:
+        linear-gradient(
+            to right,
+            transparent calc(50% - 1px),
+            @menu_separator calc(50% - 1px),
+            @menu_separator_shadow 50%,
+            @menu_separator_shadow calc(50% + 1px),
+            transparent calc(50% + 1px)
+        );
+    margin-right: -1px;
+    min-width: 2px;
 }
 
-separator.vertical,
-.vertical.separator {
-    color: @menu_separator;
-    border-left: 1px solid @menu_separator;
-    border-right: 1px solid @menu_separator_shadow;
-}
-
-.titlebar .separator {
+.titlebar separator {
     -GtkWidget-separator-width: 18px;
     padding: 0 18px;
     border-width: 18px;
+}
+
+.titlebar separator:first-child,
+.titlebar separator:last-child {
+    margin: 0 4px;
 }
 
 paned,
@@ -2226,9 +2234,7 @@ GtkModelMenuItem GtkBox GtkImage {
 menu separator,
 .menuitem.separator {
     color: @menu_separator;
-    padding: 4px 0;
-    -GtkWidget-separator-height: 2px;
-    -GtkWidget-wide-separators: true;
+    margin: 4px 0;
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
 }
