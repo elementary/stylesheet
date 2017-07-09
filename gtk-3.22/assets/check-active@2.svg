@@ -10,12 +10,12 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="26"
-   height="26"
+   width="24"
+   height="24"
    id="svg7539"
    inkscape:version="0.92.1 r15371"
    sodipodi:docname="check-active@2.svg"
-   viewBox="0 0 26 26">
+   viewBox="0 0 24 24">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -51,12 +51,12 @@
     </rdf:RDF>
   </metadata>
   <path
-     d="M 20.97316,4.4966397 25,8.1208199 11.46978,26 1,16.97988 l 3.46308,-4.59062 6.1208,5.31544 z"
+     d="M 19.97316,3.4966397 24,7.1208199 10.46978,25 0,15.97988 3.46308,11.38926 9.58388,16.7047 Z"
      id="path2922-6-6-0-9-4"
      style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2f78c7;fill-opacity:0.99215686;fill-rule:nonzero;stroke:none;stroke-width:1.68647301;marker:none;enable-background:accumulate"
      inkscape:connector-curvature="0" />
   <path
-     d="M 20.97316,2.4959197 25,6.1200998 11.46978,23.99928 1,14.97916 l 3.46308,-4.59062 6.1208,5.31544 z"
+     d="M 19.97316,1.4959197 24,5.1200998 10.46978,22.99928 0,13.97916 3.46308,9.38854 l 6.1208,5.31544 z"
      id="path2922-6-6-0-9"
      style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.68647301;marker:none;enable-background:accumulate"
      inkscape:connector-curvature="0" />

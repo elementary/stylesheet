@@ -2267,8 +2267,8 @@ radio {
         inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-    min-height: 13px;
-    min-width: 13px;
+    min-height: 12px;
+    min-width: 12px;
     transition: all 100ms ease-out;
 }
 
