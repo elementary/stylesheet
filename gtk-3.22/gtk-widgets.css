@@ -2354,6 +2354,16 @@ radio:checked:focus,
     -gtk-icon-source: -gtk-scaled(url("assets/radio-active-focus.svg"), url("assets/radio-active-focus@2.svg"));
 }
 
+radiobutton label:dir(ltr),
+checkbutton label:dir(ltr) {
+    margin-left: 6px;
+}
+
+radiobutton label:dir(rtl),
+checkbutton label:dir(rtl) {
+    margin-right: 6px;
+}
+
 /***********
 * Toolbars *
 ***********/
