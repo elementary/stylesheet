@@ -1589,6 +1589,12 @@ GtkComboBox {
     -GtkComboBox-shadow-type: none;
 }
 
+combobox arrow {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 GtkComboBox .button {
     padding: 2px 6px;
 }
@@ -1660,9 +1666,7 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Middle button */
 .linked entry,
 .linked button,
-.linked .entry,
-.linked .button,
-.linked > GtkComboBox .button.the-button-in-the-combobox,
+.linked > combobox button.combo,
 .titlebar .stack-switcher .button.image-button {
     border-left-width: 0;
     border-radius: 0;
@@ -1671,37 +1675,25 @@ GtkComboBox.combobox-entry .button:last-child {
 /* Leftmost button */
 .linked entry:first-child,
 .linked button:first-child,
-.linked .entry:first-child,
-.linked .button:first-child,
-.linked > GtkComboBox:first-child > .button.the-button-in-the-combobox,
+.linked > combobox:first-child button.combo,
 .titlebar .stack-switcher .button.image-button:first-child {
     border-width: 1px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 2.5px;
-    border-top-left-radius: 2.5px;
+    border-radius: 2.5px 0 0 2.5px;
 }
 
 /* Rightmost button */
 .linked entry:last-child,
 .linked button:last-child,
-.linked .entry:last-child,
-.linked .button:last-child,
-.linked > GtkComboBox:last-child > .button.the-button-in-the-combobox,
+.linked > combobox:last-child button.combo,
 .titlebar .stack-switcher .button.image-button:last-child {
     border-left-width: 0;
-    border-bottom-right-radius: 2.5px;
-    border-top-right-radius: 2.5px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border-radius: 0 2.5px 2.5px 0;
 }
 
 /* Linked single button */
 .linked entry:only-child,
 .linked button:only-child,
-.linked .entry:only-child,
-.linked .button:only-child,
-.linked > GtkComboBox:only-child > .button.the-button-in-the-combobox,
+.linked > combobox:only-child button.combo,
 .titlebar .stack-switcher .button.image-button:only-child {
     border-right-width: 1px;
     border-left-width: 1px;
@@ -2226,105 +2218,99 @@ menu separator {
     border-bottom: 1px solid @menu_separator_shadow;
 }
 
-.menuitem.check,
-.menuitem.radio,
-.menuitem.check:active,
-.menuitem.radio:active,
-.menuitem.check:hover,
-.menuitem.radio:hover,
-.menuitem.check:disabled,
-.menuitem.radio:disabled {
-    -gtk-icon-source: none;
-    background-color: transparent;
-    box-shadow: none;
-}
-
-menuitem check,
-menuitem radio {
-    min-height: 16px;
-    min-width: 16px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
 /*************************
  * Check and Radio items *
  *************************/
 
 check,
-radio,
-check:disabled,
-radio:disabled,
-.check,
-GtkRadioButton.radio,
-.check:disabled,
-GtkRadioButton.radio:disabled {
-    background-color: transparent;
-    border-style: none;
+radio {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                0.93
+            ),
+            shade (
+                @base_color,
+                0.97
+            )
+        );
+    border: 1px solid @border_color;
+    box-shadow:
+        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    min-height: 12px;
+    min-width: 12px;
+    transition: all 100ms ease-out;
 }
 
-GtkCheckButton:hover,
-GtkCheckButton:active:hover,
-GtkCheckButton:selected,
-GtkCheckButton:selected:focus {
-    background-color: transparent;
+/* FIXME: treeview .cell needs to be more specific to avoid this */
+treeview check.cell,
+treeview radio.cell {
+    border-width: 1px;
 }
 
-check,
-.check {
-    -gtk-icon-source: -gtk-scaled(url("assets/check.svg"), url("assets/check@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
+menuitem check {
+    background: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+menuitem check:dir(ltr),
+menuitem radio:dir(ltr) {
+    margin-right: 3px;
+}
+
+menuitem check:dir(rtl),
+menuitem radio:dir(rtl) {
+    margin-left: 3px;
 }
 
 check:focus,
-.check:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-focus.svg"), url("assets/check-focus@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-radio,
-.radio {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio.svg"), url("assets/radio@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-radio:focus,
-.radio:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-focus.svg"), url("assets/radio-focus@2.svg"));
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.menuitem.check,
-.menuitem.radio {
-    background-image: none;
+radio:focus {
+    border-color: @colorAccent;
+    box-shadow:
+        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
+        0 0 2px 1px alpha (@colorAccent, 0.5);
+    transition: all 100ms ease-out;
 }
 
 check:checked,
-.check:checked,
-.menuitem.check:checked {
+radio:checked {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @colorAccent,
+                1.2
+            ),
+            @colorAccent
+        );
+    border-color: shade (@colorAccent, 0.85);
     -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"), url("assets/check-active@2.svg"));
 }
 
-check:checked:focus,
-.check:checked:focus,
-.menuitem.check:checked:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-active-focus.svg"), url("assets/check-active-focus@2.svg"));
+check:disabled,
+radio:disabled {
+    background-color: alpha (#000, 0.02);
 }
 
-radio:checked,
-.radio:checked,
-.menuitem.radio:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-active.svg"), url("assets/radio-active@2.svg"));
+check:checked:disabled,
+radio:checked:disabled {
+    background-image: none;
+    background-color: mix (@bg_color, @colorAccent, 0.5);
+    border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
 }
 
-radio:checked:focus,
-.radio:checked:focus,
-.menuitem.radio:checked:focus {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-active-focus.svg"), url("assets/radio-active-focus@2.svg"));
+check {
+    border-radius: 2.5px;
+}
+
+radio {
+    border-radius: 50%;
 }
 
 radiobutton label:dir(ltr),
@@ -4024,7 +4010,8 @@ GcrCertificateWidget .frame {
 }
 
 .titlebar.default-decoration {
-    padding: 4px 3px;
+    padding: 0 3px;
+    min-height: 32px;
 }
 
 .titlebar.default-decoration:backdrop {
