@@ -416,37 +416,8 @@ entry.flat,
 * Symbolic images *
 *******************/
 
-image,
-image:selected,
-.image,
-.image:selected {
-    color: @internal_element_color;
-}
-
-image:hover,
-.image:hover {
-    color: @internal_element_prelight;
-}
-
-image:selected:focus,
-image:selected:hover,
-.image:selected:focus,
-.image:selected:hover {
-    color: @selected_fg_color;
-}
-
-view image,
-view image:hover,
-view image:selected,
-.view.image,
-.view.image:hover,
-.view.image:selected {
-    color: @view_symbolic_color;
-}
-
-view image:selected:focus,
-.view.image:selected:focus {
-    color: @selected_fg_color;
+image {
+    color: inherit;
 }
 
 /****************
