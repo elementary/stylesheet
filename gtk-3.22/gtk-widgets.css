@@ -20,12 +20,8 @@
     background-clip: padding-box;
     -GtkTextView-error-underline-color: @error_color;
     -GtkPaned-handle-size: 1px;
-    -GtkWidget-link-color: @link_color;
-    -GtkWidget-visited-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
-    -GtkWidget-focus-line-width: 0;
-    -GtkWidget-focus-padding: 0;
     -GtkButtonBox-child-min-height: 20;
     -GtkButtonBox-child-internal-pad-y: 1;
 
