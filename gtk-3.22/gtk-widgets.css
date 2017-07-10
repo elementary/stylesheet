@@ -20,12 +20,8 @@
     background-clip: padding-box;
     -GtkTextView-error-underline-color: @error_color;
     -GtkPaned-handle-size: 1px;
-    -GtkWidget-link-color: @link_color;
-    -GtkWidget-visited-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
-    -GtkWidget-focus-line-width: 0;
-    -GtkWidget-focus-padding: 0;
     -GtkButtonBox-child-min-height: 20;
     -GtkButtonBox-child-internal-pad-y: 1;
 
@@ -89,9 +85,8 @@ GtkGrid:disabled {
 
 tooltip,
 tooltip.background,
-.tooltip,
 .overlay-bar {
-    background-color: alpha (#333, 0.8);
+    background-color: alpha (#222, 0.9);
     border-radius: 3px;
     border-width: 0;
     box-shadow:
@@ -104,7 +99,6 @@ tooltip.background,
 }
 
 .overlay-bar {
-    background-color: alpha (#222, 0.9);
     margin: 3px;
 }
 
@@ -424,37 +418,8 @@ entry.flat,
 * Symbolic images *
 *******************/
 
-image,
-image:selected,
-.image,
-.image:selected {
-    color: @internal_element_color;
-}
-
-image:hover,
-.image:hover {
-    color: @internal_element_prelight;
-}
-
-image:selected:focus,
-image:selected:hover,
-.image:selected:focus,
-.image:selected:hover {
-    color: @selected_fg_color;
-}
-
-view image,
-view image:hover,
-view image:selected,
-.view.image,
-.view.image:hover,
-.view.image:selected {
-    color: @view_symbolic_color;
-}
-
-view image:selected:focus,
-.view.image:selected:focus {
-    color: @selected_fg_color;
+image {
+    color: inherit;
 }
 
 /****************
