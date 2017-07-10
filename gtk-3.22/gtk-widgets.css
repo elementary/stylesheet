@@ -89,9 +89,8 @@ GtkGrid:disabled {
 
 tooltip,
 tooltip.background,
-.tooltip,
 .overlay-bar {
-    background-color: alpha (#333, 0.8);
+    background-color: alpha (#222, 0.9);
     border-radius: 3px;
     border-width: 0;
     box-shadow:
@@ -104,7 +103,6 @@ tooltip.background,
 }
 
 .overlay-bar {
-    background-color: alpha (#222, 0.9);
     margin: 3px;
 }
 
