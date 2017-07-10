@@ -259,15 +259,10 @@ spinbutton,
     -gtk-icon-style: symbolic;
 }
 
-entry selection,
-entry selection:focus,
-textview selection,
-textview selection:focus,
-spinbutton:selected,
-spinbutton:selected:focus,
-.entry:selected,
-.entry:selected:focus {
+selection {
     background-color: @colorAccent;
+    color: @selected_fg_color;
+    text-shadow: none;
 }
 
 toolbar entry,
@@ -573,28 +568,7 @@ entry progress {
 * Level Bar *
 ************/
 
-levelbar,
-.level-bar {
-    -GtkLevelBar-min-block-width: 24;
-    -GtkLevelBar-min-block-height: 6;
-}
-
-levelbar.vertical,
-.level-bar.vertical {
-    -GtkLevelBar-min-block-width: 6;
-    -GtkLevelBar-min-block-height: 34;
-}
-
-levelbar trough,
-.level-bar.trough {
-    background-image: none;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-}
-
-levelbar block,
-.level-bar.fill-block {
+levelbar block {
     background-color: @selected_bg_color;
     background-image:
         linear-gradient(
@@ -606,17 +580,23 @@ levelbar block,
             @selected_bg_color
         );
     border: 1px solid shade (@selected_bg_color, 0.9);
-    border-radius: 2.5px;
+    border-radius: 3px;
     box-shadow:
         inset 0 0 0 1px alpha (#fff, 0.05),
         inset 0 1px 0 0 alpha (#fff, 0.35),
         inset 0 -1px 0 0 alpha (#fff, 0.15),
         0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+    min-height: 6px;
+    min-width: 24px;
     transition: all 100ms ease-in;
 }
 
-levelbar block.filled.low,
-.level-bar.fill-block.level-low {
+levelbar.vertical block {
+    min-height: 34px;
+    min-width: 6px;
+}
+
+levelbar block.filled.low {
     background-image:
         linear-gradient(
             to bottom,
@@ -634,8 +614,7 @@ levelbar block.filled.low,
     border-color: shade (@error_color, 0.9);
 }
 
-levelbar block.filled.middle,
-.level-bar.fill-block.level-middle {
+levelbar block.filled.middle {
     background-image:
         linear-gradient(
             to bottom,
@@ -653,8 +632,7 @@ levelbar block.filled.middle,
     border-color: shade (@warning_color, 0.9);
 }
 
-levelbar block.filled.high,
-.level-bar.fill-block.level-high {
+levelbar block.filled.high {
     background-image:
         linear-gradient(
             to bottom,
@@ -664,11 +642,10 @@ levelbar block.filled.high,
             ),
             @success_color
         );
-    border: 1px solid shade (@success_color, 0.9);
+    border-color: shade (@success_color, 0.9);
 }
 
-levelbar block.empty,
-.level-bar.fill-block.empty-fill-block {
+levelbar block.empty {
     background-color: shade (@bg_color, 0.95);
     background-image:
         linear-gradient(
@@ -690,8 +667,7 @@ levelbar block.empty,
         0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
-levelbar block:backdrop,
-.level-bar.fill-block:backdrop {
+levelbar block:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.85);
     border-color: shade (@bg_color, 0.68);
@@ -702,20 +678,25 @@ levelbar block:backdrop,
         0 1px 0 0 alpha (@bg_highlight_color, 0.15);
 }
 
-levelbar block.empty:backdrop,
-.level-bar.fill-block.empty-fill-block:backdrop {
+levelbar block.empty:backdrop {
     background-color: shade (@bg_color, 0.95);
     border-color: shade (@bg_color, 0.75);
 }
 
-levelbar block.discrete.horizontal,
-.level-bar.fill-block.indicator-discrete.horizontal {
+levelbar.discrete.horizontal block {
     margin: 0 2px;
 }
 
-levelbar block.discrete.vertical,
-.level-bar.fill-block.indicator-discrete.vertical {
+levelbar.discrete.vertical block {
     margin: 2px 0;
+}
+
+levelbar.discrete.horizontal block:first-child {
+    margin-left: 0;
+}
+
+levelbar.discrete.horizontal block:last-child {
+    margin-right: -2px;
 }
 
 /********
@@ -1745,24 +1726,20 @@ GtkComboBox.combobox-entry .button:last-child {
 * Notebook and Tabs *
 ********************/
 
-notebook,
-.notebook {
+notebook {
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
     border: none;
     border-radius: 0 0 2.5px 2.5px;
     text-shadow: 0 1px @text_shadow_color;
     -gtk-icon-shadow: 0 1px @text_shadow_color;
-    -GtkNotebook-tab-overlap: 1px;
 }
 
-notebook.frame,
-.notebook.frame {
+notebook.frame {
     border: 1px solid shade (@titlebar_color, 0.6);
 }
 
-notebook header,
-.notebook.header {
+notebook header {
     background-color: @bg_color;
     background-image:
         linear-gradient(
@@ -1793,8 +1770,7 @@ notebook header,
     border-radius: 0;
 }
 
-notebook header:backdrop,
-.notebook.header:backdrop {
+notebook header:backdrop {
     background-color: shade (@titlebar_color, 0.96);
     background-image:
         linear-gradient(
@@ -1815,18 +1791,15 @@ notebook header:backdrop,
     border-right-color: alpha (#fff, 0.2);
 }
 
-notebook image,
-.notebook GtkImage {
+notebook image {
     color: shade (@title_color, 0.75);
 }
 
-notebook image:disabled,
-.notebook GtkImage:disabled {
+notebook image:disabled {
     color: @insensitive_color;
 }
 
-notebook tab,
-.notebook tab {
+notebook tab {
     background-image: none;
     background-color: transparent;
     border-image:
@@ -1839,13 +1812,14 @@ notebook tab,
             )
         ) 0 1 0 0;
     border-radius: 0;
-    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-width: 0 1px;
     color: shade (@text_color, 1.12);
+    margin-right: -1px;
     padding: 3px;
 }
 
-notebook tab:first-child,
-.notebook tab:first-child {
+notebook tab:first-child {
     border-width: 0 1px;
     border-image:
         linear-gradient(
@@ -1858,8 +1832,7 @@ notebook tab:first-child,
         ) 0 1 0 1;
 }
 
-notebook tab:checked,
-.notebook tab:active {
+notebook tab:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -1876,7 +1849,6 @@ notebook tab:checked,
     border-image: none;
     border-radius: 4px 4px 0 0;
     border-style: solid;
-    border-width: 0 1px;
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
         0 0 1px 1px alpha (#000, 0.1);
@@ -1885,8 +1857,7 @@ notebook tab:checked,
     -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
-notebook tab:active:backdrop,
-.notebook tab:active:backdrop {
+notebook tab:checked:backdrop {
     background-image:
         linear-gradient(
             to bottom,
@@ -1905,30 +1876,20 @@ notebook tab:active:backdrop,
         0 0 0 1px alpha (#000, 0.1);
 }
 
-notebook tab > image,
-.notebook tab > GtkImage {
+notebook tab > image {
     color: shade (@titlebar_color, 0.35);
 }
 
-/* Add extra padding for pinned Midori tabs */
-.notebook tab GtkHBox > GtkImage:only-child {
-    padding: 2px;
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
-notebook viewport,
-.notebook GtkViewport {
+notebook viewport {
     background-color: @base_color;
     border-width: 0;
 }
 
-notebook tab button,
-.notebook tab .button {
+notebook tab button {
     padding: 0;
 }
 
-.notebook tab > .entry {
+notebook tab > entry {
     border-radius: 2px;
     padding: 1px 5px;
 }
@@ -1942,8 +1903,7 @@ notebook tab label {
 
 notebook tab:active label,
 notebook .active-page,
-notebook tab .active-page label,
-.notebook .active-page {
+notebook tab .active-page label {
     color: @text_color;
 }
 
