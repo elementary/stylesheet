@@ -409,10 +409,6 @@ image {
     color: inherit;
 }
 
-entry image {
-    color: @internal_element_color;
-}
-
 /****************
  * Progress bar *
  ****************/
