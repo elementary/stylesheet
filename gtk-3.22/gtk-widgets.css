@@ -1730,24 +1730,20 @@ GtkComboBox.combobox-entry .button:last-child {
 * Notebook and Tabs *
 ********************/
 
-notebook,
-.notebook {
+notebook {
     background-clip: border-box;
     background-color: shade (@titlebar_color, 1.06);
     border: none;
     border-radius: 0 0 2.5px 2.5px;
     text-shadow: 0 1px @text_shadow_color;
     -gtk-icon-shadow: 0 1px @text_shadow_color;
-    -GtkNotebook-tab-overlap: 1px;
 }
 
-notebook.frame,
-.notebook.frame {
+notebook.frame {
     border: 1px solid shade (@titlebar_color, 0.6);
 }
 
-notebook header,
-.notebook.header {
+notebook header {
     background-color: @bg_color;
     background-image:
         linear-gradient(
@@ -1778,8 +1774,7 @@ notebook header,
     border-radius: 0;
 }
 
-notebook header:backdrop,
-.notebook.header:backdrop {
+notebook header:backdrop {
     background-color: shade (@titlebar_color, 0.96);
     background-image:
         linear-gradient(
@@ -1800,18 +1795,15 @@ notebook header:backdrop,
     border-right-color: alpha (#fff, 0.2);
 }
 
-notebook image,
-.notebook GtkImage {
+notebook image {
     color: shade (@title_color, 0.75);
 }
 
-notebook image:disabled,
-.notebook GtkImage:disabled {
+notebook image:disabled {
     color: @insensitive_color;
 }
 
-notebook tab,
-.notebook tab {
+notebook tab {
     background-image: none;
     background-color: transparent;
     border-image:
@@ -1824,13 +1816,14 @@ notebook tab,
             )
         ) 0 1 0 0;
     border-radius: 0;
-    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-width: 0 1px;
     color: shade (@text_color, 1.12);
+    margin-right: -1px;
     padding: 3px;
 }
 
-notebook tab:first-child,
-.notebook tab:first-child {
+notebook tab:first-child {
     border-width: 0 1px;
     border-image:
         linear-gradient(
@@ -1843,8 +1836,7 @@ notebook tab:first-child,
         ) 0 1 0 1;
 }
 
-notebook tab:checked,
-.notebook tab:active {
+notebook tab:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -1861,7 +1853,6 @@ notebook tab:checked,
     border-image: none;
     border-radius: 4px 4px 0 0;
     border-style: solid;
-    border-width: 0 1px;
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
         0 0 1px 1px alpha (#000, 0.1);
@@ -1870,8 +1861,7 @@ notebook tab:checked,
     -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
-notebook tab:active:backdrop,
-.notebook tab:active:backdrop {
+notebook tab:checked:backdrop {
     background-image:
         linear-gradient(
             to bottom,
@@ -1890,30 +1880,20 @@ notebook tab:active:backdrop,
         0 0 0 1px alpha (#000, 0.1);
 }
 
-notebook tab > image,
-.notebook tab > GtkImage {
+notebook tab > image {
     color: shade (@titlebar_color, 0.35);
 }
 
-/* Add extra padding for pinned Midori tabs */
-.notebook tab GtkHBox > GtkImage:only-child {
-    padding: 2px;
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
-notebook viewport,
-.notebook GtkViewport {
+notebook viewport {
     background-color: @base_color;
     border-width: 0;
 }
 
-notebook tab button,
-.notebook tab .button {
+notebook tab button {
     padding: 0;
 }
 
-.notebook tab > .entry {
+notebook tab > entry {
     border-radius: 2px;
     padding: 1px 5px;
 }
@@ -1927,8 +1907,7 @@ notebook tab label {
 
 notebook tab:active label,
 notebook .active-page,
-notebook tab .active-page label,
-.notebook .active-page {
+notebook tab .active-page label {
     color: @text_color;
 }
 
