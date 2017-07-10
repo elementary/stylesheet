@@ -390,7 +390,7 @@ entry image {
 }
 
 entry image:backdrop {
-	color: @insensitive_color;
+    color: @insensitive_color;
 }
 
 entry image.left {
@@ -399,7 +399,7 @@ entry image.left {
 
 entry image.right:dir(ltr):hover,
 entry image.left:dir(rtl):hover {
-	color: @text_color;
+    color: @text_color;
 }
 
 entry.flat,
