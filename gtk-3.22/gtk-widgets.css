@@ -1300,7 +1300,7 @@ spinbutton {
     padding: 0;
 }
 
-spinbutton:not(.vertical) button {
+spinbutton.horizontal button {
     color: @internal_element_color;
     background: none;
     border-color: alpha (#000, 0.1);
@@ -1308,15 +1308,15 @@ spinbutton:not(.vertical) button {
     box-shadow: none;
 }
 
-spinbutton:not(.vertical) button:disabled {
+spinbutton.horizontal button:disabled {
     color: @insensitive_color;
 }
 
-spinbutton:not(.vertical) button.down {
+spinbutton.horizontal button.down {
     border-width: 0 1px;
 }
 
-spinbutton:not(.vertical) button.up {
+spinbutton.horizontal button.up {
     border-width: 0;
 }
 
@@ -1343,7 +1343,7 @@ spinbutton entry:focus {
     box-shadow: none;
 }
 
-spinbutton:not(.vertical) entry {
+spinbutton.horizontal entry {
     margin: 0 3px;
 }
 
