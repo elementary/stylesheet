@@ -259,15 +259,10 @@ spinbutton,
     -gtk-icon-style: symbolic;
 }
 
-entry selection,
-entry selection:focus,
-textview selection,
-textview selection:focus,
-spinbutton:selected,
-spinbutton:selected:focus,
-.entry:selected,
-.entry:selected:focus {
+selection {
     background-color: @colorAccent;
+    color: @selected_fg_color;
+    text-shadow: none;
 }
 
 toolbar entry,
