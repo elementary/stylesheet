@@ -2205,6 +2205,7 @@ radio:checked {
         );
     border-color: shade (@colorAccent, 0.85);
     -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"), url("assets/check-active@2.svg"));
+    -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
 }
 
 check:disabled,
