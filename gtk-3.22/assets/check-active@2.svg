@@ -46,15 +46,10 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <path
-     d="M 19.97316,3.4966397 24,7.1208199 10.46978,25 0,15.97988 3.46308,11.38926 9.58388,16.7047 Z"
-     id="path2922-6-6-0-9-4"
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2f78c7;fill-opacity:0.99215686;fill-rule:nonzero;stroke:none;stroke-width:1.68647301;marker:none;enable-background:accumulate"
-     inkscape:connector-curvature="0" />
   <path
      d="M 19.97316,1.4959197 24,5.1200998 10.46978,22.99928 0,13.97916 3.46308,9.38854 l 6.1208,5.31544 z"
      id="path2922-6-6-0-9"
