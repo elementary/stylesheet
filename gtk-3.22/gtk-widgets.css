@@ -384,12 +384,22 @@ toolbar spinbutton:disabled:backdrop,
     box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-entry image.left,
-entry:disabled:backdrop image.left,
-.entry.image.left,
-.entry:disabled:backdrop.image.left {
-    padding-right: 6px;
-    color: alpha (@text_color, 0.4);
+entry image {
+    color: @internal_element_color;
+    transition: all 200ms ease-in-out;
+}
+
+entry image:backdrop {
+    color: @insensitive_color;
+}
+
+entry image.left {
+    margin-right: 6px;
+}
+
+entry image.right:dir(ltr):hover,
+entry image.left:dir(rtl):hover {
+    color: @text_color;
 }
 
 entry.flat,
@@ -2191,6 +2201,7 @@ radio:checked {
         );
     border-color: shade (@colorAccent, 0.85);
     -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"), url("assets/check-active@2.svg"));
+    -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
 }
 
 check:disabled,
