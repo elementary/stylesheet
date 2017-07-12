@@ -3926,10 +3926,7 @@ GcrCertificateWidget .frame {
 
 dialog .titlebar.default-decoration,
 messagedialog .titlebar,
-messagedialog .titlebar.default-decoration,
-GtkDialog .titlebar.default-decoration,
-GtkMessageDialog .titlebar,
-GtkMessageDialog .titlebar.default-decoration {
+messagedialog .titlebar.default-decoration {
     border: none;
     background-image: none;
     background-color: @bg_color;
@@ -3937,17 +3934,14 @@ GtkMessageDialog .titlebar.default-decoration {
         inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 1px 0 0 @bg_highlight_color;
-    padding: 1px 3px;
+    min-height: 0;
+    padding: 3px;
 }
 
 dialog .titlebar:backdrop,
 messagedialog .titlebar:backdrop,
 dialog .titlebar.default-decoration:backdrop,
-messagedialog .titlebar.default-decoration:backdrop,
-GtkDialog .titlebar:backdrop,
-GtkMessageDialog .titlebar:backdrop,
-GtkDialog .titlebar.default-decoration:backdrop,
-GtkMessageDialog .titlebar.default-decoration:backdrop {
+messagedialog .titlebar.default-decoration:backdrop {
     border: none;
     background-image: none;
     background-color: @bg_color;
