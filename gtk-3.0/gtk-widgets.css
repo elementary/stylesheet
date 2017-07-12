@@ -2044,17 +2044,6 @@ scrollbar button,
     background-color: transparent;
 }
 
-scrollbar slider {
-    margin: 1px;
-    min-height: 30px;
-    min-width: 3px;
-    transition: all 200ms ease-in-out;
-}
-
-scrollbar:hover slider {
-    min-width: 8px;
-}
-
 scrollbar.overlay-indicator slider,
 .slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
@@ -2262,8 +2251,6 @@ menu separator {
 
 menuitem check,
 menuitem radio {
-    min-height: 16px;
-    min-width: 16px;
     margin-left: 2px;
     margin-right: 2px;
 }
