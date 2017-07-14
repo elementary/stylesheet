@@ -178,33 +178,41 @@ separator.vertical {
     min-width: 2px;
 }
 
-paned,
-GtkPaned {
-    margin-right: 8px;
-    -gtk-icon-source: none;
+paned.vertical separator {
+    background-image:
+        linear-gradient(
+            to bottom,
+            @menu_separator 1px,
+            @menu_separator_shadow 1px,
+            @menu_separator_shadow 2px,
+            transparent 2px
+        );
+    margin-bottom: -7px;
+    min-height: 8px;
 }
 
-paned.vertical,
-GtkPaned.vertical {
-    margin-bottom: 8px;
-}
-
-paned separator,
-.pane-separator {
-    background-color: shade (@base_color, 0.65);
+paned.horizontal separator {
     background-image:
         linear-gradient(
             to right,
-            shade (
-                @base_color,
-                0.65
-            ),
-            shade (
-                @base_color,
-                0.65
-            )
+            @menu_separator 1px,
+            @menu_separator_shadow 1px,
+            @menu_separator_shadow 2px,
+            transparent 2px
         );
-    -gtk-icon-source: none;
+    margin-right: -7px;
+    min-width: 8px;
+}
+
+toolbar separator,
+.titlebar separator {
+    background: none;
+    margin: 0 18px;
+}
+
+.titlebar separator:first-child,
+.titlebar separator:last-child {
+    margin: 0 4px;
 }
 
 toolbar separator,
