@@ -180,7 +180,6 @@ GtkFileChooserDialog .entry.pathbar:focus {
 ********/
 
 ConversationListView {
-    -GtkWidget-focus-line-width: 1px;
     -GtkTreeView-grid-line-width: 0;
 }
 
