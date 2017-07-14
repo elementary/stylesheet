@@ -215,7 +215,9 @@ toolbar separator,
 
 .titlebar separator:first-child,
 .titlebar separator:last-child {
-    margin: 0 4px;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
 }
 
 toolbar paned separator,
