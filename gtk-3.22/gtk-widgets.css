@@ -1912,32 +1912,21 @@ notebook tab label:backdrop {
 * Scrollbars *
 *************/
 
-scrollbar,
-.scrollbar {
+scrollbar {
     background-color: transparent;
     transition: all 600ms ease-out;
-    -GtkRange-slider-width: 5;
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 1;
     -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkScrollbar-min-slider-length: 30;
 }
 
-scrollbar:hover,
-.scrollbar:hover {
+scrollbar:hover {
     transition: all 200ms ease-in-out;
-    -GtkRange-slider-width: 10;
 }
 
-scrollbar button,
-.scrollbar.button,
-.scrollbar.button:active,
-.scrollbar.button:active:hover,
-.scrollbar.button:disabled,
-.scrollbar.button:hover:backdrop,
-.scrollbar.button:active:hover:backdrop {
+scrollbar button {
     border: none;
     background-image: none;
     background-color: transparent;
@@ -1945,49 +1934,55 @@ scrollbar button,
 
 scrollbar slider {
     margin: 1px;
-    min-height: 30px;
-    min-width: 3px;
     transition: all 200ms ease-in-out;
 }
 
-scrollbar:hover slider {
+scrollbar.horizontal slider {
+    min-width: 30px;
+    min-height: 3px;
+}
+
+scrollbar.horizontal:hover slider {
+    min-height: 8px;
+}
+
+scrollbar.vertical slider {
+    min-height: 30px;
+    min-width: 3px;
+}
+
+scrollbar.vertical:hover slider {
     min-width: 8px;
 }
 
-scrollbar.overlay-indicator slider,
-.slider {
+scrollbar.overlay-indicator slider {
     border: 1px solid alpha (@bg_highlight_color, 0.25);
     background-color: alpha (@text_color, 0.6);
     border-radius: 10px;
 }
 
-scrollbar.overlay-indicator slider:hover,
-.slider:hover {
+scrollbar.overlay-indicator slider:hover {
     border-radius: 20px;
 }
 
-scrollbar trough,
-.scrollbar.trough {
+scrollbar trough {
     padding: 0;
 }
 
-scrollbar.overlay-indicator trough,
-.scrollbar.overlay-indicator.trough {
+scrollbar.overlay-indicator trough {
     background-color: transparent;
 }
 
-scrollbar.overlay-indicator:hover trough,
-.scrollbar.overlay-indicator.trough:hover {
+scrollbar.overlay-indicator:hover trough {
     background-color: alpha (#000, 0.1);
 }
 
-scrollbar:hover trough,
-.scrollbar:hover.trough {
+scrollbar:hover trough {
     background-color: transparent;
     border-radius: 0;
 }
 
-.trough {
+trough {
     background-color: @base_color;
 }
 
