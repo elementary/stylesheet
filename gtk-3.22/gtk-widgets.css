@@ -1529,37 +1529,24 @@ GtkColorScale.scale.slider:focus {
 * ComboBoxes *
 *************/
 
-GtkComboBox {
-    -GtkComboBox-arrow-scaling: 0.5;
-    -GtkComboBox-shadow-type: none;
-}
-
 combobox arrow {
     min-width: 16px;
     min-height: 16px;
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-GtkComboBox .button {
+combobox button {
     padding: 2px 6px;
 }
 
-GtkComboBoxText GtkImage {
-    color: mix(@text_color, @bg_color, 0.3);
-}
-
 combobox entry:first-child,
-combobox button:first-child:not(:only-child),
-GtkComboBox.combobox-entry .entry:first-child,
-GtkComboBox.combobox-entry .button:first-child {
+combobox button:first-child:not(:only-child) {
     border-radius: 2.5px 0 0 2.5px;
     border-right-width: 0;
 }
 
 combobox entry:last-child,
-combobox button:last-child:not(:only-child),
-GtkComboBox.combobox-entry .entry:last-child,
-GtkComboBox.combobox-entry .button:last-child {
+combobox button:last-child:not(:only-child) {
     border-radius: 0 2.5px 2.5px 0;
     border-left-width: 0;
     background-image:
