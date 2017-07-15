@@ -1371,76 +1371,37 @@ spinbutton.horizontal entry {
  * Color Chooser *
  *****************/
 
-:selected GtkColorSwatch {
-    box-shadow: none;
+colorchooser colorswatch {
+    margin: -1px 3px;
 }
 
-colorswatch.dark,
-GtkColorSwatch.color-dark {
-    color: white;
-    outline-color: rgba(0, 0, 0, 0.3);
-}
-
-colorswatch.dark:backdrop,
-GtkColorSwatch.color-dark:backdrop {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-colorswatch.light,
-GtkColorSwatch.color-light {
-    color: black;
-    outline-color: rgba(255, 255, 255, 0.5);
-}
-
-colorswatch.light:backdrop,
-GtkColorSwatch.color-light:backdrop {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-colorswatch.top,
-GtkColorSwatch.top {
+colorchooser colorswatch.top {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
 
-colorswatch.bottom,
-GtkColorSwatch.bottom {
+colorchooser colorswatch.bottom {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
-colorswatch.left,
-colorswatch:first-child,
-colorswatch:first-child .overlay,
-GtkColorSwatch.left,
-GtkColorSwatch:first-child,
-GtkColorSwatch:first-child .overlay {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-
-colorswatch.right,
-colorswatch:last-child,
-colorswatch:last-child .overlay,
-GtkColorSwatch.right,
-GtkColorSwatch:last-child,
-GtkColorSwatch:last-child .overlay {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-colorswatch:only-child,
-colorswatch:only-child .overlay,
-GtkColorSwatch:only-child,
-GtkColorSwatch:only-child .overlay {
+colorchooser grid:nth-child(2) colorswatch,
+colorchooser box box colorswatch {
     border-radius: 4px;
 }
 
-colorswatch:hover,
-GtkColorSwatch:hover {
+colorchooser colorswatch overlay,
+colorchooser colorswatch overlay:selected,
+colorchooser colorswatch overlay:selected:focus {
+    background: none;
+    border-radius: 4px;
+    margin: -1px 2px;
+}
+
+colorswatch:not(#add-color-button):not(#editor-color-sample) overlay:hover {
     background-image:
         linear-gradient(
-            135deg,
+            160deg,
             alpha (
                 #fff,
                 0.7
@@ -1453,40 +1414,17 @@ GtkColorSwatch:hover {
     box-shadow: inset 0 0 alpha (#fff, 0.4);
 }
 
-colorswatch:backdrop,
-colorswatch:backdrop:selected,
-GtkColorSwatch:backdrop,
-GtkColorSwatch:backdrop:selected {
-    background-image: none;
-    box-shadow: none;
-}
-
-colorswatch:selected,
-colorswatch:hover:selected,
-GtkColorSwatch:selected,
-GtkColorSwatch:hover:selected {
+colorswatch.dark overlay {
     color: #fff;
-    background-color: @colorAccent;
-    background-image: none;
+    -gtk-icon-shadow: 0 1px 2px alpha(#000, 0.3);
 }
 
-GtkColorEditor GtkColorSwatch {
-    border-radius: 2.5px;
+colorswatch.light overlay {
+    color: alpha(#000, 0.6);
+    -gtk-icon-shadow: 0 1px 1px alpha(#fff, 0.2);
 }
 
-GtkColorEditor GtkColorSwatch:hover {
-    background-image: none;
-    box-shadow:
-        inset 0 1px rgba(0, 0, 0, 0.1),
-        0 1px white;
-}
-
-GtkColorEditor GtkColorSwatch:backdrop {
-    box-shadow: none;
-}
-
-colorswatch#add-color-button,
-GtkColorSwatch#add-color-button {
+#add-color-button {
     text-shadow: 0 1px @text_shadow_color;
     background-image:
         linear-gradient(
@@ -1507,15 +1445,6 @@ GtkColorSwatch#add-color-button {
     color: @text_color;
     transition: all 100ms ease-in;
     -gtk-icon-shadow: 0 1px @text_shadow_color;
-}
-
-colorswatch#add-color-button .overlay,
-GtkColorSwatch#add-color-button .overlay {
-    border-color: transparent;
-    background-color: transparent;
-    background-image: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none;
 }
 
 GtkColorScale.scale.slider,
