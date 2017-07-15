@@ -434,10 +434,7 @@ image {
  ****************/
 
 progressbar progress,
-treeview .progressbar,
-.progressbar,
-.progressbar row,
-.progressbar row:hover {
+treeview .progressbar {
     background-image:
         linear-gradient(
             to bottom,
@@ -459,8 +456,7 @@ treeview .progressbar,
     margin-right: -1px;
 }
 
-progressbar.vertical progress,
-.progressbar.vertical {
+progressbar.vertical progress {
     background-image:
         linear-gradient(
             to right,
@@ -477,12 +473,7 @@ progressbar.vertical progress,
 }
 
 progressbar progress:backdrop,
-treeview .progressbar:backdrop,
-.progressbar:backdrop,
-.progressbar row:backdrop,
-.progressbar row:backdrop:hover,
-.progressbar row:selected:backdrop,
-.progressbar row:selected:backdrop:hover {
+treeview .progressbar:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.85);
     border-color: shade (@bg_color, 0.68);
@@ -493,10 +484,7 @@ treeview .progressbar:backdrop,
 }
 
 progressbar trough,
-treeview .trough,
-GtkProgressBar.trough,
-.trough row,
-.trough row:hover {
+treeview .trough {
     padding: 0;
     border: 1px solid alpha (#000, 0.25);
     background-image:
@@ -515,8 +503,7 @@ GtkProgressBar.trough,
         0 1px 0 0 alpha (@bg_highlight_color, 0.5);
 }
 
-progressbar.vertical trough,
-GtkProgressBar.trough.vertical {
+progressbar.vertical trough {
     background-image:
         linear-gradient(
             to right,
@@ -529,29 +516,20 @@ GtkProgressBar.trough.vertical {
 }
 
 progressbar trough:backdrop,
-treeview .trough:backdrop,
-GtkProgressBar.trough:backdrop,
-.trough row:backdrop,
-.trough row:backdrop:hover,
-.trough row:selected:backdrop,
-.trough row:selected:backdrop:hover {
+treeview .trough:backdrop {
     background-image: none;
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.75);
 }
 
 treeview .progressbar:selected:focus,
-treeview .trough:selected:focus,
-.progressbar row:selected:focus,
-.trough row:selected:focus {
+treeview .trough:selected:focus {
     border: 1px solid shade (@colorAccent, 0.8);
 }
 
+
 entry progress,
-entry progress:focus,
-spinbutton progress,
-.entry.progressbar,
-.entry.progressbar:focus {
+spinbutton progress {
     background-image:
         linear-gradient(
             to bottom,
@@ -567,21 +545,17 @@ spinbutton progress,
             )
         );
     border: 1px solid @colorAccent;
-    border-right: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 2.5px;
     box-shadow:
         inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
         inset 0 0 0 1px alpha (@inset_dark_color, 0.3);
+    margin: -4px
 }
 
-entry progress {
-    border-top-left-radius: 2.5px;
-    border-bottom-left-radius: 2.5px;
-}
-
-.entry.progressbar {
-    margin: 0;
+entry progress:not(.pulse) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
 }
 
 /************
