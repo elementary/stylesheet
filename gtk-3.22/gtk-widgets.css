@@ -178,7 +178,7 @@ separator.vertical {
     min-width: 2px;
 }
 
-paned.vertical separator {
+paned.vertical > separator {
     background-image:
         linear-gradient(
             to bottom,
@@ -191,7 +191,7 @@ paned.vertical separator {
     min-height: 8px;
 }
 
-paned.horizontal separator {
+paned.horizontal > separator {
     background-image:
         linear-gradient(
             to right,
