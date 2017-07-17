@@ -696,8 +696,7 @@ levelbar.discrete.horizontal block:last-child {
 * Scale *
 ********/
 
-scale slider,
-.scale.slider {
+scale slider {
     background-image:
         linear-gradient(
             to bottom,
@@ -722,8 +721,7 @@ scale slider,
     min-width: 14px;
 }
 
-scale slider:focus,
-.scale.slider:focus {
+scale slider:focus {
     background-image:
         linear-gradient(
             to bottom,
@@ -749,8 +747,7 @@ scale slider:focus,
         0 1px 2px alpha (@colorAccent, 0.16);
 }
 
-scale slider:backdrop,
-.scale.slider:backdrop {
+scale slider:backdrop {
     background-image:
         linear-gradient(
             to bottom,
@@ -771,16 +768,14 @@ scale slider:backdrop,
         0 1px 1px alpha (#000, 0.1);
 }
 
-scale slider:disabled,
-.scale.slider:disabled {
+scale slider:disabled {
     background-color: transparent;
     background-image: none;
     border: none;
     box-shadow: none;
 }
 
-scale trough,
-.scale.trough {
+scale trough {
     border: 1px solid alpha (#000, 0.35);
     border-radius: 12px;
     background-color: transparent;
@@ -804,13 +799,7 @@ scale trough,
     min-width: 3px;
 }
 
-.titlebar scale trough,
-.titlebar .scale.trough {
-    border-radius: 0 12px 12px 0;
-    border-width: 1px 1px 1px 0;
-}
-
-.scale.trough:disabled {
+.titlebar scale trough {
     border-radius: 0 12px 12px 0;
     border-width: 1px 1px 1px 0;
 }
@@ -835,23 +824,21 @@ scale.vertical trough {
     margin: 0 7px;
 }
 
-.scale.trough.vertical:disabled {
-    border-radius: 12px 12px 0 0;
-    border-width: 1px 1px 0;
+scale mark {
+    background: mix (@bg_color, @text_color, 0.3);
 }
 
-.scale.trough.vertical.bottom:disabled {
-    border-width: 0 1px 1px;
-    border-radius: 0 0 12px 12px;
+scale.horizontal mark {
+    min-height: 6px;
+    min-width: 1px;
 }
 
-scale mark,
-.scale.mark {
-    color: mix (@bg_color, @text_color, 0.3);
+scale.vertical mark {
+    min-height: 1px;
+    min-width: 6px;
 }
 
-scale highlight,
-.scale.highlight.left {
+scale highlight {
     border: 1px solid alpha (#000, 0.5);
     border-radius: 12px 0 0 12px;
     background-image:
@@ -872,8 +859,7 @@ scale highlight,
     margin: -1px;
 }
 
-scale highlight:disabled,
-.scale.highlight.left:disabled {
+scale highlight:disabled {
     border-color: alpha (#000, 0.35);
     border-radius: 12px 0 0 12px;
     border-width: 1px 0 1px 1px;
@@ -894,8 +880,7 @@ scale highlight:disabled,
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-scale.vertical highlight,
-.scale.highlight.bottom {
+scale.vertical highlight {
     border-color: alpha (#000, 0.5);
     border-radius: 12px 12px 0 0;
     background-image:
@@ -915,8 +900,7 @@ scale.vertical highlight,
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-scale.vertical highlight:disabled,
-.scale.highlight.bottom:disabled {
+scale.vertical highlight:disabled {
     border-color: alpha (#000, 0.4);
     background-image:
         linear-gradient(
