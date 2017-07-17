@@ -70,8 +70,6 @@ box,
 box:disabled,
 grid,
 grid:disabled,
-GtkImage,
-GtkImage:disabled,
 GtkBox,
 GtkBox:disabled,
 GtkGrid,
@@ -2003,10 +2001,6 @@ popover .menuitem *:disabled,
     color: alpha (@fg_color, 0.3);
 }
 
-GtkModelMenuItem GtkBox GtkImage {
-    padding-right: 6px;
-}
-
 /* Moved titlebar sep here to fix seps in titlebar menus */
 
 .titlebar separator {
@@ -2300,24 +2294,19 @@ toolbar.bottom-toolbar button,
     box-shadow: none;
 }
 
-toolbar button.image-button image,
-.toolbar .button.image-button GtkImage {
+toolbar button.image-button image {
     color: shade (@title_color, 0.75);
     -gtk-icon-shadow: 0 1px @title_shadow_color;
 }
 
 .titlebar button.image-button image:disabled,
-toolbar button.image-button image:disabled,
-.titlebar .button.image-button GtkImage:disabled,
-.toolbar .button.image-button GtkImage:disabled {
+toolbar button.image-button image:disabled {
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
 
 .titlebar button.image-button image:backdrop,
-toolbar button.image-button image:backdrop,
-.titlebar .button.image-button GtkImage:backdrop,
-.toolbar .button.image-button GtkImage:backdrop {
+toolbar button.image-button image:backdrop {
     color: shade (@titlebar_color, 0.8);
     -gtk-icon-shadow: none;
 }
@@ -2438,9 +2427,7 @@ toolbar.inline-toolbar button:active:hover,
 
 toolbar.inline-toolbar button image:disabled,
 toolbar.inline-toolbar button label:disabled,
-toolbar.inline-toolbar button:disabled,
-.inline-toolbar.toolbar .button GtkImage:disabled,
-.inline-toolbar.toolbar .button:disabled {
+toolbar.inline-toolbar button:disabled {
     background-image: none;
     background-color: transparent;
     color: @insensitive_color;
@@ -2542,9 +2529,7 @@ button.suggested-action,
 button.suggested-action label,
 button.suggested-action label:hover,
 button.suggested-action image,
-button.suggested-action image:hover,
-.suggested-action.button GtkImage,
-.suggested-action.button GtkImage:hover {
+button.suggested-action image:hover {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2627,18 +2612,14 @@ button.destructive-action image,
 button.destructive-action image:hover,
 .titlebar button.destructive-action label,
 .titlebar button.destructive-action label:hover,
-.titlebar button.destructive-action.image-button image,
-.destructive-action.button GtkImage,
-.destructive-action.button GtkImage:hover,
-.titlebar .destructive-action.button.image-button GtkImage {
+.titlebar button.destructive-action.image-button image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 .titlebar button.destructive-action label:backdrop,
-.titlebar button.destructive-action.image-button image:backdrop,
-.titlebar .destructive-action.button.image-button GtkImage:backdrop {
+.titlebar button.destructive-action.image-button image:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -2709,10 +2690,10 @@ button:disabled,
 }
 
 toolbar button:disabled,
+.titlebar button.destructive-action.image-button image:backdrop,
 .toolbar .button:disabled,
 .toolbar .destructive-action.button:disabled,
-.titlebar .destructive-action.button:disabled,
-.titlebar .destructive-action.button.image-button GtkImage:backdrop {
+.titlebar .destructive-action.button:disabled {
     background-image:
         linear-gradient(
             to bottom,
@@ -2731,8 +2712,8 @@ toolbar button:disabled,
 
 button:disabled image,
 button:disabled label,
-.destructive-action.button:disabled GtkImage,
-.suggested-action.button:disabled GtkImage {
+button.destructive-action:disabled image,
+button.suggested-action:disabled image {
     text-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
     -gtk-icon-shadow: 0 1px @text_shadow_color;
@@ -3183,8 +3164,7 @@ list row:selected:focus,
     color: @selected_fg_color;
 }
 
-list row:selected:focus image,
-.list-row:selected:focus GtkImage {
+list row:selected:focus image {
     color: @selected_fg_color;
 }
 
@@ -3305,9 +3285,7 @@ GtkDialog .source-list {
 }
 
 .sidebar-item image,
-.sidebar-item GtkImage,
-.sidebar-row image,
-.sidebar-row GtkImage {
+.sidebar-row image {
     padding-right: 6px;
 }
 
@@ -3395,8 +3373,7 @@ GtkDialog .source-list .view:selected {
         inset 0 -1px 0 0 alpha (#000, 0.1);
 }
 
-dialog .sidebar-row:selected:focus image,
-GtkDialog .sidebar-row:selected:focus GtkImage {
+dialog .sidebar-row:selected:focus image {
     background-color: transparent;
 }
 
@@ -3670,13 +3647,11 @@ popover.osd,
     text-shadow: none;
 }
 
-popover image,
-.popover GtkImage {
+popover image {
     color: alpha (@text_color, 0.8);
 }
 
-popover image:disabled,
-.popover GtkImage:disabled {
+popover image:disabled {
     color: @insensitive_color;
 }
 
@@ -3845,8 +3820,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title,
 .titlebar .subtitle,
 .titlebar .titlebutton,
-.titlebar .button.image-button image,
-.titlebar .button.image-button GtkImage {
+.titlebar button.image-button image {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3875,8 +3849,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:disabled,
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
-.titlebar button.image-button image:disabled,
-.titlebar .button.image-button GtkImage:disabled {
+.titlebar button.image-button image:disabled {
     color: shade (@textColorPrimary, 1.5);
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3885,8 +3858,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
-.titlebar button.image-button image:backdrop,
-.titlebar .button.image-button GtkImage:backdrop {
+.titlebar button.image-button image:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -4063,13 +4035,11 @@ dialog label.primary {
 }
 
 image.error,
-GtkImage.error,
 .error {
     color: @error_color;
 }
 
 image.warning,
-GtkImage.warning,
 .warning {
     color: @warning_color;
 }
@@ -4080,7 +4050,6 @@ label.warning,
 }
 
 image.success,
-GtkImage.success,
 .success {
     color: @success_color;
 }
