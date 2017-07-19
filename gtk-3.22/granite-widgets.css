@@ -133,10 +133,9 @@
  * Seek bars *
  ************/
 
-.seek-bar .scale.slider {
-    background-color: transparent;
-    background-image: none;
-    border: none;
+.seek-bar scale slider {
+    background: transparent;
+    border: transparent;
     box-shadow: none;
 }
 
