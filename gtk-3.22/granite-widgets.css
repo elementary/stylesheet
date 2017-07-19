@@ -359,12 +359,12 @@
 * Round Apps *
 *************/
 
-GtkWindow.rounded,
-GtkWindow.rounded .action-bar {
+window.rounded,
+window.rounded actionbar {
     border-radius: 0 0 4px 4px;
 }
 
-GtkWindow.rounded.window-frame {
+window.rounded decoration {
     border-radius: 3px;
 }
 
