@@ -2354,10 +2354,8 @@ GtkDialog .action-bar {
 * Inline Toolbars *
 ******************/
 
-actionbar.inline-toolbar,
-toolbar.inline-toolbar,
-.inline-toolbar .action-bar,
-.toolbar.inline-toolbar {
+.inline-toolbar,
+.inline-toolbar:backdrop {
     border-color: shade (@bg_color, 0.75);
     border-radius: 0;
     border-width: 0 1px 1px;
@@ -2378,17 +2376,17 @@ toolbar.inline-toolbar,
     padding: 0;
 }
 
-paned actionbar.inline-toolbar,
-paned toolbar.inline-toolbar,
-.inline-toolbar .action-bar,
-GtkPaned .inline-toolbar.toolbar,
-.sidebar.inline-toolbar.toolbar,
-.source-list.inline-toolbar.toolbar {
+actionbar.inline-toolbar,
+actionbar.inline-toolbar:backdrop,
+paned .inline-toolbar,
+paned .inline-toolbar:backdrop,
+.sidebar.inline-toolbar,
+.source-list.inline-toolbar {
     border-width: 1px 0 0;
 }
 
-toolbar.inline-toolbar button,
-.inline-toolbar.toolbar .button {
+.inline-toolbar button.image-button {
+    border: none;
     border-radius: 0;
     color: shade (@text_color, 1.25);
     padding: 3px;
@@ -2396,24 +2394,18 @@ toolbar.inline-toolbar button,
     -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
-toolbar.inline-toolbar button:active,
-toolbar.inline-toolbar button:active:hover,
-.inline-toolbar.toolbar .button:active,
-.inline-toolbar.toolbar .button:active:hover {
-    border-style: none;
-    background-color: alpha (#000, 0.1);
+.inline-toolbar button.image-button:active {
+    background: alpha (#000, 0.1);
 }
 
-.inline-toolbar button.image-button:focus,
-.inline-toolbar .button.image-button:focus {
-    background-color: alpha (@text_color, 0.15);
+.inline-toolbar button.image-button:focus {
+    background: alpha (@text_color, 0.15);
 }
 
-toolbar.inline-toolbar button image:disabled,
-toolbar.inline-toolbar button label:disabled,
-toolbar.inline-toolbar button:disabled {
-    background-image: none;
-    background-color: transparent;
+.inline-toolbar button.image-button image:disabled,
+.inline-toolbar button.image-button label:disabled,
+.inline-toolbar button.image-button:disabled {
+    background: none;
     color: @insensitive_color;
 }
 
