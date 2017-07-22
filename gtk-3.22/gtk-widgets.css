@@ -1052,7 +1052,7 @@ button:hover,
     color: @text_color;
 }
 
-button:focus,
+button:not(.menuitem):focus,
 popover actionbar button:focus,
 .button:focus,
 .popover .action-bar .button:focus,
@@ -1121,8 +1121,8 @@ GtkDialog .button.flat.image-button:hover {
 }
 
 button:not(.menuitem):active,
-button:hover:active,
-button:focus:active,
+button:not(.menuitem):hover:active,
+button:not(.menuitem):focus:active,
 button:checked,
 button:hover:checked,
 button:focus:checked,
@@ -1912,88 +1912,54 @@ menubar:backdrop,
     background-color: transparent;
 }
 
-menubar menuitem,
-.menubar .menuitem {
-    padding: 3px 6px;
-}
-
-menu menuitem,
+menuitem,
 modelbutton,
-popover .menuitem,
-.menu .menuitem,
-.popover .menuitem {
-    padding: 6px;
+.menuitem {
+    padding: 3px 6px;
     text-shadow: none;
-    border-width: 1px 0;
     -gtk-icon-shadow: none;
 }
 
-modelbutton {
-    min-width: 150px;
+menuitem:active,
+menuitem:hover,
+modelbutton:active,
+modelbutton:hover,
+.menuitem:active,
+.menuitem:hover {
+    background-color: alpha (@text_color, 0.15);
 }
 
-popover .menuitem,
-popover .menuitem:disabled {
-    background-image: none;
-    border-color: transparent;
-    box-shadow: none;
+menuitem *:disabled,
+modelbutton *:disabled,
+.menuitem *:disabled {
+    color: @insensitive_color;
 }
 
-menu menuitem arrow,
-.menu .menuitem.arrow {
+menuitem accelerator {
+    color: alpha (@text_color, 0.5);
+}
+
+menuitem arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
     min-height: 16px;
     min-width: 16px;
 }
 
-menu menuitem arrow:dir(rtl),
-.menu .menuitem.arrow:dir(rtl) {
+menuitem arrow:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
-menu menuitem label,
-menu menuitem image,
+menuitem label,
+menuitem image,
 modelbutton label,
-popover menuitem label,
-popover menuitem image {
-    padding: 0 3px;
-}
-
-popover .menuitem label,
-popover .menuitem image {
+.menuitem label,
+.menuitem image {
     padding: 3px;
 }
 
-menu menuitem:active,
-menu menuitem:hover,
-modelbutton:active,
-modelbutton:hover,
-popup .menuitem:active,
-popup .menuitem:hover,
-popover .menuitem:active,
-popover .menuitem:hover,
-.menu .menuitem:active,
-.menu .menuitem:hover,
-.popup .menuitem:active,
-.popup .menuitem:hover,
-.popover .menuitem:active,
-.popover .menuitem:hover {
-    background-color: alpha (@text_color, 0.15);
-}
-
-popover .menuitem *:disabled,
-.menu .menuitem *:disabled,
-.popover .menuitem *:disabled {
-    color: @insensitive_color;
-}
-
-.menuitem .accelerator {
-    color: alpha (@text_color, 0.4);
-}
-
-.menuitem .accelerator:hover,
-.menuitem .accelerator:active {
-    color: alpha (@fg_color, 0.3);
+modelbutton {
+    min-width: 150px;
+    padding: 3px 12px;
 }
 
 /* Moved titlebar sep here to fix seps in titlebar menus */
@@ -3646,35 +3612,6 @@ popover .sidebar.view,
 popover.menu,
 .popover.menu {
     background-image: none;
-}
-
-.popover.menu .menuitem {
-    border-radius: 0;
-}
-
-GtkModelButton.button {
-    color: @fg_color;
-}
-
-GtkModelButton.button:active,
-GtkModelButton.button:disabled,
-GtkModelButton.button:active:disabled,
-GtkModelButton.button {
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-    border-image: none;
-    border-style: none;
-    box-shadow: none;
-}
-
-GtkModelButton.button:active:hover,
-GtkModelButton.button:hover,
-GtkModelButton.button:selected {
-    background-color: @colorAccent;
-    background-image: none;
-    border-style: none;
-    box-shadow: none;
 }
 
 .popover > .location-bar,
