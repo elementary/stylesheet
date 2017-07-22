@@ -2334,7 +2334,6 @@ GtkDialog .action-bar {
 .inline-toolbar,
 .inline-toolbar:backdrop {
     border-color: shade (@bg_color, 0.75);
-    border-radius: 0;
     border-width: 0 1px 1px;
     box-shadow: none;
     background-color: @bg_color;
