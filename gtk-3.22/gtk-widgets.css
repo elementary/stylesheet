@@ -822,16 +822,16 @@ scale.vertical trough {
     margin: 0 7px;
 }
 
-scale mark {
-    background: mix (@bg_color, @text_color, 0.3);
+scale mark indicator {
+    color: mix (@bg_color, @text_color, 0.3);
 }
 
-scale.horizontal mark {
+scale.horizontal mark indicator {
     min-height: 6px;
     min-width: 1px;
 }
 
-scale.vertical mark {
+scale.vertical mark indicator {
     min-height: 1px;
     min-width: 6px;
 }
