@@ -152,6 +152,7 @@
     background-image: none;
     background-color: alpha (#000, 0.4);
     color: @titlebar_color;
+    font-weight: 700;
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
