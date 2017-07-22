@@ -973,7 +973,7 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-default-border: 0;
 }
 
-button,
+button:not(.menuitem),
 .button,
 .titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
@@ -1117,7 +1117,7 @@ GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
 
-button:active,
+button:not(.menuitem):active,
 button:hover:active,
 button:focus:active,
 button:checked,
@@ -1915,6 +1915,7 @@ menubar menuitem,
 }
 
 menu menuitem,
+modelbutton,
 popover .menuitem,
 .menu .menuitem,
 .popover .menuitem {
@@ -1922,6 +1923,10 @@ popover .menuitem,
     text-shadow: none;
     border-width: 1px 0;
     -gtk-icon-shadow: none;
+}
+
+modelbutton {
+    min-width: 150px;
 }
 
 popover .menuitem,
@@ -1945,6 +1950,7 @@ menu menuitem arrow:dir(rtl),
 
 menu menuitem label,
 menu menuitem image,
+modelbutton label,
 popover menuitem label,
 popover menuitem image {
     padding: 0 3px;
@@ -1957,6 +1963,8 @@ popover .menuitem image {
 
 menu menuitem:active,
 menu menuitem:hover,
+modelbutton:active,
+modelbutton:hover,
 popup .menuitem:active,
 popup .menuitem:hover,
 popover .menuitem:active,
@@ -2459,9 +2467,9 @@ searchbar:backdrop,
     -gtk-icon-effect: dim;
 }
 
-GtkDialog .location-bar,
-GtkDialog .search-bar,
-GtkDialog .search-bar:backdrop {
+dialog .location-bar,
+dialog .search-bar,
+dialog .search-bar:backdrop {
     background-image: none;
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.6);
@@ -3917,8 +3925,7 @@ decoration:backdrop,
  **********/
 
 dialog decoration,
-messagedialog decoration,
-GtkDialog .window-frame {
+messagedialog decoration {
     border-radius: 4px;
     box-shadow:
         0 0 0 1px alpha (#000, 0.2),
@@ -3929,9 +3936,7 @@ GtkDialog .window-frame {
 }
 
 dialog,
-messagedialog,
-GtkDialog,
-GtkMessageDialog {
+messagedialog {
     border-radius: 0 0 4px 4px;
     box-shadow:
         inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
@@ -3940,22 +3945,18 @@ GtkMessageDialog {
 }
 
 messagedialog,
-.prompt,
-GtkMessageDialog {
+.prompt {
     -GtkDialog-button-spacing: 0;
     -GtkDialog-content-area-border: 12px;
     -gtk-icon-style: regular;
 }
 
-messagedialog button,
-GtkMessageDialog .button {
+messagedialog button {
     padding: 6px;
 }
 
 messagedialog .titlebar,
-dialog .titlebar,
-GtkDialog .titlebar,
-GtkMessageDialog .titlebar {
+dialog .titlebar {
     border: none;
     background-image: none;
     background-color: @bg_color;
@@ -3966,9 +3967,7 @@ GtkMessageDialog .titlebar {
 }
 
 dialog .titlebar:backdrop,
-messagedialog .titlebar:backdrop,
-GtkDialog .titlebar:backdrop,
-GtkMessageDialog .titlebar:backdrop {
+messagedialog .titlebar:backdrop {
     border: none;
     background-image: none;
     background-color: @bg_color;
@@ -3978,16 +3977,14 @@ GtkMessageDialog .titlebar:backdrop {
         inset 0 1px 0 0 @bg_highlight_color;
 }
 
-dialog .titlebar .title,
-GtkDialog .titlebar .title {
+dialog .titlebar .title {
     color: transparent;
     font-size: 0;
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
 
-dialog toolbar,
-GtkDialog .toolbar {
+dialog toolbar {
     background-image: none;
     background-color: @bg_color;
 }
