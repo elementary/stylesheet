@@ -3109,12 +3109,12 @@ popover list,
     background-color: transparent;
 }
 
-list row,
+row,
 .list-row {
     border-color: @border_color;
 }
 
-list row,
+row,
 .list-row.button {
     background-image: none;
     border: none;
@@ -3122,21 +3122,21 @@ list row,
     box-shadow: none;
 }
 
-list row:selected button,
+row:selected button,
 .list-row:selected:focus .button {
     background-color: @bg_color;
     transition: none;
 }
 
-list row:selected button.flat,
+row:selected button.flat,
 .list-row:selected:focus .button.flat {
     background-color: alpha (@text_color, 0.3);
     text-shadow: 0 1px 1px alpha (@text_color, 0.15);
     -gtk-icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
 }
 
-list row:selected,
-list row:selected:backdrop,
+row:selected,
+row:selected:backdrop,
 .list-row:selected,
 .list-row:selected:backdrop {
     background-color: shade (@base_color, 0.8);
@@ -3145,13 +3145,13 @@ list row:selected:backdrop,
     -gtk-icon-shadow: none;
 }
 
-list row:selected:focus,
+row:selected:focus,
 .list-row:selected:focus {
     background-color: @colorAccent;
     color: @selected_fg_color;
 }
 
-list row:selected:focus image {
+row:selected:focus image {
     color: @selected_fg_color;
 }
 
@@ -3236,8 +3236,6 @@ list row:selected:focus image {
 .sidebar,
 .sidebar.view,
 .sidebar list,
-.sidebar .list,
-.sidebar GtkList,
 .source-list,
 .source-list.view {
     background-color: shade (@bg_color, 0.92);
@@ -3249,24 +3247,25 @@ list row:selected:focus image {
 
 dialog .sidebar,
 dialog .sidebar list,
-dialog .source-list,
-GtkDialog .sidebar,
-GtkDialog .sidebar GtkList,
-GtkDialog .source-list {
+dialog .source-list {
     background-color: shade (@titlebar_color, 1.07);
 }
 
+.sidebar row,
 .sidebar .list-row,
 .sidebar-item,
 .sidebar-row {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 0;
     padding: 0 6px;
 }
 
-.sidebar .button {
+.sidebar button {
     padding: 3px;
 }
 
-.sidebar .label,
+.sidebar label,
 .sidebar-item label {
     padding: 4px;
 }
@@ -3276,6 +3275,7 @@ GtkDialog .source-list {
     padding-right: 6px;
 }
 
+.sidebar row label,
 .sidebar .list-row,
 .sidebar .view,
 .sidebar-item,
@@ -3284,6 +3284,7 @@ GtkDialog .source-list {
     text-shadow: 0 1px @text_shadow_color;
 }
 
+.sidebar row:hover,
 .sidebar .list-row:hover,
 .sidebar .view:hover,
 .sidebar-item:hover,
@@ -3293,6 +3294,7 @@ GtkDialog .source-list {
 }
 
 .popover .sidebar.view:selected,
+.sidebar row:selected,
 .sidebar .list-row:selected,
 .sidebar .view:selected,
 .sidebar-item.list-row:selected,
@@ -3333,13 +3335,9 @@ GtkDialog .source-list {
 }
 
 dialog .sidebar .view:selected,
-dialog .sidebar-row:selected,
-dialog .sidebar-row:selected:focus,
-dialog .source-list .view:selected,
-GtkDialog .sidebar .view:selected,
-GtkDialog .sidebar-row:selected,
-GtkDialog .sidebar-row:selected:focus,
-GtkDialog .source-list .view:selected {
+dialog .sidebar row:selected,
+dialog .sidebar row:selected:focus,
+dialog .source-list .view:selected {
     color: mix (@titlebar_color, @text_color, 0.6);
     background-image: none;
     background-color: alpha (#000, 0.05);
@@ -3409,10 +3407,7 @@ dialog .sidebar-row:selected:focus image {
 
 dialog .sidebar .view:selected:backdrop,
 dialog .sidebar-row:selected:backdrop,
-dialog .source-list .view:selected:backdrop,
-GtkDialog .sidebar .view:selected:backdrop,
-GtkDialog .sidebar-row:selected:backdrop,
-GtkDialog .source-list .view:selected:backdrop {
+dialog .source-list .view:selected:backdrop {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-image:
