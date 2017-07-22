@@ -973,7 +973,7 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-default-border: 0;
 }
 
-button,
+button:not(.menuitem),
 .button,
 .titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
@@ -1117,7 +1117,7 @@ GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
 
-button:active,
+button:not(.menuitem):active,
 button:hover:active,
 button:focus:active,
 button:checked,
@@ -1915,6 +1915,7 @@ menubar menuitem,
 }
 
 menu menuitem,
+modelbutton,
 popover .menuitem,
 .menu .menuitem,
 .popover .menuitem {
@@ -1922,6 +1923,10 @@ popover .menuitem,
     text-shadow: none;
     border-width: 1px 0;
     -gtk-icon-shadow: none;
+}
+
+modelbutton {
+    min-width: 150px;
 }
 
 popover .menuitem,
@@ -1945,6 +1950,7 @@ menu menuitem arrow:dir(rtl),
 
 menu menuitem label,
 menu menuitem image,
+modelbutton label,
 popover menuitem label,
 popover menuitem image {
     padding: 0 3px;
@@ -1957,6 +1963,8 @@ popover .menuitem image {
 
 menu menuitem:active,
 menu menuitem:hover,
+modelbutton:active,
+modelbutton:hover,
 popup .menuitem:active,
 popup .menuitem:hover,
 popover .menuitem:active,
