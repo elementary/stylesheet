@@ -19,7 +19,6 @@
 * {
     background-clip: padding-box;
     -GtkTextView-error-underline-color: @error_color;
-    -GtkPaned-handle-size: 1px;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
 
@@ -1784,9 +1783,6 @@ notebook tab label:backdrop {
 scrollbar {
     background-color: transparent;
     transition: all 600ms ease-out;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 1;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
 }
