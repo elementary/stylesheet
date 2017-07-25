@@ -976,7 +976,7 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-default-border: 0;
 }
 
-button:not(.menuitem),
+button,
 .button,
 .titlebar .stack-switcher .button.image-button {
     text-shadow: 0 1px @text_shadow_color;
@@ -1052,7 +1052,7 @@ button:hover,
     color: @text_color;
 }
 
-button:not(.menuitem):focus,
+button:focus,
 popover actionbar button:focus,
 .button:focus,
 .popover .action-bar .button:focus,
@@ -1120,9 +1120,9 @@ GtkDialog .button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
 
-button:not(.menuitem):active,
-button:not(.menuitem):hover:active,
-button:not(.menuitem):focus:active,
+button:active,
+button:hover:active,
+button:focus:active,
 button:checked,
 button:hover:checked,
 button:focus:checked,
@@ -1913,9 +1913,20 @@ menubar:backdrop,
 }
 
 menuitem,
-modelbutton,
 .menuitem {
     padding: 3px 6px;
+}
+
+menuitem,
+menuitem:focus,
+modelbutton,
+modelbutton:focus,
+.menuitem,
+.menuitem:focus {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -1925,7 +1936,9 @@ menuitem:hover,
 modelbutton:active,
 modelbutton:hover,
 .menuitem:active,
+.menuitem:focus:active,
 .menuitem:hover {
+    box-shadow: none;
     background-color: alpha (@text_color, 0.15);
 }
 
