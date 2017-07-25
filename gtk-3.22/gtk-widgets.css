@@ -22,8 +22,6 @@
     -GtkPaned-handle-size: 1px;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
-    -GtkButtonBox-child-min-height: 20;
-    -GtkButtonBox-child-internal-pad-y: 1;
 
     /* -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; FIXME: Uncomment for 3.19 */
 }
@@ -971,9 +969,6 @@ button,
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
     padding: 3px 6px;
-    -GtkButton-image-spacing: 4;
-    -GtkButton-interior-focus: true;
-    -GtkButton-default-border: 0;
 }
 
 button,
@@ -3476,8 +3471,7 @@ GtkCalendar.highlight {
 * GtkInfoBar *
 *************/
 
-infobar,
-GtkInfoBar {
+infobar {
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
@@ -3487,8 +3481,7 @@ GtkInfoBar {
         inset 0 -1px 0 0 shade (@bg_color, 1.2);
 }
 
-infobar.frame,
-GtkInfoBar.frame {
+infobar.frame {
     border-radius: 3px;
     box-shadow:
         inset 0 0 0 1px alpha (#fff, 0.05),
@@ -3498,14 +3491,12 @@ GtkInfoBar.frame {
         0 1px 2px alpha (#000, 0.1);
 }
 
-infobar label,
-GtkInfoBar .label {
+infobar label {
     color: @text_color;
     padding: 3px;
 }
 
-infobar.error,
-GtkInfoBar.error {
+infobar.error {
     background-color: shade (@error_color, 1.2);
     border-color: @error_color;
     box-shadow:
@@ -3513,14 +3504,12 @@ GtkInfoBar.error {
         inset 0 -1px 0 0 alpha (#fff, 0.3);
 }
 
-infobar.error label,
-GtkInfoBar.error .label {
+infobar.error label {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
 }
 
-infobar.question,
-GtkInfoBar.question {
+infobar.question {
     background-color: shade (@selected_bg_color, 1.2);
     border-color: shade (@selected_bg_color, 0.9);
     box-shadow:
@@ -3528,13 +3517,11 @@ GtkInfoBar.question {
         inset 0 -1px 0 0 alpha (#fff, 0.3);
 }
 
-infobar.question label,
-GtkInfoBar.question .label {
+infobar.question label {
     color: shade (@selected_bg_color, 0.25);
 }
 
-infobar.warning,
-GtkInfoBar.warning {
+infobar.warning {
     background-color: shade (@warning_color, 1.2);
     border-color: shade (@warning_color, 0.9);
     box-shadow:
@@ -3542,25 +3529,20 @@ GtkInfoBar.warning {
         inset 0 -1px 0 0 alpha (#fff, 0.4);
 }
 
-infobar.warning button,
-GtkInfoBar.warning .button {
+infobar.warning button {
     border-color: shade (@warning_color, 0.8);
 }
 
-infobar.warning button:backdrop,
-GtkInfoBar.warning .button:backdrop {
+infobar.warning button:backdrop {
     border-color: shade (@warning_color, 0.9);
 }
 
-infobar.warning label,
-GtkInfoBar.warning .label {
+infobar.warning label {
     color: shade (@warning_color, 0.25);
 }
 
-infoBar entry,
-infoBar menu,
-GtkInfoBar .entry,
-GtkInfoBar .menu {
+infobar entry,
+infobar menu {
     color: @text_color;
 }
 
@@ -3568,24 +3550,19 @@ infobar label:disabled {
     color: @insensitive_color;
 }
 
-infoBar button,
-infoBar button:focus,
-.notebook infobar button,
-GtkInfoBar .button,
-GtkInfoBar .button:focus,
-.notebook GtkInfoBar .button {
+infobar button,
+infobar button:focus,
+notebook infobar button {
     border: 1px solid alpha (#000, 0.3);
     text-shadow: none;
 }
 
-GtkInfoBar .button .label {
+infobar button label {
     padding: 0 6px;
 }
 
 infobar button:disabled,
-infobar button:hover:disabled,
-GtkInfoBar .button:disabled,
-GtkInfoBar .button:hover:disabled {
+infobar button:hover:disabled {
     opacity: 0.7;
 }
 
