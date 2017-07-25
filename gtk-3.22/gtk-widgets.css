@@ -2730,31 +2730,23 @@ GtkAssistant .sidebar {
  * GtkSwitch *
  *************/
 
-switch,
-GtkSwitch {
+switch {
     font-size: 0;
-
-    /* min-height: 24px;
-    min-width: 24px; FIXME: Uncomment for 3.19 */
-    -GtkSwitch-slider-width: 24;
-    -GtkSwitch-slider-height: 24;
     transition: all 200ms ease-in;
 }
 
-switch,
-GtkSwitch.trough {
+switch {
     background-color: alpha (#000, 0.1);
     background-image: none;
     border: 1px solid alpha (#000, 0.25);
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     color: transparent;
 }
 
-switch:checked,
-GtkSwitch.trough:active {
+switch:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -2767,27 +2759,23 @@ GtkSwitch.trough:active {
     border-color: shade (@colorAccent, 0.85);
 }
 
-switch:disabled,
-GtkSwitch.trough:disabled {
+switch:disabled {
     background-color: alpha (#000, 0.02);
 }
 
-switch:checked:disabled,
-GtkSwitch.trough:active:disabled {
+switch:checked:disabled {
     background-image: none;
     background-color: mix (@bg_color, @colorAccent, 0.5);
     border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
 }
 
-switch:checked:backdrop,
-GtkSwitch.trough:active:backdrop {
+switch:checked:backdrop {
     background-image: none;
     background-color: shade (@bg_color, 0.8);
     border-color: shade (@bg_color, 0.65);
 }
 
-switch slider,
-GtkSwitch.slider {
+switch slider {
     background-image:
         linear-gradient(
             to bottom,
@@ -2809,10 +2797,11 @@ GtkSwitch.slider {
         0 1px 1px alpha (#000, 0.15),
         0 1px 2px alpha (#000, 0.16);
     margin: -1px;
+    min-height: 24px;
+    min-width: 24px;
 }
 
-switch:focus slider,
-GtkSwitch.slider:focus {
+switch:focus slider {
     background-image:
         linear-gradient(
             to bottom,
@@ -2839,9 +2828,7 @@ GtkSwitch.slider:focus {
 }
 
 switch slider:disabled,
-switch slider:backdrop,
-GtkSwitch.slider:disabled,
-GtkSwitch.slider:backdrop {
+switch slider:backdrop {
     background-image: none;
     background-color: @bg_color;
     box-shadow:
