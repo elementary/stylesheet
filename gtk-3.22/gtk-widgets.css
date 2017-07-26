@@ -3914,6 +3914,10 @@ dialog label.primary {
     opacity: 0.75;
 }
 
+.attention {
+    color: @attention_color;
+}
+
 image.error,
 .error {
     color: @error_color;
