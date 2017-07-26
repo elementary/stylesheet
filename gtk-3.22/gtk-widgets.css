@@ -1866,8 +1866,8 @@ GtkTreeMenu .menuitem {
 
 menu,
 .content-view .menu,
-.menu,
-.popup {
+window.menu,
+window.popup {
     padding: 4px 0;
     border-radius: 4px;
     background-color: @bg_color;
@@ -3775,7 +3775,7 @@ decoration,
         0 1px 4px alpha (#000, 0.24);
 }
 
-.popup decoration,
+window.popup decoration,
 .window-frame.menu.csd,
 .window-frame.popup.csd {
     border-radius: 3px;
@@ -3786,9 +3786,9 @@ decoration,
     margin: 0;
 }
 
-menu .popup decoration,
-.menu .window-frame.menu.csd,
-.menu .window-frame.popup.csd {
+menu window.popup decoration,
+window.menu .window-frame.menu.csd,
+window.menu .window-frame.popup.csd {
     box-shadow:
         0 0 0 1px alpha (#000, 0.2),
         0 10px 20px alpha (#000, 0.19),
