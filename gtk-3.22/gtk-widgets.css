@@ -66,11 +66,7 @@ label:disabled,
 box,
 box:disabled,
 grid,
-grid:disabled,
-GtkBox,
-GtkBox:disabled,
-GtkGrid,
-GtkGrid:disabled {
+grid:disabled {
     background-color: transparent;
 }
 
@@ -924,15 +920,13 @@ frame,
     color: lighter (@fg_color);
 }
 
-scrolledwindow.frame,
-GtkScrolledWindow.frame {
+scrolledwindow.frame {
     border: 1px solid @border_color;
 }
 
 frame.flat,
 scrolledwindow viewport.frame,
-.frame.flat,
-GtkScrolledWindow GtkViewport.frame {
+.frame.flat {
     border: none;
 }
 
@@ -964,9 +958,7 @@ undershoot.bottom,
 
 button,
 .button,
-.button.menuitem.menubar,
-GtkColorButton.button,
-GtkComboBox.combobox-entry .button {
+.button.menuitem.menubar {
     padding: 3px 6px;
 }
 
@@ -1104,13 +1096,11 @@ button.circular.flat.image-button:focus:active,
     -gtk-icon-shadow: none;
 }
 
-dialog .inline-toolbar button,
-GtkDialog .inline-toolbar .button.flat.image-button {
+dialog .inline-toolbar button {
     background-color: transparent;
 }
 
-dialog button.flat.image-button:hover,
-GtkDialog .button.flat.image-button:hover {
+dialog button.flat.image-button:hover {
     background-color: alpha (@text_color, 0.7);
 }
 
@@ -1145,13 +1135,11 @@ button.flat:active,
     box-shadow: none;
 }
 
-button.link,
-GtkLinkButton.flat {
+button.link {
     padding: 0;
 }
 
-button.link:focus,
-GtkLinkButton.flat.text-button:focus {
+button.link:focus {
     background-color: transparent;
 }
 
@@ -2303,8 +2291,7 @@ actionbar,
     -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
-dialog .action-bar,
-GtkDialog .action-bar {
+dialog .action-bar {
     background-image: none;
     background-color: @bg_color;
     border-top-color: shade (@bg_color, 0.8);
@@ -2914,13 +2901,11 @@ GtkListBoxRow:first-child {
  * FlowBox *
  ***********/
 
-flowboxchild,
-GtkFlowBox .grid-child {
+flowboxchild {
     border-radius: 3px;
 }
 
-flowboxchild:focus,
-GtkFlowBox .grid-child:focus {
+flowboxchild:focus {
     background-color: alpha (#000, 0.2);
     color: @text_color;
 }
@@ -3056,7 +3041,6 @@ treeview header button:backdrop label {
 *************/
 
 list,
-GtkListBox,
 .list {
     background-color: @base_color;
 }
@@ -3127,8 +3111,7 @@ row:selected:focus image {
 }
 
 .content-view,
-.content-view viewport,
-.content-view GtkViewport {
+.content-view viewport {
     background-color: transparent;
     background-image: none;
 }
@@ -3402,7 +3385,6 @@ dialog .source-list .view:selected:backdrop {
 .expander {
     color: @fg_color;
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-    -GtkTreeView-expander-size: 16;
 }
 
 .expander:dir(rtl) {
@@ -3429,25 +3411,19 @@ dialog .source-list .view:selected:backdrop {
 * GtkCalendar *
 **************/
 
-calendar,
-GtkCalendar {
+calendar {
     border-radius: 2px;
 }
 
 calendar button,
 calendar button:disabled,
 calendar header,
-calendar .view,
-GtkCalendar.button,
-GtkCalendar.button:disabled,
-GtkCalendar.header,
-GtkCalendar.view {
+calendar .view {
     background-color: transparent;
     background-image: none;
 }
 
-.highlight,
-GtkCalendar.highlight {
+.highlight {
     color: #777;
 }
 
