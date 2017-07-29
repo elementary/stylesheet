@@ -3164,7 +3164,7 @@ row:selected:focus image {
 .source-list,
 .source-list.view {
     background-color: shade (@bg_color, 0.92);
-    color: mix (@titlebar_color, @text_color, 0.6);
+    color: mix (@bg_color, @text_color, 0.77);
     -gtk-icon-style: regular;
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
