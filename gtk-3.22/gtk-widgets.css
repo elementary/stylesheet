@@ -1969,9 +1969,15 @@ menu separator {
     border-bottom: 1px solid @menu_separator_shadow;
 }
 
-/*************************
- * Check and Radio items *
- *************************/
+/*******************************
+ * Check and Radio, and Switch *
+ ******************************/
+
+check,
+radio,
+switch {
+    transition: all 200ms ease-in;
+}
 
 check,
 radio {
@@ -1994,7 +2000,18 @@ radio {
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     min-height: 12px;
     min-width: 12px;
-    transition: all 100ms ease-out;
+}
+
+switch {
+    background-color: alpha (#000, 0.1);
+    background-image: none;
+    border: 1px solid alpha (#000, 0.25);
+    border-radius: 16px;
+    box-shadow:
+        inset 0 0 0 1px alpha (#000, 0.05),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    color: transparent;
+    font-size: 0;
 }
 
 /* FIXME: treeview .cell needs to be more specific to avoid this */
@@ -2029,8 +2046,35 @@ radio:focus {
     transition: all 100ms ease-out;
 }
 
+switch:focus slider {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @bg_color,
+                1.05
+            ),
+            shade (
+                mix (
+                    @bg_color,
+                    @colorAccent,
+                    0.1
+                ),
+                0.95
+            )
+        );
+    border-color: @colorAccent;
+    box-shadow:
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+        0 1px 1px alpha (@colorAccent, 0.35),
+        0 1px 2px alpha (@colorAccent, 0.16);
+}
+
 check:checked,
-radio:checked {
+radio:checked,
+switch:checked {
     background-image:
         linear-gradient(
             to bottom,
@@ -2041,20 +2085,35 @@ radio:checked {
             @colorAccent
         );
     border-color: shade (@colorAccent, 0.85);
+}
+
+check:checked,
+radio:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"), url("assets/check-active@2.svg"));
     -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
 }
 
 check:disabled,
-radio:disabled {
+radio:disabled,
+switch:disabled {
     background-color: alpha (#000, 0.02);
 }
 
 check:checked:disabled,
-radio:checked:disabled {
+radio:checked:disabled,
+switch:checked:disabled {
     background-image: none;
     background-color: mix (@bg_color, @colorAccent, 0.5);
     border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
+}
+
+check:checked:backdrop,
+radio:checked:backdrop,
+switch:checked:backdrop {
+    background-image: none;
+    background-color: shade (@bg_color, 0.8);
+    border-color: shade (@bg_color, 0.65);
+    -gtk-icon-shadow: 0 1px 1px shade (@bg_color, 0.65);
 }
 
 check {
@@ -2073,6 +2132,43 @@ checkbutton label:dir(ltr) {
 radiobutton label:dir(rtl),
 checkbutton label:dir(rtl) {
     margin-right: 6px;
+}
+
+switch slider {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @bg_color,
+                1.05
+            ),
+            shade (
+                @bg_color,
+                0.95
+            )
+        );
+    border: 1px solid alpha (#000, 0.2);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+        0 1px 1px alpha (#000, 0.15),
+        0 1px 2px alpha (#000, 0.16);
+    margin: -1px;
+    min-height: 24px;
+    min-width: 24px;
+}
+
+switch slider:disabled,
+switch slider:backdrop {
+    background-image: none;
+    background-color: @bg_color;
+    box-shadow:
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+        0 1px 1px alpha (#000, 0.15);
 }
 
 /***********
@@ -2709,118 +2805,6 @@ GtkAssistant .sidebar {
     color: mix (@fg_color, @bg_color, 0.4);
     padding: 12px;
     text-shadow: 0 1px shade (@bg_color, 1.04);
-}
-
-/*************
- * GtkSwitch *
- *************/
-
-switch {
-    font-size: 0;
-    transition: all 200ms ease-in;
-}
-
-switch {
-    background-color: alpha (#000, 0.1);
-    background-image: none;
-    border: 1px solid alpha (#000, 0.25);
-    border-radius: 16px;
-    box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-    color: transparent;
-}
-
-switch:checked {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @colorAccent,
-                1.2
-            ),
-            @colorAccent
-        );
-    border-color: shade (@colorAccent, 0.85);
-}
-
-switch:disabled {
-    background-color: alpha (#000, 0.02);
-}
-
-switch:checked:disabled {
-    background-image: none;
-    background-color: mix (@bg_color, @colorAccent, 0.5);
-    border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
-}
-
-switch:checked:backdrop {
-    background-image: none;
-    background-color: shade (@bg_color, 0.8);
-    border-color: shade (@bg_color, 0.65);
-}
-
-switch slider {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @bg_color,
-                1.05
-            ),
-            shade (
-                @bg_color,
-                0.95
-            )
-        );
-    border: 1px solid alpha (#000, 0.2);
-    border-radius: 50%;
-    box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 1px alpha (#000, 0.15),
-        0 1px 2px alpha (#000, 0.16);
-    margin: -1px;
-    min-height: 24px;
-    min-width: 24px;
-}
-
-switch:focus slider {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @bg_color,
-                1.05
-            ),
-            shade (
-                mix (
-                    @bg_color,
-                    @colorAccent,
-                    0.1
-                ),
-                0.95
-            )
-        );
-    border-color: @colorAccent;
-    box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 1px alpha (@colorAccent, 0.35),
-        0 1px 2px alpha (@colorAccent, 0.16);
-}
-
-switch slider:disabled,
-switch slider:backdrop {
-    background-image: none;
-    background-color: @bg_color;
-    box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 1px alpha (#000, 0.15);
 }
 
 /*****************************
