@@ -195,12 +195,6 @@ paned.horizontal > separator {
     min-width: 8px;
 }
 
-toolbar separator,
-.titlebar separator {
-    background: none;
-    margin: 0 18px;
-}
-
 .titlebar separator:first-child,
 .titlebar separator:last-child {
     margin: 0 4px;
