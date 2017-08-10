@@ -3365,13 +3365,18 @@ dialog .source-list .view:selected:backdrop {
 * Expander *
 ***********/
 
-.source-list.category-expander,
-.expander {
-    color: @fg_color;
+expander arrow,
+.expander,
+.category-expander {
+    min-height: 16px;
+    min-width: 16px;
+    transition: all 150ms ease-in-out;
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
-.expander:dir(rtl) {
+expander arrow:dir(rtl),
+.expander:dir(rtl),
+.category-expander:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
@@ -3381,14 +3386,16 @@ dialog .source-list .view:selected:backdrop {
     border: none;
 }
 
+expander arrow:checked,
 .expander:checked,
-.source-list.category-expander:checked {
-    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+.category-expander:checked {
+    -gtk-icon-transform: rotate(90deg);
 }
 
-.expander row:selected,
-.expander row:selected:focus {
-    color: @selected_fg_color;
+expander arrow:checked:dir(rtl),
+.expander:checked:dir(rtl),
+.category-expander:checked:dir(rtl) {
+    -gtk-icon-transform: rotate(-90deg);
 }
 
 /**************
