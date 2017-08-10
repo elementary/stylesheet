@@ -139,7 +139,6 @@ rubberband,
 }
 
 .keycap {
-    text-shadow: 0 1px @text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
@@ -158,6 +157,7 @@ rubberband,
         0 1px 0 0 @border_color;
     min-width: 16px;
     padding: 3px 6px;
+    text-shadow: 0 1px @text_shadow_color;
 }
 
 /**************
