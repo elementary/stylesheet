@@ -79,18 +79,15 @@
     box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23);
 }
 
-.pathbar image,
-.pathbar.image {
+.pathbar image {
     color: @internal_element_color;
 }
 
-.pathbar image:hover,
-.pathbar.image:hover {
+.pathbar image:hover {
     color: @internal_element_prelight;
 }
 
-dialog entry.pathbar,
-GtkFileChooserDialog .entry.pathbar {
+dialog entry.pathbar {
     background-image:
         linear-gradient(
             to bottom,
@@ -110,8 +107,7 @@ GtkFileChooserDialog .entry.pathbar {
         0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.5);
 }
 
-dialog entry.pathbar:focus,
-GtkFileChooserDialog .entry.pathbar:focus {
+dialog entry.pathbar:focus {
     border-color: alpha (@colorAccent, 0.8);
     box-shadow:
         inset 0 0 0 1px alpha (@colorAccent, 0.23),
@@ -288,17 +284,14 @@ ConversationListView.view.cell:selected:focus {
     background-color: alpha(#000, 0.5);
 }
 
-.menubar.panel,
 menubar.panel,
-.panel menubar,
-.panel .menubar {
+.panel menubar {
     box-shadow: none;
     border: none;
 }
 
 .composited-indicator > revealer label,
-.composited-indicator > revealer image,
-.composited-indicator > GtkRevealer {
+.composited-indicator > revealer image {
     color: #fff;
     font-weight: bold;
     text-shadow:
@@ -323,8 +316,7 @@ menubar.panel,
 }
 
 .panel.color-light .composited-indicator > revealer label,
-.panel.color-light .composited-indicator > revealer image,
-.panel.color-light .composited-indicator > GtkRevealer {
+.panel.color-light .composited-indicator > revealer image {
     color: alpha (#000, 0.65);
     text-shadow:
         0 0 2px alpha (#fff, 0.3),
@@ -343,7 +335,7 @@ menubar.panel,
     text-shadow: none;
 }
 
-.panel .popover {
+.panel popover {
     box-shadow:
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.5),
         0 3px 4px alpha (#000, 0.15),
