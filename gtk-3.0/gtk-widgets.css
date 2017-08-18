@@ -3708,6 +3708,7 @@ GtkDialog .source-list .view:selected:backdrop {
 }
 
 .sidebar .stack-switcher .button {
+    -gtk-icon-style: symbolic;
     border-radius: 0;
     border-top-width: 0;
 }

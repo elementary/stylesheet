@@ -3374,8 +3374,10 @@ dialog .source-list .view:selected:backdrop {
 }
 
 .sidebar .stack-switcher button {
+    -gtk-icon-style: symbolic;
     border-radius: 0;
     border-top-width: 0;
+    min-height: 23px;
 }
 
 .sidebar .stack-switcher button:first-child {
