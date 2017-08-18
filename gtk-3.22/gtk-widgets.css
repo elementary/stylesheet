@@ -3373,6 +3373,19 @@ dialog .source-list .view:selected:backdrop {
     border: none;
 }
 
+.sidebar .stack-switcher button {
+    border-radius: 0;
+    border-top-width: 0;
+}
+
+.sidebar .stack-switcher button:first-child {
+    border-left-width: 0;
+}
+
+.sidebar .stack-switcher button:last-child {
+    border-right-width: 0;
+}
+
 .sidebar separator {
     background: none;
 }
