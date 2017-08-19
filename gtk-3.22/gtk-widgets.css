@@ -3665,6 +3665,7 @@ GcrCertificateWidget .frame {
     border-color: shade (@titlebar_color, 0.78);
 }
 
+.titlebar.flat,
 dialog .titlebar.default-decoration,
 messagedialog .titlebar,
 messagedialog .titlebar.default-decoration {
@@ -3675,10 +3676,16 @@ messagedialog .titlebar.default-decoration {
         inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 1px 0 0 @bg_highlight_color;
+}
+
+dialog .titlebar.default-decoration,
+messagedialog .titlebar,
+messagedialog .titlebar.default-decoration {
     min-height: 0;
     padding: 3px;
 }
 
+.titlebar.flat:backdrop,
 dialog .titlebar:backdrop,
 messagedialog .titlebar:backdrop,
 dialog .titlebar.default-decoration:backdrop,
