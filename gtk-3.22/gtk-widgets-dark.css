@@ -660,17 +660,13 @@ button.destructive-action,
 }
 
 button.destructive-action label,
-button.destructive-action label:hover,
-.destructive-action.button GtkLabel,
-.destructive-action.button Gtklabel:hover {
+button.destructive-action label:hover {
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 button.destructive-action:active,
-button.destructive-action:active:hover
-.destructive-action.button:active,
-.destructive-action.button:active:hover {
+button.destructive-action:active:hover {
     background-image:
         linear-gradient(
             to bottom,
