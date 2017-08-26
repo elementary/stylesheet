@@ -3903,6 +3903,7 @@ dialog .titlebar .title {
     -gtk-icon-shadow: none;
 }
 
+dialog notebook,
 dialog toolbar {
     background-image: none;
     background-color: @bg_color;
