@@ -660,17 +660,13 @@ button.destructive-action,
 }
 
 button.destructive-action label,
-button.destructive-action label:hover,
-.destructive-action.button GtkLabel,
-.destructive-action.button Gtklabel:hover {
+button.destructive-action label:hover {
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 button.destructive-action:active,
-button.destructive-action:active:hover
-.destructive-action.button:active,
-.destructive-action.button:active:hover {
+button.destructive-action:active:hover {
     background-image:
         linear-gradient(
             to bottom,
@@ -868,14 +864,6 @@ GtkInfoBar .button:hover:disabled {
  * CSD *
  ******/
 
-.titlebar {
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.08);
-    text-shadow: 0 1px alpha (#000, 0.4);
-    -gtk-icon-shadow: 0 1px alpha (#000, 0.4);
-}
-
 .titlebar .titlebutton {
     background: none;
     border-color: transparent;
@@ -892,20 +880,20 @@ decoration,
         0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.popup decoration,
+window.popup decoration,
 .window-frame.menu.csd,
 .window-frame.popup.csd {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.6),
+        0 0 0 1px alpha (#000, 0.75),
         0 3px 6px alpha (#000, 0.16),
         0 3px 6px alpha (#000, 0.23);
 }
 
-menu .popup decoration,
+menu window.popup decoration,
 .menu .window-frame.menu.csd,
 .menu .window-frame.popup.csd {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.6),
+        0 0 0 1px alpha (#000, 0.75),
         0 10px 20px alpha (#000, 0.19),
         0 6px 6px alpha (#000, 0.23);
 }
