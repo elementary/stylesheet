@@ -28,7 +28,7 @@
 @define-color bg_highlight_color shade (@bg_color, 1.4);
 @define-color border_color alpha (#000, 0.25);
 @define-color fg_color #969f9d;
-@define-color insensitive_color mix(@bg_color, @text_color, 0.3);
+@define-color insensitive_color mix(@bg_color, @text_color, 0.31);
 @define-color inset_dark_color alpha (#000, 0.03);
 @define-color inset_dark_color_backdrop alpha (#000, 0.03);
 @define-color menu_separator alpha (#000, 0.25);
