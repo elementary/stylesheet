@@ -23,11 +23,11 @@
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 0.5), 0.6);
 
 /* Default color scheme */
-@define-color base_color #383e41;
+@define-color base_color #3d4248;
 @define-color bg_color shade (@base_color, 0.96);
 @define-color bg_highlight_color shade (@bg_color, 1.4);
 @define-color border_color alpha (#000, 0.25);
-@define-color fg_color #969f9d;
+@define-color fg_color #D7D7D7;
 @define-color insensitive_color mix(@bg_color, @text_color, 0.31);
 @define-color inset_dark_color alpha (#000, 0.03);
 @define-color inset_dark_color_backdrop alpha (#000, 0.03);
@@ -39,7 +39,7 @@
 @define-color selected_fg_color #FFF;
 @define-color text_color #c0c6c4;
 @define-color text_shadow_color alpha (#000, 0.4);
-@define-color titlebar_color #383e41;
+@define-color titlebar_color shade (@base_color, 0.9);
 @define-color title_color shade (@text_color, 0.9);
 @define-color title_shadow_color alpha (#000, 0.6);
 @define-color tooltip_bg_color #000;
