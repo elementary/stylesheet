@@ -2884,6 +2884,10 @@ GtkTreeView row:focus,
     color: @selected_fg_color;
 }
 
+.cell:disabled {
+    color: @insensitive_color;
+}
+
 /* FIXME: This doesn't work with only-child
 
 GtkListBoxRow:only-child {
