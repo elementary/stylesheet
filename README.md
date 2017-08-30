@@ -23,9 +23,10 @@ Apps will need to be restarted or the system stylesheet will need to be
 changed for your changes to take effect.
 
 You can also test changes live with Gtk Inspector. Make sure you have Gtk
-development libraries installed:
+development libraries installed, then enable the inspector shortcut:
 
     apt install libgtk-3-dev
+    gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
     
 Open an app you wish to test your changes on. Open Gtk Inspector with the
 keyboard shortcut Shift + Ctrl + D, then navigate to the tab "Custom CSS".
