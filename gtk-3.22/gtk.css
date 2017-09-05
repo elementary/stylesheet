@@ -16,27 +16,35 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* Palette */
+/* Strawberry */
 @define-color STRAWBERRY_500 #c6262e;
 
+/* Orange */
 @define-color ORANGE_500 #f37329;
 
+/* Banana */
 @define-color BANANA_500 #f9c440;
 
+/* Lime */
 @define-color LIME_300 #9bdb4d;
 @define-color LIME_500 #68b723;
 
+/* Blueberry */
 @define-color BLUEBERRY_500 #3689e6;
 
+/* Grape */
 @define-color GRAPE_300 #Ad65d6;
 @define-color GRAPE_500 #7a36b1;
 
+/* Silver */
 @define-color SILVER_100 #fafafa;
 @define-color SILVER_300 #d4d4d4;
 @define-color SILVER_500 #abacae;
 
+/* Slate */
 @define-color SLATE_500 #485a6c;
 
+/* Black */
 @define-color BLACK_500 #333;
 @define-color BLACK_900 #000;
 
