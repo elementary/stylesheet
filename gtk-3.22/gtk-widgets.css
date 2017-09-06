@@ -3634,10 +3634,10 @@ GcrCertificateWidget .frame {
             ),
             shade (
                 @colorPrimary,
-                0.88
+                0.94
             )
         );
-    border-color: shade (@colorPrimary, 0.6);
+    border-color: shade (@colorPrimary, 0.72);
     border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
@@ -3659,11 +3659,11 @@ GcrCertificateWidget .frame {
             ),
             shade (
                 @colorPrimary,
-                0.98
+                1.04
             )
         );
     background-color: shade (@colorPrimary, 1.1);
-    border-color: shade (@colorPrimary, 0.64);
+    border-color: shade (@colorPrimary, 0.7);
     box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
     -gtk-icon-effect: dim;
 }
