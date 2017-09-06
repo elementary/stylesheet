@@ -337,6 +337,7 @@ toolbar spinbutton:backdrop,
                 0.96
             )
         );
+    border-color: alpha (#000, 0.18);
     color: @insensitive_fg_color;
     box-shadow:
         inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
@@ -1631,21 +1632,21 @@ notebook header {
             to bottom,
             shade (
                 @titlebar_color,
-                0.85
+                0.91
             ),
             shade (
                 @titlebar_color,
-                0.9
+                0.96
             )
         );
     border-style: solid;
     border-width: 0 0 1px;
-    border-color: shade (@titlebar_color, 0.56);
+    border-color: shade (@titlebar_color, 0.62);
     border-radius: 0;
 }
 
 notebook header:backdrop {
-    background-color: shade (@titlebar_color, 0.96);
+    background-color: shade (@titlebar_color, 1.02);
     background-image:
         linear-gradient(
             to bottom,
@@ -1658,7 +1659,7 @@ notebook header:backdrop {
                 0
             ) 3px
         );
-    border-color: shade (@titlebar_color, 0.7);
+    border-color: shade (@titlebar_color, 0.76);
 }
 
 .header separator.vertical {
@@ -1712,14 +1713,14 @@ notebook tab:checked {
             to bottom,
             shade (
                 @titlebar_color,
-                0.88
+                0.94
             ),
             shade (
                 @titlebar_color,
-                0.84
+                0.9
             )
         );
-    border-color: shade (@titlebar_color, 0.56);
+    border-color: shade (@titlebar_color, 0.62);
     border-image: none;
     border-radius: 4px 4px 0 0;
     border-style: solid;
@@ -1737,14 +1738,14 @@ notebook tab:checked:backdrop {
             to bottom,
             shade (
                 @titlebar_color,
-                0.98
+                1.04
             ),
             shade (
                 @titlebar_color,
-                0.96
+                1.02
             )
         );
-    border-color: shade (@titlebar_color, 0.7);
+    border-color: shade (@titlebar_color, 0.76);
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
         0 0 0 1px alpha (#000, 0.1);
@@ -1894,8 +1895,8 @@ window.popup {
 menubar,
 .menubar {
     color: @text_color;
-    background-color: shade (@titlebar_color, 0.88);
-    border: 1px solid shade (@titlebar_color, 0.58);
+    background-color: shade (@titlebar_color, 0.94);
+    border: 1px solid shade (@titlebar_color, 0.68);
     border-width: 0 0 1px;
     box-shadow:
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
@@ -2201,7 +2202,7 @@ toolbar,
 .toolbar {
     -GtkWidget-window-dragging: true;
     padding: 3px;
-    border: 1px solid shade (@titlebar_color, 0.56);
+    border: 1px solid shade (@titlebar_color, 0.62);
     border-width: 0 0 1px;
     box-shadow:
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
@@ -2211,11 +2212,11 @@ toolbar,
             to bottom,
             shade (
                 @titlebar_color,
-                0.88
+                0.94
             ),
             shade (
                 @titlebar_color,
-                0.84
+                0.9
             )
         );
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
@@ -2224,9 +2225,9 @@ toolbar,
 
 toolbar:backdrop,
 .toolbar:backdrop {
-    background-color: shade (@titlebar_color, 0.98);
+    background-color: shade (@titlebar_color, 1.04);
     background-image: none;
-    border-color: shade (@titlebar_color, 0.64);
+    border-color: shade (@titlebar_color, 0.7);
     box-shadow:
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
@@ -2247,17 +2248,17 @@ toolbar.secondary-toolbar,
             to bottom,
             shade (
                 @titlebar_color,
-                0.87
+                0.93
             ),
             shade (
                 @titlebar_color,
-                0.84
+                0.9
             )
         );
     box-shadow:
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
-    border-color: shade (@titlebar_color, 0.54);
+    border-color: shade (@titlebar_color, 0.6);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
@@ -2269,14 +2270,11 @@ toolbar.secondary-toolbar:backdrop,
             to bottom,
             shade (
                 @titlebar_color,
-                0.98
+                1.04
             ),
-            shade (
-                @titlebar_color,
-                0.94
-            )
+            @titlebar_color
         );
-    border-color: shade (@titlebar_color, 0.7);
+    border-color: shade (@titlebar_color, 0.76);
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -2295,7 +2293,7 @@ toolbar.secondary-toolbar button,
 toolbar.bottom-toolbar,
 .bottom-toolbar.toolbar {
     padding: 8px;
-    border: 1px solid shade (@titlebar_color, 0.66);
+    border: 1px solid shade (@titlebar_color, 0.72);
     border-width: 1px 0 0;
     background-image:
         linear-gradient(
@@ -2303,7 +2301,7 @@ toolbar.bottom-toolbar,
             @titlebar_color,
             shade (
                 @titlebar_color,
-                0.88
+                0.94
             )
         );
     box-shadow:
@@ -2396,12 +2394,12 @@ actionbar,
             @titlebar_color,
             shade (
                 @titlebar_color,
-                0.88
+                0.94
             )
         );
     border-style: solid;
     border-width: 1px 0 0;
-    border-top-color: shade (@bg_color, 0.52);
+    border-top-color: shade (@bg_color, 0.58);
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
@@ -2511,17 +2509,17 @@ searchbar,
             to bottom,
             shade (
                 @titlebar_color,
-                0.87
+                0.96
             ),
             shade (
                 @titlebar_color,
-                0.84
+                0.9
             )
         );
     box-shadow:
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
-    border-color: shade (@titlebar_color, 0.54);
+    border-color: shade (@titlebar_color, 0.6);
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
@@ -2534,14 +2532,11 @@ searchbar:backdrop,
             to bottom,
             shade (
                 @titlebar_color,
-                0.98
+                1.04
             ),
-            shade (
-                @titlebar_color,
-                0.94
-            )
+            @titlebar_color
         );
-    border-color: shade (@titlebar_color, 0.7);
+    border-color: shade (@titlebar_color, 0.76);
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -3637,7 +3632,7 @@ GcrCertificateWidget .frame {
                 0.94
             )
         );
-    border-color: shade (@colorPrimary, 0.72);
+    border-color: shade (@colorPrimary, 0.68);
     border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
@@ -3663,7 +3658,7 @@ GcrCertificateWidget .frame {
             )
         );
     background-color: shade (@colorPrimary, 1.1);
-    border-color: shade (@colorPrimary, 0.7);
+    border-color: shade (@colorPrimary, 0.82);
     box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
     -gtk-icon-effect: dim;
 }
