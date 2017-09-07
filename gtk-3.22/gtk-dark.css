@@ -97,7 +97,7 @@
 @define-color menu_separator alpha (@BLACK_900, 0.25);
 @define-color menu_separator_shadow alpha (white, 0.05);
 @define-color placeholder_text_color shade(@text_color, 0.8);
-@define-color selected_bg_color #3d9bda;
+@define-color selected_bg_color shade (@BLUEBERRY_300, 0.85);
 @define-color selected_fg_color white;
 @define-color text_color #c0c6c4;
 @define-color text_shadow_color alpha (@BLACK_900, 0.4);
