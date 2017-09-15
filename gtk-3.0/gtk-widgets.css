@@ -3725,6 +3725,10 @@ GtkDialog .source-list .view:selected:backdrop {
     border-right-width: 0;
 }
 
+.sidebar .stack-switcher .button GtkImage {
+    padding: 3px;
+}
+
 .sidebar separator,
 .sidebar .separator {
     color: transparent;
