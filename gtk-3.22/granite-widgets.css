@@ -47,6 +47,12 @@
     padding: 2px 0;
 }
 
+.titlebar .back-button {
+    color: @textColorPrimary;
+    text-shadow: 0 1px @textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
+}
+
 .back-button:focus,
 .titlebar .back-button:focus {
     border-image: -gtk-scaled(url("assets/button-back-focus.svg"), url("assets/button-back-focus@2.svg")) 2 3 3 11 / 2px 3px 3px 11px stretch;
