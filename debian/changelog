@@ -1,3 +1,9 @@
+elementary-theme (5.1.1) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Mon, 09 Oct 2017 22:41:43 -0500
+
 elementary-theme (5.0.4) xenial; urgency=medium
 
   * New upstream release.
