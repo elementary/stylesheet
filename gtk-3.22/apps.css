@@ -290,6 +290,10 @@ menubar.panel,
     border: none;
 }
 
+.composited-indicator {
+    padding: 0 6px;
+}
+
 .composited-indicator > revealer label,
 .composited-indicator > revealer image {
     color: #fff;
