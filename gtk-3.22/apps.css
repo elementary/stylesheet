@@ -430,3 +430,13 @@ menubar.panel,
     color: @selected_fg_color;
     text-shadow: none;
 }
+
+/************
+ * Terminal *
+ ************/
+
+.terminal {
+   background-color: #252e32;
+   color: #94a3a5;
+   padding: 12px;
+}
