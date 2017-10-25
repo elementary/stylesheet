@@ -2443,7 +2443,7 @@ dialog .action-bar {
     border-color: shade (@bg_color, 0.75);
     border-width: 0 1px 1px;
     box-shadow: none;
-    background-color: @bg_color;
+    background-color: shade (@base_color, 0.97);
     background-image:
         linear-gradient(
             to bottom,
