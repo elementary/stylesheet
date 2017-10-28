@@ -87,7 +87,7 @@
         "number-leading-zero": "always",
         "number-no-trailing-zeros": true,
         "property-no-unknown": [true, {
-          "ignoreProperties": ["/icon-shadow/"]
+            "ignoreProperties": ["/icon-shadow/"]
         }],
         "selector-attribute-brackets-space-inside": "never",
         "selector-attribute-operator-space-after": "never",
