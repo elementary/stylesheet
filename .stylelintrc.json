@@ -89,6 +89,10 @@
         "property-no-unknown": [true, {
             "ignoreProperties": ["/icon-shadow/"]
         }],
+        "rule-empty-line-before": ["always", {
+            "except": ["after-single-line-comment", "inside-block-and-after-rule", "first-nested"],
+            "ignore": ["after-comment"]
+        }],
         "selector-attribute-brackets-space-inside": "never",
         "selector-attribute-operator-space-after": "never",
         "selector-attribute-operator-space-before": "never",
