@@ -1582,7 +1582,7 @@ combobox button:last-child:not(:only-child) {
 }
 
 /* Linked vertical and horizontal entries */
-.vertical.linked .horizontal.linked:last-child .entry:first-child {
+.vertical.linked .horizontal.linked:last-child entry:first-child {
     border-top: 0;
     border-bottom-width: 1px;
     background-image: none;
@@ -1592,7 +1592,7 @@ combobox button:last-child:not(:only-child) {
     border-right-color: alpha(@text_color, 0.08);
 }
 
-.vertical.linked .horizontal.linked:last-child .entry:last-child {
+.vertical.linked .horizontal.linked:last-child entry:last-child {
     border-left: 0;
     border-bottom-left-radius: 0;
 }
