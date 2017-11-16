@@ -3941,9 +3941,8 @@ image.warning,
     color: @warning_color;
 }
 
-label.warning,
-.label.warning {
-    color: shade (@warning_color, 0.75);
+label.warning {
+    color: @BANANA_900;
 }
 
 image.success,
@@ -3951,7 +3950,6 @@ image.success,
     color: @success_color;
 }
 
-label.success,
-.label.success {
-    color: shade (@success_color, 0.75);
+label.success {
+    color: @LIME_900;
 }
