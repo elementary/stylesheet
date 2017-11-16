@@ -415,6 +415,7 @@ list .h4 {
 .terminal {
     background-color: #252e32;
     color: #94a3a5;
+    font-family: monospace;
 }
 
 label.terminal {
