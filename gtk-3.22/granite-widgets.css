@@ -407,3 +407,22 @@ window.rounded decoration {
 list .h4 {
     padding-left: 6px;
 }
+
+/****************
+* Fake Terminal *
+****************/
+
+.terminal {
+    background-color: #252e32;
+    color: #94a3a5;
+    font-family: monospace;
+}
+
+label.terminal {
+    padding: 12px;
+}
+
+.terminal selection {
+    background-color: #93a1a1;
+    color: #252e32;
+}
