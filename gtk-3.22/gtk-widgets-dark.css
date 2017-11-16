@@ -921,3 +921,19 @@ messagedialog decoration {
         0 5px 5px -3px alpha (#000, 0.4),
         0 14px 28px transparent;
 }
+
+/**************
+* Text Styles *
+**************/
+
+label.error {
+    color: @STRAWBERRY_300;
+}
+
+label.success {
+    color: @LIME_300;
+}
+
+label.warning {
+    color: @BANANA_500;
+}

@@ -1582,7 +1582,7 @@ combobox button:last-child:not(:only-child) {
 }
 
 /* Linked vertical and horizontal entries */
-.vertical.linked .horizontal.linked:last-child .entry:first-child {
+.vertical.linked .horizontal.linked:last-child entry:first-child {
     border-top: 0;
     border-bottom-width: 1px;
     background-image: none;
@@ -1592,7 +1592,7 @@ combobox button:last-child:not(:only-child) {
     border-right-color: alpha(@text_color, 0.08);
 }
 
-.vertical.linked .horizontal.linked:last-child .entry:last-child {
+.vertical.linked .horizontal.linked:last-child entry:last-child {
     border-left: 0;
     border-bottom-left-radius: 0;
 }
@@ -3941,9 +3941,8 @@ image.warning,
     color: @warning_color;
 }
 
-label.warning,
-.label.warning {
-    color: shade (@warning_color, 0.75);
+label.warning {
+    color: @BANANA_900;
 }
 
 image.success,
@@ -3951,7 +3950,6 @@ image.success,
     color: @success_color;
 }
 
-label.success,
-.label.success {
-    color: shade (@success_color, 0.75);
+label.success {
+    color: @LIME_900;
 }

@@ -101,7 +101,7 @@
 @define-color selected_fg_color white;
 @define-color text_color @BLACK_500;
 @define-color text_shadow_color alpha (white, 0.4);
-@define-color titlebar_color @SILVER_300;
+@define-color titlebar_color mix (@SILVER_300, @SILVER_100, 0.25);
 @define-color title_color shade (@titlebar_color, 0.55);
 @define-color title_shadow_color alpha (white, 0.6);
 @define-color tooltip_bg_color @BLACK_900;
