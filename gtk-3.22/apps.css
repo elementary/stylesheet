@@ -292,6 +292,7 @@ ConversationListView.view.cell:selected:focus {
 .panel.color-light.translucent {
     background-color: alpha(#fff, 0.6);
     box-shadow:
+        inset 0 -1px 1px alpha(#fff, 0.2),
         0 1px 3px alpha(#000, 0.24),
         0 1px 1px alpha(#000, 0.12);
     margin-bottom: 4px;
