@@ -274,21 +274,28 @@ ConversationListView.view.cell:selected:focus {
 .panel {
     background-color: transparent;
     transition: all 100ms ease-in-out;
+    margin-bottom: 0;
 }
 
 .panel.maximized {
     background-color: #000;
-    margin-bottom: 0;
 }
 
 .panel.translucent {
     background-color: alpha(#000, 0.5);
+    box-shadow:
+        0 1px 3px alpha(#000, 0.24),
+        0 1px 1px alpha(#000, 0.52);
+    margin-bottom: 4px;
 }
 
 .panel.color-light.translucent {
     background-color: alpha(#fff, 0.6);
-    border-bottom: 1px solid alpha(#000, 0.12)
-    box-shadow: inset 0 -1px 1px alpha(#fff, 0.2);k
+    box-shadow:
+        inset 0 -1px 1px alpha(#fff, 0.2),
+        0 1px 3px alpha(#000, 0.24),
+        0 1px 1px alpha(#000, 0.12);
+    margin-bottom: 4px;
 }
 
 menubar.panel,
