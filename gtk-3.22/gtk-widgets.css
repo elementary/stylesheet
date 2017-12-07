@@ -1424,7 +1424,7 @@ combobox arrow {
 }
 
 combobox button {
-    padding: 2px 6px;
+    padding: 2px 3px;
 }
 
 combobox entry:first-child,
