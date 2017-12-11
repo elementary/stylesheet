@@ -3672,8 +3672,20 @@ GcrCertificateWidget .frame {
     padding: 4px 6px 3px;
 }
 
-.tiled .titlebar {
-    border-radius: 0;
+.tiled-left.tiled-top:not(.maximized) .titlebar {
+    border-top-right-radius: 0;
+}
+
+.tiled-right.tiled-top:not(.maximized) .titlebar {
+    border-top-left-radius: 0;
+}
+
+.tiled-left.tiled-bottom:not(.maximized) actionbar {
+    border-bottom-right-radius: 0;
+}
+
+.tiled-right.tiled-bottom:not(.maximized) actionbar {
+    border-bottom-left-radius: 0;
 }
 
 .titlebar.default-decoration {
