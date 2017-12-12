@@ -437,7 +437,40 @@ scale.temperature:dir(rtl) trough {
         );
 }
 
-scale.temperature trough:disabled {
+scale.warmth trough {
+    background-image:
+        linear-gradient(
+            to right,
+            mix (
+                @bg_color,
+                @ORANGE_100,
+                0.5
+            ),
+            @ORANGE_500
+        );
+    border: none;
+    box-shadow:
+        inset 0 0 0 1px alpha (#000, 0.3),
+        inset 0 0 0 2px alpha (#000, 0.03),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    min-height: 5px;
+    min-width: 5px;
+}
+
+scale.warmth:dir(rtl) trough {
+    background-image:
+        linear-gradient(
+            to left,
+            mix (
+                @bg_color,
+                @ORANGE_100,
+                0.5
+            ),
+            @ORANGE_500
+        );
+}
+
+scale trough:disabled {
     background-image:
         linear-gradient(
             to bottom,
