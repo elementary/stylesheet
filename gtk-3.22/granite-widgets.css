@@ -416,8 +416,8 @@ scale.temperature trough {
     background-image:
         linear-gradient(
             to right,
-        #3689e6,
-            #f37329
+            @BLUEBERRY_500,
+            @ORANGE_500
         );
     border: none;
     box-shadow:
