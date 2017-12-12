@@ -428,6 +428,15 @@ scale.temperature trough {
     min-width: 5px;
 }
 
+scale.temperature:dir(rtl) trough {
+    background-image:
+        linear-gradient(
+            to left,
+            @BLUEBERRY_500,
+            @ORANGE_500
+        );
+}
+
 scale.temperature trough:disabled {
     background-image:
         linear-gradient(
