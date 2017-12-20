@@ -1318,11 +1318,19 @@ colorswatch.light overlay {
     -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
-GtkColorScale.scale.slider,
-GtkColorScale.scale.slider:focus {
+scale.color slider {
     background-image: none;
-    border: 2px solid #fff;
-    box-shadow: 0 1px 3px alpha (#000, 0.3);
+    border: 2px solid @bg_color;
+    box-shadow:
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+        inset 0 0 0 1px alpha (#000, 0.25),
+        inset 0 1px 1px 1px alpha (#000, 0.1),
+        0 0 0 1px alpha (#000, 0.25),
+        0 1px 1px 1px alpha (#000, 0.1);
+    min-height: 10px;
+    min-width: 10px;
 }
 
 /*************
