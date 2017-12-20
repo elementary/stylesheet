@@ -714,16 +714,16 @@ scale slider {
             ),
             shade (
                 @bg_color,
-                0.9
+                0.95
             )
         );
-    border: 1px solid alpha (#000, 0.25);
     border-radius: 12px;
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 1px alpha (#000, 0.12);
+        0 0 0 1px alpha (#000, 0.25),
+        0 1px 1px 1px alpha (#000, 0.1);
     margin: -7px 0;
     min-height: 14px;
     min-width: 14px;
@@ -746,13 +746,13 @@ scale slider:focus {
                 0.95
             )
         );
-    border-color: alpha (@colorAccent, 0.9);
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 1px alpha (@colorAccent, 0.35),
-        0 1px 2px alpha (@colorAccent, 0.16);
+        0 0 0 1px alpha (@colorAccent, 0.9),
+        0 1px 1px 1px alpha (@colorAccent, 0.35),
+        0 1px 2px 1px alpha (@colorAccent, 0.16);
 }
 
 scale slider:backdrop {
@@ -761,19 +761,19 @@ scale slider:backdrop {
             to bottom,
             shade (
                 @bg_color,
-                1.05
+                1.03
             ),
             shade (
                 @bg_color,
-                0.95
+                0.97
             )
         );
-    border-color: alpha (#000, 0.15);
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.3),
-        0 1px 1px alpha (#000, 0.1);
+        0 0 0 1px alpha (#000, 0.2),
+        0 1px 1px 1px alpha (#000, 0.08);
 }
 
 scale slider:disabled {
@@ -784,33 +784,20 @@ scale slider:disabled {
 }
 
 scale trough {
-    border: 1px solid alpha (#000, 0.35);
     border-radius: 12px;
-    background-color: transparent;
-    background-image:
-        linear-gradient(
-            to bottom,
-            alpha (
-                #000,
-                0.15
-            ),
-            alpha (
-                #000,
-                0.07
-            )
-        );
+    background-color: alpha (#000, 0.05);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.03),
+        inset 0 0 0 1px alpha (#000, 0.3),
+        inset 0 0 0 2px alpha (#000, 0.03),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     margin: 7px 0;
-    min-height: 3px;
-    min-width: 3px;
+    min-height: 5px;
+    min-width: 5px;
     padding: 0 6px;
 }
 
 .titlebar scale trough {
     border-radius: 0 12px 12px 0;
-    border-width: 1px 1px 1px 0;
 }
 
 scale.vertical slider {
@@ -818,18 +805,6 @@ scale.vertical slider {
 }
 
 scale.vertical trough {
-    background-image:
-        linear-gradient(
-            to right,
-            alpha (
-                #000,
-                0.15
-            ),
-            alpha (
-                #000,
-                0.07
-            )
-        );
     margin: 0 7px;
     padding: 6px 0;
 }
@@ -849,82 +824,19 @@ scale.vertical mark indicator {
 }
 
 scale highlight {
-    border: 1px solid alpha (#000, 0.5);
     border-radius: 12px 0 0 12px;
-    background-image:
-        linear-gradient(
-            to bottom,
-            alpha (
-                #000,
-                0.4
-            ),
-            alpha (
-                #000,
-                0.3
-            )
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-    margin: -1px -7px;
+    background-color: alpha (#000, 0.45);
+    margin: 0 -6px;
 }
 
 scale highlight:disabled {
-    border-color: alpha (#000, 0.35);
     border-radius: 12px 0 0 12px;
-    border-width: 1px 0 1px 1px;
-    background-image:
-        linear-gradient(
-            to bottom,
-            alpha (
-                #000,
-                0.15
-            ),
-            alpha (
-                #000,
-                0.07
-            )
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.03),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    background-color: alpha (#000, 0.25);
 }
 
 scale.vertical highlight {
-    border-color: alpha (#000, 0.5);
     border-radius: 12px 12px 0 0;
-    background-image:
-        linear-gradient(
-            to right,
-            alpha (
-                #000,
-                0.4
-            ),
-            alpha (
-                #000,
-                0.3
-            )
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-    margin: -7px -1px;
-}
-
-scale.vertical highlight:disabled {
-    border-color: alpha (#000, 0.4);
-    background-image:
-        linear-gradient(
-            to right,
-            alpha (
-                #000,
-                0.3
-            ),
-            alpha (
-                #000,
-                0.2
-            )
-        );
+    margin: -6px 0;
 }
 
 /*********
