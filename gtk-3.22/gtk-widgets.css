@@ -796,6 +796,10 @@ scale trough {
     padding: 0 6px;
 }
 
+scale trough:disabled {
+    background-image: none;
+}
+
 .titlebar scale trough {
     border-radius: 0 12px 12px 0;
 }

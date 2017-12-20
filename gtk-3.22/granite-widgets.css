@@ -456,6 +456,10 @@ scale.warmth:dir(rtl) trough {
         );
 }
 
+scale trough:disabled {
+    background-image: none;
+}
+
 /****************
 * Fake Terminal *
 ****************/
