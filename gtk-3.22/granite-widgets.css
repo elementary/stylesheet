@@ -417,6 +417,7 @@ scale.temperature trough {
         linear-gradient(
             to right,
             @BLUEBERRY_500,
+            @SILVER_100,
             @ORANGE_500
         );
 }
@@ -426,6 +427,7 @@ scale.temperature:dir(rtl) trough {
         linear-gradient(
             to left,
             @BLUEBERRY_500,
+            @SILVER_100,
             @ORANGE_500
         );
 }
