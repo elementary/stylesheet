@@ -3893,3 +3893,7 @@ image.success,
 label.success {
     color: @LIME_900;
 }
+
+link {
+    color: @link_color;
+}
