@@ -1232,24 +1232,20 @@ button.flat:active,
     box-shadow: none;
 }
 
-button.link,
 GtkLinkButton.flat {
     padding: 0;
 }
 
-button.link:focus,
 GtkLinkButton.flat.text-button:focus {
     background-color: transparent;
 }
 
-button.link label,
-GtkLinkButton.flat GtkLabel {
+GtkLinkButton.flat > GtkLabel {
     color: @link_color;
     padding: 0;
 }
 
-button.link:focus label,
-GtkLinkButton.flat:focus GtkLabel {
+GtkLinkButton.flat:focus > GtkLabel {
     text-decoration: underline;
 }
 

@@ -1072,12 +1072,12 @@ button.link:focus {
     background-color: transparent;
 }
 
-button.link label {
+button.link > label {
     color: @link_color;
     padding: 0;
 }
 
-button.link:focus label {
+button.link:focus > label {
     text-decoration: underline;
 }
 
