@@ -1884,6 +1884,14 @@ menuitem arrow:dir(rtl) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
 }
 
+menuitem arrow.top {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+menuitem arrow.bottom {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
+
 menuitem label,
 menuitem image,
 modelbutton label,
@@ -3909,4 +3917,8 @@ image.success,
 
 label.success {
     color: @LIME_900;
+}
+
+link {
+    color: @link_color;
 }
