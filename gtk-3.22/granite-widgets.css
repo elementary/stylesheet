@@ -408,6 +408,60 @@ list .h4 {
     padding-left: 6px;
 }
 
+/***************
+* Fancy Scales *
+***************/
+
+scale.temperature trough {
+    background-image:
+        linear-gradient(
+            to right,
+            @BLUEBERRY_500,
+            @SILVER_100,
+            @ORANGE_500
+        );
+}
+
+scale.temperature:dir(rtl) trough {
+    background-image:
+        linear-gradient(
+            to left,
+            @BLUEBERRY_500,
+            @SILVER_100,
+            @ORANGE_500
+        );
+}
+
+scale.warmth trough {
+    background-image:
+        linear-gradient(
+            to right,
+            mix (
+                @bg_color,
+                @ORANGE_100,
+                0.5
+            ),
+            @ORANGE_500
+        );
+}
+
+scale.warmth:dir(rtl) trough {
+    background-image:
+        linear-gradient(
+            to left,
+            mix (
+                @bg_color,
+                @ORANGE_100,
+                0.5
+            ),
+            @ORANGE_500
+        );
+}
+
+scale trough:disabled {
+    background-image: none;
+}
+
 /****************
 * Fake Terminal *
 ****************/
