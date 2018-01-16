@@ -83,7 +83,7 @@
 @define-color colorPrimary @titlebar_color;
 @define-color colorAccent @selected_bg_color;
 @define-color textColorPrimary shade (@colorPrimary, 0.5);
-@define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.6);
+@define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.4);
 
 /* Default color scheme */
 @define-color base_color white;
