@@ -99,7 +99,7 @@
 @define-color placeholder_text_color shade(@text_color, 0.8);
 @define-color selected_bg_color shade (@BLUEBERRY_300, 0.85);
 @define-color selected_fg_color white;
-@define-color text_color #c0c6c4;
+@define-color text_color @SILVER_100;
 @define-color text_shadow_color alpha (@BLACK_900, 0.4);
 @define-color titlebar_color shade (@base_color, 0.9);
 @define-color title_color shade (@text_color, 0.9);
