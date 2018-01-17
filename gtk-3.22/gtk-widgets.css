@@ -3888,7 +3888,7 @@ dialog label.primary {
 
 .emoji-picker .emoji widget {
     border-radius: 3px;
-    transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .emoji-picker .emoji:nth-child(1n) widget:hover {
@@ -3955,7 +3955,7 @@ dialog label.primary {
 }
 
 .emoji-picker .emoji-section:last-child {
-    border-radius: 0 0 3px 0;
+    border-radius: 0 0 3px;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(1),
@@ -3975,7 +3975,6 @@ dialog label.primary {
     background-image: -gtk-icontheme("face-heart-symbolic");
     font-size: 0;
 }
-
 
 /**************
 * Text Styles *
