@@ -3976,6 +3976,12 @@ dialog label.primary {
     font-size: 0;
 }
 
+.emoji-picker:dir(ltr) .emoji-section:nth-child(10),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(1) {
+    background-image: -gtk-icontheme("edit-flag-symbolic");
+    font-size: 0;
+}
+
 /**************
 * Text Styles *
 **************/
