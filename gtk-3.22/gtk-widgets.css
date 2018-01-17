@@ -3975,6 +3975,12 @@ dialog label.primary {
     font-size: 0;
 }
 
+.emoji-picker:dir(ltr) .emoji-section:nth-child(4),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(7) {
+    background-image: -gtk-icontheme("emoji-nature-symbolic");
+    font-size: 0;
+}
+
 .emoji-picker:dir(ltr) .emoji-section:nth-child(8),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(3) {
     background-image: -gtk-icontheme("emoji-objects-symbolic");
