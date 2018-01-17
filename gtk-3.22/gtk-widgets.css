@@ -3876,14 +3876,106 @@ dialog label.primary {
     margin-right: 7px;
 }
 
-.emoji-picker flowbox label {
+.emoji-picker .emoji,
+.emoji-picker .emoji-section {
     font-size: 16px;
+}
+
+.emoji-picker .emoji {
+    min-height: 48px;
+    min-width: 48px;
+}
+
+.emoji-picker .emoji widget {
+    border-radius: 3px;
+    transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.emoji-picker .emoji:nth-child(1n) widget:hover {
+    background-color: alpha (@BLUEBERRY_100, 0.5);
+}
+
+.emoji-picker .emoji:nth-child(2n) widget:hover {
+    background-color: alpha (@STRAWBERRY_100, 0.4);
+}
+
+.emoji-picker .emoji:nth-child(3n) widget:hover {
+    background-color: alpha (@ORANGE_100, 0.5);
+}
+
+.emoji-picker .emoji:nth-child(4n) widget:hover {
+    background-color: alpha (@GRAPE_100, 0.5);
+}
+
+.emoji-picker .emoji:nth-child(5n) widget:hover {
+    background-color: @BANANA_100;
+}
+
+.emoji-picker .emoji:nth-child(6n) widget:hover {
+    background-color: @LIME_100;
 }
 
 .emoji-picker stack box > box {
     border-top: 1px solid @border_color;
-    padding: 3px;
+    border-radius: 0 0 3px 3px;
+    box-shadow: none;
+    background-color: @bg_color;
+    background-image:
+        linear-gradient(
+            to bottom,
+            alpha (
+                #000,
+                0.12
+            ),
+            alpha (
+                #000,
+                0
+            ) 2px
+        );
 }
+
+.emoji-picker .emoji-section {
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 24px;
+    min-width: 24px;
+    opacity: 0.6;
+}
+
+.emoji-picker .emoji-section:checked {
+    opacity: 1;
+}
+
+.emoji-picker .emoji-section:first-child {
+    border-radius: 0 0 0 3px;
+}
+
+.emoji-picker .emoji-section:last-child {
+    border-radius: 0 0 3px 0;
+}
+
+.emoji-picker:dir(ltr) .emoji-section:nth-child(1),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(10) {
+    background-image: -gtk-icontheme("document-open-recent-symbolic");
+    font-size: 0;
+}
+
+.emoji-picker:dir(ltr) .emoji-section:nth-child(2),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(9) {
+    background-image: -gtk-icontheme("face-smile-big-symbolic");
+    font-size: 0;
+}
+
+.emoji-picker:dir(ltr) .emoji-section:nth-child(9),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(2) {
+    background-image: -gtk-icontheme("face-heart-symbolic");
+    font-size: 0;
+}
+
 
 /**************
 * Text Styles *
