@@ -3934,7 +3934,8 @@ dialog label.primary {
         );
 }
 
-.emoji-picker .emoji-section {
+.emoji-picker .emoji-section,
+.emoji-picker .emoji-section:checked {
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3944,6 +3945,10 @@ dialog label.primary {
     min-height: 24px;
     min-width: 24px;
     opacity: 0.6;
+}
+
+.emoji-picker .emoji-section:hover {
+    opacity: 0.8;
 }
 
 .emoji-picker .emoji-section:checked {
@@ -3967,6 +3972,12 @@ dialog label.primary {
 .emoji-picker:dir(ltr) .emoji-section:nth-child(2),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(9) {
     background-image: -gtk-icontheme("face-smile-big-symbolic");
+    font-size: 0;
+}
+
+.emoji-picker:dir(ltr) .emoji-section:nth-child(8),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(3) {
+    background-image: -gtk-icontheme("emoji-objects-symbolic");
     font-size: 0;
 }
 
