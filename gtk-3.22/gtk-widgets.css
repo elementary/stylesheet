@@ -2291,20 +2291,21 @@ toolbar.bottom-toolbar button,
     box-shadow: none;
 }
 
-toolbar button.image-button image {
-    color: shade (@title_color, 0.75);
+.titlbar image,
+toolbar image {
+    color: mix (@titlebar_color, @text_color, 0.85);
     -gtk-icon-shadow: 0 1px @title_shadow_color;
 }
 
-.titlebar button.image-button image:disabled,
-toolbar button.image-button image:disabled {
+.titlebar image:disabled,
+toolbar image:disabled {
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
 
-.titlebar button.image-button image:backdrop,
-toolbar button.image-button image:backdrop {
-    color: shade (@titlebar_color, 0.8);
+.titlebar image:backdrop,
+toolbar image:backdrop {
+    color: mix (@titlebar_color, @text_color, 0.5);
     -gtk-icon-shadow: none;
 }
 
