@@ -3886,35 +3886,6 @@ dialog label.primary {
     min-width: 48px;
 }
 
-.emoji-picker .emoji widget {
-    border-radius: 3px;
-    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.emoji-picker .emoji:nth-child(1n) widget:hover {
-    background-color: alpha (@BLUEBERRY_100, 0.5);
-}
-
-.emoji-picker .emoji:nth-child(2n) widget:hover {
-    background-color: alpha (@STRAWBERRY_100, 0.4);
-}
-
-.emoji-picker .emoji:nth-child(3n) widget:hover {
-    background-color: alpha (@ORANGE_100, 0.5);
-}
-
-.emoji-picker .emoji:nth-child(4n) widget:hover {
-    background-color: alpha (@GRAPE_100, 0.5);
-}
-
-.emoji-picker .emoji:nth-child(5n) widget:hover {
-    background-color: @BANANA_100;
-}
-
-.emoji-picker .emoji:nth-child(6n) widget:hover {
-    background-color: @LIME_100;
-}
-
 .emoji-picker stack box > box {
     border-top: 1px solid @border_color;
     border-radius: 0 0 3px 3px;
@@ -3978,6 +3949,18 @@ dialog label.primary {
 .emoji-picker:dir(ltr) .emoji-section:nth-child(4),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(7) {
     background-image: -gtk-icontheme("emoji-nature-symbolic");
+    font-size: 0;
+}
+
+.emoji-picker:dir(ltr) .emoji-section:nth-child(5),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(6) {
+    background-image: -gtk-icontheme("emoji-food-symbolic");
+    font-size: 0;
+}
+
+.emoji-picker:dir(ltr) .emoji-section:nth-child(6),
+.emoji-picker:dir(rtl) .emoji-section:nth-child(5) {
+    background-image: -gtk-icontheme("emoji-travel-symbolic");
     font-size: 0;
 }
 
