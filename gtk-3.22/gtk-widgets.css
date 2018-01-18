@@ -3913,6 +3913,7 @@ dialog label.primary {
     border: none;
     border-radius: 0;
     box-shadow: none;
+    font-size: 0;
     min-height: 24px;
     min-width: 24px;
     opacity: 0.6;
@@ -3937,31 +3938,26 @@ dialog label.primary {
 .emoji-picker:dir(ltr) .emoji-section:nth-child(1),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(10) {
     background-image: -gtk-icontheme("document-open-recent-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(2),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(9) {
     background-image: -gtk-icontheme("face-smile-big-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(3),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(8) {
     background-image: -gtk-icontheme("emoji-body-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(4),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(7) {
     background-image: -gtk-icontheme("emoji-nature-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(5),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(6) {
     background-image: -gtk-icontheme("emoji-food-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(6),
@@ -3973,25 +3969,21 @@ dialog label.primary {
 .emoji-picker:dir(ltr) .emoji-section:nth-child(7),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(4) {
     background-image: -gtk-icontheme("emoji-activity-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(8),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(3) {
     background-image: -gtk-icontheme("emoji-objects-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(9),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(2) {
     background-image: -gtk-icontheme("face-heart-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(10),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(1) {
     background-image: -gtk-icontheme("edit-flag-symbolic");
-    font-size: 0;
 }
 
 /**************
