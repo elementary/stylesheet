@@ -3876,14 +3876,10 @@ dialog label.primary {
     margin-right: 7px;
 }
 
-.emoji-picker .emoji,
-.emoji-picker .emoji-section {
-    font-size: 16px;
-}
-
 .emoji-picker .emoji {
     min-height: 48px;
     min-width: 48px;
+    font-size: 16px;
 }
 
 .emoji-picker stack box > box {
