@@ -1900,8 +1900,8 @@ modelbutton label,
     padding: 3px;
 }
 
-menu menuitem image:first-child {
-	margin-left: -16px;
+menu:dir(ltr) menuitem image:first-child {
+    margin-left: -16px;
 }
 
 modelbutton {
