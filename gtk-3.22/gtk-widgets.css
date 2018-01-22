@@ -2295,7 +2295,7 @@ toolbar.bottom-toolbar button,
     box-shadow: none;
 }
 
-.titlbar image,
+.titlebar image,
 toolbar image {
     color: mix (@titlebar_color, @text_color, 0.85);
     -gtk-icon-shadow: 0 1px @title_shadow_color;
