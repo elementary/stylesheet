@@ -923,15 +923,14 @@ button label {
 
 .titlebar button,
 .titlebar .button {
-    color: shade (@textColorPrimary, 0.8);
-    border-color: alpha (#000, 0.27);
-
-    /* FIXME: causes problems with files pathbar */
-
-    /* box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
+    border-color: shade (@colorPrimary, 0.75);
+    color: @textColorPrimary;
+    text-shadow: 0 1px @textColorPrimaryShadow;
+    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
                 inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.45),
                 inset 0 -1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.15),
-                0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.3); */
+                0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.3);
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
 
 button.color {
@@ -959,12 +958,6 @@ toolbar button,
 .titlebar .button,
 .toolbar .button {
     padding: 3px;
-}
-
-button:hover,
-.button:hover,
-.titlebar .stack-switcher .button.image-button:hover {
-    color: @text_color;
 }
 
 button:focus,
@@ -1046,10 +1039,10 @@ button:focus:checked,
 .button:hover:checked,
 .button:focus:checked,
 .titlebar .titlebutton:active, /* Mutter needs this exact match*/
-.titlebar .stack-switcher .button.image-button:active,
-.titlebar .stack-switcher .button.image-button:hover:active,
-.titlebar .stack-switcher .button.image-button:checked,
-.titlebar .stack-switcher .button.image-button:hover:checked {
+.titlebar button:active,
+.titlebar .button:active,
+.titlebar button:checked,
+.titlebar .button:checked {
     background-color: alpha (#000, 0.05);
     background-image: none;
     border-color: alpha (#000, 0.27);
@@ -2162,6 +2155,21 @@ toolbar:backdrop,
     -gtk-icon-effect: dim;
 }
 
+toolbar image {
+    color: mix (@titlebar_color, @text_color, 0.85);
+    -gtk-icon-shadow: 0 1px @title_shadow_color;
+}
+
+toolbar image:disabled {
+    color: @insensitive_color;
+    -gtk-icon-effect: dim;
+}
+
+toolbar image:backdrop {    
+    color: mix (@titlebar_color, @text_color, 0.5);
+    -gtk-icon-shadow: none;
+}
+
 /*********************
 * Secondary Toolbars *
 *********************/
@@ -2289,24 +2297,6 @@ toolbar.bottom-toolbar button,
     background-color: alpha (@text_color, 0.15);
     border-color: transparent;
     box-shadow: none;
-}
-
-.titlebar image,
-toolbar image {
-    color: mix (@titlebar_color, @text_color, 0.85);
-    -gtk-icon-shadow: 0 1px @title_shadow_color;
-}
-
-.titlebar image:disabled,
-toolbar image:disabled {
-    color: @insensitive_color;
-    -gtk-icon-effect: dim;
-}
-
-.titlebar image:backdrop,
-toolbar image:backdrop {
-    color: mix (@titlebar_color, @text_color, 0.5);
-    -gtk-icon-shadow: none;
 }
 
 /***************
@@ -3664,7 +3654,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title,
 .titlebar .subtitle,
 .titlebar .titlebutton,
-.titlebar button.image-button image {
+.titlebar image {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3693,7 +3683,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:disabled,
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
-.titlebar button.image-button image:disabled {
+.titlebar image:disabled {
     color: shade (@textColorPrimary, 1.5);
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3702,7 +3692,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
-.titlebar button.image-button image:backdrop {
+.titlebar image:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
     -gtk-icon-shadow: none;
