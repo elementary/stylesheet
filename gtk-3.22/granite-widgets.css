@@ -379,10 +379,6 @@ window.rounded decoration {
 * Text Styles *
 **************/
 
-.accent {
-    color: @colorAccent;
-}
-
 .h1 {
     font-size: 24pt;
 }
