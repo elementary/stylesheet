@@ -1900,6 +1900,10 @@ modelbutton label,
     padding: 3px;
 }
 
+menu:dir(ltr) menuitem image:first-child {
+    margin-left: -16px;
+}
+
 modelbutton {
     min-width: 150px;
     padding: 3px 12px;
