@@ -3833,6 +3833,13 @@ messagedialog .titlebar:backdrop {
         inset 0 1px 0 0 @bg_highlight_color;
 }
 
+dialog .titlebar image,
+dialog .titlebar label {
+    color: @title_color;
+    text-shadow: 0 1px @title_shadow_color;
+    -gtk-icon-shadow: 0 1px @title_shadow_color;
+}
+
 dialog .titlebar .title {
     color: transparent;
     font-size: 0;
