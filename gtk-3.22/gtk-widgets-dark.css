@@ -719,10 +719,6 @@ column-header .button:hover {
 * List Boxes *
 *************/
 
-EggListBox {
-    background-color: @base_color;
-}
-
 .list {
     background-color: @base_color;
 }
