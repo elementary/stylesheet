@@ -1537,6 +1537,40 @@ combobox button:last-child:not(:only-child) {
     border-bottom-left-radius: 0;
 }
 
+.linked entry:focus,
+.vertical.linked entry:focus,
+.horizontal.linked entry:focus,
+.linked entry:first-child:focus,
+.linked entry:last-child:focus,
+.vertical.linked entry:first-child:focus,
+.vertical.linked entry:last-child:focus,
+.horizontal.linked entry:first-child:focus,
+.horizontal.linked entry:last-child:focus.
+.vertical.linked .horizontal.linked entry:focus,
+.vertical.linked .horizontal.linked:first-child entry:first-child:focus,
+.vertical.linked .horizontal.linked:first-child entry:last-child:focus,
+.vertical.linked .horizontal.linked:last-child entry:first-child:focus,
+.vertical.linked .horizontal.linked:last-child entry:last-child:focus {
+    border: 1px solid alpha (@colorAccent, 0.8);
+}
+
+.linked entry.error,
+.vertical.linked entry.error,
+.horizontal.linked entry.error,
+.linked entry:first-child.error,
+.linked entry:last-child.error,
+.vertical.linked entry:first-child.error,
+.vertical.linked entry:last-child.error,
+.horizontal.linked entry:first-child.error,
+.horizontal.linked entry:last-child.error.
+.vertical.linked .horizontal.linked entry.error,
+.vertical.linked .horizontal.linked:first-child entry:first-child.error,
+.vertical.linked .horizontal.linked:first-child entry:last-child.error,
+.vertical.linked .horizontal.linked:last-child entry:first-child.error,
+.vertical.linked .horizontal.linked:last-child entry:last-child.error {
+    border: 1px solid alpha (@error_color, 0.8);
+}
+
 /********************
 * Notebook and Tabs *
 ********************/
