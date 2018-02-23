@@ -115,8 +115,7 @@ scale trough {
 
 scale highlight {
     background-color: @SILVER_700;
-    box-shadow:
-        inset 0 1px 0 alpha (#fff, 0.2);
+    box-shadow: inset 0 1px 0 alpha (#fff, 0.2);
 }
 
 scale highlight:disabled {
@@ -125,8 +124,7 @@ scale highlight:disabled {
 
 scale fill {
     background-color: alpha (@SILVER_700, 0.25);
-    box-shadow:
-        inset 0 1px 0 alpha (#fff, 0.05);
+    box-shadow: inset 0 1px 0 alpha (#fff, 0.05);
 }
 
 scale.horizontal highlight.top,
