@@ -104,6 +104,51 @@ levelbar block.empty:backdrop,
     border-color: shade (@bg_color, 0.75);
 }
 
+/********
+* Scale *
+********/
+
+scale trough {
+    min-height: 6px;
+    min-width: 6px;
+}
+
+scale highlight {
+    background-color: @SILVER_700;
+    box-shadow:
+        inset 0 1px 0 alpha (#fff, 0.2);
+}
+
+scale highlight:disabled {
+    background-color: @SILVER_900;
+}
+
+scale fill {
+    background-color: alpha (@SILVER_700, 0.25);
+    box-shadow:
+        inset 0 1px 0 alpha (#fff, 0.05);
+}
+
+scale.horizontal highlight.top,
+scale.horizontal fill.top {
+    margin: 1px 1px 1px -5px;
+}
+
+scale.horizontal highlight.bottom,
+scale.horizontal fill.bottom {
+    margin: 1px -5px 1px 1px;
+}
+
+scale.vertical highlight.top,
+scale.vertical fill.top {
+    margin: -5px 1px 1px 1px;
+}
+
+scale.vertical highlight.bottom,
+scale.vertical fill.bottom {
+    margin: 1px 1px -5px 1px;
+}
+
 /**********
 * Buttons *
 **********/
