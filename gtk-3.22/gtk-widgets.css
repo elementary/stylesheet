@@ -2068,7 +2068,6 @@ radio:indeterminate {
     -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
 }
 
-
 check:disabled,
 radio:disabled,
 switch:disabled {
