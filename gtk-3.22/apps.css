@@ -175,20 +175,8 @@ dialog entry.pathbar:focus {
 * Geary *
 ********/
 
-ConversationListView {
-    -GtkTreeView-grid-line-width: 0;
-}
-
-ConversationListView.view.cell {
-    border-style: solid;
-    border-width: 0 0 1px;
-    border-color: alpha (#000, 0.2);
-}
-
-ConversationListView.view.cell:selected:focus {
-    border-style: solid;
-    border-width: 0 0 1px;
-    border-color: shade (@colorAccent, 0.8);
+paned statusbar frame {
+    border: none;
 }
 
 /**********
