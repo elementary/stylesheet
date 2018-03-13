@@ -985,7 +985,7 @@ toolbar button,
 button:focus,
 popover actionbar button:focus,
 .button:focus,
-.popover .action-bar .button:focus,
+.popover actionbar .button:focus,
 .titlebar .stack-switcher .button.image-button:focus {
     color: @text_color;
     border-color: @colorAccent;
@@ -2329,8 +2329,7 @@ toolbar.bottom-toolbar button,
  * Action bars *
  ***************/
 
-actionbar,
-.action-bar {
+actionbar {
     padding: 1px 6px;
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     background-image:
@@ -2352,14 +2351,14 @@ actionbar,
     -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
 
-dialog .action-bar {
+dialog actionbar {
     background-image: none;
     background-color: @bg_color;
     border-top-color: shade (@bg_color, 0.8);
     border-radius: 0 0 4px 4px;
 }
 
-.action-bar button.image-button {
+actionbar button.image-button {
     background-color: transparent;
     background-image: none;
     border-radius: 0;
@@ -2368,13 +2367,13 @@ dialog .action-bar {
     padding: 5px 5px 4px;
 }
 
-.action-bar .title {
+actionbar .title {
     font-size: 11pt;
     font-weight: bold;
     padding: 0 12px;
 }
 
-.action-bar .subtitle {
+actionbar .subtitle {
     font-size: 9pt;
     padding: 0 12px;
 }
@@ -2773,8 +2772,7 @@ GtkAssistant .sidebar {
 * Tree, List, and Icon Views *
 *****************************/
 
-treeview,
-GtkTreeView {
+treeview {
     -GtkTreeView-vertical-separator: 5px;
     -GtkTreeView-horizontal-separator: 6px;
     -GtkTreeView-expander-size: 16;
@@ -2782,16 +2780,16 @@ GtkTreeView {
     border-top-color: @border_color;
 }
 
-GtkTreeView row:nth-child(even) {
+treeview row:nth-child(even) {
     background-color: @bg_color;
 }
 
-GtkTreeView row:nth-child(odd) {
+treeview row:nth-child(odd) {
     background-color: @base_color;
 }
 
 treeview entry,
-GtkTreeView .entry {
+treeview .entry {
     border-radius: 0;
     padding-bottom: 0;
     padding-top: 0;
@@ -2818,8 +2816,8 @@ GtkIconView.view.cell:selected:focus {
 popover treeview.view row:selected,
 .cell:selected,
 .view:selected,
-GtkTreeView row:focus,
-.popover GtkTreeView.view row:selected {
+treeview row:focus,
+.popover treeview.view row:selected {
     background-color: shade (@base_color, 0.8);
     color: @text_color;
 }
@@ -3546,13 +3544,13 @@ popover.menu,
     background-color: transparent;
 }
 
-.popover .action-bar {
+.popover actionbar {
     background-image: none;
     padding: 6px;
     border-color: shade(@base_color, 0.8);
 }
 
-.popover .action-bar .button {
+.popover actionbar .button {
     padding: 3px 6px;
 }
 
