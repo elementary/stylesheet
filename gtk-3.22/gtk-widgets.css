@@ -705,7 +705,7 @@ levelbar.discrete.horizontal block:last-child {
 * Scale *
 ********/
 
-scale slider {
+scale {
     background-image:
         linear-gradient(
             to bottom,
@@ -1746,6 +1746,9 @@ scrollbar button {
 scrollbar slider {
     margin: 1px;
     transition: all 200ms ease-in-out;
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
+    background-color: alpha (@text_color, 0.6);
+    border-radius: 10px;
 }
 
 scrollbar.horizontal slider {

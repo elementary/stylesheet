@@ -147,6 +147,16 @@ scale.vertical fill.bottom {
     margin: 1px 1px -5px 1px;
 }
 
+/**************
+ * Scrollbars *
+ **************/
+
+scrollbar slider {
+        border: 1px solid alpha (@bg_highlight_color, 0.25);
+        background-color: alpha (@text_color, 0.6);
+        border-radius: 10px;
+}
+
 /**********
 * Buttons *
 **********/
