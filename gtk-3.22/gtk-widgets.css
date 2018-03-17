@@ -435,8 +435,8 @@ entry.flat,
  *************/
 
 textview text {
-  color: @text_color;
-  background-color: @base_color;
+    color: @text_color;
+    background-color: @base_color;
 }
 
 /*******************
