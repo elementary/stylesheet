@@ -152,9 +152,9 @@ scale.vertical fill.bottom {
  **************/
 
 scrollbar slider {
-        border: 1px solid alpha (@bg_highlight_color, 0.25);
-        background-color: alpha (@text_color, 0.6);
-        border-radius: 10px;
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
+    background-color: alpha (@text_color, 0.6);
+    border-radius: 10px;
 }
 
 /**********
