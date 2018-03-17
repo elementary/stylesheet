@@ -58,6 +58,11 @@ entry:focus,
         0 1px 0 0 alpha (#fff, 0.05);
 }
 
+textview text {
+  color: @text_color;
+  background-color: @base_color;
+}
+
 entry selection,
 textview selection {
     color: shade (@text_color, 1.23);
