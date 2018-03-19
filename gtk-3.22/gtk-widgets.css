@@ -705,7 +705,7 @@ levelbar.discrete.horizontal block:last-child {
 * Scale *
 ********/
 
-scale {
+scale slider {
     background-image:
         linear-gradient(
             to bottom,
