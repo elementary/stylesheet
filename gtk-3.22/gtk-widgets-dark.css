@@ -58,7 +58,7 @@ entry:focus,
         0 1px 0 0 alpha (#fff, 0.05);
 }
 
-textview text {
+textview, textview text {
     color: @text_color;
     background-color: @base_color;
 }
