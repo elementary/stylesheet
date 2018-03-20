@@ -2077,8 +2077,14 @@ switch:checked {
 
 check:checked,
 radio:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"), url("assets/check-active@2.svg"));
+    color: #fff;
+    -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
     -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
+}
+
+check:indeterminate,
+radio:indeterminate {
+    -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
 }
 
 check:disabled,
