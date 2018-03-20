@@ -1927,7 +1927,7 @@ modelbutton label,
 
 menu:dir(ltr) menuitem image:first-child {
     margin-left: -17px;
-    padding-left: 0px;
+    padding-left: 0;
     padding-right: 2px;
 }
 
