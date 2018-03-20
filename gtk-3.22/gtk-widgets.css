@@ -1917,20 +1917,24 @@ menuitem arrow.bottom {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
+menuitem image,
 menuitem label,
 modelbutton label,
+.menuitem image,
 .menuitem label {
     padding: 3px;
 }
 
 menu:dir(ltr) menuitem image:first-child {
     margin-left: -17px;
+    padding-left: 0px;
     padding-right: 2px;
 }
 
 menu:dir(rtl) menuitem image:first-child {
     margin-right: -17px;
     padding-left: 2px;
+    padding-right: 0;
 }
 
 modelbutton {
