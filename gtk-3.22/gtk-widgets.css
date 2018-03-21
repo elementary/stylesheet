@@ -167,30 +167,15 @@ rubberband,
  *************/
 
 separator.horizontal {
-    background-image:
-        linear-gradient(
-            to bottom,
-            transparent calc(50% - 1px),
-            @menu_separator calc(50% - 1px),
-            @menu_separator_shadow 50%,
-            @menu_separator_shadow calc(50% + 1px),
-            transparent calc(50% + 1px)
-        );
-    min-height: 2px;
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
+    margin-bottom: -1px;
 }
 
 separator.vertical {
-    background-image:
-        linear-gradient(
-            to right,
-            transparent calc(50% - 1px),
-            @menu_separator calc(50% - 1px),
-            @menu_separator_shadow 50%,
-            @menu_separator_shadow calc(50% + 1px),
-            transparent calc(50% + 1px)
-        );
+    border-left: 1px solid @menu_separator;
+    border-right: 1px solid @menu_separator_shadow;
     margin-right: -1px;
-    min-width: 2px;
 }
 
 paned.vertical > separator {
