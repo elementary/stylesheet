@@ -1793,6 +1793,14 @@ trough {
     background-color: @base_color;
 }
 
+placessidebar > junction,
+placessidebar.frame > junction,
+scrolledwindow > junction,
+scrolledwindow.frame > junction {
+        border-style: none;
+        background-color: rgba (0,0,0,0.10);
+}
+
 /********
 * Menus *
 ********/
