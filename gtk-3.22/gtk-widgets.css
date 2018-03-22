@@ -1776,12 +1776,8 @@ scrollbar trough {
     padding: 0;
 }
 
-scrollbar.overlay-indicator trough {
-    background-color: transparent;
-}
-
-scrollbar.overlay-indicator:hover trough {
-    background-color: alpha (#000, 0.1);
+trough {
+    background-color: @base_color;
 }
 
 scrollbar:hover trough {
@@ -1789,8 +1785,12 @@ scrollbar:hover trough {
     border-radius: 0;
 }
 
-trough {
-    background-color: @base_color;
+scrollbar.overlay-indicator trough {
+    background-color: transparent;
+}
+
+scrollbar.overlay-indicator:hover trough {
+    background-color: alpha (#000, 0.1);
 }
 
 placessidebar > junction,
