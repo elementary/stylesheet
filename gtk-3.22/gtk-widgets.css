@@ -1816,7 +1816,7 @@ scrollbar.overlay-indicator:hover trough {
 
 * > junction {
     border-style: none;
-    background-color: alpha (#000,0.10);
+    background-color: alpha (#000, 0.1);
 }
 
 /********
