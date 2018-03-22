@@ -1749,13 +1749,13 @@ scrollbar.horizontal slider {
     min-height: 3px;
 }
 
-scrollbar.horizontal:hover slider {
-    min-height: 8px;
-}
-
 scrollbar.vertical slider {
     min-height: 30px;
     min-width: 3px;
+}
+
+scrollbar.horizontal:hover slider {
+    min-height: 8px;
 }
 
 scrollbar.vertical:hover slider {
