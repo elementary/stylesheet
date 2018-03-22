@@ -1772,8 +1772,15 @@ scrollbar.overlay-indicator slider:hover {
     border-radius: 20px;
 }
 
+scrollbar.bottom trough { border-top-width: 1px; }
+scrollbar.top trough { border-bottom-width: 1px; }
+scrollbar.left trough { border-right-width: 1px; }
+scrollbar.right trough { border-left-width: 1px; }
+
 scrollbar trough {
     padding: 0;
+    border-style: solid;
+    border-color: alpha (#000, 0.05);
 }
 
 trough {
@@ -1787,10 +1794,13 @@ scrollbar:hover trough {
 
 scrollbar.overlay-indicator trough {
     background-color: transparent;
+    border-style: none;
+    border-color: alpha (#000, 0.15);
 }
 
 scrollbar.overlay-indicator:hover trough {
     background-color: alpha (#000, 0.1);
+    border-style: solid;
 }
 
 placessidebar > junction,
