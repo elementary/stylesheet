@@ -21,6 +21,7 @@
     -GtkTextView-error-underline-color: @error_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkHTML-link-color: @link_color;
+    -GtkScrolledWindow-scrollbar-spacing: 0;
 
     /* -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; FIXME: Uncomment for 3.19 */
 }
