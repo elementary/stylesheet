@@ -1754,11 +1754,11 @@ scrollbar.vertical slider {
     min-width: 3px;
 }
 
-scrollbar.horizontal:hover slider {
+scrollbar.overlay-indicator.horizontal:hover slider {
     min-height: 8px;
 }
 
-scrollbar.vertical:hover slider {
+scrollbar.overlay-indicator.vertical:hover slider {
     min-width: 8px;
 }
 
