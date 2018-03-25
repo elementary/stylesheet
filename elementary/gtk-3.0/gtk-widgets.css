@@ -739,7 +739,7 @@ scale slider {
         inset 0 -1px 0 0 alpha (#fff, 0.15),
         0 0 0 1px alpha (#000, 0.25),
         0 1px 1px 1px alpha (#000, 0.1);
-    margin: -7px 0;
+    margin: -7px;
     min-height: 14px;
     min-width: 14px;
 }
@@ -813,10 +813,6 @@ scale trough {
 
 .titlebar scale trough {
     border-radius: 0 12px 12px 0;
-}
-
-scale.vertical slider {
-    margin: 0 -7px;
 }
 
 scale.vertical trough {
