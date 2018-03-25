@@ -1911,7 +1911,7 @@ modelbutton label,
 }
 
 menu:dir(ltr) menuitem image:first-child {
-    margin-left: -16px;
+    margin-left: 0px;
 }
 
 modelbutton {
