@@ -1738,11 +1738,6 @@ scrollbar button {
     background-color: transparent;
 }
 
-scrollbar slider {
-    margin: 1px;
-    transition: all 200ms ease-in-out;
-}
-
 scrollbar.horizontal slider {
     min-width: 30px;
     min-height: 3px;
@@ -1761,10 +1756,12 @@ scrollbar.vertical:hover slider {
     min-width: 8px;
 }
 
-scrollbar.overlay-indicator slider {
-    border: 1px solid alpha (@bg_highlight_color, 0.25);
+scrollbar slider {
     background-color: alpha (@text_color, 0.6);
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
     border-radius: 10px;
+    margin: 1px;
+    transition: all 200ms ease-in-out;
 }
 
 scrollbar.overlay-indicator slider:hover {
