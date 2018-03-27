@@ -167,30 +167,15 @@ rubberband,
  *************/
 
 separator.horizontal {
-    background-image:
-        linear-gradient(
-            to bottom,
-            transparent calc(50% - 1px),
-            @menu_separator calc(50% - 1px),
-            @menu_separator_shadow 50%,
-            @menu_separator_shadow calc(50% + 1px),
-            transparent calc(50% + 1px)
-        );
-    min-height: 2px;
+    border-top: 1px solid @menu_separator;
+    border-bottom: 1px solid @menu_separator_shadow;
+    margin-bottom: -1px;
 }
 
 separator.vertical {
-    background-image:
-        linear-gradient(
-            to right,
-            transparent calc(50% - 1px),
-            @menu_separator calc(50% - 1px),
-            @menu_separator_shadow 50%,
-            @menu_separator_shadow calc(50% + 1px),
-            transparent calc(50% + 1px)
-        );
+    border-left: 1px solid @menu_separator;
+    border-right: 1px solid @menu_separator_shadow;
     margin-right: -1px;
-    min-width: 2px;
 }
 
 paned.vertical > separator {
@@ -428,6 +413,16 @@ entry.flat,
     background-color: @base_color;
     background-image: none;
     box-shadow: none;
+}
+
+/*************
+ * Text view *
+ *************/
+
+textview,
+textview text {
+    color: @text_color;
+    background-color: @base_color;
 }
 
 /*******************
@@ -2056,8 +2051,14 @@ switch:checked {
 
 check:checked,
 radio:checked {
-    -gtk-icon-source: -gtk-scaled(url("assets/check-active.svg"), url("assets/check-active@2.svg"));
+    color: #fff;
+    -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
     -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
+}
+
+check:indeterminate,
+radio:indeterminate {
+    -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
 }
 
 check:disabled,
