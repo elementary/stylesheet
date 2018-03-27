@@ -3335,7 +3335,7 @@ dialog .source-list .view:selected:backdrop {
 }
 
 .sidebar separator {
-    background: none;
+    border: none;
 }
 
 /***********
