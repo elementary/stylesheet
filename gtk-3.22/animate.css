@@ -55,7 +55,8 @@
     100% { padding-left: 0; }
 }
 
-.spin {
+.spin,
+.spin image {
     animation: spin 600ms linear infinite;
 }
 
