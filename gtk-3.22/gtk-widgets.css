@@ -166,10 +166,15 @@ rubberband,
  * Separators *
  *************/
 
+menu separator,
 separator.horizontal {
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
     margin-bottom: -1px;
+}
+
+menu separator {
+    margin: 4px 0;
 }
 
 separator.vertical {
@@ -1923,14 +1928,6 @@ modelbutton {
     border: none;
 }
 
-menu separator {
-    color: @menu_separator;
-    margin: 4px 0;
-    background: none;
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
-}
-
 /*******************************
  * Check and Radio, and Switch *
  ******************************/
@@ -3334,7 +3331,7 @@ dialog .source-list .view:selected:backdrop {
     border-right-width: 0;
 }
 
-.sidebar separator {
+.sidebar list separator {
     border: none;
 }
 
