@@ -2487,7 +2487,8 @@ searchbar:backdrop,
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
-
+dialog searchbar,
+dialog searchbar:backdrop,
 dialog .location-bar,
 dialog .search-bar,
 dialog .search-bar:backdrop {
@@ -2495,10 +2496,6 @@ dialog .search-bar:backdrop {
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.6);
     box-shadow: none;
-}
-
-GtkAppChooserDialog .search-bar {
-    border: none;
 }
 
 .search-bar .button.close-button {
