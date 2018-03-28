@@ -3681,7 +3681,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title,
 .titlebar .subtitle,
 .titlebar .titlebutton,
-.titlebar image {
+.titlebar *:not(entry) image {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3710,7 +3710,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:disabled,
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
-.titlebar image:disabled {
+.titlebar *:not(entry) image:disabled {
     color: shade (@textColorPrimary, 1.5);
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3719,7 +3719,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
-.titlebar image:backdrop {
+.titlebar *:not(entry) image:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
     -gtk-icon-shadow: none;
