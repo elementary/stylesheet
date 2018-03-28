@@ -2487,6 +2487,7 @@ searchbar:backdrop,
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
+
 dialog searchbar,
 dialog searchbar:backdrop,
 dialog .location-bar,
