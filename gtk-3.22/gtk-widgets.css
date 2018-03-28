@@ -166,10 +166,15 @@ rubberband,
  * Separators *
  *************/
 
+menu separator,
 separator.horizontal {
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
     margin-bottom: -1px;
+}
+
+menu separator {
+    margin: 4px 0;
 }
 
 separator.vertical {
@@ -1738,11 +1743,6 @@ scrollbar button {
     background-color: transparent;
 }
 
-scrollbar slider {
-    margin: 1px;
-    transition: all 200ms ease-in-out;
-}
-
 scrollbar.horizontal slider {
     min-width: 30px;
     min-height: 3px;
@@ -1761,10 +1761,12 @@ scrollbar.vertical:hover slider {
     min-width: 8px;
 }
 
-scrollbar.overlay-indicator slider {
-    border: 1px solid alpha (@bg_highlight_color, 0.25);
+scrollbar slider {
     background-color: alpha (@text_color, 0.6);
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
     border-radius: 10px;
+    margin: 1px;
+    transition: all 200ms ease-in-out;
 }
 
 scrollbar.overlay-indicator slider:hover {
@@ -1810,7 +1812,7 @@ menu,
 window.menu,
 window.popup {
     padding: 4px 0;
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: @bg_color;
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
@@ -1902,16 +1904,24 @@ menuitem arrow.bottom {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-menuitem label,
 menuitem image,
+menuitem label,
 modelbutton label,
-.menuitem label,
-.menuitem image {
+.menuitem image,
+.menuitem label {
     padding: 3px;
 }
 
 menu:dir(ltr) menuitem image:first-child {
-    margin-left: -16px;
+    margin-left: -17px;
+    padding-left: 0;
+    padding-right: 2px;
+}
+
+menu:dir(rtl) menuitem image:first-child {
+    margin-right: -17px;
+    padding-left: 2px;
+    padding-right: 0;
 }
 
 modelbutton {
@@ -1924,14 +1934,6 @@ modelbutton {
 .titlebar separator {
     color: transparent;
     border: none;
-}
-
-menu separator {
-    color: @menu_separator;
-    margin: 4px 0;
-    background: none;
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
 }
 
 /*******************************
@@ -3337,8 +3339,8 @@ dialog .source-list .view:selected:backdrop {
     border-right-width: 0;
 }
 
-.sidebar separator {
-    background: none;
+.sidebar list separator {
+    border: none;
 }
 
 /***********
