@@ -1753,11 +1753,11 @@ scrollbar.vertical slider {
     min-width: 3px;
 }
 
-scrollbar.overlay-indicator.horizontal:hover slider {
+scrollbar.horizontal:hover slider {
     min-height: 8px;
 }
 
-scrollbar.overlay-indicator.vertical:hover slider {
+scrollbar.vertical:hover slider {
     min-width: 8px;
 }
 
