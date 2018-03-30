@@ -1796,7 +1796,7 @@ scrollbar.overlay-indicator:hover trough {
 /* FIXME: background is ok, but nothing seems affecting junction border.
  * Even placing this block at the end of file doesn't help.
  * Can't find source, unless inspector will show junction node */
-scrolledwindow > junction, {
+scrolledwindow junction {
     border-style: none;
     background-color: @bg_color;
 }
