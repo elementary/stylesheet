@@ -1726,6 +1726,10 @@ notebook tab label:backdrop {
 * Scrollbars *
 *************/
 
+scrolledwindow {
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+}
+
 scrollbar {
     background-color: transparent;
     transition: all 600ms ease-out;
