@@ -349,24 +349,6 @@
 
 /* Partition types, i.e. for the installer */
 
-.storage-bar .fill-block.video {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @STRAWBERRY_500,
-                1.3
-            ),
-            @STRAWBERRY_500
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
-    border-color: shade (@STRAWBERRY_500, 0.9);
-}
-
 .storage-bar .fill-block.swap {
     background-color: $STRAWBERRY_700;
     background-image:
