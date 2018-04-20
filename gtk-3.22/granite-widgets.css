@@ -350,7 +350,7 @@
 /* Partition types, i.e. for the installer */
 
 .storage-bar .fill-block.swap {
-    background-color: $STRAWBERRY_700;
+    background-color: @STRAWBERRY_700;
     background-image:
         linear-gradient(
             to bottom,
@@ -369,7 +369,7 @@
 }
 
 .storage-bar .fill-block.ext4 {
-    background-color: $LIME_500;
+    background-color: @LIME_500;
     background-image:
         linear-gradient(
             to bottom,
@@ -388,7 +388,7 @@
 }
 
 .storage-bar .fill-block.ext3 {
-    background-color: $LIME_500;
+    background-color: @LIME_500;
     background-image:
         linear-gradient(
             to bottom,
@@ -407,12 +407,12 @@
 }
 
 .storage-bar .fill-block.ext2 {
-    background-color: $LIME_900;
+    background-color: @LIME_900;
 }
 
 .storage-bar .fill-block.fat16,
 .storage-bar .fill-block.fat32 {
-    background-color: $BANANA_500;
+    background-color: @BANANA_500;
     background-image:
         linear-gradient(
             to bottom,
@@ -431,7 +431,7 @@
 }
 
 .storage-bar .fill-block.btrfs {
-    background-color: $BLUEBERRY_700;
+    background-color: @BLUEBERRY_700;
     background-image:
         linear-gradient(
             to bottom,
@@ -450,7 +450,7 @@
 }
 
 .storage-bar .fill-block.xfs {
-    background-color: $GRAPE_900;
+    background-color: @GRAPE_900;
     background-image:
         linear-gradient(
             to bottom,
@@ -469,7 +469,7 @@
 }
 
 .storage-bar .fill-block.ntfs {
-    background-color: $ORANGE_500;
+    background-color: @ORANGE_500;
     background-image:
         linear-gradient(
             to bottom,
@@ -488,7 +488,7 @@
 }
 
 .storage-bar .fill-block.luks {
-    background-color: $GRAPE_500;
+    background-color: @GRAPE_500;
     background-image:
         linear-gradient(
             to bottom,
@@ -507,7 +507,7 @@
 }
 
 .storage-bar .fill-block.lvm {
-    background-color: $GRAPE_700;
+    background-color: @GRAPE_700;
     background-image:
         linear-gradient(
             to bottom,
@@ -526,7 +526,7 @@
 }
 
 .storage-bar .fill-block.none {
-    background-color: $BLUEBERRY_500;
+    background-color: @BLUEBERRY_500;
     background-image:
         linear-gradient(
             to bottom,
