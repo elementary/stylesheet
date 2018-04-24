@@ -58,6 +58,13 @@
 @define-color GRAPE_700 #4c158a;
 @define-color GRAPE_900 #260063;
 
+/* Cocoa */
+@define-color COCOA_100 #a3907c;
+@define-color COCOA_300 #8a715e;
+@define-color COCOA_500 #715344;
+@define-color COCOA_700 #57392d;
+@define-color COCOA_900 #3d211b;
+
 /* Silver */
 @define-color SILVER_100 #fafafa;
 @define-color SILVER_300 #d4d4d4;
