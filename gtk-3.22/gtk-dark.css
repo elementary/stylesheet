@@ -127,6 +127,16 @@
 @define-color success_color @LIME_300;
 @define-color insensitive_fg_color @SILVER_500;
 
+/* GTK NAMED COLORS */
+@define-color borders @border_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_text_color @text_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color insensitive_fg_color @insensitive_color;
+
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-dark.css");
 @import url("granite-widgets.css");
