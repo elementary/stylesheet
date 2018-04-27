@@ -3421,12 +3421,22 @@ calendar .view {
 
 infobar {
     background-color: @bg_color;
+    background-image: -gtk-icontheme("dialog-information-symbolic");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 9px center;
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
     box-shadow:
         inset 0 1px 0 0 shade (@bg_color, 0.92),
         inset 0 -1px 0 0 shade (@bg_color, 1.2);
+    padding-left: 24px;
+}
+
+infobar:dir(rtl) {
+    background-position: calc(100% - 9px) center;
+    padding-right: 24px;
 }
 
 infobar.frame {
@@ -3446,10 +3456,13 @@ infobar label {
 
 infobar.error {
     background-color: shade (@error_color, 1.2);
+    background-image: -gtk-icontheme("process-error-symbolic");
     border-color: @error_color;
     box-shadow:
         inset 0 1px 0 0 alpha (@error_color, 0.3),
         inset 0 -1px 0 0 alpha (#fff, 0.3);
+    color: #fff;
+    -gtk-icon-palette: error #fff;
 }
 
 infobar.error label {
@@ -3459,10 +3472,12 @@ infobar.error label {
 
 infobar.question {
     background-color: shade (@selected_bg_color, 1.2);
+    background-image: -gtk-icontheme("dialog-question-symbolic");
     border-color: shade (@selected_bg_color, 0.9);
     box-shadow:
         inset 0 1px 0 0 alpha (@selected_bg_color, 0.3),
         inset 0 -1px 0 0 alpha (#fff, 0.3);
+    color: shade (@selected_bg_color, 0.25);
 }
 
 infobar.question label {
@@ -3471,10 +3486,13 @@ infobar.question label {
 
 infobar.warning {
     background-color: shade (@warning_color, 1.2);
+    background-image: -gtk-icontheme("dialog-warning-symbolic");
     border-color: shade (@warning_color, 0.9);
     box-shadow:
         inset 0 1px 0 0 @warning_color,
         inset 0 -1px 0 0 alpha (#fff, 0.4);
+    color: shade (@warning_color, 0.25);
+    -gtk-icon-palette: warning shade (@warning_color, 0.4);
 }
 
 infobar.warning button {
