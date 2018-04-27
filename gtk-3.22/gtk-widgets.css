@@ -2604,9 +2604,9 @@ button.destructive-action,
     border-color: shade (@error_color, 0.9);
 }
 
-button.destructive-action:backdrop,
-.titlebar button.destructive-action:backdrop,
-.destructive-action.button:backdrop,
+button.destructive-action:backdrop:not(:disabled),
+.titlebar button.destructive-action:backdrop:not(:disabled),
+.destructive-action.button:backdrop:not(:disabled),
 .titlebar .destructive-action.button:backdrop {
     background-image:
         linear-gradient(
