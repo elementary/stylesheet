@@ -4043,7 +4043,8 @@ dialog label.primary {
 * Text Styles *
 **************/
 
-.dim-label {
+.dim-label,
+.greyed-label {
     opacity: 0.75;
 }
 
