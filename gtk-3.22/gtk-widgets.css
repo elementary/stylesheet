@@ -166,10 +166,15 @@ rubberband,
  * Separators *
  *************/
 
+menu separator,
 separator.horizontal {
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
     margin-bottom: -1px;
+}
+
+menu separator {
+    margin: 4px 0;
 }
 
 separator.vertical {
@@ -647,21 +652,29 @@ levelbar block.empty {
     background-image:
         linear-gradient(
             to bottom,
+            @bg_color,
             shade (
                 @bg_color,
-                0.95
-            ),
-            shade (
-                @bg_color,
-                0.85
+                0.9
             )
         );
     border-color: alpha (#000, 0.25);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+levelbar.vertical block.empty {
+    background-image:
+        linear-gradient(
+            to bottom,
+            @bg_color,
+            shade (
+                @bg_color,
+                0.95
+            )
+        );
 }
 
 levelbar block:backdrop {
@@ -694,6 +707,11 @@ levelbar.discrete.horizontal block:first-child {
 
 levelbar.discrete.horizontal block:last-child {
     margin-right: -2px;
+}
+
+levelbar trough {
+    background: transparent;
+    box-shadow: none;
 }
 
 /********
@@ -1721,6 +1739,10 @@ notebook tab label:backdrop {
 * Scrollbars *
 *************/
 
+scrolledwindow {
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+}
+
 scrollbar {
     background-color: transparent;
     transition: all 600ms ease-out;
@@ -1736,11 +1758,6 @@ scrollbar button {
     border: none;
     background-image: none;
     background-color: transparent;
-}
-
-scrollbar slider {
-    margin: 1px;
-    transition: all 200ms ease-in-out;
 }
 
 scrollbar.horizontal slider {
@@ -1761,10 +1778,12 @@ scrollbar.vertical:hover slider {
     min-width: 8px;
 }
 
-scrollbar.overlay-indicator slider {
-    border: 1px solid alpha (@bg_highlight_color, 0.25);
+scrollbar slider {
     background-color: alpha (@text_color, 0.6);
+    border: 1px solid alpha (@bg_highlight_color, 0.25);
     border-radius: 10px;
+    margin: 1px;
+    transition: all 200ms ease-in-out;
 }
 
 scrollbar.overlay-indicator slider:hover {
@@ -1822,7 +1841,7 @@ menu,
 window.menu,
 window.popup {
     padding: 4px 0;
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: @bg_color;
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
@@ -1914,16 +1933,24 @@ menuitem arrow.bottom {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-menuitem label,
 menuitem image,
+menuitem label,
 modelbutton label,
-.menuitem label,
-.menuitem image {
+.menuitem image,
+.menuitem label {
     padding: 3px;
 }
 
 menu:dir(ltr) menuitem image:first-child {
-    margin-left: -16px;
+    margin-left: -17px;
+    padding-left: 0;
+    padding-right: 2px;
+}
+
+menu:dir(rtl) menuitem image:first-child {
+    margin-right: -17px;
+    padding-left: 2px;
+    padding-right: 0;
 }
 
 modelbutton {
@@ -1936,14 +1963,6 @@ modelbutton {
 .titlebar separator {
     color: transparent;
     border: none;
-}
-
-menu separator {
-    color: @menu_separator;
-    margin: 4px 0;
-    background: none;
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
 }
 
 /*******************************
@@ -2498,6 +2517,8 @@ searchbar:backdrop,
     -gtk-icon-effect: dim;
 }
 
+dialog searchbar,
+dialog searchbar:backdrop,
 dialog .location-bar,
 dialog .search-bar,
 dialog .search-bar:backdrop {
@@ -2505,10 +2526,6 @@ dialog .search-bar:backdrop {
     background-color: @bg_color;
     border-color: shade (@bg_color, 0.6);
     box-shadow: none;
-}
-
-GtkAppChooserDialog .search-bar {
-    border: none;
 }
 
 .search-bar .button.close-button {
@@ -3349,8 +3366,8 @@ dialog .source-list .view:selected:backdrop {
     border-right-width: 0;
 }
 
-.sidebar separator {
-    background: none;
+.sidebar list separator {
+    border: none;
 }
 
 /***********
@@ -3416,12 +3433,22 @@ calendar .view {
 
 infobar {
     background-color: @bg_color;
+    background-image: -gtk-icontheme("dialog-information-symbolic");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 9px center;
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
     box-shadow:
         inset 0 1px 0 0 shade (@bg_color, 0.92),
         inset 0 -1px 0 0 shade (@bg_color, 1.2);
+    padding-left: 24px;
+}
+
+infobar:dir(rtl) {
+    background-position: calc(100% - 9px) center;
+    padding-right: 24px;
 }
 
 infobar.frame {
@@ -3441,10 +3468,13 @@ infobar label {
 
 infobar.error {
     background-color: shade (@error_color, 1.2);
+    background-image: -gtk-icontheme("process-error-symbolic");
     border-color: @error_color;
     box-shadow:
         inset 0 1px 0 0 alpha (@error_color, 0.3),
         inset 0 -1px 0 0 alpha (#fff, 0.3);
+    color: #fff;
+    -gtk-icon-palette: error #fff;
 }
 
 infobar.error label {
@@ -3454,10 +3484,12 @@ infobar.error label {
 
 infobar.question {
     background-color: shade (@selected_bg_color, 1.2);
+    background-image: -gtk-icontheme("dialog-question-symbolic");
     border-color: shade (@selected_bg_color, 0.9);
     box-shadow:
         inset 0 1px 0 0 alpha (@selected_bg_color, 0.3),
         inset 0 -1px 0 0 alpha (#fff, 0.3);
+    color: shade (@selected_bg_color, 0.25);
 }
 
 infobar.question label {
@@ -3466,10 +3498,13 @@ infobar.question label {
 
 infobar.warning {
     background-color: shade (@warning_color, 1.2);
+    background-image: -gtk-icontheme("dialog-warning-symbolic");
     border-color: shade (@warning_color, 0.9);
     box-shadow:
         inset 0 1px 0 0 @warning_color,
         inset 0 -1px 0 0 alpha (#fff, 0.4);
+    color: shade (@warning_color, 0.25);
+    -gtk-icon-palette: warning shade (@warning_color, 0.4);
 }
 
 infobar.warning button {
@@ -3691,7 +3726,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title,
 .titlebar .subtitle,
 .titlebar .titlebutton,
-.titlebar image {
+.titlebar *:not(entry) image {
     color: @textColorPrimary;
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3720,7 +3755,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:disabled,
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
-.titlebar image:disabled {
+.titlebar *:not(entry) image:disabled {
     color: shade (@textColorPrimary, 1.5);
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
@@ -3729,7 +3764,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
-.titlebar image:backdrop {
+.titlebar *:not(entry) image:backdrop {
     color: mix (@textColorPrimary, @colorPrimary, 0.3);
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -4020,7 +4055,8 @@ dialog label.primary {
 * Text Styles *
 **************/
 
-.dim-label {
+.dim-label,
+.greyed-label {
     opacity: 0.75;
 }
 
