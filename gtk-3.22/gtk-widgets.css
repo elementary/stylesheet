@@ -3598,7 +3598,7 @@ GcrCertificateWidget .frame {
  * CSD *
  ******/
 
-:not(.titlebar) > .titlebar {
+.titlebar {
     background-image:
         linear-gradient(
             to bottom,
@@ -3623,7 +3623,7 @@ GcrCertificateWidget .frame {
     -gtk-icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
 }
 
-:not(.titlebar) > .titlebar:backdrop {
+.titlebar:backdrop {
     background-image:
         linear-gradient(
             to bottom,
@@ -3640,6 +3640,13 @@ GcrCertificateWidget .frame {
     border-color: shade (@colorPrimary, 0.82);
     box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
     -gtk-icon-effect: dim;
+}
+
+.titlebar .titlebar {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
 }
 
 .titlebar.compact {
