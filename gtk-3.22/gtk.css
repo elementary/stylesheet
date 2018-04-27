@@ -98,7 +98,7 @@
 @define-color bg_highlight_color white;
 @define-color border_color alpha (@BLACK_900, 0.25);
 @define-color fg_color @BLACK_500;
-@define-color insensitive_color mix(@text_color, @bg_color, 0.31);
+@define-color insensitive_color mix(@text_color, @bg_color, 0.5);
 @define-color inset_dark_color alpha (@BLACK_900, 0.06);
 @define-color inset_dark_color_backdrop alpha (@BLACK_900, 0.03);
 @define-color menu_separator alpha (@BLACK_900, 0.15);
@@ -124,6 +124,16 @@
 @define-color error_color @STRAWBERRY_500;
 @define-color success_color @LIME_300;
 @define-color insensitive_fg_color @SILVER_500;
+
+/* GTK NAMED COLORS */
+@define-color borders @border_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_text_color @text_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color insensitive_fg_color @insensitive_color;
 
 @import url("gtk-widgets.css");
 @import url("granite-widgets.css");
