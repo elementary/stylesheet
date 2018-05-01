@@ -3899,8 +3899,8 @@ messagedialog .titlebar:backdrop {
         inset 0 1px 0 0 @bg_highlight_color;
 }
 
-dialog .titlebar image,
-dialog .titlebar label {
+dialog .titlebar :not(.suggested-action):not(.destructive-action) image,
+dialog .titlebar :not(.suggested-action):not(.destructive-action) label {
     color: @title_color;
     text-shadow: 0 1px @title_shadow_color;
     -gtk-icon-shadow: 0 1px @title_shadow_color;
