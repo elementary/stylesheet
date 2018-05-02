@@ -3747,6 +3747,10 @@ messagedialog .titlebar.default-decoration:backdrop {
     box-shadow: none;
 }
 
+.titlebar .titlebutton image {
+    -gtk-icon-style: symbolic;
+}
+
 .titlebar .title:disabled,
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
