@@ -3778,14 +3778,6 @@ decoration {
     margin: 12px;
 }
 
-.ssd decoration,
-.ssd decoration:backdrop {
-    box-shadow:
-        0 0 0 1px alpha (#000, 0.3),
-        0 1px 6px alpha (#000, 0.12),
-        0 1px 4px alpha (#000, 0.24);
-}
-
 window.popup decoration,
 .csd.popup decoration {
     border-radius: 3px;
@@ -3838,6 +3830,14 @@ decoration:backdrop {
         0 0 0 1px alpha (#000, 0.2),
         0 1px 3px alpha (#000, 0.12),
         0 1px 2px alpha (#000, 0.24);
+}
+
+.ssd decoration,
+.ssd decoration:backdrop {
+    box-shadow:
+        0 0 0 1px alpha (#000, 0.3),
+        0 1px 6px alpha (#000, 0.12),
+        0 1px 4px alpha (#000, 0.24);
 }
 
 /**********
