@@ -1435,6 +1435,7 @@ combobox button:last-child:not(:only-child) {
 .linked entry,
 .linked button,
 .linked > combobox button.combo,
+.linked spinbutton,
 .titlebar .stack-switcher .button.image-button {
     border-left-width: 0;
     border-radius: 0;
@@ -1444,6 +1445,7 @@ combobox button:last-child:not(:only-child) {
 .linked entry:first-child,
 .linked button:first-child,
 .linked > combobox:first-child button.combo,
+.linked spinbutton:first-child,
 .titlebar .stack-switcher .button.image-button:first-child {
     border-width: 1px;
     border-radius: 2.5px 0 0 2.5px;
@@ -1453,6 +1455,7 @@ combobox button:last-child:not(:only-child) {
 .linked entry:last-child,
 .linked button:last-child,
 .linked > combobox:last-child button.combo,
+.linked spinbutton:last-child,
 .titlebar .stack-switcher .button.image-button:last-child {
     border-left-width: 0;
     border-radius: 0 2.5px 2.5px 0;
@@ -1462,6 +1465,7 @@ combobox button:last-child:not(:only-child) {
 .linked entry:only-child,
 .linked button:only-child,
 .linked > combobox:only-child button.combo,
+.linked spinbutton:only-child,
 .titlebar .stack-switcher .button.image-button:only-child {
     border-right-width: 1px;
     border-left-width: 1px;

@@ -412,15 +412,6 @@ menubar.panel,
 
 .login entry {
     padding: 6px;
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @base_color,
-                0.93
-            ),
-            @base_color
-        );
 }
 
 .login entry *:selected {
