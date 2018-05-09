@@ -1736,6 +1736,41 @@ notebook tab label:backdrop {
     color: alpha(@text_color, 0.75);
 }
 
+.inline-toolbar notebook header {
+    background-color: shade (@tab_base_color, 0.95);
+    background-image:
+        linear-gradient(
+            to bottom,
+            alpha (
+                #000,
+                0.12
+            ),
+            alpha (
+                #000,
+                0
+            ) 2px,
+            alpha (
+                #000,
+                0
+            ) calc(100% - 1px),
+            alpha (
+                #000,
+                0.05
+            ) 
+        );
+    border-color: shade (@tab_base_color, 0.78);
+}
+
+.inline-toolbar notebook tab:checked {
+    background-color: @tab_base_color;
+    background-image: none;
+    border-color: shade (@tab_base_color, 0.78);
+    box-shadow:
+        -1px 0 1px alpha (#000, 0.05),
+        1px 0 1px alpha (#000, 0.05);
+    margin-bottom: -1px;
+}
+
 /*************
 * Scrollbars *
 *************/

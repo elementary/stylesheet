@@ -92,6 +92,8 @@
 @define-color textColorPrimary shade (@text_color, 0.9);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 0.5), 0.6);
 
+@define-color tab_base_color @base_color;
+
 /* Default color scheme */
 @define-color base_color #3d4248;
 @define-color bg_color shade (@base_color, 0.96);
