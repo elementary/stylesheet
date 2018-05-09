@@ -396,6 +396,7 @@ toolbar spinbutton:disabled:backdrop,
 entry image {
     color: @internal_element_color;
     transition: all 200ms ease-in-out;
+    -gtk-icon-palette: needs-attention @attention_color, success @LIME_500, warning @BANANA_500, error @error_color;
 }
 
 entry image:backdrop {
