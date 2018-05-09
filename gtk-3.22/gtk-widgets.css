@@ -1756,7 +1756,7 @@ notebook tab label:backdrop {
             alpha (
                 #000,
                 0.05
-            ) 
+            )
         );
     border-color: shade (@tab_base_color, 0.78);
 }
