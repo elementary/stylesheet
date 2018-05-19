@@ -4094,30 +4094,34 @@ link {
 ***************************/
 
 overshoot.top {
-    background: linear-gradient(
-        alpha(@colorAccent, 0.25) 0%,
-        alpha(@colorAccent, 0) 50%
-    );
+    background:
+        linear-gradient(
+            alpha(@colorAccent, 0.25) 0%,
+            alpha(@colorAccent, 0) 50%
+        );
 }
 
 overshoot.bottom {
-    background: linear-gradient(
-        alpha(@colorAccent, 0) 50%,
-        alpha(@colorAccent, 0.25) 100%
-    );
+    background:
+        linear-gradient(
+            alpha(@colorAccent, 0) 50%,
+            alpha(@colorAccent, 0.25) 100%
+        );
 }
 
 undershoot.top {
-    background: linear-gradient(
-        alpha(#fff, 0.75) 0%,
-        alpha(#fff, 0) 75%
-    );
+    background:
+        linear-gradient(
+            alpha(#fff, 0.75) 0%,
+            alpha(#fff, 0) 75%
+        );
 }
 
 undershoot.bottom {
-    background: linear-gradient(
-        alpha(#fff, 0) 25%,
-        alpha(#fff, 0.75) 100%
-    );
+    background:
+        linear-gradient(
+            alpha(#fff, 0) 25%,
+            alpha(#fff, 0.75) 100%
+        );
 }
 
