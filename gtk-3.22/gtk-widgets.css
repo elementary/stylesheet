@@ -4088,3 +4088,36 @@ label.success {
 link {
     color: @link_color;
 }
+
+/***************************
+* Overshoot and Undershoot *
+***************************/
+
+overshoot.top {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0) 75%
+    );
+}
+
+overshoot.bottom {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0) 75%,
+        rgba(255, 255, 255, 0.75)
+    );
+}
+
+undershoot.top {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+    );
+}
+
+undershoot.bottom {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75)
+    );
+}
+

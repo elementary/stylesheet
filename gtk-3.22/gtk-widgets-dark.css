@@ -893,3 +893,35 @@ label.success {
 label.warning {
     color: @BANANA_500;
 }
+
+/***************************
+* Overshoot and Undershoot *
+***************************/
+
+overshoot.top {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0) 75%
+    );
+}
+
+overshoot.bottom {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0) 75%,
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+undershoot.top {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+undershoot.bottom {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.25)
+    );
+}
