@@ -898,30 +898,17 @@ label.warning {
 * Overshoot and Undershoot *
 ***************************/
 
-overshoot.top {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0) 75%
-    );
-}
-
-overshoot.bottom {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0) 75%,
-        rgba(0, 0, 0, 0.25)
-    );
-}
-
 undershoot.top {
     background: linear-gradient(
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0)
+        alpha(#000, 0.33) 0%,
+        alpha(#000, 0) 75%
     );
 }
 
 undershoot.bottom {
     background: linear-gradient(
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.25)
+        alpha(#000, 0) 25%,
+        alpha(#000, 0.33) 100%
     );
 }
+

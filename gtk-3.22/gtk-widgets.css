@@ -4095,29 +4095,29 @@ link {
 
 overshoot.top {
     background: linear-gradient(
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0) 75%
+        alpha(@colorAccent, 0.25) 0%,
+        alpha(@colorAccent, 0) 50%
     );
 }
 
 overshoot.bottom {
     background: linear-gradient(
-        rgba(255, 255, 255, 0) 75%,
-        rgba(255, 255, 255, 0.75)
+        alpha(@colorAccent, 0) 50%,
+        alpha(@colorAccent, 0.25) 100%
     );
 }
 
 undershoot.top {
     background: linear-gradient(
-        rgba(255, 255, 255, 0.75),
-        rgba(255, 255, 255, 0)
+        alpha(#fff, 0.75) 0%,
+        alpha(#fff, 0) 75%
     );
 }
 
 undershoot.bottom {
     background: linear-gradient(
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.75)
+        alpha(#fff, 0) 25%,
+        alpha(#fff, 0.75) 100%
     );
 }
 
