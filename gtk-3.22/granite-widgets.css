@@ -643,7 +643,8 @@ scale trough:disabled {
 * Fake Terminal *
 ****************/
 
-.terminal {
+.terminal,
+.terminal text {
     background-color: #252e32;
     color: #94a3a5;
     font-family: monospace;
