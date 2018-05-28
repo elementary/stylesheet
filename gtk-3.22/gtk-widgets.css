@@ -2637,14 +2637,14 @@ button.destructive-action image,
 button.destructive-action image:hover,
 .titlebar button.destructive-action label,
 .titlebar button.destructive-action label:hover,
-.titlebar button.destructive-action.image-button image {
+.titlebar button.destructive-action image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 .titlebar button.destructive-action label:backdrop,
-.titlebar button.destructive-action.image-button image:backdrop {
+.titlebar button.destructive-action image:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
