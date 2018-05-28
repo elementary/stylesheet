@@ -29,13 +29,14 @@
             "user-not-tracked-symbolic"
         ),
         linear-gradient(
+            to bottom,
             shade (
                 @colorPrimary,
                 1.04
             ),
             shade (
                 @colorPrimary,
-                0.88
+                0.94
             )
         );
     background-size: 64px 64px, 100% 100%;
