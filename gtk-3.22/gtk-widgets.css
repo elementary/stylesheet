@@ -2558,7 +2558,7 @@ button.suggested-action image:hover,
 .titlebar button.suggested-action label,
 .titlebar button.suggested-action label:hover,
 .titlebar button.suggested-action image,
-.titlebar button.suggested-action image:hover  {
+.titlebar button.suggested-action image:hover {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
