@@ -2554,7 +2554,11 @@ button.suggested-action,
 button.suggested-action label,
 button.suggested-action label:hover,
 button.suggested-action image,
-button.suggested-action image:hover {
+button.suggested-action image:hover,
+.titlebar button.suggested-action label,
+.titlebar button.suggested-action label:hover,
+.titlebar button.suggested-action image,
+.titlebar button.suggested-action image:hover {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2582,6 +2586,13 @@ button.suggested-action:checked,
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+.titlebar button.suggested-action label:backdrop,
+.titlebar button.suggested-action image:backdrop {
+    color: mix (@selected_bg_color, @selected_fg_color, 0.8);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 /****************************
@@ -2637,14 +2648,14 @@ button.destructive-action image,
 button.destructive-action image:hover,
 .titlebar button.destructive-action label,
 .titlebar button.destructive-action label:hover,
-.titlebar button.destructive-action.image-button image {
+.titlebar button.destructive-action image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 .titlebar button.destructive-action label:backdrop,
-.titlebar button.destructive-action.image-button image:backdrop {
+.titlebar button.destructive-action image:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
