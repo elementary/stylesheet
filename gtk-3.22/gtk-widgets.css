@@ -2317,7 +2317,7 @@ toolbar.bottom-toolbar button,
 .titlebar button.image-button,
 .titlebar .button.flat,
 .titlebar .button.image-button {
-    border-radius: 50%;
+    border-radius: 99px;
     background-color: transparent;
 }
 
