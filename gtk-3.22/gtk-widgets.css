@@ -3788,7 +3788,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 decoration {
     border-radius: 4px 4px 0 0;
     box-shadow:
-        0 0 0 1px alpha (#000, 0.3),
+        0 0 0 1px @decoration_border_color,
         0 14px 28px rgba(0, 0, 0, 0.35),
         0 10px 10px rgba(0, 0, 0, 0.22);
     margin: 12px;
@@ -3851,7 +3851,7 @@ decoration:backdrop {
 .ssd decoration,
 .ssd decoration:backdrop {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.3),
+        0 0 0 1px @decoration_border_color,
         0 1px 6px alpha (#000, 0.12),
         0 1px 4px alpha (#000, 0.24);
 }
