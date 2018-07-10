@@ -113,6 +113,7 @@
 @define-color title_shadow_color alpha (white, 0.6);
 @define-color tooltip_bg_color @BLACK_900;
 @define-color tooltip_fg_color white;
+@define-color decoration_border_color alpha (#000, 0.3);
 @define-color internal_element_color mix(@text_color, @base_color, 0.4);
 @define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
 
