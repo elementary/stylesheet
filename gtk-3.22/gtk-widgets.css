@@ -396,7 +396,7 @@ toolbar spinbutton:disabled:backdrop,
 entry image {
     color: @internal_element_color;
     transition: all 200ms ease-in-out;
-    -gtk-icon-palette: needs-attention @attention_color, success @LIME_500, warning @BANANA_500, error @error_color;
+    -gtk-icon-palette: needs-attention @attention_color, warning @BANANA_500, error @error_color;
 }
 
 entry image:backdrop {
@@ -640,12 +640,12 @@ levelbar block.filled.high {
         linear-gradient(
             to bottom,
             shade (
-                @success_color,
+                @LIME_300,
                 1.1
             ),
-            @success_color
+            @LIME_300
         );
-    border-color: shade (@success_color, 0.9);
+    border-color: shade (@LIME_300, 0.8);
 }
 
 levelbar block.empty {
