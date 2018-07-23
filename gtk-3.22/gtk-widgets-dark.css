@@ -828,17 +828,8 @@ GtkInfoBar .button:hover:disabled {
     box-shadow: none;
 }
 
-decoration,
-.window-frame {
-    box-shadow:
-        0 0 0 1px alpha (#000, 0.75),
-        0 14px 28px rgba(0, 0, 0, 0.35),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
 window.popup decoration,
-.window-frame.menu.csd,
-.window-frame.popup.csd {
+.csd.popup decoration {
     box-shadow:
         0 0 0 1px alpha (#000, 0.75),
         0 3px 6px alpha (#000, 0.16),
@@ -846,21 +837,11 @@ window.popup decoration,
 }
 
 menu window.popup decoration,
-.menu .window-frame.menu.csd,
-.menu .window-frame.popup.csd {
+menu .csd.popup decoration {
     box-shadow:
         0 0 0 1px alpha (#000, 0.75),
         0 10px 20px alpha (#000, 0.19),
         0 6px 6px alpha (#000, 0.23);
-}
-
-decoration:backdrop,
-.window-frame:backdrop {
-    box-shadow:
-        0 0 0 1px alpha (#000, 0.75),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23),
-        0 14px 28px transparent;
 }
 
 .titlebar .subtitle {

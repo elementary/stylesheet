@@ -640,12 +640,12 @@ levelbar block.filled.high {
         linear-gradient(
             to bottom,
             shade (
-                @success_color,
+                @LIME_300,
                 1.1
             ),
-            @success_color
+            @LIME_300
         );
-    border-color: shade (@success_color, 0.9);
+    border-color: shade (@LIME_300, 0.8);
 }
 
 levelbar block.empty {
@@ -1209,7 +1209,7 @@ button.circular label {
 button.circular.image-button {
     padding: 0;
     min-height: 24px;
-    min-width: 0;
+    min-width: 24px;
 }
 
 /*****************
@@ -2000,7 +2000,7 @@ switch {
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
     color: transparent;
-    font-size: 0;
+    font-size: 0.1px;
 }
 
 /* FIXME: treeview .cell needs to be more specific to avoid this */
@@ -2317,7 +2317,7 @@ toolbar.bottom-toolbar button,
 .titlebar button.image-button,
 .titlebar .button.flat,
 .titlebar .button.image-button {
-    border-radius: 50%;
+    border-radius: 99px;
     background-color: transparent;
 }
 
@@ -2554,7 +2554,11 @@ button.suggested-action,
 button.suggested-action label,
 button.suggested-action label:hover,
 button.suggested-action image,
-button.suggested-action image:hover {
+button.suggested-action image:hover,
+.titlebar button.suggested-action label,
+.titlebar button.suggested-action label:hover,
+.titlebar button.suggested-action image,
+.titlebar button.suggested-action image:hover {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2582,6 +2586,13 @@ button.suggested-action:checked,
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+.titlebar button.suggested-action label:backdrop,
+.titlebar button.suggested-action image:backdrop {
+    color: mix (@selected_bg_color, @selected_fg_color, 0.8);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
 }
 
 /****************************
@@ -2637,14 +2648,14 @@ button.destructive-action image,
 button.destructive-action image:hover,
 .titlebar button.destructive-action label,
 .titlebar button.destructive-action label:hover,
-.titlebar button.destructive-action.image-button image {
+.titlebar button.destructive-action image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
 .titlebar button.destructive-action label:backdrop,
-.titlebar button.destructive-action.image-button image:backdrop {
+.titlebar button.destructive-action image:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -3777,7 +3788,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 decoration {
     border-radius: 4px 4px 0 0;
     box-shadow:
-        0 0 0 1px alpha (#000, 0.3),
+        0 0 0 1px @decoration_border_color,
         0 14px 28px rgba(0, 0, 0, 0.35),
         0 10px 10px rgba(0, 0, 0, 0.22);
     margin: 12px;
@@ -3840,7 +3851,7 @@ decoration:backdrop {
 .ssd decoration,
 .ssd decoration:backdrop {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.3),
+        0 0 0 1px @decoration_border_color,
         0 1px 6px alpha (#000, 0.12),
         0 1px 4px alpha (#000, 0.24);
 }
@@ -3911,7 +3922,7 @@ dialog .titlebar :not(.suggested-action):not(.destructive-action) label {
 
 dialog .titlebar .title {
     color: transparent;
-    font-size: 0;
+    font-size: 0.1px;
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -3976,7 +3987,7 @@ dialog label.primary {
     border: none;
     border-radius: 0;
     box-shadow: none;
-    font-size: 0;
+    font-size: 0.1px;
     min-height: 24px;
     min-width: 24px;
     opacity: 0.6;
@@ -4026,7 +4037,6 @@ dialog label.primary {
 .emoji-picker:dir(ltr) .emoji-section:nth-child(6),
 .emoji-picker:dir(rtl) .emoji-section:nth-child(5) {
     background-image: -gtk-icontheme("emoji-travel-symbolic");
-    font-size: 0;
 }
 
 .emoji-picker:dir(ltr) .emoji-section:nth-child(7),

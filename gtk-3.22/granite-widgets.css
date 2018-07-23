@@ -135,6 +135,20 @@
         0 1px 2px alpha (#000, 0.22);
 }
 
+/**************
+* Mode Switch *
+**************/
+
+.mode-switch slider {
+    min-height: 16px;
+    min-width: 16px;
+}
+
+.mode-switch:checked {
+    background-image: none;
+    border-color: alpha (#000, 0.25);
+}
+
 /*************
  * Seek bars *
  ************/
@@ -643,7 +657,8 @@ scale trough:disabled {
 * Fake Terminal *
 ****************/
 
-.terminal {
+.terminal,
+.terminal text {
     background-color: #252e32;
     color: #94a3a5;
     font-family: monospace;
