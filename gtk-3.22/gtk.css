@@ -123,7 +123,7 @@
 @define-color link_color @BLUEBERRY_500;
 @define-color warning_color @BANANA_500;
 @define-color error_color @STRAWBERRY_500;
-@define-color success_color @LIME_300;
+@define-color success_color @LIME_500;
 @define-color insensitive_fg_color @SILVER_500;
 
 /* GTK NAMED COLORS */

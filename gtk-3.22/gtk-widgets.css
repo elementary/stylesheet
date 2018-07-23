@@ -640,12 +640,12 @@ levelbar block.filled.high {
         linear-gradient(
             to bottom,
             shade (
-                @success_color,
+                @LIME_300,
                 1.1
             ),
-            @success_color
+            @LIME_300
         );
-    border-color: shade (@success_color, 0.9);
+    border-color: shade (@LIME_300, 0.8);
 }
 
 levelbar block.empty {
