@@ -29,13 +29,14 @@
             "user-not-tracked-symbolic"
         ),
         linear-gradient(
+            to bottom,
             shade (
                 @colorPrimary,
                 1.04
             ),
             shade (
                 @colorPrimary,
-                0.88
+                0.94
             )
         );
     background-size: 64px 64px, 100% 100%;
@@ -79,18 +80,15 @@
     box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23);
 }
 
-.pathbar image,
-.pathbar.image {
+.pathbar image {
     color: @internal_element_color;
 }
 
-.pathbar image:hover,
-.pathbar.image:hover {
+.pathbar image:hover {
     color: @internal_element_prelight;
 }
 
-dialog entry.pathbar,
-GtkFileChooserDialog .entry.pathbar {
+dialog entry.pathbar {
     background-image:
         linear-gradient(
             to bottom,
@@ -110,8 +108,7 @@ GtkFileChooserDialog .entry.pathbar {
         0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.5);
 }
 
-dialog entry.pathbar:focus,
-GtkFileChooserDialog .entry.pathbar:focus {
+dialog entry.pathbar:focus {
     border-color: alpha (@colorAccent, 0.8);
     box-shadow:
         inset 0 0 0 1px alpha (@colorAccent, 0.23),
@@ -150,7 +147,7 @@ GtkFileChooserDialog .entry.pathbar:focus {
     color: @text_color;
 }
 
-.gala-notification GtkImage {
+.gala-notification image {
     color: alpha (@text_color, 0.8);
 }
 
@@ -179,21 +176,8 @@ GtkFileChooserDialog .entry.pathbar:focus {
 * Geary *
 ********/
 
-ConversationListView {
-    -GtkWidget-focus-line-width: 1px;
-    -GtkTreeView-grid-line-width: 0;
-}
-
-ConversationListView.view.cell {
-    border-style: solid;
-    border-width: 0 0 1px;
-    border-color: alpha (#000, 0.2);
-}
-
-ConversationListView.view.cell:selected:focus {
-    border-style: solid;
-    border-width: 0 0 1px;
-    border-color: shade (@colorAccent, 0.8);
+paned statusbar frame {
+    border: none;
 }
 
 /**********
@@ -210,8 +194,8 @@ ConversationListView.view.cell:selected:focus {
         0 2px 6px alpha (#000, 0.1);
 }
 
-.greeter .entry,
-.greeter .entry:focus {
+.greeter entry,
+.greeter entry:focus {
     border-radius: 3.5px;
     padding: 6px 3px;
     background-image:
@@ -229,14 +213,14 @@ ConversationListView.view.cell:selected:focus {
         0 1px 0 alpha (#fff, 0.15);
 }
 
-.greeter .button.flat,
+.greeter button.flat,
 .greeter .h2,
 .greeter .time {
     color: #fff;
     text-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
-    icon-shadow:
+    -gtk-icon-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
 }
@@ -255,7 +239,7 @@ ConversationListView.view.cell:selected:focus {
     font-size: 48px;
 }
 
-.greeter .button.text-button.suggested-action {
+.greeter button.text-button.suggested-action {
     padding: 6px 32px;
     border-radius: 3.5px;
     border-color: rgba(0, 0, 0, 0.1);
@@ -266,7 +250,7 @@ ConversationListView.view.cell:selected:focus {
         0 1px 0 0 alpha (#fff, 0.15);
 }
 
-.greeter .button.text-button.suggested-action:active {
+.greeter button.text-button.suggested-action:active {
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 0 alpha (#fff, 0.15);
@@ -279,6 +263,7 @@ ConversationListView.view.cell:selected:focus {
 .panel {
     background-color: transparent;
     transition: all 100ms ease-in-out;
+    margin-bottom: 0;
 }
 
 .panel.maximized {
@@ -287,26 +272,43 @@ ConversationListView.view.cell:selected:focus {
 
 .panel.translucent {
     background-color: alpha(#000, 0.5);
+    box-shadow:
+        0 1px 3px alpha(#000, 0.24),
+        0 1px 1px alpha(#000, 0.52);
+    margin-bottom: 4px;
 }
 
-.menubar.panel,
+.panel.color-light.translucent {
+    background-color: alpha(#fff, 0.85);
+    box-shadow:
+        inset 0 -1px 1px alpha(#fff, 0.2),
+        0 1px 3px alpha(#000, 0.24),
+        0 1px 1px alpha(#000, 0.12);
+    margin-bottom: 4px;
+}
+
 menubar.panel,
-.panel menubar,
-.panel .menubar {
+.panel menubar {
     box-shadow: none;
     border: none;
 }
 
-.composited-indicator > GtkRevealer {
+.composited-indicator {
+    padding: 0 6px;
+}
+
+.composited-indicator > revealer label,
+.composited-indicator > revealer image,
+.composited-indicator > revealer spinner {
     color: #fff;
     font-weight: bold;
     text-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
-    icon-shadow:
+    transition: all 200ms ease-in-out;
+    -gtk-icon-shadow:
         0 0 2px alpha (#000, 0.3),
         0 1px 2px alpha (#000, 0.6);
-    transition: all 200ms ease-in-out;
 }
 
 .composited-indicator .keyboard {
@@ -321,12 +323,14 @@ menubar.panel,
     text-shadow: none;
 }
 
-.panel.color-light .composited-indicator > GtkRevealer {
+.panel.color-light .composited-indicator > revealer label,
+.panel.color-light .composited-indicator > revealer image,
+.panel.color-light .composited-indicator > revealer spinner {
     color: alpha (#000, 0.65);
     text-shadow:
         0 0 2px alpha (#fff, 0.3),
         0 1px 0 alpha (#fff, 0.25);
-    icon-shadow:
+    -gtk-icon-shadow:
         0 0 2px alpha (#fff, 0.3),
         0 1px 0 alpha (#fff, 0.25);
 }
@@ -340,7 +344,7 @@ menubar.panel,
     text-shadow: none;
 }
 
-.panel .popover {
+.panel popover {
     box-shadow:
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.5),
         0 3px 4px alpha (#000, 0.15),
@@ -402,31 +406,21 @@ menubar.panel,
 
 .hotcorner-display {
     border-radius: 2px;
-    icon-shadow:
+    -gtk-icon-shadow:
         0 3px 4px alpha (#000, 0.2),
         0 2px 2px alpha (#000, 0.3);
 }
 
-.login .entry {
-    border-radius: 3.5px;
+.login entry {
     padding: 6px;
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @base_color,
-                0.93
-            ),
-            @base_color
-        );
 }
 
-.login .entry *:selected {
+.login entry *:selected {
     background-color: shade (@base_color, 0.8);
     color: @text_color;
 }
 
-.login .entry *:selected:focus {
+.login entry *:selected:focus {
     background-color: alpha (@colorAccent, 0.9);
     color: @selected_fg_color;
     text-shadow: none;
