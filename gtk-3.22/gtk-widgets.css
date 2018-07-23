@@ -4119,19 +4119,3 @@ overshoot.bottom {
         );
 }
 
-undershoot.top {
-    background:
-        linear-gradient(
-            alpha(#fff, 0.75) 0%,
-            alpha(#fff, 0) 75%
-        );
-}
-
-undershoot.bottom {
-    background:
-        linear-gradient(
-            alpha(#fff, 0) 25%,
-            alpha(#fff, 0.75) 100%
-        );
-}
-
