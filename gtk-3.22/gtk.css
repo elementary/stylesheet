@@ -91,6 +91,7 @@
 @define-color colorAccent @selected_bg_color;
 @define-color textColorPrimary mix (@colorPrimary, @text_color, 0.75);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.4);
+@define-color tab_base_color @base_color;
 
 /* Default color scheme */
 @define-color base_color white;
