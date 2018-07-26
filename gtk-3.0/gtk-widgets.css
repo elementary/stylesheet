@@ -4104,14 +4104,34 @@ undershoot.bottom {
 overshoot.top {
     background:
         linear-gradient(
-            alpha(@colorAccent, 0.25) 0%,
-            alpha(@colorAccent, 0) 50%
+            to top,
+            alpha(@colorAccent, 0) 50%,
+            alpha(@colorAccent, 0.25) 100%
+        );
+}
+
+overshoot.right {
+    background:
+        linear-gradient(
+            to right,
+            alpha(@colorAccent, 0) 50%,
+            alpha(@colorAccent, 0.25) 100%
         );
 }
 
 overshoot.bottom {
     background:
         linear-gradient(
+            to bottom,
+            alpha(@colorAccent, 0) 50%,
+            alpha(@colorAccent, 0.25) 100%
+        );
+}
+
+overshoot.left {
+    background:
+        linear-gradient(
+            to left,
             alpha(@colorAccent, 0) 50%,
             alpha(@colorAccent, 0.25) 100%
         );
