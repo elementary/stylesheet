@@ -4137,7 +4137,39 @@ overshoot.left {
         );
 }
 
-overshoot:backdrop {
-    opacity: 0.5;
+:backdrop overshoot.top {
+    background:
+        linear-gradient(
+            to top,
+            alpha(@colorAccent, 0) 80%,
+            alpha(@colorAccent, 0.075) 100%
+        );
+}
+
+:backdrop overshoot.right {
+    background:
+        linear-gradient(
+            to right,
+            alpha(@colorAccent, 0) 80%,
+            alpha(@colorAccent, 0.075) 100%
+        );
+}
+
+:backdrop overshoot.bottom {
+    background:
+        linear-gradient(
+            to bottom,
+            alpha(@colorAccent, 0) 80%,
+            alpha(@colorAccent, 0.075) 100%
+        );
+}
+
+:backdrop overshoot.left {
+    background:
+        linear-gradient(
+            to left,
+            alpha(@colorAccent, 0) 80%,
+            alpha(@colorAccent, 0.075) 100%
+        );
 }
 
