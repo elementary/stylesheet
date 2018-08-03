@@ -2807,12 +2807,12 @@ treeview .entry {
     padding-top: 0;
 }
 
-iconview.view.cell:selected,
-iconview.view.cell:selected:focus,
-GtkIconView.view.cell:selected,
-GtkIconView.view.cell:selected:focus {
-    background-color: @base_color;
-    color: @text_color;
+iconview.view.cell {
+    border-radius: 3px;
+}
+
+iconview.view.cell:selected {
+    background: alpha(@text_color, 0.2);
 }
 
 .view {
