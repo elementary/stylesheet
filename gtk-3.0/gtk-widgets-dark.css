@@ -767,9 +767,9 @@ infobar.warning button {
     color: shade (@warning_color, 0.25);
 }
 
-GtkInfoBar .button,
-GtkInfoBar .button:focus,
-.dynamic-notebook GtkInfoBar .button {
+infobar:not(.info):not(.other) button,
+infobar:not(.info):not(.other) button:focus,
+.dynamic-notebook infobar button {
     text-shadow: none;
     background-image: none;
     background-color: transparent;
@@ -782,15 +782,18 @@ GtkInfoBar .button:focus,
     -gtk-icon-shadow: none;
 }
 
-GtkInfoBar .button:active,
-GtkInfoBar .button:hover:active {
-    background-image: none;
+infobar:not(.info):not(.other) button:active,
+infobar:not(.info):not(.other) button:hover:active {
     background-color: alpha (#000, 0.05);
-    border-color: alpha (#000, 0.35);
+    background-image: none;
+    border-color: alpha (#000, 0.27);
+    box-shadow:
+        inset 0 0 0 1px alpha (#000, 0.05),
+        0 1px 0 0 alpha (#fff, 0.3);
 }
 
-GtkInfoBar .button:disabled,
-GtkInfoBar .button:hover:disabled {
+infobar button:disabled,
+infobar button:hover:disabled {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.18);
