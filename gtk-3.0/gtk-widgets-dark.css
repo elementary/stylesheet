@@ -663,13 +663,6 @@ button.destructive-action:focus,
     text-shadow: 0 1px alpha (#fff, 0.15);
 }
 
-.spinbutton .button:disabled,
-.spinbutton .button:focus:disabled {
-    background-color: alpha (#000, 0.02);
-    background-image: none;
-    color: @insensitive_color;
-}
-
 .inline-toolbar.toolbar .button *:disabled,
 .inline-toolbar.toolbar .button:disabled {
     background-image: none;
