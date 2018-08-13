@@ -1,4 +1,8 @@
-gtk-2.0 /usr/share/themes/elementary/
-gtk-3.0 /usr/share/themes/elementary/
-index.theme /usr/share/themes/elementary/
-plank /usr/share/themes/elementary/
+elementary/gtk-2.0 /usr/share/themes/elementary/
+elementary/gtk-3.0 /usr/share/themes/elementary/
+elementary/index.theme /usr/share/themes/elementary/
+elementary/plank /usr/share/themes/elementary/
+elementary-slate/gtk-2.0 /usr/share/themes/elementary-slate/
+elementary-slate/gtk-3.0 /usr/share/themes/elementary-slate/
+elementary-slate/index.theme /usr/share/themes/elementary-slate/
+elementary-slate/plank /usr/share/themes/elementary-slate/
