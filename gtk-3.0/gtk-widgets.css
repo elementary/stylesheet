@@ -3755,7 +3755,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
 .titlebar *:not(entry) image:disabled {
-    color: shade (@textColorPrimary, 1.5);
+    color: mix (@textColorPrimary, @colorPrimary, 0.35);
     text-shadow: 0 1px @textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
