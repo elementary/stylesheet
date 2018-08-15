@@ -17,7 +17,7 @@ Special fixes for GNOME apps (Nautilus, GNOME Control Center, GNOME Shell, etc) 
 This stylesheet doesn't need to be compiled. It is recommended to make a
 symbolic link from the source directory to "/usr/share/themes" for testing:
 
-    ln -s /path/to/your/branch /usr/share/themes/
+    ln -s /path/to/your/branch/elementary /usr/share/themes/
     
 Apps will need to be restarted or the system stylesheet will need to be
 changed for your changes to take effect.
