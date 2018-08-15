@@ -176,30 +176,19 @@ button:active:disabled,
  * Check, Radio, and Switch *
  ***************************/
 
-check,
-radio {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @bg_color,
-                0.93
-            ),
-            shade (
-                @bg_color,
-                0.97
-            )
-        );
-}
-
 check:checked,
 radio:checked,
 switch:checked {
-    border-color: shade (@selected_bg_color, 0.3);
+    border-color: shade (@colorAccent, 0.3);
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.1),
         inset 0 1px 2px alpha (#000, 0.15),
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+check:checked:focus,
+radio:checked:focus {
+    border-color: shade (@colorAccent, 0.4);
 }
 
 check:checked:backdrop,
