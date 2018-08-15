@@ -12,15 +12,15 @@ If you feel the desire to compensate the designers who maintain this stylesheet 
 
 Special fixes for GNOME apps (Nautilus, GNOME Control Center, GNOME Shell, etc) or other desktop environments will not be implemented. The aim of style classes should be to be generic across applications. If an application needs a unique style,  it should be bundled with that application.
 
-## Testing
+## Installation & Testing
 
-This stylesheet doesn't need to be compiled. It is recommended to make a
-symbolic link from the source directory to "/usr/share/themes" for testing:
+Run `meson` to configure the build environment. To install, use `ninja install`.
 
-    ln -s /path/to/your/branch/elementary /usr/share/themes/
-    ln -s /path/to/your/branch/elementary-slate /usr/share/themes/
-
-Apps will need to be restarted or the system stylesheet will need to be
+    meson build --prefix=/usr
+    cd build
+    sudo ninja install
+    
+Apps may need to be restarted or the system stylesheet will need to be
 changed for your changes to take effect.
 
 You can also test changes live with Gtk Inspector. Make sure you have Gtk
