@@ -1,11 +1,14 @@
 project('io.elementary.stylesheet')
 
-install_subdir(
+variants = [
     'elementary',
-    install_dir: join_paths(get_option('datadir'), 'themes')
-)
+    'elementary-slate'
+]
 
-install_subdir(
-    'elementary-slate',
-    install_dir: join_paths(get_option('datadir'), 'themes')
-)
+foreach v : variants
+    install_subdir(
+        v,
+        install_dir: join_paths(get_option('datadir'), 'themes')
+    )
+endforeach
+
