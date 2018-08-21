@@ -21,4 +21,5 @@
 @define-color colorAccent @SLATE_300;
 @define-color textColorPrimary shade (@text_color, 0.9);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 0.5), 0.6);
+@define-color tab_base_color @base_color;
 
