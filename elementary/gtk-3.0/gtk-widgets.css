@@ -997,7 +997,6 @@ button.flat:backdrop,
     box-shadow: none;
     background-image: none;
     background-color: transparent;
-    border-radius: 5px;
 }
 
 button.flat:focus,
