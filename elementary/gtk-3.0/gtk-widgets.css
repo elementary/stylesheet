@@ -2774,7 +2774,7 @@ button.flat.destructive-action:focus {
 button.flat.destructive-action image,
 button.flat.destructive-action label {
     color: @text_color;
-    transition: all 320ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
     -gtk-icon-shadow: none;
 }
 
