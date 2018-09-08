@@ -2759,6 +2759,37 @@ button.destructive-action:focus,
     border-color: @error_color;
 }
 
+button.flat.destructive-action,
+button.flat.destructive-action:backdrop,
+button.flat.destructive-action:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+button.flat.destructive-action:focus {
+    background: alpha (@error_color, 0.3);
+    border: none;
+}
+
+button.flat.destructive-action image,
+button.flat.destructive-action label {
+    color: @text_color;
+    -gtk-icon-shadow: none;
+}
+
+button.flat.destructive-action:focus image,
+button.flat.destructive-action:focus label,
+button.flat.destructive-action:hover image,
+button.flat.destructive-action:hover label {
+    color: @error_color;
+}
+
+button.flat.destructive-action image:backdrop,
+button.flat.destructive-action label:backdrop {
+    color: @insensitive_fg_color;
+}
+
 /*********************
 * Insensitive Button *
 **********************/
