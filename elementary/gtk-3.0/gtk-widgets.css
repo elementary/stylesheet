@@ -1036,10 +1036,6 @@ dialog .inline-toolbar button {
     background-color: transparent;
 }
 
-dialog button.flat.image-button:hover {
-    background-color: alpha (@text_color, 0.7);
-}
-
 button:active,
 button:hover:active,
 button:focus:active,
