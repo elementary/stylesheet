@@ -997,7 +997,6 @@ button.flat:backdrop,
     box-shadow: none;
     background-image: none;
     background-color: transparent;
-    border-radius: 5px;
 }
 
 button.flat:focus,
@@ -2757,6 +2756,38 @@ button.destructive-action:focus,
         0 1px 2px 0 alpha (@error_color, 0.05);
     transition: all 100ms ease-out;
     border-color: @error_color;
+}
+
+button.flat.destructive-action,
+button.flat.destructive-action:backdrop,
+button.flat.destructive-action:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+button.flat.destructive-action:focus {
+    background: alpha (@error_color, 0.3);
+    border: none;
+}
+
+button.flat.destructive-action image,
+button.flat.destructive-action label {
+    color: @text_color;
+    transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    -gtk-icon-shadow: none;
+}
+
+button.flat.destructive-action:focus image,
+button.flat.destructive-action:focus label,
+button.flat.destructive-action:hover image,
+button.flat.destructive-action:hover label {
+    color: @error_color;
+}
+
+button.flat.destructive-action image:backdrop,
+button.flat.destructive-action label:backdrop {
+    color: @insensitive_fg_color;
 }
 
 /*********************
