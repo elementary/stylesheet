@@ -2603,14 +2603,14 @@ button.suggested-action,
         0 1px 0 0 alpha (#fff, 0.15);
 }
 
-button.suggested-action label,
-button.suggested-action label:hover,
-button.suggested-action image,
-button.suggested-action image:hover,
-.titlebar button.suggested-action label,
-.titlebar button.suggested-action label:hover,
-.titlebar button.suggested-action image,
-.titlebar button.suggested-action image:hover {
+button.suggested-action:not(:disabled) label,
+button.suggested-action:not(:disabled) label:hover,
+button.suggested-action:not(:disabled) image,
+button.suggested-action:not(:disabled) image:hover,
+.titlebar button.suggested-action:not(:disabled) label,
+.titlebar button.suggested-action:not(:disabled) label:hover,
+.titlebar button.suggested-action:not(:disabled) image,
+.titlebar button.suggested-action:not(:disabled) image:hover {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
@@ -2640,8 +2640,8 @@ button.suggested-action:checked,
         0 1px 0 0 alpha (@bg_highlight_color, 0.3);
 }
 
-.titlebar button.suggested-action label:backdrop,
-.titlebar button.suggested-action image:backdrop {
+.titlebar button.suggested-action:not(:disabled) label:backdrop,
+.titlebar button.suggested-action:not(:disabled) image:backdrop {
     color: mix (@selected_bg_color, @selected_fg_color, 0.8);
     text-shadow: none;
     -gtk-icon-shadow: none;
