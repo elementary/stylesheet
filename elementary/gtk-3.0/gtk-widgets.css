@@ -3047,7 +3047,7 @@ column-header .button {
     border-left-width: 0;
     border-top-width: 0;
     border-radius: 0;
-    background-color: @bg_color;
+    background-color: shade (@bg_color, 1.1);
     background-image: none;
     font-weight: bold;
     padding: 4px 2px;
@@ -3060,7 +3060,7 @@ column-header:last-child .button {
 
 treeview header button:hover,
 column-header .button:hover {
-    background-color: @base_color;
+    background-color: @bg_color;
 }
 
 treeview header button:backdrop,
