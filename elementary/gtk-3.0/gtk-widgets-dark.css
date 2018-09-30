@@ -684,40 +684,15 @@ GtkAssistant .sidebar {
  * Column Headers *
  *********************/
 column-header .button {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @titlebar_color,
-                0.88
-            ),
-            @titlebar_color
-        );
-    border-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @titlebar_color,
-                0.88
-            ),
-            shade (
-                @titlebar_color,
-                0.7
-            )
-        ) 0 0 1 1;
+    background-image: none;
+    background-color: shade (@titlebar_color, 0.88);
+    border-color: shade (@titlebar_color, 0.88);
+    border-image: none;
     font-weight: bold;
 }
 
 column-header .button:hover {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @titlebar_color,
-                0.8
-            ),
-            @titlebar_color
-        );
+    background-color: shade (@titlebar_color, 0.8);
 }
 
 /*************

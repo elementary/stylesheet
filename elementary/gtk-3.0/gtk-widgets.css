@@ -3048,15 +3048,7 @@ column-header .button {
     border-top-width: 0;
     border-radius: 0;
     background-color: @bg_color;
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @base_color,
-                0.88
-            ),
-            @base_color
-        );
+    background-image: none;
     font-weight: bold;
     padding: 4px 2px;
 }
@@ -3068,15 +3060,7 @@ column-header:last-child .button {
 
 treeview header button:hover,
 column-header .button:hover {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @base_color,
-                0.8
-            ),
-            @base_color
-        );
+    background-color: @base_color;
 }
 
 treeview header button:backdrop,
@@ -3086,15 +3070,7 @@ column-header .button:backdrop {
 
 treeview header button:backdrop:hover,
 column-header .button:backdrop:hover {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @bg_color,
-                0.92
-            ),
-            @bg_color
-        );
+    background-color: @bg_color;
 }
 
 treeview header button label {
