@@ -3055,10 +3055,7 @@ column-header .button {
                 @bg_color,
                 1.1
             ),
-            shade (
-                @bg_color,
-                1.0
-            )
+            @bg_color
         );
     font-weight: bold;
     padding: 4px 2px;
