@@ -3564,6 +3564,11 @@ infobar.error label {
     text-shadow: 0 1px 1px @error_color;
 }
 
+infobar.error.close {
+    color: #fff;
+    text-shadow: 0 1px 1px @error_color;
+}
+
 infobar.question revealer > box {
     background-color: shade (@selected_bg_color, 1.2);
     background-image: -gtk-icontheme("dialog-question-symbolic");
