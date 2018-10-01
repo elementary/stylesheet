@@ -3564,6 +3564,7 @@ infobar.error label,
 infobar.error .close {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
+    -gtk-icon-shadow: transparent;
 }
 
 infobar.question revealer > box {
