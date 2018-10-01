@@ -3051,8 +3051,14 @@ column-header .button {
     background-image:
         linear-gradient(
             to bottom,
-            shade (@bg_color, 1.1),
-            shade (@bg_color, 1.0)
+            shade (
+                @bg_color,
+                1.1
+            ),
+            shade (
+                @bg_color,
+                1.0
+            )
         );
     font-weight: bold;
     padding: 4px 2px;
