@@ -1083,6 +1083,14 @@ button.link:focus > label {
     text-decoration: underline;
 }
 
+button.file {
+    padding: 3px;
+}
+
+button.file label {
+    padding: 0;
+}
+
 /***************************
 * Overlay Button *
 ***************************/
@@ -1916,7 +1924,8 @@ modelbutton *:disabled,
     color: @insensitive_color;
 }
 
-menuitem accelerator {
+menuitem accelerator,
+.accelerator {
     color: alpha (@text_color, 0.5);
 }
 
@@ -3528,7 +3537,7 @@ infobar revealer > box {
     background-image: -gtk-icontheme("dialog-information-symbolic");
     background-size: 16px;
     background-repeat: no-repeat;
-    background-position: 9px center;
+    background-position: 9px 12px;
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
@@ -3559,9 +3568,11 @@ infobar.error revealer > box {
     -gtk-icon-palette: error #fff;
 }
 
-infobar.error label {
+infobar.error label,
+infobar.error .close {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
+    -gtk-icon-shadow: 0 1px 1px alpha (shade (@error_color, 1.4), 0.4);
 }
 
 infobar.question revealer > box {
@@ -4282,4 +4293,3 @@ overshoot.left {
             alpha(@colorAccent, 0.075) 100%
         );
 }
-
