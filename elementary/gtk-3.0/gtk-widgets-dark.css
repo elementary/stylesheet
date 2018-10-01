@@ -839,11 +839,3 @@ label.success {
 label.warning {
     color: @BANANA_500;
 }
-
-/**********************
-* File Chooser Button *
-**********************/
-
-filechooserbutton button box {
-    margin-left: 3px;
-}
