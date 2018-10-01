@@ -3560,7 +3560,7 @@ infobar.error revealer > box {
 }
 
 infobar.error label,
-infobar.error.close {
+infobar.error .close {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
 }
