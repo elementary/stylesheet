@@ -4283,3 +4283,10 @@ overshoot.left {
         );
 }
 
+/**********************
+* File Chooser Button *
+**********************/
+
+filechooserbutton button box {
+	margin-left: 3px;
+}
