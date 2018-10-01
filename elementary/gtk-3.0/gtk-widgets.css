@@ -4287,6 +4287,12 @@ overshoot.left {
 * File Chooser Button *
 **********************/
 
-filechooserbutton button box {
-    margin-left: 3px;
+filechooserbutton button box image {
+    margin: 2px;
+    margin-right: 0;
+}
+
+filechooserbutton button box image:dir(rtl) {
+    margin: 2px;
+    margin-left: 0;
 }
