@@ -1083,6 +1083,14 @@ button.link:focus > label {
     text-decoration: underline;
 }
 
+button.file {
+    padding: 3px;
+}
+
+button.file label {
+    padding: 0;
+}
+
 /***************************
 * Overlay Button *
 ***************************/
@@ -1916,7 +1924,8 @@ modelbutton *:disabled,
     color: @insensitive_color;
 }
 
-menuitem accelerator {
+menuitem accelerator,
+.accelerator {
     color: alpha (@text_color, 0.5);
 }
 
@@ -4282,4 +4291,3 @@ overshoot.left {
             alpha(@colorAccent, 0.075) 100%
         );
 }
-
