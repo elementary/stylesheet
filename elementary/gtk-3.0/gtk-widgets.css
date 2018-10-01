@@ -2616,14 +2616,9 @@ button.suggested-action,
         0 1px 0 0 alpha (#fff, 0.15);
 }
 
-button.suggested-action:not(:disabled) label,
-button.suggested-action:not(:disabled) label:hover,
-button.suggested-action:not(:disabled) image,
-button.suggested-action:not(:disabled) image:hover,
+button.suggested-action:not(:disabled),
 .titlebar button.suggested-action:not(:disabled) label,
-.titlebar button.suggested-action:not(:disabled) label:hover,
-.titlebar button.suggested-action:not(:disabled) image,
-.titlebar button.suggested-action:not(:disabled) image:hover {
+.titlebar button.suggested-action:not(:disabled) image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
