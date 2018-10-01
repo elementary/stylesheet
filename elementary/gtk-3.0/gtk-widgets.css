@@ -2172,11 +2172,15 @@ radio {
     border-radius: 50%;
 }
 
+radiobutton image:dir(ltr),
+checkbutton image:dir(ltr),
 radiobutton label:dir(ltr),
 checkbutton label:dir(ltr) {
     margin-left: 6px;
 }
 
+radiobutton image:dir(rtl),
+checkbutton image:dir(rtl),
 radiobutton label:dir(rtl),
 checkbutton label:dir(rtl) {
     margin-right: 6px;
