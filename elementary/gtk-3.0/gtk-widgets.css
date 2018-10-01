@@ -1083,6 +1083,14 @@ button.link:focus > label {
     text-decoration: underline;
 }
 
+button.file {
+    padding: 3px;
+}
+
+button.file label {
+    padding: 0;
+}
+
 /***************************
 * Overlay Button *
 ***************************/
@@ -4282,18 +4290,4 @@ overshoot.left {
             alpha(@colorAccent, 0) 80%,
             alpha(@colorAccent, 0.075) 100%
         );
-}
-
-/**********************
-* File Chooser Button *
-**********************/
-
-filechooserbutton button box,
-filechooserbutton button box image {
-    padding: 0 0 0 3px;
-}
-
-filechooserbutton button box:dir(rtl),
-filechooserbutton button box image:dir(rtl) {
-    padding: 0 3px 0 0;
 }
