@@ -3532,7 +3532,7 @@ infobar revealer > box {
     background-image: -gtk-icontheme("dialog-information-symbolic");
     background-size: 16px;
     background-repeat: no-repeat;
-    background-position: 9px center;
+    background-position: 9px 1em;
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
