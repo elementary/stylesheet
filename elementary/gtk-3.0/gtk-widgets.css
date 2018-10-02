@@ -3568,9 +3568,11 @@ infobar.error revealer > box {
     -gtk-icon-palette: error #fff;
 }
 
-infobar.error label {
+infobar.error label,
+infobar.error .close {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
+    -gtk-icon-shadow: 0 1px 1px @error_color;
 }
 
 infobar.question revealer > box {
