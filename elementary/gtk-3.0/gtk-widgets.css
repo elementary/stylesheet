@@ -396,7 +396,7 @@ toolbar spinbutton:disabled:backdrop,
 entry image {
     color: @internal_element_color;
     transition: all 200ms ease-in-out;
-    -gtk-icon-palette: needs-attention @attention_color, success @LIME_500, warning @BANANA_500, error @error_color;
+    -gtk-icon-palette: needs-attention @attention_color, success @LIME_500, warning shade (@BANANA_700, 1.25), error @error_color;
 }
 
 entry image:backdrop {
@@ -1081,6 +1081,14 @@ button.link > label {
 
 button.link:focus > label {
     text-decoration: underline;
+}
+
+button.file {
+    padding: 3px;
+}
+
+button.file label {
+    padding: 0;
 }
 
 /***************************
@@ -2608,14 +2616,9 @@ button.suggested-action,
         0 1px 0 0 alpha (#fff, 0.15);
 }
 
-button.suggested-action:not(:disabled) label,
-button.suggested-action:not(:disabled) label:hover,
-button.suggested-action:not(:disabled) image,
-button.suggested-action:not(:disabled) image:hover,
-.titlebar button.suggested-action:not(:disabled) label,
-.titlebar button.suggested-action:not(:disabled) label:hover,
-.titlebar button.suggested-action:not(:disabled) image,
-.titlebar button.suggested-action:not(:disabled) image:hover {
+button.suggested-action:not(:disabled),
+.titlebar button.suggested-action:not(:disabled) > label,
+.titlebar button.suggested-action:not(:disabled) > image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.3);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
@@ -3513,7 +3516,7 @@ infobar revealer > box {
     background-image: -gtk-icontheme("dialog-information-symbolic");
     background-size: 16px;
     background-repeat: no-repeat;
-    background-position: 9px center;
+    background-position: 9px 1em;
     border-color: shade (@bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
@@ -3544,9 +3547,11 @@ infobar.error revealer > box {
     -gtk-icon-palette: error #fff;
 }
 
-infobar.error label {
+infobar.error label,
+infobar.error .close {
     color: #fff;
     text-shadow: 0 1px 1px @error_color;
+    -gtk-icon-shadow: 0 1px 1px @error_color;
 }
 
 infobar.question revealer > box {
@@ -4267,4 +4272,3 @@ overshoot.left {
             alpha(@colorAccent, 0.075) 100%
         );
 }
-
