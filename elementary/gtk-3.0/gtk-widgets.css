@@ -3686,8 +3686,7 @@ popover.menu,
     background-image: none;
 }
 
-popover.menu separator:first-child,
-.popover.menu separator:first-child {
+popover.menu > stack box.vertical + box.vertical > separator:first-child {
     margin: 4px 0;
 }
 
