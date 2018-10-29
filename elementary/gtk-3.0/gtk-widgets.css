@@ -1536,16 +1536,16 @@ combobox button:last-child:not(:only-child) {
 ********************/
 
 notebook {
-    background-clip: border-box;
-    background-color: shade (@titlebar_color, 1.06);
     border: none;
-    border-radius: 0 0 2.5px 2.5px;
     text-shadow: 0 1px @text_shadow_color;
     -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 notebook.frame {
     border: 1px solid shade (@titlebar_color, 0.6);
+    border-radius: 0 0 2.5px 2.5px;
+    background-color: shade (@titlebar_color, 1.06);
+    background-clip: border-box;
 }
 
 notebook header {
