@@ -793,11 +793,6 @@ infobar button:hover:disabled {
     box-shadow: none;
 }
 
-.titlebar button:focus,
-.titlebar .button:focus {
-    color: @textColorPrimary;
-}
-
 window.popup decoration,
 .csd.popup decoration {
     box-shadow:

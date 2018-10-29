@@ -2415,6 +2415,11 @@ toolbar.bottom-toolbar button,
     box-shadow: none;
 }
 
+.titlebar button:focus,
+.titlebar .button:focus {
+    color: @textColorPrimary;
+}
+
 /***************
  * Action bars *
  ***************/
