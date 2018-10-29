@@ -158,11 +158,6 @@ button.destructive-action:focus,
     border-color: shade (@colorAccent, 0.3);
 }
 
-.titlebar button:focus,
-.titlebar .button:focus {
-    color: @textColorPrimary;
-}
-
 button.flat,
 button.flat:backdrop,
 .button.flat,
@@ -796,6 +791,11 @@ infobar button:hover:disabled {
     border-style: solid;
     border-image: none;
     box-shadow: none;
+}
+
+.titlebar button:focus,
+.titlebar .button:focus {
+    color: @textColorPrimary;
 }
 
 window.popup decoration,
