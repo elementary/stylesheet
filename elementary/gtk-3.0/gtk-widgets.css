@@ -25,6 +25,14 @@
     /* -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; FIXME: Uncomment for 3.19 */
 }
 
+*:link {
+    color: @link_color;
+}
+
+*:visited {
+    color: @GRAPE_500;
+}
+
 /***************
  * Base States *
  **************/
