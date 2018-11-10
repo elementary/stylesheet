@@ -615,6 +615,8 @@ window.rounded decoration {
 **************/
 
 .accent,
+.titlebar label.accent,
+.titlebar image.accent,
 .titlebar.flat .accent image,
 .titlebar.flat .accent label {
     color: @colorAccent;
