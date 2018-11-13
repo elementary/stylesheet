@@ -847,7 +847,11 @@ scale.vertical mark indicator {
 }
 
 scale highlight {
-    background-color: alpha (#000, 0.45);
+    background-color: alpha (@BLACK_900, 0.45);
+}
+
+scale.accent highlight {
+    background-color: alpha (@colorAccent, 0.67);
 }
 
 scale highlight:disabled {
@@ -855,7 +859,11 @@ scale highlight:disabled {
 }
 
 scale fill {
-    background-color: alpha(#000, 0.25);
+    background-color: alpha(@BLACK_900, 0.25);
+}
+
+scale.accent fill {
+    background-color: alpha(@colorAccent, 0.33);
 }
 
 scale.horizontal highlight.top,
