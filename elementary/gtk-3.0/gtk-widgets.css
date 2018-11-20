@@ -2075,7 +2075,6 @@ switch:focus slider {
         inset 0 0 0 1px alpha(#fff, 0.05),
         inset 0 1px 0 0 alpha(#fff, 0.45),
         inset 0 -1px 0 0 alpha(#fff, 0.15),
-        0 0 0 1px alpha(shade(@colorAccent, 0.5), 0.25),
         0 1px 1px alpha(@colorAccent, 0.35),
         0 1px 2px alpha(@colorAccent, 0.16);
 }
@@ -2090,7 +2089,7 @@ switch:checked {
             ),
             @colorAccent
         );
-    border-color: shade (@colorAccent, 0.85);
+    border-color: shade(@colorAccent, 0.85);
 }
 
 check:checked,
