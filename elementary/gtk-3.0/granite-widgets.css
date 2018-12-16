@@ -205,6 +205,8 @@
     background: transparent;
     border: transparent;
     box-shadow: none;
+    min-width: 0;
+    min-height: 0;
 }
 
 /**************
