@@ -1,3 +1,9 @@
+elementary-theme (5.2.1) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Tue, 18 Dec 2018 03:19:47 -0600
+
 elementary-theme (5.2.0) bionic; urgency=medium
 
   * New upstream release.
