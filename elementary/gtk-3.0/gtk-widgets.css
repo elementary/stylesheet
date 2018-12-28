@@ -2095,14 +2095,18 @@ switch:focus slider {
 }
 
 switch:checked {
+    background-color: @colorAccent;
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @colorAccent,
-                1.2
+            alpha (
+                #fff,
+                0.3
             ),
-            @colorAccent
+            alpha (
+                #fff,
+                0
+            )
         );
     border-color: shade(@colorAccent, 0.85);
 }
