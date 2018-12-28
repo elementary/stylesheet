@@ -1445,10 +1445,10 @@ combobox button:last-child:not(:only-child) {
 .linked > combobox:first-child button.combo,
 .linked spinbutton:first-child,
 .titlebar .stack-switcher .button.image-button:first-child,
-.linked:dir(rtl) entry:last-child,
-.linked:dir(rtl) button:last-child,
-.linked:dir(rtl) > combobox:last-child button.combo,
-.linked:dir(rtl) spinbutton:last-child,
+.linked:not(box):dir(rtl) entry:last-child,
+.linked:not(box):dir(rtl) button:last-child,
+.linked:not(box):dir(rtl) > combobox:last-child button.combo,
+.linked:not(box):dir(rtl) spinbutton:last-child,
 .titlebar:dir(rtl) .stack-switcher .button.image-button:last-child {
     border-width: 1px;
     border-radius: 2.5px 0 0 2.5px;
@@ -1460,10 +1460,10 @@ combobox button:last-child:not(:only-child) {
 .linked > combobox:last-child button.combo,
 .linked spinbutton:last-child,
 .titlebar .stack-switcher .button.image-button:last-child,
-.linked:dir(rtl) entry:first-child,
-.linked:dir(rtl) button:first-child,
-.linked:dir(rtl) > combobox:first-child button.combo,
-.linked:dir(rtl) spinbutton:first-child,
+.linked:not(box):dir(rtl) entry:first-child,
+.linked:not(box):dir(rtl) button:first-child,
+.linked:not(box):dir(rtl) > combobox:first-child button.combo,
+.linked:not(box):dir(rtl) spinbutton:first-child,
 .titlebar:dir(rtl) .stack-switcher .button.image-button:first-child {
     border-left-width: 0;
     border-radius: 0 2.5px 2.5px 0;
@@ -1475,10 +1475,10 @@ combobox button:last-child:not(:only-child) {
 .linked > combobox:only-child button.combo,
 .linked spinbutton:only-child,
 .titlebar .stack-switcher .button.image-button:only-child,
-.linked:dir(rtl) entry:only-child,
-.linked:dir(rtl) button:only-child,
-.linked:dir(rtl) > combobox:only-child button.combo,
-.linked:dir(rtl) spinbutton:only-child,
+.linked:not(box):dir(rtl) entry:only-child,
+.linked:not(box):dir(rtl) button:only-child,
+.linked:not(box):dir(rtl) > combobox:only-child button.combo,
+.linked:not(box):dir(rtl) spinbutton:only-child,
 .titlebar .stack-switcher .button.image-button:only-child {
     border-right-width: 1px;
     border-left-width: 1px;
