@@ -51,11 +51,12 @@
 
 entry:focus,
 .entry:focus {
-    border-color: alpha (#000, 0.3);
+    border-color: alpha(@colorAccent, 0.5);
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (#fff, 0.05);
+        inset 0 0 0 1px alpha(@colorAccent, 0.1),
+        inset 0 1px 0 0 alpha(@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
+        0 1px 0 0 alpha(#fff, 0.05);
 }
 
 entry selection,
