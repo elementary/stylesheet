@@ -3705,6 +3705,7 @@ popover.menu,
     background-image: none;
 }
 
+/* Workaround for Popover menus separators from a menu model */
 popover.menu > stack box.vertical + box.vertical > separator.horizontal:first-child {
     margin: 4px 0;
 }
