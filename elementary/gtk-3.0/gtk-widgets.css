@@ -2389,8 +2389,8 @@ toolbar.bottom-toolbar button,
  * Header Bars *
  **************/
 
-.titlebar button.image-button,
-.titlebar .button.image-button {
+.titlebar button.image-button:not(.raised),
+.titlebar .button.image-button:not(.raised) {
     padding: 3px;
     border: 1px solid transparent;
     background-image: none;
@@ -2398,31 +2398,31 @@ toolbar.bottom-toolbar button,
 }
 
 .titlebar button.flat,
-.titlebar button.image-button,
+.titlebar button.image-button:not(.raised),
 .titlebar .button.flat,
-.titlebar .button.image-button {
+.titlebar .button.image-button:not(.raised) {
     border-radius: 99px;
     background-color: transparent;
 }
 
-.titlebar button.image-button:active,
-.titlebar button.image-button:hover:active,
-.titlebar button.image-button:focus:active,
-.titlebar button.image-button:checked,
-.titlebar button.image-button:hover:checked,
-.titlebar button.image-button:focus:checked,
+.titlebar button.image-button:not(.raised):active,
+.titlebar button.image-button:not(.raised):hover:active,
+.titlebar button.image-button:not(.raised):focus:active,
+.titlebar button.image-button:not(.raised):checked,
+.titlebar button.image-button:not(.raised):hover:checked,
+.titlebar button.image-button:not(.raised):focus:checked,
 .titlebar button.flat:active,
 .titlebar button.flat:hover:active,
 .titlebar button.flat:focus:active,
 .titlebar button.flat:checked,
 .titlebar button.flat:hover:checked,
 .titlebar button.flat:focus:checked,
-.titlebar .button.image-button:active,
-.titlebar .button.image-button:hover:active,
-.titlebar .button.image-button:focus:active,
-.titlebar .button.image-button:checked,
-.titlebar .button.image-button:hover:checked,
-.titlebar .button.image-button:focus:checked,
+.titlebar .button.image-button:not(.raised):active,
+.titlebar .button.image-button:not(.raised):hover:active,
+.titlebar .button.image-button:not(.raised):focus:active,
+.titlebar .button.image-button:not(.raised):checked,
+.titlebar .button.image-button:not(.raised):hover:checked,
+.titlebar .button.image-button:not(.raised):focus:checked,
 .titlebar .button.flat:active,
 .titlebar .button.flat:hover:active,
 .titlebar .button.flat:focus:active,
