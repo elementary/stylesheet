@@ -1585,6 +1585,17 @@ notebook header {
         linear-gradient(
             to bottom,
             alpha (
+                @base_color,
+                1
+            ),
+            alpha (
+                @base_color,
+                0
+            ) 1px
+        ),
+        linear-gradient(
+            to bottom,
+            alpha (
                 #000,
                 0.1
             ),
@@ -1613,6 +1624,17 @@ notebook header {
 notebook header:backdrop {
     background-color: shade (@titlebar_color, 1.02);
     background-image:
+        linear-gradient(
+            to bottom,
+            alpha (
+                @base_color,
+                1
+            ),
+            alpha (
+                @base_color,
+                0
+            ) 1px
+        ),
         linear-gradient(
             to bottom,
             alpha (
@@ -1660,6 +1682,7 @@ notebook tab {
     border-width: 0 1px;
     color: shade (@text_color, 1.12);
     margin-right: -1px;
+    margin-top: 1px;
     padding: 3px;
 }
 
@@ -2554,8 +2577,6 @@ paned .inline-toolbar:backdrop,
 searchbar,
 .location-bar,
 .search-bar {
-    border-width: 0 0 1px;
-    border-style: solid;
     padding: 2px;
     background-image:
         linear-gradient(
@@ -2572,7 +2593,10 @@ searchbar,
     box-shadow:
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
-    border-color: shade (@titlebar_color, 0.6);
+    border-bottom-color: shade (@titlebar_color, 0.7);
+    border-top-color: shade (@base_color, 0.9);
+    border-width: 1px 0;
+    border-style: solid;
     text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
 }
@@ -2589,7 +2613,7 @@ searchbar:backdrop,
             ),
             @titlebar_color
         );
-    border-color: shade (@titlebar_color, 0.76);
+    border-bottom-color: shade (@titlebar_color, 0.8);
     color: @insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -3746,14 +3770,12 @@ GcrCertificateWidget .frame {
                 0.94
             )
         );
-    border-color: shade (@colorPrimary, 0.68);
     border-radius: 4px 4px 0 0;
-    border-style: solid;
-    border-width: 0 0 1px;
     text-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
     box-shadow:
         inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.2),
-        inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.6);
+        inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.6),
+        0 1px 0 alpha (#000, 0.35);
     padding: 8px 6px 6px;
     -gtk-icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
 }
@@ -3772,8 +3794,9 @@ GcrCertificateWidget .frame {
             )
         );
     background-color: shade (@colorPrimary, 1.1);
-    border-color: shade (@colorPrimary, 0.82);
-    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
+    box-shadow:
+        inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.4),
+        0 1px 0 alpha (#000, 0.2);
     -gtk-icon-effect: dim;
 }
 
