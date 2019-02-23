@@ -175,13 +175,15 @@ rubberband,
  *************/
 
 menu separator,
-separator.horizontal {
+separator.horizontal,
+.titlebar menu separator {
     border-top: 1px solid @menu_separator;
     border-bottom: 1px solid @menu_separator_shadow;
     margin-bottom: -1px;
 }
 
-menu separator {
+menu separator,
+.titlebar menu separator {
     margin: 4px 0;
 }
 
