@@ -2787,19 +2787,25 @@ button.destructive-action:focus,
 
 button.flat.destructive-action,
 button.flat.destructive-action:backdrop,
-button.flat.destructive-action:hover {
+button.flat.destructive-action:hover,
+actionbar button.image-button.destructive-action,
+actionbar button.image-button.destructive-action:backdrop,
+actionbar button.image-button.destructive-action:hover {
     background: none;
     border: none;
     box-shadow: none;
 }
 
-button.flat.destructive-action:focus {
+button.flat.destructive-action:focus,
+actionbar button.image-button.destructive-action:focus {
     background: alpha (@error_color, 0.3);
     border: none;
 }
 
 button.flat.destructive-action image,
-button.flat.destructive-action label {
+button.flat.destructive-action label,
+actionbar button.image-button.destructive-action image,
+actionbar button.image-button.destructive-action label {
     color: @text_color;
     transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
     -gtk-icon-shadow: none;
@@ -2808,12 +2814,18 @@ button.flat.destructive-action label {
 button.flat.destructive-action:focus image,
 button.flat.destructive-action:focus label,
 button.flat.destructive-action:hover image,
-button.flat.destructive-action:hover label {
+button.flat.destructive-action:hover label,
+actionbar button.image-button.destructive-action:focus image,
+actionbar button.destructive-action:focus label,
+actionbar button.image-button.destructive-action:hover image,
+actionbar button.destructive-action:hover label {
     color: @error_color;
 }
 
 button.flat.destructive-action image:backdrop,
-button.flat.destructive-action label:backdrop {
+button.flat.destructive-action label:backdrop,
+actionbar button..image-button.destructive-action image:backdrop,
+actionbar button.destructive-action label:backdrop {
     color: @insensitive_fg_color;
 }
 
