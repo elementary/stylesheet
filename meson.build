@@ -1,4 +1,7 @@
-project('io.elementary.stylesheet')
+project(
+    'io.elementary.stylesheet',
+    version: '5.2.2'
+)
 
 install_subdir(
     'elementary',
