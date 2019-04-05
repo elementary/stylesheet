@@ -582,11 +582,11 @@ progressbar.osd trough {
 }
 
 progressbar.osd progress {
-   background: @colorAccent;
-   border-radius: 99px;
-   min-height: 3px;
-   margin-left: 2px;
-   margin-right: 2px;
+    background: @colorAccent;
+    border-radius: 99px;
+    min-height: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 progressbar.osd trough {
