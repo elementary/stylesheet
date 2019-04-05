@@ -575,6 +575,24 @@ entry progress:not(.pulse) {
     border-right: 0;
 }
 
+progressbar.osd progress,
+progressbar.osd trough {
+    border: none;
+    box-shadow: none;
+}
+
+progressbar.osd progress {
+   background: @colorAccent;
+   border-radius: 99px;
+   min-height: 3px;
+   margin-left: 2px;
+   margin-right: 2px;
+}
+
+progressbar.osd trough {
+    background: none;
+}
+
 /************
 * Level Bar *
 ************/
