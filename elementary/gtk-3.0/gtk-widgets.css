@@ -579,14 +579,17 @@ progressbar.osd progress,
 progressbar.osd trough {
     border: none;
     box-shadow: none;
+    min-height: 2px;
+    min-width: 2px;
 }
 
 progressbar.osd progress {
     background: @colorAccent;
     border-radius: 99px;
-    min-height: 3px;
-    margin-left: 2px;
-    margin-right: 2px;
+}
+
+progressbar.osd.horizontal progress {
+    margin: 0 -1px;
 }
 
 progressbar.osd trough {
