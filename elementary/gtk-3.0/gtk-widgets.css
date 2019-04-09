@@ -575,6 +575,27 @@ entry progress:not(.pulse) {
     border-right: 0;
 }
 
+progressbar.osd progress,
+progressbar.osd trough {
+    border: none;
+    box-shadow: none;
+    min-height: 2px;
+    min-width: 2px;
+}
+
+progressbar.osd progress {
+    background: @colorAccent;
+    border-radius: 99px;
+}
+
+progressbar.osd.horizontal progress {
+    margin: 0 -1px;
+}
+
+progressbar.osd trough {
+    background: none;
+}
+
 /************
 * Level Bar *
 ************/
@@ -4050,7 +4071,7 @@ dialog toolbar {
 
 dialog label.primary {
     font-weight: 700;
-    font-size: 11pt;
+    font-size: 1.2em;
 }
 
 /***************
