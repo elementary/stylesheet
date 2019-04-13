@@ -2695,6 +2695,52 @@ button.suggested-action:checked,
     -gtk-icon-shadow: none;
 }
 
+/****************
+* Accent Button *
+*****************/
+
+button.accent,
+.accent.button {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade(@colorAccent, 1.1),
+            shade(@colorAccent, 0.9)
+        );
+    border-color: shade (@colorAccent, 0.8);
+    box-shadow:
+        inset 0 0 0 1px alpha(#fff, 0.05),
+        inset 0 1px 0 0 alpha(#fff, 0.25),
+        inset 0 -1px 0 0 alpha(#fff, 0.1),
+        0 1px 0 0 alpha(#fff, 0.15);
+}
+
+button.accent:not(:disabled),
+.titlebar button.accent:not(:disabled) > label,
+.titlebar button.accent:not(:disabled) > image {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha(#000, 0.3);
+    -gtk-icon-shadow: 0 1px alpha(#000, 0.3);
+}
+
+button.accent:active,
+button.accent:active:hover,
+button.accent:checked,
+.accent.button:active,
+.accent.button:active:hover,
+.accent.button:checked {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade(@colorAccent, 1.05),
+            shade(@colorAccent, 0.95)
+        );
+    border-color: shade(@colorAccent, 0.8);
+    box-shadow:
+        inset 0 0 0 1px alpha(#000, 0.05),
+        0 1px 0 0 alpha(@colorAccent, 0.3);
+}
+
 /****************************
 * Destructive Action Button *
 ****************************/
@@ -2856,6 +2902,7 @@ actionbar button.destructive-action label:backdrop {
 
 button:disabled,
 .button:disabled,
+.accent.button:disabled,
 .destructive-action.button:disabled,
 .suggested-action.button:disabled {
     background-image: none;
@@ -2892,6 +2939,7 @@ toolbar button:disabled,
 
 button:disabled image,
 button:disabled label,
+button.accent:disabled image,
 button.destructive-action:disabled image,
 button.suggested-action:disabled image {
     text-shadow: 0 1px @text_shadow_color;
