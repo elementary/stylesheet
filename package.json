@@ -1,6 +1,6 @@
 {
   "name": "stylesheet",
-  "version": "5.2.1",
+  "version": "5.2.3",
   "description": "The Gtk+ Stylesheet for elementary OS",
   "main": "index.theme",
   "scripts": {
