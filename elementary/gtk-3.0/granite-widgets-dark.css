@@ -115,24 +115,16 @@
         );
 }
 
-.storage-bar .fill-block.app {
-    border-color: shade (@GRAPE_900, 0.95);
-}
-
 .storage-bar .fill-block.audio {
-    border-color: shade(@ORANGE_900, 0.85);
+    border-color: alpha (@ORANGE_900, 0.65);
 }
 
 .storage-bar .fill-block.files {
-    border-color: shade(@BLUEBERRY_900, 0.85);
+    border-color: alpha (@BLUEBERRY_900, 0.65);
 }
 
 .storage-bar .fill-block.photo {
-    border-color: shade(@BANANA_900, 0.7);
-}
-
-.storage-bar .fill-block.video {
-    border-color: shade(@STRAWBERRY_900, 0.85);
+    border-color: alpha (@BANANA_900, 0.4);
 }
 
 /***************
