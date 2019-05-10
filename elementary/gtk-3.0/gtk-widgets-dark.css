@@ -177,6 +177,22 @@ button:active:disabled,
  * Check, Radio, and Switch *
  ***************************/
 
+check,
+radio {
+    background-image: 
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                1.14
+            ),
+            shade (
+                @base_color,
+                1.12
+            )
+        );
+}
+
 check:checked,
 radio:checked,
 switch:checked {
