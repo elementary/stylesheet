@@ -1,6 +1,6 @@
 project(
     'io.elementary.stylesheet',
-    version: '5.2.2'
+    version: '5.2.3'
 )
 
 install_subdir(
