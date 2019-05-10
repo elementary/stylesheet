@@ -100,9 +100,9 @@
             @BLACK_500
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#ccc, 0.05),
-        inset 0 1px 0 0 alpha (#ccc, 0.15),
-        inset 0 -1px 0 0 alpha (#ccc, 0.05);
+        inset 0 0 0 1px alpha(#ccc, 0.05),
+        inset 0 1px 0 0 alpha(#ccc, 0.15),
+        inset 0 -1px 0 0 alpha(#ccc, 0.05);
 }
 
 .storage-bar .fill-block.empty-block,
@@ -116,15 +116,15 @@
 }
 
 .storage-bar .fill-block.audio {
-    border-color: alpha (@ORANGE_900, 0.65);
+    border-color: alpha(@ORANGE_900, 0.65);
 }
 
 .storage-bar .fill-block.files {
-    border-color: alpha (@BLUEBERRY_900, 0.65);
+    border-color: alpha(@BLUEBERRY_900, 0.65);
 }
 
 .storage-bar .fill-block.photo {
-    border-color: alpha (@BANANA_900, 0.4);
+    border-color: alpha(@BANANA_900, 0.4);
 }
 
 /***************
