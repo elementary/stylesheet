@@ -88,6 +88,33 @@
     box-shadow: none;
 }
 
+/**************
+* Storage Bar *
+**************/
+
+.storage-bar .fill-block {
+    background-image:
+        linear-gradient(
+            to bottom,
+            @BLACK_300,
+            @BLACK_500
+        );
+    box-shadow:
+        inset 0 0 0 1px alpha (#ccc, 0.05),
+        inset 0 1px 0 0 alpha (#ccc, 0.15),
+        inset 0 -1px 0 0 alpha (#ccc, 0.05);
+}
+
+.storage-bar .fill-block.empty-block,
+.storage-bar .fill-block.unused {
+    background-image:
+        linear-gradient(
+            to bottom,
+            mix(@BLACK_100, @BLACK_300, 0.5),
+            @BLACK_300
+        );
+}
+
 /***************
 * Fancy Scales *
 ***************/
