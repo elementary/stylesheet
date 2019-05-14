@@ -2095,6 +2095,7 @@ menuitem check {
     background: none;
     border-color: transparent;
     box-shadow: none;
+    transition: none;
 }
 
 menuitem check:dir(ltr),
