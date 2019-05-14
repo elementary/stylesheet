@@ -1802,6 +1802,11 @@ notebook tab label:backdrop {
     border-color: shade (@tab_base_color, 0.78);
 }
 
+.inline-toolbar notebook tab {
+    margin-bottom: -1px;
+    margin-top: 1px;
+}
+
 .inline-toolbar notebook tab:checked {
     background-color: @tab_base_color;
     background-image: none;
@@ -1809,7 +1814,6 @@ notebook tab label:backdrop {
     box-shadow:
         -1px 0 1px alpha (#000, 0.05),
         1px 0 1px alpha (#000, 0.05);
-    margin-bottom: -1px;
 }
 
 /*************
@@ -2095,6 +2099,7 @@ menuitem check {
     background: none;
     border-color: transparent;
     box-shadow: none;
+    transition: none;
 }
 
 menuitem check:dir(ltr),
