@@ -276,6 +276,13 @@ switch:checked slider {
         inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
+menu,
+.content-view .menu,
+window.menu,
+window.popup {
+    background: linear-gradient(0deg, @BLACK_500, @BLACK_300);
+}
+
 /***********
 * Toolbars *
 ***********/
