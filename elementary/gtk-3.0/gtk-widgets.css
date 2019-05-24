@@ -1911,7 +1911,7 @@ window.menu,
 window.popup {
     padding: 4px 0;
     border-radius: 3px;
-    background: linear-gradient(0deg, @SILVER_100, #FFF);
+    background: linear-gradient(0deg, @SILVER_100, #fff);
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
@@ -1973,7 +1973,7 @@ modelbutton:hover,
 .menuitem:hover,
 menuitem:hover cellview {
     box-shadow: none;
-    background-color: alpha(@colorAccent,0.9);
+    background-color: alpha(@colorAccent, 0.9);
     color: @selected_fg_color;
 }
 
