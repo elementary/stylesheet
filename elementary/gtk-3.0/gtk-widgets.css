@@ -2765,8 +2765,8 @@ button.destructive-action:not(:disabled) image:hover,
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
-.titlebar button.destructive-action label:backdrop,
-.titlebar button.destructive-action image:backdrop {
+.titlebar button.destructive-action:not(:disabled) label:backdrop,
+.titlebar button.destructive-action:not(:disabled) image:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
