@@ -182,7 +182,7 @@ separator.horizontal {
 }
 
 menu separator {
-    margin: 4px 0;
+    margin: 5px 10px;
 }
 
 separator.vertical {
@@ -1911,7 +1911,7 @@ window.menu,
 window.popup {
     padding: 4px 0;
     border-radius: 3px;
-    background-color: @bg_color;
+    background: linear-gradient(0deg, @base_color, shade(@base_color, 1.1));
     box-shadow:
         inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
@@ -1947,6 +1947,7 @@ menubar:backdrop,
 menuitem,
 .menuitem {
     padding: 3px 6px;
+    margin: 3px 0;
 }
 
 menuitem,
@@ -1969,9 +1970,11 @@ modelbutton:active,
 modelbutton:hover,
 .menuitem:active,
 .menuitem:focus:active,
-.menuitem:hover {
+.menuitem:hover,
+menuitem:hover cellview {
     box-shadow: none;
-    background-color: alpha (@text_color, 0.15);
+    background-color: alpha(@colorAccent, 0.9);
+    color: @selected_fg_color;
 }
 
 menuitem *:disabled,
@@ -2019,6 +2022,13 @@ modelbutton label,
     padding: 3px;
 }
 
+/* align label if it has an image beside it with the other labels in the menu */
+menuitem box label,
+modelbutton box label,
+.menuitem box label {
+    margin-left: -7px;
+}
+
 menu:dir(ltr) menuitem image:first-child {
     margin-left: -17px;
     padding-left: 0;
@@ -2034,10 +2044,6 @@ menu:dir(rtl) menuitem image:first-child {
 modelbutton {
     min-width: 150px;
     padding: 3px 12px;
-}
-
-modelbutton box label {
-	margin-left: 0;
 }
 
 /* Moved titlebar sep here to fix seps in titlebar menus */
@@ -4357,3 +4363,4 @@ overshoot.left {
             alpha(@colorAccent, 0.075) 100%
         );
 }
+

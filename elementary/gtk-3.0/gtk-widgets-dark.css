@@ -293,6 +293,19 @@ switch:checked slider {
         inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
+menuitem:active,
+menuitem:hover,
+modelbutton:active,
+modelbutton:hover,
+.menuitem:active,
+.menuitem:focus:active,
+.menuitem:hover,
+menuitem:hover cellview {
+    box-shadow: none;
+    background-color: alpha(shade(@colorAccent, 1.3), 0.88);
+    color: shade(@base_color, 0.88);
+}
+
 /***********
 * Toolbars *
 ***********/
