@@ -190,7 +190,9 @@
     min-width: 16px;
 }
 
-.mode-switch:checked {
+.mode-switch:checked,
+.mode-switch:checked:backdrop {
+    background-color: alpha (#000, 0.1);
     background-image: none;
     border-color: alpha (#000, 0.25);
 }
@@ -203,6 +205,8 @@
     background: transparent;
     border: transparent;
     box-shadow: none;
+    min-width: 0;
+    min-height: 0;
 }
 
 /**************
@@ -216,31 +220,14 @@
 .source-list.badge:selected:focus,
 .source-list.badge:hover:selected {
     background-image: none;
-    background-color: alpha (#000, 0.4);
-    color: @titlebar_color;
+    background-color: alpha(@text_color, 0.1);
+    box-shadow: none;
+    color: alpha(@text_color, 0.7);
     font-weight: 700;
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
-    text-shadow: 0 1px alpha (#000, 0.1);
     border-width: 0;
-    -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
-}
-
-.sidebar .badge:selected,
-.source-list.badge:selected,
-.source-list.badge:hover:selected {
-    color: @titlebar_color;
-}
-
-.sidebar .badge:selected:backdrop,
-.source-list.badge:selected:backdrop,
-.source-list.badge:selected:hover:backdrop {
-    background-image: none;
-    background-color: alpha (#000, 0.2);
-    color: shade (@titlebar_color, 0.95);
-    text-shadow: 0 1px alpha (#000, 0.1);
-    -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
 .source-list.level-bar,
