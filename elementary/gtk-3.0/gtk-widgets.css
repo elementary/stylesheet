@@ -1963,6 +1963,10 @@ modelbutton {
     padding: 3px 12px;
 }
 
+modelbutton box label {
+	margin-left: 0;
+}
+
 /* Moved titlebar sep here to fix seps in titlebar menus */
 
 .titlebar separator {
