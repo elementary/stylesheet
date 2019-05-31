@@ -2003,11 +2003,13 @@ arrow.bottom {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-arrow.left {
+arrow.left,
+notebook header > tabs > arrow.down {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
 }
 
-arrow.right {
+arrow.right,
+notebook header > tabs > arrow.up {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
