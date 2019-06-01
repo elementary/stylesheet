@@ -2003,11 +2003,13 @@ arrow.bottom {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-arrow.left {
+arrow.left,
+notebook header > tabs > arrow.down {
     -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
 }
 
-arrow.right {
+arrow.right,
+notebook header > tabs > arrow.up {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
@@ -2713,9 +2715,7 @@ button.suggested-action:checked,
 ****************************/
 
 button.destructive-action,
-.titlebar button.destructive-action,
-.destructive-action.button,
-.titlebar .destructive-action.button {
+.destructive-action.button {
     background-image:
         linear-gradient(
             to bottom,
@@ -2736,7 +2736,7 @@ button.destructive-action,
 button.destructive-action:backdrop:not(:disabled),
 .titlebar button.destructive-action:backdrop:not(:disabled),
 .destructive-action.button:backdrop:not(:disabled),
-.titlebar .destructive-action.button:backdrop {
+.titlebar .destructive-action.button:backdrop:not(:disabled) {
     background-image:
         linear-gradient(
             to bottom,
@@ -2755,20 +2755,20 @@ button.destructive-action:backdrop:not(:disabled),
         inset 0 -1px 0 0 alpha (#fff, 0.1);
 }
 
-button.destructive-action label,
-button.destructive-action label:hover,
-button.destructive-action image,
-button.destructive-action image:hover,
-.titlebar button.destructive-action label,
-.titlebar button.destructive-action label:hover,
-.titlebar button.destructive-action image {
+button.destructive-action:not(:disabled) label,
+button.destructive-action:not(:disabled) label:hover,
+button.destructive-action:not(:disabled) image,
+button.destructive-action:not(:disabled) image:hover,
+.titlebar button.destructive-action:not(:disabled) label,
+.titlebar button.destructive-action:not(:disabled) label:hover,
+.titlebar button.destructive-action:not(:disabled) image {
     color: @selected_fg_color;
     text-shadow: 0 1px alpha (#000, 0.2);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
 }
 
-.titlebar button.destructive-action label:backdrop,
-.titlebar button.destructive-action image:backdrop {
+.titlebar button.destructive-action:not(:disabled) label:backdrop,
+.titlebar button.destructive-action:not(:disabled) image:backdrop {
     color: shade (@error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
