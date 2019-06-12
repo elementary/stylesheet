@@ -2037,7 +2037,7 @@ modelbutton {
 }
 
 modelbutton box label {
-	margin-left: 0;
+    margin-left: 0;
 }
 
 /* Moved titlebar sep here to fix seps in titlebar menus */
