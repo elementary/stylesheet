@@ -1977,6 +1977,13 @@ menuitem:hover cellview {
     color: @selected_fg_color;
 }
 
+modelbutton:active > switch,
+modelbutton:hover > switch {
+    box-shadow: none;
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
 menuitem *:disabled,
 modelbutton *:disabled,
 .menuitem *:disabled {
@@ -2041,6 +2048,10 @@ menu:dir(rtl) menuitem image:first-child {
     margin-right: -17px;
     padding-left: 2px;
     padding-right: 0;
+}
+
+modelbutton box label {
+    margin-left: 0;
 }
 
 modelbutton {
@@ -4363,4 +4374,3 @@ overshoot.left {
             alpha(@colorAccent, 0.075) 100%
         );
 }
-
