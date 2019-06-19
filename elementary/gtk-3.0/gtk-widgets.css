@@ -4119,11 +4119,6 @@ dialog toolbar {
     background-color: @bg_color;
 }
 
-dialog label.primary {
-    font-weight: 700;
-    font-size: 1.2em;
-}
-
 /***************
 * Emoji Picker *
 ***************/
