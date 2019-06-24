@@ -619,18 +619,21 @@ window.rounded decoration {
 }
 
 .h4,
-.category-label {
+.category-label,
+.type-heading {
     color: alpha (@text_color, 0.7);
     font-weight: bold;
     text-shadow: 0 1px @text_shadow_color;
 }
 
-.h4 {
+.h4,
+.type-heading {
     padding-bottom: 6px;
     padding-top: 6px;
 }
 
-list .h4 {
+list .h4,
+list .type-heading {
     padding-left: 6px;
 }
 
