@@ -547,32 +547,12 @@ treeview .trough:selected:focus {
 
 entry progress,
 spinbutton progress {
-    background-image:
-        linear-gradient(
-            to bottom,
-            mix(
-                @colorAccent,
-                @base_color,
-                0.4
-            ),
-            mix(
-                @colorAccent,
-                @base_color,
-                0.5
-            )
-        );
-    border: 1px solid @colorAccent;
-    border-radius: 2.5px;
-    box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3);
-    margin: -4px;
+    border-bottom: 2px solid @colorAccent;
+    margin: -1px;
 }
 
-entry progress:not(.pulse) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: 0;
+spinbutton progress {
+    margin: -1px -4px;
 }
 
 progressbar.osd progress,
