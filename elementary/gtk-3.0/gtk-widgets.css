@@ -551,8 +551,14 @@ spinbutton progress {
         linear-gradient(
             to top,
             @colorAccent,
-            alpha (@colorAccent, 0.5) 1px,
-            alpha (@base_color, 0) 7px
+            alpha (
+                @colorAccent, 
+                0.5
+            ) 1px,
+            alpha (
+                @base_color,
+                0
+            ) 7px
         );
     border-radius: 2.5px;
     margin: -4px;
