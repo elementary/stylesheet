@@ -564,9 +564,14 @@ spinbutton progress {
     margin: -4px;
 }
 
-entry progress:not(.pulse) {
+entry progress:not(.pulse):dir(ltr) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+entry progress:not(.pulse):dir(rtl) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 spinbutton progress {
