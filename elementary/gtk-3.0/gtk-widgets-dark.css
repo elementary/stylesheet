@@ -572,8 +572,8 @@ EggFindBar.toolbar,
 * Suggested Action Button *
 **************************/
 
-button.suggested-action,
-.suggested-action.button {
+button.suggested-action:not(:disabled),
+.suggested-action.button:not(:disabled) {
     border: 1px solid shade (@selected_bg_color, 0.35);
 }
 
