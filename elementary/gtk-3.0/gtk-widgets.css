@@ -552,7 +552,7 @@ spinbutton progress {
             to top,
             @colorAccent,
             alpha (
-                @colorAccent, 
+                @colorAccent,
                 0.5
             ) 1px,
             alpha (
