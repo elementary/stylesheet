@@ -549,13 +549,18 @@ entry progress,
 spinbutton progress {
     background-image:
         linear-gradient(
-            to bottom,
-            alpha (@base_color, 0) calc(100% - 7px),
-            alpha (@colorAccent, 0.5) calc(100% - 1px),
-            @colorAccent
+            to top,
+            @colorAccent,
+            alpha (@colorAccent, 0.5) 1px,
+            alpha (@base_color, 0) 7px
         );
     border-radius: 2.5px;
     margin: -4px;
+}
+
+entry progress:not(.pulse) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 spinbutton progress {
