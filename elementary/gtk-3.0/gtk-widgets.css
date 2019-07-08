@@ -170,6 +170,14 @@ rubberband,
     text-shadow: 0 1px @text_shadow_color;
 }
 
+menu .keycap {
+    background: alpha (#000, 0.15);
+    border: none;
+    box-shadow: 0 1px 0 0 alpha (#000, 0.25);
+    color: alpha(@text_color, 0.78);
+    text-shadow: none;
+}
+
 /**************
  * Separators *
  *************/
