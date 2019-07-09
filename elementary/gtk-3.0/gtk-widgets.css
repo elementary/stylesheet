@@ -170,7 +170,8 @@ rubberband,
     text-shadow: 0 1px @text_shadow_color;
 }
 
-menu .keycap {
+menuitem .keycap,
+modelbutton .keycap {
     background: alpha (#000, 0.08);
     border: none;
     box-shadow: 0 1px 0 0 alpha (#000, 0.15);
@@ -180,7 +181,8 @@ menu .keycap {
     text-shadow: none;
 }
 
-menu menuitem:disabled .keycap {
+menuitem:disabled .keycap,
+modelbutton:disabled .keycap {
     opacity: 0.7;
 }
 
