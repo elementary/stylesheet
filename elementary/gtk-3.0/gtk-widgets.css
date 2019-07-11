@@ -3770,6 +3770,22 @@ popover.menu,
     background-image: none;
 }
 
+popover undershoot.top {
+    background:
+        linear-gradient(
+            @bg_color 0%,
+            alpha(@bg_color, 0) 50%
+        );
+}
+
+popover undershoot.bottom {
+    background:
+        linear-gradient(
+            alpha(@bg_color, 0) 50%,
+            @bg_color 100%
+        );
+}
+
 .popover > .location-bar,
 .popover.osd > .toolbar,
 .popover.osd > .inline-toolbar,
