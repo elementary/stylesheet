@@ -329,18 +329,6 @@ menubar.panel,
         0 1px 2px alpha (#000, 0.6);
 }
 
-.composited-indicator .keyboard {
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow:
-        0 0 2px alpha (#000, 0.3),
-        0 1px 2px alpha (#000, 0.6);
-    color: #333;
-    font-weight: 600;
-    padding: 0 3px;
-    text-shadow: none;
-}
-
 .panel.color-light .composited-indicator > revealer label,
 .panel.color-light .composited-indicator > revealer image,
 .panel.color-light .composited-indicator > revealer spinner {
@@ -351,15 +339,6 @@ menubar.panel,
     -gtk-icon-shadow:
         0 0 2px alpha (#fff, 0.3),
         0 1px 0 alpha (#fff, 0.25);
-}
-
-.panel.color-light .composited-indicator .keyboard {
-    background-color: alpha (#000, 0.65);
-    box-shadow:
-        0 0 2px alpha (#fff, 0.3),
-        0 1px 0 alpha (#fff, 0.25);
-    color: #fff;
-    text-shadow: none;
 }
 
 .panel popover {
