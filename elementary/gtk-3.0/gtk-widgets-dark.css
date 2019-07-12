@@ -306,6 +306,13 @@ menuitem:hover cellview {
     color: shade(@base_color, 0.88);
 }
 
+menuitem .keycap,
+modelbutton .keycap {
+    background: alpha (#000, 0.15);
+    box-shadow: 0 1px 0 0 alpha (#000, 0.25);
+    color: alpha(@text_color, 0.75);
+}
+
 /***********
 * Toolbars *
 ***********/
@@ -585,8 +592,8 @@ EggFindBar.toolbar,
 * Suggested Action Button *
 **************************/
 
-button.suggested-action,
-.suggested-action.button {
+button.suggested-action:not(:disabled),
+.suggested-action.button:not(:disabled) {
     border: 1px solid shade (@selected_bg_color, 0.35);
 }
 
