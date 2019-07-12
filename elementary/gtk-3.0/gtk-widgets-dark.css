@@ -293,6 +293,13 @@ switch:checked slider {
         inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
+menuitem .keycap,
+modelbutton .keycap {
+    background: alpha (#000, 0.15);
+    box-shadow: 0 1px 0 0 alpha (#000, 0.25);
+    color: alpha(@text_color, 0.75);
+}
+
 /***********
 * Toolbars *
 ***********/

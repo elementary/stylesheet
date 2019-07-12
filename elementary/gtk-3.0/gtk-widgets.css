@@ -170,6 +170,22 @@ rubberband,
     text-shadow: 0 1px @text_shadow_color;
 }
 
+menuitem .keycap,
+modelbutton .keycap {
+    background: alpha (#000, 0.08);
+    border: none;
+    box-shadow: 0 1px 0 0 alpha (#000, 0.15);
+    color: alpha(@text_color, 0.78);
+    margin: 0 0 1px;
+    padding: 1px 6px 0;
+    text-shadow: none;
+}
+
+menuitem:disabled .keycap,
+modelbutton:disabled .keycap {
+    opacity: 0.7;
+}
+
 /**************
  * Separators *
  *************/
@@ -3752,6 +3768,22 @@ popover .sidebar.view,
 popover.menu,
 .popover.menu {
     background-image: none;
+}
+
+popover undershoot.top {
+    background:
+        linear-gradient(
+            @bg_color 0%,
+            alpha(@bg_color, 0) 50%
+        );
+}
+
+popover undershoot.bottom {
+    background:
+        linear-gradient(
+            alpha(@bg_color, 0) 50%,
+            @bg_color 100%
+        );
 }
 
 .popover > .location-bar,
