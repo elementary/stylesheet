@@ -646,11 +646,15 @@ button.destructive-action:focus,
 **********************/
 
 .button:disabled,
+.text-button:disabled,
 .suggested-action.button:disabled,
-.destructive-action.button:disabled {
+.destructive-action.button:disabled,
+.suggested-action.text-button:disabled,
+.destructive-action.text-button:disabled {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.2);
+    box-shadow: none;
 }
 
 .toolbar .button:disabled {
