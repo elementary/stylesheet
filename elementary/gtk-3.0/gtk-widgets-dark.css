@@ -293,6 +293,13 @@ switch:checked slider {
         inset 0 -1px 0 0 alpha (#fff, 0.01);
 }
 
+menuitem .keycap,
+modelbutton .keycap {
+    background: alpha (#000, 0.15);
+    box-shadow: 0 1px 0 0 alpha (#000, 0.25);
+    color: alpha(@text_color, 0.75);
+}
+
 /***********
 * Toolbars *
 ***********/
@@ -572,8 +579,8 @@ EggFindBar.toolbar,
 * Suggested Action Button *
 **************************/
 
-button.suggested-action,
-.suggested-action.button {
+button.suggested-action:not(:disabled),
+.suggested-action.button:not(:disabled) {
     border: 1px solid shade (@selected_bg_color, 0.35);
 }
 
@@ -587,25 +594,6 @@ button.suggested-action:active:hover,
 /****************************
 * Destructive Action Button *
 ****************************/
-
-button.destructive-action,
-.destructive-action.button {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @error_color,
-                1.2
-            ),
-            @error_color
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (#fff, 0.05);
-    border-color: shade (@error_color, 0.3);
-}
 
 button.destructive-action label,
 button.destructive-action label:hover {
@@ -645,10 +633,15 @@ button.destructive-action:focus,
 **********************/
 
 .button:disabled,
-.suggested-action.button:disabled {
+.text-button:disabled,
+.suggested-action.button:disabled,
+.destructive-action.button:disabled,
+.suggested-action.text-button:disabled,
+.destructive-action.text-button:disabled {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.2);
+    box-shadow: none;
 }
 
 .toolbar .button:disabled {

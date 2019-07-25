@@ -649,6 +649,11 @@ list .h4 {
     padding-left: 6px;
 }
 
+label.primary {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
 /***************
 * Fancy Scales *
 ***************/
