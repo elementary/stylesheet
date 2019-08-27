@@ -20,7 +20,7 @@
 @import url("brand-dark.css");
 
 /* Default color scheme */
-@define-color base_color #3d4248;
+@define-color base_color mix(@BLACK_500, @BLACK_300, 0.5);
 @define-color bg_color shade (@base_color, 0.96);
 @define-color bg_highlight_color shade (@bg_color, 1.4);
 @define-color border_color alpha (@BLACK_900, 0.25);
