@@ -3244,6 +3244,11 @@ row:selected:backdrop,
     -gtk-icon-shadow: none;
 }
 
+row:selected image:disabled,
+row:selected label:disabled {
+    opacity: 0.5;
+}
+
 row:selected:focus,
 .list-row:selected:focus {
     background-color: @colorAccent;
