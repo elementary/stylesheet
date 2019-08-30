@@ -2927,9 +2927,7 @@ button:disabled image,
 button:disabled label,
 button.destructive-action:disabled image,
 button.suggested-action:disabled image {
-    text-shadow: 0 1px @text_shadow_color;
     color: @insensitive_color;
-    -gtk-icon-shadow: 0 1px @text_shadow_color;
 }
 
 button:active:disabled,
@@ -3244,6 +3242,11 @@ row:selected:backdrop,
     color: @text_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
+}
+
+row:selected image:disabled,
+row:selected label:disabled {
+    opacity: 0.5;
 }
 
 row:selected:focus,
@@ -3746,9 +3749,9 @@ popover.osd,
     background-color: @bg_color;
     box-shadow:
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.5),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23);
-    margin: 10px 6px;
+        0 3px 4px alpha (#000, 0.15),
+        0 3px 3px -3px alpha (#000, 0.35);
+    margin: 6px;
     text-shadow: none;
 }
 
