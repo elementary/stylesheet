@@ -341,13 +341,6 @@ menubar.panel,
         0 1px 0 alpha (#fff, 0.25);
 }
 
-.panel popover {
-    box-shadow:
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.5),
-        0 3px 4px alpha (#000, 0.15),
-        0 3px 3px -3px alpha (#000, 0.35);
-}
-
 /**********
  * Photos *
  *********/
