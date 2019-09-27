@@ -57,7 +57,7 @@ GlowTime=0
 #The time (in ms) of each pulse of the hidden-dock urgent glow.
 GlowPulseTime=0
 #The color of the urgent indicator or badge.
-BadgeColor=198;;38;;46;;255
+BadgeColor=237;;83;;83;;255
 #The time (in ms) to move an item to its new position or its addition/removal to/from the dock.
 ItemMoveTime=200
 #Whether background and icons will unhide/hide with different speeds. The top-border of both will leave/hit the screen-edge at the same time.
