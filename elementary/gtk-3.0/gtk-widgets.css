@@ -3883,8 +3883,7 @@ decoration {
     border-radius: 4px 4px 0 0;
     box-shadow:
         0 0 0 1px @decoration_border_color,
-        0 14px 28px rgba(0, 0, 0, 0.35),
-        0 10px 10px rgba(0, 0, 0, 0.22);
+        0 10px 20px 0 alpha (#000, 0.4);
     margin: 12px;
 }
 
@@ -3901,8 +3900,8 @@ window.popup decoration,
 menu window.popup decoration,
 menu .csd.popup decoration {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.2),
-        0 10px 20px alpha (#000, 0.19),
+        0 0 0 1px alpha (#000, 0.1),
+        0 10px 20px 0 alpha (#000, 0.23),
         0 6px 6px alpha (#000, 0.23);
 }
 
@@ -3923,9 +3922,8 @@ tooltip decoration {
 decoration:backdrop {
     box-shadow:
         0 0 0 1px alpha (#000, 0.2),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23),
-        0 14px 28px transparent;
+        0 5px 10px alpha (#000, 0.2),
+        0 10px 20px transparent;
 }
 
 .maximized decoration {
