@@ -5,7 +5,8 @@ project(
 
 variants = [
     'elementary',
-    'elementary-slate'
+    'elementary-bubblegum',
+    'elementary-slate',
 ]
 
 foreach v : variants
