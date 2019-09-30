@@ -208,6 +208,11 @@ separator.vertical {
     margin-right: -1px;
 }
 
+paned > separator.wide {
+  min-width: 4px;
+  min-height: 4px;
+}
+
 paned.vertical > separator {
     background-image:
         linear-gradient(
@@ -232,6 +237,16 @@ paned.horizontal > separator {
         );
     margin-right: -7px;
     min-width: 8px;
+}
+
+paned.horizontal > separator.wide {
+  margin: 0;
+  padding: 0;
+}
+
+paned.vertical > separator.wide {
+  margin: 0;
+  padding: 0;
 }
 
 .titlebar separator:first-child,
