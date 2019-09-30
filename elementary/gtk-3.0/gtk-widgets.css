@@ -209,8 +209,8 @@ separator.vertical {
 }
 
 paned > separator.wide {
-  min-width: 4px;
-  min-height: 4px;
+    min-width: 4px;
+    min-height: 4px;
 }
 
 paned.vertical > separator {
@@ -240,13 +240,13 @@ paned.horizontal > separator {
 }
 
 paned.horizontal > separator.wide {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 paned.vertical > separator.wide {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .titlebar separator:first-child,
