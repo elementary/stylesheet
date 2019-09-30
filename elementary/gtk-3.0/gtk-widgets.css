@@ -247,7 +247,7 @@ paned > separator.wide {
             shade (
                 @bg_color,
                 0.96
-            ) calc(100% -1px),
+            ) calc(100% - 1px),
             @border_color
         );
     box-shadow:
@@ -265,7 +265,7 @@ paned.vertical > separator.wide {
             shade (
                 @bg_color,
                 0.96
-            ) calc(100% -1px),
+            ) calc(100% - 1px),
             @border_color
         );
 }
