@@ -1887,7 +1887,8 @@ scrollbar {
     -GtkScrollbar-has-forward-stepper: false;
 }
 
-scrollbar:hover {
+scrollbar:hover,
+scrollbar.hovering {
     transition: all 200ms ease-in-out;
 }
 
@@ -1902,7 +1903,8 @@ scrollbar.horizontal slider {
     min-height: 3px;
 }
 
-scrollbar.horizontal:hover slider {
+scrollbar.horizontal:hover slider,
+scrollbar.horizontal.hovering slider {
     min-height: 8px;
 }
 
@@ -1911,7 +1913,8 @@ scrollbar.vertical slider {
     min-width: 3px;
 }
 
-scrollbar.vertical:hover slider {
+scrollbar.vertical:hover slider,
+scrollbar.vertical.hovering slider {
     min-width: 8px;
 }
 
@@ -1935,11 +1938,13 @@ scrollbar.overlay-indicator trough {
     background-color: transparent;
 }
 
-scrollbar.overlay-indicator:hover trough {
+scrollbar.overlay-indicator:hover trough,
+scrollbar.overlay-indicator.hovering trough {
     background-color: alpha (#000, 0.1);
 }
 
-scrollbar:hover trough {
+scrollbar:hover trough,
+scrollbar.hovering trough {
     background-color: transparent;
     border-radius: 0;
 }
