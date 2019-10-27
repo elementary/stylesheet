@@ -824,6 +824,52 @@ messagedialog decoration {
         0 14px 28px transparent;
 }
 
+/*************
+* Text Entry *
+*************/
+
+entry,
+spinbutton,
+.entry {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                0.83
+            ),
+            shade (
+                @base_color,
+                0.83
+            )
+        );
+}
+
+toolbar entry,
+toolbar spinbutton,
+.titlebar entry,
+.titlebar spinbutton,
+.titlebar .entry,
+.toolbar .entry {
+    background-image:
+        linear-gradient(
+            to bottom,
+            alpha (
+                #000,
+                0.05
+            ),
+            transparent 3px
+        ),
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                0.83
+            ),
+            @base_color
+        );
+}
+
 /**************
 * Text Styles *
 **************/
