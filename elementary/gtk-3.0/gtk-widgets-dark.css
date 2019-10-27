@@ -51,11 +51,12 @@
 
 entry:focus,
 .entry:focus {
-    border-color: alpha (#000, 0.3);
+    border-color: alpha(@colorAccent, 0.5);
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (#fff, 0.05);
+        inset 0 0 0 1px alpha(@colorAccent, 0.1),
+        inset 0 1px 0 0 alpha(@inset_dark_color, 0.7),
+        inset 0 0 0 1px alpha(@inset_dark_color, 0.3),
+        0 1px 0 0 alpha(#fff, 0.05);
 }
 
 entry selection,
@@ -176,6 +177,22 @@ button:active:disabled,
  * Check, Radio, and Switch *
  ***************************/
 
+check,
+radio {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                1.14
+            ),
+            shade (
+                @base_color,
+                1.12
+            )
+        );
+}
+
 check:checked,
 radio:checked,
 switch:checked {
@@ -274,6 +291,13 @@ switch:checked slider {
         inset 0 0 0 1px alpha (#fff, 0.02),
         inset 0 1px 0 0 alpha (#fff, 0.07),
         inset 0 -1px 0 0 alpha (#fff, 0.01);
+}
+
+menuitem .keycap,
+modelbutton .keycap {
+    background: alpha (#000, 0.15);
+    box-shadow: 0 1px 0 0 alpha (#000, 0.25);
+    color: alpha(@text_color, 0.75);
 }
 
 /***********
@@ -445,6 +469,7 @@ EggFindBar.toolbar,
 .sidebar .view:hover:selected,
 .sidebar.view:selected,
 .sidebar.view:hover:selected,
+.sidebar-row:selected,
 .source-list.view:selected,
 .source-list.view:hover:selected,
 .source-list.view:focus:selected,
@@ -484,6 +509,7 @@ EggFindBar.toolbar,
 .sidebar .view:hover:selected:backdrop,
 .sidebar.view:selected:backdrop,
 .sidebar.view:hover:selected:backdrop,
+.sidebar-row:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
     background-image:
@@ -537,24 +563,12 @@ EggFindBar.toolbar,
     -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
 }
 
-/***************
- * Search bars *
- ***************/
-
-EggFindBar.toolbar,
-.search-bar {
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.01),
-        inset 0 1px 0 0 alpha (#fff, 0.05),
-        inset 0 -1px 0 0 alpha (#fff, 0.03);
-}
-
 /**************************
 * Suggested Action Button *
 **************************/
 
-button.suggested-action,
-.suggested-action.button {
+button.suggested-action:not(:disabled),
+.suggested-action.button:not(:disabled) {
     border: 1px solid shade (@selected_bg_color, 0.35);
 }
 
@@ -568,25 +582,6 @@ button.suggested-action:active:hover,
 /****************************
 * Destructive Action Button *
 ****************************/
-
-button.destructive-action,
-.destructive-action.button {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @error_color,
-                1.2
-            ),
-            @error_color
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (#fff, 0.05);
-    border-color: shade (@error_color, 0.3);
-}
 
 button.destructive-action label,
 button.destructive-action label:hover {
@@ -626,10 +621,15 @@ button.destructive-action:focus,
 **********************/
 
 .button:disabled,
-.suggested-action.button:disabled {
+.text-button:disabled,
+.suggested-action.button:disabled,
+.destructive-action.button:disabled,
+.suggested-action.text-button:disabled,
+.destructive-action.text-button:disabled {
     background-image: none;
     background-color: transparent;
     border-color: alpha (#000, 0.2);
+    box-shadow: none;
 }
 
 .toolbar .button:disabled {
@@ -755,13 +755,18 @@ infobar:not(.info):not(.other) button:focus,
     text-shadow: none;
     background-image: none;
     background-color: transparent;
+    -gtk-icon-shadow: none;
+}
+
+infobar:not(.info):not(.other) button:not(.close),
+infobar:not(.info):not(.other) button:not(.close):focus,
+.dynamic-notebook infobar button {
     border-color: alpha (#000, 0.3);
     box-shadow:
         inset 0 0 0 1px alpha (#fff, 0.05),
         inset 0 1px 0 0 alpha (#fff, 0.45),
         inset 0 -1px 0 0 alpha (#fff, 0.15),
         0 1px 0 1px alpha (#fff, 0.15);
-    -gtk-icon-shadow: none;
 }
 
 infobar:not(.info):not(.other) button:active,
