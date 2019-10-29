@@ -1,8 +1,8 @@
-# The Gtk+ Stylesheet for elementary OS
+# The GTK Stylesheet for elementary OS
 
 [![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=45189256)](https://www.bountysource.com/trackers/45189256-elementary-stylesheet)
 
-An original Gtk.CSS stylesheet designed specifically for [elementary OS](https://elementary.io) and its desktop environment: Pantheon. **Since Gtk.CSS has changed quite a bit, this stylesheet only supports Gtk >= 3.22**
+An original Gtk.CSS stylesheet designed specifically for [elementary OS](https://elementary.io) and its desktop environment: Pantheon. **Since Gtk.CSS has changed quite a bit, this stylesheet only supports GTK >= 3.22**
 
 This stylesheet is licensed openly under the terms of the [GNU General Public License](https://github.com/elementary/stylesheet/blob/master/COPYING). Redistributing, forking, remixing, etc. are encouraged!
 
@@ -23,13 +23,13 @@ Run `meson` to configure the build environment. To install, use `ninja install`.
 Apps may need to be restarted or the system stylesheet will need to be
 changed for your changes to take effect.
 
-You can also test changes live with Gtk Inspector. Make sure you have Gtk
+You can also test changes live with GTK Inspector. Make sure you have GTK
 development libraries installed, then enable the inspector shortcut:
 
     apt install libgtk-3-dev
     gsettings set org.gtk.Settings.Debug enable-inspector-keybinding true
 
-Open an app you wish to test your changes on. Open Gtk Inspector with the
+Open an app you wish to test your changes on. Open GTK Inspector with the
 keyboard shortcut Shift + Ctrl + D, then navigate to the tab "Custom CSS".
 Your changes here will take immediate effect on the focused app.
 
