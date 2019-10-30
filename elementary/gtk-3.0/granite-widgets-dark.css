@@ -26,6 +26,7 @@
 .back-button,
 .titlebar .back-button {
     box-shadow: none;
+    background-image: none;
 }
 
 .back-button,
