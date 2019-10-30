@@ -152,6 +152,39 @@ scale.vertical fill.bottom {
 * Buttons *
 **********/
 
+button,
+.button,
+.titlebar .stack-switcher .button.image-button {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                1.1
+            ),
+            shade (
+                @base_color,
+                0.9
+            )
+        );
+}
+
+.titlebar button,
+.titlebar .button {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                1.1
+            ),
+            shade (
+                @base_color,
+                0.9
+            )
+        );
+}
+
 button:focus,
 button.destructive-action:focus,
 .button:focus,
@@ -171,6 +204,224 @@ button:active:disabled,
     box-shadow:
         inset 0 0 0 1px alpha (#000, 0.05),
         0 1px 0 1px alpha (#fff, 0.3);
+}
+
+/**************************
+* Suggested Action Button *
+**************************/
+
+button.suggested-action,
+.suggested-action.button {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @selected_bg_color,
+                1.1
+            ),
+            shade (
+                @selected_bg_color,
+                0.9
+            )
+        );
+    border-color: shade (@selected_bg_color, 0.8);
+    box-shadow:
+        inset 0 0 0 1px alpha (#fff, 0.05),
+        inset 0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 -1px 0 0 alpha (#fff, 0.1),
+        0 1px 0 0 alpha (#fff, 0.15);
+}
+
+button.suggested-action:not(:disabled),
+.titlebar button.suggested-action:not(:disabled) > label,
+.titlebar button.suggested-action:not(:disabled) > image {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha (#000, 0.3);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
+}
+
+button.suggested-action:active,
+button.suggested-action:active:hover,
+button.suggested-action:checked,
+.suggested-action.button:active,
+.suggested-action.button:active:hover,
+.suggested-action.button:checked {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @selected_bg_color,
+                1.05
+            ),
+            shade (
+                @selected_bg_color,
+                0.95
+            )
+        );
+    border-color: shade (@selected_bg_color, 0.8);
+    box-shadow:
+        inset 0 0 0 1px alpha (#000, 0.05),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+}
+
+.titlebar button.suggested-action:not(:disabled) label:backdrop,
+.titlebar button.suggested-action:not(:disabled) image:backdrop {
+    color: mix (@selected_bg_color, @selected_fg_color, 0.8);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+}
+
+/****************************
+* Destructive Action Button *
+****************************/
+
+button.destructive-action,
+.destructive-action.button {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @error_color,
+                1.3
+            ),
+            @error_color
+        );
+    box-shadow:
+        inset 0 0 0 1px alpha (#fff, 0.05),
+        inset 0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 -1px 0 0 alpha (#fff, 0.1),
+        0 1px 0 0 alpha (#fff, 0.15);
+    border-color: shade (@error_color, 0.9);
+}
+
+button.destructive-action:backdrop:not(:disabled),
+.titlebar button.destructive-action:backdrop:not(:disabled),
+.destructive-action.button:backdrop:not(:disabled),
+.titlebar .destructive-action.button:backdrop:not(:disabled) {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @error_color,
+                1.4
+            ),
+            shade (
+                @error_color,
+                1.3
+            )
+        );
+    box-shadow:
+        inset 0 0 0 1px alpha (#fff, 0.05),
+        inset 0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 -1px 0 0 alpha (#fff, 0.1);
+}
+
+button.destructive-action:not(:disabled) label,
+button.destructive-action:not(:disabled) label:hover,
+button.destructive-action:not(:disabled) image,
+button.destructive-action:not(:disabled) image:hover,
+.titlebar button.destructive-action:not(:disabled) label,
+.titlebar button.destructive-action:not(:disabled) label:hover,
+.titlebar button.destructive-action:not(:disabled) image {
+    color: @selected_fg_color;
+    text-shadow: 0 1px alpha (#000, 0.2);
+    -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
+}
+
+.titlebar button.destructive-action:not(:disabled) label:backdrop,
+.titlebar button.destructive-action:not(:disabled) image:backdrop {
+    color: shade (@error_color, 1.9);
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+}
+
+button.destructive-action:active,
+button.destructive-action:active:hover,
+.titlebar button.destructive-action:active,
+.titlebar button.destructive-action:active:hover,
+.destructive-action.button:active,
+.destructive-action.button:active:hover,
+.titlebar .destructive-action.button:active,
+.titlebar .destructive-action.button:active:hover {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @error_color,
+                1.2
+            ),
+            @error_color
+        );
+    border-color: shade (@error_color, 0.85);
+}
+
+button.destructive-action:focus,
+.titlebar button.destructive-action:focus,
+.destructive-action.button:focus,
+.titlebar .destructive-action.button:focus {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @error_color,
+                1.4
+            ),
+            shade (
+                @error_color,
+                1.1
+            )
+        );
+    box-shadow:
+        inset 0 1px 0 0 alpha (#fff, 0.3),
+        inset 0 -1px 0 0 alpha (#fff, 0.2),
+        0 1px 0 0 alpha (#fff, 0.25),
+        0 1px 2px 0 alpha (@error_color, 0.05);
+    transition: all 100ms ease-out;
+    border-color: @error_color;
+}
+
+button.flat.destructive-action,
+button.flat.destructive-action:backdrop,
+button.flat.destructive-action:hover,
+actionbar button.image-button.destructive-action,
+actionbar button.image-button.destructive-action:backdrop,
+actionbar button.image-button.destructive-action:hover {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+button.flat.destructive-action:focus,
+actionbar button.image-button.destructive-action:focus {
+    background: alpha (@error_color, 0.3);
+    border: none;
+}
+
+button.flat.destructive-action image,
+button.flat.destructive-action label,
+actionbar button.image-button.destructive-action image,
+actionbar button.image-button.destructive-action label {
+    color: @text_color;
+    transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    -gtk-icon-shadow: none;
+}
+
+button.flat.destructive-action:focus image,
+button.flat.destructive-action:focus label,
+button.flat.destructive-action:hover image,
+button.flat.destructive-action:hover label,
+actionbar button.image-button.destructive-action:focus image,
+actionbar button.destructive-action:focus label,
+actionbar button.image-button.destructive-action:hover image,
+actionbar button.destructive-action:hover label {
+    color: @error_color;
+}
+
+button.flat.destructive-action image:backdrop,
+button.flat.destructive-action label:backdrop,
+actionbar button..image-button.destructive-action image:backdrop,
+actionbar button.destructive-action label:backdrop {
+    color: @insensitive_fg_color;
 }
 
 /****************************
