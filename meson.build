@@ -1,7 +1,9 @@
 project(
     'io.elementary.stylesheet',
-    version: '5.2.5'
+    version: '5.3.0'
 )
+
+i18n = import('i18n')
 
 install_subdir(
     'elementary',
@@ -20,3 +22,5 @@ install_data(
     ),
     rename: 'dock.theme',
 )
+
+subdir('data')
