@@ -18,6 +18,7 @@
       <description>
         <ul>
           <li>Drop obsolete panel styles</li>
+          <li>Fix spacing of labels inside of modelbuttons</li>
         </ul>
       </description>
     </release>

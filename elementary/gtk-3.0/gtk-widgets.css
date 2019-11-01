@@ -2076,7 +2076,7 @@ notebook header > tabs > arrow.up {
 
 menuitem image,
 menuitem label,
-modelbutton label,
+modelbutton > *,
 .menuitem image,
 .menuitem label {
     padding: 3px;
