@@ -1,3 +1,24 @@
+elementary-theme (5.3.0) bionic; urgency=medium
+
+  * Release 5.3.0 (#562)
+  * Add Release to Actions
+  * Dark style: Matching Plank theme (#560)
+  * Only apply border to SSD decoration (#557)
+  * Fix scrollbar hover in webkit (#555)
+  * Fix GTK references in README (#554)
+  * Add a style for separator.wide (#551)
+  * Use new BadgeColor property to color Strawberry 300 (#546)
+  * Delete CODE_OF_CONDUCT.md
+  * Delete FUNDING.yml
+  * Remove duplicated search-bar style (#542)
+  * Remove styles for Files' DiskRenderer (#541)
+  * Remove disabled text and icon shadow (#537)
+  * Fix color for disabled flat buttons in list rows (#538)
+  * Use the same popover shadow everywhere (#539)
+  * Explicitly set color inside keycaps (#536)
+
+ -- Michael Rooney <mrooney@ubuntu.com>  Fri, 01 Nov 2019 20:08:29 +0000
+
 elementary-theme (5.2.5) bionic; urgency=medium
 
   * New upstream release.
