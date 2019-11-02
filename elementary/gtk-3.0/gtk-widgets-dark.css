@@ -318,8 +318,10 @@ menuitem accelerator,
     color: alpha (@text_color, 0.5);
 }
 
-menuitem:prelight accelerator,
-*:prelight .accelerator {
+menuitem:hover accelerator,
+*:hover .accelerator,
+menuitem:active accelerator,
+*:active .accelerator {
     color: shade(@base_color, 0.88);
 }
 
