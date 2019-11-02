@@ -2063,6 +2063,12 @@ menuitem:hover accelerator,
     color: @selected_fg_color;
 }
 
+/* Needed for certain menuitems */
+.menuitem:hover > grid.compact-switch-labels > label,
+.menuitem:active > grid.compact-switch-labels > label {
+    color: @bg_color;
+}
+
 arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
     min-height: 16px;
