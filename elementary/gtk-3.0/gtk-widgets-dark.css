@@ -302,7 +302,7 @@ modelbutton:hover,
 .menuitem:hover,
 menuitem:hover cellview {
     box-shadow: none;
-    background-color: alpha(shade(@colorAccent, 1.3), 0.88);
+    background-color: alpha(shade(@colorAccent, 1.4), 0.88);
     color: shade(@base_color, 0.88);
 }
 
@@ -311,6 +311,16 @@ modelbutton .keycap {
     background: alpha (#000, 0.15);
     box-shadow: 0 1px 0 0 alpha (#000, 0.25);
     color: alpha(@text_color, 0.75);
+}
+
+menuitem accelerator,
+.accelerator {
+    color: alpha (@text_color, 0.5);
+}
+
+menuitem:prelight accelerator,
+*:prelight .accelerator {
+    color: shade(@base_color, 0.88);
 }
 
 /***********
