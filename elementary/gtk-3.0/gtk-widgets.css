@@ -3389,6 +3389,11 @@ row:selected:focus image {
     -GtkTreeView-vertical-separator: 6px;
 }
 
+.sidebar .inline-toolbar,
+.source-list .inline-toolbar {
+    -gtk-icon-style: requested;
+}
+
 dialog .sidebar,
 dialog .sidebar list,
 dialog .source-list {
