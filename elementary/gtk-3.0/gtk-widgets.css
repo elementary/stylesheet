@@ -2316,6 +2316,11 @@ checkbutton label:dir(rtl) {
     margin-right: 6px;
 }
 
+switch image {
+    color: transparent;
+    -gtk-icon-shadow: none;
+}
+
 switch slider {
     background-image:
         linear-gradient(
