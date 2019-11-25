@@ -274,40 +274,6 @@ paned statusbar frame {
         0 1px 0 0 alpha (#fff, 0.15);
 }
 
-/*********
- * Panel *
- ********/
-
-.composited-indicator {
-    padding: 0 6px;
-}
-
-.composited-indicator > revealer label,
-.composited-indicator > revealer image,
-.composited-indicator > revealer spinner {
-    color: #fff;
-    font-weight: bold;
-    text-shadow:
-        0 0 2px alpha (#000, 0.3),
-        0 1px 2px alpha (#000, 0.6);
-    transition: all 200ms ease-in-out;
-    -gtk-icon-shadow:
-        0 0 2px alpha (#000, 0.3),
-        0 1px 2px alpha (#000, 0.6);
-}
-
-.panel.color-light .composited-indicator > revealer label,
-.panel.color-light .composited-indicator > revealer image,
-.panel.color-light .composited-indicator > revealer spinner {
-    color: alpha (#000, 0.65);
-    text-shadow:
-        0 0 2px alpha (#fff, 0.3),
-        0 1px 0 alpha (#fff, 0.25);
-    -gtk-icon-shadow:
-        0 0 2px alpha (#fff, 0.3),
-        0 1px 0 alpha (#fff, 0.25);
-}
-
 /**********
  * Photos *
  *********/
