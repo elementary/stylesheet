@@ -2316,6 +2316,11 @@ checkbutton label:dir(rtl) {
     margin-right: 6px;
 }
 
+switch image {
+    color: transparent;
+    -gtk-icon-shadow: none;
+}
+
 switch slider {
     background-image:
         linear-gradient(
@@ -3387,6 +3392,11 @@ row:selected:focus image {
     -gtk-icon-style: regular;
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
+}
+
+.sidebar .inline-toolbar,
+.source-list .inline-toolbar {
+    -gtk-icon-style: requested;
 }
 
 dialog .sidebar,
