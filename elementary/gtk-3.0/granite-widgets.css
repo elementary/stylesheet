@@ -586,11 +586,13 @@ window.rounded decoration {
 
 .h1 {
     font-size: 24pt;
+    letter-spacing: -0.05em;
 }
 
 .h2 {
     font-weight: 300;
     font-size: 18pt;
+    letter-spacing: -0.05em;
 }
 
 .h3 {
