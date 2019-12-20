@@ -14,8 +14,13 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="5.3.1" date="2019-12-13" urgency="medium">
+    <release version="5.4.0" date="2019-12-20" urgency="medium">
       <description>
+        <p>New features:</p>
+        <ul>
+          <li>New `.small-label` class for consistent sizing without using Pango</li>
+        </ul>
+        <p>Other changes:</p>
         <ul>
           <li>Drop obsolete panel styles</li>
           <li>Fix spacing of labels inside of modelbuttons</li>
