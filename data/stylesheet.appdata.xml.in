@@ -24,6 +24,7 @@
         <ul>
           <li>Drop obsolete panel styles</li>
           <li>Fix spacing of labels inside of modelbuttons</li>
+          <li>Allow symbolic icons in inline toolbars in sidebars</li>
         </ul>
       </description>
     </release>
