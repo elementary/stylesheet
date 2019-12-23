@@ -1,3 +1,20 @@
+elementary-theme (5.4.0) bionic; urgency=medium
+
+  * Release 5.4.0 (#567)
+  * Update stylesheet.appdata.xml.in
+  * Add .small-label style class (#570)
+  * Fix keycap padding in modelbutton
+  * Switch: Make symbols transparent (#565)
+  * apps.css: Remove panel styles (#526)
+  * Remove old Greeter CSS (#566)
+  * Fix sidebar inline-toolbar icon style (#563)
+  * ModelButton: only pad top level children (#529)
+  * Remove most panel css (#528)
+  * Delete AUTHORS
+  * Delete CONTRIBUTORS
+
+ -- Michael Rooney <mrooney@ubuntu.com>  Mon, 23 Dec 2019 21:09:18 +0000
+
 elementary-theme (5.3.0) bionic; urgency=medium
 
   * Release 5.3.0 (#562)
