@@ -333,8 +333,8 @@ spinbutton,
 }
 
 selection {
-    background-color: @colorAccent;
-    color: @selected_fg_color;
+    background-color: alpha (@accent_color_100, 0.3);
+    color: @accent_color_900;
     text-shadow: none;
 }
 
