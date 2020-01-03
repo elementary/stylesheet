@@ -59,9 +59,10 @@ entry:focus,
         0 1px 0 0 alpha(#fff, 0.05);
 }
 
-entry selection,
-textview selection {
-    color: shade (@text_color, 1.23);
+selection {
+    background-color: alpha (@accent_color_500, 0.3);
+    color: mix (@text_color, @accent_color_100, 0.75);
+    text-shadow: none;
 }
 
 .titlebar entry:disabled,
