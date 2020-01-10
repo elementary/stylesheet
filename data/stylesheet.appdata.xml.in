@@ -17,6 +17,7 @@
     <release version="5.4.1" date="2020-01-02" urgency="medium">
       <ul>
         <li>Improve contrast in text selections</li>
+        <li>Give Radio Buttons with images a border and background</li>
       </ul>
     </release>
     <release version="5.4.0" date="2019-12-23" urgency="medium">
