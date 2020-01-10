@@ -227,6 +227,11 @@ switch:checked slider {
     border-color: shade (@bg_color, 0.65);
 }
 
+radiobutton.image-button:checked:not(:backdrop) {
+    background-color: alpha (@colorAccent, 0.3);
+    border-color: alpha (@colorAccent, 0.8);
+}
+
 /***************************
 * Secondary Toolbar Button *
 ***************************/
