@@ -1,3 +1,11 @@
+elementary-theme (5.4.1) bionic; urgency=medium
+
+  * Release 5.4.1 (#578)
+  * Add border and background to selected image radios (#576)
+  * Improve contrast in text selections (#572)
+
+ -- Michael Rooney <mrooney@ubuntu.com>  Tue, 21 Jan 2020 18:45:11 +0000
+
 elementary-theme (5.4.0) bionic; urgency=medium
 
   * Release 5.4.0 (#567)
