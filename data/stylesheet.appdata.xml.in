@@ -14,7 +14,7 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="5.4.1" date="2020-01-02" urgency="medium">
+    <release version="5.4.1" date="2020-01-21" urgency="medium">
       <ul>
         <li>Improve contrast in text selections</li>
         <li>Add a border and background to Radio Buttons with images</li>
