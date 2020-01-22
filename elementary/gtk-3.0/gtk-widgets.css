@@ -216,12 +216,11 @@ paned.vertical > separator {
     background-image:
         linear-gradient(
             to bottom,
-            @menu_separator 1px,
+            @menu_separator,
             @menu_separator_shadow 1px,
             @menu_separator_shadow 2px,
             transparent 2px
         );
-    margin-bottom: -7px;
     min-height: 8px;
 }
 
@@ -229,12 +228,11 @@ paned.horizontal > separator {
     background-image:
         linear-gradient(
             to right,
-            @menu_separator 1px,
+            @menu_separator,
             @menu_separator_shadow 1px,
             @menu_separator_shadow 2px,
             transparent 2px
         );
-    margin-right: -7px;
     min-width: 8px;
 }
 
