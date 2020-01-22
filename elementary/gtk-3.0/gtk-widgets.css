@@ -2604,7 +2604,7 @@ actionbar button.image-button {
 
 actionbar .title {
     font-size: 11pt;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0 12px;
 }
 
@@ -3034,7 +3034,7 @@ button.flat:disabled,
 
 GtkAssistant .sidebar .highlight {
     color: @fg_color;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 GtkAssistant .sidebar {
@@ -3214,7 +3214,7 @@ column-header .button {
             ),
             @base_color
         );
-    font-weight: bold;
+    font-weight: 600;
     padding: 4px 2px;
 }
 
@@ -4024,7 +4024,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 
 .titlebar .title {
     font-size: 9pt;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .titlebar .subtitle {
@@ -4220,7 +4220,7 @@ dialog toolbar {
 
 .emoji-picker box > label {
     color: alpha (@text_color, 0.7);
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 7px;
     margin-right: 7px;
 }

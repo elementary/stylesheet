@@ -223,7 +223,7 @@
     background-color: alpha(@text_color, 0.1);
     box-shadow: none;
     color: alpha(@text_color, 0.7);
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
@@ -614,7 +614,7 @@ list .h4 {
 }
 
 label.primary {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.2em;
 }
 
