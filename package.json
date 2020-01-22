@@ -1,7 +1,7 @@
 {
   "name": "@elementaryos/stylesheet",
-  "version": "5.2.5",
-  "description": "The Gtk+ Stylesheet for elementary OS",
+  "version": "5.4.1",
+  "description": "The GTK Stylesheet for elementary OS",
   "main": "index.theme",
   "scripts": {
     "test": "stylelint **/*.css"
