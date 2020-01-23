@@ -4209,6 +4209,10 @@ dialog toolbar {
     background-color: @bg_color;
 }
 
+.dialog-action-area button > * {
+    min-height: calc(1em + 7px);
+}
+
 /***************
 * Emoji Picker *
 ***************/
