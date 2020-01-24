@@ -16,6 +16,13 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+/* Accent Shades */
+@define-color accent_color_100 @BLUEBERRY_100;
+@define-color accent_color_300 @BLUEBERRY_300;
+@define-color accent_color_500 @BLUEBERRY_500;
+@define-color accent_color_700 @BLUEBERRY_700;
+@define-color accent_color_900 @BLUEBERRY_900;
+
 /* Brand Colors */
 @define-color colorPrimary @titlebar_color;
 @define-color colorAccent @selected_bg_color;
