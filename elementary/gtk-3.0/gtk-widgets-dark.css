@@ -325,8 +325,8 @@ modelbutton:hover,
 .menuitem:hover,
 menuitem:hover cellview {
     box-shadow: none;
-    background-color: alpha(shade(@colorAccent, 1.4), 0.88);
-    color: shade(@base_color, 0.88);
+    background-color: alpha(@colorAccent, 0.15);
+    color: shade(@colorAccent, 0.55);
 }
 
 menuitem .keycap,
