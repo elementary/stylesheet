@@ -190,7 +190,7 @@ menu separator {
     margin: 5px 0;
     border: none;
     box-shadow: none;
-    min-height: 6px
+    min-height: 6px;
 }
 
 separator.vertical {
