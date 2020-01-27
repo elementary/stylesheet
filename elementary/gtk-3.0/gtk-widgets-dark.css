@@ -290,6 +290,23 @@ radiobutton.image-button:checked:not(:backdrop) {
 * Menus *
 ********/
 
+menu {
+    background: shade(@BLACK_600, 0.8);
+    box-shadow: none;
+    color: @fg_color;
+    border-radius: 6px;
+}
+
+menu separator {
+    border: none;
+    box-shadow: none;
+    min-height: 6px;
+}
+
+menuitem:hover {
+    background: alpha (#fff, 0.1);
+}
+
 .content-view .menu,
 .menu,
 .popup {
@@ -314,9 +331,9 @@ menuitem:hover cellview {
 
 menuitem .keycap,
 modelbutton .keycap {
-    background: alpha (#000, 0.15);
-    box-shadow: 0 1px 0 0 alpha (#000, 0.25);
-    color: alpha(@text_color, 0.75);
+    background: alpha (#fff, 0.4);
+    color: @BLACK_900;
+    box-shadow: 0 1px 1px alpha (@BLACK_900, 0.5);
 }
 
 menuitem accelerator,
@@ -829,12 +846,16 @@ infobar button:hover:disabled {
     box-shadow: none;
 }
 
+window.popup {
+    border-radius: 7px;
+}
+
 window.popup decoration,
 .csd.popup decoration {
+    border-radius: 7px;
     box-shadow:
-        0 0 0 1px alpha (#000, 0.75),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23);
+        0 3px 8px alpha (#000, 0.2),
+        0 1px 2px alpha (#000, 0.3);
 }
 
 menu window.popup decoration,
