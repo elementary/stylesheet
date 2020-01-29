@@ -7,7 +7,7 @@
     "test": "stylelint **/*.css"
   },
   "devDependencies": {
-    "stylelint": "^8.2.0"
+    "stylelint": "^13.0.0"
   },
   "repository": {
     "type": "git",

@@ -141,12 +141,12 @@ scale.horizontal fill.bottom {
 
 scale.vertical highlight.top,
 scale.vertical fill.top {
-    margin: -5px 1px 1px 1px;
+    margin: -5px 1px 1px;
 }
 
 scale.vertical highlight.bottom,
 scale.vertical fill.bottom {
-    margin: 1px 1px -5px 1px;
+    margin: 1px 1px -5px;
 }
 
 /**********
