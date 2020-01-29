@@ -962,13 +962,13 @@ scale.horizontal fill.bottom {
 scale.vertical highlight.top,
 scale.vertical fill.top {
     border-radius: 12px 12px 0 0;
-    margin: -6px 0 0 0;
+    margin: -6px 0 0;
 }
 
 scale.vertical highlight.bottom,
 scale.vertical fill.bottom {
     border-radius: 0 0 12px 12px;
-    margin: 0 0 -6px 0;
+    margin: 0 0 -6px;
 }
 
 /*********
