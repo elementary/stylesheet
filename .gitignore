@@ -2,3 +2,10 @@
 *~
 /node_modules/
 build/
+.DS_Store
+.storybook
+storybook-static
+
+# ignore generated css files
+elementary/**/*.css
+elementary/**/*.map

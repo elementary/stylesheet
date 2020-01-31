@@ -4,9 +4,16 @@
   "description": "The GTK Stylesheet for elementary OS",
   "main": "index.theme",
   "scripts": {
-    "test": "stylelint **/*.css"
+    "test": "stylelint **/*.css",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "sass -s compressed src/gtk.scss:elementary/gtk-3.0/gtk.css"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/html": "^5.3.9",
+    "babel-loader": "^8.0.6",
+    "sass": "^1.25.0",
     "stylelint": "^13.0.0"
   },
   "repository": {
@@ -17,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/elementary/stylesheet/issues"
   },
-  "homepage": "https://github.com/elementary/stylesheet#readme"
+  "homepage": "https://github.com/elementary/stylesheet#readme",
+  "dependencies": {}
 }

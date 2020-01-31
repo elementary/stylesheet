@@ -18,19 +18,19 @@
 
 * {
     background-clip: padding-box;
-    -GtkTextView-error-underline-color: @error_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkHTML-link-color: @link_color;
+    -GtkTextView-error-underline-color: $error_color;
+    -GtkIMHtml-hyperlink-color: $link_color;
+    -GtkHTML-link-color: $link_color;
 
-    /* -gtk-icon-palette: needs-attention @attention_color, success @success_color, warning @warning_color, error @error_color; FIXME: Uncomment for 3.19 */
+    /* -gtk-icon-palette: needs-attention $attention_color, success $success_color, warning $warning_color, error $error_color; FIXME: Uncomment for 3.19 */
 }
 
 *:link {
-    color: @link_color;
+    color: $link_color;
 }
 
 *:visited {
-    color: @GRAPE_500;
+    color: $GRAPE_500;
 }
 
 /***************
@@ -38,23 +38,23 @@
  **************/
 
 .background {
-    color: @text_color;
-    background-color: @bg_color;
+    color: $text_color;
+    background-color: $bg_color;
 }
 
 *:selected {
-    background-color: shade (@base_color, 0.8);
-    color: @text_color;
+    background-color: darken($base_color, 20%);
+    color: $text_color;
 }
 
 *:selected:focus {
-    background-color: alpha (@colorAccent, 0.9);
-    color: @selected_fg_color;
+    background-color: rgba($colorAccent, 0.9);
+    color: $selected_fg_color;
     text-shadow: none;
 }
 
 *:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
     -gtk-icon-effect: dim;
 }
 
@@ -63,8 +63,8 @@
 }
 
 .gtkstyle-fallback {
-    background-color: @bg_color;
-    color: @fg_color;
+    background-color: $bg_color;
+    color: $fg_color;
 }
 
 image,
@@ -85,16 +85,14 @@ grid:disabled {
 tooltip,
 tooltip.background,
 .overlay-bar {
-    background-color: alpha (#222, 0.9);
+    background-color: rgba(#222, 0.9);
     border-radius: 3px;
     border-width: 0;
-    box-shadow:
-        0 1px 3px alpha (#000, 0.12),
-        0 1px 2px alpha (#000, 0.24);
+    box-shadow: 0 1px 3px rgba(#000, 0.12), 0 1px 2px rgba(#000, 0.24);
     color: #fff;
     padding: 3px 6px;
     margin: 6px;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
+    text-shadow: 0 1px 2px rgba(#000, 0.6);
 }
 
 .overlay-bar {
@@ -104,7 +102,7 @@ tooltip.background,
 tooltip label,
 .overlay-bar label {
     color: #fff;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
+    text-shadow: 0 1px 2px rgba(#000, 0.6);
 }
 
 /*****************
@@ -129,15 +127,15 @@ spinner:checked:disabled {
 rubberband,
 .view.rubberband,
 .rubberband {
-    background-color: alpha (@colorAccent, 0.35);
-    border: 1px solid @colorAccent;
+    background-color: rgba($colorAccent, 0.35);
+    border: 1px solid $colorAccent;
     transition: all 600ms ease-out;
 }
 
 .dnd {
-    background-color: alpha (@colorAccent, 0.4);
+    background-color: rgba($colorAccent, 0.4);
     background-image: none;
-    border: 1px solid @colorAccent;
+    border: 1px solid $colorAccent;
     border-radius: 3px;
     margin: 3px;
 }
@@ -147,36 +145,28 @@ rubberband,
 }
 
 .keycap {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (
-                @bg_color,
-                0.97
-            ),
-            @bg_color
-        );
-    border: 1px solid @border_color;
+    background-image: linear-gradient(to bottom, darken($bg_color, 3%), $bg_color);
+    border: 1px solid $border_color;
     border-radius: 2.5px;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -2px 0 0 alpha (@bg_highlight_color, 0.15),
-        inset 0 -1px 0 0 shade (@bg_color, 0.85),
-        0 1px 2px alpha (#000, 0.05);
-    color: @text_color;
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -2px 0 0 rgba($bg_highlight_color, 0.15),
+        inset 0 -1px 0 0 darken($bg_color, 15%),
+        0 1px 2px rgba(#000, 0.05);
+    color: $text_color;
     font-size: 85%;
     min-width: 12px;
     padding: 3px 6px 4px;
-    text-shadow: 0 1px @text_shadow_color;
+    text-shadow: 0 1px $text_shadow_color;
 }
 
 menuitem .keycap,
 modelbutton .keycap {
-    background: alpha (#000, 0.08);
+    background: rgba(#000, 0.08);
     border: none;
-    box-shadow: 0 1px 0 0 alpha (#000, 0.15);
-    color: alpha(@text_color, 0.78);
+    box-shadow: 0 1px 0 0 rgba(#000, 0.15);
+    color: rgba($text_color, 0.78);
     margin: 0 0 1px;
     padding: 1px 6px 0;
     text-shadow: none;
@@ -197,8 +187,8 @@ modelbutton:disabled .keycap {
 
 menu separator,
 separator.horizontal {
-    border-top: 1px solid @menu_separator;
-    border-bottom: 1px solid @menu_separator_shadow;
+    border-top: 1px solid $menu_separator;
+    border-bottom: 1px solid $menu_separator_shadow;
     margin-bottom: -1px;
 }
 
@@ -207,8 +197,8 @@ menu separator {
 }
 
 separator.vertical {
-    border-left: 1px solid @menu_separator;
-    border-right: 1px solid @menu_separator_shadow;
+    border-left: 1px solid $menu_separator;
+    border-right: 1px solid $menu_separator_shadow;
     margin-right: -1px;
 }
 
@@ -216,9 +206,9 @@ paned.vertical > separator {
     background-image:
         linear-gradient(
             to bottom,
-            @menu_separator 1px,
-            @menu_separator_shadow 1px,
-            @menu_separator_shadow 2px,
+            $menu_separator 1px,
+            $menu_separator_shadow 1px,
+            $menu_separator_shadow 2px,
             transparent 2px
         );
     margin-bottom: -7px;
@@ -229,9 +219,9 @@ paned.horizontal > separator {
     background-image:
         linear-gradient(
             to right,
-            @menu_separator 1px,
-            @menu_separator_shadow 1px,
-            @menu_separator_shadow 2px,
+            $menu_separator 1px,
+            $menu_separator_shadow 1px,
+            $menu_separator_shadow 2px,
             transparent 2px
         );
     margin-right: -7px;
@@ -246,31 +236,25 @@ paned > separator.wide {
     background-image:
         linear-gradient(
             to right,
-            @border_color,
-            @bg_color 1px,
-            shade (
-                @bg_color,
-                0.96
-            ) calc(100% - 1px),
-            @border_color
+            $border_color,
+            $bg_color 1px,
+            darken($bg_color, 4%) calc(100% - 1px),
+            $border_color
         );
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15);
 }
 
 paned.vertical > separator.wide {
     background-image:
         linear-gradient(
             to bottom,
-            @border_color,
-            @bg_color 1px,
-            shade (
-                @bg_color,
-                0.96
-            ) calc(100% - 1px),
-            @border_color
+            $border_color,
+            $bg_color 1px,
+            darken($bg_color, 4%) calc(100% - 1px),
+            $border_color
         );
 }
 
@@ -296,7 +280,6 @@ toolbar paned separator,
 .toolbar .pane-separator,
 .titlebar .pane-separator {
     background-color: transparent;
-    background-image: url("assets/pane-handle.svg");
     box-shadow: none;
 }
 
@@ -310,31 +293,25 @@ spinbutton,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
-                0.93
-            ),
-            shade (
-                @base_color,
-                0.97
-            )
+            darken($base_color, 7%),
+            darken($base_color, 3%)
         );
-    border: 1px solid @border_color;
+    border: 1px solid $border_color;
     border-radius: 2.5px;
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-    color: @text_color;
-    text-shadow: 0 1px @text_shadow_color;
+        inset 0 1px 0 0 rgba($inset_dark_color, 0.7),
+        inset 0 0 0 1px rgba($inset_dark_color, 0.3),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
+    color: $text_color;
+    text-shadow: 0 1px $text_shadow_color;
     padding: 3px;
     transition: all 200ms ease-out;
-    -gtk-icon-shadow: 0 1px @text_shadow_color;
+    -gtk-icon-shadow: 0 1px $text_shadow_color;
 }
 
 selection {
-    background-color: alpha (@accent_color_100, 0.3);
-    color: @accent_color_900;
+    background-color: rgba($accent_color_100, 0.3);
+    color: $accent_color_900;
     text-shadow: none;
 }
 
@@ -347,24 +324,18 @@ toolbar spinbutton,
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
-                #000,
-                0.05
-            ),
+            rgba(#000, 0.05),
             transparent 3px
         ),
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
-                0.93
-            ),
-            @base_color
+            darken($base_color, 7%),
+            $base_color
         );
-    border-color: alpha (#000, 0.24);
+    border-color: rgba(#000, 0.24);
     box-shadow:
-        inset 0 0 0 1px @inset_dark_color,
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px $inset_dark_color,
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 toolbar entry:backdrop,
@@ -376,38 +347,29 @@ toolbar spinbutton:backdrop,
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
-                #000,
-                0.02
-            ),
+            rgba(#000, 0.02),
             transparent 5px
         ),
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
-                0.94
-            ),
-            shade (
-                @base_color,
-                0.96
-            )
+            darken($base_color, 6%),
+            darken($base_color, 4%)
         );
-    border-color: alpha (#000, 0.18);
-    color: @insensitive_fg_color;
+    border-color: rgba(#000, 0.18);
+    color: $insensitive_fg_color;
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 1px 0 0 rgba($inset_dark_color, 0.7),
+        inset 0 0 0 1px rgba($inset_dark_color, 0.3),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 entry:focus,
 spinbutton:focus,
 .entry:focus {
-    border-color: alpha (@colorAccent, 0.8);
+    border-color: rgba($colorAccent, 0.8);
     box-shadow:
-        inset 0 0 0 1px alpha (@colorAccent, 0.23),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba($colorAccent, 0.23),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
     transition: all 200ms ease-in;
 }
 
@@ -417,10 +379,10 @@ spinbutton.error,
 spinbutton.error:focus,
 .entry.error,
 .entry.error:focus {
-    border-color: alpha (@error_color, 0.8);
+    border-color: rgba($error_color, 0.8);
     box-shadow:
-        inset 0 0 0 1px alpha (@error_color, 0.23),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba($error_color, 0.23),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
     transition: all 200ms ease-in;
 }
 
@@ -428,12 +390,12 @@ entry:disabled,
 spinbutton:disabled,
 .entry:disabled {
     background-image: none;
-    border-color: alpha(@border_color, 0.75);
+    border-color: rgba($border_color, 0.75);
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.5),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.2),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
-    color: @insensitive_color;
+        inset 0 1px 0 0 rgba($inset_dark_color, 0.5),
+        inset 0 0 0 1px rgba($inset_dark_color, 0.2),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
+    color: $insensitive_color;
 }
 
 toolbar entry:disabled,
@@ -443,8 +405,8 @@ toolbar spinbutton:disabled,
 .titlebar .entry:disabled,
 .toolbar .entry:disabled {
     background: transparent;
-    border-color: alpha (#000, 0.2);
-    box-shadow: inset 0  0 0 1px alpha (@inset_dark_color, 0.25), 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    border-color: rgba(#000, 0.2);
+    box-shadow: inset 0  0 0 1px rgba($inset_dark_color, 0.25), 0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 toolbar entry:disabled:backdrop,
@@ -454,18 +416,18 @@ toolbar spinbutton:disabled:backdrop,
 .titlebar .entry:disabled:backdrop,
 .toolbar .entry:disabled:backdrop {
     background-image: none;
-    border-color: alpha (#000, 0.2);
-    box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    border-color: rgba(#000, 0.2);
+    box-shadow: 0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 entry image {
-    color: @internal_element_color;
+    color: $internal_element_color;
     transition: all 200ms ease-in-out;
-    -gtk-icon-palette: needs-attention @attention_color, success @LIME_500, warning shade (@BANANA_700, 1.25), error @error_color;
+    -gtk-icon-palette: needs-attention $attention_color, success $LIME_500, warning lighten($BANANA_700, 25%), error $error_color;
 }
 
 entry image:backdrop {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 entry image.left {
@@ -474,14 +436,14 @@ entry image.left {
 
 entry image.right:dir(ltr):hover,
 entry image.left:dir(rtl):hover {
-    color: @text_color;
+    color: $text_color;
 }
 
 entry.flat,
 .entry.flat {
     border-width: 0 0 1px;
     border-radius: 0;
-    background-color: @base_color;
+    background-color: $base_color;
     background-image: none;
     box-shadow: none;
 }
@@ -492,8 +454,8 @@ entry.flat,
 
 textview,
 textview text {
-    color: @text_color;
-    background-color: @base_color;
+    color: $text_color;
+    background-color: $base_color;
 }
 
 /*******************
@@ -513,20 +475,14 @@ treeview .progressbar {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @colorAccent,
-                1.3
-            ),
-            shade (
-                @colorAccent,
-                1.08
-            )
+            lighten($colorAccent, 30%),
+            lighten($colorAccent, 8%)
         );
-    border: 1px solid shade (@colorAccent, 0.9);
+    border: 1px solid darken($colorAccent, 10%);
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.35),
-        inset 0 -1px 0 0 alpha (#fff, 0.15);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.35),
+        inset 0 -1px 0 0 rgba(#fff, 0.15);
     margin-left: -1px;
     margin-right: -1px;
 }
@@ -535,14 +491,8 @@ progressbar.vertical progress {
     background-image:
         linear-gradient(
             to right,
-            shade (
-                @colorAccent,
-                1.25
-            ),
-            shade (
-                @colorAccent,
-                1.18
-            )
+            lighten($colorAccent, 25%),
+            lighten($colorAccent, 18%)
         );
     margin: -1px 0;
 }
@@ -550,56 +500,50 @@ progressbar.vertical progress {
 progressbar progress:backdrop,
 treeview .progressbar:backdrop {
     background-image: none;
-    background-color: shade (@bg_color, 0.85);
-    border-color: shade (@bg_color, 0.68);
+    background-color: darken($bg_color, 15%);
+    border-color: darken($bg_color, 32%);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.35),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.35),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15);
 }
 
 progressbar trough,
 treeview .trough {
     padding: 0;
-    border: 1px solid alpha (#000, 0.25);
+    border: 1px solid rgba(#000, 0.25);
     background-image:
         linear-gradient(
             to bottom,
-            @bg_color,
-            shade (
-                @bg_color,
-                0.9
-            )
+            $bg_color,
+            darken($bg_color, 10%)
         );
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
-        inset 0 1px 0 0 @bg_highlight_color,
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.5),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.5);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
+        inset 0 1px 0 0 $bg_highlight_color,
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.5),
+        0 1px 0 0 rgba($bg_highlight_color, 0.5);
 }
 
 progressbar.vertical trough {
     background-image:
         linear-gradient(
             to right,
-            @bg_color,
-            shade (
-                @bg_color,
-                0.93
-            )
+            $bg_color,
+            darken($bg_color, 7%)
         );
 }
 
 progressbar trough:backdrop,
 treeview .trough:backdrop {
     background-image: none;
-    background-color: @bg_color;
-    border-color: shade (@bg_color, 0.75);
+    background-color: $bg_color;
+    border-color: darken($bg_color, 25%);
 }
 
 treeview .progressbar:selected:focus,
 treeview .trough:selected:focus {
-    border: 1px solid shade (@colorAccent, 0.8);
+    border: 1px solid darken($colorAccent, 20%);
 }
 
 entry progress,
@@ -607,15 +551,9 @@ spinbutton progress {
     background-image:
         linear-gradient(
             to top,
-            @colorAccent,
-            alpha (
-                @colorAccent,
-                0.5
-            ) 1px,
-            alpha (
-                @base_color,
-                0
-            ) 7px
+            $colorAccent,
+            rgba($colorAccent, 0.5) 1px,
+            rgba($base_color, 0) 7px
         );
     border-radius: 2.5px;
     margin: -4px;
@@ -644,7 +582,7 @@ progressbar.osd trough {
 }
 
 progressbar.osd progress {
-    background: @colorAccent;
+    background: $colorAccent;
     border-radius: 99px;
 }
 
@@ -661,23 +599,20 @@ progressbar.osd trough {
 ************/
 
 levelbar block {
-    background-color: @selected_bg_color;
+    background-color: $selected_bg_color;
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @selected_bg_color,
-                1.3
-            ),
-            @selected_bg_color
+            lighten($selected_bg_color, 30%),
+            $selected_bg_color
         );
-    border: 1px solid shade (@selected_bg_color, 0.9);
+    border: 1px solid darken($selected_bg_color, 10%);
     border-radius: 3px;
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.35),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.35),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 1px 0 0 rgba($bg_highlight_color, 0.15);
     min-height: 6px;
     min-width: 24px;
     transition: all 100ms ease-in;
@@ -692,95 +627,80 @@ levelbar block.filled.low {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @error_color,
-                1.3
-            ),
-            @error_color
+            lighten($error_color, 30%),
+            $error_color
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
-    border-color: shade (@error_color, 0.9);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.25),
+        inset 0 -1px 0 0 rgba(#fff, 0.1),
+        0 1px 0 0 rgba($bg_highlight_color, 0.15);
+    border-color: darken($error_color, 10%);
 }
 
 levelbar block.filled.middle {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @warning_color,
-                1.3
-            ),
-            @warning_color
+            lighten($warning_color, 30%),
+            $warning_color
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
-    border-color: shade (@warning_color, 0.9);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 1px 0 0 rgba($bg_highlight_color, 0.15);
+    border-color: darken($warning_color, 10%);
 }
 
 levelbar block.filled.high {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @LIME_300,
-                1.1
-            ),
-            @LIME_300
+            lighten($LIME_300, 10%),
+            $LIME_300
         );
-    border-color: shade (@LIME_300, 0.8);
+    border-color: darken($LIME_300, 20%);
 }
 
 levelbar block.empty {
-    background-color: shade (@bg_color, 0.95);
+    background-color: darken($bg_color, 5%);
     background-image:
         linear-gradient(
             to bottom,
-            @bg_color,
-            shade (
-                @bg_color,
-                0.9
-            )
+            $bg_color,
+            darken($bg_color, 10%)
         );
-    border-color: alpha (#000, 0.25);
+    border-color: rgba(#000, 0.25);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.9),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 levelbar.vertical block.empty {
     background-image:
         linear-gradient(
             to bottom,
-            @bg_color,
-            shade (
-                @bg_color,
-                0.95
-            )
+            $bg_color,
+            darken($bg_color, 5%)
         );
 }
 
 levelbar block:backdrop {
     background-image: none;
-    background-color: shade (@bg_color, 0.85);
-    border-color: shade (@bg_color, 0.68);
+    background-color: darken($bg_color, 15%);
+    border-color: darken($bg_color, 32%);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.35),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.35),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15),
+        0 1px 0 0 rgba($bg_highlight_color, 0.15);
 }
 
 levelbar block.empty:backdrop {
-    background-color: shade (@bg_color, 0.95);
-    border-color: shade (@bg_color, 0.75);
+    background-color: darken($bg_color, 5%);
+    border-color: darken($bg_color, 25%);
 }
 
 levelbar.discrete.horizontal block {
@@ -812,22 +732,16 @@ scale slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @SILVER_100,
-                1.05
-            ),
-            shade (
-                @SILVER_100,
-                0.95
-            )
+            shade($SILVER_100, 1.05),
+            shade($SILVER_100, 0.95)
         );
     border-radius: 12px;
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 0 0 1px alpha (#000, 0.25),
-        0 1px 1px 1px alpha (#000, 0.1);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 0 0 1px rgba(#000, 0.25),
+        0 1px 1px 1px rgba(#000, 0.1);
     margin: -7px 0;
     min-height: 14px;
     min-width: 14px;
@@ -837,47 +751,47 @@ scale slider:focus {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @SILVER_100,
+            shade(
+                $SILVER_100,
                 1.05
             ),
-            shade (
+            shade(
                 mix (
-                    @SILVER_100,
-                    @colorAccent,
+                    $SILVER_100,
+                    $colorAccent,
                     0.1
                 ),
                 0.95
             )
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 0 0 1px alpha (shade (@colorAccent, 0.5), 0.25),
-        0 1px 1px 1px alpha (@colorAccent, 0.35),
-        0 1px 2px 1px alpha (@colorAccent, 0.16);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 0 0 1px rgba(darken($colorAccent, 50%), 0.25),
+        0 1px 1px 1px rgba($colorAccent, 0.35),
+        0 1px 2px 1px rgba($colorAccent, 0.16);
 }
 
 scale slider:backdrop {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @SILVER_100,
+            shade(
+                $SILVER_100,
                 1.03
             ),
-            shade (
-                @SILVER_100,
+            shade(
+                $SILVER_100,
                 0.97
             )
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.1),
-        inset 0 1px 0 0 alpha (#fff, 0.9),
-        inset 0 -1px 0 0 alpha (#fff, 0.3),
-        0 0 0 1px alpha (#000, 0.2),
-        0 1px 1px 1px alpha (#000, 0.08);
+        inset 0 0 0 1px rgba(#fff, 0.1),
+        inset 0 1px 0 0 rgba(#fff, 0.9),
+        inset 0 -1px 0 0 rgba(#fff, 0.3),
+        0 0 0 1px rgba(#000, 0.2),
+        0 1px 1px 1px rgba(#000, 0.08);
 }
 
 scale slider:disabled {
@@ -889,11 +803,11 @@ scale slider:disabled {
 
 scale trough {
     border-radius: 12px;
-    background-color: alpha (#000, 0.05);
+    background-color: rgba(#000, 0.05);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.3),
-        inset 0 0 0 2px alpha (#000, 0.03),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba(#000, 0.3),
+        inset 0 0 0 2px rgba(#000, 0.03),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
     margin: 7px 0;
     min-height: 5px;
     min-width: 5px;
@@ -914,7 +828,7 @@ scale.vertical trough {
 }
 
 scale mark indicator {
-    color: mix (@bg_color, @text_color, 0.3);
+    color: mix ($bg_color, $text_color, 0.3);
 }
 
 scale.horizontal mark indicator {
@@ -928,23 +842,23 @@ scale.vertical mark indicator {
 }
 
 scale highlight {
-    background-color: alpha (@BLACK_900, 0.45);
+    background-color: rgba($BLACK_900, 0.45);
 }
 
 scale.accent highlight {
-    background-color: alpha (@colorAccent, 0.67);
+    background-color: rgba($colorAccent, 0.67);
 }
 
 scale highlight:disabled {
-    background-color: alpha (#000, 0.25);
+    background-color: rgba(#000, 0.25);
 }
 
 scale fill {
-    background-color: alpha(@BLACK_900, 0.25);
+    background-color: rgba($BLACK_900, 0.25);
 }
 
 scale.accent fill {
-    background-color: alpha(@colorAccent, 0.33);
+    background-color: rgba($colorAccent, 0.33);
 }
 
 scale.horizontal highlight.top,
@@ -977,12 +891,12 @@ scale.vertical fill.bottom {
 
 frame,
 .frame {
-    border: 1px solid @border_color;
-    color: lighter (@fg_color);
+    border: 1px solid $border_color;
+    color: lighter ($fg_color);
 }
 
 scrolledwindow.frame {
-    border: 1px solid @border_color;
+    border: 1px solid $border_color;
 }
 
 frame.flat,
@@ -1004,27 +918,27 @@ button,
 button,
 .button,
 .titlebar .stack-switcher .button.image-button {
-    text-shadow: 0 1px @text_shadow_color;
+    text-shadow: 0 1px $text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
             transparent,
             transparent 50%,
-            alpha (
+            rgba(
                 #000,
                 0.04
             )
         );
-    border: 1px solid @border_color;
+    border: 1px solid $border_color;
     border-radius: 2.5px;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
-    color: @text_color;
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15),
+        0 1px 0 0 rgba($bg_highlight_color, 0.15);
+    color: $text_color;
     transition: all 100ms ease-in;
-    -gtk-icon-shadow: 0 1px @text_shadow_color;
+    -gtk-icon-shadow: 0 1px $text_shadow_color;
 }
 
 button label {
@@ -1033,15 +947,15 @@ button label {
 
 .titlebar button,
 .titlebar .button {
-    border-color: shade (@colorPrimary, 0.75);
-    color: @textColorPrimary;
-    text-shadow: 0 1px @textColorPrimaryShadow;
+    border-color: darken($colorPrimary, 25%);
+    color: $textColorPrimary;
+    text-shadow: 0 1px $textColorPrimaryShadow;
     box-shadow:
-        inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.05),
-        inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.45),
-        inset 0 -1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.15),
-        0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.3);
-    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
+        inset 0 0 0 1px rgba(lighten($colorPrimary, 40%), 0.05),
+        inset 0 1px 0 0 rgba(lighten($colorPrimary, 40%), 0.45),
+        inset 0 -1px 0 0 rgba(lighten($colorPrimary, 40%), 0.15),
+        0 1px 0 0 rgba(lighten($colorPrimary, 40%), 0.3);
+    -gtk-icon-shadow: 0 1px $textColorPrimaryShadow;
 }
 
 button.color {
@@ -1050,18 +964,18 @@ button.color {
 
 button.color colorswatch {
     border-radius: 2px;
-    box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+    box-shadow: 0 1px 0 0 rgba($bg_highlight_color, 0.15);
 }
 
 button.color overlay {
     border-radius: 2px;
-    box-shadow: inset 0 0 1px 1px alpha (#000, 0.2);
+    box-shadow: inset 0 0 1px 1px rgba(#000, 0.2);
 }
 
 button:backdrop,
 .button:backdrop {
     background-image: none;
-    border-color: alpha (#000, 0.2);
+    border-color: rgba(#000, 0.2);
 }
 
 toolbar button,
@@ -1076,13 +990,13 @@ popover actionbar button:focus,
 .button:focus,
 .popover actionbar .button:focus,
 .titlebar .stack-switcher .button.image-button:focus {
-    color: @text_color;
-    border-color: @colorAccent;
+    color: $text_color;
+    border-color: $colorAccent;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 0 0 1px alpha (@colorAccent, 0.25);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15),
+        0 0 0 1px rgba($colorAccent, 0.25);
     transition: all 100ms ease-out;
 }
 
@@ -1100,14 +1014,14 @@ button.flat:focus,
 button.flat:focus:hover,
 .button.flat:focus,
 .button.flat:focus:hover {
-    background-color: alpha (@text_color, 0.15);
+    background-color: rgba($text_color, 0.15);
 }
 
 /* FIXME: style for checked image buttons
 .button:checked GtkImage {
     color: #08c;
-    -gtk-icon-shadow: 0 1px 4px alpha (@colorAccent, 0.5),
-                                 0 1px 0 alpha (#fff, 0.3);
+    -gtk-icon-shadow: 0 1px 4px rgba($colorAccent, 0.5),
+                                 0 1px 0 rgba(#fff, 0.3);
 } */
 
 button.circular.flat.image-button,
@@ -1120,10 +1034,10 @@ button.circular.flat.image-button:focus:active,
 .button.circular.flat.image-button:disabled,
 .button.circular.flat.image-button:hover,
 .button.circular.flat.image-button:focus:active {
-    background-color: alpha (@text_color, 0.5);
+    background-color: rgba($text_color, 0.5);
     border-radius: 50%;
     padding: 2px;
-    color: @bg_color;
+    color: $bg_color;
     box-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -1149,12 +1063,12 @@ button:focus:checked,
 .titlebar .button:active,
 .titlebar button:checked,
 .titlebar .button:checked {
-    background-color: alpha (#000, 0.05);
+    background-color: rgba(#000, 0.05);
     background-image: none;
-    border-color: alpha (#000, 0.27);
+    border-color: rgba(#000, 0.27);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba(#000, 0.05),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 button.flat:active,
@@ -1172,7 +1086,7 @@ button.link:focus {
 }
 
 button.link > label {
-    color: @link_color;
+    color: $link_color;
     padding: 0;
 }
 
@@ -1200,33 +1114,33 @@ GtkOverlay > .button:focus {
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
-    box-shadow: 0 1px 0 1px alpha (#000, 0.3);
-    text-shadow: 0 1px 0 alpha (#000, 0.3);
+    box-shadow: 0 1px 0 1px rgba(#000, 0.3);
+    text-shadow: 0 1px 0 rgba(#000, 0.3);
     background-clip: border-box;
 }
 
 GtkOverlay > button.suggested-action,
 GtkOverlay > .button.suggested-action {
     background-image: none;
-    background-color: @selected_bg_color;
-    border-color: @selected_bg_color;
+    background-color: $selected_bg_color;
+    border-color: $selected_bg_color;
 }
 
 GtkOverlay > .button:active,
 GtkOverlay > .button:hover:active {
     background-color: #fff;
-    color: @text_color;
+    color: $text_color;
     border-color: #fff;
     text-shadow: none;
 }
 
 GtkOverlay > .button:focus,
 GtkOverlay > .button:focus:active {
-    border-color: @colorAccent;
+    border-color: $colorAccent;
 }
 
 GtkOverlay > .button:focus:active {
-    background-color: @colorAccent;
+    background-color: $colorAccent;
 }
 
 /***************************
@@ -1256,17 +1170,17 @@ toolbar.secondary-toolbar button.flat:disabled,
     background-image: none;
     background-color: transparent;
     box-shadow: none;
-    color: shade (@colorAccent, 0.65);
+    color: shade($colorAccent, 0.65);
 }
 
 .secondary-toolbar.toolbar .button:active,
 .secondary-toolbar.toolbar .button:hover:active {
     background-image: none;
-    background-color: alpha (#000, 0.1);
+    background-color: rgba(#000, 0.1);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        inset 0 1px 0 0 alpha (#000, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.4);
+        inset 0 0 0 1px rgba(#000, 0.05),
+        inset 0 1px 0 0 rgba(#000, 0.25),
+        inset 0 -1px 0 0 rgba(#fff, 0.4);
     padding: 0 3px;
 }
 
@@ -1299,15 +1213,15 @@ spinbutton {
 }
 
 spinbutton.horizontal button {
-    color: @internal_element_color;
+    color: $internal_element_color;
     background: none;
-    border-color: alpha (#000, 0.1);
+    border-color: rgba(#000, 0.1);
     border-radius: 0;
     box-shadow: none;
 }
 
 spinbutton.horizontal button:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 spinbutton.horizontal button.down {
@@ -1380,62 +1294,62 @@ colorswatch:not(#add-color-button):not(#editor-color-sample) overlay:hover {
     background-image:
         linear-gradient(
             160deg,
-            alpha (
+            rgba(
                 #fff,
                 0.7
             ),
-            alpha (
+            rgba(
                 #fff,
                 0
             ) 50%
         );
-    box-shadow: inset 0 0 alpha (#fff, 0.4);
+    box-shadow: inset 0 0 rgba(#fff, 0.4);
 }
 
 colorswatch.dark overlay {
     color: #fff;
-    -gtk-icon-shadow: 0 1px 2px alpha(#000, 0.3);
+    -gtk-icon-shadow: 0 1px 2px rgba(#000, 0.3);
 }
 
 colorswatch.light overlay {
-    color: alpha(#000, 0.6);
-    -gtk-icon-shadow: 0 1px 1px alpha(#fff, 0.2);
+    color: rgba(#000, 0.6);
+    -gtk-icon-shadow: 0 1px 1px rgba(#fff, 0.2);
 }
 
 #add-color-button {
-    text-shadow: 0 1px @text_shadow_color;
+    text-shadow: 0 1px $text_shadow_color;
     background-image:
         linear-gradient(
             to bottom,
             transparent,
             transparent 50%,
-            alpha (
+            rgba(
                 #000,
                 0.04
             )
         );
-    border: 1px solid alpha (#000, 0.2);
+    border: 1px solid rgba(#000, 0.2);
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 1px 0 0 alpha (#fff, 0.15);
-    color: @text_color;
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 1px 0 0 rgba(#fff, 0.15);
+    color: $text_color;
     transition: all 100ms ease-in;
-    -gtk-icon-shadow: 0 1px @text_shadow_color;
+    -gtk-icon-shadow: 0 1px $text_shadow_color;
 }
 
 scale.color slider {
     background-image: none;
-    border: 2px solid @bg_color;
+    border: 2px solid $bg_color;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        inset 0 0 0 1px alpha (#000, 0.25),
-        inset 0 1px 1px 1px alpha (#000, 0.1),
-        0 0 0 1px alpha (#000, 0.25),
-        0 1px 1px 1px alpha (#000, 0.1);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15),
+        inset 0 0 0 1px rgba(#000, 0.25),
+        inset 0 1px 1px 1px rgba(#000, 0.1),
+        0 0 0 1px rgba(#000, 0.25),
+        0 1px 1px 1px rgba(#000, 0.1);
     min-height: 10px;
     min-width: 10px;
 }
@@ -1467,19 +1381,19 @@ combobox button:last-child:not(:only-child) {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.93
             ),
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.97
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 1px 0 0 rgba($inset_dark_color, 0.7),
+        inset 0 0 0 1px rgba($inset_dark_color, 0.3),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 .toolbar GtkComboBox.combobox-entry .entry:last-child,
@@ -1487,7 +1401,7 @@ combobox button:last-child:not(:only-child) {
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.1
             ),
@@ -1495,15 +1409,15 @@ combobox button:last-child:not(:only-child) {
         ),
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.9
             ),
-            @base_color
+            $base_color
         );
     box-shadow:
-        inset 0 0 0 1px @inset_dark_color,
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px $inset_dark_color,
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 /*********
@@ -1586,7 +1500,7 @@ combobox button:last-child:not(:only-child) {
 
 .linked.vertical entry,
 .linked.vertical .entry {
-    background-color: shade (@base_color, 0.97);
+    background-color: shade($base_color, 0.97);
     background-image: none;
     border-top-width: 0;
 }
@@ -1596,12 +1510,12 @@ combobox button:last-child:not(:only-child) {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.93
             ),
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.97
             )
         );
@@ -1635,7 +1549,7 @@ combobox button:last-child:not(:only-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 3px;
-    border-right-color: alpha(@text_color, 0.08);
+    border-right-color: rgba($text_color, 0.08);
 }
 
 .vertical.linked .horizontal.linked:last-child entry:last-child {
@@ -1649,63 +1563,63 @@ combobox button:last-child:not(:only-child) {
 
 notebook {
     border: none;
-    text-shadow: 0 1px @text_shadow_color;
-    -gtk-icon-shadow: 0 1px @text_shadow_color;
+    text-shadow: 0 1px $text_shadow_color;
+    -gtk-icon-shadow: 0 1px $text_shadow_color;
 }
 
 notebook.frame {
-    border: 1px solid shade (@titlebar_color, 0.6);
+    border: 1px solid shade($titlebar_color, 0.6);
     border-radius: 0 0 2.5px 2.5px;
-    background-color: shade (@titlebar_color, 1.06);
+    background-color: shade($titlebar_color, 1.06);
     background-clip: border-box;
 }
 
 notebook header {
-    background-color: @bg_color;
+    background-color: $bg_color;
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.1
             ),
-            alpha (
+            rgba(
                 #000,
                 0
             ) 3px
         ),
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.91
             ),
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.96
             )
         );
     border-style: solid;
     border-width: 0 0 1px;
-    border-color: shade (@titlebar_color, 0.62);
+    border-color: darken($titlebar_color, 32%);
     border-radius: 0;
 }
 
 notebook header:backdrop {
-    background-color: shade (@titlebar_color, 1.02);
+    background-color: shade($titlebar_color, 1.02);
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.08
             ),
-            alpha (
+            rgba(
                 #000,
                 0
             ) 3px
         );
-    border-color: shade (@titlebar_color, 0.76);
+    border-color: darken($titlebar_color, 24%);
 }
 
 notebook header button {
@@ -1713,15 +1627,15 @@ notebook header button {
 }
 
 .header separator.vertical {
-    border-right-color: alpha (#fff, 0.2);
+    border-right-color: rgba(#fff, 0.2);
 }
 
 notebook image {
-    color: shade (@title_color, 0.75);
+    color: shade($title_color, 0.75);
 }
 
 notebook image:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 notebook tab {
@@ -1731,7 +1645,7 @@ notebook tab {
         linear-gradient(
             to bottom,
             transparent,
-            alpha (
+            rgba(
                 #000,
                 0.2
             )
@@ -1739,7 +1653,7 @@ notebook tab {
     border-radius: 0;
     border-style: solid;
     border-width: 0 1px;
-    color: shade (@text_color, 1.12);
+    color: shade($text_color, 1.12);
     margin-right: -1px;
     padding: 3px;
 }
@@ -1750,7 +1664,7 @@ notebook tab:first-child {
         linear-gradient(
             to bottom,
             transparent,
-            alpha (
+            rgba(
                 #000,
                 0.2
             )
@@ -1761,52 +1675,52 @@ notebook tab:checked {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.94
             ),
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.9
             )
         );
-    border-color: shade (@titlebar_color, 0.62);
+    border-color: darken($titlebar_color, 38%);
     border-image: none;
     border-radius: 4px 4px 0 0;
     border-style: solid;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
-        0 0 1px 1px alpha (#000, 0.1);
-    text-shadow: 0 1px @text_shadow_color;
-    color: @text_color;
-    -gtk-icon-shadow: 0 1px @text_shadow_color;
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.2),
+        0 0 1px 1px rgba(#000, 0.1);
+    text-shadow: 0 1px $text_shadow_color;
+    color: $text_color;
+    -gtk-icon-shadow: 0 1px $text_shadow_color;
 }
 
 notebook tab:checked:backdrop {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 1.04
             ),
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 1.02
             )
         );
-    border-color: shade (@titlebar_color, 0.76);
+    border-color: shade($titlebar_color, 0.76);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
-        0 0 0 1px alpha (#000, 0.1);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.2),
+        0 0 0 1px rgba(#000, 0.1);
 }
 
 notebook tab > image {
-    color: shade (@titlebar_color, 0.35);
+    color: shade($titlebar_color, 0.35);
 }
 
 notebook viewport {
-    background-color: @base_color;
+    background-color: $base_color;
     border-width: 0;
 }
 
@@ -1822,44 +1736,44 @@ notebook tab > entry {
 /* Label Trickery */
 
 notebook tab label {
-    color: alpha(@text_color, 0.75);
+    color: rgba($text_color, 0.75);
     padding: 3px 6px;
 }
 
 notebook tab:active label,
 notebook .active-page,
 notebook tab .active-page label {
-    color: @text_color;
+    color: $text_color;
 }
 
 notebook tab:backdrop label,
 notebook tab label:backdrop {
-    color: alpha(@text_color, 0.75);
+    color: rgba($text_color, 0.75);
 }
 
 .inline-toolbar notebook header {
-    background-color: shade (@tab_base_color, 0.95);
+    background-color: shade($tab_base_color, 0.95);
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.12
             ),
-            alpha (
+            rgba(
                 #000,
                 0
             ) 2px,
-            alpha (
+            rgba(
                 #000,
                 0
             ) calc(100% - 1px),
-            alpha (
+            rgba(
                 #000,
                 0.05
             )
         );
-    border-color: shade (@tab_base_color, 0.78);
+    border-color: shade($tab_base_color, 0.78);
 }
 
 .inline-toolbar notebook tab {
@@ -1868,12 +1782,12 @@ notebook tab label:backdrop {
 }
 
 .inline-toolbar notebook tab:checked {
-    background-color: @tab_base_color;
+    background-color: $tab_base_color;
     background-image: none;
-    border-color: shade (@tab_base_color, 0.78);
+    border-color: shade($tab_base_color, 0.78);
     box-shadow:
-        -1px 0 1px alpha (#000, 0.05),
-        1px 0 1px alpha (#000, 0.05);
+        -1px 0 1px rgba(#000, 0.05),
+        1px 0 1px rgba(#000, 0.05);
 }
 
 /*************
@@ -1923,8 +1837,8 @@ scrollbar.vertical.hovering slider {
 }
 
 scrollbar slider {
-    background-color: alpha (@text_color, 0.6);
-    border: 1px solid alpha (@bg_highlight_color, 0.25);
+    background-color: rgba($text_color, 0.6);
+    border: 1px solid rgba($bg_highlight_color, 0.25);
     border-radius: 10px;
     margin: 1px;
     transition: all 200ms ease-in-out;
@@ -1944,7 +1858,7 @@ scrollbar.overlay-indicator trough {
 
 scrollbar.overlay-indicator:hover trough,
 scrollbar.overlay-indicator.hovering trough {
-    background-color: alpha (#000, 0.1);
+    background-color: rgba(#000, 0.1);
 }
 
 scrollbar:hover trough,
@@ -1954,7 +1868,7 @@ scrollbar.hovering trough {
 }
 
 trough {
-    background-color: @base_color;
+    background-color: $base_color;
 }
 
 /********
@@ -1976,11 +1890,11 @@ window.menu,
 window.popup {
     padding: 4px 0;
     border-radius: 3px;
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.9),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 .menu.button {
@@ -1989,20 +1903,20 @@ window.popup {
 
 menubar,
 .menubar {
-    color: @text_color;
-    background-color: shade (@titlebar_color, 0.94);
-    border: 1px solid shade (@titlebar_color, 0.68);
+    color: $text_color;
+    background-color: shade($titlebar_color, 0.94);
+    border: 1px solid shade($titlebar_color, 0.68);
     border-width: 0 0 1px;
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
     -GtkWidget-window-dragging: true;
 }
 
 menubar:backdrop,
 .menubar:backdrop {
-    background-color: shade (@titlebar_color, 0.98);
-    border-color: shade (@titlebar_color, 0.78);
+    background-color: shade($titlebar_color, 0.98);
+    border-color: shade($titlebar_color, 0.78);
 }
 
 .titlebar .menubar {
@@ -2036,18 +1950,18 @@ modelbutton:hover,
 .menuitem:focus:active,
 .menuitem:hover {
     box-shadow: none;
-    background-color: alpha (@text_color, 0.15);
+    background-color: rgba($text_color, 0.15);
 }
 
 menuitem *:disabled,
 modelbutton *:disabled,
 .menuitem *:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 menuitem accelerator,
 .accelerator {
-    color: alpha (@text_color, 0.5);
+    color: rgba($text_color, 0.5);
 }
 
 arrow {
@@ -2125,33 +2039,33 @@ radio {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.99
             ),
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.97
             )
         );
-    border: 1px solid @border_color;
+    border: 1px solid $border_color;
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.5),
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
-        0 1px 1px 0 shade (@bg_color, 0.95);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.5),
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.2),
+        0 1px 1px 0 shade($bg_color, 0.95);
     min-height: 12px;
     min-width: 12px;
     -gtk-icon-source: none;
 }
 
 switch {
-    background-color: alpha (#000, 0.1);
+    background-color: rgba(#000, 0.1);
     background-image: none;
-    border: 1px solid alpha (#000, 0.25);
+    border: 1px solid rgba(#000, 0.25);
     border-radius: 16px;
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba(#000, 0.05),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
     color: transparent;
     font-size: 0.1px;
 }
@@ -2183,33 +2097,33 @@ switch:focus slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade(@SILVER_100, 1.05),
-            shade(mix(@SILVER_100, @colorAccent, 0.1), 0.95)
+            shade($SILVER_100, 1.05),
+            shade(mix($SILVER_100, $colorAccent, 0.1), 0.95)
         );
-    border-color: @colorAccent;
+    border-color: $colorAccent;
     box-shadow:
-        inset 0 0 0 1px alpha(#fff, 0.05),
-        inset 0 1px 0 0 alpha(#fff, 0.45),
-        inset 0 -1px 0 0 alpha(#fff, 0.15),
-        0 1px 1px alpha(@colorAccent, 0.35),
-        0 1px 2px alpha(@colorAccent, 0.16);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 1px 1px rgba($colorAccent, 0.35),
+        0 1px 2px rgba($colorAccent, 0.16);
 }
 
 switch:checked {
-    background-color: @colorAccent;
+    background-color: $colorAccent;
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #fff,
                 0.3
             ),
-            alpha (
+            rgba(
                 #fff,
                 0
             )
         );
-    border-color: shade(@colorAccent, 0.85);
+    border-color: shade($colorAccent, 0.85);
 }
 
 check:checked,
@@ -2217,20 +2131,20 @@ radio:checked {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @colorAccent,
+            shade(
+                $colorAccent,
                 1.2
             ),
-            @colorAccent
+            $colorAccent
         );
-    border-color: shade (@colorAccent, 0.9);
+    border-color: shade($colorAccent, 0.9);
     box-shadow:
-        inset 0 0 0 1px shade (@colorAccent, 1.15),
-        inset 0 1px 0 0 shade (@colorAccent, 1.3),
-        0 1px 1px 0 shade (@bg_color, 0.85);
+        inset 0 0 0 1px shade($colorAccent, 1.15),
+        inset 0 1px 0 0 shade($colorAccent, 1.3),
+        0 1px 1px 0 shade($bg_color, 0.85);
     color: #fff;
     -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-    -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
+    -gtk-icon-shadow: 0 1px 1px shade($colorAccent, 0.85);
 }
 
 check:indeterminate,
@@ -2240,62 +2154,62 @@ radio:indeterminate {
 
 check:focus,
 radio:focus {
-    border-color: @colorAccent;
+    border-color: $colorAccent;
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 0 2px 1px alpha (@colorAccent, 0.5);
+        inset 0 1px 0 0 rgba($inset_dark_color, 0.7),
+        inset 0 0 0 1px rgba($inset_dark_color, 0.3),
+        0 0 2px 1px rgba($colorAccent, 0.5);
     transition: all 100ms ease-out;
 }
 
 check:checked:focus,
 radio:checked:focus {
-    border-color: shade (@colorAccent, 0.8);
+    border-color: shade($colorAccent, 0.8);
     box-shadow:
-        inset 0 0 0 1px shade (@colorAccent, 1.15),
-        inset 0 1px 0 0 shade (@colorAccent, 1.3),
-        0 0 2px 1px alpha (@colorAccent, 0.5),
-        0 1px 1px 0 shade (@bg_color, 0.85);
+        inset 0 0 0 1px shade($colorAccent, 1.15),
+        inset 0 1px 0 0 shade($colorAccent, 1.3),
+        0 0 2px 1px rgba($colorAccent, 0.5),
+        0 1px 1px 0 shade($bg_color, 0.85);
 }
 
 check:disabled,
 radio:disabled {
-    background: shade (@bg_color, 0.95);
-    border-color: shade (@bg_color, 0.8);
-    box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    background: shade($bg_color, 0.95);
+    border-color: shade($bg_color, 0.8);
+    box-shadow: 0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 switch:disabled {
-    background-color: alpha (#000, 0.02);
+    background-color: rgba(#000, 0.02);
 }
 
 check:checked:disabled,
 radio:checked:disabled {
-    color: shade (@bg_color, 0.75);
-    -gtk-icon-shadow: 0 1px 1px alpha (@bg_highlight_color, 0.3);
+    color: shade($bg_color, 0.75);
+    -gtk-icon-shadow: 0 1px 1px rgba($bg_highlight_color, 0.3);
 }
 
 switch:checked:disabled {
     background-image: none;
-    background-color: mix (@bg_color, @colorAccent, 0.5);
-    border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
+    background-color: mix ($bg_color, $colorAccent, 0.5);
+    border-color: shade(mix ($bg_color, $colorAccent, 0.5), 0.75);
 }
 
 check:checked:backdrop:not(:disabled),
 radio:checked:backdrop:not(:disabled) {
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
-        0 1px 1px 0 shade (@bg_color, 0.95);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.3),
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
+        0 1px 1px 0 shade($bg_color, 0.95);
 }
 
 check:checked:backdrop:not(:disabled),
 radio:checked:backdrop:not(:disabled),
 switch:checked:backdrop {
     background-image: none;
-    background-color: shade (@bg_color, 0.8);
-    border-color: shade (@bg_color, 0.65);
-    -gtk-icon-shadow: 0 1px 1px shade (@bg_color, 0.65);
+    background-color: shade($bg_color, 0.8);
+    border-color: shade($bg_color, 0.65);
+    -gtk-icon-shadow: 0 1px 1px shade($bg_color, 0.65);
 }
 
 check {
@@ -2329,17 +2243,17 @@ switch slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade(@SILVER_100, 1.05),
-            shade(@SILVER_100, 0.95)
+            shade($SILVER_100, 1.05),
+            shade($SILVER_100, 0.95)
         );
-    border: 1px solid alpha(#000, 0.2);
+    border: 1px solid rgba(#000, 0.2);
     border-radius: 50%;
     box-shadow:
-        inset 0 0 0 1px alpha(#fff, 0.05),
-        inset 0 1px 0 0 alpha(#fff, 0.45),
-        inset 0 -1px 0 0 alpha(#fff, 0.15),
-        0 1px 1px alpha(#000, 0.15),
-        0 1px 2px alpha(#000, 0.16);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 1px 1px rgba(#000, 0.15),
+        0 1px 2px rgba(#000, 0.16);
     margin: -1px;
     min-height: 24px;
     min-width: 24px;
@@ -2348,12 +2262,12 @@ switch slider {
 switch slider:disabled,
 switch slider:backdrop {
     background-image: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 1px alpha (#000, 0.15);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15),
+        0 1px 1px rgba(#000, 0.15);
 }
 
 radiobutton.image-button {
@@ -2363,17 +2277,17 @@ radiobutton.image-button {
 }
 
 radiobutton.image-button:checked:not(:backdrop) {
-    background-color: alpha (@colorAccent, 0.1);
-    border-color: @colorAccent;
+    background-color: rgba($colorAccent, 0.1);
+    border-color: $colorAccent;
 }
 
 radiobutton.image-button:checked:not(:backdrop) image {
-    color: mix (@colorAccent, @text_color, 0.3);
+    color: mix ($colorAccent, $text_color, 0.3);
 }
 
 radiobutton.image-button:checked:backdrop {
-    background-color: alpha (@text_color, 0.05);
-    border-color: alpha (@text_color, 0.4);
+    background-color: rgba($text_color, 0.05);
+    border-color: rgba($text_color, 0.4);
 }
 
 /***********
@@ -2384,50 +2298,50 @@ toolbar,
 .toolbar {
     -GtkWidget-window-dragging: true;
     padding: 3px;
-    border: 1px solid shade (@titlebar_color, 0.62);
+    border: 1px solid shade($titlebar_color, 0.62);
     border-width: 0 0 1px;
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.94
             ),
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.9
             )
         );
-    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
 
 toolbar:backdrop,
 .toolbar:backdrop {
-    background-color: shade (@titlebar_color, 1.04);
+    background-color: shade($titlebar_color, 1.04);
     background-image: none;
-    border-color: shade (@titlebar_color, 0.7);
+    border-color: shade($titlebar_color, 0.7);
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.4);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.4);
     -gtk-icon-effect: dim;
 }
 
 toolbar image {
-    color: mix (@titlebar_color, @text_color, 0.85);
-    -gtk-icon-shadow: 0 1px @title_shadow_color;
+    color: mix ($titlebar_color, $text_color, 0.85);
+    -gtk-icon-shadow: 0 1px $title_shadow_color;
 }
 
 toolbar image:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
     -gtk-icon-effect: dim;
 }
 
 toolbar image:backdrop {
-    color: mix (@titlebar_color, @text_color, 0.5);
+    color: mix ($titlebar_color, $text_color, 0.5);
     -gtk-icon-shadow: none;
 }
 
@@ -2443,21 +2357,21 @@ toolbar.secondary-toolbar,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.93
             ),
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.9
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
-    border-color: shade (@titlebar_color, 0.6);
-    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.3),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
+    border-color: shade($titlebar_color, 0.6);
+    text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
 
 toolbar.secondary-toolbar:backdrop,
@@ -2465,22 +2379,22 @@ toolbar.secondary-toolbar:backdrop,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 1.04
             ),
-            @titlebar_color
+            $titlebar_color
         );
-    border-color: shade (@titlebar_color, 0.76);
-    color: @insensitive_color;
+    border-color: shade($titlebar_color, 0.76);
+    color: $insensitive_color;
     -gtk-icon-effect: dim;
 }
 
 toolbar.secondary-toolbar button,
 .secondary-toolbar.toolbar .button {
-    border-color: alpha (#000, 0.3);
-    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    border-color: rgba(#000, 0.3);
+    text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
 
 /******************
@@ -2490,20 +2404,20 @@ toolbar.secondary-toolbar button,
 toolbar.bottom-toolbar,
 .bottom-toolbar.toolbar {
     padding: 8px;
-    border: 1px solid shade (@titlebar_color, 0.72);
+    border: 1px solid shade($titlebar_color, 0.72);
     border-width: 1px 0 0;
     background-image:
         linear-gradient(
             to bottom,
-            @titlebar_color,
-            shade (
-                @titlebar_color,
+            $titlebar_color,
+            shade(
+                $titlebar_color,
                 0.94
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.5),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.5),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
 }
 
 toolbar.bottom-toolbar button,
@@ -2555,7 +2469,7 @@ toolbar.bottom-toolbar button,
 .titlebar .button.flat:checked,
 .titlebar .button.flat:hover:checked,
 .titlebar .button.flat:focus:checked {
-    background-color: alpha (@text_color, 0.15);
+    background-color: rgba($text_color, 0.15);
     border-color: transparent;
     box-shadow: none;
 }
@@ -2566,30 +2480,30 @@ toolbar.bottom-toolbar button,
 
 actionbar {
     padding: 1px 6px;
-    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
     background-image:
         linear-gradient(
             to bottom,
-            @titlebar_color,
-            shade (
-                @titlebar_color,
+            $titlebar_color,
+            shade(
+                $titlebar_color,
                 0.94
             )
         );
     border-style: solid;
     border-width: 1px 0 0;
-    border-top-color: shade (@bg_color, 0.58);
+    border-top-color: shade($bg_color, 0.58);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15);
-    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15);
+    -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
 
 dialog actionbar {
     background-image: none;
-    background-color: @bg_color;
-    border-top-color: shade (@bg_color, 0.8);
+    background-color: $bg_color;
+    border-top-color: shade($bg_color, 0.8);
     border-radius: 0 0 4px 4px;
 }
 
@@ -2619,18 +2533,18 @@ actionbar .subtitle {
 
 .inline-toolbar,
 .inline-toolbar:backdrop {
-    border-color: shade (@bg_color, 0.75);
+    border-color: shade($bg_color, 0.75);
     border-width: 0 1px 1px;
     box-shadow: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.12
             ),
-            alpha (
+            rgba(
                 #000,
                 0
             ) 2px
@@ -2652,25 +2566,25 @@ paned .inline-toolbar:backdrop,
     border: none;
     border-radius: 0;
     box-shadow: none;
-    color: shade (@text_color, 1.25);
+    color: shade($text_color, 1.25);
     padding: 3px;
-    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+    text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
 
 .inline-toolbar button.image-button:focus {
-    background: alpha (@text_color, 0.15);
+    background: rgba($text_color, 0.15);
 }
 
 .inline-toolbar button.image-button:active {
-    background: alpha (@text_color, 0.1);
+    background: rgba($text_color, 0.1);
 }
 
 .inline-toolbar button.image-button image:disabled,
 .inline-toolbar button.image-button label:disabled,
 .inline-toolbar button.image-button:disabled {
     background: none;
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 /***************
@@ -2686,21 +2600,21 @@ searchbar,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.96
             ),
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 0.9
             )
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.2);
-    border-color: shade (@titlebar_color, 0.6);
-    text-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
-    -gtk-icon-shadow: 0 1px alpha (@bg_highlight_color, 0.4);
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.3),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
+    border-color: shade($titlebar_color, 0.6);
+    text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
+    -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
 
 searchbar:backdrop,
@@ -2709,14 +2623,14 @@ searchbar:backdrop,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @titlebar_color,
+            shade(
+                $titlebar_color,
                 1.04
             ),
-            @titlebar_color
+            $titlebar_color
         );
-    border-color: shade (@titlebar_color, 0.76);
-    color: @insensitive_color;
+    border-color: shade($titlebar_color, 0.76);
+    color: $insensitive_color;
     -gtk-icon-effect: dim;
 }
 
@@ -2726,8 +2640,8 @@ dialog .location-bar,
 dialog .search-bar,
 dialog .search-bar:backdrop {
     background-image: none;
-    background-color: @bg_color;
-    border-color: shade (@bg_color, 0.6);
+    background-color: $bg_color;
+    border-color: shade($bg_color, 0.6);
     box-shadow: none;
 }
 
@@ -2744,29 +2658,23 @@ button.suggested-action,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @selected_bg_color,
-                1.1
-            ),
-            shade (
-                @selected_bg_color,
-                0.9
-            )
+            lighten($selected_bg_color, 10%),
+            darken($selected_bg_color, 10%)
         );
-    border-color: shade (@selected_bg_color, 0.8);
+    border-color: darken($selected_bg_color, 20%);
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (#fff, 0.15);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.25),
+        inset 0 -1px 0 0 rgba(#fff, 0.1),
+        0 1px 0 0 rgba(#fff, 0.15);
 }
 
 button.suggested-action:not(:disabled),
 .titlebar button.suggested-action:not(:disabled) > label,
 .titlebar button.suggested-action:not(:disabled) > image {
-    color: @selected_fg_color;
-    text-shadow: 0 1px alpha (#000, 0.3);
-    -gtk-icon-shadow: 0 1px alpha (#000, 0.3);
+    color: $selected_fg_color;
+    text-shadow: 0 1px rgba(#000, 0.3);
+    -gtk-icon-shadow: 0 1px rgba(#000, 0.3);
 }
 
 button.suggested-action:active,
@@ -2778,24 +2686,18 @@ button.suggested-action:checked,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @selected_bg_color,
-                1.05
-            ),
-            shade (
-                @selected_bg_color,
-                0.95
-            )
+            lighten($selected_bg_color, 5%),
+            darken($selected_bg_color, 5%)
         );
-    border-color: shade (@selected_bg_color, 0.8);
+    border-color: darken($selected_bg_color, 20%);
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.05),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 0 0 0 1px rgba(#000, 0.05),
+        0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 .titlebar button.suggested-action:not(:disabled) label:backdrop,
 .titlebar button.suggested-action:not(:disabled) image:backdrop {
-    color: mix (@selected_bg_color, @selected_fg_color, 0.8);
+    color: mix ($selected_bg_color, $selected_fg_color, 0.8);
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -2809,18 +2711,15 @@ button.destructive-action,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @error_color,
-                1.3
-            ),
-            @error_color
+            lighten($error_color, 30%),
+            $error_color
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (#fff, 0.15);
-    border-color: shade (@error_color, 0.9);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.25),
+        inset 0 -1px 0 0 rgba(#fff, 0.1),
+        0 1px 0 0 rgba(#fff, 0.15);
+    border-color: darken($error_color, 10%);
 }
 
 button.destructive-action:backdrop:not(:disabled),
@@ -2830,19 +2729,13 @@ button.destructive-action:backdrop:not(:disabled),
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @error_color,
-                1.4
-            ),
-            shade (
-                @error_color,
-                1.3
-            )
+            lighten($error_color, 40%),
+            lighten($error_color, 30%)
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.25),
+        inset 0 -1px 0 0 rgba(#fff, 0.1);
 }
 
 button.destructive-action:not(:disabled) label,
@@ -2852,14 +2745,14 @@ button.destructive-action:not(:disabled) image:hover,
 .titlebar button.destructive-action:not(:disabled) label,
 .titlebar button.destructive-action:not(:disabled) label:hover,
 .titlebar button.destructive-action:not(:disabled) image {
-    color: @selected_fg_color;
-    text-shadow: 0 1px alpha (#000, 0.2);
-    -gtk-icon-shadow: 0 1px alpha (#000, 0.2);
+    color: $selected_fg_color;
+    text-shadow: 0 1px rgba(#000, 0.2);
+    -gtk-icon-shadow: 0 1px rgba(#000, 0.2);
 }
 
 .titlebar button.destructive-action:not(:disabled) label:backdrop,
 .titlebar button.destructive-action:not(:disabled) image:backdrop {
-    color: shade (@error_color, 1.9);
+    color: shade($error_color, 1.9);
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -2875,13 +2768,10 @@ button.destructive-action:active:hover,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @error_color,
-                1.2
-            ),
-            @error_color
+            lighten($error_color, 20%),
+            $error_color
         );
-    border-color: shade (@error_color, 0.85);
+    border-color: darken($error_color, 15%);
 }
 
 button.destructive-action:focus,
@@ -2891,22 +2781,16 @@ button.destructive-action:focus,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @error_color,
-                1.4
-            ),
-            shade (
-                @error_color,
-                1.1
-            )
+            lighten($error_color, 40%),
+            lighten($error_color, 10%)
         );
     box-shadow:
-        inset 0 1px 0 0 alpha (#fff, 0.3),
-        inset 0 -1px 0 0 alpha (#fff, 0.2),
-        0 1px 0 0 alpha (#fff, 0.25),
-        0 1px 2px 0 alpha (@error_color, 0.05);
+        inset 0 1px 0 0 rgba(#fff, 0.3),
+        inset 0 -1px 0 0 rgba(#fff, 0.2),
+        0 1px 0 0 rgba(#fff, 0.25),
+        0 1px 2px 0 rgba($error_color, 0.05);
     transition: all 100ms ease-out;
-    border-color: @error_color;
+    border-color: $error_color;
 }
 
 button.flat.destructive-action,
@@ -2922,7 +2806,7 @@ actionbar button.image-button.destructive-action:hover {
 
 button.flat.destructive-action:focus,
 actionbar button.image-button.destructive-action:focus {
-    background: alpha (@error_color, 0.3);
+    background: rgba($error_color, 0.3);
     border: none;
 }
 
@@ -2930,7 +2814,7 @@ button.flat.destructive-action image,
 button.flat.destructive-action label,
 actionbar button.image-button.destructive-action image,
 actionbar button.image-button.destructive-action label {
-    color: @text_color;
+    color: $text_color;
     transition: all 320ms cubic-bezier(0.4, 0, 0.2, 1);
     -gtk-icon-shadow: none;
 }
@@ -2943,14 +2827,14 @@ actionbar button.image-button.destructive-action:focus image,
 actionbar button.destructive-action:focus label,
 actionbar button.image-button.destructive-action:hover image,
 actionbar button.destructive-action:hover label {
-    color: @error_color;
+    color: $error_color;
 }
 
 button.flat.destructive-action image:backdrop,
 button.flat.destructive-action label:backdrop,
-actionbar button..image-button.destructive-action image:backdrop,
+actionbar button.image-button.destructive-action image:backdrop,
 actionbar button.destructive-action label:backdrop {
-    color: @insensitive_fg_color;
+    color: $insensitive_fg_color;
 }
 
 /*********************
@@ -2963,13 +2847,13 @@ button:disabled,
 .suggested-action.button:disabled {
     background-image: none;
     background-color: transparent;
-    border-color: alpha (#000, 0.2);
+    border-color: rgba(#000, 0.2);
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
-    color: @insensitive_color;
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.15),
+        0 1px 0 0 rgba($bg_highlight_color, 0.15);
+    color: $insensitive_color;
 }
 
 toolbar button:disabled,
@@ -2980,24 +2864,18 @@ toolbar button:disabled,
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
-                #fff,
-                0.05
-            ),
-            alpha (
-                #000,
-                0.05
-            )
+            rgba(#fff, 0.05),
+            rgba(#000, 0.05)
         );
-    border-color: alpha (#000, 0.2);
-    color: @insensitive_color;
+    border-color: rgba(#000, 0.2);
+    color: $insensitive_color;
 }
 
 button:disabled image,
 button:disabled label,
 button.destructive-action:disabled image,
 button.suggested-action:disabled image {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 button:active:disabled,
@@ -3005,19 +2883,13 @@ button:active:disabled,
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @bg_color,
-                0.85
-            ),
-            shade (
-                @bg_color,
-                0.94
-            ) 20%,
-            @bg_color
+            shade($bg_color, 0.85),
+            shade($bg_color, 0.94) 20%,
+            $bg_color
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#000, 0.02),
-        0 1px 0 0 alpha (#fff, 0.3);
+        inset 0 0 0 1px rgba(#000, 0.02),
+        0 1px 0 0 rgba(#fff, 0.3);
 }
 
 button.flat:disabled,
@@ -3033,18 +2905,18 @@ button.flat:disabled,
 ***************/
 
 GtkAssistant .sidebar .highlight {
-    color: @fg_color;
+    color: $fg_color;
     font-weight: bold;
 }
 
 GtkAssistant .sidebar {
-    background-color: shade (@bg_color, 0.97);
-    border-color: shade (@bg_color, 0.8);
+    background-color: shade($bg_color, 0.97);
+    border-color: shade($bg_color, 0.8);
     border-style: solid;
     border-width: 0 1px 0 0;
-    color: mix (@fg_color, @bg_color, 0.4);
+    color: mix ($fg_color, $bg_color, 0.4);
     padding: 12px;
-    text-shadow: 0 1px shade (@bg_color, 1.04);
+    text-shadow: 0 1px shade($bg_color, 1.04);
 }
 
 /*****************************
@@ -3056,15 +2928,15 @@ treeview {
     -GtkTreeView-horizontal-separator: 6px;
     -GtkTreeView-expander-size: 16;
     -GtkTreeView-grid-line-pattern: "\000\000";
-    border-top-color: @border_color;
+    border-top-color: $border_color;
 }
 
 treeview row:nth-child(even) {
-    background-color: @bg_color;
+    background-color: $bg_color;
 }
 
 treeview row:nth-child(odd) {
-    background-color: @base_color;
+    background-color: $base_color;
 }
 
 treeview entry,
@@ -3079,16 +2951,16 @@ iconview.view.cell {
 }
 
 iconview.view.cell:selected {
-    background: alpha(@text_color, 0.2);
+    background: rgba($text_color, 0.2);
 }
 
 .view {
-    background-color: @base_color;
+    background-color: $base_color;
 }
 
 .cell {
     border-width: 0;
-    color: @text_color;
+    color: $text_color;
     text-shadow: none;
 }
 
@@ -3097,18 +2969,18 @@ popover treeview.view row:selected,
 .view:selected,
 treeview row:focus,
 .popover treeview.view row:selected {
-    background-color: shade (@base_color, 0.8);
-    color: @text_color;
+    background-color: shade($base_color, 0.8);
+    color: $text_color;
 }
 
 .cell:selected:focus,
 .view:selected:focus {
-    background-color: @colorAccent;
-    color: @selected_fg_color;
+    background-color: $colorAccent;
+    color: $selected_fg_color;
 }
 
 .cell:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 /* FIXME: This doesn't work with only-child
@@ -3119,8 +2991,8 @@ GtkListBoxRow:only-child {
 }
 
 GtkListBoxRow:first-child {
-    border-bottom: solid 1px alpha(#fff, 0.04);
-    box-shadow: inset 0 -1px shade(@base_color, 0.85);
+    border-bottom: solid 1px rgba(#fff, 0.04);
+    box-shadow: inset 0 -1px shade($base_color, 0.85);
 }
 */
 
@@ -3133,8 +3005,8 @@ flowboxchild {
 }
 
 flowboxchild:focus {
-    background-color: alpha (#000, 0.2);
-    color: @text_color;
+    background-color: rgba(#000, 0.2);
+    color: $text_color;
 }
 
 /*********************
@@ -3143,56 +3015,56 @@ flowboxchild:focus {
 
 .app-notification,
 .app-notification.frame {
-    background-color: alpha (@text_color, 0.85);
+    background-color: rgba($text_color, 0.85);
     border-radius: 4px;
     border: none;
     padding: 6px;
-    text-shadow: 0 1px 2px alpha (@text_color, 0.6);
+    text-shadow: 0 1px 2px rgba($text_color, 0.6);
     background-clip: padding-box;
 }
 
 .app-notification label {
-    color: @bg_color;
-    text-shadow: 0 1px 2px alpha (@text_color, 0.6);
+    color: $bg_color;
+    text-shadow: 0 1px 2px rgba($text_color, 0.6);
 }
 
 .app-notification button,
 .app-notification button.flat.image-button,
 .app-notification .button,
 .app-notification .button.flat.image-button {
-    background-color: alpha (@bg_color, 0.9);
-    color: @text_color;
+    background-color: rgba($bg_color, 0.9);
+    color: $text_color;
     box-shadow: none;
     border-width: 0;
     -gtk-icon-shadow: none;
 }
 
 .app-notification button label {
-    color: @text_color;
+    color: $text_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
 
 .app-notification button.close-button,
 .app-notification .button.close-button {
-    background-color: @text_color;
+    background-color: $text_color;
     border-radius: 50%;
     padding: 4px;
-    color: alpha (@bg_color, 0.9);
+    color: rgba($bg_color, 0.9);
 }
 
 .app-notification button:active,
 .app-notification .button:active {
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        0 3px 6px alpha (@text_color, 0.16),
-        0 3px 6px alpha (@text_color, 0.23);
+        0 3px 6px rgba($text_color, 0.16),
+        0 3px 6px rgba($text_color, 0.23);
 }
 
 .app-notification button.close-button:active,
 .app-notification .button.close-button:active {
-    background-color: alpha (@text_color, 0.7);
-    color: alpha (@bg_color, 0.7);
+    background-color: rgba($text_color, 0.7);
+    color: rgba($bg_color, 0.7);
 }
 
 /******************
@@ -3204,15 +3076,15 @@ column-header .button {
     border-left-width: 0;
     border-top-width: 0;
     border-radius: 0;
-    background-color: @bg_color;
+    background-color: $bg_color;
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.88
             ),
-            @base_color
+            $base_color
         );
     font-weight: bold;
     padding: 4px 2px;
@@ -3228,11 +3100,8 @@ column-header .button:hover {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
-                0.8
-            ),
-            @base_color
+            shade($base_color, 0.8),
+            $base_color
         );
 }
 
@@ -3246,21 +3115,18 @@ column-header .button:backdrop:hover {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @bg_color,
-                0.92
-            ),
-            @bg_color
+            shade($bg_color, 0.92),
+            $bg_color
         );
 }
 
 treeview header button label {
     padding-left: 3px;
-    color: shade (@text_color, 1.8);
+    color: shade($text_color, 1.8);
 }
 
 treeview header button:backdrop label {
-    color: shade (@text_color, 2.8);
+    color: shade($text_color, 2.8);
 }
 
 /*************
@@ -3269,7 +3135,7 @@ treeview header button:backdrop label {
 
 list,
 .list {
-    background-color: @base_color;
+    background-color: $base_color;
 }
 
 popover list,
@@ -3280,7 +3146,7 @@ popover list,
 
 row,
 .list-row {
-    border-color: @border_color;
+    border-color: $border_color;
 }
 
 row,
@@ -3293,23 +3159,23 @@ row,
 
 row:selected button,
 .list-row:selected:focus .button {
-    background-color: @bg_color;
+    background-color: $bg_color;
     transition: none;
 }
 
 row:selected button.flat,
 .list-row:selected:focus .button.flat {
-    background-color: alpha (@text_color, 0.3);
-    text-shadow: 0 1px 1px alpha (@text_color, 0.15);
-    -gtk-icon-shadow: 0 1px 1px alpha (@text_color, 0.15);
+    background-color: rgba($text_color, 0.3);
+    text-shadow: 0 1px 1px rgba($text_color, 0.15);
+    -gtk-icon-shadow: 0 1px 1px rgba($text_color, 0.15);
 }
 
 row:selected,
 row:selected:backdrop,
 .list-row:selected,
 .list-row:selected:backdrop {
-    background-color: shade (@base_color, 0.8);
-    color: @text_color;
+    background-color: shade($base_color, 0.8);
+    color: $text_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -3321,12 +3187,12 @@ row:selected label:disabled {
 
 row:selected:focus,
 .list-row:selected:focus {
-    background-color: @colorAccent;
-    color: @selected_fg_color;
+    background-color: $colorAccent;
+    color: $selected_fg_color;
 }
 
 row:selected:focus image {
-    color: @selected_fg_color;
+    color: $selected_fg_color;
 }
 
 .list-row GtkTextView {
@@ -3338,7 +3204,7 @@ row:selected:focus image {
 ***************/
 
 .content-view-window {
-    border: 1px solid alpha (#000, 0.25);
+    border: 1px solid rgba(#000, 0.25);
     border-radius: 5px;
 }
 
@@ -3353,21 +3219,21 @@ row:selected:focus image {
     background-image:
         linear-gradient(
             to bottom,
-            @bg_color,
-            shade (
-                @bg_color,
+            $bg_color,
+            shade(
+                $bg_color,
                 0.94
             )
         );
     border-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.86
             ),
-            shade (
-                @base_color,
+            shade(
+                $base_color,
                 0.7
             )
         ) 1 0 1 0;
@@ -3375,14 +3241,14 @@ row:selected:focus image {
 
 .content-view .title,
 .content-view .option-title {
-    color: @text_color;
-    text-shadow: 0 1px alpha (#fff, 0.3);
+    color: $text_color;
+    text-shadow: 0 1px rgba(#fff, 0.3);
 }
 
 .content-view .subtitle,
 .content-view .option-description {
-    color: alpha (@text_color, 0.5);
-    text-shadow: 0 1px @text_shadow_color;
+    color: rgba($text_color, 0.5);
+    text-shadow: 0 1px $text_shadow_color;
 }
 
 .content-view .toolbar {
@@ -3390,16 +3256,16 @@ row:selected:focus image {
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.1
             ),
-            alpha (
+            rgba(
                 #000,
                 0.03
             )
         );
-    border-color: alpha (#000, 0.05);
+    border-color: rgba(#000, 0.05);
 }
 
 /************************
@@ -3411,8 +3277,8 @@ row:selected:focus image {
 .sidebar list,
 .source-list,
 .source-list.view {
-    background-color: shade (@bg_color, 0.92);
-    color: mix (@bg_color, @text_color, 0.77);
+    background-color: shade($bg_color, 0.92);
+    color: mix ($bg_color, $text_color, 0.77);
     -gtk-icon-style: regular;
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
@@ -3426,7 +3292,7 @@ row:selected:focus image {
 dialog .sidebar,
 dialog .sidebar list,
 dialog .source-list {
-    background-color: shade (@titlebar_color, 1.07);
+    background-color: shade($titlebar_color, 1.07);
 }
 
 .sidebar row,
@@ -3459,7 +3325,7 @@ dialog .source-list {
 .sidebar-item,
 .sidebar-row,
 .source-list .view {
-    text-shadow: 0 1px @text_shadow_color;
+    text-shadow: 0 1px $text_shadow_color;
 }
 
 .sidebar row:hover,
@@ -3468,7 +3334,7 @@ dialog .source-list {
 .sidebar-item:hover,
 .sidebar-row:hover,
 .source-list .view:hover {
-    background-color: shade (@titlebar_color, 1.1);
+    background-color: shade($titlebar_color, 1.1);
 }
 
 .popover .sidebar.view:selected,
@@ -3479,16 +3345,16 @@ dialog .source-list {
 .sidebar-row:selected,
 .source-list .view:selected,
 .source-list.category-expander:hover {
-    color: mix (@titlebar_color, @text_color, 0.6);
+    color: mix ($titlebar_color, $text_color, 0.6);
     background-color: transparent;
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.11
             ),
-            alpha (
+            rgba(
                 #000,
                 0.07
             )
@@ -3496,44 +3362,44 @@ dialog .source-list {
     border-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.25
             ),
-            alpha (
-                @bg_highlight_color,
+            rgba(
+                $bg_highlight_color,
                 0.3
             )
         ) 1 1 1 1;
     border-style: solid;
     border-width: 1px 0;
     box-shadow:
-        inset 0 1px 0 0 alpha (#000, 0.03),
-        inset 0 -1px 0 0 alpha (#000, 0.1);
+        inset 0 1px 0 0 rgba(#000, 0.03),
+        inset 0 -1px 0 0 rgba(#000, 0.1);
 }
 
 dialog .sidebar .view:selected,
 dialog .sidebar row:selected,
 dialog .sidebar row:selected:focus,
 dialog .source-list .view:selected {
-    color: mix (@titlebar_color, @text_color, 0.6);
+    color: mix ($titlebar_color, $text_color, 0.6);
     background-image: none;
-    background-color: alpha (#000, 0.05);
+    background-color: rgba(#000, 0.05);
     border-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.15
             ),
-            alpha (
-                @bg_highlight_color,
+            rgba(
+                $bg_highlight_color,
                 0.3
             )
         ) 1 1 1 1;
     box-shadow:
-        inset 0 1px 0 0 alpha (#000, 0.02),
-        inset 0 -1px 0 0 alpha (#000, 0.1);
+        inset 0 1px 0 0 rgba(#000, 0.02),
+        inset 0 -1px 0 0 rgba(#000, 0.1);
 }
 
 dialog .sidebar-row:selected:focus image {
@@ -3547,7 +3413,7 @@ dialog .sidebar-row:selected:focus image {
 .sidebar .view:backdrop,
 .source-list:backdrop,
 .source-list .view:backdrop {
-    color: mix (@titlebar_color, @text_color, 0.4);
+    color: mix ($titlebar_color, $text_color, 0.4);
     -gtk-icon-effect: dim;
 }
 
@@ -3556,15 +3422,15 @@ dialog .sidebar-row:selected:focus image {
 .sidebar-item:selected:backdrop,
 .sidebar-row:selected:backdrop,
 .source-list .view:selected:backdrop {
-    color: mix (@titlebar_color, @text_color, 0.4);
+    color: mix ($titlebar_color, $text_color, 0.4);
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.04
             ),
-            alpha (
+            rgba(
                 #000,
                 0.03
             )
@@ -3572,11 +3438,11 @@ dialog .sidebar-row:selected:focus image {
     border-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.15
             ),
-            alpha (
+            rgba(
                 #fff,
                 0.25
             )
@@ -3586,16 +3452,16 @@ dialog .sidebar-row:selected:focus image {
 dialog .sidebar .view:selected:backdrop,
 dialog .sidebar-row:selected:backdrop,
 dialog .source-list .view:selected:backdrop {
-    background-color: alpha (#000, 0.05);
+    background-color: rgba(#000, 0.05);
     background-image: none;
     border-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.15
             ),
-            alpha (
+            rgba(
                 #fff,
                 0.25
             )
@@ -3691,17 +3557,17 @@ calendar .view {
 *************/
 
 infobar revealer > box {
-    background-color: @bg_color;
+    background-color: $bg_color;
     background-image: -gtk-icontheme("dialog-information-symbolic");
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 9px 1em;
-    border-color: shade (@bg_color, 0.8);
+    border-color: shade($bg_color, 0.8);
     border-style: solid;
     border-width: 0 0 1px;
     box-shadow:
-        inset 0 1px 0 0 shade (@bg_color, 0.92),
-        inset 0 -1px 0 0 shade (@bg_color, 1.2);
+        inset 0 1px 0 0 shade($bg_color, 0.92),
+        inset 0 -1px 0 0 shade($bg_color, 1.2);
     padding-left: 24px;
 }
 
@@ -3711,17 +3577,17 @@ infobar:dir(rtl) revealer > box {
 }
 
 infobar label {
-    color: @text_color;
+    color: $text_color;
     padding: 3px;
 }
 
 infobar.error revealer > box {
-    background-color: shade (@error_color, 1.2);
+    background-color: shade($error_color, 1.2);
     background-image: -gtk-icontheme("process-error-symbolic");
-    border-color: @error_color;
+    border-color: $error_color;
     box-shadow:
-        inset 0 1px 0 0 alpha (@error_color, 0.3),
-        inset 0 -1px 0 0 alpha (#fff, 0.3);
+        inset 0 1px 0 0 rgba($error_color, 0.3),
+        inset 0 -1px 0 0 rgba(#fff, 0.3);
     color: #fff;
     -gtk-icon-palette: error #fff;
 }
@@ -3729,45 +3595,45 @@ infobar.error revealer > box {
 infobar.error label,
 infobar.error .close {
     color: #fff;
-    text-shadow: 0 1px 1px @error_color;
-    -gtk-icon-shadow: 0 1px 1px @error_color;
+    text-shadow: 0 1px 1px $error_color;
+    -gtk-icon-shadow: 0 1px 1px $error_color;
 }
 
 infobar.question revealer > box {
-    background-color: shade (@selected_bg_color, 1.2);
+    background-color: shade($selected_bg_color, 1.2);
     background-image: -gtk-icontheme("dialog-question-symbolic");
-    border-color: shade (@selected_bg_color, 0.9);
+    border-color: shade($selected_bg_color, 0.9);
     box-shadow:
-        inset 0 1px 0 0 alpha (@selected_bg_color, 0.3),
-        inset 0 -1px 0 0 alpha (#fff, 0.3);
-    color: shade (@selected_bg_color, 0.25);
+        inset 0 1px 0 0 rgba($selected_bg_color, 0.3),
+        inset 0 -1px 0 0 rgba(#fff, 0.3);
+    color: shade($selected_bg_color, 0.25);
 }
 
 infobar.question label {
-    color: shade (@selected_bg_color, 0.25);
+    color: shade($selected_bg_color, 0.25);
 }
 
 infobar.warning revealer > box {
-    background-color: shade (@warning_color, 1.2);
+    background-color: shade($warning_color, 1.2);
     background-image: -gtk-icontheme("dialog-warning-symbolic");
-    border-color: shade (@warning_color, 0.9);
+    border-color: shade($warning_color, 0.9);
     box-shadow:
-        inset 0 1px 0 0 @warning_color,
-        inset 0 -1px 0 0 alpha (#fff, 0.4);
-    color: shade (@warning_color, 0.25);
-    -gtk-icon-palette: warning shade (@warning_color, 0.4);
+        inset 0 1px 0 0 $warning_color,
+        inset 0 -1px 0 0 rgba(#fff, 0.4);
+    color: shade($warning_color, 0.25);
+    -gtk-icon-palette: warning shade($warning_color, 0.4);
 }
 
 infobar.warning button {
-    border-color: shade (@warning_color, 0.8);
+    border-color: shade($warning_color, 0.8);
 }
 
 infobar.warning button:backdrop {
-    border-color: shade (@warning_color, 0.9);
+    border-color: shade($warning_color, 0.9);
 }
 
 infobar.warning label {
-    color: shade (@warning_color, 0.25);
+    color: shade($warning_color, 0.25);
 }
 
 infobar.frame {
@@ -3778,27 +3644,27 @@ infobar.frame revealer > box {
     border-width: 1px;
     border-radius: 3px;
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.45),
-        inset 0 -1px 0 0 alpha (#fff, 0.15),
-        0 1px 1px alpha (#000, 0.03),
-        0 1px 2px alpha (#000, 0.1);
+        inset 0 0 0 1px rgba(#fff, 0.05),
+        inset 0 1px 0 0 rgba(#fff, 0.45),
+        inset 0 -1px 0 0 rgba(#fff, 0.15),
+        0 1px 1px rgba(#000, 0.03),
+        0 1px 2px rgba(#000, 0.1);
     margin: 3px;
 }
 
 infobar entry,
 infobar menu {
-    color: @text_color;
+    color: $text_color;
 }
 
 infobar label:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 infobar button,
 infobar button:focus,
 notebook infobar button {
-    border: 1px solid alpha (#000, 0.3);
+    border: 1px solid rgba(#000, 0.3);
     text-shadow: none;
 }
 
@@ -3820,22 +3686,22 @@ popover.osd,
 .popover,
 .popover.osd {
     border-radius: 4px;
-    border: 1px solid alpha (#000, 0.3);
-    background-color: @bg_color;
+    border: 1px solid rgba(#000, 0.3);
+    background-color: $bg_color;
     box-shadow:
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.5),
-        0 3px 4px alpha (#000, 0.15),
-        0 3px 3px -3px alpha (#000, 0.35);
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.5),
+        0 3px 4px rgba(#000, 0.15),
+        0 3px 3px -3px rgba(#000, 0.35);
     margin: 6px;
     text-shadow: none;
 }
 
 popover image {
-    color: alpha (@text_color, 0.8);
+    color: rgba($text_color, 0.8);
 }
 
 popover image:disabled {
-    color: @insensitive_color;
+    color: $insensitive_color;
 }
 
 popover .view,
@@ -3852,16 +3718,16 @@ popover.menu,
 popover undershoot.top {
     background:
         linear-gradient(
-            @bg_color 0%,
-            alpha(@bg_color, 0) 50%
+            $bg_color 0%,
+            rgba($bg_color, 0) 50%
         );
 }
 
 popover undershoot.bottom {
     background:
         linear-gradient(
-            alpha(@bg_color, 0) 50%,
-            @bg_color 100%
+            rgba($bg_color, 0) 50%,
+            $bg_color 100%
         );
 }
 
@@ -3878,7 +3744,7 @@ popover undershoot.bottom {
 .popover actionbar {
     background-image: none;
     padding: 6px;
-    border-color: shade(@base_color, 0.8);
+    border-color: shade($base_color, 0.8);
 }
 
 .popover actionbar .button {
@@ -3897,43 +3763,31 @@ GcrCertificateWidget .frame {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @colorPrimary,
-                1.04
-            ),
-            shade (
-                @colorPrimary,
-                0.94
-            )
+            lighten($colorPrimary, 4%),
+            darken($colorPrimary, 6%)
         );
-    border-color: shade (@colorPrimary, 0.68);
+    border-color: darken($colorPrimary, 32%);
     border-radius: 4px 4px 0 0;
     border-style: solid;
     border-width: 0 0 1px;
-    text-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
+    text-shadow: 0 1px rgba(lighten($colorPrimary, 40%), 0.4);
     box-shadow:
-        inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.2),
-        inset 0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.6);
+        inset 0 0 0 1px rgba(lighten($colorPrimary, 40%), 0.2),
+        inset 0 1px 0 0 rgba(lighten($colorPrimary, 40%), 0.6);
     padding: 8px 6px 6px;
-    -gtk-icon-shadow: 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
+    -gtk-icon-shadow: 0 1px rgba(lighten($colorPrimary, 40%), 0.4);
 }
 
 .titlebar:backdrop {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @colorPrimary,
-                1.08
-            ),
-            shade (
-                @colorPrimary,
-                1.04
-            )
+            lighten($colorPrimary, 8%),
+            lighten($colorPrimary, 4%)
         );
-    background-color: shade (@colorPrimary, 1.1);
-    border-color: shade (@colorPrimary, 0.82);
-    box-shadow: inset 0 0 0 1px alpha (shade (@colorPrimary, 1.4), 0.4);
+    background-color: shade($colorPrimary, 1.1);
+    border-color: shade($colorPrimary, 0.82);
+    box-shadow: inset 0 0 0 1px rgba(lighten($colorPrimary, 40%), 0.4);
     -gtk-icon-effect: dim;
 }
 
@@ -3975,7 +3829,7 @@ GcrCertificateWidget .frame {
 }
 
 .titlebar.default-decoration:backdrop {
-    border-color: shade (@titlebar_color, 0.78);
+    border-color: shade($titlebar_color, 0.78);
 }
 
 .titlebar.flat,
@@ -3984,11 +3838,11 @@ messagedialog .titlebar,
 messagedialog .titlebar.default-decoration {
     border: none;
     background-image: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 1px 0 0 @bg_highlight_color;
+        inset 1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset -1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 1px 0 0 $bg_highlight_color;
 }
 
 dialog .titlebar.default-decoration,
@@ -4005,21 +3859,21 @@ dialog .titlebar.default-decoration:backdrop,
 messagedialog .titlebar.default-decoration:backdrop {
     border: none;
     background-image: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 1px 0 0 @bg_highlight_color;
-    color: shade (@titlebar_color, 1.2);
+        inset 1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset -1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 1px 0 0 $bg_highlight_color;
+    color: shade($titlebar_color, 1.2);
 }
 
 .titlebar .title,
 .titlebar .subtitle,
 .titlebar .titlebutton,
 .titlebar *:not(entry) image {
-    color: @textColorPrimary;
-    text-shadow: 0 1px @textColorPrimaryShadow;
-    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
+    color: $textColorPrimary;
+    text-shadow: 0 1px $textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px $textColorPrimaryShadow;
 }
 
 .titlebar .title {
@@ -4050,16 +3904,16 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
 .titlebar *:not(entry) image:disabled {
-    color: mix (@textColorPrimary, @colorPrimary, 0.35);
-    text-shadow: 0 1px @textColorPrimaryShadow;
-    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
+    color: mix ($textColorPrimary, $colorPrimary, 0.35);
+    text-shadow: 0 1px $textColorPrimaryShadow;
+    -gtk-icon-shadow: 0 1px $textColorPrimaryShadow;
 }
 
 .titlebar .title:backdrop,
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
 .titlebar *:not(entry) image:backdrop {
-    color: mix (@textColorPrimary, @colorPrimary, 0.3);
+    color: mix ($textColorPrimary, $colorPrimary, 0.3);
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -4067,7 +3921,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 decoration {
     border-radius: 4px 4px 0 0;
     box-shadow:
-        0 0 0 1px @decoration_border_color,
+        0 0 0 1px $decoration_border_color,
         0 14px 28px rgba(0, 0, 0, 0.35),
         0 10px 10px rgba(0, 0, 0, 0.22);
     margin: 12px;
@@ -4077,25 +3931,25 @@ window.popup decoration,
 .csd.popup decoration {
     border-radius: 3px;
     box-shadow:
-        0 0 0 1px alpha (#000, 0.2),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23);
+        0 0 0 1px rgba(#000, 0.2),
+        0 3px 6px rgba(#000, 0.16),
+        0 3px 6px rgba(#000, 0.23);
     margin: 0;
 }
 
 menu window.popup decoration,
 menu .csd.popup decoration {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.2),
-        0 10px 20px alpha (#000, 0.19),
-        0 6px 6px alpha (#000, 0.23);
+        0 0 0 1px rgba(#000, 0.2),
+        0 10px 20px rgba(#000, 0.19),
+        0 6px 6px rgba(#000, 0.23);
 }
 
 tooltip decoration {
     border-radius: 3px;
     box-shadow:
-        0 1px 3px alpha (#000, 0.12),
-        0 1px 2px alpha (#000, 0.24);
+        0 1px 3px rgba(#000, 0.12),
+        0 1px 2px rgba(#000, 0.24);
     margin: 0;
 }
 
@@ -4107,9 +3961,9 @@ tooltip decoration {
 
 decoration:backdrop {
     box-shadow:
-        0 0 0 1px alpha (#000, 0.2),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23),
+        0 0 0 1px rgba(#000, 0.2),
+        0 3px 6px rgba(#000, 0.16),
+        0 3px 6px rgba(#000, 0.23),
         0 14px 28px transparent;
 }
 
@@ -4122,14 +3976,14 @@ decoration:backdrop {
 .tiled decoration {
     border-radius: 0;
     box-shadow:
-        0 0 0 1px alpha (#000, 0.2),
-        0 1px 3px alpha (#000, 0.12),
-        0 1px 2px alpha (#000, 0.24);
+        0 0 0 1px rgba(#000, 0.2),
+        0 1px 3px rgba(#000, 0.12),
+        0 1px 2px rgba(#000, 0.24);
 }
 
 .ssd decoration,
 .ssd decoration:backdrop {
-    box-shadow: 0 0 0 1px @decoration_border_color;
+    box-shadow: 0 0 0 1px $decoration_border_color;
 }
 
 /**********
@@ -4140,10 +3994,10 @@ dialog decoration,
 messagedialog decoration {
     border-radius: 4px;
     box-shadow:
-        0 0 0 1px alpha (#000, 0.2),
-        0 8px 10px 1px alpha (#000, 0.14),
-        0 3px 14px 2px alpha (#000, 0.12),
-        0 5px 5px -3px alpha (#000, 0.4),
+        0 0 0 1px rgba(#000, 0.2),
+        0 8px 10px 1px rgba(#000, 0.14),
+        0 3px 14px 2px rgba(#000, 0.12),
+        0 5px 5px -3px rgba(#000, 0.4),
         0 14px 28px transparent;
 }
 
@@ -4151,9 +4005,9 @@ dialog,
 messagedialog {
     border-radius: 0 0 4px 4px;
     box-shadow:
-        inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.3);
+        inset 1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset -1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
 messagedialog,
@@ -4171,29 +4025,29 @@ messagedialog .titlebar,
 dialog .titlebar {
     border: none;
     background-image: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 1px 0 0 @bg_highlight_color;
+        inset 1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset -1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 1px 0 0 $bg_highlight_color;
 }
 
 dialog .titlebar:backdrop,
 messagedialog .titlebar:backdrop {
     border: none;
     background-image: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     box-shadow:
-        inset 1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset -1px 0 0 0 alpha (@bg_highlight_color, 0.2),
-        inset 0 1px 0 0 @bg_highlight_color;
+        inset 1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset -1px 0 0 0 rgba($bg_highlight_color, 0.2),
+        inset 0 1px 0 0 $bg_highlight_color;
 }
 
 dialog .titlebar :not(.suggested-action):not(.destructive-action) image,
 dialog .titlebar :not(.suggested-action):not(.destructive-action) label {
-    color: @title_color;
-    text-shadow: 0 1px @title_shadow_color;
-    -gtk-icon-shadow: 0 1px @title_shadow_color;
+    color: $title_color;
+    text-shadow: 0 1px $title_shadow_color;
+    -gtk-icon-shadow: 0 1px $title_shadow_color;
 }
 
 dialog .titlebar .title {
@@ -4206,7 +4060,7 @@ dialog .titlebar .title {
 dialog notebook,
 dialog toolbar {
     background-image: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
 }
 
 .dialog-action-area button > * {
@@ -4223,7 +4077,7 @@ dialog toolbar {
 }
 
 .emoji-picker box > label {
-    color: alpha (@text_color, 0.7);
+    color: rgba($text_color, 0.7);
     font-weight: bold;
     margin-left: 7px;
     margin-right: 7px;
@@ -4236,18 +4090,18 @@ dialog toolbar {
 }
 
 .emoji-picker stack box > box {
-    border-top: 1px solid @border_color;
+    border-top: 1px solid $border_color;
     border-radius: 0 0 3px 3px;
     box-shadow: none;
-    background-color: @bg_color;
+    background-color: $bg_color;
     background-image:
         linear-gradient(
             to bottom,
-            alpha (
+            rgba(
                 #000,
                 0.12
             ),
-            alpha (
+            rgba(
                 #000,
                 0
             ) 2px
@@ -4349,34 +4203,34 @@ dialog toolbar {
 }
 
 .attention {
-    color: @attention_color;
+    color: $attention_color;
 }
 
 image.error,
 .error {
-    color: @error_color;
+    color: $error_color;
 }
 
 image.warning,
 .warning {
-    color: @warning_color;
+    color: $warning_color;
 }
 
 label.warning {
-    color: @BANANA_900;
+    color: $BANANA_900;
 }
 
 image.success,
 .success {
-    color: @success_color;
+    color: $success_color;
 }
 
 label.success {
-    color: @LIME_900;
+    color: $LIME_900;
 }
 
 link {
-    color: @link_color;
+    color: $link_color;
 }
 
 /***************************
@@ -4401,8 +4255,8 @@ overshoot.top {
     background:
         linear-gradient(
             to top,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.25) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.25) 100%
         );
 }
 
@@ -4410,8 +4264,8 @@ overshoot.right {
     background:
         linear-gradient(
             to right,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.25) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.25) 100%
         );
 }
 
@@ -4419,8 +4273,8 @@ overshoot.bottom {
     background:
         linear-gradient(
             to bottom,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.25) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.25) 100%
         );
 }
 
@@ -4428,8 +4282,8 @@ overshoot.left {
     background:
         linear-gradient(
             to left,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.25) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.25) 100%
         );
 }
 
@@ -4437,8 +4291,8 @@ overshoot.left {
     background:
         linear-gradient(
             to top,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.075) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.075) 100%
         );
 }
 
@@ -4446,8 +4300,8 @@ overshoot.left {
     background:
         linear-gradient(
             to right,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.075) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.075) 100%
         );
 }
 
@@ -4455,8 +4309,8 @@ overshoot.left {
     background:
         linear-gradient(
             to bottom,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.075) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.075) 100%
         );
 }
 
@@ -4464,7 +4318,7 @@ overshoot.left {
     background:
         linear-gradient(
             to left,
-            alpha(@colorAccent, 0) 80%,
-            alpha(@colorAccent, 0.075) 100%
+            rgba($colorAccent, 0) 80%,
+            rgba($colorAccent, 0.075) 100%
         );
 }

@@ -1,0 +1,111 @@
+/* Copyright 2011-2018 elementary, Inc. (https://elementary.io)
+*
+* This file is part of the elementary GTK theme.
+*
+* The elementary GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The elementary GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+@import 'palette';
+
+/* Default color scheme */
+@define-color base_color white;
+@define-color bg_color shade (@base_color, 0.96);
+@define-color bg_highlight_color white;
+@define-color border_color alpha (@BLACK_900, 0.25);
+@define-color fg_color @BLACK_500;
+@define-color insensitive_color mix(@text_color, @bg_color, 0.5);
+@define-color inset_dark_color alpha (@BLACK_900, 0.06);
+@define-color inset_dark_color_backdrop alpha (@BLACK_900, 0.03);
+@define-color menu_separator alpha (@BLACK_900, 0.15);
+@define-color menu_separator_shadow alpha (white, 0.8);
+@define-color placeholder_text_color shade(@text_color, 2.5);
+@define-color selected_bg_color shade (@BLUEBERRY_300, 0.85);
+@define-color selected_fg_color white;
+@define-color text_color @BLACK_500;
+@define-color text_shadow_color alpha (white, 0.4);
+@define-color titlebar_color mix (@SILVER_300, @SILVER_100, 0.25);
+@define-color title_color shade (@titlebar_color, 0.55);
+@define-color title_shadow_color alpha (white, 0.6);
+@define-color tooltip_bg_color @BLACK_900;
+@define-color tooltip_fg_color white;
+@define-color decoration_border_color alpha (#000, 0.3);
+@define-color internal_element_color mix(@text_color, @base_color, 0.4);
+@define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
+
+$base_color: white;
+$bg_color: darken($base_color, 4%);
+$bg_highlight_color: white;
+$border_color: rgba($BLACK_900, 0.25);
+$fg_color: $BLACK_500;
+$text_color: $BLACK_500;
+$insensitive_color: mix($text_color, $bg_color, 95%);
+$inset_dark_color: rgba($BLACK_900, 0.06);
+$inset_dark_color_backdrop: rgba($BLACK_900, 0.03);
+$menu_separator: rgba($BLACK_900, 0.15);
+$menu_separator_shadow: rgba(white, 0.8);
+$placeholder_text_color: lighten($text_color, 50%);
+$selected_bg_color: darken($BLUEBERRY_300, 15%);
+$selected_fg_color: white;
+$text_shadow_color: rgba(white, 0.4);
+$titlebar_color: mix($SILVER_300, $SILVER_100, 75%);
+$title_color: darken($titlebar_color, 45%);
+$title_shadow_color: rgba(white, 0.6);
+$tooltip_bg_color: $BLACK_900;
+$tooltip_fg_color: white;
+$decoration_border_color: rgba(#000, 0.3);
+$internal_element_color: mix($text_color, $base_color, 60%);
+$internal_element_prelight: mix($text_color, $base_color, 80%);
+
+@import 'brand';
+
+/* Colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_bg_color @bg_color;
+@define-color attention_color @BLUEBERRY_500;
+@define-color link_color @BLUEBERRY_500;
+@define-color warning_color @BANANA_500;
+@define-color error_color @STRAWBERRY_500;
+@define-color success_color @LIME_500;
+@define-color insensitive_fg_color @SILVER_500;
+
+$theme_bg_color: $bg_color;
+$attention_color: $BLUEBERRY_500;
+$link_color: $BLUEBERRY_500;
+$warning_color: $BANANA_500;
+$error_color: $STRAWBERRY_500;
+$success_color: $LIME_500;
+$insensitive_fg_color: $SILVER_500;
+
+/* GTK NAMED COLORS */
+@define-color borders @border_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_text_color @text_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_base_color @base_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+@define-color insensitive_fg_color @insensitive_color;
+
+$borders: $border_color;
+$theme_fg_color: $fg_color;
+$theme_text_color: $text_color;
+$theme_bg_color: $bg_color;
+$theme_base_color: $base_color;
+$theme_selected_bg_color: $selected_bg_color;
+$theme_selected_fg_color: $selected_fg_color;
+$insensitive_fg_color: $insensitive_color;
+
+@import 'gtk-widgets';
+@import 'granite-widgets';
+@import 'apps';
+@import 'animate';

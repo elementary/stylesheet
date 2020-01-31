@@ -16,33 +16,35 @@
 * with the elementary GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-@import url("palette.css");
-@import url("brand.css");
+@import 'palette';
+@import 'brand-dark';
 
 /* Default color scheme */
-@define-color base_color white;
+@define-color base_color mix(@BLACK_500, @BLACK_300, 0.5);
 @define-color bg_color shade (@base_color, 0.96);
-@define-color bg_highlight_color white;
+@define-color bg_highlight_color shade (@bg_color, 1.4);
 @define-color border_color alpha (@BLACK_900, 0.25);
-@define-color fg_color @BLACK_500;
-@define-color insensitive_color mix(@text_color, @bg_color, 0.5);
-@define-color inset_dark_color alpha (@BLACK_900, 0.06);
+@define-color fg_color @SILVER_300;
+@define-color insensitive_color mix(@bg_color, @text_color, 0.5);
+@define-color inset_dark_color alpha (@BLACK_900, 0.03);
 @define-color inset_dark_color_backdrop alpha (@BLACK_900, 0.03);
-@define-color menu_separator alpha (@BLACK_900, 0.15);
-@define-color menu_separator_shadow alpha (white, 0.8);
-@define-color placeholder_text_color shade(@text_color, 2.5);
+@define-color menu_separator alpha (@BLACK_900, 0.25);
+@define-color menu_separator_shadow alpha (white, 0.05);
+@define-color placeholder_text_color shade(@text_color, 0.8);
 @define-color selected_bg_color shade (@BLUEBERRY_300, 0.85);
 @define-color selected_fg_color white;
-@define-color text_color @BLACK_500;
-@define-color text_shadow_color alpha (white, 0.4);
-@define-color titlebar_color mix (@SILVER_300, @SILVER_100, 0.25);
-@define-color title_color shade (@titlebar_color, 0.55);
-@define-color title_shadow_color alpha (white, 0.6);
+@define-color text_color @SILVER_100;
+@define-color text_shadow_color alpha (@BLACK_900, 0.4);
+@define-color titlebar_color shade (@base_color, 0.9);
+@define-color title_color shade (@text_color, 0.9);
+@define-color title_shadow_color alpha (@BLACK_900, 0.6);
 @define-color tooltip_bg_color @BLACK_900;
 @define-color tooltip_fg_color white;
-@define-color decoration_border_color alpha (#000, 0.3);
+@define-color decoration_border_color alpha (#000, 0.75);
 @define-color internal_element_color mix(@text_color, @base_color, 0.4);
-@define-color internal_element_prelight mix(@text_color, @base_color, 0.2);
+@define-color internal_element_prelight mix(@text_color, @base_color, 0.4);
+@define-color internal_element_insensitive mix(@internal_element_color, @base_color, 0.7);
+@define-color view_symbolic_color shade(@internal_element_color, 0.8);
 
 /* Colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
@@ -50,7 +52,7 @@
 @define-color link_color @BLUEBERRY_500;
 @define-color warning_color @BANANA_500;
 @define-color error_color @STRAWBERRY_500;
-@define-color success_color @LIME_500;
+@define-color success_color @LIME_300;
 @define-color insensitive_fg_color @SILVER_500;
 
 /* GTK NAMED COLORS */
@@ -63,7 +65,9 @@
 @define-color theme_selected_fg_color @selected_fg_color;
 @define-color insensitive_fg_color @insensitive_color;
 
-@import url("gtk-widgets.css");
-@import url("granite-widgets.css");
-@import url("apps.css");
-@import url("animate.css");
+@import 'gtk-widgets';
+@import 'gtk-widgets-dark';
+@import 'granite-widgets';
+@import 'granite-widgets-dark';
+@import 'apps';
+@import 'animate';

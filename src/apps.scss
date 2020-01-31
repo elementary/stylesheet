@@ -25,59 +25,43 @@
 
 .incognito.titlebar {
     background-image:
-        -gtk-icontheme(
-            "user-not-tracked-symbolic"
-        ),
+        -gtk-icontheme("user-not-tracked-symbolic"),
         linear-gradient(
             to bottom,
-            shade (
-                @colorPrimary,
-                1.04
-            ),
-            shade (
-                @colorPrimary,
-                0.94
-            )
+            shade($colorPrimary, 1.04),
+            shade($colorPrimary, 0.94)
         );
     background-size: 64px 64px, 100% 100%;
     background-position: 100px, 0, 0 0;
     background-repeat: no-repeat, no-repeat;
-    color: @text_shadow_color;
+    color: $text_shadow_color;
 }
 
 .incognito.titlebar:backdrop {
     background-image:
-        -gtk-icontheme(
-            "user-not-tracked-symbolic"
-        ),
+        -gtk-icontheme("user-not-tracked-symbolic"),
         linear-gradient(
-            shade (
-                @colorPrimary,
-                1.08
-            ),
-            shade (
-                @colorPrimary,
-                0.98
-            )
+            shade($colorPrimary, 1.08),
+            shade($colorPrimary, 0.98)
         );
 }
 
 .floating-bar {
-    background-color: alpha (#222, 0.9);
+    background-color: rgba(#222, 0.9);
     border-radius: 3px;
     border-width: 0;
     box-shadow:
-        0 1px 3px alpha (#000, 0.12),
-        0 1px 2px alpha (#000, 0.24);
+        0 1px 3px rgba(#000, 0.12),
+        0 1px 2px rgba(#000, 0.24);
     color: #fff;
     padding: 2px 0;
     margin: 6px;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
+    text-shadow: 0 1px 2px rgba(#000, 0.6);
 }
 
 .floating-bar label {
     color: #fff;
-    text-shadow: 0 1px 2px alpha (#000, 0.6);
+    text-shadow: 0 1px 2px rgba(#000, 0.6);
 }
 
 /********
@@ -86,51 +70,45 @@
 
 .pathbar:focus {
     box-shadow:
-        inset 0 0 0 1px alpha (@colorAccent, 0.23),
-        0 1px 0 alpha (@bg_highlight_color, 0.3);
-    border-color: alpha (@colorAccent, 0.8);
+        inset 0 0 0 1px rgba($colorAccent, 0.23),
+        0 1px 0 rgba($bg_highlight_color, 0.3);
+    border-color: rgba($colorAccent, 0.8);
 }
 
 .pathbar:active {
     background-image: none;
     background-color: transparent;
-    border-color: alpha (@colorAccent, 0.8);
-    box-shadow: inset 0 0 0 1px alpha (@colorAccent, 0.23);
+    border-color: rgba($colorAccent, 0.8);
+    box-shadow: inset 0 0 0 1px rgba($colorAccent, 0.23);
 }
 
 .pathbar image {
-    color: @internal_element_color;
+    color: $internal_element_color;
 }
 
 .pathbar image:hover {
-    color: @internal_element_prelight;
+    color: $internal_element_prelight;
 }
 
 dialog entry.pathbar {
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                @base_color,
-                0.93
-            ),
-            shade (
-                @base_color,
-                0.97
-            )
+            shade($base_color, 0.93),
+            shade($base_color, 0.97)
         );
-    border-color: @border_color;
+    border-color: $border_color;
     box-shadow:
-        inset 0 1px 0 0 alpha (@inset_dark_color, 0.7),
-        inset 0 0 0 1px alpha (@inset_dark_color, 0.3),
-        0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.5);
+        inset 0 1px 0 0 rgba($inset_dark_color, 0.7),
+        inset 0 0 0 1px rgba($inset_dark_color, 0.3),
+        0 1px 0 0 rgba(lighten($colorPrimary, 40%), 0.5);
 }
 
 dialog entry.pathbar:focus {
-    border-color: alpha (@colorAccent, 0.8);
+    border-color: rgba($colorAccent, 0.8);
     box-shadow:
-        inset 0 0 0 1px alpha (@colorAccent, 0.23),
-        0 1px 0 0 alpha (shade (@colorPrimary, 1.4), 0.5);
+        inset 0 0 0 1px rgba($colorAccent, 0.23),
+        0 1px 0 0 rgba(lighten($colorPrimary, 40%), 0.5);
 }
 
 /*******
@@ -144,29 +122,26 @@ dialog entry.pathbar:focus {
     background-image:
         linear-gradient(
             to bottom,
-            @bg_color,
-            @bg_color 80%,
-            shade (
-                @bg_color,
-                0.94
-            )
+            $bg_color,
+            $bg_color 80%,
+            shade($bg_color, 0.94)
         );
     box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.9),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.3),
-        0 0 0 1px alpha (#000, 0.2),
-        0 3px 6px alpha (#000, 0.16),
-        0 5px 5px -3px alpha (#000, 0.4);
+        inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
+        inset 0 1px 0 0 rgba($bg_highlight_color, 0.9),
+        inset 0 -1px 0 0 rgba($bg_highlight_color, 0.3),
+        0 0 0 1px rgba(#000, 0.2),
+        0 3px 6px rgba(#000, 0.16),
+        0 5px 5px -3px rgba(#000, 0.4);
 }
 
 .gala-notification .title,
 .gala-notification .label {
-    color: @text_color;
+    color: $text_color;
 }
 
 .gala-notification image {
-    color: alpha (@text_color, 0.8);
+    color: rgba($text_color, 0.8);
 }
 
 .gala-button {
@@ -181,13 +156,13 @@ dialog entry.pathbar:focus {
             #3e3e3e
         );
     box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.02),
-        inset 0 1px 0 0 alpha (#fff, 0.07),
-        inset 0 -1px 0 0 alpha (#fff, 0.01),
-        0 0 0 1px alpha (#000, 0.4),
-        0 3px 6px alpha (#000, 0.16),
-        0 3px 6px alpha (#000, 0.23);
-    text-shadow: 0 1px 1px alpha (#000, 0.6);
+        inset 0 0 0 1px rgba(#fff, 0.02),
+        inset 0 1px 0 0 rgba(#fff, 0.07),
+        inset 0 -1px 0 0 rgba(#fff, 0.01),
+        0 0 0 1px rgba(#000, 0.4),
+        0 3px 6px rgba(#000, 0.16),
+        0 3px 6px rgba(#000, 0.23);
+    text-shadow: 0 1px 1px rgba(#000, 0.6);
 }
 
 /********
@@ -215,12 +190,12 @@ paned statusbar frame {
 }
 
 .login entry *:selected {
-    background-color: shade (@base_color, 0.8);
-    color: @text_color;
+    background-color: shade($base_color, 0.8);
+    color: $text_color;
 }
 
 .login entry *:selected:focus {
-    background-color: alpha (@colorAccent, 0.9);
-    color: @selected_fg_color;
+    background-color: rgba($colorAccent, 0.9);
+    color: $selected_fg_color;
     text-shadow: none;
 }

@@ -23,9 +23,21 @@
 @define-color accent_color_700 @BLUEBERRY_700;
 @define-color accent_color_900 @BLUEBERRY_900;
 
+$accent_color_100: $BLUEBERRY_100;
+$accent_color_300: $BLUEBERRY_300;
+$accent_color_500: $BLUEBERRY_500;
+$accent_color_700: $BLUEBERRY_700;
+$accent_color_900: $BLUEBERRY_900;
+
 /* Brand Colors */
 @define-color colorPrimary @titlebar_color;
 @define-color colorAccent @selected_bg_color;
 @define-color textColorPrimary mix (@colorPrimary, @text_color, 0.75);
 @define-color textColorPrimaryShadow alpha (shade (@colorPrimary, 1.4), 0.4);
 @define-color tab_base_color @base_color;
+
+$colorPrimary: $titlebar_color;
+$colorAccent: $selected_bg_color;
+$textColorPrimary: mix($colorPrimary, $text_color, 0.75);
+$textColorPrimaryShadow: rgba(lighten($colorPrimary, 40%), 0.4);
+$tab_base_color: $base_color;

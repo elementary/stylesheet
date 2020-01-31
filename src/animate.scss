@@ -22,19 +22,19 @@
 }
 
 .pulse.attention {
-    color: @attention_color;
+    color: $attention_color;
 }
 
 .pulse.success {
-    color: @success_color;
+    color: $success_color;
 }
 
 .pulse.warning {
-    color: @warning_color;
+    color: $warning_color;
 }
 
 .pulse.error {
-    color: @error_color;
+    color: $error_color;
 }
 
 @keyframes pulse {
