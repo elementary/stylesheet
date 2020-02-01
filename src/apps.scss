@@ -28,8 +28,8 @@
         -gtk-icontheme("user-not-tracked-symbolic"),
         linear-gradient(
             to bottom,
-            shade($colorPrimary, 1.04),
-            shade($colorPrimary, 0.94)
+            lighten($colorPrimary, 4%),
+            darken($colorPrimary, 6%)
         );
     background-size: 64px 64px, 100% 100%;
     background-position: 100px, 0, 0 0;
@@ -41,8 +41,8 @@
     background-image:
         -gtk-icontheme("user-not-tracked-symbolic"),
         linear-gradient(
-            shade($colorPrimary, 1.08),
-            shade($colorPrimary, 0.98)
+            lighten($colorPrimary, 8%),
+            darken($colorPrimary, 2%)
         );
 }
 
@@ -94,8 +94,8 @@ dialog entry.pathbar {
     background-image:
         linear-gradient(
             to bottom,
-            shade($base_color, 0.93),
-            shade($base_color, 0.97)
+            darken($base_color, 7%),
+            darken($base_color, 3%)
         );
     border-color: $border_color;
     box-shadow:
@@ -124,7 +124,7 @@ dialog entry.pathbar:focus {
             to bottom,
             $bg_color,
             $bg_color 80%,
-            shade($bg_color, 0.94)
+            darken($bg_color, 6%)
         );
     box-shadow:
         inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
@@ -190,7 +190,7 @@ paned statusbar frame {
 }
 
 .login entry *:selected {
-    background-color: shade($base_color, 0.8);
+    background-color: darken($base_color, 20%);
     color: $text_color;
 }
 

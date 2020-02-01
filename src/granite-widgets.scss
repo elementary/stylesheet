@@ -110,7 +110,7 @@
 ********/
 
 .deck {
-    background-color: shade($bg_color, 0.92);
+    background-color: darken($bg_color, 8%);
 }
 
 .card {
@@ -141,7 +141,7 @@
 
 .checkerboard,
 .checkerboard-layout {
-    background-color: shade ($bg_color, 0.95);
+    background-color: darken($bg_color, 5%);
     background-image:
         linear-gradient(
             45deg,
@@ -344,10 +344,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $STRAWBERRY_700,
-                1.3
-            ),
+            lighten($STRAWBERRY_700, 30%),
             $STRAWBERRY_700
         );
     box-shadow:
@@ -355,7 +352,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($STRAWBERRY_700, 0.9);
+    border-color: darken($STRAWBERRY_700, 10%);
 }
 
 .storage-bar .fill-block.ext4 {
@@ -363,10 +360,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $LIME_500,
-                1.3
-            ),
+            lighten($LIME_500, 30%),
             $LIME_500
         );
     box-shadow:
@@ -374,7 +368,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($LIME_500, 0.9);
+    border-color: darken($LIME_500, 10%);
 }
 
 .storage-bar .fill-block.ext3 {
@@ -382,10 +376,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $LIME_500,
-                1.3
-            ),
+            lighten($LIME_500, 30%),
             $LIME_500
         );
     box-shadow:
@@ -393,7 +384,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($LIME_500, 0.9);
+    border-color: darken($LIME_500, 10%);
 }
 
 .storage-bar .fill-block.ext2 {
@@ -406,10 +397,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $BANANA_500,
-                1.3
-            ),
+            lighten($BANANA_500, 30%),
             $BANANA_500
         );
     box-shadow:
@@ -417,7 +405,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($BANANA_500, 0.9);
+    border-color: darken($BANANA_500, 10%);
 }
 
 .storage-bar .fill-block.btrfs {
@@ -425,10 +413,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $BLUEBERRY_700,
-                1.3
-            ),
+            lighten($BLUEBERRY_700, 30%),
             $BLUEBERRY_700
         );
     box-shadow:
@@ -436,7 +421,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($BLUEBERRY_700, 0.9);
+    border-color: darken($BLUEBERRY_700, 10%);
 }
 
 .storage-bar .fill-block.xfs {
@@ -444,10 +429,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $GRAPE_900,
-                1.3
-            ),
+            lighten($GRAPE_900, 30%),
             $GRAPE_900
         );
     box-shadow:
@@ -455,7 +437,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($GRAPE_900, 0.9);
+    border-color: darken($GRAPE_900, 10%);
 }
 
 .storage-bar .fill-block.ntfs {
@@ -463,10 +445,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $ORANGE_500,
-                1.3
-            ),
+            lighten($ORANGE_500, 30%),
             $ORANGE_500
         );
     box-shadow:
@@ -474,7 +453,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($ORANGE_500, 0.9);
+    border-color: darken($ORANGE_500, 10%);
 }
 
 .storage-bar .fill-block.luks {
@@ -482,10 +461,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $GRAPE_500,
-                1.3
-            ),
+            lighten($GRAPE_500, 30%),
             $GRAPE_500
         );
     box-shadow:
@@ -493,7 +469,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($GRAPE_500, 0.9);
+    border-color: darken($GRAPE_500, 10%);
 }
 
 .storage-bar .fill-block.lvm {
@@ -501,10 +477,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $GRAPE_700,
-                1.3
-            ),
+            lighten($GRAPE_700, 30%),
             $GRAPE_700
         );
     box-shadow:
@@ -512,7 +485,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($GRAPE_700, 0.9);
+    border-color: darken($GRAPE_700, 10%);
 }
 
 .storage-bar .fill-block.none {
@@ -520,10 +493,7 @@
     background-image:
         linear-gradient(
             to bottom,
-            shade (
-                $BLUEBERRY_500,
-                1.3
-            ),
+            lighten($BLUEBERRY_500, 30%),
             $BLUEBERRY_500
         );
     box-shadow:
@@ -531,7 +501,7 @@
         inset 0 1px 0 0 rgba(#fff, 0.25),
         inset 0 -1px 0 0 rgba(#fff, 0.1),
         0 1px 0 0 rgba($bg_highlight_color, 0.15);
-    border-color: shade ($BLUEBERRY_500, 0.9);
+    border-color: darken($BLUEBERRY_500, 10%);
 }
 
 /***********
@@ -637,11 +607,7 @@ scale.warmth trough {
     background-image:
         linear-gradient(
             to right,
-            mix (
-                $bg_color,
-                $ORANGE_100,
-                0.5
-            ),
+            mix($bg_color, $ORANGE_100, 50%),
             $ORANGE_500
         );
 }
@@ -650,7 +616,7 @@ scale.warmth:dir(rtl) trough {
     background-image:
         linear-gradient(
             to left,
-            mix($bg_color, $ORANGE_100, 0.5),
+            mix($bg_color, $ORANGE_100, 50%),
             $ORANGE_500
         );
 }

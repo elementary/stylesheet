@@ -1,0 +1,26 @@
+/* Emulate the window frame & csd alignment */
+.window-frame {
+    border-radius: 4px 4px 0 0;
+    box-shadow:
+        0 0 0 1px
+        rgba(0, 0, 0, 0.3),0 12px 30px -6px
+        rgba(0, 0, 0, 0.8);
+    margin: 8px;
+    flex-direction: row;
+}
+
+.titlebar {
+    display: flex;
+}
+
+.titlebutton {
+    display: flex;
+    align-self: center;
+}
+
+.title {
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    align-self: center;
+}

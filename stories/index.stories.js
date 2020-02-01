@@ -1,17 +1,25 @@
-export default {
-  title: 'Demo',
-};
+import '../elementary/gtk-3.0/gtk.css';
+import './icons/icons.css';
 
-export const Heading = () => '<h1>Hello World</h1>';
+export default { title: 'Buttons' };
 
 export const Button = () => `
-<button class="button">
-  <gtklabel>Regular Button</gtklabel>
+<button>
+  <label>Regular Button</label>
 </button>
-<button class="destructive-action button">
-  <gtklabel>Destructive Action Button</gtklabel>
+<button class="circular">
+  <label>C</label>
 </button>
-<button class="suggested-action button">
-  <gtklabel>Suggested Action Button</gtklabel>
+<button class="flat">
+  <label>Flat Button</label>
 </button>
-`
+<button class="flat circular">
+  <label>C</label>
+</button>
+<button class="destructive-action">
+  <label>Destructive Action Button</label>
+</button>
+<button class="suggested-action">
+  <label>Suggested Action Button</label>
+</button>
+`;

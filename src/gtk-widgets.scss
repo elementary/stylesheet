@@ -732,8 +732,8 @@ scale slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade($SILVER_100, 1.05),
-            shade($SILVER_100, 0.95)
+            lighten($SILVER_100, 5%),
+            darken($SILVER_100, 5%)
         );
     border-radius: 12px;
     box-shadow:
@@ -751,18 +751,8 @@ scale slider:focus {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $SILVER_100,
-                1.05
-            ),
-            shade(
-                mix (
-                    $SILVER_100,
-                    $colorAccent,
-                    0.1
-                ),
-                0.95
-            )
+            lighten($SILVER_100, 5%),
+            darken(mix($SILVER_100, $colorAccent, 90%), 5%)
         );
     box-shadow:
         inset 0 0 0 1px rgba(#fff, 0.05),
@@ -777,14 +767,8 @@ scale slider:backdrop {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $SILVER_100,
-                1.03
-            ),
-            shade(
-                $SILVER_100,
-                0.97
-            )
+            lighten($SILVER_100, 3%),
+            darken($SILVER_100, 3%)
         );
     box-shadow:
         inset 0 0 0 1px rgba(#fff, 0.1),
@@ -828,7 +812,7 @@ scale.vertical trough {
 }
 
 scale mark indicator {
-    color: mix ($bg_color, $text_color, 0.3);
+    color: mix($bg_color, $text_color, 70%);
 }
 
 scale.horizontal mark indicator {
@@ -1170,7 +1154,7 @@ toolbar.secondary-toolbar button.flat:disabled,
     background-image: none;
     background-color: transparent;
     box-shadow: none;
-    color: shade($colorAccent, 0.65);
+    color: darken($colorAccent, 35%);
 }
 
 .secondary-toolbar.toolbar .button:active,
@@ -1381,14 +1365,8 @@ combobox button:last-child:not(:only-child) {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $base_color,
-                0.93
-            ),
-            shade(
-                $base_color,
-                0.97
-            )
+            darken($base_color, 7%),
+            darken($base_color, 3%)
         );
     box-shadow:
         inset 0 1px 0 0 rgba($inset_dark_color, 0.7),
@@ -1409,10 +1387,7 @@ combobox button:last-child:not(:only-child) {
         ),
         linear-gradient(
             to bottom,
-            shade(
-                $base_color,
-                0.9
-            ),
+            darken($base_color, 10%),
             $base_color
         );
     box-shadow:
@@ -1500,7 +1475,7 @@ combobox button:last-child:not(:only-child) {
 
 .linked.vertical entry,
 .linked.vertical .entry {
-    background-color: shade($base_color, 0.97);
+    background-color: darken($base_color, 3%);
     background-image: none;
     border-top-width: 0;
 }
@@ -1510,14 +1485,8 @@ combobox button:last-child:not(:only-child) {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $base_color,
-                0.93
-            ),
-            shade(
-                $base_color,
-                0.97
-            )
+            darken($base_color, 7%),
+            darken($base_color, 3%)
         );
     border-top-width: 1px;
 }
@@ -1568,9 +1537,9 @@ notebook {
 }
 
 notebook.frame {
-    border: 1px solid shade($titlebar_color, 0.6);
+    border: 1px solid darken($titlebar_color, 40%);
     border-radius: 0 0 2.5px 2.5px;
-    background-color: shade($titlebar_color, 1.06);
+    background-color: lighten($titlebar_color, 6%);
     background-clip: border-box;
 }
 
@@ -1579,25 +1548,13 @@ notebook header {
     background-image:
         linear-gradient(
             to bottom,
-            rgba(
-                #000,
-                0.1
-            ),
-            rgba(
-                #000,
-                0
-            ) 3px
+            rgba(#000, 0.1),
+            rgba(#000, 0) 3px
         ),
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                0.91
-            ),
-            shade(
-                $titlebar_color,
-                0.96
-            )
+            darken($titlebar_color, 9%),
+            darken($titlebar_color, 4%)
         );
     border-style: solid;
     border-width: 0 0 1px;
@@ -1606,18 +1563,12 @@ notebook header {
 }
 
 notebook header:backdrop {
-    background-color: shade($titlebar_color, 1.02);
+    background-color: lighten($titlebar_color, 2%);
     background-image:
         linear-gradient(
             to bottom,
-            rgba(
-                #000,
-                0.08
-            ),
-            rgba(
-                #000,
-                0
-            ) 3px
+            rgba(#000, 0.08),
+            rgba(#000, 0) 3px
         );
     border-color: darken($titlebar_color, 24%);
 }
@@ -1631,7 +1582,7 @@ notebook header button {
 }
 
 notebook image {
-    color: shade($title_color, 0.75);
+    color: darken($title_color, 25%);
 }
 
 notebook image:disabled {
@@ -1653,7 +1604,7 @@ notebook tab {
     border-radius: 0;
     border-style: solid;
     border-width: 0 1px;
-    color: shade($text_color, 1.12);
+    color: lighten($text_color, 12%);
     margin-right: -1px;
     padding: 3px;
 }
@@ -1675,14 +1626,8 @@ notebook tab:checked {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                0.94
-            ),
-            shade(
-                $titlebar_color,
-                0.9
-            )
+            darken($titlebar_color, 6%),
+            darken($titlebar_color, 10%)
         );
     border-color: darken($titlebar_color, 38%);
     border-image: none;
@@ -1700,23 +1645,17 @@ notebook tab:checked:backdrop {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                1.04
-            ),
-            shade(
-                $titlebar_color,
-                1.02
-            )
+            lighten($titlebar_color, 4%),
+            lighten($titlebar_color, 2%)
         );
-    border-color: shade($titlebar_color, 0.76);
+    border-color: darken($titlebar_color, 24%);
     box-shadow:
         inset 0 0 0 1px rgba($bg_highlight_color, 0.2),
         0 0 0 1px rgba(#000, 0.1);
 }
 
 notebook tab > image {
-    color: shade($titlebar_color, 0.35);
+    color: darken($titlebar_color, 65%);
 }
 
 notebook viewport {
@@ -1752,7 +1691,7 @@ notebook tab label:backdrop {
 }
 
 .inline-toolbar notebook header {
-    background-color: shade($tab_base_color, 0.95);
+    background-color: darken($tab_base_color, 5%);
     background-image:
         linear-gradient(
             to bottom,
@@ -1773,7 +1712,7 @@ notebook tab label:backdrop {
                 0.05
             )
         );
-    border-color: shade($tab_base_color, 0.78);
+    border-color: darken($tab_base_color, 22%);
 }
 
 .inline-toolbar notebook tab {
@@ -1784,7 +1723,7 @@ notebook tab label:backdrop {
 .inline-toolbar notebook tab:checked {
     background-color: $tab_base_color;
     background-image: none;
-    border-color: shade($tab_base_color, 0.78);
+    border-color: darken($tab_base_color, 22%);
     box-shadow:
         -1px 0 1px rgba(#000, 0.05),
         1px 0 1px rgba(#000, 0.05);
@@ -1904,8 +1843,8 @@ window.popup {
 menubar,
 .menubar {
     color: $text_color;
-    background-color: shade($titlebar_color, 0.94);
-    border: 1px solid shade($titlebar_color, 0.68);
+    background-color: darken($titlebar_color, 6%);
+    border: 1px solid darken($titlebar_color, 32%);
     border-width: 0 0 1px;
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.2),
@@ -1915,8 +1854,8 @@ menubar,
 
 menubar:backdrop,
 .menubar:backdrop {
-    background-color: shade($titlebar_color, 0.98);
-    border-color: shade($titlebar_color, 0.78);
+    background-color: darken($titlebar_color, 2%);
+    border-color: darken($titlebar_color, 22%);
 }
 
 .titlebar .menubar {
@@ -2039,20 +1978,14 @@ radio {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $base_color,
-                0.99
-            ),
-            shade(
-                $base_color,
-                0.97
-            )
+            darken($base_color, 1%),
+            darken($base_color, 3%)
         );
     border: 1px solid $border_color;
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.5),
         inset 0 0 0 1px rgba($bg_highlight_color, 0.2),
-        0 1px 1px 0 shade($bg_color, 0.95);
+        0 1px 1px 0 darken($bg_color, 5%);
     min-height: 12px;
     min-width: 12px;
     -gtk-icon-source: none;
@@ -2097,8 +2030,8 @@ switch:focus slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade($SILVER_100, 1.05),
-            shade(mix($SILVER_100, $colorAccent, 0.1), 0.95)
+            lighten($SILVER_100, 5%),
+            darken(mix($SILVER_100, $colorAccent, 90%), 5%)
         );
     border-color: $colorAccent;
     box-shadow:
@@ -2123,7 +2056,7 @@ switch:checked {
                 0
             )
         );
-    border-color: shade($colorAccent, 0.85);
+    border-color: darken($colorAccent, 15%);
 }
 
 check:checked,
@@ -2131,20 +2064,17 @@ radio:checked {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $colorAccent,
-                1.2
-            ),
+            lighten($colorAccent, 20%),
             $colorAccent
         );
-    border-color: shade($colorAccent, 0.9);
+    border-color: darken($colorAccent, 10%);
     box-shadow:
-        inset 0 0 0 1px shade($colorAccent, 1.15),
-        inset 0 1px 0 0 shade($colorAccent, 1.3),
-        0 1px 1px 0 shade($bg_color, 0.85);
+        inset 0 0 0 1px lighten($colorAccent, 15%),
+        inset 0 1px 0 0 lighten($colorAccent, 30%),
+        0 1px 1px 0 darken($bg_color, 15%);
     color: #fff;
     -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-    -gtk-icon-shadow: 0 1px 1px shade($colorAccent, 0.85);
+    -gtk-icon-shadow: 0 1px 1px darken($colorAccent, 15%);
 }
 
 check:indeterminate,
@@ -2164,18 +2094,18 @@ radio:focus {
 
 check:checked:focus,
 radio:checked:focus {
-    border-color: shade($colorAccent, 0.8);
+    border-color: darken($colorAccent, 20%);
     box-shadow:
-        inset 0 0 0 1px shade($colorAccent, 1.15),
-        inset 0 1px 0 0 shade($colorAccent, 1.3),
+        inset 0 0 0 1px lighten($colorAccent, 15%),
+        inset 0 1px 0 0 lighten($colorAccent, 30%),
         0 0 2px 1px rgba($colorAccent, 0.5),
-        0 1px 1px 0 shade($bg_color, 0.85);
+        0 1px 1px 0 darken($bg_color, 15%);
 }
 
 check:disabled,
 radio:disabled {
-    background: shade($bg_color, 0.95);
-    border-color: shade($bg_color, 0.8);
+    background: darken($bg_color, 5%);
+    border-color: darken($bg_color, 20%);
     box-shadow: 0 1px 0 0 rgba($bg_highlight_color, 0.3);
 }
 
@@ -2185,14 +2115,14 @@ switch:disabled {
 
 check:checked:disabled,
 radio:checked:disabled {
-    color: shade($bg_color, 0.75);
+    color: darken($bg_color, 25%);
     -gtk-icon-shadow: 0 1px 1px rgba($bg_highlight_color, 0.3);
 }
 
 switch:checked:disabled {
     background-image: none;
-    background-color: mix ($bg_color, $colorAccent, 0.5);
-    border-color: shade(mix ($bg_color, $colorAccent, 0.5), 0.75);
+    background-color: mix($bg_color, $colorAccent, 50%);
+    border-color: darken(mix($bg_color, $colorAccent, 50%), 25%);
 }
 
 check:checked:backdrop:not(:disabled),
@@ -2200,16 +2130,16 @@ radio:checked:backdrop:not(:disabled) {
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.3),
         inset 0 0 0 1px rgba($bg_highlight_color, 0.1),
-        0 1px 1px 0 shade($bg_color, 0.95);
+        0 1px 1px 0 darken($bg_color, 5%);
 }
 
 check:checked:backdrop:not(:disabled),
 radio:checked:backdrop:not(:disabled),
 switch:checked:backdrop {
     background-image: none;
-    background-color: shade($bg_color, 0.8);
-    border-color: shade($bg_color, 0.65);
-    -gtk-icon-shadow: 0 1px 1px shade($bg_color, 0.65);
+    background-color: darken($bg_color, 20%);
+    border-color: darken($bg_color, 35%);
+    -gtk-icon-shadow: 0 1px 1px darken($bg_color, 35%);
 }
 
 check {
@@ -2243,8 +2173,8 @@ switch slider {
     background-image:
         linear-gradient(
             to bottom,
-            shade($SILVER_100, 1.05),
-            shade($SILVER_100, 0.95)
+            lighten($SILVER_100, 5%),
+            darken($SILVER_100, 5%)
         );
     border: 1px solid rgba(#000, 0.2);
     border-radius: 50%;
@@ -2282,7 +2212,7 @@ radiobutton.image-button:checked:not(:backdrop) {
 }
 
 radiobutton.image-button:checked:not(:backdrop) image {
-    color: mix ($colorAccent, $text_color, 0.3);
+    color: mix($colorAccent, $text_color, 70%);
 }
 
 radiobutton.image-button:checked:backdrop {
@@ -2298,7 +2228,7 @@ toolbar,
 .toolbar {
     -GtkWidget-window-dragging: true;
     padding: 3px;
-    border: 1px solid shade($titlebar_color, 0.62);
+    border: 1px solid darken($titlebar_color, 38%);
     border-width: 0 0 1px;
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.2),
@@ -2306,14 +2236,8 @@ toolbar,
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                0.94
-            ),
-            shade(
-                $titlebar_color,
-                0.9
-            )
+            darken($titlebar_color, 6%),
+            darken($titlebar_color, 10%)
         );
     text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
@@ -2321,9 +2245,9 @@ toolbar,
 
 toolbar:backdrop,
 .toolbar:backdrop {
-    background-color: shade($titlebar_color, 1.04);
+    background-color: lighten($titlebar_color, 4%);
     background-image: none;
-    border-color: shade($titlebar_color, 0.7);
+    border-color: darken($titlebar_color, 30%);
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.2),
         inset 0 -1px 0 0 rgba($bg_highlight_color, 0.4);
@@ -2331,7 +2255,7 @@ toolbar:backdrop,
 }
 
 toolbar image {
-    color: mix ($titlebar_color, $text_color, 0.85);
+    color: mix($titlebar_color, $text_color, 15%);
     -gtk-icon-shadow: 0 1px $title_shadow_color;
 }
 
@@ -2341,7 +2265,7 @@ toolbar image:disabled {
 }
 
 toolbar image:backdrop {
-    color: mix ($titlebar_color, $text_color, 0.5);
+    color: mix($titlebar_color, $text_color, 50%);
     -gtk-icon-shadow: none;
 }
 
@@ -2357,19 +2281,13 @@ toolbar.secondary-toolbar,
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                0.93
-            ),
-            shade(
-                $titlebar_color,
-                0.9
-            )
+            darken($titlebar_color, 7%),
+            darken($titlebar_color, 10%)
         );
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.3),
         inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
-    border-color: shade($titlebar_color, 0.6);
+    border-color: darken($titlebar_color, 40%);
     text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
@@ -2379,13 +2297,10 @@ toolbar.secondary-toolbar:backdrop,
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                1.04
-            ),
+            lighten($titlebar_color, 4%),
             $titlebar_color
         );
-    border-color: shade($titlebar_color, 0.76);
+    border-color: darken($titlebar_color, 24%);
     color: $insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -2404,16 +2319,13 @@ toolbar.secondary-toolbar button,
 toolbar.bottom-toolbar,
 .bottom-toolbar.toolbar {
     padding: 8px;
-    border: 1px solid shade($titlebar_color, 0.72);
+    border: 1px solid darken($titlebar_color, 28%);
     border-width: 1px 0 0;
     background-image:
         linear-gradient(
             to bottom,
             $titlebar_color,
-            shade(
-                $titlebar_color,
-                0.94
-            )
+            darken($titlebar_color, 6%)
         );
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.5),
@@ -2485,14 +2397,11 @@ actionbar {
         linear-gradient(
             to bottom,
             $titlebar_color,
-            shade(
-                $titlebar_color,
-                0.94
-            )
+            darken($titlebar_color, 6%)
         );
     border-style: solid;
     border-width: 1px 0 0;
-    border-top-color: shade($bg_color, 0.58);
+    border-top-color: darken($bg_color, 42%);
     box-shadow:
         inset 0 0 0 1px rgba($bg_highlight_color, 0.05),
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.45),
@@ -2503,7 +2412,7 @@ actionbar {
 dialog actionbar {
     background-image: none;
     background-color: $bg_color;
-    border-top-color: shade($bg_color, 0.8);
+    border-top-color: darken($bg_color, 20%);
     border-radius: 0 0 4px 4px;
 }
 
@@ -2533,7 +2442,7 @@ actionbar .subtitle {
 
 .inline-toolbar,
 .inline-toolbar:backdrop {
-    border-color: shade($bg_color, 0.75);
+    border-color: darken($bg_color, 25%);
     border-width: 0 1px 1px;
     box-shadow: none;
     background-color: $bg_color;
@@ -2566,7 +2475,7 @@ paned .inline-toolbar:backdrop,
     border: none;
     border-radius: 0;
     box-shadow: none;
-    color: shade($text_color, 1.25);
+    color: lighten($text_color, 25%);
     padding: 3px;
     text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
@@ -2600,19 +2509,13 @@ searchbar,
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                0.96
-            ),
-            shade(
-                $titlebar_color,
-                0.9
-            )
+            darken($titlebar_color, 4%),
+            darken($titlebar_color, 10%)
         );
     box-shadow:
         inset 0 1px 0 0 rgba($bg_highlight_color, 0.3),
         inset 0 -1px 0 0 rgba($bg_highlight_color, 0.2);
-    border-color: shade($titlebar_color, 0.6);
+    border-color: darken($titlebar_color, 40%);
     text-shadow: 0 1px rgba($bg_highlight_color, 0.4);
     -gtk-icon-shadow: 0 1px rgba($bg_highlight_color, 0.4);
 }
@@ -2623,13 +2526,10 @@ searchbar:backdrop,
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $titlebar_color,
-                1.04
-            ),
+            lighten($titlebar_color, 4%),
             $titlebar_color
         );
-    border-color: shade($titlebar_color, 0.76);
+    border-color: darken($titlebar_color, 24%);
     color: $insensitive_color;
     -gtk-icon-effect: dim;
 }
@@ -2641,7 +2541,7 @@ dialog .search-bar,
 dialog .search-bar:backdrop {
     background-image: none;
     background-color: $bg_color;
-    border-color: shade($bg_color, 0.6);
+    border-color: darken($bg_color, 40%);
     box-shadow: none;
 }
 
@@ -2697,7 +2597,7 @@ button.suggested-action:checked,
 
 .titlebar button.suggested-action:not(:disabled) label:backdrop,
 .titlebar button.suggested-action:not(:disabled) image:backdrop {
-    color: mix ($selected_bg_color, $selected_fg_color, 0.8);
+    color: mix($selected_bg_color, $selected_fg_color, 20%);
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -2752,7 +2652,7 @@ button.destructive-action:not(:disabled) image:hover,
 
 .titlebar button.destructive-action:not(:disabled) label:backdrop,
 .titlebar button.destructive-action:not(:disabled) image:backdrop {
-    color: shade($error_color, 1.9);
+    color: lighten($error_color, 90%);
     text-shadow: none;
     -gtk-icon-shadow: none;
 }
@@ -2883,8 +2783,8 @@ button:active:disabled,
     background-image:
         linear-gradient(
             to bottom,
-            shade($bg_color, 0.85),
-            shade($bg_color, 0.94) 20%,
+            darken($bg_color, 15%),
+            darken($bg_color, 6%) 20%,
             $bg_color
         );
     box-shadow:
@@ -2910,13 +2810,13 @@ GtkAssistant .sidebar .highlight {
 }
 
 GtkAssistant .sidebar {
-    background-color: shade($bg_color, 0.97);
-    border-color: shade($bg_color, 0.8);
+    background-color: darken($bg_color, 3%);
+    border-color: darken($bg_color, 20%);
     border-style: solid;
     border-width: 0 1px 0 0;
-    color: mix ($fg_color, $bg_color, 0.4);
+    color: mix($fg_color, $bg_color, 60%);
     padding: 12px;
-    text-shadow: 0 1px shade($bg_color, 1.04);
+    text-shadow: 0 1px lighten($bg_color, 4%);
 }
 
 /*****************************
@@ -2969,7 +2869,7 @@ popover treeview.view row:selected,
 .view:selected,
 treeview row:focus,
 .popover treeview.view row:selected {
-    background-color: shade($base_color, 0.8);
+    background-color: darken($base_color, 20%);
     color: $text_color;
 }
 
@@ -3080,10 +2980,7 @@ column-header .button {
     background-image:
         linear-gradient(
             to bottom,
-            shade(
-                $base_color,
-                0.88
-            ),
+            darken($base_color, 12%),
             $base_color
         );
     font-weight: bold;
@@ -3100,7 +2997,7 @@ column-header .button:hover {
     background-image:
         linear-gradient(
             to bottom,
-            shade($base_color, 0.8),
+            darken($base_color, 20%),
             $base_color
         );
 }
@@ -3115,18 +3012,18 @@ column-header .button:backdrop:hover {
     background-image:
         linear-gradient(
             to bottom,
-            shade($bg_color, 0.92),
+            darken($bg_color, 8%),
             $bg_color
         );
 }
 
 treeview header button label {
     padding-left: 3px;
-    color: shade($text_color, 1.8);
+    color: lighten($text_color, 80%);
 }
 
 treeview header button:backdrop label {
-    color: shade($text_color, 2.8);
+    color: lighten($text_color, 80%);
 }
 
 /*************
@@ -3174,7 +3071,7 @@ row:selected,
 row:selected:backdrop,
 .list-row:selected,
 .list-row:selected:backdrop {
-    background-color: shade($base_color, 0.8);
+    background-color: darken($base_color, 20%);
     color: $text_color;
     text-shadow: none;
     -gtk-icon-shadow: none;
@@ -3220,22 +3117,13 @@ row:selected:focus image {
         linear-gradient(
             to bottom,
             $bg_color,
-            shade(
-                $bg_color,
-                0.94
-            )
+            darken($bg_color, 6%)
         );
     border-image:
         linear-gradient(
             to bottom,
-            shade(
-                $base_color,
-                0.86
-            ),
-            shade(
-                $base_color,
-                0.7
-            )
+            darken($base_color, 14%),
+            darken($base_color, 30%)
         ) 1 0 1 0;
 }
 
@@ -3277,8 +3165,8 @@ row:selected:focus image {
 .sidebar list,
 .source-list,
 .source-list.view {
-    background-color: shade($bg_color, 0.92);
-    color: mix ($bg_color, $text_color, 0.77);
+    background-color: darken($bg_color, 8%);
+    color: mix($bg_color, $text_color, 23%);
     -gtk-icon-style: regular;
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
@@ -3292,7 +3180,7 @@ row:selected:focus image {
 dialog .sidebar,
 dialog .sidebar list,
 dialog .source-list {
-    background-color: shade($titlebar_color, 1.07);
+    background-color: lighten($titlebar_color, 7%);
 }
 
 .sidebar row,
@@ -3334,7 +3222,7 @@ dialog .source-list {
 .sidebar-item:hover,
 .sidebar-row:hover,
 .source-list .view:hover {
-    background-color: shade($titlebar_color, 1.1);
+    background-color: lighten($titlebar_color, 10%);
 }
 
 .popover .sidebar.view:selected,
@@ -3345,7 +3233,7 @@ dialog .source-list {
 .sidebar-row:selected,
 .source-list .view:selected,
 .source-list.category-expander:hover {
-    color: mix ($titlebar_color, $text_color, 0.6);
+    color: mix($titlebar_color, $text_color, 40%);
     background-color: transparent;
     background-image:
         linear-gradient(
@@ -3382,7 +3270,7 @@ dialog .sidebar .view:selected,
 dialog .sidebar row:selected,
 dialog .sidebar row:selected:focus,
 dialog .source-list .view:selected {
-    color: mix ($titlebar_color, $text_color, 0.6);
+    color: mix($titlebar_color, $text_color, 40%);
     background-image: none;
     background-color: rgba(#000, 0.05);
     border-image:
@@ -3413,7 +3301,7 @@ dialog .sidebar-row:selected:focus image {
 .sidebar .view:backdrop,
 .source-list:backdrop,
 .source-list .view:backdrop {
-    color: mix ($titlebar_color, $text_color, 0.4);
+    color: mix($titlebar_color, $text_color, 60%);
     -gtk-icon-effect: dim;
 }
 
@@ -3422,7 +3310,7 @@ dialog .sidebar-row:selected:focus image {
 .sidebar-item:selected:backdrop,
 .sidebar-row:selected:backdrop,
 .source-list .view:selected:backdrop {
-    color: mix ($titlebar_color, $text_color, 0.4);
+    color: mix($titlebar_color, $text_color, 60%);
     background-image:
         linear-gradient(
             to bottom,
@@ -3562,12 +3450,12 @@ infobar revealer > box {
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 9px 1em;
-    border-color: shade($bg_color, 0.8);
+    border-color: darken($bg_color, 20%);
     border-style: solid;
     border-width: 0 0 1px;
     box-shadow:
-        inset 0 1px 0 0 shade($bg_color, 0.92),
-        inset 0 -1px 0 0 shade($bg_color, 1.2);
+        inset 0 1px 0 0 darken($bg_color, 8%),
+        inset 0 -1px 0 0 lighten($bg_color, 20%);
     padding-left: 24px;
 }
 
@@ -3582,7 +3470,7 @@ infobar label {
 }
 
 infobar.error revealer > box {
-    background-color: shade($error_color, 1.2);
+    background-color: lighten($error_color, 20%);
     background-image: -gtk-icontheme("process-error-symbolic");
     border-color: $error_color;
     box-shadow:
@@ -3600,40 +3488,40 @@ infobar.error .close {
 }
 
 infobar.question revealer > box {
-    background-color: shade($selected_bg_color, 1.2);
+    background-color: lighten($selected_bg_color, 20%);
     background-image: -gtk-icontheme("dialog-question-symbolic");
-    border-color: shade($selected_bg_color, 0.9);
+    border-color: darken($selected_bg_color, 10%);
     box-shadow:
         inset 0 1px 0 0 rgba($selected_bg_color, 0.3),
         inset 0 -1px 0 0 rgba(#fff, 0.3);
-    color: shade($selected_bg_color, 0.25);
+    color: darken($selected_bg_color, 75%);
 }
 
 infobar.question label {
-    color: shade($selected_bg_color, 0.25);
+    color: darken($selected_bg_color, 75%);
 }
 
 infobar.warning revealer > box {
-    background-color: shade($warning_color, 1.2);
+    background-color: lighten($warning_color, 20%);
     background-image: -gtk-icontheme("dialog-warning-symbolic");
-    border-color: shade($warning_color, 0.9);
+    border-color: darken($warning_color, 10%);
     box-shadow:
         inset 0 1px 0 0 $warning_color,
         inset 0 -1px 0 0 rgba(#fff, 0.4);
-    color: shade($warning_color, 0.25);
-    -gtk-icon-palette: warning shade($warning_color, 0.4);
+    color: darken($warning_color, 75%);
+    -gtk-icon-palette: warning darken($warning_color, 60%);
 }
 
 infobar.warning button {
-    border-color: shade($warning_color, 0.8);
+    border-color: darken($warning_color, 20%);
 }
 
 infobar.warning button:backdrop {
-    border-color: shade($warning_color, 0.9);
+    border-color: darken($warning_color, 10%);
 }
 
 infobar.warning label {
-    color: shade($warning_color, 0.25);
+    color: darken($warning_color, 75%);
 }
 
 infobar.frame {
@@ -3744,7 +3632,7 @@ popover undershoot.bottom {
 .popover actionbar {
     background-image: none;
     padding: 6px;
-    border-color: shade($base_color, 0.8);
+    border-color: darken($base_color, 20%);
 }
 
 .popover actionbar .button {
@@ -3785,8 +3673,8 @@ GcrCertificateWidget .frame {
             lighten($colorPrimary, 8%),
             lighten($colorPrimary, 4%)
         );
-    background-color: shade($colorPrimary, 1.1);
-    border-color: shade($colorPrimary, 0.82);
+    background-color: lighten($colorPrimary, 10%);
+    border-color: darken($colorPrimary, 18%);
     box-shadow: inset 0 0 0 1px rgba(lighten($colorPrimary, 40%), 0.4);
     -gtk-icon-effect: dim;
 }
@@ -3829,7 +3717,7 @@ GcrCertificateWidget .frame {
 }
 
 .titlebar.default-decoration:backdrop {
-    border-color: shade($titlebar_color, 0.78);
+    border-color: darken($titlebar_color, 22%);
 }
 
 .titlebar.flat,
@@ -3904,7 +3792,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .subtitle:disabled,
 .titlebar .titlebutton:disabled,
 .titlebar *:not(entry) image:disabled {
-    color: mix ($textColorPrimary, $colorPrimary, 0.35);
+    color: mix($textColorPrimary, $colorPrimary, 65%);
     text-shadow: 0 1px $textColorPrimaryShadow;
     -gtk-icon-shadow: 0 1px $textColorPrimaryShadow;
 }
@@ -3913,7 +3801,7 @@ messagedialog .titlebar.default-decoration:backdrop {
 .titlebar .subtitle:backdrop,
 .titlebar .titlebutton:backdrop,
 .titlebar *:not(entry) image:backdrop {
-    color: mix ($textColorPrimary, $colorPrimary, 0.3);
+    color: mix($textColorPrimary, $colorPrimary, 70%);
     text-shadow: none;
     -gtk-icon-shadow: none;
 }

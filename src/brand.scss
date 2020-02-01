@@ -38,6 +38,6 @@ $accent_color_900: $BLUEBERRY_900;
 
 $colorPrimary: $titlebar_color;
 $colorAccent: $selected_bg_color;
-$textColorPrimary: mix($colorPrimary, $text_color, 0.75);
+$textColorPrimary: mix($colorPrimary, $text_color, 25%);
 $textColorPrimaryShadow: rgba(lighten($colorPrimary, 40%), 0.4);
 $tab_base_color: $base_color;
