@@ -1,3 +1,12 @@
+elementary-theme (5.4.2) bionic; urgency=medium
+
+  * Release 5.4.2 (#590)
+  * Update stylelint to v13 and resolve any new linting errors caused by
+    the upgrade. (#584)
+  * Fix dialog label valign (#581)
+
+ -- Michael Rooney <mrooney@ubuntu.com>  Sat, 29 Feb 2020 20:15:04 +0000
+
 elementary-theme (5.4.1) bionic; urgency=medium
 
   * Release 5.4.1 (#578)
