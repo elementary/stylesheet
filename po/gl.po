@@ -1,0 +1,35 @@
+# Galician translations for extra package.
+# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-17 11:10-0700\n"
+"PO-Revision-Date: 2020-03-17 11:10-0700\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/stylesheet.appdata.xml.in:8
+msgid "Greenfield"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:9
+msgid "The Gtk Stylesheet for elementary OS"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:11
+msgid ""
+"An original Gtk.CSS stylesheet designed specifically for elementary OS and "
+"its desktop environment: Pantheon."
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:54
+msgid "elementary, Inc."
+msgstr ""

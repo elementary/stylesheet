@@ -4,6 +4,10 @@ A stylesheet for elementary OS
 
 ## Installation
 
+You'll need the following dependencies:
+* meson
+* sass
+
 Run `meson` to configure the build environment. To install, use `ninja install`.
 
     meson build --prefix=/usr
