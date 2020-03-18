@@ -8,3 +8,8 @@ popover,
 .csd {
     @include view;
 }
+
+selection {
+    background-color: #{"alpha(@accent_color_100, 0.3)"};
+    color: #{"@accent_color_900"};
+}

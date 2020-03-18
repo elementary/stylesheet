@@ -17,11 +17,18 @@
 * Boston, MA 02110-1301 USA.
 */
 
-@import '_palette.scss';
+@import '../_palette.scss';
+
+/* Accent Shades */
+@define-color accent_color_100 @BLUEBERRY_900;
+@define-color accent_color_300 @BLUEBERRY_700;
+@define-color accent_color_500 @BLUEBERRY_500;
+@define-color accent_color_700 @BLUEBERRY_300;
+@define-color accent_color_900 @BLUEBERRY_100;
 
 @mixin view {
     background: $BLACK_500;
     color: #fff;
 }
 
-@import 'widgets/_widgets.scss';
+@import '../widgets/_widgets.scss';
