@@ -17,18 +17,11 @@
 * Boston, MA 02110-1301 USA.
 */
 
+@import '_palette.scss';
+
 @mixin view {
-    background: #333;
+    background: $BLACK_500;
     color: #fff;
 }
 
-window,
-dialog,
-messagedialog,
-menu,
-popover,
-.titlebar,
-.background,
-.csd {
-    @include view;
-}
+@import 'widgets/_widgets.scss';
