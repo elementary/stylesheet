@@ -7,18 +7,25 @@ i18n = import('i18n')
 sass = find_program('sass')
 
 infiles = files(
-    'src/gtk.scss'
+    'src/gtk.scss',
+    'src/gtk-dark.scss'
 )
 
-outfile = 'gtk.css'
+outfiles = [
+    'gtk.css',
+    'gtk-dark.css',
+]
 
 custom_target(
     meson.project_name() + '.blueberry',
     input : infiles,
-    output : outfile,
-    command : [sass, '@INPUT@', '@OUTPUT@'],
+    output : outfiles,
+    command : [sass,
+        join_paths(meson.source_root(), 'src', 'gtk.scss:gtk.css'),
+        join_paths(meson.source_root(), 'src', 'gtk-dark.scss:gtk-dark.css')
+    ],
     install : true,
-    install_dir : join_paths(get_option('datadir'), 'themes', 'io.elementary.blueberry', 'gtk-3.0')
+    install_dir : join_paths(get_option('datadir'), 'themes', meson.project_name() + '.blueberry', 'gtk-3.0')
 )
 
 subdir('data')
