@@ -683,9 +683,17 @@ levelbar block {
     transition: all 100ms ease-in;
 }
 
+levelbar.horizontal.continuous block {
+    min-width: 1px;
+}
+
 levelbar.vertical block {
     min-height: 34px;
     min-width: 6px;
+}
+
+levelbar.vertical.continuous block {
+    min-height: 1px;
 }
 
 levelbar block.filled.low {
