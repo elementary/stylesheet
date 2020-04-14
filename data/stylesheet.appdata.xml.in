@@ -14,6 +14,11 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
+    <release version="5.4.3" date="2020-04-14" urgency="medium">
+      <ul>
+        <li>Allow smaller increments in continuous levelbars</li>
+      </ul>
+    </release>
     <release version="5.4.2" date="2020-02-29" urgency="medium">
       <ul>
         <li>Vertically align text in dialog buttons</li>
