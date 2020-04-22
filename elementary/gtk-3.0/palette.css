@@ -58,6 +58,13 @@
 @define-color GRAPE_700 #7239b3;
 @define-color GRAPE_900 #452981;
 
+/* Bubblegum */
+@define-color BUBBLEGUM_100 #fe9ab8;
+@define-color BUBBLEGUM_300 #f4679d;
+@define-color BUBBLEGUM_500 #de3e80;
+@define-color BUBBLEGUM_700 #bc245d;
+@define-color BUBBLEGUM_900 #910e38;
+
 /* Cocoa */
 @define-color COCOA_100 #a3907c;
 @define-color COCOA_300 #8a715e;
