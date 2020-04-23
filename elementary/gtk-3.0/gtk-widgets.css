@@ -2329,6 +2329,7 @@ checkbutton label:dir(rtl) {
 }
 
 switch > image,
+switch > image:disabled,
 popover switch > image {
     color: transparent;
     -gtk-icon-shadow: none;
