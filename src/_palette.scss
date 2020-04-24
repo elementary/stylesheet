@@ -23,11 +23,23 @@ $LIME_500: #68b723;
 $LIME_700: #3a9104;
 $LIME_900: #206b00;
 
+$MINT_100: #89ffdd;
+$MINT_300: #43d6b5;
+$MINT_500: #28bca3;
+$MINT_700: #0e9a83;
+$MINT_900: #007367;
+
 $BLUEBERRY_100: #8cd5ff;
 $BLUEBERRY_300: #64baff;
 $BLUEBERRY_500: #3689e6;
 $BLUEBERRY_700: #0d52bf;
 $BLUEBERRY_900: #002e99;
+
+$BUBBLEGUM_100: #fe9ab8;
+$BUBBLEGUM_300: #f4679d;
+$BUBBLEGUM_500: #de3e80;
+$BUBBLEGUM_700: #bc245d;
+$BUBBLEGUM_900: #910e38;
 
 $GRAPE_100: #e4c6fa;
 $GRAPE_300: #cd9ef7;
@@ -84,11 +96,23 @@ $BLACK_900: #000;
 @define-color LIME_700 #{$LIME_700};
 @define-color LIME_900 #{$LIME_900};
 
+@define-color MINT_100 #{$MINT_100};
+@define-color MINT_300 #{$MINT_300};
+@define-color MINT_500 #{$MINT_500};
+@define-color MINT_700 #{$MINT_700};
+@define-color MINT_900 #{$MINT_900};
+
 @define-color BLUEBERRY_100 #{$BLUEBERRY_100};
 @define-color BLUEBERRY_300 #{$BLUEBERRY_300};
 @define-color BLUEBERRY_500 #{$BLUEBERRY_500};
 @define-color BLUEBERRY_700 #{$BLUEBERRY_700};
 @define-color BLUEBERRY_900 #{$BLUEBERRY_900};
+
+@define-color BUBBLEGUM_100 #{$BUBBLEGUM_100};
+@define-color BUBBLEGUM_300 #{$BUBBLEGUM_300};
+@define-color BUBBLEGUM_500 #{$BUBBLEGUM_500};
+@define-color BUBBLEGUM_700 #{$BUBBLEGUM_700};
+@define-color BUBBLEGUM_900 #{$BUBBLEGUM_900};
 
 @define-color GRAPE_100 #{$GRAPE_100};
 @define-color GRAPE_300 #{$GRAPE_300};
