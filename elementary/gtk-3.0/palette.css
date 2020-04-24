@@ -44,6 +44,13 @@
 @define-color LIME_700 #3a9104;
 @define-color LIME_900 #206b00;
 
+/* Mint */
+@define-color MINT_100 #89ffdd;
+@define-color MINT_300 #43d6b5;
+@define-color MINT_500 #28bca3;
+@define-color MINT_700 #0e9a83;
+@define-color MINT_900 #007367;
+
 /* Blueberry */
 @define-color BLUEBERRY_100 #8cd5ff;
 @define-color BLUEBERRY_300 #64baff;
