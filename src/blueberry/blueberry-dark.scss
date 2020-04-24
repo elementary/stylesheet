@@ -26,9 +26,5 @@
 @define-color accent_color_700 @BLUEBERRY_300;
 @define-color accent_color_900 @BLUEBERRY_100;
 
-@mixin view {
-    background: $BLACK_500;
-    color: #fff;
-}
-
+@import '../widgets/_mixins-dark.scss';
 @import '../widgets/_widgets.scss';
