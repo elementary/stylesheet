@@ -9,6 +9,23 @@ popover,
     @include view;
 }
 
+window {
+    decoration {
+        @include window-shadow(3);
+        margin: 12px;
+
+        &:backdrop {
+            @include window-shadow(2)
+        }
+    }
+
+    &.tiled {
+        decoration {
+            @include window-shadow(1);
+        }
+    }
+}
+
 selection {
     background-color: #{"alpha(@accent_color_100, 0.3)"};
     color: #{"@accent_color_900"};
