@@ -9,19 +9,19 @@ popover,
     @include view;
 }
 
-window {
-    decoration {
-        @include window-shadow(3);
+window:not(.popup) {
+    > decoration {
+        @include shadow(3);
         margin: 12px;
 
         &:backdrop {
-            @include window-shadow(2)
+            @include shadow(2)
         }
     }
 
     &.tiled {
-        decoration {
-            @include window-shadow(1);
+        > decoration {
+            @include shadow(1);
         }
     }
 }

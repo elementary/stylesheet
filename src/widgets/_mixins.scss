@@ -3,7 +3,7 @@
     color: $BLACK_500;
 }
 
-@mixin window-shadow($level) {
+@mixin shadow($level) {
     @if $level == 1 {
         box-shadow:
             0 0 0 1px rgba(0, 0, 0, 0.2),
