@@ -9,10 +9,27 @@ popover,
     @include view;
 }
 
+window:not(.popup),
+dialog {
+    border-radius: 0 0 7px 7px;
+
+    > decoration {
+        border-radius: 7px;
+        margin: 12px;
+
+        &:backdrop {
+            @include shadow(2);
+        }
+    }
+
+    > headerbar.default-decoration {
+        border-radius: 7px 7px 0 0;
+    }
+}
+
 window:not(.popup) {
     > decoration {
-        @include shadow(3);
-        margin: 12px;
+        @include shadow(4);
 
         &:backdrop {
             @include shadow(2)
@@ -22,6 +39,18 @@ window:not(.popup) {
     &.tiled {
         > decoration {
             @include shadow(1);
+        }
+    }
+}
+
+dialog {
+    @include shadow(-1);
+
+    > decoration {
+        @include shadow(3);
+
+        &:backdrop {
+            @include shadow(2);
         }
     }
 }
