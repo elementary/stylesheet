@@ -44,8 +44,6 @@ window:not(.popup) {
 }
 
 dialog {
-    @include shadow(-1);
-
     > decoration {
         @include shadow(3);
 
