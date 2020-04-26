@@ -11,10 +11,10 @@ popover,
 
 window:not(.popup),
 dialog {
-    border-radius: 0 0 7px 7px;
+    border-radius: 0 0 6px 6px;
 
     > decoration {
-        border-radius: 7px;
+        border-radius: 6px;
         margin: 12px;
 
         &:backdrop {
@@ -23,7 +23,7 @@ dialog {
     }
 
     > headerbar.default-decoration {
-        border-radius: 7px 7px 0 0;
+        border-radius: 6px 6px 0 0;
     }
 }
 
