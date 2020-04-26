@@ -53,6 +53,11 @@ dialog {
             @include shadow(2);
         }
     }
+
+    > headerbar.titlebar label.title {
+        font-size: 0.1px;
+        color: transparent;
+    }
 }
 
 selection {
