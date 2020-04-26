@@ -182,6 +182,10 @@ modelbutton .keycap {
     text-shadow: none;
 }
 
+modelbutton .keycap {
+    padding: 3px 6px;
+}
+
 menuitem:disabled .keycap,
 modelbutton:disabled .keycap {
     opacity: 0.7;
@@ -329,8 +333,8 @@ spinbutton,
 }
 
 selection {
-    background-color: @colorAccent;
-    color: @selected_fg_color;
+    background-color: alpha (@accent_color_100, 0.3);
+    color: @accent_color_900;
     text-shadow: none;
 }
 
@@ -679,9 +683,17 @@ levelbar block {
     transition: all 100ms ease-in;
 }
 
+levelbar.horizontal.continuous block {
+    min-width: 1px;
+}
+
 levelbar.vertical block {
     min-height: 34px;
     min-width: 6px;
+}
+
+levelbar.vertical.continuous block {
+    min-height: 1px;
 }
 
 levelbar block.filled.low {
@@ -958,13 +970,13 @@ scale.horizontal fill.bottom {
 scale.vertical highlight.top,
 scale.vertical fill.top {
     border-radius: 12px 12px 0 0;
-    margin: -6px 0 0 0;
+    margin: -6px 0 0;
 }
 
 scale.vertical highlight.bottom,
 scale.vertical fill.bottom {
     border-radius: 0 0 12px 12px;
-    margin: 0 0 -6px 0;
+    margin: 0 0 -6px;
 }
 
 /*********
@@ -2076,7 +2088,7 @@ notebook header > tabs > arrow.up {
 
 menuitem image,
 menuitem label,
-modelbutton label,
+modelbutton > *,
 .menuitem image,
 .menuitem label {
     padding: 3px;
@@ -2316,6 +2328,13 @@ checkbutton label:dir(rtl) {
     margin-right: 6px;
 }
 
+switch > image,
+switch > image:disabled,
+popover switch > image {
+    color: transparent;
+    -gtk-icon-shadow: none;
+}
+
 switch slider {
     background-image:
         linear-gradient(
@@ -2345,6 +2364,26 @@ switch slider:backdrop {
         inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
         inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
         0 1px 1px alpha (#000, 0.15);
+}
+
+radiobutton.image-button {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px;
+}
+
+radiobutton.image-button:checked:not(:backdrop) {
+    background-color: alpha (@colorAccent, 0.1);
+    border-color: @colorAccent;
+}
+
+radiobutton.image-button:checked:not(:backdrop) image {
+    color: mix (@colorAccent, @text_color, 0.3);
+}
+
+radiobutton.image-button:checked:backdrop {
+    background-color: alpha (@text_color, 0.05);
+    border-color: alpha (@text_color, 0.4);
 }
 
 /***********
@@ -3389,6 +3428,11 @@ row:selected:focus image {
     -GtkTreeView-vertical-separator: 6px;
 }
 
+.sidebar .inline-toolbar,
+.source-list .inline-toolbar {
+    -gtk-icon-style: requested;
+}
+
 dialog .sidebar,
 dialog .sidebar list,
 dialog .source-list {
@@ -4175,6 +4219,10 @@ dialog toolbar {
     background-color: @bg_color;
 }
 
+.dialog-action-area button > * {
+    min-height: calc(1em + 7px);
+}
+
 /***************
 * Emoji Picker *
 ***************/
@@ -4303,6 +4351,11 @@ dialog toolbar {
 .dim-label,
 .greyed-label {
     opacity: 0.75;
+}
+
+.small-label {
+    /* NOTE: Intended to match the Pango size of `<small>` and `size='smaller'` */
+    font-size: 0.85em;
 }
 
 .attention {
