@@ -9,10 +9,27 @@ popover,
     @include view;
 }
 
+window:not(.popup),
+dialog {
+    border-radius: 0 0 6px 6px;
+
+    > decoration {
+        border-radius: 6px;
+        margin: 12px;
+
+        &:backdrop {
+            @include shadow(2);
+        }
+    }
+
+    > headerbar.titlebar {
+        border-radius: 6px 6px 0 0;
+    }
+}
+
 window:not(.popup) {
     > decoration {
-        @include shadow(3);
-        margin: 12px;
+        @include shadow(4);
 
         &:backdrop {
             @include shadow(2)
@@ -23,6 +40,21 @@ window:not(.popup) {
         > decoration {
             @include shadow(1);
         }
+    }
+}
+
+dialog {
+    > decoration {
+        @include shadow(3);
+
+        &:backdrop {
+            @include shadow(2);
+        }
+    }
+
+    > headerbar.titlebar label.title {
+        font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
+        color: transparent;
     }
 }
 
