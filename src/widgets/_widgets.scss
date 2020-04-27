@@ -53,7 +53,7 @@ dialog {
     }
 
     > headerbar.titlebar label.title {
-        font-size: 0.1px;
+        font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
         color: transparent;
     }
 }
