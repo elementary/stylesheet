@@ -13,10 +13,17 @@
     } @else if $level == 2 {
         box-shadow:
             0 0 0 1px rgba(0, 0, 0, 0.2),
-            0 3px 8px rgba(0, 0, 0, 0.16),
-            0 3px 6px rgba(0, 0, 0, 0.23),
+            0 3px 4px rgba(0, 0, 0, 0.15),
+            0 3px 3px -3px rgba(0, 0, 0, 0.35),
             0 14px 28px transparent;
     } @else if $level == 3 {
+        box-shadow:
+            0 0 0 1px rgba(0, 0, 0, 0.1),
+            0 8px 5px 1px rgba(0, 0, 0, 0.10),
+            0 3px 8px 2px rgba(0, 0, 0, 0.10),
+            0 5px 5px -3px rgba(0, 0, 0, 0.4),
+            0 14px 28px transparent;
+    } @else if $level == 4 {
         box-shadow:
             0 0 0 1px rgba(0, 0, 0, 0.3),
             0 14px 28px rgba(0, 0, 0, 0.35),
