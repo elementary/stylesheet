@@ -62,3 +62,195 @@ selection {
     background-color: #{"alpha(@accent_color_100, 0.3)"};
     color: #{"@accent_color_900"};
 }
+
+check,
+radio,
+switch {
+    transition: all 200ms ease-in;
+
+    &:checked:backdrop:not(:disabled) {
+        background-image: none;
+        background-color: shade (@bg_color, 0.8);
+        border-color: shade (@bg_color, 0.65);
+        -gtk-icon-shadow: 0 1px 1px shade (@bg_color, 0.65);
+    }
+}
+
+check,
+radio {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (
+                @base_color,
+                0.99
+            ),
+            shade (
+                @base_color,
+                0.97
+            )
+        );
+    border: 1px solid @border_color;
+    box-shadow:
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.5),
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.2),
+        0 1px 1px 0 shade (@bg_color, 0.95);
+    min-height: 12px;
+    min-width: 12px;
+    -gtk-icon-source: none;
+
+    &:checked {
+        background-image:
+            linear-gradient(
+                to bottom,
+                shade (
+                    @colorAccent,
+                    1.2
+                ),
+                @colorAccent
+            );
+        border-color: shade (@colorAccent, 0.9);
+        box-shadow:
+            inset 0 0 0 1px shade (@colorAccent, 1.15),
+            inset 0 1px 0 0 shade (@colorAccent, 1.3),
+            0 1px 1px 0 shade (@bg_color, 0.85);
+        color: #fff;
+        -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
+        -gtk-icon-shadow: 0 1px 1px shade (@colorAccent, 0.85);
+
+        &:backdrop:not(:disabled),
+        &:backdrop:not(:disabled) {
+            box-shadow:
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.3),
+                inset 0 0 0 1px alpha (@bg_highlight_color, 0.1),
+                0 1px 1px 0 shade (@bg_color, 0.95);
+        }
+
+        &:disabled {
+            color: shade (@bg_color, 0.75);
+            -gtk-icon-shadow: 0 1px 1px alpha (@bg_highlight_color, 0.3);
+        }
+    }
+
+    &:disabled {
+        background: shade (@bg_color, 0.95);
+        border-color: shade (@bg_color, 0.8);
+        box-shadow: 0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+    }
+
+    &:indeterminate {
+        -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
+    }
+}
+
+check {
+    border-radius: 3px;
+}
+
+radio {
+    border-radius: 50%;
+}
+
+radiobutton,
+checkbutton {
+    image,
+    label {
+        &:dir(ltr) {
+            margin-left: 6px;
+        }
+
+        &:dir(rtl) {
+            margin-right: 6px;
+        }
+    }
+}
+
+radiobutton.image-button {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 6px;
+
+    &:checked:backdrop {
+        background-color: alpha (@text_color, 0.05);
+        border-color: alpha (@text_color, 0.4);
+    }
+
+    &:checked:not(:backdrop) {
+        background-color: alpha (@colorAccent, 0.1);
+        border-color: @colorAccent;
+
+        image {
+            color: mix (@colorAccent, @text_color, 0.3);
+        }
+    }
+}
+
+switch {
+    background-color: alpha (#000, 0.1);
+    border: 1px solid alpha (#000, 0.25);
+    border-radius: 16px;
+    box-shadow:
+        inset 0 0 0 1px alpha (#000, 0.05),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.3);
+
+    &:checked {
+        background-color: @colorAccent;
+        background-image:
+            linear-gradient(
+                to bottom,
+                alpha (
+                    #fff,
+                    0.3
+                ),
+                alpha (
+                    #fff,
+                    0
+                )
+            );
+        border-color: shade(@colorAccent, 0.85);
+
+        &:disabled {
+            background-image: none;
+            background-color: mix (@bg_color, @colorAccent, 0.5);
+            border-color: shade (mix (@bg_color, @colorAccent, 0.5), 0.75);
+        }
+    }
+
+    &:disabled {
+    background-color: alpha (#000, 0.02);
+
+    > image {
+        color: transparent;
+    }
+
+    slider {
+        background-image:
+            linear-gradient(
+                to bottom,
+                shade(@SILVER_100, 1.05),
+                shade(@SILVER_100, 0.95)
+            );
+        border: 1px solid alpha(#000, 0.2);
+        border-radius: 50%;
+        box-shadow:
+            inset 0 0 0 1px alpha(#fff, 0.05),
+            inset 0 1px 0 0 alpha(#fff, 0.45),
+            inset 0 -1px 0 0 alpha(#fff, 0.15),
+            0 1px 1px alpha(#000, 0.15),
+            0 1px 2px alpha(#000, 0.16);
+        margin: -1px;
+        min-height: 24px;
+        min-width: 24px;
+
+        &:disabled,
+        &:backdrop {
+            background-image: none;
+            background-color: @bg_color;
+            box-shadow:
+                inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+                inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+                inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+                0 1px 1px alpha (#000, 0.15);
+        }
+    }
+}
