@@ -1,25 +1,16 @@
-Source: elementary-theme
+Source: io.elementary.stylesheet
 Section: x11
-Priority: optional
-Maintainer: Michael Rooney <mrooney@ubuntu.com>
+Priority: extra
+Maintainer: elementary, Inc. <builds@elementary.io>
 Standards-Version: 3.8.3
-Build-Depends: debhelper (>= 10), meson (>= 0.44.0)
+Build-Depends: debhelper (>= 10.5.1),
+               meson (>= 0.44.0),
+               sass
+Standards-Version: 4.1.1
 
-Package: elementary-theme
+Package: io.elementary.stylesheet
 Architecture: all
-Depends: fonts-raleway-elementary | fonts-raleway, gtk2-engines-murrine
 Suggests: elementary-icon-theme
-Breaks: libgtk-3-common (<< 3.22)
-Description: the elementary GTK theme
- The official elementary GTK theme, elementary-theme.
- Supports GTK+ versions 2 and 3.
-
-Package: plank-theme-pantheon
-Architecture: all
-Depends: elementary-theme
-Description: transitional dummy package
- This is a transitional dummy package to ease the migration from
- the standalone Plank theme package for elementary OS now that
- it is contained in elementary-theme.
- .
- You can remove this package safely.
+Description: the elementary GTK stylesheet
+ The official elementary GTK stylesheet.
+ Supports GTK versions 2 and 3.
