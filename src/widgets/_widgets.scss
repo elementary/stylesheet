@@ -62,3 +62,18 @@ selection {
     background-color: #{"alpha(@accent_color_100, 0.3)"};
     color: #{"@accent_color_900"};
 }
+
+spinner {
+    background-image: none;
+    opacity: 0;
+    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+
+    &:checked {
+        opacity: 0.8;
+        animation: spin 600ms linear infinite;
+
+        &:disabled {
+            opacity: 0.4;
+        }
+    }
+}
