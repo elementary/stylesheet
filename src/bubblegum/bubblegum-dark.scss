@@ -26,4 +26,6 @@
 @define-color accent_color_700 @BUBBLEGUM_300;
 @define-color accent_color_900 @BUBBLEGUM_100;
 
-@import '../_mixins-dark.scss';
+$color-scheme: "dark";
+
+@import '../_mixins.scss';
