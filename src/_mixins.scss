@@ -1,29 +1,42 @@
-// Used for inset box shadows
+// Inset box shadows
 @define-color highlight_color #fff;
 
-// FIXME: Should probably be replaced by background color levels since this is internal only
-$titlebar-color :mix($SILVER_100, $SILVER_300, $weight: 30%);
+// Views and inputs
+$bg-color-1: #fff;
+
+// Background
+$bg-color-2: $SILVER_100;
+
+// Sidebars and inline toolbars
+$bg-color-3: mix($SILVER_100, $SILVER_300, $weight: 15%);
+
+// Titlebars and toolbars
+$bg-color-4: mix($SILVER_100, $SILVER_300, $weight: 30%);
+
+// Text, images, and other foreground elements
+$fg-color: $BLACK_500;
 
 // Used for outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(0, 0, 0, 0.3);
 
 @if $color-scheme == "dark" {
     @define-color highlight_color rgba(255, 255, 255, 0.2);
-    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 50%);
+    @define-color fg_color #fff;
+
+    $bg-color-2: $BLACK_500;
+    $bg-color-4: mix($BLACK_500, $BLACK_700, $weight: 50%);
+
+    $fg-color: #fff;
+
     $toplevel-border-color: rgba(0, 0, 0, 0.6);
 }
 
 // The primary brand color used for titlebars
-@define-color color_primary #{$titlebar-color};
+@define-color color_primary #{$bg-color-4};
 
 @mixin view {
-    @if $color-scheme == "light" {
-        background-color: $SILVER_100;
-        color: $BLACK_500;
-    } @else if $color-scheme == "dark" {
-        background-color: $BLACK_500;
-        color: #fff;
-    }
+    background-color: $bg-color-2;
+    color: $fg-color;
 }
 
 @mixin border-shadow {
