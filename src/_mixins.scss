@@ -16,7 +16,7 @@ $bg-color-4: mix($SILVER_100, $SILVER_300, $weight: 30%);
 // Text, images, and other foreground elements
 $fg-color: $BLACK_500;
 
-// Used for outset box shadow or border color on toplevel elements like windows, menus, popovers
+// Outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(0, 0, 0, 0.3);
 
 @if $color-scheme == "dark" {
