@@ -91,6 +91,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.3);
     }
 }
 
+// elements with outset relief style like headerbars, buttons, checkboxes, etc
 %outset {
     background-image:
         linear-gradient(
