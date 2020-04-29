@@ -18,6 +18,7 @@ dialog {
         margin: 12px;
 
         &:backdrop {
+            @include border-shadow;
             @include shadow(2);
         }
     }
@@ -29,15 +30,18 @@ dialog {
 
 window:not(.popup) {
     > decoration {
+        @include border-shadow;
         @include shadow(4);
 
         &:backdrop {
+            @include border-shadow;
             @include shadow(2)
         }
     }
 
     &.tiled {
         > decoration {
+            @include border-shadow;
             @include shadow(1);
         }
     }
@@ -45,9 +49,11 @@ window:not(.popup) {
 
 dialog {
     > decoration {
+        @include border-shadow;
         @include shadow(3);
 
         &:backdrop {
+            @include border-shadow;
             @include shadow(2);
         }
     }
@@ -56,6 +62,14 @@ dialog {
         font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
         color: transparent;
     }
+}
+
+popover {
+    @include shadow(2);
+    background-clip: padding-box;
+    border: 1px solid $toplevel-border-color;
+    border-radius: 6px;
+    margin: 6px;
 }
 
 selection {
