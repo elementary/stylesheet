@@ -1,15 +1,20 @@
-$highlight-color: "#fff";
+// Used for inset box shadows
+@define-color highlight_color #fff;
+
+// FIXME: Should probably be replaced by background color levels since this is internal only
 $titlebar-color :mix($SILVER_100, $SILVER_300, $weight: 30%);
+
+// Used for outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(0, 0, 0, 0.3);
 
 @if $color-scheme == "dark" {
-    $highlight-color: rgba(255, 255, 255, 0.2);
+    @define-color highlight_color rgba(255, 255, 255, 0.2);
     $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 50%);
     $toplevel-border-color: rgba(0, 0, 0, 0.6);
 }
 
+// The primary brand color used for titlebars
 @define-color color_primary #{$titlebar-color};
-@define-color highlight_color #{$highlight-color};
 
 @mixin view {
     @if $color-scheme == "light" {
