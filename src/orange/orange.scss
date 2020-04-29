@@ -26,4 +26,6 @@
 @define-color accent_color_700 @ORANGE_700;
 @define-color accent_color_900 @ORANGE_900;
 
+$color-scheme: "light";
+
 @import '../_mixins.scss';
