@@ -51,10 +51,6 @@ $toplevel-border-color: rgba(0, 0, 0, 0.3);
     }
 }
 
-@mixin border-shadow {
-    box-shadow: 0 0 0 1px $toplevel-border-color;
-}
-
 @mixin shadow($level) {
     @if $color-scheme == "light" {
         @if $level == 1 {
