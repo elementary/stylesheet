@@ -100,6 +100,37 @@ popover {
     margin: 6px;
 }
 
+.h1 {
+    font-size: 24pt;
+    letter-spacing: -0.04em;
+}
+
+.h2 {
+    font-weight: 300;
+    font-size: 18pt;
+    letter-spacing: -0.05em;
+}
+
+.h3 {
+    font-size: 11pt;
+}
+
+.h4 {
+    font-weight: 700;
+    opacity: 0.8;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.primary {
+    font-weight: 500;
+    font-size: 1.22em
+}
+
+.dim-label {
+    opacity: 0.75;
+}
+
 selection {
     background-color: #{"alpha(@accent_color_100, 0.3)"};
     color: #{"@accent_color_900"};
