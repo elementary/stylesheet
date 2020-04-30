@@ -1,17 +1,8 @@
 // Inset box shadows
 @define-color highlight_color #fff;
 
-// Views and inputs
-$bg-color-1: #fff;
-
-// Background
-$bg-color-2: $SILVER_100;
-
-// Sidebars and inline toolbars
-$bg-color-3: mix($SILVER_100, $SILVER_300, $weight: 15%);
-
-// Titlebars and toolbars
-$bg-color-4: mix($SILVER_100, $SILVER_300, $weight: 30%);
+// The primary brand color used for titlebars
+$titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
 
 // Text, images, and other foreground elements
 $fg-color: $BLACK_500;
@@ -21,10 +12,8 @@ $toplevel-border-color: rgba(0, 0, 0, 0.3);
 
 @if $color-scheme == "dark" {
     @define-color highlight_color rgba(255, 255, 255, 0.2);
-    @define-color fg_color #fff;
 
-    $bg-color-2: $BLACK_500;
-    $bg-color-4: mix($BLACK_500, $BLACK_700, $weight: 50%);
+    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 50%);
 
     $fg-color: #fff;
 
@@ -32,11 +21,34 @@ $toplevel-border-color: rgba(0, 0, 0, 0.3);
 }
 
 // The primary brand color used for titlebars
-@define-color color_primary #{$bg-color-4};
+@define-color color_primary #{$titlebar-color};
 
-@mixin view {
-    background-color: $bg-color-2;
-    color: $fg-color;
+@mixin bg-color($level) {
+    @if $color-scheme == "light" {
+        // Views and inputs
+        @if $level == 1 {
+            background-color: #fff;
+        // Background
+        } @else if $level == 2 {
+            background-color: $SILVER_100;
+        // Sidebars and inline toolbars
+        } @else if $level == 3 {
+            background-color: mix($SILVER_100, $SILVER_300, $weight: 15%);
+        // Titlebars and toolbars
+        } @else if $level == 4 {
+            background-color: $titlebar-color;
+        }
+    } @else if $color-scheme == "dark" {
+        @if $level == 1 {
+            background-color: $BLACK_300;
+        } @else if $level == 2 {
+            background-color: $BLACK_500;
+        } @else if $level == 3 {
+            background-color: mix($BLACK_500, $BLACK_700, $weight: 25%);
+        } @else if $level == 4 {
+            background-color: $titlebar-color;
+        }
+    }
 }
 
 @mixin border-shadow {

@@ -6,7 +6,8 @@ popover,
 .titlebar,
 .background,
 .csd {
-    @include view;
+    @include bg-color(2);
+    color: $fg-color;
 }
 
 window:not(.popup),
