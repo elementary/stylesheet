@@ -1,18 +1,55 @@
+// Inset box shadows
+@define-color highlight_color #fff;
+
+// The default titlebar color
+$titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
+
+// Text, images, and other foreground elements
+$fg-color: $BLACK_500;
+
+// Outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(0, 0, 0, 0.3);
 
 @if $color-scheme == "dark" {
+    @define-color highlight_color rgba(255, 255, 255, 0.2);
+
+    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 50%);
+
+    $fg-color: #fff;
+
     $toplevel-border-color: rgba(0, 0, 0, 0.6);
 }
 
-@mixin view {
+@define-color fg_color #{"" + $fg-color};
+
+@mixin bg-color($level) {
     @if $color-scheme == "light" {
-        background-color: $SILVER_100;
-        color: $BLACK_500;
+        // Views and inputs
+        @if $level == 1 {
+            background-color: #fff;
+        // Background
+        } @else if $level == 2 {
+            background-color: $SILVER_100;
+        // Sidebars and inline toolbars
+        } @else if $level == 3 {
+            background-color: mix($SILVER_100, $SILVER_300, $weight: 75%);
+        // Titlebars and toolbars
+        } @else if $level == 4 {
+            background-color: $titlebar-color;
+        }
     } @else if $color-scheme == "dark" {
-        background-color: $BLACK_500;
-        color: #fff;
+        @if $level == 1 {
+            background-color: $BLACK_300;
+        } @else if $level == 2 {
+            background-color: $BLACK_500;
+        } @else if $level == 3 {
+            background-color: mix($BLACK_500, $BLACK_700, $weight: 75%);
+        } @else if $level == 4 {
+            background-color: $titlebar-color;
+        }
     }
 }
+
 
 @mixin border-shadow {
     box-shadow: 0 0 0 1px $toplevel-border-color;
