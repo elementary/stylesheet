@@ -6,7 +6,8 @@ popover,
 .titlebar,
 .background,
 .csd {
-    @include view;
+    @include bg-color(2);
+    color: $fg-color;
 }
 
 window:not(.popup),
@@ -70,6 +71,55 @@ popover {
     border: 1px solid $toplevel-border-color;
     border-radius: 6px;
     margin: 6px;
+}
+
+.sidebar {
+    list {
+        @include bg-color(3);
+        padding-top: 6px;
+        border-bottom-left-radius: 6px;
+
+        row {
+            padding: 6px 12px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.75);
+
+                @if $color-scheme == "dark" {
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+            }
+
+            &:selected {
+                @include bg-color(4);
+            }
+        }
+    }
+}
+
+paned.horizontal > separator {
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.05) 1px,
+            #fff 1px,
+            #fff 2px,
+            transparent 2px
+        );
+
+    @if $color-scheme == "dark" {
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.15) 1px,
+                rgba(255, 255, 255, 0.01) 1px,
+                rgba(255, 255, 255, 0.01) 2px,
+                transparent 2px
+            );
+    }
+    // This creates the invisible resize handle
+    margin-right: -7px;
+    min-width: 8px;
 }
 
 .h1 {
