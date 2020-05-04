@@ -33,7 +33,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.3);
             background-color: $SILVER_100;
         // Sidebars and inline toolbars
         } @else if $level == 3 {
-            background-color: mix($SILVER_100, $SILVER_300, $weight: 15%);
+            background-color: mix($SILVER_100, $SILVER_300, $weight: 75%);
         // Titlebars and toolbars
         } @else if $level == 4 {
             background-color: $titlebar-color;
@@ -44,7 +44,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.3);
         } @else if $level == 2 {
             background-color: $BLACK_500;
         } @else if $level == 3 {
-            background-color: mix($BLACK_500, $BLACK_700, $weight: 25%);
+            background-color: mix($BLACK_500, $BLACK_700, $weight: 75%);
         } @else if $level == 4 {
             background-color: $titlebar-color;
         }
