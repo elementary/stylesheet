@@ -1,68 +1,148 @@
-$toplevel-border-color: rgba(0, 0, 0, 0.3);
+// Inset box shadows
+@define-color highlight_color #fff;
+
+// The default titlebar color
+$titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
+
+// Text, images, and other foreground elements
+$fg-color: $BLACK_500;
+
+// Outset box shadow or border color on toplevel elements like windows, menus, popovers
+$toplevel-border-color: rgba(0, 0, 0, 0.2);
 
 @if $color-scheme == "dark" {
+    @define-color highlight_color rgba(255, 255, 255, 0.2);
+
+    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 50%);
+
+    $fg-color: #fff;
+
     $toplevel-border-color: rgba(0, 0, 0, 0.6);
 }
 
-@mixin view {
+// The primary brand color used for titlebars
+@define-color color_primary #{$titlebar-color};
+
+@mixin bg-color($level) {
     @if $color-scheme == "light" {
-        background-color: $SILVER_100;
-        color: $BLACK_500;
+        // Views and inputs
+        @if $level == 1 {
+            background-color: #fff;
+        // Background
+        } @else if $level == 2 {
+            background-color: $SILVER_100;
+        // Sidebars and inline toolbars
+        } @else if $level == 3 {
+            background-color: mix($SILVER_100, $SILVER_300, $weight: 75%);
+        // Titlebars and toolbars
+        } @else if $level == 4 {
+            background-color: $titlebar-color;
+        }
     } @else if $color-scheme == "dark" {
-        background-color: $BLACK_500;
-        color: #fff;
+        @if $level == 1 {
+            background-color: $BLACK_300;
+        } @else if $level == 2 {
+            background-color: $BLACK_500;
+        } @else if $level == 3 {
+            background-color: mix($BLACK_500, $BLACK_700, $weight: 75%);
+        } @else if $level == 4 {
+            background-color: $titlebar-color;
+        }
     }
 }
 
-@mixin border-shadow {
-    box-shadow: 0 0 0 1px $toplevel-border-color;
-}
-
-@mixin shadow($level) {
+@function shadow($level) {
     @if $color-scheme == "light" {
         @if $level == 1 {
-            box-shadow:
+            @return
                 0 1px 3px rgba(0, 0, 0, 0.12),
                 0 1px 2px rgba(0, 0, 0, 0.24),
                 0 14px 28px transparent;
         } @else if $level == 2 {
-            box-shadow:
+            @return
                 0 3px 4px rgba(0, 0, 0, 0.15),
                 0 3px 3px -3px rgba(0, 0, 0, 0.35),
                 0 14px 28px transparent;
         } @else if $level == 3 {
-            box-shadow:
+            @return
                 0 8px 5px 1px rgba(0, 0, 0, 0.10),
                 0 3px 8px 2px rgba(0, 0, 0, 0.10),
                 0 5px 5px -3px rgba(0, 0, 0, 0.4),
                 0 14px 28px transparent;
         } @else if $level == 4 {
-            box-shadow:
+            @return
                 0 14px 28px rgba(0, 0, 0, 0.35),
                 0 10px 10px rgba(0, 0, 0, 0.22);
         }
     } @else if $color-scheme == "dark" {
         @if $level == 1 {
-            box-shadow:
+            @return
                 0 1px 3px rgba(0, 0, 0, 0.42),
                 0 1px 2px rgba(0, 0, 0, 0.44),
                 0 14px 28px transparent;
         } @else if $level == 2 {
-            box-shadow:
+            @return
                 0 3px 4px rgba(0, 0, 0, 0.25),
                 0 3px 3px -3px rgba(0, 0, 0, 0.45),
                 0 14px 28px transparent;
         } @else if $level == 3 {
-            box-shadow:
+            @return
                 0 8px 5px 1px rgba(0, 0, 0, 0.10),
                 0 3px 8px 2px rgba(0, 0, 0, 0.10),
                 0 5px 5px -3px rgba(0, 0, 0, 0.4),
                 0 14px 28px transparent;
         } @else if $level == 4 {
-            box-shadow:
+            @return
                 0 14px 28px rgba(0, 0, 0, 0.45),
                 0 10px 10px rgba(0, 0, 0, 0.32);
         }
+    }
+}
+
+@function outset-highlight($sides) {
+    $highlight:
+        inset 1px 0 0 0 #{'alpha(@highlight_color, 0.07)'},
+        inset -1px 0 0 0 #{'alpha(@highlight_color, 0.07)'};
+
+    @if $sides == "top" or $sides == "full" {
+        $highlight:
+            inset 0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
+            $highlight;
+    }
+
+    @if $sides == "bottom" or $sides == "full" {
+        $highlight:
+            inset 0 -1px 0 0 #{'alpha(@highlight_color, 0.2)'},
+            $highlight;
+    }
+
+    @return $highlight;
+}
+
+// elements with outset border style like headerbars, buttons, checkboxes, etc
+%border-outset {
+    background-image:
+        linear-gradient(
+            to bottom,
+            #{'alpha(@highlight_color, 0.2)'},
+            rgba(255, 255, 255, 0)
+        );
+    box-shadow:
+        outset-highlight("full"),
+        0 0 0 1px rgba(0, 0, 0, 0.15),
+        0 1px 2px rgba(0, 0, 0, 0.2);
+
+    &:backdrop {
+        background-image:
+            linear-gradient(
+                to bottom,
+                #{'alpha(@highlight_color, 0.35)'},
+                #{'alpha(@highlight_color, 0.3)'}
+            );
+        box-shadow:
+            outset-highlight("full"),
+            0 0 0 1px rgba(0, 0, 0, 0.1),
+            0 1px 2px rgba(0, 0, 0, 0.15);
     }
 }
 
