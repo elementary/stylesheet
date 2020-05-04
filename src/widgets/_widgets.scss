@@ -45,7 +45,7 @@ window:not(.popup) {
         }
     }
 
-    headerbar.titlebar {
+    .titlebar {
         @extend %border-outset;
         background-color: #{"@color_primary"};
         box-shadow:
@@ -80,7 +80,7 @@ dialog {
         }
     }
 
-    > headerbar.titlebar {
+    > .titlebar {
         box-shadow: $outset-highlight-top;
 
         label.title {
