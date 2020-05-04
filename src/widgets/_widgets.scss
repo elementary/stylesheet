@@ -19,7 +19,7 @@ dialog {
         margin: 12px;
 
         &:backdrop {
-            @include shadow(2);
+            box-shadow: shadow(2);
         }
     }
 
@@ -32,16 +32,16 @@ window:not(.popup) {
     box-shadow: 0 0 0 1px $toplevel-border-color;
 
     > decoration {
-        @include shadow(4);
+        box-shadow: shadow(4);
 
         &:backdrop {
-            @include shadow(2)
+            box-shadow: shadow(2)
         }
     }
 
     &.tiled {
         > decoration {
-            @include shadow(1);
+            box-shadow: shadow(1);
         }
     }
 
@@ -68,15 +68,17 @@ window:not(.popup) {
 }
 
 dialog {
-    box-shadow:
-        0 0 0 1px $toplevel-border-color,
-        $outset-highlight-bottom;
+    box-shadow: $outset-highlight-bottom;
 
     > decoration {
-        @include shadow(3);
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            shadow(3);
 
         &:backdrop {
-            @include shadow(2);
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            shadow(2);
         }
     }
 
@@ -91,10 +93,10 @@ dialog {
 }
 
 popover {
-    @include shadow(2);
     background-clip: padding-box;
     border: 1px solid $toplevel-border-color;
     border-radius: 6px;
+    box-shadow: shadow(2);
     margin: 6px;
 }
 
