@@ -1,0 +1,34 @@
+entry {
+    background-color: bg-color(1);
+    background-clip: padding-box;
+    border: 1px solid $toplevel-border-color;
+    border-radius: 3px;
+    box-shadow: inset-shadow("");
+    // Off-by-one to account for padding-box clip
+    padding: 4px;
+
+    &:disabled {
+        background: rgba(0,0,0,0.03);
+        box-shadow: inset-shadow("disabled");
+        color: #{'@placeholder_text_color'};
+    }
+
+    image {
+        color: #{'@placeholder_text_color'};
+        transition: all 200ms ease-in-out;
+    }
+
+    image.left {
+        margin-right: 6px;
+    }
+
+    image.right {
+        margin-left: 6px;
+    }
+
+    // We only want the action side icon to react on hover
+    &:dir(ltr) image.right:hover,
+    &:dir(rtl) image.left:hover {
+        color: $fg-color;
+    }
+}

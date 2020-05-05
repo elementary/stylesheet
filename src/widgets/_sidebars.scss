@@ -1,0 +1,23 @@
+.sidebar {
+    list {
+        background-color: bg_color(3);
+        padding-top: 6px;
+        border-bottom-left-radius: 6px;
+
+        row {
+            padding: 6px 12px;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.75);
+
+                @if $color-scheme == "dark" {
+                    background-color: rgba(255, 255, 255, 0.05);
+                }
+            }
+
+            &:selected {
+                background-color: bg_color(4);
+            }
+        }
+    }
+}

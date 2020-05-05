@@ -155,4 +155,6 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
 }
 
 @import '_animate.scss';
-@import 'widgets/_widgets.scss';
+@import '_typography.scss';
+// Can't just use `@import 'widgets';` because of sass version in repos
+@import 'widgets/_index.scss';
