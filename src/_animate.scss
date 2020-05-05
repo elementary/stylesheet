@@ -1,0 +1,11 @@
+.spin,
+entry.spin:dir(ltr) image:last-child,
+entry.spin:dir(rtl) image:first-child {
+    animation: spin 600ms linear infinite;
+}
+
+@keyframes spin {
+    to {
+        -gtk-icon-transform: rotate(1turn);
+    }
+}
