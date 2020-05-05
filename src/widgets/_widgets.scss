@@ -6,7 +6,7 @@ popover,
 .titlebar,
 .background,
 .csd {
-    @include bg-color(2);
+    background-color: bg_color(2);
     color: $fg-color;
 }
 
@@ -54,6 +54,13 @@ window:not(.popup) {
             0 1px 2px rgba(0, 0, 0, 0.2);
         padding: 6px;
 
+        @if $color-scheme == "dark" {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
+                0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
         &:backdrop {
             box-shadow:
                 outset-highlight("full"),
@@ -92,6 +99,41 @@ dialog {
     }
 }
 
+entry {
+    background-color: bg-color(1);
+    background-clip: padding-box;
+    border: 1px solid $toplevel-border-color;
+    border-radius: 3px;
+    box-shadow: inset-shadow("");
+    //Off-by-one to account for padding-box clip
+    padding: 4px;
+
+    &:disabled {
+        background: rgba(0,0,0,0.03);
+        box-shadow: inset-shadow("disabled");
+        color: #{'@placeholder_text_color'};
+    }
+
+    image {
+        color: #{'@placeholder_text_color'};
+        transition: all 200ms ease-in-out;
+    }
+
+    image.left {
+        margin-right: 6px;
+    }
+
+    image.right {
+        margin-left: 6px;
+    }
+
+    // We only want the action side icon to react on hover
+    &:dir(ltr) image.right:hover,
+    &:dir(rtl) image.left:hover {
+        color: $fg-color;
+    }
+}
+
 popover {
     background-clip: padding-box;
     border: 1px solid $toplevel-border-color;
@@ -102,7 +144,7 @@ popover {
 
 .sidebar {
     list {
-        @include bg-color(3);
+        background-color: bg_color(3);
         padding-top: 6px;
         border-bottom-left-radius: 6px;
 
@@ -118,7 +160,7 @@ popover {
             }
 
             &:selected {
-                @include bg-color(4);
+                background-color: bg_color(4);
             }
         }
     }
