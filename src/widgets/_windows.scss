@@ -1,0 +1,88 @@
+window:not(.popup),
+dialog {
+    border-radius: 0 0 6px 6px;
+
+    > decoration {
+        border-radius: 6px;
+        margin: 12px;
+
+        &:backdrop {
+            box-shadow: shadow(2);
+        }
+    }
+
+    > headerbar.titlebar {
+        border-radius: 6px 6px 0 0;
+    }
+}
+
+window:not(.popup) {
+    box-shadow: 0 0 0 1px $toplevel-border-color;
+
+    > decoration {
+        box-shadow: shadow(4);
+
+        &:backdrop {
+            box-shadow: shadow(2)
+        }
+    }
+
+    &.tiled {
+        > decoration {
+            box-shadow: shadow(1);
+        }
+    }
+
+    .titlebar {
+        @extend %background-outset;
+        background-color: #{"@color_primary"};
+        box-shadow:
+            outset-highlight("full"),
+            0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
+            0 1px 2px rgba(0, 0, 0, 0.2);
+        padding: 6px;
+
+        @if $color-scheme == "dark" {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
+                0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        &:backdrop {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
+                0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+	    .title {
+	        font-weight: 600;
+	    }
+    }
+}
+
+dialog {
+    box-shadow: outset-highlight("bottom");
+
+    > decoration {
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            shadow(3);
+
+        &:backdrop {
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            shadow(2);
+        }
+    }
+
+    > .titlebar {
+        box-shadow: outset-highlight("top");
+
+        label.title {
+            font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
+            color: transparent;
+        }
+    }
+}

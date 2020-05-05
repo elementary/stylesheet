@@ -1,0 +1,24 @@
+paned.horizontal > separator {
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.05) 1px,
+            #fff 1px,
+            #fff 2px,
+            transparent 2px
+        );
+
+    @if $color-scheme == "dark" {
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.15) 1px,
+                rgba(255, 255, 255, 0.01) 1px,
+                rgba(255, 255, 255, 0.01) 2px,
+                transparent 2px
+            );
+    }
+    // This creates the invisible resize handle
+    margin-right: -7px;
+    min-width: 8px;
+}

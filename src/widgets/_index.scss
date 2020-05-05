@@ -1,0 +1,24 @@
+window,
+dialog,
+messagedialog,
+menu,
+popover,
+.titlebar,
+.background,
+.csd {
+    background-color: bg_color(2);
+    color: $fg-color;
+}
+
+selection {
+    background-color: #{"alpha(@accent_color_100, 0.3)"};
+    color: #{"@accent_color_900"};
+}
+
+@import '_buttons.scss';
+@import '_entries.scss';
+@import '_panes.scss';
+@import '_popovers.scss';
+@import '_sidebars.scss';
+@import '_spinners.scss';
+@import '_windows.scss';
