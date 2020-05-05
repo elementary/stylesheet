@@ -13,7 +13,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
 @if $color-scheme == "dark" {
     @define-color highlight_color rgba(255, 255, 255, 0.2);
 
-    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 50%);
+    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
 
     $fg-color: #fff;
 
@@ -23,33 +23,36 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
 // The primary brand color used for titlebars
 @define-color color_primary #{$titlebar-color};
 
-@mixin bg-color($level) {
+@function bg-color($level) {
     @if $color-scheme == "light" {
         // Views and inputs
         @if $level == 1 {
-            background-color: #fff;
+            @return #fff;
         // Background
         } @else if $level == 2 {
-            background-color: $SILVER_100;
+            @return $SILVER_100;
         // Sidebars and inline toolbars
         } @else if $level == 3 {
-            background-color: mix($SILVER_100, $SILVER_300, $weight: 75%);
+            @return mix($SILVER_100, $SILVER_300, $weight: 75%);
         // Titlebars and toolbars
         } @else if $level == 4 {
-            background-color: $titlebar-color;
+            @return $titlebar-color;
         }
     } @else if $color-scheme == "dark" {
         @if $level == 1 {
-            background-color: $BLACK_300;
+            @return $BLACK_300;
         } @else if $level == 2 {
-            background-color: $BLACK_500;
+            @return $BLACK_500;
         } @else if $level == 3 {
-            background-color: mix($BLACK_500, $BLACK_700, $weight: 75%);
+            @return mix($BLACK_500, $BLACK_700, $weight: 75%);
         } @else if $level == 4 {
-            background-color: $titlebar-color;
+            @return $titlebar-color;
         }
     }
 }
+
+// Placeholder text in entries. Doesn't respect alpha
+@define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
 
 @function shadow($level) {
     @if $color-scheme == "light" {
@@ -97,6 +100,19 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
                 0 10px 10px rgba(0, 0, 0, 0.32);
         }
     }
+}
+
+@function inset-shadow($state) {
+    @if $state == "disabled" {
+        @return
+            0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
+            inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    @return
+        0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
+        inset 0 1px 1px rgba(0, 0, 0, 0.05),
+        inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 @function outset-highlight($sides) {
