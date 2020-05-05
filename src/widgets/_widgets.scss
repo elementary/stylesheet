@@ -102,6 +102,8 @@ dialog {
 button {
     background-clip: padding-box;
     border-radius: 3px;
+    //Explicitly set in case containers override default color
+    color: $fg-color;
     //Off-by-one to account for padding-box clip
     padding: 4px 7px;
     transition: all 100ms ease-in;
