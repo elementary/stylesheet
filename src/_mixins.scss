@@ -102,7 +102,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
     }
 }
 
-@function inset-shadow($state: "") {
+@function inset-shadow($state) {
     @if $state == "disabled" {
         @return
             0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
