@@ -34,7 +34,7 @@ window:not(.popup) {
     }
 
     .titlebar {
-        @extend %background-outset;
+        @extend %outset-background;
         background-color: #{"@color_primary"};
         box-shadow:
             outset-highlight("full"),

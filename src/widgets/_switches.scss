@@ -1,0 +1,47 @@
+switch {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset-shadow();
+    border-radius: 16px;
+    transition: all 200ms ease-in;
+
+    &:checked:not(.mode-switch):not(:backdrop) {
+        @extend %outset-background;
+        background-color: #{"@accent_color_500"};
+        border-color: #{"shade(@accent_color_500, 0.85)"};
+    }
+
+    image {
+        color: transparent;
+    }
+
+    slider {
+        @extend %outset-background;
+        background-color: bg-color(2);
+        background-clip: padding-box;
+        border-radius: 50%;
+        box-shadow:
+            outset-highlight("full"),
+            0 0 0 1px rgba(0, 0, 0, 0.2),
+            outset-shadow(3);
+        min-height: 24px;
+        min-width: 24px;
+    }
+
+    &.mode-switch slider {
+        min-height: 16px;
+        min-width: 16px;
+    }
+
+    &:disabled {
+        box-shadow: inset-shadow("disabled");
+
+        slider {
+            background-color: bg-color(3);
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 1px rgba(0, 0, 0, 0.15),
+                outset-shadow(2);
+        }
+    }
+}
