@@ -34,4 +34,12 @@ switch {
         min-height: 16px;
         min-width: 16px;
     }
+
+    &:disabled {
+        box-shadow: inset-shadow("disabled");
+
+        slider {
+            background-color: bg-color(3);
+        }
+    }
 }
