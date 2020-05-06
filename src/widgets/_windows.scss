@@ -1,10 +1,10 @@
 window:not(.popup),
 dialog {
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 em(6px) em(6px);
 
     > decoration {
-        border-radius: 6px;
-        margin: 12px;
+        border-radius: em(6px);
+        margin: em(12px);
 
         &:backdrop {
             box-shadow: shadow(2);
@@ -12,11 +12,12 @@ dialog {
     }
 
     > headerbar.titlebar {
-        border-radius: 6px 6px 0 0;
+        border-radius: em(6px) em(6px) 0 0;
     }
 }
 
 window:not(.popup) {
+    // Intentionally not in ems since it's used as a stroke
     box-shadow: 0 0 0 1px $toplevel-border-color;
 
     > decoration {
@@ -38,22 +39,24 @@ window:not(.popup) {
         background-color: #{"@color_primary"};
         box-shadow:
             outset-highlight("full"),
+            // Intentionally not in ems since it's used as a stroke
             0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-            0 1px 2px rgba(0, 0, 0, 0.2);
+            0 em(1px) em(2px) rgba(0, 0, 0, 0.2);
         padding: 6px;
 
         @if $color-scheme == "dark" {
             box-shadow:
                 outset-highlight("full"),
+                // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                0 1px 2px rgba(0, 0, 0, 0.2);
+                0 em(1px) em(2px) rgba(0, 0, 0, 0.2);
         }
 
         &:backdrop {
             box-shadow:
                 outset-highlight("full"),
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                0 1px 2px rgba(0, 0, 0, 0.15);
+                0 em(1px) em(2px) rgba(0, 0, 0, 0.15);
         }
 
 	    .title {
@@ -67,11 +70,13 @@ dialog {
 
     > decoration {
         box-shadow:
+            // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
             shadow(3);
 
         &:backdrop {
         box-shadow:
+            // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
             shadow(2);
         }

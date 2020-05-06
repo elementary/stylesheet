@@ -6,6 +6,7 @@
     background-color: bg-color(1);
     box-shadow:
         outset-highlight(),
+        // Intentionally not in ems since it's used as a stroke
         0 0 0 1px rgba(0, 0, 0, 0.1),
         shadow(2);
     transition: all 150ms ease-in-out;
@@ -14,6 +15,7 @@
         background-color: bg-color(2);
         box-shadow:
             outset-highlight(),
+            // Intentionally not in ems since it's used as a stroke
             0 0 0 1px rgba(0, 0, 0, 0.1),
             shadow(1);
     }

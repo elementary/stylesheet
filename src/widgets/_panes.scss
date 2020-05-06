@@ -19,6 +19,6 @@ paned.horizontal > separator {
             );
     }
     // This creates the invisible resize handle
-    margin-right: -7px;
-    min-width: 8px;
+    margin-right: em(-7px);
+    min-width: em(8px);
 }

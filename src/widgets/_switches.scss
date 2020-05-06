@@ -2,7 +2,7 @@ switch {
     background-color: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: inset-shadow();
-    border-radius: 16px;
+    border-radius: em(16px);
     transition: all 200ms ease-in;
 
     &:checked:not(.mode-switch):not(:backdrop) {
@@ -24,13 +24,13 @@ switch {
             outset-highlight("full"),
             0 0 0 1px rgba(0, 0, 0, 0.2),
             outset-shadow(3);
-        min-height: 24px;
-        min-width: 24px;
+        min-height: em(24px);
+        min-width: em(24px);
     }
 
     &.mode-switch slider {
-        min-height: 16px;
-        min-width: 16px;
+        min-height: em(16px);
+        min-width: em(16px);
     }
 
     &:disabled {
