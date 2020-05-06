@@ -10,9 +10,36 @@ popover,
     color: $fg-color;
 }
 
+@define-color error_color @STRAWBERRY_500;
+@define-color success_color @LIME_700;
+@define-color warning_color @BANANA_900;
+
 selection {
-    background-color: #{"alpha(@accent_color_100, 0.3)"};
-    color: #{"@accent_color_900"};
+    background-color: #{'alpha(@accent_color_100, 0.3)'};
+    color: #{'@accent_color_900'};
+}
+
+@if $color-scheme == "dark" {
+    @define-color error_color @STRAWBERRY_300;
+    @define-color success_color @LIME_300;
+    @define-color warning_color @BANANA_100;
+
+    selection {
+        background-color: #{'alpha(@accent_color_700, 0.3)'};
+        color: #{'@accent_color_100'};
+    }
+}
+
+.error {
+    color: #{'@error_color'};
+}
+
+.success {
+    color: #{'@success_color'};
+}
+
+.warning {
+    color: #{'@warning_color'};
 }
 
 @import '_buttons.scss';
