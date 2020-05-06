@@ -20,11 +20,11 @@
 @import '../_palette.scss';
 
 /* Accent Shades */
-@define-color accent_color_100 @GRAPE_900;
-@define-color accent_color_300 @GRAPE_700;
+@define-color accent_color_100 @GRAPE_100;
+@define-color accent_color_300 @GRAPE_300;
 @define-color accent_color_500 @GRAPE_500;
-@define-color accent_color_700 @GRAPE_300;
-@define-color accent_color_900 @GRAPE_100;
+@define-color accent_color_700 @GRAPE_700;
+@define-color accent_color_900 @GRAPE_900;
 
 $color-scheme: "dark";
 
