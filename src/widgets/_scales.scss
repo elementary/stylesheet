@@ -19,7 +19,7 @@ scale {
     }
 
     slider {
-        @extend %background-outset;
+        @extend %outset-background;
         background-color: bg-color(2);
         border-radius: 12px;
         box-shadow:
