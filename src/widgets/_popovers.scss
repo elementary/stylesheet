@@ -4,4 +4,38 @@ popover {
     border-radius: 6px;
     box-shadow: shadow(2);
     margin: 6px;
+
+    modelbutton {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        min-width: 150px;
+        padding: 6px 12px;
+
+        &:disabled {
+            color: #{'@placeholder_text_color'};
+
+            .keycap {
+                opacity: 0.7;
+            }
+        }
+
+        &:hover {
+            box-shadow: none;
+            background-color: #{'alpha(@fg_color, 0.15)'};
+        }
+
+        .keycap {
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 3px;
+            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+            color: #{'alpha(@fg_color, 0.78)'};
+            font-size: 85%;
+            margin: 0 0 1px;
+            min-width: 12px;
+            // We trim off 1px on the bottom to account for box-shadow
+            padding: 3px 6px 2px;
+        }
+    }
 }
