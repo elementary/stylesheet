@@ -51,9 +51,6 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
     }
 }
 
-// Placeholder text in entries. Doesn't respect alpha
-@define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
-
 @function shadow($level) {
     @if $color-scheme == "light" {
         @if $level == 1 {
@@ -102,7 +99,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
     }
 }
 
-@function inset-shadow($state) {
+@function inset-shadow($state: "") {
     @if $state == "disabled" {
         @return
             0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
@@ -115,7 +112,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
         inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-@function outset-highlight($sides) {
+@function outset-highlight($sides: "full") {
     $highlight:
         inset 1px 0 0 0 #{'alpha(@highlight_color, 0.07)'},
         inset -1px 0 0 0 #{'alpha(@highlight_color, 0.07)'};
@@ -135,6 +132,20 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
     @return $highlight;
 }
 
+@function outset-shadow($level) {
+    @if $level == 1 {
+        @return 0 1px 1px rgba(0, 0, 0, 0.05);
+    } @else if $level == 2 {
+        @return
+            0 1px 1px rgba(0, 0, 0, 0.07),
+            0 1px 2px rgba(0, 0, 0, 0.08);
+    } @else if $level == 3 {
+        @return
+            0 1px 3px rgba(0, 0, 0, 0.12),
+            0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+}
+
 @function em($pixels, $text-size: 9pt) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
@@ -148,7 +159,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
 }
 
 // Background for elements with outset style like headerbars, buttons, checkboxes, etc
-%background-outset {
+%outset-background {
     background-image:
         linear-gradient(
             to bottom,

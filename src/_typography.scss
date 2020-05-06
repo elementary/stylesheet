@@ -1,3 +1,7 @@
+label {
+    color: #{'@fg_color'};
+}
+
 .h1 {
     font-size: 24pt;
     letter-spacing: -0.04em;
@@ -13,7 +17,8 @@
     font-size: 11pt;
 }
 
-.h4 {
+label.h4,
+.h4 label {
     font-weight: 700;
     opacity: 0.8;
     padding-bottom: 6px;

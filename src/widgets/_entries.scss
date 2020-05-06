@@ -4,6 +4,7 @@ entry {
     border: 1px solid $toplevel-border-color;
     border-radius: 3px;
     box-shadow: inset-shadow("");
+    color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
     padding: em(4px);
 
@@ -16,6 +17,10 @@ entry {
     image {
         color: #{'@placeholder_text_color'};
         transition: all 200ms ease-in-out;
+        -gtk-icon-palette:
+            error #{'@error_color'},
+            success #{'@success_color'},
+            warning #{'@warning_color'};
     }
 
     image.left {
