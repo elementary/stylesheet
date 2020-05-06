@@ -17,7 +17,8 @@ label {
     font-size: 11pt;
 }
 
-.h4 {
+label.h4,
+.h4 label {
     font-weight: 700;
     opacity: 0.8;
     padding-bottom: 6px;
