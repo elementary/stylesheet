@@ -16,6 +16,10 @@ entry {
     image {
         color: #{'@placeholder_text_color'};
         transition: all 200ms ease-in-out;
+        -gtk-icon-palette:
+            error #{'@error_color'},
+            success #{'@success_color'},
+            warning #{'@warning_color'};
     }
 
     image.left {
