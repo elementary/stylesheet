@@ -1,11 +1,11 @@
 .sidebar {
     list {
         background-color: bg_color(3);
-        padding-top: em(6px);
-        border-bottom-left-radius: em(6px);
+        padding-top: rem(6px);
+        border-bottom-left-radius: rem(6px);
 
         row {
-            padding: em(6px) em(12px);
+            padding: rem(6px) rem(12px);
 
             &:hover {
                 background-color: rgba(255, 255, 255, 0.75);
