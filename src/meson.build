@@ -39,12 +39,13 @@ foreach variant : variants
         variant_dark_target.full_path(),
         dest_theme_dir / 'gtk-dark.css'
     )
-    install_subdir(
-        'plank',
-        install_dir: join_paths(get_option('datadir'), 'themes', meson.project_name() + '.' + variant)
-    )
-    install_subdir(
-        'plank-dark',
-        install_dir: join_paths(get_option('datadir'), 'themes', meson.project_name() + '.' + variant)
+    install_data(
+        ['plank/dock.theme', 'plank/dock-dark.theme'],
+        install_dir: join_paths(
+            get_option('datadir'),
+            'themes',
+            meson.project_name() + '.' + variant
+        ),
+        rename: ['plank/dock.theme', 'plank-dark/dock.theme']
     )
 endforeach
