@@ -1,13 +1,13 @@
 {
-  "name": "stylesheet",
-  "version": "5.2.3",
-  "description": "The Gtk+ Stylesheet for elementary OS",
+  "name": "@elementaryos/stylesheet",
+  "version": "5.4.1",
+  "description": "The GTK Stylesheet for elementary OS",
   "main": "index.theme",
   "scripts": {
     "test": "stylelint **/*.css"
   },
   "devDependencies": {
-    "stylelint": "^8.2.0"
+    "stylelint": "^13.0.0"
   },
   "repository": {
     "type": "git",
