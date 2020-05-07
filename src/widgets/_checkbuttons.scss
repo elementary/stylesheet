@@ -1,0 +1,64 @@
+check,
+radio {
+    $border-color: rgba(0, 0, 0, 0.2);
+    @if $color-scheme == "dark" {
+        $border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @extend %outset-background;
+    background-color: bg-color(1);
+    border: 1px solid $border-color;
+    box-shadow:
+        outset-highlight(),
+        outset-shadow(1);
+    min-height: rem(12px);
+    min-width: rem(12px);
+    transition: all 200ms ease-in;
+    -gtk-icon-source: none;
+
+    &:checked {
+        background-color: #{'@accent_color_300'};
+        color: #fff;
+        -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
+        -gtk-icon-shadow: 0 1px 1px #{'@accent_color_500'};
+
+        &:backdrop:not(:disabled) {
+            background-image: none;
+            background-color: bg-color(4);
+            -gtk-icon-shadow: 0 1px 1px $border-color;
+        }
+    }
+
+    &:disabled {
+        background: rgba(0, 0, 0, 0.03);
+        box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
+        color: #{'@placeholder_text_color'};
+        -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
+    }
+
+    &:indeterminate {
+        -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
+    }
+
+}
+
+check {
+    border-radius: rem(3px);
+}
+
+radio {
+    border-radius: 50%;
+}
+
+radiobutton,
+checkbutton {
+    label {
+        &:dir(ltr) {
+            margin-left: rem(6px);
+        }
+
+        &:dir(rtl) {
+            margin-right: rem(6px);
+        }
+    }
+}
