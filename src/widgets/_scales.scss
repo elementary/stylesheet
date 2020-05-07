@@ -21,13 +21,13 @@ scale {
     slider {
         @extend %outset-background;
         background-color: bg-color(2);
-        border-radius: em(12px);
+        border-radius: rem(12px);
         box-shadow:
             outset-highlight(),
             0 0 0 1px rgba(0, 0, 0, 0.25),
             0 1px 1px 1px rgba(0, 0, 0, 0.1);
-        min-height: em(14px);
-        min-width: em(14px);
+        min-height: rem(14px);
+        min-width: rem(14px);
 
         &:backdrop {
             box-shadow:
@@ -46,11 +46,11 @@ scale {
 
     trough {
         border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: em(12px);
+        border-radius: rem(12px);
         background-color: rgba(0, 0, 0, 0.05);
         box-shadow: inset-shadow();
-        min-height: em(3px);
-        min-width: em(3px);
+        min-height: rem(3px);
+        min-width: rem(3px);
 
         &:disabled {
             background-image: none;
@@ -70,58 +70,58 @@ scale {
     &.horizontal {
         highlight.top,
         fill.top {
-            border-radius: em(12px) 0 0 em(12px);
-            margin: 0 0 0 em(-6px);
+            border-radius: rem(12px) 0 0 rem(12px);
+            margin: 0 0 0 rem(-6px);
         }
 
         highlight.bottom,
         fill.bottom {
-            border-radius: 0 em(12px) em(12px) 0;
-            margin: 0 em(-6px) 0 0;
+            border-radius: 0 rem(12px) rem(12px) 0;
+            margin: 0 rem(-6px) 0 0;
         }
 
         mark indicator {
-            min-height: em(6px);
+            min-height: rem(6px);
             // Intentionally not in ems since it's a stroke
             min-width: 1px;
         }
 
         slider {
-            margin: em(-6px) 0;
+            margin: rem(-6px) 0;
         }
 
         trough {
-            margin: em(6px) 0;
-            padding: 0 em(6px);
+            margin: rem(6px) 0;
+            padding: 0 rem(6px);
         }
     }
 
     &.vertical {
         highlight.top,
         fill.top {
-            border-radius: em(12px) em(12px) 0 0;
-            margin: em(-6px) 0 0;
+            border-radius: rem(12px) rem(12px) 0 0;
+            margin: rem(-6px) 0 0;
         }
 
         highlight.bottom,
         fill.bottom {
-            border-radius: 0 0 em(12px) em(12px);
-            margin: 0 0 em(-6px);
+            border-radius: 0 0 rem(12px) rem(12px);
+            margin: 0 0 rem(-6px);
         }
 
         mark indicator {
             // Intentionally not in ems since it's a stroke
             min-height: 1px;
-            min-width: em(6px);
+            min-width: rem(6px);
         }
 
         slider {
-            margin: 0 em(-6px);
+            margin: 0 rem(-6px);
         }
 
         trough {
-            margin: 0 em(6px);
-            padding: em(6px) 0;
+            margin: 0 rem(6px);
+            padding: rem(6px) 0;
         }
     }
 }
