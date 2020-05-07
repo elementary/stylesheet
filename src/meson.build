@@ -29,7 +29,6 @@ foreach variant : variants
         command : sass_command,
         build_by_default: true
     )
-    install_exec = meson.current_source_dir() / '..' / 'meson' / 'install-to-dir.py'
     dest_theme_dir = get_option('datadir') / 'themes' / meson.project_name() + '.' + variant / 'gtk-3.0'
     meson.add_install_script (install_exec,
         variant_target.full_path(),
