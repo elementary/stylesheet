@@ -10,8 +10,8 @@ popover {
         border: none;
         border-radius: 0;
         box-shadow: none;
-        min-width: 150px;
-        padding: 6px 12px;
+        min-width: em(150px);
+        padding: em(6px) em(12px);
 
         &:disabled {
             color: #{'@placeholder_text_color'};
@@ -28,12 +28,13 @@ popover {
 
         .keycap {
             background: rgba(0, 0, 0, 0.08);
-            border-radius: 3px;
+            border-radius: em(3px);
+            // Intentionally not in ems since it's used as a stroke
             box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
             color: #{'alpha(@fg_color, 0.78)'};
             font-size: 85%;
             margin: 0 0 1px;
-            min-width: 12px;
+            min-width: em(12px);
             // We trim off 1px on the bottom to account for box-shadow
             padding: 3px 6px 2px;
         }
