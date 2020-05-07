@@ -2,11 +2,11 @@ entry {
     background-color: bg-color(1);
     background-clip: padding-box;
     border: 1px solid $toplevel-border-color;
-    border-radius: 3px;
+    border-radius: em(3px);
     box-shadow: inset-shadow("");
     color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
-    padding: 4px;
+    padding: em(4px);
 
     &:disabled {
         background: rgba(0,0,0,0.03);
@@ -24,11 +24,11 @@ entry {
     }
 
     image.left {
-        margin-right: 6px;
+        margin-right: em(6px);
     }
 
     image.right {
-        margin-left: 6px;
+        margin-left: em(6px);
     }
 
     // We only want the action side icon to react on hover

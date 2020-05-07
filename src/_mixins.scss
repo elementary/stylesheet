@@ -146,6 +146,18 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
     }
 }
 
+@function em($pixels, $text-size: 9pt) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($text-size)) {
+        $text-size: $text-size * 1px;
+    }
+
+    @return $pixels / $text-size * 1em;
+}
+
 // Background for elements with outset style like headerbars, buttons, checkboxes, etc
 %outset-background {
     background-image:
