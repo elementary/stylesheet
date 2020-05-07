@@ -9,12 +9,13 @@ variants = [
     'strawberry',
 ]
 
+sass_command = [
+    sass,
+    '@INPUT@',
+    '@OUTPUT@'
+]
+
 foreach variant : variants
-    sass_command = [
-        sass,
-        '@INPUT@',
-        '@OUTPUT@'
-    ]
     variant_target = custom_target(
         meson.project_name() + '.' + variant,
         input : 'variants' / variant + '.scss',
