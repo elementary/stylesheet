@@ -1,10 +1,10 @@
 window:not(.popup),
 dialog {
-    border-radius: 0 0 em(6px) em(6px);
+    border-radius: 0 0 rem(6px) rem(6px);
 
     > decoration {
-        border-radius: em(6px);
-        margin: em(12px);
+        border-radius: rem(6px);
+        margin: rem(12px);
 
         &:backdrop {
             box-shadow: shadow(2);
@@ -12,7 +12,7 @@ dialog {
     }
 
     > .titlebar {
-        border-radius: em(6px) em(6px) 0 0;
+        border-radius: rem(6px) rem(6px) 0 0;
     }
 }
 
@@ -41,26 +41,26 @@ window:not(.popup) {
             outset-highlight("full"),
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-            0 em(1px) em(2px) rgba(0, 0, 0, 0.2);
-        padding: em(6px);
+            0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
+        padding: rem(6px);
 
         @if $color-scheme == "dark" {
             box-shadow:
                 outset-highlight("full"),
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                0 em(1px) em(2px) rgba(0, 0, 0, 0.2);
+                0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
         }
 
         &:backdrop {
             box-shadow:
                 outset-highlight("full"),
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                0 em(1px) em(2px) rgba(0, 0, 0, 0.15);
+                0 rem(1px) rem(2px) rgba(0, 0, 0, 0.15);
         }
 
         &.default-decoration {
-	        padding: em(3px);
+	        padding: rem(3px);
         }
 
 	    .title {
