@@ -36,7 +36,7 @@ popover {
             margin: 0 0 1px;
             min-width: em(12px);
             // We trim off 1px on the bottom to account for box-shadow
-            padding: 3px 6px 2px;
+            padding: em(3px) em(6px) calc(#{em(3px)} - 1px);
         }
     }
 }
