@@ -62,23 +62,3 @@ checkbutton {
         }
     }
 }
-
-// radiobutton.image-button {
-//     border: 1px solid transparent;
-//     border-radius: 3px;
-//     padding: 6px;
-
-//     &:checked:backdrop {
-//         background-color: alpha (@text_color, 0.05);
-//         border-color: alpha (@text_color, 0.4);
-//     }
-
-//     &:checked:not(:backdrop) {
-//         background-color: alpha (@colorAccent, 0.1);
-//         border-color: @colorAccent;
-
-//         image {
-//             color: mix (@colorAccent, @text_color, 0.3);
-//         }
-//     }
-// }
