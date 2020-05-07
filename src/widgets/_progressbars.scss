@@ -4,35 +4,49 @@ progressbar {
         $border-color: rgba(0, 0, 0, 0.5);
     }
 
+    border-radius: rem(2px);
+
+    progress,
+    trough {
+        border: 1px solid $border-color;
+        border-radius: rem(2px);
+    }
+
     progress {
         background-color: #{'@accent_color_300'};
-        border: 1px solid $border-color;
         box-shadow: outset-highlight();
 
         &:backdrop {
             background-color: bg-color(4);
         }
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
     }
 
     trough {
-        @extend %outset-background;
         background-color: bg-color(1);
-        border: 1px solid $border-color;
         box-shadow:
             outset-highlight(),
             outset-shadow(1);
     }
 
     &.horizontal {
-        progress {
+        progress,
+        trough {
             @extend %outset-background;
+        }
+
+        progress {
             margin-left: -1px;
             margin-right: -1px;
         }
     }
 
     &.vertical {
-         progress {
+        progress,
+        trough {
             background-image:
                 linear-gradient(
                     to right,
@@ -48,6 +62,9 @@ progressbar {
                         #{'alpha(@highlight_color, 0.3)'}
                     );
             }
+        }
+
+        progress {
             margin: -1px 0;
         }
     }
