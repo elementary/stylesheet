@@ -22,7 +22,7 @@ radio {
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
         -gtk-icon-shadow: 0 1px 1px #{'@accent_color_500'};
 
-        &:backdrop:not(:disabled) {
+        &:backdrop:not(:disabled):not(.colorbutton) {
             background-image: none;
             background-color: bg-color(4);
             -gtk-icon-shadow: 0 1px 1px $border-color;
@@ -61,4 +61,100 @@ checkbutton {
             margin-right: rem(6px);
         }
     }
+}
+
+.color-button check,
+.color-button check:checked,
+.color-button radio,
+.color-button radio:checked, {
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: inset-shadow();
+    min-height: rem(12px);
+    min-width: rem(12px);
+    padding: rem(3px);
+
+    @if $color-scheme == "dark" {
+        @extend %outset-background;
+        background-clip: padding-box;
+        box-shadow:
+            outset-highlight("full"),
+            outset-shadow(2);
+    }
+}
+
+.color-button.red check,
+.color-button.red radio,
+.color-button.strawberry check,
+.color-button.strawberry radio {
+    background-color: #{'@STRAWBERRY_300'};
+    -gtk-icon-shadow: 0 1px 1px #{'@STRAWBERRY_500'};
+}
+
+.color-button.orange check,
+.color-button.orange radio {
+    background-color: #{'@ORANGE_300'};
+    -gtk-icon-shadow: 0 1px 1px #{'@ORANGE_500'};
+}
+
+.color-button.yellow check,
+.color-button.yellow radio,
+.color-button.banana check,
+.color-button.banana radio {
+    background-color: #{'@BANANA_500'};
+    -gtk-icon-shadow: 0 1px 1px #{'@BANANA_700'};
+}
+
+.color-button.green check,
+.color-button.green radio,
+.color-button.lime check,
+.color-button.lime radio {
+    background-color: #{'@LIME_500'};
+    -gtk-icon-shadow: 0 1px 1px #{'@LIME_700'};
+}
+
+.color-button.blue check,
+.color-button.blue radio,
+.color-button.blueberry check,
+.color-button.blueberry radio {
+    background-color: #{'@BLUEBERRY_500'};
+    -gtk-icon-shadow: 0 1px 1px #{'@BLUEBERRY_700'};
+}
+
+.color-button.purple check,
+.color-button.purple radio,
+.color-button.grape check,
+.color-button.grape radio {
+    background-color: #{'@GRAPE_500'};
+    -gtk-icon-shadow: 0 1px 1px #{'@GRAPE_700'};
+}
+
+.color-button.brown check,
+.color-button.brown radio,
+.color-button.cocoa check,
+.color-button.cocoa radio {
+    background-color: #{'@COCOA_300'};
+    -gtk-icon-shadow: 0 1px 1px #{'@COCOA_500'};
+}
+
+.color-button.mint check,
+.color-button.mint radio  {
+    background-color: #{'@MINT_500'};
+    -gtk-icon-shadow: 0 1px 1px #{'@MINT_700'};
+}
+
+.color-button.pink check,
+.color-button.pink radio,
+.color-button.bubblegum check,
+.color-button.bubblegum radio  {
+    background-color: #{'@BUBBLEGUM_500'};
+    -gtk-icon-shadow: 0 1px 1px #{'@BUBBLEGUM_700'};
+}
+
+.color-button.slate check,
+.color-button.slate radio  {
+    background-color: #{'@SLATE_300'};
+    -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
+
 }
