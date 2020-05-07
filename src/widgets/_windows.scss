@@ -11,7 +11,7 @@ dialog {
         }
     }
 
-    > headerbar.titlebar {
+    > .titlebar {
         border-radius: rem(6px) rem(6px) 0 0;
     }
 }
@@ -42,7 +42,7 @@ window:not(.popup) {
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
             0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
-        padding: 6px;
+        padding: rem(6px);
 
         @if $color-scheme == "dark" {
             box-shadow:
@@ -57,6 +57,10 @@ window:not(.popup) {
                 outset-highlight("full"),
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
                 0 rem(1px) rem(2px) rgba(0, 0, 0, 0.15);
+        }
+
+        &.default-decoration {
+	        padding: rem(3px);
         }
 
 	    .title {
