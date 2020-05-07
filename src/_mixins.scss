@@ -155,7 +155,8 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
         $text-size: $text-size * 1px;
     }
 
-    @return $pixels / $text-size * 1em;
+    // Workaround GTK clamping instead of rounding up
+    @return ($pixels / $text-size * 1em) + 0.000000001em;
 }
 
 // Background for elements with outset style like headerbars, buttons, checkboxes, etc
