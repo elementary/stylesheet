@@ -1,0 +1,54 @@
+progressbar {
+    $border-color: rgba(0, 0, 0, 0.2);
+    @if $color-scheme == "dark" {
+        $border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    progress {
+        background-color: #{'@accent_color_300'};
+        border: 1px solid $border-color;
+        box-shadow: outset-highlight();
+
+        &:backdrop {
+            background-color: bg-color(4);
+        }
+    }
+
+    trough {
+        @extend %outset-background;
+        background-color: bg-color(1);
+        border: 1px solid $border-color;
+        box-shadow:
+            outset-highlight(),
+            outset-shadow(1);
+    }
+
+    &.horizontal {
+        progress {
+            @extend %outset-background;
+            margin-left: -1px;
+            margin-right: -1px;
+        }
+    }
+
+    &.vertical {
+         progress {
+            background-image:
+                linear-gradient(
+                    to right,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(255, 255, 255, 0)
+                );
+
+            &:backdrop {
+                background-image:
+                    linear-gradient(
+                        to right,
+                        #{'alpha(@highlight_color, 0.35)'},
+                        #{'alpha(@highlight_color, 0.3)'}
+                    );
+            }
+            margin: -1px 0;
+        }
+    }
+}
