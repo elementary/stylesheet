@@ -59,9 +59,10 @@ entry:focus,
         0 1px 0 0 alpha(#fff, 0.05);
 }
 
-entry selection,
-textview selection {
-    color: shade (@text_color, 1.23);
+selection {
+    background-color: alpha (@accent_color_500, 0.3);
+    color: mix (@text_color, @accent_color_100, 0.75);
+    text-shadow: none;
 }
 
 .titlebar entry:disabled,
@@ -140,12 +141,12 @@ scale.horizontal fill.bottom {
 
 scale.vertical highlight.top,
 scale.vertical fill.top {
-    margin: -5px 1px 1px 1px;
+    margin: -5px 1px 1px;
 }
 
 scale.vertical highlight.bottom,
 scale.vertical fill.bottom {
-    margin: 1px 1px -5px 1px;
+    margin: 1px 1px -5px;
 }
 
 /**********
@@ -224,6 +225,11 @@ switch:checked:disabled {
 
 switch:checked slider {
     border-color: shade (@bg_color, 0.65);
+}
+
+radiobutton.image-button:checked:not(:backdrop) {
+    background-color: alpha (@colorAccent, 0.3);
+    border-color: alpha (@colorAccent, 0.8);
 }
 
 /***************************
@@ -561,18 +567,6 @@ EggFindBar.toolbar,
     background-color: alpha (#000, 0.2);
     text-shadow: 0 1px alpha (#000, 0.1);
     -gtk-icon-shadow: 0 1px alpha (#000, 0.1);
-}
-
-/***************
- * Search bars *
- ***************/
-
-EggFindBar.toolbar,
-.search-bar {
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.01),
-        inset 0 1px 0 0 alpha (#fff, 0.05),
-        inset 0 -1px 0 0 alpha (#fff, 0.03);
 }
 
 /**************************
