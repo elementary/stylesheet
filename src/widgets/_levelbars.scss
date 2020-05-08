@@ -1,0 +1,84 @@
+levelbar {
+    block {
+        $border-color: rgba(0, 0, 0, 0.2);
+        @if $color-scheme == "dark" {
+            $border-color: rgba(0, 0, 0, 0.5);
+        }
+
+        background-color: $LIME_300;
+        border: 1px solid $border-color;
+        border-radius: rem(6px);
+        box-shadow:
+            outset-highlight(),
+            outset-shadow(1);
+        transition: all 100ms ease-in;
+
+        &.filled {
+            &.low {
+                background-color: $STRAWBERRY_500;
+            }
+
+            &.middle {
+                background-color: $BANANA_500;
+            }
+
+            &.high {
+                background-color: $BLUEBERRY_300;
+            }
+        }
+
+        &.empty {
+            background-color: bg-color(1);
+        }
+    }
+
+    &.discrete {
+        &.horizontal {
+            block {
+                min-width: rem(24px);
+
+                &:not(:first-child) {
+                    margin-left: rem(3px);
+                }
+            }
+        }
+
+        &.vertical block {
+            margin: 2px 0;
+            min-height: rem(24px);
+        }
+    }
+
+    &.inverted {
+        block.filled {
+            background-color: $STRAWBERRY_500;
+
+            &.low {
+                background-color: $LIME_300;
+            }
+
+            &.middle {
+                background-color: $BLUEBERRY_300;
+            }
+
+            &.high {
+                background-color: $BANANA_500;
+            }
+        }
+    }
+
+    &.horizontal block {
+        @extend %outset-background;
+
+        min-height: rem(6px);
+        min-width: rem(3px);
+
+    }
+
+    &.vertical block {
+        @extend %outset-background-vertical;
+
+        min-height: rem(3px);
+        min-width: rem(6px);
+    }
+}
