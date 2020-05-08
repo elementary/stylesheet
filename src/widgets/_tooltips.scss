@@ -1,14 +1,14 @@
 tooltip.background,
 .overlay-bar {
-    background-color: #{'alpha (#222, 0.9)'};
+    background-color: rgba($BLACK_700, 0.9);
     border-radius: rem(3px);
     padding: rem(3px) rem(6px);
 
     label,
     spinner {
         color: white;
-        text-shadow: 0 rem(1px) rem(2px) rgba(0, 0, 0, 0.6);
-        -gtk-icon-shadow: 0 rem(1px) rem(2px) rgba(0, 0, 0, 0.6);
+        text-shadow: 0 rem(1px) rem(2px) rgba(black, 0.6);
+        -gtk-icon-shadow: 0 rem(1px) rem(2px) rgba(black, 0.6);
     }
 }
 
