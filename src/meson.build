@@ -2,10 +2,12 @@ variants = [
     'banana',
     'blueberry',
     'bubblegum',
+    'cocoa',
     'grape',
     'lime',
     'mint',
     'orange',
+    'slate',
     'strawberry',
 ]
 
