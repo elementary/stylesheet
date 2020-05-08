@@ -8,7 +8,19 @@ switch {
     &:checked:not(.mode-switch):not(:backdrop) {
         @extend %outset-background;
         background-color: #{"@accent_color_500"};
-        border-color: #{"shade(@accent_color_500, 0.85)"};
+
+        @if $color-scheme == "light" {
+            border-color: #{"shade(@accent_color_500, 0.85)"};
+        } @else if $color-scheme == "dark" {
+            background-clip: padding-box;
+
+            slider {
+                box-shadow:
+                    outset-highlight("full"),
+                    0 0 0 1px rgba(0, 0, 0, 0.5),
+                    outset-shadow(3);
+            }
+        }
     }
 
     image {
