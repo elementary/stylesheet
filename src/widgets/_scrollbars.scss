@@ -1,0 +1,78 @@
+scrolledwindow {
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+}
+
+scrollbar {
+    background-color: transparent;
+    transition: all 600ms ease-out;
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+
+    &:hover,
+    &.hovering {
+        transition: all 200ms ease-in-out;
+
+        trough {
+            background-color: transparent;
+            border-radius: 0;
+        }
+    }
+
+    button {
+        border: none;
+        background-image: none;
+        background-color: transparent;
+    }
+
+    slider {
+        background-clip: padding-box;
+        background-color: rgba($fg-color, 0.6);
+        border: 1px solid rgba(bg-color(2), 0.25);
+        border-radius: rem(10px);
+        margin: 1px;
+        transition: all 200ms ease-in-out;
+    }
+
+    &.horizontal {
+        slider {
+            min-width: rem(32px);
+            min-height: rem(3px);
+        }
+
+        &:hover slider,
+        &.hovering slider {
+            min-height: rem(9px);
+        }
+    }
+
+    &.vertical {
+        slider {
+            min-height: rem(32px);
+            min-width: rem(3px);
+        }
+
+        &:hover slider,
+        &.hovering slider {
+            min-width: rem(9px);
+        }
+    }
+
+    &.overlay-indicator {
+        slider {
+            border-radius: rem(20px);
+        }
+
+        trough {
+            background-color: transparent;
+        }
+
+        &:hover trough,
+        &.hovering trough {
+            background-color: rgba($fg-color, 0.1);
+        }
+    }
+
+    trough {
+        padding: 0;
+    }
+}
