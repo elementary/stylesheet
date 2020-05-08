@@ -22,24 +22,12 @@
 
 .linked:not(.vertical) > button,
 .linked:not(.vertical) > entry {
-    &:dir(ltr) {
-        &:not(:first-child) {
-            @extend %linked_not_left;
-        }
-
-        &:not(:last-child) {
-            @extend %linked_not_right;
-        }
+    &:not(:first-child) {
+        @extend %linked_not_left;
     }
 
-    &:dir(rtl) {
-        &:not(:first-child) {
-            @extend %linked_not_right;
-        }
-
-        &:not(:last-child) {
-            @extend %linked_not_left;
-        }
+    &:not(:last-child) {
+        @extend %linked_not_right;
     }
 }
 
@@ -55,35 +43,17 @@
 }
 
 combobox.linked button:nth-child(2) {
-    &:dir(ltr) {
-        @extend %linked_not_left;
-    }
-
-    &:dir(rtl) {
-        @extend %linked_not_right;
-    }
+    @extend %linked_not_left;
 }
 
 
 .linked:not(.vertical) > combobox {
-    &:dir(ltr) {
-        &:not(:first-child) > box > button.combo {
-            @extend %linked_not_left;
-        }
-
-        &:not(:last-child) > box > button.combo {
-            @extend %linked_not_right;
-        }
+    &:not(:first-child) > box > button.combo {
+        @extend %linked_not_left;
     }
 
-    &:dir(rtl) {
-        &:not(:first-child) > box > button.combo {
-            @extend %linked_not_right;
-        }
-
-        &:not(:last-child) > box > button.combo {
-            @extend %linked_not_left;
-        }
+    &:not(:last-child) > box > button.combo {
+        @extend %linked_not_right;
     }
 }
 
