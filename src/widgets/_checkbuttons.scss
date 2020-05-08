@@ -22,7 +22,7 @@ radio {
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
         -gtk-icon-shadow: 0 1px 1px #{'@accent_color_500'};
 
-        &:backdrop:not(:disabled) {
+        &:backdrop:not(:disabled):not(.colorbutton) {
             background-image: none;
             background-color: bg-color(4);
             -gtk-icon-shadow: 0 1px 1px $border-color;
@@ -60,5 +60,103 @@ checkbutton {
         &:dir(rtl) {
             margin-right: rem(6px);
         }
+    }
+}
+
+.color-button {
+    check,
+    check:checked,
+    radio,
+    radio:checked, {
+        background-image: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        box-shadow: inset-shadow();
+        min-height: rem(12px);
+        min-width: rem(12px);
+        padding: rem(3px);
+
+        @if $color-scheme == "dark" {
+            @extend %outset-background;
+            background-clip: padding-box;
+            box-shadow:
+                outset-highlight("full"),
+                outset-shadow(2);
+        }
+    }
+
+    &.red check,
+    &.red radio,
+    &.strawberry check,
+    &.strawberry radio {
+        background-color: #{'@STRAWBERRY_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@STRAWBERRY_500'};
+    }
+
+    &.orange check,
+    &.orange radio {
+        background-color: #{'@ORANGE_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@ORANGE_500'};
+    }
+
+    &.yellow check,
+    &.yellow radio,
+    &.banana check,
+    &.banana radio {
+        background-color: #{'@BANANA_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@BANANA_700'};
+    }
+
+    &.green check,
+    &.green radio,
+    &.lime check,
+    &.lime radio {
+        background-color: #{'@LIME_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@LIME_700'};
+    }
+
+    &.blue check,
+    &.blue radio,
+    &.blueberry check,
+    &.blueberry radio {
+        background-color: #{'@BLUEBERRY_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@BLUEBERRY_700'};
+    }
+
+    &.purple check,
+    &.purple radio,
+    &.grape check,
+    &.grape radio {
+        background-color: #{'@GRAPE_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@GRAPE_700'};
+    }
+
+    &.brown check,
+    &.brown radio,
+    &.cocoa check,
+    &.cocoa radio {
+        background-color: #{'@COCOA_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@COCOA_500'};
+    }
+
+    &.mint check,
+    &.mint radio  {
+        background-color: #{'@MINT_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@MINT_700'};
+    }
+
+    &.pink check,
+    &.pink radio,
+    &.bubblegum check,
+    &.bubblegum radio  {
+        background-color: #{'@BUBBLEGUM_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@BUBBLEGUM_700'};
+    }
+
+    &.slate check,
+    &.slate radio  {
+        background-color: #{'@SLATE_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
+
     }
 }
