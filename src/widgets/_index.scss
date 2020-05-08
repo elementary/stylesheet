@@ -1,8 +1,6 @@
 window,
 dialog,
 messagedialog,
-menu,
-popover,
 .titlebar,
 .background,
 .csd {
@@ -53,6 +51,7 @@ selection {
 @import '_checkbuttons.scss';
 @import '_entries.scss';
 @import '_linked.scss';
+@import '_menus.scss';
 @import '_panes.scss';
 @import '_popovers.scss';
 @import '_progressbars.scss';
