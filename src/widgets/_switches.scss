@@ -3,6 +3,7 @@ switch {
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: inset-shadow();
     border-radius: rem(16px);
+    color: transparent; // Labels in GTK 3.22/Hera
     transition: all 200ms ease-in;
 
     &:checked:not(.mode-switch):not(:backdrop) {
