@@ -1,11 +1,17 @@
 popover {
+    @extend %menu;
     background-clip: padding-box;
     border: 1px solid $toplevel-border-color;
-    border-radius: rem(6px);
     box-shadow: shadow(2);
     margin: 6px;
 
     modelbutton {
         @extend %menuitem;
+    }
+
+    // Almost certainly means you are using ModelMenu
+    &.menu > stack {
+        // These are hardcoded values in Gtk, we don't want rems here
+        margin: -4px -10px;
     }
 }
