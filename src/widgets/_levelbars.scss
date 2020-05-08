@@ -5,7 +5,7 @@ levelbar {
             $border-color: rgba(0, 0, 0, 0.5);
         }
 
-        background-color: $LIME_300;
+        background-color: #{'@accent_color_300'};
         border: 1px solid $border-color;
         border-radius: rem(6px);
         box-shadow:
@@ -24,6 +24,10 @@ levelbar {
 
             &.high {
                 background-color: $BLUEBERRY_300;
+            }
+
+            &.full {
+                background-color: $LIME_300;
             }
         }
 
@@ -51,8 +55,6 @@ levelbar {
 
     &.inverted {
         block.filled {
-            background-color: $STRAWBERRY_500;
-
             &.low {
                 background-color: $LIME_300;
             }
@@ -63,6 +65,10 @@ levelbar {
 
             &.high {
                 background-color: $BANANA_500;
+            }
+
+            &.full {
+                background-color: $STRAWBERRY_500;
             }
         }
     }
