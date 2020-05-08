@@ -29,6 +29,10 @@ levelbar {
             &.full {
                 background-color: $LIME_300;
             }
+
+            &:backdrop {
+                background-color: bg-color(4);
+            }
         }
 
         &.empty {
