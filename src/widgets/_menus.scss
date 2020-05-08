@@ -1,0 +1,117 @@
+%menuitem {
+    min-width: rem(150px);
+    padding: rem(6px) rem(12px);
+
+    &:disabled {
+        color: #{'@placeholder_text_color'};
+
+        .keycap {
+            opacity: 0.7;
+        }
+    }
+
+    &:hover {
+        box-shadow: none;
+        background-color: #{'alpha(@fg_color, 0.15)'};
+    }
+
+    .keycap {
+        background: rgba(0, 0, 0, 0.08);
+        border-radius: rem(3px);
+        // Intentionally not in ems since it's used as a stroke
+        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15);
+        color: #{'alpha(@fg_color, 0.78)'};
+        font-size: 85%;
+        margin: 0 0 1px;
+        min-width: rem(12px);
+        // We trim off 1px on the bottom to account for box-shadow
+        padding: rem(3px) rem(6px) calc(#{rem(3px)} - 1px);
+    }
+
+    arrow {
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+        min-height: 16px;
+        min-width: 16px;
+
+        &:dir(rtl) {
+            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+        }
+
+        &.top {
+            -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+        }
+
+        &.bottom {
+            -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+        }
+
+        &.left {
+            -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+        }
+    }
+
+    &:dir(ltr) {
+        image:first-child {
+            // Off-by-one for some reason. Maybe optical illusion?
+            margin-left: rem(-23px);
+            padding-left: 0;
+            padding-right: rem(5px);
+        }
+
+        > check,
+        > radio {
+            margin-right: rem(6px);
+            margin-left: rem(-6px);
+        }
+    }
+
+    &:dir(rtl) {
+        image:first-child {
+            // Off-by-one for some reason. Maybe optical illusion?
+            margin-right: rem(-23px);
+            padding-left: rem(5px);
+            padding-right: 0;
+        }
+
+        > check,
+        > radio {
+            margin-left: rem(6px);
+            margin-right: rem(-6px);
+        }
+    }
+}
+
+menu,
+window.menu,
+window.popup {
+    border-radius: rem(6px);
+    box-shadow: outset-highlight();
+    padding: rem(6px) 0;
+
+    &.context-menu {
+        // This stops monospace fonts from propogating for example
+        font: initial;
+    }
+
+    decoration {
+        border-radius: rem(6px);
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            shadow(2);
+    }
+
+    separator {
+        min-height: rem(6px);
+    }
+
+    window.popup decoration {
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            shadow(3);
+    }
+
+    menuitem,
+    .menuitem {
+        @extend %menuitem;
+    }
+}
