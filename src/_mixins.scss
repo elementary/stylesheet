@@ -13,7 +13,7 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
 @if $color-scheme == "dark" {
     @define-color highlight_color #{'alpha(' + mix(white, $accent_color_100) + ', 0.2)'};
 
-    $titlebar-color: mix(mix($BLACK_500, $BLACK_700, 70%), $accent_color_900, $weight: 99%);
+    $titlebar-color: mix(mix($BLACK_500, $BLACK_700, 70%), $accent_color_900, 99%);
 
     $fg-color: #fff;
 
