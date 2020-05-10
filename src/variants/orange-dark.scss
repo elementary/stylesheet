@@ -19,11 +19,19 @@
 
 @import '../_palette.scss';
 
-/* Accent Shades */
+// Internal, i.e. for tinting
+$accent_color_100: $ORANGE_100;
+$accent_color_300: $ORANGE_300;
+$accent_color_500: $ORANGE_500;
+$accent_color_700: $ORANGE_700;
+$accent_color_900: $ORANGE_900;
+
+// Exported
 @define-color accent_color_100 @ORANGE_100;
 @define-color accent_color_300 @ORANGE_300;
 @define-color accent_color_500 @ORANGE_500;
 @define-color accent_color_700 @ORANGE_700;
+@define-color accent_color_900 @ORANGE_900;
 @define-color accent_color_900 @ORANGE_900;
 
 $color-scheme: "dark";

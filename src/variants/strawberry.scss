@@ -19,11 +19,19 @@
 
 @import '../_palette.scss';
 
-/* Accent Shades */
+// Internal, i.e. for tinting
+$accent_color_100: $STRAWBERRY_100;
+$accent_color_300: $STRAWBERRY_300;
+$accent_color_500: $STRAWBERRY_500;
+$accent_color_700: $STRAWBERRY_700;
+$accent_color_900: $STRAWBERRY_900;
+
+// Exported
 @define-color accent_color_100 @STRAWBERRY_100;
 @define-color accent_color_300 @STRAWBERRY_300;
 @define-color accent_color_500 @STRAWBERRY_500;
 @define-color accent_color_700 @STRAWBERRY_700;
+@define-color accent_color_900 @STRAWBERRY_900;
 @define-color accent_color_900 @STRAWBERRY_900;
 
 $color-scheme: "light";

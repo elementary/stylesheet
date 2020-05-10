@@ -11,9 +11,9 @@ $fg-color: $BLACK_500;
 $toplevel-border-color: rgba(0, 0, 0, 0.2);
 
 @if $color-scheme == "dark" {
-    @define-color highlight_color rgba(255, 255, 255, 0.2);
+    @define-color highlight_color #{'alpha(' + mix(white, $accent_color_100, 50%) + ', 0.3)'};
 
-    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
+    $titlebar-color: mix(mix($BLACK_500, $BLACK_700, 70%), $accent_color_900, $weight: 99%);
 
     $fg-color: #fff;
 
@@ -40,11 +40,11 @@ $toplevel-border-color: rgba(0, 0, 0, 0.2);
         }
     } @else if $color-scheme == "dark" {
         @if $level == 1 {
-            @return $BLACK_300;
+            @return mix($BLACK_300, $accent_color_900, 99%);
         } @else if $level == 2 {
-            @return $BLACK_500;
+            @return mix($BLACK_500, $accent_color_900, 99%);
         } @else if $level == 3 {
-            @return mix($BLACK_500, $BLACK_700, $weight: 75%);
+            @return mix(mix($BLACK_500, $BLACK_700, 75%), $accent_color_700, 99%);
         } @else if $level == 4 {
             @return $titlebar-color;
         }
