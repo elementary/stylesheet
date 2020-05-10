@@ -47,21 +47,7 @@ progressbar {
     &.vertical {
         progress,
         trough {
-            background-image:
-                linear-gradient(
-                    to right,
-                    #{'alpha(@highlight_color, 0.2)'},
-                    rgba(255, 255, 255, 0)
-                );
-
-            &:backdrop {
-                background-image:
-                    linear-gradient(
-                        to right,
-                        #{'alpha(@highlight_color, 0.35)'},
-                        #{'alpha(@highlight_color, 0.3)'}
-                    );
-            }
+            @extend %outset-background-vertical;
         }
 
         progress {
