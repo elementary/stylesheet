@@ -19,4 +19,8 @@
             0 0 0 1px rgba(0, 0, 0, 0.1),
             shadow(1);
     }
+
+    &.rounded {
+        border-radius: rem(3px);
+    }
 }
