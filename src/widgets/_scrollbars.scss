@@ -4,13 +4,13 @@ scrolledwindow {
 
 scrollbar {
     background-color: transparent;
-    transition: all 600ms ease-out;
+    transition: all duration("close") $easing;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
 
     &:hover,
     &.hovering {
-        transition: all 200ms ease-in-out;
+        transition: all duration("open") $easing;
 
         trough {
             background-color: transparent;
@@ -30,7 +30,7 @@ scrollbar {
         border: 1px solid rgba(bg-color(2), 0.25);
         border-radius: rem(10px);
         margin: 1px;
-        transition: all 200ms ease-in-out;
+        transition: all duration("expand") $easing;
     }
 
     &.horizontal {
@@ -74,5 +74,6 @@ scrollbar {
 
     trough {
         padding: 0;
+        transition: all duration("element") $easing;
     }
 }
