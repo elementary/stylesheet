@@ -1,14 +1,10 @@
-window:not(.popup),
+window.csd:not(.popup):not(.menu),
 dialog {
     border-radius: 0 0 rem(6px) rem(6px);
 
     > decoration {
         border-radius: rem(6px);
         margin: rem(12px);
-
-        &:backdrop {
-            box-shadow: shadow(2);
-        }
     }
 
     > .titlebar {
@@ -16,56 +12,90 @@ dialog {
     }
 }
 
-window:not(.popup) {
-    // Intentionally not in ems since it's used as a stroke
-    box-shadow: 0 0 0 1px $toplevel-border-color;
+window:not(.popup):not(.menu) {
+    // We only draw shadows for client-side decorations
+    &.csd {
+        // Intentionally not in ems since it's used as a stroke
+        box-shadow: 0 0 0 1px $toplevel-border-color;
 
-    > decoration {
-        box-shadow: shadow(4);
+        > decoration {
+            box-shadow:
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
+                shadow(4);
 
-        &:backdrop {
-            box-shadow: shadow(2)
+            &:backdrop {
+                box-shadow:
+                    0 13px 16px 4px transparent,
+                    shadow(2);
+            }
+        }
+
+        &.tiled {
+            > decoration {
+                box-shadow: shadow(1);
+            }
+        }
+
+        .titlebar {
+            box-shadow:
+                outset-highlight("full"),
+                // Intentionally not in ems since it's used as a stroke
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
+                0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
+            padding: rem(6px);
+
+            @if $color-scheme == "dark" {
+                box-shadow:
+                    outset-highlight("full"),
+                    // Intentionally not in ems since it's used as a stroke
+                    0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
+                    0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
+            }
+
+            &:backdrop {
+                box-shadow:
+                    outset-highlight("full"),
+                    0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
+                    0 rem(1px) rem(2px) rgba(0, 0, 0, 0.15);
+            }
+
+            &.default-decoration {
+                padding: rem(3px);
+            }
         }
     }
 
-    &.tiled {
-        > decoration {
-            box-shadow: shadow(1);
+    // SSD doesn't calculate rems correctly
+    &.ssd {
+        decoration {
+            border-radius: 6px 6px 0 0;
+            // Can't be applied directly to the window
+            box-shadow: 0 0 0 1px $toplevel-border-color;
+            margin: 12px;
+        }
+
+        .titlebar {
+            // Box shadow can't overlay content
+            border-bottom: 1px solid $toplevel-border-color;
+            border-radius: 6px 6px 0 0;
+            box-shadow: outset-highlight("full");
+            padding: 3px;
+
+            button {
+                border-radius: 3px;
+                padding: 3px;
+            }
         }
     }
 
     .titlebar {
         @extend %outset-background;
         background-color: #{"@color_primary"};
-        box-shadow:
-            outset-highlight("full"),
-            // Intentionally not in ems since it's used as a stroke
-            0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-            0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
-        padding: rem(6px);
 
-        @if $color-scheme == "dark" {
-            box-shadow:
-                outset-highlight("full"),
-                // Intentionally not in ems since it's used as a stroke
-                0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
+        .title {
+            font-weight: 600;
         }
-
-        &:backdrop {
-            box-shadow:
-                outset-highlight("full"),
-                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                0 rem(1px) rem(2px) rgba(0, 0, 0, 0.15);
-        }
-
-        &.default-decoration {
-	        padding: rem(3px);
-        }
-
-	    .title {
-	        font-weight: 600;
-	    }
     }
 }
 
@@ -79,10 +109,10 @@ dialog {
             shadow(3);
 
         &:backdrop {
-        box-shadow:
-            // Intentionally not in ems since it's used as a stroke
-            0 0 0 1px $toplevel-border-color,
-            shadow(2);
+            box-shadow:
+                // Intentionally not in ems since it's used as a stroke
+                0 0 0 1px $toplevel-border-color,
+                shadow(2);
         }
     }
 

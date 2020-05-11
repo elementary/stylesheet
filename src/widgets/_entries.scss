@@ -16,7 +16,7 @@ entry {
 
     image {
         color: #{'@placeholder_text_color'};
-        transition: all 200ms ease-in-out;
+        transition: all duration("element") $easing;
         -gtk-icon-palette:
             error #{'@error_color'},
             success #{'@success_color'},

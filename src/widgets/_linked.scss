@@ -1,0 +1,68 @@
+%linked_not_left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+%linked_not_right {
+    border-right-style: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+%linked_not_top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+%linked_not_bottom {
+    border-bottom-style: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.linked:not(.vertical) > button,
+.linked:not(.vertical) > entry {
+    &:not(:first-child) {
+        @extend %linked_not_left;
+    }
+
+    &:not(:last-child) {
+        @extend %linked_not_right;
+    }
+}
+
+.linked.vertical > button,
+.linked.vertical > entry {
+    &:not(:first-child) {
+        @extend %linked_not_top;
+    }
+
+    &:not(:last-child) {
+        @extend %linked_not_bottom;
+    }
+}
+
+combobox.linked button:nth-child(2) {
+    @extend %linked_not_left;
+}
+
+
+.linked:not(.vertical) > combobox {
+    &:not(:first-child) > box > button.combo {
+        @extend %linked_not_left;
+    }
+
+    &:not(:last-child) > box > button.combo {
+        @extend %linked_not_right;
+    }
+}
+
+.linked.vertical > combobox {
+    &:not(:first-child) > box > button.combo {
+        @extend %linked_not_top;
+    }
+
+    &:not(:last-child) > box > button.combo {
+        @extend %linked_not_bottom;
+    }
+}
