@@ -1,0 +1,45 @@
+notebook {
+    header {
+        background-color: bg-color(3);
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0) calc(100% - #{rem(2px)}),
+                rgba(0, 0, 0, 0.05) calc(100% - #{rem(1px)}),
+                rgba(0, 0, 0, 0.15)
+            );
+
+        &:backdrop {
+            background-color: bg-color(2);
+        }
+    }
+
+    viewport {
+        background-color: bg-color(1);
+    }
+}
+
+tab {
+    border-radius: rem(3px);
+    // Slow to match the close button revealer transition
+    transition: all 300ms ease-in;
+    margin: rem(3px) 0;
+    padding: rem(3px);
+
+    &:hover:not(:checked) {
+        background-color: bg-color(4);
+    }
+
+    &:checked {
+        background-color: bg-color(1);
+        box-shadow:
+            outset-highlight(),
+            0 0 0 1px rgba(0, 0, 0, 0.1),
+            outset-shadow(2);
+
+        &:backdrop {
+            background-color: bg-color(2);
+        }
+    }
+}
