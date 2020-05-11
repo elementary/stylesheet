@@ -1,4 +1,4 @@
-window:not(.popup),
+window.csd:not(.popup):not(.menu),
 dialog {
     border-radius: 0 0 rem(6px) rem(6px);
 
@@ -16,7 +16,7 @@ dialog {
     }
 }
 
-window:not(.popup) {
+window.csd:not(.popup):not(.menu) {
     // Intentionally not in ems since it's used as a stroke
     box-shadow: 0 0 0 1px $toplevel-border-color;
 
