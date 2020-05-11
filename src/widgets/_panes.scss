@@ -2,7 +2,7 @@ paned.horizontal > separator {
     background-image:
         linear-gradient(
             to right,
-            rgba(0, 0, 0, 0.05) 1px,
+            rgba(black, 0.05) 1px,
             #fff 1px,
             #fff 2px,
             transparent 2px
@@ -12,9 +12,9 @@ paned.horizontal > separator {
         background-image:
             linear-gradient(
                 to right,
-                rgba(0, 0, 0, 0.15) 1px,
-                rgba(255, 255, 255, 0.01) 1px,
-                rgba(255, 255, 255, 0.01) 2px,
+                rgba(black, 0.15) 1px,
+                rgba(white, 0.01) 1px,
+                rgba(white, 0.01) 2px,
                 transparent 2px
             );
     }
