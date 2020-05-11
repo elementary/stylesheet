@@ -21,13 +21,12 @@ window:not(.popup):not(.menu) {
 
         > decoration {
             box-shadow:
-                // Workaround for a resizing issue
+                // Force shadows to be the same size to prevent jumpy resize transition
                 0 13px 14px 4px transparent,
                 shadow(4);
 
             &:backdrop {
                 box-shadow:
-                    // Workaround for a resizing issue
                     0 13px 14px 4px transparent,
                     shadow(2);
             }
