@@ -60,7 +60,7 @@ window:not(.popup):not(.menu) {
             }
 
             &.default-decoration {
-	            padding: rem(3px);
+                padding: rem(3px);
             }
         }
     }
@@ -89,9 +89,9 @@ window:not(.popup):not(.menu) {
         @extend %outset-background;
         background-color: #{"@color_primary"};
 
-	    .title {
-	        font-weight: 600;
-	    }
+        .title {
+            font-weight: 600;
+        }
     }
 }
 
