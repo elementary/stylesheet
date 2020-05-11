@@ -10,7 +10,7 @@ button {
     &:not(.image-button):not(.flat) {
         @extend %outset-background;
         background-color: bg-color(2);
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(black, 0.2);
         box-shadow:
             outset-highlight("full"),
             outset-shadow(2);
@@ -23,12 +23,12 @@ button {
 
         &:active,
         &:checked {
-            background: rgba(0, 0, 0, 0.05);
+            background: rgba(black, 0.05);
             box-shadow: inset-shadow();
         }
 
         &:disabled {
-            background: rgba(0, 0, 0, 0.03);
+            background: rgba(black, 0.03);
             box-shadow:
                 outset-highlight("full"),
                 outset-shadow(1);
