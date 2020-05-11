@@ -1,7 +1,7 @@
 progressbar {
-    $border-color: rgba(0, 0, 0, 0.2);
+    $border-color: rgba(black, 0.2);
     @if $color-scheme == "dark" {
-        $border-color: rgba(0, 0, 0, 0.5);
+        $border-color: rgba(black, 0.5);
     }
 
     border-radius: rem(2px);

@@ -8,10 +8,10 @@
             padding: rem(6px) rem(12px);
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.75);
+                background-color: rgba(white, 0.75);
 
                 @if $color-scheme == "dark" {
-                    background-color: rgba(255, 255, 255, 0.05);
+                    background-color: rgba(white, 0.05);
                 }
             }
 

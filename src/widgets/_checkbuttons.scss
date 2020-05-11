@@ -1,8 +1,8 @@
 check,
 radio {
-    $border-color: rgba(0, 0, 0, 0.2);
+    $border-color: rgba(black, 0.2);
     @if $color-scheme == "dark" {
-        $border-color: rgba(0, 0, 0, 0.5);
+        $border-color: rgba(black, 0.5);
     }
 
     @extend %outset-background;
@@ -18,7 +18,7 @@ radio {
 
     &:checked {
         background-color: #{'@accent_color_300'};
-        color: #fff;
+        color: white;
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
         -gtk-icon-shadow: 0 1px 1px #{'@accent_color_500'};
 
@@ -30,7 +30,7 @@ radio {
     }
 
     &:disabled {
-        background: rgba(0, 0, 0, 0.03);
+        background: rgba(black, 0.03);
         box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
         color: #{'@placeholder_text_color'};
         -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
@@ -69,7 +69,7 @@ checkbutton {
     radio,
     radio:checked, {
         background-image: none;
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(black, 0.2);
         border-radius: 50%;
         box-shadow: inset-shadow();
         min-height: rem(12px);
