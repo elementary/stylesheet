@@ -1,3 +1,23 @@
+@function duration($transition) {
+    @if $transition == "open" {
+        @return 250ms;
+    } @else if $transition == "close" {
+        @return 200ms;
+    }
+
+    @if $transition == "expand" {
+        @return 300ms;
+    } @else if $transition == "collapse" {
+        @return 250ms;
+    }
+
+    @if $transition == "element" {
+        @return 100ms;
+    }
+}
+
+$easing: cubic-bezier(0.4, 0, 0.2, 1);
+
 .spin,
 entry.spin:dir(ltr) image:last-child,
 entry.spin:dir(rtl) image:first-child {
