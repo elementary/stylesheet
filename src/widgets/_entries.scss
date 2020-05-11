@@ -9,7 +9,7 @@ entry {
     padding: rem(4px);
 
     &:disabled {
-        background: rgba(0,0,0,0.03);
+        background: rgba(black, 0.03);
         box-shadow: inset-shadow("disabled");
         color: #{'@placeholder_text_color'};
     }

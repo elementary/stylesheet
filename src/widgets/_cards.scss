@@ -7,7 +7,7 @@
     box-shadow:
         outset-highlight(),
         // Intentionally not in ems since it's used as a stroke
-        0 0 0 1px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(black, 0.1),
         shadow(2);
     transition:
         background duration("element") $easing,
@@ -18,7 +18,7 @@
         box-shadow:
             outset-highlight(),
             // Intentionally not in ems since it's used as a stroke
-            0 0 0 1px rgba(0, 0, 0, 0.1),
+            0 0 0 1px rgba(black, 0.1),
             shadow(1);
         transition:
             background duration("element") $easing,
