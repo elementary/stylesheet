@@ -5,10 +5,6 @@ dialog {
     > decoration {
         border-radius: rem(6px);
         margin: rem(12px);
-
-        &:backdrop {
-            box-shadow: shadow(2);
-        }
     }
 
     > .titlebar {
@@ -26,7 +22,10 @@ window:not(.popup):not(.menu) {
             box-shadow: shadow(4);
 
             &:backdrop {
-                box-shadow: shadow(2)
+                box-shadow:
+                    // Workaround for a resizing issue
+                    0 14px 28px transparent,
+                    shadow(2);
             }
         }
 
@@ -108,10 +107,10 @@ dialog {
             shadow(3);
 
         &:backdrop {
-        box-shadow:
-            // Intentionally not in ems since it's used as a stroke
-            0 0 0 1px $toplevel-border-color,
-            shadow(2);
+            box-shadow:
+                // Intentionally not in ems since it's used as a stroke
+                0 0 0 1px $toplevel-border-color,
+                shadow(2);
         }
     }
 
