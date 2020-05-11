@@ -5,7 +5,6 @@ dialog {
     > decoration {
         border-radius: rem(6px);
         margin: rem(12px);
-        transition: all 90ms ease-in-out;
     }
 
     > .titlebar {
@@ -22,12 +21,12 @@ window:not(.popup):not(.menu) {
         > decoration {
             box-shadow:
                 // Force shadows to be the same size to prevent jumpy resize transition
-                0 13px 14px 4px transparent,
+                0 13px 16px 4px transparent,
                 shadow(4);
 
             &:backdrop {
                 box-shadow:
-                    0 13px 14px 4px transparent,
+                    0 13px 16px 4px transparent,
                     shadow(2);
             }
         }
