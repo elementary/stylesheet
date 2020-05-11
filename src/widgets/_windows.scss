@@ -5,6 +5,7 @@ dialog {
     > decoration {
         border-radius: rem(6px);
         margin: rem(12px);
+        transition: all 90ms ease-in-out;
     }
 
     > .titlebar {
@@ -19,12 +20,15 @@ window:not(.popup):not(.menu) {
         box-shadow: 0 0 0 1px $toplevel-border-color;
 
         > decoration {
-            box-shadow: shadow(4);
+            box-shadow:
+                // Workaround for a resizing issue
+                0 13px 14px 4px transparent,
+                shadow(4);
 
             &:backdrop {
                 box-shadow:
                     // Workaround for a resizing issue
-                    0 14px 28px transparent,
+                    0 13px 14px 4px transparent,
                     shadow(2);
             }
         }
