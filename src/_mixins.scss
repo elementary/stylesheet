@@ -11,7 +11,7 @@ $fg-color: $BLACK_500;
 $toplevel-border-color: rgba(black, 0.2);
 
 @if $color-scheme == "dark" {
-    @define-color highlight_color rgba(white 0.2);
+    @define-color highlight_color rgba(white, 0.2);
 
     $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
 
@@ -161,7 +161,7 @@ $toplevel-border-color: rgba(black, 0.2);
         linear-gradient(
             to bottom,
             #{'alpha(@highlight_color, 0.2)'},
-            rgba(white 0)
+            rgba(white, 0)
         );
 
     &:backdrop {
@@ -179,7 +179,7 @@ $toplevel-border-color: rgba(black, 0.2);
         linear-gradient(
             to right,
             #{'alpha(@highlight_color, 0.2)'},
-            rgba(white 0)
+            rgba(white, 0)
         );
 
     &:backdrop {
