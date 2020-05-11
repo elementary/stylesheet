@@ -42,7 +42,7 @@ window:not(.popup):not(.menu) {
                 outset-highlight("full"),
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-                0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
+                0 rem(1px) rem(2px) rgba(black, 0.2);
             padding: rem(6px);
 
             @if $color-scheme == "dark" {
@@ -50,14 +50,14 @@ window:not(.popup):not(.menu) {
                     outset-highlight("full"),
                     // Intentionally not in ems since it's used as a stroke
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                    0 rem(1px) rem(2px) rgba(0, 0, 0, 0.2);
+                    0 rem(1px) rem(2px) rgba(black, 0.2);
             }
 
             &:backdrop {
                 box-shadow:
                     outset-highlight("full"),
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                    0 rem(1px) rem(2px) rgba(0, 0, 0, 0.15);
+                    0 rem(1px) rem(2px) rgba(black, 0.15);
             }
 
             &.default-decoration {
