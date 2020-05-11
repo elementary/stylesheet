@@ -18,6 +18,13 @@ messagedialog,
 @define-color success_color @LIME_700;
 @define-color warning_color @BANANA_900;
 
+// Things Dazzle expects
+@define-color borders #{"" + $toplevel-border-color};
+@define-color content_view_bg #{""+ bg_color(2)};
+@define-color theme_fg_color #{"" + $fg-color};
+@define-color theme_selected_fg_color #{"" + $fg-color};
+@define-color wm_shadow rgba(0, 0, 0, 0.2);
+
 selection {
     background-color: #{'alpha(@accent_color_100, 0.3)'};
     color: #{'@accent_color_900'};
