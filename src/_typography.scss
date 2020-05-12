@@ -31,6 +31,14 @@ label.h4,
     font-size: 1.22em
 }
 
+.accent {
+    color: #{'@accent_color_700'};
+
+    @if $color-scheme == "dark" {
+        color: #{'mix(@accent_color_300, @accent_color_500, 0.5)'};
+    }
+}
+
 .dim-label {
     opacity: 0.75;
 }
