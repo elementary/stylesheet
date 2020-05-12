@@ -15,7 +15,7 @@ button {
             outset-highlight("full"),
             outset-shadow(2);
 
-        &.suggested-action {
+        &.suggested-action:not(:disabled) {
             $accent-fg-color: #{'mix (black, @accent_color_900, 0.8)'};
             $bg-color: #{'@accent_color_100'};
             $border-color: #{'alpha (mix (black, @accent_color_300, 0.8), 0.4)'};
