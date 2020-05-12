@@ -1,0 +1,22 @@
+frame,
+.frame {
+  border: 1px solid $toplevel-border-color;
+
+    &.flat {
+        border-style: none;
+    }
+}
+
+scrolledwindow {
+    // avoid double borders when viewport inside scrolled window
+    > viewport.frame {
+        border-style: none;
+    }
+}
+
+
+viewport,
+.view {
+    background-color: bg-color(1);
+    color: $fg-color;
+}
