@@ -64,6 +64,11 @@ selection {
     background-position: 0 0, rem(12px) rem(12px);
 }
 
+.circular {
+    // Not  50% because that creates a squished elipse for non-squares widgets
+    border-radius: 9999px;
+}
+
 .error {
     color: #{'@error_color'};
 }
