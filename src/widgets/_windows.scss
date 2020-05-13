@@ -63,15 +63,6 @@ window:not(.popup):not(.menu) {
             &.default-decoration {
                 padding: rem(3px);
             }
-
-            label.title {
-                text-shadow: etched-shadow();
-            }
-
-            .titlebutton,
-            & > .image-button {
-                icon-shadow: etched-shadow();
-            }
         }
     }
 
@@ -101,9 +92,25 @@ window:not(.popup):not(.menu) {
     .titlebar {
         @extend %outset-background;
         background-color: #{"@color_primary"};
+        -gtk-icon-shadow: etched-shadow();
 
         .title {
             font-weight: 600;
+            text-shadow: etched-shadow();
+        }
+
+        .titlebutton,
+        .image-button,
+        .mode-switch {
+            -gtk-icon-shadow: etched-shadow();
+        }
+
+        popover,
+        menu,
+        .menu,
+        .popup {
+            text-shadow: none;
+            -gtk-icon-shadow: none;
         }
     }
 }
