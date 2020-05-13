@@ -92,7 +92,6 @@ window:not(.popup):not(.menu) {
     .titlebar {
         @extend %outset-background;
         background-color: #{"@color_primary"};
-        -gtk-icon-shadow: etched-shadow();
 
         .title {
             font-weight: 600;
