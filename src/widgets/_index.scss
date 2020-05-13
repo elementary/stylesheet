@@ -41,6 +41,29 @@ selection {
     }
 }
 
+.checkerboard {
+    background-color: bg-color(3);
+    background-image:
+        linear-gradient(
+            45deg,
+            rgba(black, 0.1) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(black, 0.1) 75%,
+            rgba(black, 0.1)
+        ),
+        linear-gradient(
+            45deg,
+            rgba(black, 0.1) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(black, 0.1) 75%,
+            rgba(black, 0.1)
+        );
+    background-size: rem(24px) rem(24px);
+    background-position: 0 0, rem(12px) rem(12px);
+}
+
 .error {
     color: #{'@error_color'};
 }
@@ -72,4 +95,5 @@ selection {
 @import '_switches.scss';
 @import '_toolbars.scss';
 @import '_tooltips.scss';
+@import '_views.scss';
 @import '_windows.scss';

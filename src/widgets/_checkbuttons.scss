@@ -52,6 +52,7 @@ radio {
 
 radiobutton,
 checkbutton {
+    image,
     label {
         &:dir(ltr) {
             margin-left: rem(6px);
@@ -60,6 +61,14 @@ checkbutton {
         &:dir(rtl) {
             margin-right: rem(6px);
         }
+    }
+}
+
+radiobutton.image-button {
+    padding: rem(6px);
+
+    &:checked:not(:backdrop) image {
+        color: #{'@accent_color_700'};
     }
 }
 
