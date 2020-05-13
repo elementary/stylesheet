@@ -44,10 +44,6 @@ window:not(.popup):not(.menu) {
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
                 0 rem(1px) rem(2px) rgba(black, 0.2);
             padding: rem(6px);
-            // Intentionally not in ems since it's used as a stroke
-            text-shadow: 0 1px 1px #{'@highlight_color'};
-            // Intentionally not in ems since it's used as a stroke
-            -gtk-icon-shadow: 0 1px 1px #{'@highlight_color'};
 
             @if $color-scheme == "dark" {
                 box-shadow:
@@ -66,6 +62,15 @@ window:not(.popup):not(.menu) {
 
             &.default-decoration {
                 padding: rem(3px);
+            }
+
+            label.title {
+                text-shadow: etched-shadow();
+            }
+
+            .titlebutton,
+            & > .image-button {
+                icon-shadow: etched-shadow();
             }
         }
     }
