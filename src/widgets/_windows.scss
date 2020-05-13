@@ -107,8 +107,7 @@ window:not(.popup):not(.menu) {
 
         popover,
         menu,
-        .menu,
-        .popup {
+        .menu {
             text-shadow: none;
             -gtk-icon-shadow: none;
         }
