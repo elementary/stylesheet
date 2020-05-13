@@ -107,8 +107,7 @@ window:not(.popup):not(.menu) {
 
         // Reset so we don't affect things inside of child popovers/menus
         popover,
-        menu,
-        .menu {
+        menu {
             text-shadow: none;
             -gtk-icon-shadow: none;
         }
