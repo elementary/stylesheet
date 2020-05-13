@@ -105,6 +105,7 @@ window:not(.popup):not(.menu) {
             -gtk-icon-shadow: etched-shadow();
         }
 
+        // Reset so we don't affect things inside of child popovers/menus
         popover,
         menu,
         .menu {
