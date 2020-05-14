@@ -144,7 +144,7 @@ $toplevel-border-color: rgba(black, 0.2);
 
 @function etched-shadow() {
     @if $color-scheme == "dark" {
-        @return 0 -1px 1px rgba(black, 0.67);
+        @return 0 -1px 1px #{'shade (@color_primary, 0.75)'};
     }
 
     @return 0 1px 1px #{'@highlight_color'};
