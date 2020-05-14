@@ -90,12 +90,10 @@ window:not(.popup):not(.menu) {
     }
 
     .titlebar {
-        @function etched-shadow() {
-            @if $color-scheme == "dark" {
-                @return 0 -1px 1px #{'shade (@color_primary, 0.75)'};
-            }
-
-            @return 0 1px 1px #{'@highlight_color'};
+        // Etched in the light style, shadow in the dark style
+        $shadow: 0 1px rgba(white, 0.5);
+        @if $color-scheme == "dark" {
+            $shadow: 0 1px rgba(black, 0.67);
         }
 
         @extend %outset-background;
@@ -103,13 +101,13 @@ window:not(.popup):not(.menu) {
 
         .title {
             font-weight: 600;
-            text-shadow: etched-shadow();
+            text-shadow: $shadow
         }
 
         .titlebutton,
         .image-button,
         .mode-switch {
-            -gtk-icon-shadow: etched-shadow();
+            -gtk-icon-shadow: $shadow;
         }
 
         // Reset so we don't affect things inside of child popovers/menus
