@@ -90,6 +90,14 @@ window:not(.popup):not(.menu) {
     }
 
     .titlebar {
+        @function etched-shadow() {
+            @if $color-scheme == "dark" {
+                @return 0 -1px 1px #{'shade (@color_primary, 0.75)'};
+            }
+
+            @return 0 1px 1px #{'@highlight_color'};
+        }
+
         @extend %outset-background;
         background-color: #{"@color_primary"};
 
