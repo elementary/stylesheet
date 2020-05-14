@@ -7,6 +7,7 @@ button {
     padding: rem(4px) rem(7px);
     transition: all duration("element") $easing;
 
+    &.raised,
     &:not(.image-button):not(.flat) {
         @extend %outset-background;
         background-color: bg-color(2);
