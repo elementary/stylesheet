@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: elementary, Inc. <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                meson (>= 0.44.0),
-               sass
+               sassc
 Standards-Version: 4.1.1
 
 Package: io.elementary.stylesheet
