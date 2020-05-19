@@ -6,7 +6,7 @@ A stylesheet for elementary OS
 
 You'll need the following dependencies:
 * meson
-* sass
+* sassc
 
 Run `meson` to configure the build environment. To install, use `ninja install`.
 
