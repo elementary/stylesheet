@@ -10,7 +10,7 @@ dialog {
 }
 
 window:not(.popup):not(.menu) {
-    decoration {
+    > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
     }
 
