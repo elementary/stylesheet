@@ -73,9 +73,8 @@ selection {
     border: 1px solid #{'alpha(black, 0.35)'};
     border-radius: 50%;
     box-shadow:
-        inset 0 0 0 1px #{'alpha(white, 0.05)'},
-        inset 0 1px 0 0 #{'alpha(white, 0.45)'},
-        inset 0 -1px 0 0 #{'alpha(white, 0.15)'};
+        outset-highlight(),
+        outset-shadow(3);
 }
 
 .error {
