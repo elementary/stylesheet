@@ -8,7 +8,8 @@
 
 // Hdy.Deck and Hdy.Leaflet
 deck,
-leaflet {
+leaflet,
+webkitwebview {
     > dimming {
         background: rgba(black, 0.15);
         @if $color-scheme == "dark" {
