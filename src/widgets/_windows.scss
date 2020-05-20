@@ -91,7 +91,7 @@ window:not(.popup):not(.menu) {
     }
 
     &.unified {
-        decoration
+        decoration,
         decoration-overlay {
             border-radius: rem(6px);
         }
