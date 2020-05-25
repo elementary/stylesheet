@@ -74,15 +74,15 @@ $terminal-bg-color: #94a3a5;
 $terminal-sel-bg-color: #93a1a1;
 
 .terminal {
-    background-color: #{"" + $terminal-bg-color'};
-    color: #{"" + $terminal-fg-color'};
+    background-color: #{"" + '$terminal-bg-color'};
+    color: #{"" + '$terminal-fg-color'};
 
     & text {
         font-family: monospace;
 
         & selection {
-            background-color: #{"" + $terminal-sel-bg-color'};
-            color: #{"" + $terminal-bg-color'};
+            background-color: #{"" + '$terminal-sel-bg-color'};
+            color: #{"" + '$terminal-bg-color'};
         }
     }
 
