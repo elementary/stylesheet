@@ -1,9 +1,17 @@
 label {
     color: #{'@fg_color'};
+
+    & .accent {
+    color: #{'@accent_color'};
+    }
 }
 
 .accent {
     color: #{'@accent_color'};
+
+    & image {
+        color: #{'@accent_color'};
+    }
 }
 
 .h1 {
