@@ -25,6 +25,23 @@ messagedialog,
 @define-color theme_selected_fg_color #{"" + $fg-color};
 @define-color wm_shadow #{rgba(black, 0.2)};
 
+// Things other apps expect
+@define-color theme_text_color #{'@text_color'};
+@define-color theme_bg_color #{'@bg_color'};
+@define-color theme_base_color #{'@base_color'};
+@define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
+@define-color selected_fg_color #{'@accent_color_900'};
+@define-color theme_selected_bg_color #{'@selected_bg_color'};
+@define-color insensitive_fg_color #{'@insensitive_color'};
+
+@if $color-scheme == "dark" {
+    @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
+    @define-color selected_fg_color #{'@accent_color_100'};
+    @define-color theme_selected_bg_color #{'@selected_bg_color'};
+    @define-color theme_selected_fg_color #{'@selected_fg_color'};
+}
+//
+
 selection {
     background-color: #{'alpha(@accent_color_100, 0.3)'};
     color: #{'@accent_color_900'};
