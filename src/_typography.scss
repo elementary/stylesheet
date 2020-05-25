@@ -3,10 +3,10 @@ label {
 }
 
 .accent,
-.accent image,
 image .accent,
-.accent label,
-label .accent {
+.accent image,
+label .accent,
+.accent label {
     color: #{'@accent_color'};
 }
 
