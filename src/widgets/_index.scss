@@ -26,6 +26,7 @@ messagedialog,
 @define-color wm_shadow #{rgba(black, 0.2)};
 
 // Things other apps expect
+@define-color base_color #{"" + bg_color(1)};
 @define-color theme_text_color #{'@text_color'};
 @define-color theme_bg_color #{'@bg_color'};
 @define-color theme_base_color #{'@base_color'};
@@ -43,8 +44,8 @@ messagedialog,
 //
 
 selection {
-    background-color: #{'alpha(@accent_color_100, 0.3)'};
-    color: #{'@accent_color_900'};
+    background-color: #{'@selected_bg_color'};
+    color: #{'@selected_fg_color'};
 }
 
 @if $color-scheme == "dark" {
@@ -53,8 +54,8 @@ selection {
     @define-color warning_color @BANANA_100;
 
     selection {
-        background-color: #{'alpha(@accent_color_700, 0.3)'};
-        color: #{'@accent_color_100'};
+        background-color: #{'@selected_bg_color'};
+        color: #{'@selected_fg_color'};
     }
 }
 
