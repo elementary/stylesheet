@@ -23,11 +23,9 @@ scrolledwindow {
         color: #94a3a5;
         font-family: monospace;
 
-        text {
-            selection {
-                background-color: #93a1a1;
-                color: #252e32;
-            }
+        text selection {
+            background-color: #93a1a1;
+            color: #252e32;
         }
     }
 }
