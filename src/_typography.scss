@@ -2,6 +2,14 @@ label {
     color: #{'@fg_color'};
 }
 
+.accent,
+.accent image,
+image .accent,
+.accent label,
+label .accent {
+    color: #{'@accent_color'};
+}
+
 .h1 {
     font-size: 24pt;
     letter-spacing: -0.04em;
