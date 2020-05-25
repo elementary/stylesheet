@@ -123,6 +123,18 @@ window:not(.popup):not(.menu) {
             -gtk-icon-shadow: $shadow;
         }
 
+        &.flat {
+            & .accent {
+                & label {
+                    color: #{'@accent_color'};
+                }
+
+                & image {
+                    color: #{'@accent_color'};
+                }
+            }
+        }
+
         // Reset so we don't affect things inside of child popovers/menus
         popover,
         menu {
