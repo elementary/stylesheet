@@ -69,20 +69,6 @@ selection {
     border-radius: 9999px;
 }
 
-.terminal {
-    background-color: #252e32;
-    color: #94a3a5;
-
-    & text {
-        font-family: monospace;
-
-        & selection {
-            background-color: #93a1a1;
-            color: #252e32;
-        }
-    }
-}
-
 .error {
     color: #{'@error_color'};
 }
