@@ -7,6 +7,11 @@ $titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
 // Text, images, and other foreground elements
 $fg-color: $BLACK_500;
 
+// faux Terminal colors
+$terminal-fg-color: #252e32;
+$terminal-bg-color: #94a3a5;
+$terminal-sel-bg-color: #93a1a1;
+
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(black, 0.2);
 

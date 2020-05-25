@@ -69,6 +69,24 @@ selection {
     border-radius: 9999px;
 }
 
+.terminal {
+    background-color: $terminal-bg-color;
+    color: $terminal-fg-color;
+
+    & text {
+        font-family: monospace;
+
+        & selection {
+            background-color: $terminal-sel-bg-color;
+            color: $terminal-bg-color;
+        }
+    }
+
+    & label {
+        padding: rem(12);
+    }
+}
+
 .error {
     color: #{'@error_color'};
 }
