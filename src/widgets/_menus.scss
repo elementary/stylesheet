@@ -5,6 +5,16 @@
 
     separator {
         min-height: rem(6px);
+
+        &.horizontal {
+            border-top: 1px solid rgba(black, 0.15);
+            margin-bottom: rem(-1px);
+        }
+
+        &.vertical {
+            border-left: 1px solid rgba(black, 0.15);
+            margin-right: rem(-1px);
+        }
     }
 }
 

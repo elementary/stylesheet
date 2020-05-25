@@ -21,4 +21,39 @@ paned.horizontal > separator {
     // This creates the invisible resize handle
     margin-right: rem(-7px);
     min-width: rem(8px);
+
+    &.wide {
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(black, 0.15) 1px,
+                rgba(white, 0.01) 1px,
+                rgba(white, 0.01) 2px,
+                transparent 2px
+            );
+    }
+}
+
+paned.vertical > separator {
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(black, 0.15) 1px,
+            rgba(white, 0.01) 1px,
+            rgba(white, 0.01) 2px,
+            transparent 2px
+        );
+    margin-bottom: rem(-7px);
+    min-height: rem(8px);
+
+    &.wide {
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(black, 0.15) 1px,
+                rgba(white, 0.01) 1px,
+                rgba(white, 0.01) 2px,
+                transparent 2px
+            );
+    }
 }
