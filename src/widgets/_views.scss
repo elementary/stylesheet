@@ -21,11 +21,10 @@ scrolledwindow {
     &.terminal {
         background-color: #252e32;
         color: #94a3a5;
+        font-family: monospace;
 
         & text {
-            font-family: monospace;
-
-            & selection {
+            selection {
                 background-color: #93a1a1;
                 color: #252e32;
             }
