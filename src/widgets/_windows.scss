@@ -64,6 +64,18 @@ window:not(.popup):not(.menu) {
             &.default-decoration {
                 padding: rem(3px);
             }
+
+            &.flat {
+                & .accent {
+                    & label {
+                        color: #{'@accent_color'};
+                    }
+
+                    & image {
+                        color: #{'@accent_color'};
+                    }
+                }
+            }
         }
     }
 

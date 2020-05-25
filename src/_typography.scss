@@ -2,11 +2,7 @@ label {
     color: #{'@fg_color'};
 }
 
-.accent,
-image .accent,
-.accent image,
-label .accent,
-.accent label {
+.accent {
     color: #{'@accent_color'};
 }
 
