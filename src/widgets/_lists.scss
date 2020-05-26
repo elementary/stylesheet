@@ -1,0 +1,23 @@
+list {
+    background-color: bg-color(1);
+
+    popover & {
+        background-color: transparent;
+    }
+
+    row {
+        &:selected {
+            background-color: rgba($fg-color, 0.1);
+
+            &:focus {
+                background-color: #{'@selected_bg_color'};
+                color: #{'@selected_fg_color'};
+            }
+        }
+    }
+
+    .h4 {
+        padding-left: rem(6px);
+        padding-right: rem(6px);
+    }
+}
