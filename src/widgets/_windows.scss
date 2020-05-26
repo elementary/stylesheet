@@ -128,8 +128,7 @@ window:not(.popup):not(.menu) {
             margin: 0 rem(18px);
         }
 
-        separator:first-child,
-        separator:last-child {
+        separator.titlebutton {
             margin: 0;
             min-width: 0;
             padding: 0;
