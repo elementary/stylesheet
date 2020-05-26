@@ -115,6 +115,29 @@ window:not(.popup):not(.menu) {
         decoration-overlay {
             box-shadow: outset-highlight();
         }
+
+        .titlebar {
+            box-shadow:
+                outset-highlight("bottom"),
+                // Intentionally not in ems since it's used as a stroke
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
+                0 rem(1px) rem(2px) rgba(black, 0.2);
+
+            @if $color-scheme == "dark" {
+                box-shadow:
+                    outset-highlight("bottom"),
+                    // Intentionally not in ems since it's used as a stroke
+                    0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
+                    0 rem(1px) rem(2px) rgba(black, 0.2);
+            }
+
+            &:backdrop {
+                box-shadow:
+                    outset-highlight("bottom"),
+                    0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
+                    0 rem(1px) rem(2px) rgba(black, 0.15);
+            }
+        }
     }
 
     .titlebar {
