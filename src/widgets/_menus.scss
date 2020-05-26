@@ -25,6 +25,10 @@
         background-color: #{'alpha(@fg_color, 0.15)'};
     }
 
+    &:selected {
+        @extend %selected_item;
+    }
+
     .keycap {
         background: rgba(black, 0.08);
         border-radius: rem(3px);

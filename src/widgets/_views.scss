@@ -18,6 +18,12 @@ scrolledwindow {
     background-color: bg-color(1);
     color: $fg-color;
 
+    &:selected {
+        &:focus, & {
+            @extend %selected_item;
+        }
+    }
+
     text selection {
         @extend %selected_item;
     }
@@ -33,3 +39,13 @@ scrolledwindow {
         }
     }
 }
+
+textview {
+    text selection {
+        &:focus,
+        & {
+            @extend %selected_item;
+        }
+    }
+}
+
