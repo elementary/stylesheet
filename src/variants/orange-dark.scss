@@ -26,6 +26,7 @@
 @define-color accent_color_700 @ORANGE_700;
 @define-color accent_color_900 @ORANGE_900;
 
+$accent-name: "orange";
 $color-scheme: "dark";
 
 @import '../_mixins.scss';
