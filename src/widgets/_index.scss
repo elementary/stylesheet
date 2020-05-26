@@ -25,20 +25,21 @@ messagedialog,
 @define-color theme_selected_fg_color #{"" + $fg-color};
 @define-color wm_shadow #{rgba(black, 0.2)};
 
-selection {
-    background-color: #{'alpha(@accent_color_100, 0.3)'};
-    color: #{'@accent_color_900'};
-}
+@define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
+@define-color selected_fg_color #{'@accent_color_900'};
 
 @if $color-scheme == "dark" {
     @define-color error_color @STRAWBERRY_300;
     @define-color success_color @LIME_300;
     @define-color warning_color @BANANA_100;
 
-    selection {
-        background-color: #{'alpha(@accent_color_700, 0.3)'};
-        color: #{'@accent_color_100'};
-    }
+    @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
+    @define-color selected_fg_color #{'@accent_color_100'};
+}
+
+selection {
+    background-color: #{'@selected_bg_color'};
+    color: #{'@selected_fg_color'};
 }
 
 .checkerboard {
@@ -95,6 +96,7 @@ selection {
 @import '_entries.scss';
 @import '_levelbars.scss';
 @import '_linked.scss';
+@import '_lists.scss';
 @import '_menus.scss';
 @import '_notebooks.scss';
 @import '_notifications.scss';
