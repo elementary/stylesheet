@@ -2,3 +2,15 @@ actionbar,
 .search-bar {
     background-color: bg-color(3);
 }
+
+actionbar.flat,
+actionbar.inline-toolbar {
+    background-color: bg-color(2);
+    background-image: linear-gradient(
+        to bottom,
+        $toplevel-border-color,
+        // Intentionally not in ems since it's used as a stroke
+        rgba(black, 0.12) 1px,
+        rgba(black, 0.0) rem(3px)
+    );
+}
