@@ -26,6 +26,7 @@
 @define-color accent_color_700 @BLUEBERRY_700;
 @define-color accent_color_900 @BLUEBERRY_900;
 
+$accent-name: "blueberry";
 $color-scheme: "light";
 
 @import '../_mixins.scss';
