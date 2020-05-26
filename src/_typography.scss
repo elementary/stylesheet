@@ -33,8 +33,25 @@ label.h4,
 .accent {
     color: #{'@accent_color_700'};
 
+    @if $accent-name == "cocoa" or
+        $accent-name == "slate" {
+        color: #{'@accent_color_500'};
+    } @else if $accent-name == "banana" or
+        $accent-name == "lime" {
+        color: #{'mix(@accent_color_700, @accent_color_900, 0.5)'};
+    }
+
     @if $color-scheme == "dark" {
         color: #{'mix(@accent_color_300, @accent_color_500, 0.5)'};
+
+        @if $accent-name == "banana" {
+            color: #{'@accent_color_500'};
+        } @else if $accent-name == "strawberry" {
+            color: #{'@accent_color_300'};
+        } @else if $accent-name == "cocoa" or
+            $accent-name == "slate" {
+            color: #{'mix(@accent_color_100, @accent_color_300, 0.5)'};
+        }
     }
 }
 
