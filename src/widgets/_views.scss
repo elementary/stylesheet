@@ -18,6 +18,10 @@ scrolledwindow {
     background-color: bg-color(1);
     color: $fg-color;
 
+    text selection {
+        @extend %selected_item;
+    }
+
     &.terminal {
         background-color: #252e32;
         color: #94a3a5;
