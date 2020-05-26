@@ -26,6 +26,7 @@
 @define-color accent_color_700 @COCOA_700;
 @define-color accent_color_900 @COCOA_900;
 
+$accent-name: "cocoa";
 $color-scheme: "light";
 
 @import '../_mixins.scss';
