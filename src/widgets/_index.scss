@@ -18,17 +18,23 @@ messagedialog,
 @define-color success_color @LIME_700;
 @define-color warning_color @BANANA_900;
 
+@define-color selected_bg_color #{"alpha(@accent_color_100, 0.3)"};
+@define-color selected_fg_color #{"@accent_color_900"};
+
 // Things Dazzle expects
 @define-color borders #{"" + $toplevel-border-color};
 @define-color content_view_bg #{""+ bg_color(2)};
 @define-color theme_fg_color #{"" + $fg-color};
-@define-color theme_selected_fg_color #{"" + $fg-color};
+@define-color theme_selected_bg_color #{"alpha(@accent_color_100, 0.3)"};
+@define-color theme_selected_fg_color #{"@accent_color_900"};
 @define-color wm_shadow #{rgba(black, 0.2)};
 
-*:selected,
 selection {
-    background-color: #{'alpha(@accent_color_100, 0.3)'};
-    color: #{'@accent_color_900'};
+    @extend %selected_item;
+}
+
+.gtkstyle-fallback {
+    @extend %selected_item;
 }
 
 @if $color-scheme == "dark" {
@@ -36,11 +42,11 @@ selection {
     @define-color success_color @LIME_300;
     @define-color warning_color @BANANA_100;
 
-    *:selected,
-    selection {
-        background-color: #{'alpha(@accent_color_700, 0.3)'};
-        color: #{'@accent_color_100'};
-    }
+    @define-color selected_bg_color #{"alpha(@accent_color_700, 0.3)"};
+    @define-color selected_fg_color #{"@accent_color_100"};
+
+    @define-color theme_selected_bg_color #{"alpha(@accent_color_700, 0.3)"};
+    @define-color theme_selected_fg_color #{"@accent_color_100"};
 }
 
 .checkerboard {
