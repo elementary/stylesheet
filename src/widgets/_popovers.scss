@@ -14,4 +14,22 @@ popover {
         // These are hardcoded values in Gtk, we don't want rems here
         margin: -4px -10px;
     }
+
+    undershoot {
+        &.top {
+            background:
+                linear-gradient(
+                    bg_color(2) 0%,
+                    rgba(bg_color(2), 0) 50%
+                );
+        }
+
+        &.bottom {
+            background:
+                linear-gradient(
+                    rgba(bg_color(2), 0) 50%,
+                    bg_color(2) 100%
+                );
+        }
+    }
 }
