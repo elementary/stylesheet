@@ -7,7 +7,7 @@ list {
 
     row {
         &:selected {
-            background-color: rgba($fg-color, 0.2);
+            background-color: rgba($fg-color, 0.15);
 
             &:focus {
                 background-color: #{'@selected_bg_color'};
