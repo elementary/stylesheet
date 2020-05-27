@@ -16,6 +16,7 @@ messagedialog,
 
 // Separator color
 @define-color menu_separator #{rgba(black, 0.15)};
+@define-color menu_separator_shadow #{rgba(white, 0.8)};
 
 @define-color error_color @STRAWBERRY_500;
 @define-color success_color @LIME_700;
@@ -36,7 +37,8 @@ messagedialog,
     @define-color success_color @LIME_300;
     @define-color warning_color @BANANA_100;
 
-    @define-color menu_separator rgba(black, 0.25);
+    @define-color menu_separator #{rgba(black, 0.25)};
+    @define-color menu_separator_shadow #{rgba(white, 0.05)};
 
     @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
     @define-color selected_fg_color #{'@accent_color_100'};

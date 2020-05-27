@@ -2,20 +2,6 @@
     background-color: bg_color(2);
     border-radius: rem(6px);
     color: $fg-color;
-
-    separator {
-        min-height: rem(6px);
-
-        &.horizontal {
-            border-top: 1px solid #{'@menu_separator'};
-            margin-bottom: -1px;
-        }
-
-        &.vertical {
-            border-left: 1px solid #{'@menu_separator'};
-            margin-right: -1px;
-        }
-    }
 }
 
 %menuitem {
@@ -129,5 +115,11 @@ window.popup {
     menuitem,
     .menuitem {
         @extend %menuitem;
+    }
+
+    separator {
+        border-top: 1px solid #{'@menu_separator'};
+        border-bottom: 1px solid #{'@menu_separator_shadow'};
+        margin: rem(3px) 0;
     }
 }
