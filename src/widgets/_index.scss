@@ -15,7 +15,7 @@ messagedialog,
 @define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
 
 // Separator color
-@define-color menu_separator #{"" + rgba(black, 0.15)};
+@define-color menu_separator #{rgba(black, 0.15)};
 
 @define-color error_color @STRAWBERRY_500;
 @define-color success_color @LIME_700;

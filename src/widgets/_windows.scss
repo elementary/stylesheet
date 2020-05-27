@@ -117,22 +117,6 @@ window:not(.popup):not(.menu) {
             text-shadow: none;
             -gtk-icon-shadow: none;
         }
-
-        pane-separator {
-            background-color: rgba(black, 0.0);
-            box-shadow: none;
-        }
-
-        separator {
-            background: none;
-            margin: 0 rem(18px);
-        }
-
-        separator.titlebutton {
-            margin: 0;
-            min-width: 0;
-            padding: 0;
-        }
     }
 }
 

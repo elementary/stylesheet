@@ -17,15 +17,3 @@ actionbar {
 .search-bar {
     background-color: bg-color(3);
 }
-
-toolbar separator {
-    background: none;
-    margin: 0 rem(18px);
-}
-
-toolbar paned separator,
-.toolbar .pane-separator {
-    // transparent smudges colors instead of being true transparent
-    background-color: rgba(black, 0.0);
-    box-shadow: none;
-}
