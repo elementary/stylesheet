@@ -33,6 +33,8 @@ selection {
     @extend %selected_item;
 }
 
+
+// Used wherever an item/widget uses GTK colors but isn't GTK proper.
 .gtkstyle-fallback {
     @extend %selected_item;
 }
