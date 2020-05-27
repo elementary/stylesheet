@@ -5,6 +5,16 @@
 
     separator {
         min-height: rem(6px);
+
+        &.horizontal {
+            border-top: 1px solid #{'@menu_separator'};
+            margin-bottom: -1px;
+        }
+
+        &.vertical {
+            border-left: 1px solid #{'@menu_separator'};
+            margin-right: -1px;
+        }
     }
 }
 
