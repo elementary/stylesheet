@@ -19,7 +19,9 @@ scrolledwindow {
     color: $fg-color;
 
     &:selected {
-        &:focus, & {
+        @extend %selected_item;
+
+        &:focus {
             @extend %selected_item;
         }
     }
