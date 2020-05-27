@@ -22,26 +22,3 @@ paned.horizontal > separator {
     margin-right: rem(-7px);
     min-width: rem(8px);
 }
-
-paned.vertical > separator {
-    background-image:
-        linear-gradient(
-            to bottom,
-            #{'@menu_separator'} 1px,
-            rgba(white, 0.01) 1px,
-            rgba(white, 0.01) 2px,
-            transparent 2px
-        );
-    @if $color-scheme == "dark" {
-        background-image:
-            linear-gradient(
-                to bottom,
-                #{'@menu_separator'} 1px,
-                rgba(white, 0.01) 1px,
-                rgba(white, 0.01) 2px,
-                transparent 2px
-            );
-    }
-    margin-bottom: rem(-7px);
-    min-height: rem(8px);
-}
