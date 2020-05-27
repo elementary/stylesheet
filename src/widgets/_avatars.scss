@@ -1,0 +1,27 @@
+.avatar {
+    border: 1px solid rgba(black, 0.35);
+    border-radius: 50%;
+    box-shadow:
+        outset-highlight(),
+        outset-shadow(3);
+}
+
+avatar,
+avatar-overlay {
+    border-radius: 50%;
+}
+
+avatar {
+    background-color: #{'@accent_color_500'};
+    box-shadow: outset-shadow(3);
+    color: white;
+}
+
+avatar-overlay {
+    border: 1px solid rgba(black, 0.15);
+    @if $color-scheme == "dark" {
+        border: 1px solid rgba(black, 0.6);
+    }
+
+    box-shadow: outset-highlight();
+}
