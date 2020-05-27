@@ -24,10 +24,6 @@ scrolledwindow {
         }
     }
 
-    text selection {
-        @extend %selected_item;
-    }
-
     &.terminal {
         background-color: #252e32;
         color: #94a3a5;
@@ -36,15 +32,6 @@ scrolledwindow {
         text selection {
             background-color: #93a1a1;
             color: #252e32;
-        }
-    }
-}
-
-textview {
-    text selection {
-        &:focus,
-        & {
-            @extend %selected_item;
         }
     }
 }

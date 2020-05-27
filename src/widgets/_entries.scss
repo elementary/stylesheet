@@ -18,10 +18,6 @@ entry {
         @extend %selected_item;
     }
 
-    text selection {
-        @extend %selected_item;
-    }
-
     image {
         color: #{'@placeholder_text_color'};
         transition: all duration("element") $easing;

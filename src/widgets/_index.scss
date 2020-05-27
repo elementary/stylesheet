@@ -25,8 +25,8 @@ messagedialog,
 @define-color borders #{"" + $toplevel-border-color};
 @define-color content_view_bg #{""+ bg_color(2)};
 @define-color theme_fg_color #{"" + $fg-color};
-@define-color theme_selected_bg_color #{"alpha(@accent_color_100, 0.3)"};
-@define-color theme_selected_fg_color #{"@accent_color_900"};
+@define-color theme_selected_bg_color #{"@selected_bg_color"};
+@define-color theme_selected_fg_color #{"@selected_fg_color"};
 @define-color wm_shadow #{rgba(black, 0.2)};
 
 selection {
@@ -45,9 +45,8 @@ selection {
     @define-color selected_bg_color #{"alpha(@accent_color_700, 0.3)"};
     @define-color selected_fg_color #{"@accent_color_100"};
 
-    @define-color theme_selected_bg_color #{"alpha(@accent_color_700, 0.3)"};
-    @define-color theme_selected_fg_color #{"@accent_color_100"};
-
+    @define-color theme_selected_bg_color #{"@selected_bg_color"};
+    @define-color theme_selected_fg_color #{"@selected_fg_color"};
 }
 
 .checkerboard {

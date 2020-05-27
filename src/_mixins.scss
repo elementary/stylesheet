@@ -193,13 +193,8 @@ $toplevel-border-color: rgba(black, 0.2);
 }
 
 %selected_item {
-    @if $color-scheme == "dark" {
-        background-color: #{"@selected_bg_color"};
-        color: #{"@selected_fg_color"};
-    } @else if $color-scheme == "light" {
-        background-color: #{"@selected_bg_color"};
-        color: #{"@selected_fg_color"};
-    }
+    background-color: #{"@selected_bg_color"};
+    color: #{"@selected_fg_color"};
 }
 
 @import '_animate.scss';
