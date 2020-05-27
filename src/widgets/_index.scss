@@ -36,6 +36,8 @@ messagedialog,
     @define-color success_color @LIME_300;
     @define-color warning_color @BANANA_100;
 
+    @define-color menu_separator rgba(black, 0.25);
+
     @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
     @define-color selected_fg_color #{'@accent_color_100'};
 }

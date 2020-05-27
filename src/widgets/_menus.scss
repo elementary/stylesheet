@@ -7,13 +7,13 @@
         min-height: rem(6px);
 
         &.horizontal {
-            border-top: rem(1px) solid #{'@menu_separator'};
-            margin-bottom: rem(-1px);
+            border-top: 1px solid #{'@menu_separator'};
+            margin-bottom: -1px;
         }
 
         &.vertical {
-            border-left: rem(1px) solid #{'@menu_separator'};
-            margin-right: rem(-1px);
+            border-left: 1px solid #{'@menu_separator'};
+            margin-right: -1px;
         }
     }
 }
