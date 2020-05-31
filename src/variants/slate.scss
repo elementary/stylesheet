@@ -26,7 +26,8 @@
 @define-color accent_color_700 @SLATE_700;
 @define-color accent_color_900 @SLATE_900;
 
-$accent-name: "slate";
+@define-color accent_color @SLATE_500;
+
 $color-scheme: "light";
 
 @import '../_mixins.scss';
