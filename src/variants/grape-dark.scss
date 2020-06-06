@@ -26,6 +26,8 @@
 @define-color accent_color_700 @GRAPE_700;
 @define-color accent_color_900 @GRAPE_900;
 
+@define-color accent_color #{'mix(@accent_color_300, @accent_color_500, 0.5)'};
+
 $color-scheme: "dark";
 
 @import '../_mixins.scss';

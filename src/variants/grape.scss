@@ -26,6 +26,8 @@
 @define-color accent_color_700 @GRAPE_700;
 @define-color accent_color_900 @GRAPE_900;
 
+@define-color accent_color @GRAPE_700;
+
 $color-scheme: "light";
 
 @import '../_mixins.scss';

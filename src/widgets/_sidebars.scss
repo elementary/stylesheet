@@ -1,6 +1,13 @@
+.sidebar,
+.sidebar.view,
+.sidebar list,
+.source-list,
+.source-list .view {
+    background-color: bg_color(3);
+}
+
 .sidebar {
     list {
-        background-color: bg_color(3);
         padding-top: rem(6px);
 
         row {
@@ -16,6 +23,7 @@
 
             &:selected {
                 background-color: bg_color(4);
+                color: $fg-color;
             }
         }
     }

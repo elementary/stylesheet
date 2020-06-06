@@ -26,6 +26,8 @@
 @define-color accent_color_700 @BUBBLEGUM_700;
 @define-color accent_color_900 @BUBBLEGUM_900;
 
+@define-color accent_color @BUBBLEGUM_700;
+
 $color-scheme: "light";
 
 @import '../_mixins.scss';
