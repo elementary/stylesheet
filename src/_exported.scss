@@ -1,0 +1,44 @@
+// These are defined as GtkCSS variables, so are accessible and overridable
+// inside of apps. While internal sass variables are considered private API,
+// these exported GtkCSS variables should be considered public API.
+
+// Inset box shadows
+@define-color highlight_color white;
+
+@if $color-scheme == "dark" {
+    @define-color highlight_color #{"" + rgba(white, 0.2)};
+}
+
+// The primary brand color used for titlebars
+@define-color color_primary #{$titlebar-color};
+
+// Text and image color
+@define-color fg_color #{"" + $fg-color};
+
+// Placeholder text in entries. Doesn't respect alpha
+@define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
+
+// Semantic colors
+@define-color error_color #{"" + $error-color};
+@define-color success_color #{"" + $success-color};
+@define-color warning_color #{"" + $warning-color};
+
+@define-color menu_separator #{rgba(black, 0.15)};
+
+@define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
+@define-color selected_fg_color #{'@accent_color_900'};
+
+// Things Dazzle expects
+@define-color borders #{"" + $toplevel-border-color};
+@define-color content_view_bg #{""+ bg_color(2)};
+@define-color theme_fg_color #{"" + $fg-color};
+@define-color theme_selected_bg_color #{'@selected_bg_color'};
+@define-color theme_selected_fg_color #{'@selected_fg_color'};
+@define-color wm_shadow #{rgba(black, 0.2)};
+
+@if $color-scheme == "dark" {
+    @define-color menu_separator rgba(black, 0.25);
+
+    @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
+    @define-color selected_fg_color #{'@accent_color_100'};
+}
