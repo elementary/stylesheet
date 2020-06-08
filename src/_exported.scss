@@ -19,9 +19,9 @@
 @define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
 
 // Semantic colors
-@define-color error_color $error-color;
-@define-color success_color $success-color;
-@define-color warning_color $warning-color;
+@define-color error_color #{"" + $error-color};
+@define-color success_color #{"" + $success-color};
+@define-color warning_color #{"" + $warning-color};
 
 @define-color menu_separator #{rgba(black, 0.15)};
 
