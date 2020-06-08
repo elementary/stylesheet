@@ -26,7 +26,8 @@
 @define-color accent_color_700 @BUBBLEGUM_700;
 @define-color accent_color_900 @BUBBLEGUM_900;
 
-$accent-name: "bubblegum";
+@define-color accent_color @BUBBLEGUM_700;
+
 $color-scheme: "light";
 
 // Can't just use `@import '../';` because of sass version in repos

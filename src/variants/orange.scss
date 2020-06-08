@@ -26,7 +26,8 @@
 @define-color accent_color_700 @ORANGE_700;
 @define-color accent_color_900 @ORANGE_900;
 
-$accent-name: "orange";
+@define-color accent_color @ORANGE_700;
+
 $color-scheme: "light";
 
 // Can't just use `@import '../';` because of sass version in repos
