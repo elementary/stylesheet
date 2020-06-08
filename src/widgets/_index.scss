@@ -8,40 +8,6 @@ messagedialog,
     color: $fg-color;
 }
 
-// Text and image color
-@define-color fg_color #{"" + $fg-color};
-
-// Placeholder text in entries. Doesn't respect alpha
-@define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
-
-// Separator color
-@define-color menu_separator #{rgba(black, 0.15)};
-
-@define-color error_color @STRAWBERRY_500;
-@define-color success_color @LIME_700;
-@define-color warning_color @BANANA_900;
-
-// Things Dazzle expects
-@define-color borders #{"" + $toplevel-border-color};
-@define-color content_view_bg #{""+ bg_color(2)};
-@define-color theme_fg_color #{"" + $fg-color};
-@define-color theme_selected_fg_color #{"" + $fg-color};
-@define-color wm_shadow #{rgba(black, 0.2)};
-
-@define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
-@define-color selected_fg_color #{'@accent_color_900'};
-
-@if $color-scheme == "dark" {
-    @define-color error_color @STRAWBERRY_300;
-    @define-color success_color @LIME_300;
-    @define-color warning_color @BANANA_100;
-
-    @define-color menu_separator rgba(black, 0.25);
-
-    @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
-    @define-color selected_fg_color #{'@accent_color_100'};
-}
-
 selection {
     background-color: #{'@selected_bg_color'};
     color: #{'@selected_fg_color'};
