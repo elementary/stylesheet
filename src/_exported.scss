@@ -32,7 +32,8 @@
 @define-color borders #{"" + $toplevel-border-color};
 @define-color content_view_bg #{""+ bg_color(2)};
 @define-color theme_fg_color #{"" + $fg-color};
-@define-color theme_selected_fg_color #{"" + $fg-color};
+@define-color theme_selected_bg_color #{'@selected_bg_color'};
+@define-color theme_selected_fg_color #{'@selected_fg_color'};
 @define-color wm_shadow #{rgba(black, 0.2)};
 
 @if $color-scheme == "dark" {
