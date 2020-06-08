@@ -30,4 +30,5 @@
 
 $color-scheme: "dark";
 
-@import '../_mixins.scss';
+// Can't just use `@import '../';` because of sass version in repos
+@import '../index.scss';
