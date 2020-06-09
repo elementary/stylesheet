@@ -20,13 +20,16 @@
 @define-color success_color #{"" + $success-color};
 @define-color warning_color #{"" + $warning-color};
 
+// Separator color
 @define-color menu_separator #{rgba(black, 0.15)};
+@define-color menu_separator_shadow #{rgba(white, 0.8)};
 
 @define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
 @define-color selected_fg_color #{'@accent_color_900'};
 
 @if $color-scheme == "dark" {
-    @define-color menu_separator rgba(black, 0.25);
+    @define-color menu_separator #{rgba(black, 0.25)};
+    @define-color menu_separator_shadow #{rgba(white, 0.05)};
 
     @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
     @define-color selected_fg_color #{'@accent_color_100'};
