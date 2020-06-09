@@ -12,9 +12,6 @@
 // The primary brand color used for titlebars
 @define-color color_primary #{$titlebar-color};
 
-// Text and image color
-@define-color fg_color #{"" + $fg-color};
-
 // Placeholder text in entries. Doesn't respect alpha
 @define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
 
@@ -30,14 +27,6 @@
 @define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
 @define-color selected_fg_color #{'@accent_color_900'};
 
-// Things Dazzle expects
-@define-color borders #{"" + $toplevel-border-color};
-@define-color content_view_bg #{""+ bg_color(2)};
-@define-color theme_fg_color #{"" + $fg-color};
-@define-color theme_selected_bg_color #{'@selected_bg_color'};
-@define-color theme_selected_fg_color #{'@selected_fg_color'};
-@define-color wm_shadow #{rgba(black, 0.2)};
-
 @if $color-scheme == "dark" {
     @define-color menu_separator #{rgba(black, 0.25)};
     @define-color menu_separator_shadow #{rgba(white, 0.05)};
@@ -45,3 +34,23 @@
     @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
     @define-color selected_fg_color #{'@accent_color_100'};
 }
+
+@define-color base_color #{"" + bg_color(1)};
+@define-color theme_base_color #{"" + bg_color(1)};
+
+// Outset box shadow or border color on toplevel elements like windows, menus, popovers
+@define-color borders #{"" + $toplevel-border-color};
+
+@define-color theme_bg_color #{""+ bg_color(2)};
+@define-color content_view_bg #{""+ bg_color(2)};
+
+// Text, images, and other foreground elements
+@define-color fg_color #{"" + $fg-color};
+@define-color theme_fg_color #{"" + $fg-color};
+@define-color text_color #{"" + $fg-color};
+@define-color theme_text_color #{"" + $fg-color};
+
+@define-color theme_selected_bg_color #{'@selected_bg_color'};
+@define-color theme_selected_fg_color #{'@selected_fg_color'};
+
+@define-color wm_shadow #{rgba(black, 0.2)};
