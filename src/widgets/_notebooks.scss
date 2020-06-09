@@ -25,6 +25,8 @@ tab {
     // Slow to match the close button revealer transition
     transition: all 300ms ease-in;
     margin: rem(3px) 0;
+    // Not scaled because it's based on icon size
+    min-width: 24px;
     padding: rem(3px);
 
     &:hover:not(:checked) {
