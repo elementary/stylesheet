@@ -7,9 +7,19 @@ button {
     padding: rem(4px) rem(7px);
     transition: all duration("element") $easing;
 
-    .linked &,
-    &.raised,
-    &:not(.image-button):not(.flat) {
+    &.flat,
+    &.image-button:not(.text-button) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .linked &.flat,
+    .linked &.image-button,
+    &.circular.image-button,
+    &.model.image-button,
+    &.raised.image-button,
+    & {
         @extend %outset-background;
         background-color: bg-color(2);
         border: 1px solid rgba(black, 0.2);
