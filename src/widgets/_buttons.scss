@@ -81,6 +81,21 @@ button {
         }
     }
 
+    &:focus {
+        border-color: #{'@accent_color'};
+        box-shadow:
+            0 0 0 2px #{'alpha(@accent_color, 0.25)'},
+            outset-highlight(),
+            outset-shadow(2);
+
+        &:active,
+        &:checked {
+            box-shadow:
+                0 0 0 2px #{'alpha(@accent_color, 0.25)'},
+                inset-shadow();
+        }
+    }
+
     &:disabled {
         color: #{'@placeholder_text_color'};
     }

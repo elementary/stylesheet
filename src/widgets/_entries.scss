@@ -14,6 +14,13 @@ entry {
         color: #{'@placeholder_text_color'};
     }
 
+    &:focus {
+        border-color: #{'@accent_color'};
+        box-shadow:
+            0 0 0 2px #{'alpha(@accent_color, 0.25)'},
+            inset-shadow("");
+    }
+
     image {
         color: #{'@placeholder_text_color'};
         transition: all duration("element") $easing;
