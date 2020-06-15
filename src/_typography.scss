@@ -37,3 +37,7 @@ label.h4,
 :visited {
     opacity: 0.75;
 }
+
+:link:hover label {
+  text-decoration: underline;
+}
