@@ -27,10 +27,13 @@ label.h4,
     font-size: 1.22em
 }
 
-.accent {
+.accent,
+.link,
+:link {
     color: #{'@accent_color'};
 }
 
-.dim-label {
+.dim-label,
+:visited {
     opacity: 0.75;
 }
