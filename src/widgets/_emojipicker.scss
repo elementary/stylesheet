@@ -6,11 +6,11 @@
 
     // Emoji are labels too, so we have to be specific
     box.vertical > label {
-        font-weight: 700;
-        //Intentionally off-by-one
+        @extend .h4;
+
+        // Intentionally off-by-one
         margin-left: rem(7px);
         margin-right: rem(7px);
-        opacity: 0.8;
     }
 
     .emoji {
