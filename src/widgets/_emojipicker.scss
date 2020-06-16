@@ -19,9 +19,9 @@
         font-size: 16px;
     }
 
-    // "Inline Actionbar"
     stack box > box.horizontal {
         @extend .inline-toolbar;
+
         border-radius: 0 0 rem(6px) rem(6px);
     }
 
