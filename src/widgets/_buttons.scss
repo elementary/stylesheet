@@ -27,6 +27,22 @@ button {
             outset-highlight("full"),
             outset-shadow(2);
 
+        &.destructive-action:not(:disabled) {
+            @if $color-scheme == "light" {
+                background-clip: border-box;
+            } @else if $color-scheme == "dark" {
+                &:active,
+                &:checked {
+                    border-color: rgba(black, 0.7);
+                }
+            }
+
+            background-color: $STRAWBERRY_500;
+            color: white;
+            text-shadow: 0 1px 1px $STRAWBERRY_500;
+            -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
+        }
+
         &.suggested-action:not(:disabled) {
             $accent-fg-color: #{'mix (black, @accent_color_900, 0.8)'};
             $bg-color: #{'@accent_color_100'};
