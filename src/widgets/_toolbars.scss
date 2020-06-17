@@ -1,16 +1,19 @@
+.inline-toolbar {
+    background-color: bg-color(2);
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(black, 0.4),
+            rgba(black, 0.07) 1px,
+            transparent rem(3px)
+        );
+}
+
 actionbar {
     background-color: bg-color(3);
 
-    &.flat,
-    &.inline-toolbar {
-        background-color: bg-color(2);
-        background-image:
-            linear-gradient(
-                to bottom,
-                rgba(black, 0.4),
-                rgba(black, 0.07) 1px,
-                transparent rem(3px)
-            );
+    &.flat{
+        @extend .inline-toolbar;
     }
 }
 
