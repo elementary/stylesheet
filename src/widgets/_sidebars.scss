@@ -1,3 +1,18 @@
+%sidebar-row {
+    &:hover {
+        background-color: rgba(white, 0.75);
+
+        @if $color-scheme == "dark" {
+            background-color: rgba(white, 0.05);
+        }
+    }
+
+    &:selected {
+        background-color: bg_color(4);
+        color: $fg-color;
+    }
+}
+
 .sidebar,
 .sidebar.view,
 .sidebar list,
@@ -13,18 +28,16 @@
         row {
             padding: rem(6px) rem(12px);
 
-            &:hover {
-                background-color: rgba(white, 0.75);
-
-                @if $color-scheme == "dark" {
-                    background-color: rgba(white, 0.05);
-                }
-            }
-
-            &:selected {
-                background-color: bg_color(4);
-                color: $fg-color;
-            }
+            @extend %sidebar-row;
         }
+    }
+}
+
+treeview.sidebar {
+    -GtkTreeView-horizontal-separator: 1px;
+    -GtkTreeView-vertical-separator: 6px;
+
+    .view {
+        @extend %sidebar-row;
     }
 }
