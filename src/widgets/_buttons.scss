@@ -116,4 +116,9 @@ button {
     label {
         font-weight: 500;
     }
+
+    &:dir(ltr) image + label,
+    &:dir(rtl) label + image {
+        margin-left: rem(3px);
+    }
 }
