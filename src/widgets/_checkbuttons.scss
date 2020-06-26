@@ -62,6 +62,15 @@ checkbutton {
             margin-right: rem(6px);
         }
     }
+
+    &.image-button:checked {
+        background: #{'alpha(@accent_color, 0.1)'};
+        border-radius: rem(6px);
+
+        &:backdrop {
+            background: rgba($fg-color, 0.05);
+        }
+    }
 }
 
 radiobutton.image-button {
