@@ -66,6 +66,15 @@ window:not(.popup):not(.menu) {
             &.default-decoration {
                 padding: rem(3px);
             }
+
+            &.flat {
+                background: bg_color(2);
+                box-shadow:
+                    1px 0 0 0 $toplevel-border-color,
+                    -1px 0 0 0 $toplevel-border-color,
+                    0 -1px 0 0 $toplevel-border-color,
+                    outset-highlight("top");
+            }
         }
     }
 
