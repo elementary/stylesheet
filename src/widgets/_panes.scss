@@ -12,13 +12,11 @@ paned.horizontal > separator {
         background-image:
             linear-gradient(
                 to right,
-                #{'@menu_separator'} 1px,
-                rgba(white, 0.01) 1px,
-                rgba(white, 0.01) 2px,
+                #{'@menu_separator'} 2px,
                 transparent 2px
             );
     }
     // This creates the invisible resize handle
-    margin-right: rem(-7px);
+    margin-right: rem(-9px);
     min-width: rem(8px);
 }
