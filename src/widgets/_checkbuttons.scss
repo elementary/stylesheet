@@ -63,12 +63,19 @@ checkbutton {
         }
     }
 
+    &.image-button {
+        // Invisible stroke to prevent things from moving when :checked
+        border: 1px solid transparent;
+    }
+
     &.image-button:checked {
         background: #{'alpha(@accent_color, 0.1)'};
-        border-radius: rem(6px);
+        border: 1px solid #{'alpha(@accent_color, 0.25)'};
+        border-radius: rem(3px);
 
         &:backdrop {
             background: rgba($fg-color, 0.05);
+            border-color: rgba($fg-color, 0.25);
         }
     }
 }
