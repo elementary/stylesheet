@@ -7,15 +7,41 @@ button {
     padding: rem(4px) rem(7px);
     transition: all duration("element") $easing;
 
-    .linked &,
-    &.raised,
-    &:not(.image-button):not(.flat) {
+    &.flat,
+    &.image-button:not(.text-button) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    .linked &.flat,
+    .linked &.image-button,
+    &.circular.image-button,
+    &.model.image-button,
+    &.raised.image-button,
+    & {
         @extend %outset-background;
         background-color: bg-color(2);
         border: 1px solid rgba(black, 0.2);
         box-shadow:
             outset-highlight("full"),
             outset-shadow(2);
+
+        &.destructive-action:not(:disabled) {
+            @if $color-scheme == "light" {
+                background-clip: border-box;
+            } @else if $color-scheme == "dark" {
+                &:active,
+                &:checked {
+                    border-color: rgba(black, 0.7);
+                }
+            }
+
+            background-color: $STRAWBERRY_500;
+            color: white;
+            text-shadow: 0 1px 1px $STRAWBERRY_500;
+            -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
+        }
 
         &.suggested-action:not(:disabled) {
             $accent-fg-color: #{'mix (black, @accent_color_900, 0.8)'};
@@ -89,5 +115,10 @@ button {
 
     label {
         font-weight: 500;
+    }
+
+    &:dir(ltr) image + label,
+    &:dir(rtl) label + image {
+        margin-left: rem(3px);
     }
 }
