@@ -78,6 +78,14 @@ window:not(.popup):not(.menu) {
         }
     }
 
+    &.rounded {
+        border-radius: 0 0 rem(6px) rem(6px);
+
+        > decoration {
+            border-radius: rem(6px);
+        }
+    }
+
     // SSD doesn't calculate rems correctly
     &.ssd {
         decoration {
