@@ -38,6 +38,10 @@ label.h4,
     opacity: 0.75;
 }
 
+label:disabled {
+    opacity: 0.5;
+}
+
 .keycap {
     background-color: bg-color(2);
     background-image:
