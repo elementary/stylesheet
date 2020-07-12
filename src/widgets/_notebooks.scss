@@ -27,7 +27,6 @@ tab {
     margin: rem(3px) 0;
     // Not scaled because it's based on icon size
     min-width: 24px;
-    padding: rem(3px);
 
     &:hover:not(:checked) {
         background-color: bg-color(4);
@@ -43,5 +42,9 @@ tab {
         &:backdrop {
             background-color: bg-color(2);
         }
+    }
+
+    > widget > grid {
+        padding: rem(3px);
     }
 }
