@@ -212,6 +212,8 @@ dialog {
         box-shadow: outset-highlight("top");
 
         label.title {
+            text-shadow: none;
+            -gtk-icon-shadow: none;
             font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
             color: transparent;
         }

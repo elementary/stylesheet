@@ -15,6 +15,11 @@ actionbar {
     &.flat{
         @extend .inline-toolbar;
     }
+    &.title {
+        font-size: 11pt;
+        font-weight: bold;
+        padding: 0 12px;
+    }
 }
 
 .search-bar {
