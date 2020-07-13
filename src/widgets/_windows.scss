@@ -170,8 +170,14 @@ window:not(.popup):not(.menu) {
         background-color: #{"@color_primary"};
 
         .title {
+            font-size: 9pt;
             font-weight: 600;
             text-shadow: $shadow
+        }
+
+        .subtitle {
+            opacity: 0.75;
+            font-size: 85%;
         }
 
         .titlebutton,
