@@ -15,9 +15,15 @@ actionbar {
     &.flat{
         @extend .inline-toolbar;
     }
+
     &.title {
         font-size: 11pt;
         font-weight: bold;
+        padding: 0 12px;
+    }
+
+    &.subtitle {
+        font-size: 9pt;
         padding: 0 12px;
     }
 }
