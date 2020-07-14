@@ -13,6 +13,12 @@ notebook {
         &:backdrop {
             background-color: bg-color(2);
         }
+
+        // Matches the new tab and history buttons
+        > box > button.image-button,
+        > button.image-button {
+            min-width: rem(24px);
+        }
     }
 
     viewport {
