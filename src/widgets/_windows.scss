@@ -227,6 +227,11 @@ window:not(.popup):not(.menu) {
             text-shadow: $shadow
         }
 
+        .subtitle {
+            opacity: 0.75;
+            font-size: 80%;
+        }
+
         .titlebutton,
         .image-button,
         .mode-switch {
@@ -265,6 +270,8 @@ dialog {
         box-shadow: outset-highlight("top");
 
         label.title {
+            text-shadow: none;
+            -gtk-icon-shadow: none;
             font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
             color: transparent;
         }
