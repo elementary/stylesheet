@@ -168,6 +168,26 @@ window:not(.popup):not(.menu) {
             box-shadow: outset-highlight();
         }
 
+        &.tiled-left {
+            &.tiled-top decoration-overlay {
+                border-top-right-radius: 0;
+            }
+
+            &.tiled-bottom decoration-overlay {
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        &.tiled-right {
+            &.tiled-top decoration-overlay{
+                border-top-left-radius: 0;
+            }
+
+            &.tiled-bottom decoration-overlay {
+                border-bottom-left-radius: 0;
+            }
+        }
+
         .titlebar {
             box-shadow:
                 outset-highlight("bottom"),
