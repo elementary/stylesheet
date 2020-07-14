@@ -37,7 +37,7 @@ window:not(.popup):not(.menu) {
             }
         }
 
-        &.maximized decoration {
+        &.maximized > decoration {
             background-color: black;
             border-radius: 0;
             box-shadow: none;
