@@ -49,8 +49,8 @@ foreach variant : variants
     )
 
     install_data(
-        ['plank' / 'dock.theme', 'plank' / 'dock-dark.theme'],
+        ['plank' / 'dock.theme', 'plank' / 'dock-dark.theme', 'plank' / 'dock-no-indicators.theme', 'plank' / 'dock-dark-no-indicators.theme'],
         install_dir: dest_theme_dir,
-        rename: ['plank' / 'dock.theme', 'plank-dark' / 'dock.theme']
+        rename: ['plank' / 'dock.theme', 'plank-dark' / 'dock.theme', 'plank-no-indicators-dark' / 'dock.theme', 'plank-no-indicators-dark' / 'dock.theme']
     )
 endforeach
