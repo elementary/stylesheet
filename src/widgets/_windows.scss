@@ -183,7 +183,7 @@ window:not(.popup):not(.menu) {
                     0 rem(1px) rem(2px) rgba(black, 0.2);
             }
 
-            &:backdrop {
+            &:backdrop:not(.flat) {
                 box-shadow:
                     outset-highlight("bottom"),
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
