@@ -4,7 +4,8 @@ window {
 }
 
 window.csd:not(.popup):not(.menu),
-dialog {
+dialog,
+messagedialog {
     > decoration {
         margin: rem(12px);
     }
@@ -247,7 +248,8 @@ window:not(.popup):not(.menu) {
     }
 }
 
-dialog {
+dialog,
+messagedialog {
     border-radius: 0 0 rem(6px) rem(6px);
     box-shadow: outset-highlight("bottom");
 
