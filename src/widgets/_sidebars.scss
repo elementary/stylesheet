@@ -19,6 +19,10 @@
 .source-list,
 .source-list .view {
     background-color: bg_color(3);
+
+    popover & {
+        background: transparent;
+    }
 }
 
 .sidebar {
