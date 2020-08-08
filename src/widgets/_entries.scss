@@ -1,5 +1,10 @@
 %entry {
-    background-color: bg-color(1);
+    @extend %inset-background;
+    @if $color-scheme == "light" {
+        background-color: bg-color(1);
+    } @else if $color-scheme == "dark" {
+        background-color: bg-color(3);
+    }
     background-clip: padding-box;
     border: 1px solid $toplevel-border-color;
     border-radius: rem(3px);
