@@ -1,5 +1,4 @@
 %entry {
-    @extend %inset-background;
     @if $color-scheme == "light" {
         background-color: bg-color(1);
     } @else if $color-scheme == "dark" {
