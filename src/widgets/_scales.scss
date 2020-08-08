@@ -20,7 +20,11 @@ scale {
 
     slider {
         @extend %outset-background;
-        background-color: bg-color(2);
+        @if $color-scheme == "light" {
+            background-color: bg-color(2);
+        } @else if $color-scheme == "dark" {
+            background-color: mix($BLACK_300, $BLACK_500, $weight: 70%);
+        }
         border-radius: rem(12px);
         box-shadow:
             outset-highlight(),
@@ -45,6 +49,7 @@ scale {
     }
 
     trough {
+        @extend %inset-background;
         border: 1px solid rgba(black, 0.2);
         border-radius: rem(12px);
         background-color: rgba(black, 0.05);
