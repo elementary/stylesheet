@@ -11,7 +11,8 @@
     color: #{'@fg_color'};
 
     &:disabled {
-        background: rgba(black, 0.03);
+        background: rgba(black, 0.1);
+        opacity: 0.66;
         box-shadow: inset-shadow("disabled");
         color: #{'@placeholder_text_color'};
     }

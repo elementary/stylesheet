@@ -5,7 +5,10 @@ $titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
 $fg-color: $BLACK_500;
 
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
-$toplevel-border-color: rgba(black, 0.2);
+$toplevel-border-color: rgba(black, 0.15);
+@if $color-scheme == "dark" {
+    $toplevel-border-color: rgba(black, 0.25);
+}
 
 // Semantic colors
 $error_color: $STRAWBERRY_500;

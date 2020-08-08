@@ -14,6 +14,9 @@
 
 // Placeholder text in entries. Doesn't respect alpha
 @define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
+@if $color-scheme == "dark" {
+    @define-color placeholder_text_color #{"" + mix($fg-color, bg-color(2), $weight: 85%)};
+}
 
 // Semantic colors
 @define-color error_color #{"" + $error-color};
