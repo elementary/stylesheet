@@ -191,6 +191,25 @@ $warning_color: $BANANA_900;
     }
 }
 
+// Background for elements with inset style like pressed buttons, checkboxes, etc
+%inset-background {
+    background-image:
+        linear-gradient(
+            to top,
+            #{'alpha(@highlight_color, 0.2)'},
+            rgba(white, 0)
+        );
+
+    &:backdrop {
+        background-image:
+            linear-gradient(
+                to top,
+                #{'alpha(@highlight_color, 0.35)'},
+                #{'alpha(@highlight_color, 0.3)'}
+            );
+    }
+}
+
 @import '_animate.scss';
 @import '_exported.scss';
 @import '_typography.scss';

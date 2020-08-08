@@ -89,6 +89,7 @@ button {
 
         &:active,
         &:checked {
+            @extend %inset-background;
             @if $color-scheme == "light" {
               background-color: rgba(black, 0.05);
             } @else if $color-scheme == "dark" {
