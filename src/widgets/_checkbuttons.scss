@@ -17,6 +17,7 @@ radio {
     -gtk-icon-source: none;
 
     &:checked {
+        @extend %inset-background;
         background-color: #{'@accent_color_300'};
         color: white;
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
