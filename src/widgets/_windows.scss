@@ -3,8 +3,10 @@ window {
     color: $fg-color;
 }
 
+assistant,
 window.csd:not(.popup):not(.menu),
-dialog {
+dialog,
+messagedialog {
     > decoration {
         margin: rem(12px);
     }
@@ -14,6 +16,7 @@ dialog {
     }
 }
 
+assistant,
 window:not(.popup):not(.menu) {
     > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
@@ -227,7 +230,8 @@ window:not(.popup):not(.menu) {
     }
 }
 
-dialog {
+dialog,
+messagedialog {
     border-radius: 0 0 rem(6px) rem(6px);
     box-shadow: outset-highlight("bottom");
 
