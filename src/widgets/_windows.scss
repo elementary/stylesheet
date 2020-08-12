@@ -1,5 +1,12 @@
+window {
+    background-color: bg_color(2);
+    color: $fg-color;
+}
+
+assistant,
 window.csd:not(.popup):not(.menu),
-dialog {
+dialog,
+messagedialog {
     > decoration {
         margin: rem(12px);
     }
@@ -9,6 +16,7 @@ dialog {
     }
 }
 
+assistant,
 window:not(.popup):not(.menu) {
     > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
@@ -32,11 +40,39 @@ window:not(.popup):not(.menu) {
             }
         }
 
-        &.tiled {
+        &.maximized > decoration {
+            background-color: black;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        &.tiled:not(.maximized) {
             > decoration {
+                background-color: black;
+                border-radius: 0;
                 box-shadow:
                     0 13px 16px 4px transparent,
                     shadow(1);
+            }
+
+            &.tiled-left {
+                &.tiled-top .titlebar {
+                    border-top-right-radius: 0;
+                }
+
+                &.tiled-bottom actionbar {
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            &.tiled-right {
+                &.tiled-top .titlebar {
+                    border-top-left-radius: 0;
+                }
+
+                &.tiled-bottom actionbar {
+                    border-bottom-left-radius: 0;
+                }
             }
         }
 
@@ -174,6 +210,11 @@ window:not(.popup):not(.menu) {
             text-shadow: $shadow
         }
 
+        .subtitle {
+            opacity: 0.75;
+            font-size: 80%;
+        }
+
         .titlebutton,
         .image-button,
         .mode-switch {
@@ -189,7 +230,8 @@ window:not(.popup):not(.menu) {
     }
 }
 
-dialog {
+dialog,
+messagedialog {
     border-radius: 0 0 rem(6px) rem(6px);
     box-shadow: outset-highlight("bottom");
 
@@ -212,6 +254,8 @@ dialog {
         box-shadow: outset-highlight("top");
 
         label.title {
+            text-shadow: none;
+            -gtk-icon-shadow: none;
             font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
             color: transparent;
         }
