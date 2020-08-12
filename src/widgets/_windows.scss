@@ -3,6 +3,7 @@ window {
     color: $fg-color;
 }
 
+assistant,
 window.csd:not(.popup):not(.menu),
 dialog,
 messagedialog {
@@ -15,6 +16,7 @@ messagedialog {
     }
 }
 
+assistant,
 window:not(.popup):not(.menu) {
     > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
