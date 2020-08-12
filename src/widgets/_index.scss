@@ -1,4 +1,3 @@
-window,
 dialog,
 messagedialog,
 .titlebar,
@@ -66,9 +65,11 @@ selection {
 @import '_checkbuttons.scss';
 @import '_emojipicker.scss';
 @import '_entries.scss';
+@import '_infobars.scss';
 @import '_levelbars.scss';
 @import '_linked.scss';
 @import '_lists.scss';
+@import '_menubars.scss';
 @import '_menus.scss';
 @import '_notebooks.scss';
 @import '_notifications.scss';
@@ -81,6 +82,7 @@ selection {
 @import '_spinbuttons.scss';
 @import '_spinners.scss';
 @import '_stackable_boxes.scss';
+@import '_storagebars.scss';
 @import '_switches.scss';
 @import '_toasts.scss';
 @import '_toolbars.scss';
