@@ -5,7 +5,9 @@ popover {
     box-shadow: shadow(2);
     margin: 6px;
 
-    modelbutton {
+    menuitem,
+    modelbutton,
+    .menuitem {
         @extend %menuitem;
     }
 

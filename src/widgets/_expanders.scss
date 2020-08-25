@@ -1,0 +1,30 @@
+expander arrow,
+.expander,
+.category-expander {
+    min-height: 16px;
+    min-width: 16px;
+    transition: all duration("element") $easing;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+
+    &:dir(rtl) {
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+    }
+
+    &:checked {
+        -gtk-icon-transform: rotate(90deg);
+
+        &:dir(rtl) {
+            -gtk-icon-transform: rotate(-90deg);
+        }
+    }
+}
+
+.sidebar.category-expander,
+.source-list.category-expander {
+    color: transparent;
+    border: none;
+
+    &:hover {
+        color: inherit;
+    }
+}
