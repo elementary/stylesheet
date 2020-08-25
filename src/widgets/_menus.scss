@@ -2,6 +2,13 @@
     background-color: bg_color(2);
     border-radius: rem(6px);
     color: $fg-color;
+
+    image,
+    label {
+        // Make sure we don't inherit changes from parent widgets
+        color: $fg-color;
+        font-weight: initial;
+    }
 }
 
 %menuitem {
