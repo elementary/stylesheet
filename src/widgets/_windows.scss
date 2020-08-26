@@ -147,6 +147,8 @@ window:not(.popup):not(.menu) {
 
     // Hdy.Window
     &.unified {
+        border-radius: rem(6px);
+
         decoration,
         decoration-overlay {
             border-radius: rem(6px);
