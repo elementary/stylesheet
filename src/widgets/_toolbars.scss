@@ -17,7 +17,7 @@
                 rgba(black, 0.04) 1px,
                 transparent rem(3px)
             );
-        padding: rem(6px);
+        padding: rem(3px) rem(6px);
 
         button {
             @extend .flat;
