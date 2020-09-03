@@ -29,7 +29,7 @@ switch {
 
     slider {
         @extend %outset-background;
-        background-color: bg-color(2);
+        background-color: bg-color(0);
         background-clip: padding-box;
         border-radius: 50%;
         box-shadow:

@@ -1,7 +1,7 @@
 progressbar {
     $border-color: rgba(black, 0.2);
     @if $color-scheme == "dark" {
-        $border-color: rgba(black, 0.5);
+        $border-color: rgba(black, 0.4);
     }
 
     border-radius: rem(2px);
@@ -26,7 +26,7 @@ progressbar {
     }
 
     trough {
-        background-color: bg-color(1);
+        background-color: bg-color(0);
         box-shadow:
             outset-highlight(),
             outset-shadow(1);

@@ -6,7 +6,7 @@ radio {
     }
 
     @extend %outset-background;
-    background-color: bg-color(1);
+    background-color: bg-color(0);
     border: 1px solid $border-color;
     box-shadow:
         outset-highlight(),

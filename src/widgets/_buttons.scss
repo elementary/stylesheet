@@ -21,8 +21,14 @@ button {
     &.raised.image-button,
     & {
         @extend %outset-background;
-        background-color: bg-color(2);
-        border: 1px solid rgba(black, 0.2);
+
+        $border-color: rgba(black, 0.2);
+        @if $color-scheme == "dark" {
+            $border-color: rgba(black, 0.3);
+        }
+
+        background-color: bg-color(0);
+        border: 1px solid $border-color;
         box-shadow:
             outset-highlight("full"),
             outset-shadow(2);
