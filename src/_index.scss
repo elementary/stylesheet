@@ -24,8 +24,11 @@ $warning_color: $BANANA_900;
 
 @function bg-color($level) {
     @if $color-scheme == "light" {
-        // Views and inputs
-        @if $level == 1 {
+        // Inputs
+        @if $level == 0 {
+            @return $SILVER_100;
+        // Views
+        } @else if $level == 1 {
             @return white;
         // Background
         } @else if $level == 2 {
@@ -38,8 +41,10 @@ $warning_color: $BANANA_900;
             @return $titlebar-color;
         }
     } @else if $color-scheme == "dark" {
-        @if $level == 1 {
-            @return $BLACK_300;
+        @if $level == 0 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 50%);
+        } @else if $level == 1 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 25%);
         } @else if $level == 2 {
             @return $BLACK_500;
         } @else if $level == 3 {
