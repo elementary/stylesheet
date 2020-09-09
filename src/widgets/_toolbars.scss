@@ -7,6 +7,7 @@
             rgba(black, 0.07) 1px,
             transparent rem(3px)
         );
+    box-shadow: none;
 
     .sidebar & {
         background-color: mix(bg-color(3), bg-color(4), 50%);
@@ -25,8 +26,36 @@
     }
 }
 
-actionbar {
-    background-color: bg-color(3);
+actionbar,
+.bottom-toolbar {
+    @extend %outset-background;
+    background-color: #{"@color_primary"};
+    box-shadow:
+        outset-highlight(),
+        // Intentionally not in ems since it's used as a stroke
+        0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
+        0 rem(-1px) rem(2px) rgba(black, 0.2);
+    padding: rem(3px) rem(6px);
+
+    @if $color-scheme == "dark" {
+    box-shadow:
+        outset-highlight(),
+        // Intentionally not in ems since it's used as a stroke
+        0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
+        0 rem(-1px) rem(1px) rgba(black, 0.2);
+    }
+
+    /* Workaround for border */
+    revealer > & {
+        margin-top: 1px;
+    }
+
+    &:backdrop {
+        box-shadow:
+            outset-highlight("full"),
+            0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
+            0 rem(-1px) rem(1px) rgba(black, 0.15);
+    }
 
     &.flat{
         @extend .inline-toolbar;
