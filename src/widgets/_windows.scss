@@ -1,3 +1,5 @@
+dialog,
+messagedialog,
 window {
     background-color: bg_color(2);
     color: $fg-color;
@@ -208,6 +210,7 @@ window:not(.popup):not(.menu) {
 
         @extend %outset-background;
         background-color: #{"@color_primary"};
+        color: $fg-color;
 
         .title {
             font-weight: 600;
@@ -255,6 +258,7 @@ messagedialog {
     }
 
     > .titlebar {
+        background-color: bg_color(2);
         box-shadow: outset-highlight("top");
 
         label.title {
