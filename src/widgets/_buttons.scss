@@ -93,6 +93,10 @@ button {
         &:checked {
             background: rgba(black, 0.05);
             box-shadow: inset-shadow();
+
+            @if $color-scheme == "dark" {
+                background: rgba(black, 0.15);
+            }
         }
 
         &:disabled {
