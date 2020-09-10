@@ -11,15 +11,15 @@ separator {
         margin-right: -1px;
     }
 
-    actionbar &,
-    toolbar &,
-    .titlebar & {
+    actionbar > &,
+    toolbar > &,
+    .titlebar > & {
         border: none;
         margin: 0 rem(18px);
     }
 
-    .titlebar &:first-child,
-    .titlebar &:last-child {
+    &.titlebutton {
+        border: none;
         margin: 0 rem(3px);
     }
 }
