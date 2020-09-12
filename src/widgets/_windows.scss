@@ -4,9 +4,10 @@ window {
 }
 
 assistant,
-window.csd:not(.popup):not(.menu),
 dialog,
-messagedialog {
+messagedialog,
+printdialog,
+window.csd:not(.popup):not(.menu) {
     > decoration {
         margin: rem(12px);
     }
@@ -17,6 +18,7 @@ messagedialog {
 }
 
 assistant,
+printdialog,
 window:not(.popup):not(.menu) {
     > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
