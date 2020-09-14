@@ -244,12 +244,16 @@ messagedialog {
         box-shadow:
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
+            // Force shadows to be the same size to prevent jumpy resize transition
+            0 13px 16px 4px transparent,
             shadow(3);
 
         &:backdrop {
             box-shadow:
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px $toplevel-border-color,
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
                 shadow(2);
         }
     }
