@@ -84,7 +84,7 @@ radiobutton.image-button {
     padding: rem(6px);
 
     &:checked:not(:backdrop) image {
-        color: #{'@accent_color_700'};
+        color: #{'@accent_color'};
     }
 }
 
