@@ -22,4 +22,16 @@
         background-clip: padding-box;
         border-color: $toplevel-border-color;
     }
+
+    .sidebar &,
+    treeview.sidebar & {
+        background-color: #{'alpha(@text_color, 0.1)'};
+        background-image: none;
+        border-width: 0;
+        box-shadow: none;
+        color: #{'alpha(@text_color, 0.7)'};
+        margin: 0 3px;
+        padding: 0 6px;
+        text-shadow: none;
+    }
 }
