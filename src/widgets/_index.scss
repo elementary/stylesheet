@@ -1,12 +1,3 @@
-dialog,
-messagedialog,
-.titlebar,
-.background,
-.csd {
-    background-color: bg_color(2);
-    color: $fg-color;
-}
-
 image:disabled {
     -gtk-icon-effect: dim;
 }
