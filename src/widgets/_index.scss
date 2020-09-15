@@ -55,6 +55,7 @@ selection {
     color: #{'@warning_color'};
 }
 
+@import '_badges.scss';
 @import '_buttons.scss';
 @import '_cards.scss';
 @import '_checkbuttons.scss';
