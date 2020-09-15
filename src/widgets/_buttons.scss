@@ -22,11 +22,6 @@ button {
     & {
         @extend %outset-background;
 
-        $border-color: rgba(black, 0.2);
-        @if $color-scheme == "dark" {
-            $border-color: rgba(black, 0.3);
-        }
-
         background-color: bg-color(0);
         border: 1px solid $border-color;
         box-shadow:

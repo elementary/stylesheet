@@ -1,10 +1,5 @@
 levelbar {
     block {
-        $border-color: rgba(black, 0.2);
-        @if $color-scheme == "dark" {
-            $border-color: rgba(black, 0.4);
-        }
-
         background-color: #{'@accent_color_300'};
         border: 1px solid $border-color;
         border-radius: rem(6px);

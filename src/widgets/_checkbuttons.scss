@@ -1,10 +1,5 @@
 check,
 radio {
-    $border-color: rgba(black, 0.2);
-    @if $color-scheme == "dark" {
-        $border-color: rgba(black, 0.5);
-    }
-
     @extend %outset-background;
     background-color: bg-color(0);
     border: 1px solid $border-color;
