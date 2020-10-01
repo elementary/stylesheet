@@ -21,6 +21,17 @@ switch {
                     outset-shadow(3);
             }
         }
+
+        &:disabled {
+            box-shadow: inset-shadow("disabled");
+            background-image: none;
+            background-color: #{'mix (@theme_bg_color, @accent_color, 0.5)'};
+            @if $color-scheme == "light" {
+                border-color: #{'shade (mix (@theme_bg_color, @accent_color, 0.5), 0.75)'};
+            } @else if $color-scheme == "dark" {
+                border-color: #{'shade (mix (@theme_bg_color, @accent_color, 0.5), 0.5)'};
+            }
+        }
     }
 
     image {
