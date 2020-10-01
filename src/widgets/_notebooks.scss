@@ -2,48 +2,26 @@ notebook {
     header {
         background-color: bg-color(3);
 
+        $gradient: 
+            rgba(black, 0),
+            rgba(black, 0) calc(100% - #{rem(2px)}),
+            rgba(black, 0.05) calc(100% - #{rem(1px)}),
+            rgba(black, 0.15);
+
         &.top {
-            background-image:
-                linear-gradient(
-                    to bottom,
-                    rgba(black, 0),
-                    rgba(black, 0) calc(100% - #{rem(2px)}),
-                    rgba(black, 0.05) calc(100% - #{rem(1px)}),
-                    rgba(black, 0.15)
-                );
+            background-image: linear-gradient(to bottom, $gradient);
         }
 
         &.bottom {
-            background-image:
-                linear-gradient(
-                    to top,
-                    rgba(black, 0),
-                    rgba(black, 0) calc(100% - #{rem(2px)}),
-                    rgba(black, 0.05) calc(100% - #{rem(1px)}),
-                    rgba(black, 0.15)
-                );
+            background-image: linear-gradient(to top, $gradient);
         }
 
         &.right {
-            background-image:
-                linear-gradient(
-                    to left,
-                    rgba(black, 0),
-                    rgba(black, 0) calc(100% - #{rem(2px)}),
-                    rgba(black, 0.05) calc(100% - #{rem(1px)}),
-                    rgba(black, 0.15)
-                );
+            background-image: linear-gradient(to left, $gradient);
         }
 
         &.left {
-            background-image:
-                linear-gradient(
-                    to right,
-                    rgba(black, 0),
-                    rgba(black, 0) calc(100% - #{rem(2px)}),
-                    rgba(black, 0.05) calc(100% - #{rem(1px)}),
-                    rgba(black, 0.15)
-                );
+            background-image: linear-gradient(to right, $gradient);
         }
 
         &:backdrop {
