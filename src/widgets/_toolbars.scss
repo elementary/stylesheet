@@ -15,8 +15,9 @@
                 to bottom,
                 $border-color 1px,
                 rgba(black, 0.04) 1px,
-                transparent rem(2px)
+                transparent rem(3px)
             );
+        box-shadow: none;
     }
 
     .sidebar & {
