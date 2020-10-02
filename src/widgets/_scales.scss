@@ -5,19 +5,19 @@ scale {
 
     highlight {
         background-color: rgba($fg-color, 0.7);
+        border: 1px solid rgba(black, 0.3);
 
-        box-shadow:
-            inset 0 0 0 1px rgba(black, 0.3),
-            inset 0 0 0 2px rgba(black, 0.03);
+        box-shadow: inset 0 0 0 2px rgba(black, 0.03);
 
         @if $color-scheme == "dark" {
             background-clip: padding-box;
-            border: 1px solid transparent;
+            border-color: transparent;
             box-shadow: inset 0 1px 0 #{'@highlight_color'};
         }
 
         &:disabled {
             background-color: rgba($fg-color, 0.25);
+            border-color: transparent;
             box-shadow: none;
         }
     }
@@ -53,19 +53,14 @@ scale {
     }
 
     trough {
+        border: 1px solid $border-color;
         border-radius: rem(12px);
         background-color: rgba(black, 0.05);
         box-shadow:
-            inset 0 0 0 1px rgba(black, 0.3),
-            inset 0 0 0 2px rgba(black, 0.03),
+            inset 0 0 0 1px rgba(black, 0.03),
             0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
         min-height: rem(3px);
         min-width: rem(3px);
-
-        @if $color-scheme == "dark" {
-            min-height: rem(5px);
-            min-width: rem(5px);
-        }
 
         &:disabled {
             background-image: none;
@@ -148,14 +143,14 @@ scale {
         fill.top {
             border-radius: rem(12px) 0 0 rem(12px);
             // Off by one
-            margin: 0 0 0 rem(-7px);
+            margin: -1px 0 -1px calc(#{rem(-6px)} -1px);
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 rem(12px) rem(12px) 0;
             // Off by one
-            margin: 0 rem(-7px) 0 0;
+            margin: -1px calc(#{rem(-6px)} -1px) -1px 0;
         }
 
         mark indicator {
@@ -179,14 +174,14 @@ scale {
         fill.top {
             border-radius: rem(12px) rem(12px) 0 0;
             // Off by one
-            margin: rem(-7px) 0 0;
+            margin: calc(#{rem(-6px)} -1px) -1px 0 -1px;
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 0 rem(12px) rem(12px);
             // Off by one
-            margin: 0 0 rem(-7px);
+            margin: 0 -1px calc(#{rem(-6px)} -1px) -1px;
         }
 
         mark indicator {
