@@ -1,40 +1,5 @@
-window,
-dialog,
-messagedialog,
-.titlebar,
-.background,
-.csd {
-    background-color: bg_color(2);
-    color: $fg-color;
-}
-
-// Text and image color
-@define-color fg_color #{"" + $fg-color};
-
-// Placeholder text in entries. Doesn't respect alpha
-@define-color placeholder_text_color #{"" + mix($fg-color, bg-color(1), $weight: 75%)};
-
-@define-color error_color @STRAWBERRY_500;
-@define-color success_color @LIME_700;
-@define-color warning_color @BANANA_900;
-
-// Things Dazzle expects
-@define-color borders #{"" + $toplevel-border-color};
-@define-color content_view_bg #{""+ bg_color(2)};
-@define-color theme_fg_color #{"" + $fg-color};
-@define-color theme_selected_fg_color #{"" + $fg-color};
-@define-color wm_shadow #{rgba(black, 0.2)};
-
-@define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
-@define-color selected_fg_color #{'@accent_color_900'};
-
-@if $color-scheme == "dark" {
-    @define-color error_color @STRAWBERRY_300;
-    @define-color success_color @LIME_300;
-    @define-color warning_color @BANANA_100;
-
-    @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
-    @define-color selected_fg_color #{'@accent_color_100'};
+image:disabled {
+    -gtk-icon-effect: dim;
 }
 
 selection {
@@ -83,13 +48,19 @@ selection {
 }
 
 @import '_avatars.scss';
+@import '_badges.scss';
 @import '_buttons.scss';
 @import '_cards.scss';
 @import '_checkbuttons.scss';
+@import '_colorchoosers.scss';
+@import '_emojipicker.scss';
 @import '_entries.scss';
+@import '_expanders.scss';
+@import '_infobars.scss';
 @import '_levelbars.scss';
 @import '_linked.scss';
 @import '_lists.scss';
+@import '_menubars.scss';
 @import '_menus.scss';
 @import '_notebooks.scss';
 @import '_notifications.scss';
@@ -98,10 +69,16 @@ selection {
 @import '_progressbars.scss';
 @import '_scales.scss';
 @import '_scrollbars.scss';
+@import '_separators.scss';
 @import '_sidebars.scss';
+@import '_spinbuttons.scss';
 @import '_spinners.scss';
+@import '_stackable_boxes.scss';
+@import '_storagebars.scss';
 @import '_switches.scss';
+@import '_toasts.scss';
 @import '_toolbars.scss';
 @import '_tooltips.scss';
+@import '_treeviews.scss';
 @import '_views.scss';
 @import '_windows.scss';

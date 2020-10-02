@@ -1,5 +1,6 @@
 .h1 {
     font-size: 24pt;
+    font-weight: 700;
     letter-spacing: -0.04em;
 }
 
@@ -26,32 +27,50 @@ label.h4,
     font-size: 1.22em
 }
 
-.accent {
-    color: #{'@accent_color_700'};
+.accent,
+.link,
+:link {
+    color: #{'@accent_color'};
+}
 
-    // Special-case especially light or dark palette colors
-    @if $accent-name == "cocoa" or
-        $accent-name == "slate" {
-        color: #{'@accent_color_500'};
-    } @else if $accent-name == "banana" or
-        $accent-name == "lime" {
-        color: #{'mix(@accent_color_700, @accent_color_900, 0.5)'};
-    }
+.dim-label,
+:visited {
+    opacity: 0.75;
+}
 
-    @if $color-scheme == "dark" {
-        color: #{'mix(@accent_color_300, @accent_color_500, 0.5)'};
+label:disabled {
+    opacity: 0.5;
+}
 
-        @if $accent-name == "banana" {
-            color: #{'@accent_color_500'};
-        } @else if $accent-name == "strawberry" {
-            color: #{'@accent_color_300'};
-        } @else if $accent-name == "cocoa" or
-            $accent-name == "slate" {
-            color: #{'mix(@accent_color_100, @accent_color_300, 0.5)'};
-        }
+.keycap {
+    background-color: bg-color(2);
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(white, 0),
+            #{'alpha(@highlight_color, 0.2)'}
+        );
+    border: 1px solid $toplevel-border-color;
+    border-radius: rem(3px);
+    box-shadow:
+        outset-highlight(),
+        inset 0 -1px 0 0 bg-color(4),
+        0 1px 2px rgba(black, 0.05);
+    font-size: 85%;
+    min-width: rem(12px);
+    // We add 1px on the bottom to account for box-shadow
+    padding: rem(3px) rem(6px) calc(#{rem(3px)} + 1px);
+
+    &:backdrop {
+        background-image:
+            linear-gradient(
+                to bottom,
+                #{'alpha(@highlight_color, 0.3)'},
+                #{'alpha(@highlight_color, 0.35)'}
+            );
     }
 }
 
-.dim-label {
-    opacity: 0.75;
+:link:hover label {
+  text-decoration: underline;
 }

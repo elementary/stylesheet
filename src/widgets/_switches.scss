@@ -1,6 +1,6 @@
 switch {
     background-color: rgba(black, 0.05);
-    border: 1px solid rgba(black, 0.2);
+    border: 1px solid $border-color;
     box-shadow: inset-shadow();
     border-radius: rem(16px);
     transition: all duration("element") $easing;
@@ -21,6 +21,17 @@ switch {
                     outset-shadow(3);
             }
         }
+
+        &:disabled {
+            box-shadow: inset-shadow("disabled");
+            background-image: none;
+            background-color: #{'mix (@theme_bg_color, @accent_color, 0.5)'};
+            @if $color-scheme == "light" {
+                border-color: #{'shade (mix (@theme_bg_color, @accent_color, 0.5), 0.75)'};
+            } @else if $color-scheme == "dark" {
+                border-color: #{'shade (mix (@theme_bg_color, @accent_color, 0.5), 0.5)'};
+            }
+        }
     }
 
     image {
@@ -29,12 +40,12 @@ switch {
 
     slider {
         @extend %outset-background;
-        background-color: bg-color(2);
+        background-color: bg-color(0);
         background-clip: padding-box;
         border-radius: 50%;
         box-shadow:
             outset-highlight("full"),
-            0 0 0 1px rgba(black, 0.2),
+            0 0 0 1px $border-color,
             outset-shadow(3);
         min-height: rem(24px);
         min-width: rem(24px);

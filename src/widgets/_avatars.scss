@@ -1,4 +1,5 @@
-.avatar {
+.avatar,
+avatar {
     border: 1px solid rgba(black, 0.35);
     border-radius: 50%;
     box-shadow:
@@ -6,22 +7,66 @@
         outset-shadow(3);
 }
 
-avatar,
-avatar-overlay {
-    border-radius: 50%;
-}
-
 avatar {
-    background-color: #{'@accent_color_500'};
-    box-shadow: outset-shadow(3);
-    color: white;
-}
+    background-color: #{'@accent_color_300'};
+    border-color: #{'@accent_color_700'};
+    color: #{'@accent_color_900'};
 
-avatar-overlay {
-    border: 1px solid rgba(black, 0.15);
-    @if $color-scheme == "dark" {
-        border: 1px solid rgba(black, 0.6);
+    &.color1 {
+        background-color: $STRAWBERRY_300;
+        border-color: $STRAWBERRY_700;
+        color: $STRAWBERRY_900;
     }
 
-    box-shadow: outset-highlight();
+    &.color2 {
+        background-color: $ORANGE_300;
+        border-color: $ORANGE_700;
+        color: $ORANGE_900;
+    }
+
+    &.color3 {
+        background-color: $BANANA_300;
+        border-color: $BANANA_900;
+        color: $BANANA_900;
+    }
+
+    &.color4 {
+        background-color: $LIME_300;
+        border-color: $LIME_700;
+        color: $LIME_900;
+    }
+
+    &.color5 {
+        background-color: $BLUEBERRY_300;
+        border-color: $BLUEBERRY_700;
+        color: $BLUEBERRY_900;
+    }
+
+    &.color6 {
+        background-color: $BUBBLEGUM_300;
+        border-color: $BLUEBERRY_700;
+        color: $BUBBLEGUM_900;
+    }
+
+    &.color7 {
+        background-color: $GRAPE_300;
+        border-color: $GRAPE_700;
+        color: $GRAPE_900;
+    }
+
+    &.color8 {
+        background-color: $SLATE_300;
+        border-color: $SLATE_700;
+        color: $SLATE_900;
+    }
 }
+
+
+// avatar-overlay {
+//     border: 1px solid rgba(black, 0.15);
+//     @if $color-scheme == "dark" {
+//         border: 1px solid rgba(black, 0.6);
+//     }
+
+//     box-shadow: outset-highlight();
+// }

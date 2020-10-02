@@ -1,6 +1,3 @@
-// Inset box shadows
-@define-color highlight_color white;
-
 // The default titlebar color
 $titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
 
@@ -10,23 +7,32 @@ $fg-color: $BLACK_500;
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(black, 0.2);
 
+// Outset box shadow or border color on inputs like buttons, entries, checkboxes
+$border-color: rgba(black, 0.2);
+
+// Semantic colors
+$error_color: $STRAWBERRY_500;
+$success_color: $LIME_700;
+$warning_color: $BANANA_900;
+
 @if $color-scheme == "dark" {
-    @define-color highlight_color #{"" + rgba(white, 0.2)};
-
     $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
-
     $fg-color: white;
+    $toplevel-border-color: rgba(black, 0.75);
+    $border-color: rgba(black, 0.3);
 
-    $toplevel-border-color: rgba(black, 0.6);
+    $error-color: $STRAWBERRY_300;
+    $success-color: $LIME_300;
+    $warning-color: $BANANA_100;
 }
-
-// The primary brand color used for titlebars
-@define-color color_primary #{$titlebar-color};
 
 @function bg-color($level) {
     @if $color-scheme == "light" {
-        // Views and inputs
-        @if $level == 1 {
+        // Inputs
+        @if $level == 0 {
+            @return $SILVER_100;
+        // Views
+        } @else if $level == 1 {
             @return white;
         // Background
         } @else if $level == 2 {
@@ -39,8 +45,10 @@ $toplevel-border-color: rgba(black, 0.2);
             @return $titlebar-color;
         }
     } @else if $color-scheme == "dark" {
-        @if $level == 1 {
-            @return $BLACK_300;
+        @if $level == 0 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 50%);
+        } @else if $level == 1 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 25%);
         } @else if $level == 2 {
             @return $BLACK_500;
         } @else if $level == 3 {
@@ -193,6 +201,7 @@ $toplevel-border-color: rgba(black, 0.2);
 }
 
 @import '_animate.scss';
+@import '_exported.scss';
 @import '_typography.scss';
 // Can't just use `@import 'widgets';` because of sass version in repos
 @import 'widgets/_index.scss';

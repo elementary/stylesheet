@@ -1,18 +1,22 @@
-entry {
+%entry {
     background-color: bg-color(1);
     background-clip: padding-box;
-    border: 1px solid $toplevel-border-color;
+    border: 1px solid $border-color;
     border-radius: rem(3px);
     box-shadow: inset-shadow("");
     color: #{'@fg_color'};
-    // Off-by-one to account for padding-box clip
-    padding: rem(4px);
 
     &:disabled {
         background: rgba(black, 0.03);
         box-shadow: inset-shadow("disabled");
         color: #{'@placeholder_text_color'};
     }
+}
+
+entry {
+    @extend %entry;
+    // Off-by-one to account for padding-box clip
+    padding: rem(4px);
 
     image {
         color: #{'@placeholder_text_color'};

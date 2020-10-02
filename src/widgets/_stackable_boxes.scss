@@ -1,0 +1,32 @@
+@function background-shadow ($direction) {
+    @return linear-gradient(
+        $direction,
+        rgba(black, 0.1),
+        rgba(black, 0.0) rem(6px)
+    );
+}
+
+// Hdy.Deck and Hdy.Leaflet
+deck,
+leaflet,
+webkitwebview {
+    > dimming {
+        background: rgba(black, 0.15);
+        @if $color-scheme == "dark" {
+            background: rgba(black, 0.3);
+        }
+    }
+
+    > border {
+        min-width: 1px;
+        min-height: 1px;
+        background: rgba(black, 0.15);
+    }
+
+    > shadow {
+        &.left  { background: background-shadow(to right); }
+        &.right { background: background-shadow(to left); }
+        &.up    { background: background-shadow(to bottom); }
+        &.down  { background: background-shadow(to top); }
+    }
+}

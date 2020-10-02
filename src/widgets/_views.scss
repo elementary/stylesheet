@@ -20,6 +20,7 @@ scrolledwindow {
 
     &.terminal {
         background-color: #252e32;
+        border-radius: rem(3px);
         color: #94a3a5;
         font-family: monospace;
 
@@ -28,4 +29,10 @@ scrolledwindow {
             color: #252e32;
         }
     }
+}
+
+rubberband {
+    background-color: #{'alpha (@accent_color, 0.15)'};
+    border: 1px solid #{'alpha (@accent_color, 0.5)'};
+    border-radius: rem(3px);
 }

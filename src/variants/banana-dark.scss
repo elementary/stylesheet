@@ -26,7 +26,9 @@
 @define-color accent_color_700 @BANANA_700;
 @define-color accent_color_900 @BANANA_900;
 
-$accent-name: "banana";
+@define-color accent_color @BANANA_500;
+
 $color-scheme: "dark";
 
-@import '../_mixins.scss';
+// Can't just use `@import '../';` because of sass version in repos
+@import '../index.scss';

@@ -1,5 +1,15 @@
-window.csd:not(.popup):not(.menu),
-dialog {
+dialog,
+messagedialog,
+window {
+    background-color: bg_color(2);
+    color: $fg-color;
+}
+
+assistant,
+dialog,
+messagedialog,
+printdialog,
+window.csd:not(.popup):not(.menu) {
     > decoration {
         margin: rem(12px);
     }
@@ -9,6 +19,8 @@ dialog {
     }
 }
 
+assistant,
+printdialog,
 window:not(.popup):not(.menu) {
     > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
@@ -32,11 +44,39 @@ window:not(.popup):not(.menu) {
             }
         }
 
-        &.tiled {
+        &.maximized > decoration {
+            background-color: black;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        &.tiled:not(.maximized) {
             > decoration {
+                background-color: black;
+                border-radius: 0;
                 box-shadow:
                     0 13px 16px 4px transparent,
                     shadow(1);
+            }
+
+            &.tiled-left {
+                &.tiled-top .titlebar {
+                    border-top-right-radius: 0;
+                }
+
+                &.tiled-bottom actionbar {
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            &.tiled-right {
+                &.tiled-top .titlebar {
+                    border-top-left-radius: 0;
+                }
+
+                &.tiled-bottom actionbar {
+                    border-bottom-left-radius: 0;
+                }
             }
         }
 
@@ -66,6 +106,23 @@ window:not(.popup):not(.menu) {
             &.default-decoration {
                 padding: rem(3px);
             }
+
+            &.flat {
+                background: bg_color(2);
+                box-shadow:
+                    1px 0 0 0 $toplevel-border-color,
+                    -1px 0 0 0 $toplevel-border-color,
+                    0 -1px 0 0 $toplevel-border-color,
+                    outset-highlight("top");
+            }
+        }
+    }
+
+    &.rounded {
+        border-radius: 0 0 rem(6px) rem(6px);
+
+        > decoration {
+            border-radius: rem(6px);
         }
     }
 
@@ -94,6 +151,8 @@ window:not(.popup):not(.menu) {
 
     // Hdy.Window
     &.unified {
+        border-radius: rem(6px);
+
         decoration,
         decoration-overlay {
             border-radius: rem(6px);
@@ -133,7 +192,7 @@ window:not(.popup):not(.menu) {
                     0 rem(1px) rem(2px) rgba(black, 0.2);
             }
 
-            &:backdrop {
+            &:backdrop:not(.flat) {
                 box-shadow:
                     outset-highlight("bottom"),
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
@@ -151,10 +210,16 @@ window:not(.popup):not(.menu) {
 
         @extend %outset-background;
         background-color: #{"@color_primary"};
+        color: $fg-color;
 
         .title {
             font-weight: 600;
             text-shadow: $shadow
+        }
+
+        .subtitle {
+            opacity: 0.75;
+            font-size: 80%;
         }
 
         .titlebutton,
@@ -172,7 +237,8 @@ window:not(.popup):not(.menu) {
     }
 }
 
-dialog {
+dialog,
+messagedialog {
     border-radius: 0 0 rem(6px) rem(6px);
     box-shadow: outset-highlight("bottom");
 
@@ -181,20 +247,27 @@ dialog {
         box-shadow:
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
+            // Force shadows to be the same size to prevent jumpy resize transition
+            0 13px 16px 4px transparent,
             shadow(3);
 
         &:backdrop {
             box-shadow:
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px $toplevel-border-color,
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
                 shadow(2);
         }
     }
 
     > .titlebar {
+        background-color: bg_color(2);
         box-shadow: outset-highlight("top");
 
         label.title {
+            text-shadow: none;
+            -gtk-icon-shadow: none;
             font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
             color: transparent;
         }
