@@ -142,14 +142,14 @@ scale {
         highlight.top,
         fill.top {
             border-radius: rem(12px) 0 0 rem(12px);
-            // Off by one
+            // Account for border width
             margin: -1px 0 -1px calc(#{rem(-6px)} -1px);
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 rem(12px) rem(12px) 0;
-            // Off by one
+            // Account for border width
             margin: -1px calc(#{rem(-6px)} -1px) -1px 0;
         }
 
@@ -173,14 +173,14 @@ scale {
         highlight.top,
         fill.top {
             border-radius: rem(12px) rem(12px) 0 0;
-            // Off by one
+            // Account for border width
             margin: calc(#{rem(-6px)} -1px) -1px 0 -1px;
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 0 rem(12px) rem(12px);
-            // Off by one
+            // Account for border width
             margin: 0 -1px calc(#{rem(-6px)} -1px) -1px;
         }
 
