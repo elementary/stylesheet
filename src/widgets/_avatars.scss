@@ -9,59 +9,67 @@ avatar {
 
 avatar {
     background-color: #{'@accent_color_300'};
-    border-color: #{'@accent_color_500'};
+    border-color: #{'alpha(@accent_color_500, 0.5)'};
     color: #{'@accent_color_900'};
 
     &.color1 {
         background-color: $STRAWBERRY_300;
-        border-color: $STRAWBERRY_500;
+        border-color: rgba($STRAWBERRY_500, 0.5);
         color: $STRAWBERRY_900;
     }
 
     &.color2 {
         background-color: $ORANGE_300;
-        border-color: $ORANGE_500;
+        border-color: rgba($ORANGE_500, 0.5);
         color: $ORANGE_900;
     }
 
     &.color3 {
         background-color: $BANANA_300;
-        border-color: $BANANA_700;
+        border-color: rgba($BANANA_700, 0.5);
         color: $BANANA_900;
     }
 
     &.color4 {
         background-color: $LIME_300;
-        border-color: $LIME_500;
+        border-color: rgba($LIME_500, 0.5);
         color: $LIME_900;
     }
 
     &.color5 {
         background-color: $BLUEBERRY_300;
-        border-color: $BLUEBERRY_500;
+        border-color: rgba($BLUEBERRY_500, 0.5);
         color: $BLUEBERRY_900;
     }
 
     &.color6 {
         background-color: $BUBBLEGUM_300;
-        border-color: $BLUEBERRY_500;
+        border-color: rgba($BUBBLEGUM_500, 0.5);
         color: $BUBBLEGUM_900;
     }
 
     &.color7 {
         background-color: $GRAPE_300;
-        border-color: $GRAPE_500;
+        border-color: rgba($GRAPE_500, 0.5);
         color: $GRAPE_900;
     }
 
     &.color8 {
         background-color: $SLATE_300;
-        border-color: $SLATE_500;
+        border-color: rgba($SLATE_500, 0.5);
         color: $SLATE_900;
     }
 
     &.image {
         border-color: $border-color;
         background: none;
+    }
+
+    @if $color-scheme == "dark" {
+        border: none;
+        box-shadow:
+            outset-highlight(),
+            0 0 0 1px rgba(black, 0.1),
+            outset-shadow(3);
     }
 }
