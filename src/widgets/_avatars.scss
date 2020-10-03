@@ -9,54 +9,54 @@ avatar {
 
 avatar {
     background-color: #{'@accent_color_300'};
-    border-color: #{'@accent_color_700'};
+    border-color: #{'@accent_color_500'};
     color: #{'@accent_color_900'};
 
     &.color1 {
         background-color: $STRAWBERRY_300;
-        border-color: $STRAWBERRY_700;
+        border-color: $STRAWBERRY_500;
         color: $STRAWBERRY_900;
     }
 
     &.color2 {
         background-color: $ORANGE_300;
-        border-color: $ORANGE_700;
+        border-color: $ORANGE_500;
         color: $ORANGE_900;
     }
 
     &.color3 {
         background-color: $BANANA_300;
-        border-color: $BANANA_900;
+        border-color: $BANANA_700;
         color: $BANANA_900;
     }
 
     &.color4 {
         background-color: $LIME_300;
-        border-color: $LIME_700;
+        border-color: $LIME_500;
         color: $LIME_900;
     }
 
     &.color5 {
         background-color: $BLUEBERRY_300;
-        border-color: $BLUEBERRY_700;
+        border-color: $BLUEBERRY_500;
         color: $BLUEBERRY_900;
     }
 
     &.color6 {
         background-color: $BUBBLEGUM_300;
-        border-color: $BLUEBERRY_700;
+        border-color: $BLUEBERRY_500;
         color: $BUBBLEGUM_900;
     }
 
     &.color7 {
         background-color: $GRAPE_300;
-        border-color: $GRAPE_700;
+        border-color: $GRAPE_500;
         color: $GRAPE_900;
     }
 
     &.color8 {
         background-color: $SLATE_300;
-        border-color: $SLATE_700;
+        border-color: $SLATE_500;
         color: $SLATE_900;
     }
 
