@@ -59,4 +59,9 @@ avatar {
         border-color: $SLATE_700;
         color: $SLATE_900;
     }
+
+    &.image {
+        border-color: $border-color;
+        background: none;
+    }
 }
