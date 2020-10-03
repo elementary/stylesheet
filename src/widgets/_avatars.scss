@@ -8,6 +8,8 @@ avatar {
 }
 
 avatar {
+    @extend %outset-background;
+
     background-color: #{'@accent_color_300'};
     border-color: #{'alpha(@accent_color_500, 0.5)'};
     color: #{'@accent_color_900'};
