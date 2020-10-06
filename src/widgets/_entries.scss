@@ -11,6 +11,17 @@
         box-shadow: inset-shadow("disabled");
         color: #{'@placeholder_text_color'};
     }
+
+    &.flat {
+        background: transparent;
+        border-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+
+        &:focus {
+            border-bottom-color: #{'@accent_color'};
+        }
+    }
 }
 
 entry {
