@@ -55,6 +55,11 @@ infobar {
                 outset-highlight(),
                 outset-shadow(2);
             margin: rem(3px);
+
+            @if $color-scheme == "dark" {
+                background-clip: padding-box;
+                border-color: $border-color;
+            }
         }
     }
 }
