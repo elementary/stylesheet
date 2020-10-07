@@ -27,7 +27,7 @@ radio {
     &:disabled {
         background: rgba(black, 0.03);
         box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
         -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
     }
 

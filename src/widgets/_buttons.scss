@@ -103,7 +103,7 @@ button {
     }
 
     &:disabled {
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
     }
 
     &.combo,

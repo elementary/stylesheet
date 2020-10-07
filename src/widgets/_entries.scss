@@ -9,7 +9,7 @@
     &:disabled {
         background: rgba(black, 0.03);
         box-shadow: inset-shadow("disabled");
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
     }
 }
 

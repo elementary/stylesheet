@@ -16,7 +16,7 @@
     padding: rem(6px) rem(12px);
 
     &:disabled {
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
 
         .keycap {
             opacity: 0.7;
