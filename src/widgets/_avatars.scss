@@ -14,11 +14,16 @@ avatar {
     border-color: #{'alpha(@accent_color_500, 0.5)'};
     color: #{'@accent_color_900'};
 
-    &.color1,
-    &.color2 {
+    &.color1 {
         background-color: $BLUEBERRY_300;
         border-color: rgba($BLUEBERRY_500, 0.5);
         color: $BLUEBERRY_900;
+    }
+
+    &.color2 {
+        background-color: $BLUEBERRY_100;
+        border-color: rgba($BLUEBERRY_300, 0.5);
+        color: $BLUEBERRY_700;
     }
 
     &.color3 {
@@ -33,11 +38,16 @@ avatar {
         color: $LIME_900;
     }
 
-    &.color5,
-    &.color6 {
+    &.color5 {
         background-color: $BANANA_500;
         border-color: rgba($BANANA_700, 0.5);
         color: $BANANA_900;
+    }
+
+    &.color6 {
+        background-color: mix($BANANA_500, $ORANGE_300, $weight: 50%);
+        border-color: rgba(mix($BANANA_700, $ORANGE_500, $weight: 50%), 0.5);
+        color: mix($BANANA_900, $ORANGE_900, $weight: 50%);
     }
 
     &.color7 {
