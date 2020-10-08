@@ -26,7 +26,7 @@
 @define-color accent_color_700 @BUBBLEGUM_700;
 @define-color accent_color_900 @BUBBLEGUM_900;
 
-@define-color accent_color @BUBBLEGUM_700;
+@define-color accent_color mix (@BUBBLEGUM_300, @BUBBLEGUM_500, 0.25);
 
 $color-scheme: "light";
 
