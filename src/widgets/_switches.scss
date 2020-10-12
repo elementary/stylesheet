@@ -7,10 +7,10 @@ switch {
 
     &:checked:not(.mode-switch):not(:backdrop) {
         @extend %outset-background;
-        background-color: #{"@accent_color_500"};
+        background-color: #{"@accent_color"};
 
         @if $color-scheme == "light" {
-            border-color: #{"shade(@accent_color_500, 0.85)"};
+            border-color: #{"shade(@accent_color, 0.85)"};
         } @else if $color-scheme == "dark" {
             background-clip: padding-box;
 
