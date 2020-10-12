@@ -18,6 +18,10 @@ separator {
         margin: 0 rem(18px);
     }
 
+    stacksidebar &.horizontal {
+        border: none;
+    }
+
     &.titlebutton {
         border: none;
         margin: 0 rem(3px);
