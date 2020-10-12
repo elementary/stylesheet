@@ -47,6 +47,7 @@
 // Text, images, and other foreground elements
 @define-color fg_color #{"" + $fg-color};
 @define-color theme_fg_color #{"" + $fg-color};
+@define-color insensitive_fg_color #{"" + $insensitive-fg-color};
 @define-color text_color #{"" + $fg-color};
 @define-color theme_text_color #{"" + $fg-color};
 
