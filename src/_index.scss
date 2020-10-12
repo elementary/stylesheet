@@ -159,7 +159,7 @@ $warning_color: $BANANA_900;
         $text-size: $text-size * 1px;
     }
 
-    @if ($pixels > 1) {
+    @if ($pixels > 0) {
         // Workaround GTK clamping instead of rounding up
         @return ($pixels / $text-size * 1rem) + 0.000000001rem;
     } @else {
