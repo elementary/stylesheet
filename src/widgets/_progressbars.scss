@@ -1,9 +1,4 @@
 progressbar {
-    $border-color: rgba(black, 0.2);
-    @if $color-scheme == "dark" {
-        $border-color: rgba(black, 0.5);
-    }
-
     border-radius: rem(2px);
 
     progress,
@@ -13,7 +8,7 @@ progressbar {
     }
 
     progress {
-        background-color: #{'@accent_color_300'};
+        background-color: #{'@accent_color'};
         box-shadow: outset-highlight();
 
         &:backdrop {
@@ -26,10 +21,14 @@ progressbar {
     }
 
     trough {
-        background-color: bg-color(1);
+        background-color: bg-color(0);
         box-shadow:
             outset-highlight(),
             outset-shadow(1);
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
     }
 
     &.horizontal {

@@ -1,11 +1,15 @@
+dialog,
+messagedialog,
 window {
     background-color: bg_color(2);
     color: $fg-color;
 }
 
-window.csd:not(.popup):not(.menu),
+assistant,
 dialog,
-messagedialog {
+messagedialog,
+printdialog,
+window.csd:not(.popup):not(.menu) {
     > decoration {
         margin: rem(12px);
     }
@@ -15,6 +19,8 @@ messagedialog {
     }
 }
 
+assistant,
+printdialog,
 window:not(.popup):not(.menu) {
     > decoration {
         border-radius: rem(6px) rem(6px) 0 0;
@@ -145,6 +151,8 @@ window:not(.popup):not(.menu) {
 
     // Hdy.Window
     &.unified {
+        border-radius: rem(6px);
+
         decoration,
         decoration-overlay {
             border-radius: rem(6px);
@@ -184,7 +192,7 @@ window:not(.popup):not(.menu) {
                     0 rem(1px) rem(2px) rgba(black, 0.2);
             }
 
-            &:backdrop {
+            &:backdrop:not(.flat) {
                 box-shadow:
                     outset-highlight("bottom"),
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
@@ -202,6 +210,7 @@ window:not(.popup):not(.menu) {
 
         @extend %outset-background;
         background-color: #{"@color_primary"};
+        color: $fg-color;
 
         .title {
             font-weight: 600;
@@ -238,17 +247,22 @@ messagedialog {
         box-shadow:
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
+            // Force shadows to be the same size to prevent jumpy resize transition
+            0 13px 16px 4px transparent,
             shadow(3);
 
         &:backdrop {
             box-shadow:
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px $toplevel-border-color,
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
                 shadow(2);
         }
     }
 
     > .titlebar {
+        background-color: bg_color(2);
         box-shadow: outset-highlight("top");
 
         label.title {

@@ -26,7 +26,7 @@
 @define-color accent_color_700 @STRAWBERRY_700;
 @define-color accent_color_900 @STRAWBERRY_900;
 
-@define-color accent_color @STRAWBERRY_700;
+@define-color accent_color mix(@STRAWBERRY_300, @STRAWBERRY_500, 0.25);
 
 $color-scheme: "light";
 

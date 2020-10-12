@@ -1,16 +1,13 @@
 scale {
     fill {
         background-color: rgba(black, 0.25);
-        box-shadow: 0 0 0 1px rgba(black, 0.25);
     }
 
     highlight {
         background-color: rgba(black, 0.45);
-        box-shadow: 0 0 0 1px rgba(black, 0.4);
 
         &:disabled {
             background-color: rgba(black, 0.25);
-            box-shadow: 0 0 0 1px rgba(black, 0.25);
         }
     }
 
@@ -20,11 +17,11 @@ scale {
 
     slider {
         @extend %outset-background;
-        background-color: bg-color(2);
+        background-color: bg-color(0);
         border-radius: rem(12px);
         box-shadow:
             outset-highlight(),
-            0 0 0 1px rgba(black, 0.25),
+            0 0 0 1px $border-color,
             0 1px 1px 1px rgba(black, 0.1);
         min-height: rem(14px);
         min-width: rem(14px);
@@ -45,10 +42,12 @@ scale {
     }
 
     trough {
-        border: 1px solid rgba(black, 0.2);
         border-radius: rem(12px);
         background-color: rgba(black, 0.05);
-        box-shadow: inset-shadow();
+        box-shadow:
+            inset 0 0 0 1px rgba(black, 0.3),
+            inset 0 0 0 2px rgba(black, 0.03),
+            0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
         min-height: rem(3px);
         min-width: rem(3px);
 
@@ -64,6 +63,67 @@ scale {
 
         highlight {
             background-color: #{'alpha (@accent_color_500, 0.67)'};
+        }
+    }
+
+    &.warmth trough,
+    &.temperature trough {
+        @if $color-scheme == "dark" {
+            box-shadow:
+                inset 0 0 0 1px rgba(black, 0.7),
+                inset 0 1px 0 rgba(black, 0.7),
+                inset 0 2px 0 rgba(white, 0.15),
+                0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
+            min-height: rem(6px);
+        }
+    }
+
+    &.temperature {
+        trough {
+            background-image:
+                linear-gradient(
+                    to right,
+                    $BLUEBERRY_500,
+                    $BANANA_500
+                );
+        }
+
+        &:dir(rtl) trough {
+            background-image:
+                linear-gradient(
+                    to left,
+                    $BLUEBERRY_500,
+                    $BANANA_500
+                );
+        }
+    }
+
+
+    &.warmth {
+        trough {
+            background-image:
+                linear-gradient(
+                    to right,
+                    mix(
+                        $SILVER_100,
+                        $ORANGE_100,
+                        50%
+                    ),
+                    $ORANGE_500
+                );
+        }
+
+        &:dir(rtl) trough {
+            background-image:
+                linear-gradient(
+                    to left,
+                    mix(
+                        $SILVER_100,
+                        $ORANGE_100,
+                        50%
+                    ),
+                    $ORANGE_500
+                );
         }
     }
 

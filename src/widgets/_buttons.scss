@@ -21,8 +21,9 @@ button {
     &.raised.image-button,
     & {
         @extend %outset-background;
-        background-color: bg-color(2);
-        border: 1px solid rgba(black, 0.2);
+
+        background-color: bg-color(0);
+        border: 1px solid $border-color;
         box-shadow:
             outset-highlight("full"),
             outset-shadow(2);
@@ -87,6 +88,10 @@ button {
         &:checked {
             background: rgba(black, 0.05);
             box-shadow: inset-shadow();
+
+            @if $color-scheme == "dark" {
+                background: rgba(black, 0.15);
+            }
         }
 
         &:disabled {
@@ -113,13 +118,21 @@ button {
     }
 
     &:disabled {
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
     }
 
+    &.color,
     &.combo,
     &.image-button,
     &.titlebutton {
         padding: rem(4px);
+    }
+
+    &.color {
+        colorswatch,
+        overlay {
+            border-radius: rem(2px);
+        }
     }
 
     arrow {
