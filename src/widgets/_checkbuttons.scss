@@ -12,10 +12,14 @@ radio {
     -gtk-icon-source: none;
 
     &:checked {
-        background-color: #{'@accent_color_300'};
+        background-color: #{'@accent_color'};
         color: white;
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-        -gtk-icon-shadow: 0 1px 1px #{'@accent_color_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'shade(@accent_color, 0.7)'};
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
 
         &:backdrop:not(:disabled):not(.colorbutton) {
             background-image: none;

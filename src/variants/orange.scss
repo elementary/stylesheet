@@ -26,7 +26,7 @@
 @define-color accent_color_700 @ORANGE_700;
 @define-color accent_color_900 @ORANGE_900;
 
-@define-color accent_color @ORANGE_700;
+@define-color accent_color mix(@ORANGE_300, @ORANGE_500, 0.5);
 
 $color-scheme: "light";
 

@@ -8,7 +8,7 @@ progressbar {
     }
 
     progress {
-        background-color: #{'@accent_color_300'};
+        background-color: #{'@accent_color'};
         box-shadow: outset-highlight();
 
         &:backdrop {
