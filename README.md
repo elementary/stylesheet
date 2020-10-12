@@ -14,6 +14,11 @@ Run `meson` to configure the build environment. To install, use `ninja install`.
     cd build
     ninja install
 
+Run `ninja clean` before building the stylesheets a second time. Otherwise the already built stylesheets will not be overriden.
+
+    ninja clean
+    ninja install
+
 ## Hacking
 
 Apps may need to be restarted or the system stylesheet will need to be changed for your changes to take effect.

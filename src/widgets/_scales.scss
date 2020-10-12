@@ -17,11 +17,11 @@ scale {
 
     slider {
         @extend %outset-background;
-        background-color: bg-color(2);
+        background-color: bg-color(0);
         border-radius: rem(12px);
         box-shadow:
             outset-highlight(),
-            0 0 0 1px rgba(black, 0.25),
+            0 0 0 1px $border-color,
             0 1px 1px 1px rgba(black, 0.1);
         min-height: rem(14px);
         min-width: rem(14px);

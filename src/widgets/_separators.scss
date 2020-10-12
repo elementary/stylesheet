@@ -1,0 +1,29 @@
+separator {
+    &.horizontal {
+        border-top: 1px solid #{'@menu_separator'};
+        border-bottom: 1px solid #{'@menu_separator_shadow'};
+        margin-bottom: -1px;
+    }
+
+    &.vertical {
+        border-left: 1px solid #{'@menu_separator'};
+        border-right: 1px solid #{'@menu_separator_shadow'};
+        margin-right: -1px;
+    }
+
+    actionbar > &,
+    toolbar > &,
+    .titlebar > & {
+        border: none;
+        margin: 0 rem(18px);
+    }
+
+    stacksidebar &.horizontal {
+        border: none;
+    }
+
+    &.titlebutton {
+        border: none;
+        margin: 0 rem(3px);
+    }
+}
