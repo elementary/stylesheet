@@ -106,10 +106,18 @@ button {
         color: #{'@placeholder_text_color'};
     }
 
+    &.color,
     &.combo,
     &.image-button,
     &.titlebutton {
         padding: rem(4px);
+    }
+
+    &.color {
+        colorswatch,
+        overlay {
+            border-radius: rem(2px);
+        }
     }
 
     arrow {
