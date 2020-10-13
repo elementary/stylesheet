@@ -4,10 +4,21 @@ scale {
     }
 
     highlight {
-        background-color: rgba(black, 0.45);
+        background-color: rgba($fg-color, 0.7);
+        border: 1px solid rgba(black, 0.3);
+
+        box-shadow: inset 0 0 0 2px rgba(black, 0.03);
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+            border-color: transparent;
+            box-shadow: outset-highlight();
+        }
 
         &:disabled {
-            background-color: rgba(black, 0.25);
+            background-color: rgba($fg-color, 0.25);
+            border-color: transparent;
+            box-shadow: none;
         }
     }
 
@@ -42,11 +53,11 @@ scale {
     }
 
     trough {
+        border: 1px solid $border-color;
         border-radius: rem(12px);
         background-color: rgba(black, 0.05);
         box-shadow:
-            inset 0 0 0 1px rgba(black, 0.3),
-            inset 0 0 0 2px rgba(black, 0.03),
+            inset 0 0 0 1px rgba(black, 0.03),
             0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
         min-height: rem(3px);
         min-width: rem(3px);
@@ -69,12 +80,10 @@ scale {
     &.warmth trough,
     &.temperature trough {
         @if $color-scheme == "dark" {
+            background-clip: padding-box;
             box-shadow:
-                inset 0 0 0 1px rgba(black, 0.7),
-                inset 0 1px 0 rgba(black, 0.7),
-                inset 0 2px 0 rgba(white, 0.15),
+                outset-highlight(),
                 0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
-            min-height: rem(6px);
         }
     }
 
@@ -131,13 +140,15 @@ scale {
         highlight.top,
         fill.top {
             border-radius: rem(12px) 0 0 rem(12px);
-            margin: 0 0 0 rem(-6px);
+            // Account for border width
+            margin: -1px 0 -1px calc(#{rem(-6px)} - 1px);
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 rem(12px) rem(12px) 0;
-            margin: 0 rem(-6px) 0 0;
+            // Account for border width
+            margin: -1px calc(#{rem(-6px)} - 1px) -1px 0;
         }
 
         mark indicator {
@@ -160,13 +171,15 @@ scale {
         highlight.top,
         fill.top {
             border-radius: rem(12px) rem(12px) 0 0;
-            margin: rem(-6px) 0 0;
+            // Account for border width
+            margin: calc(#{rem(-6px)} - 1px) -1px 0 -1px;
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 0 rem(12px) rem(12px);
-            margin: 0 0 rem(-6px);
+            // Account for border width
+            margin: 0 -1px calc(#{rem(-6px)} - 1px) -1px;
         }
 
         mark indicator {
