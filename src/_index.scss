@@ -59,6 +59,9 @@ $warning_color: $BANANA_900;
     }
 }
 
+// Disabled text, images, other foreground elements
+$insensitive-fg-color: mix($fg-color, bg_color(2), $weight: 50%);
+
 @function shadow($level) {
     @if $color-scheme == "light" {
         @if $level == 1 {
@@ -159,8 +162,13 @@ $warning_color: $BANANA_900;
         $text-size: $text-size * 1px;
     }
 
-    // Workaround GTK clamping instead of rounding up
-    @return ($pixels / $text-size * 1rem) + 0.000000001rem;
+    @if ($pixels > 0) {
+        // Workaround GTK clamping instead of rounding up
+        @return ($pixels / $text-size * 1rem) + 0.000000001rem;
+    } @else {
+        // Workaround GTK clamping instead of rounding up
+        @return ($pixels / $text-size * 1rem) - 0.000000001rem;
+    }
 }
 
 // Background for elements with outset style like headerbars, buttons, checkboxes, etc
