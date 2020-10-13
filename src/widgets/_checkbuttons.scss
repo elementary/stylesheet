@@ -68,13 +68,15 @@ checkbutton {
     }
 
     &.image-button:checked {
-        background: #{'alpha(@accent_color, 0.1)'};
-        border: 1px solid #{'alpha(@accent_color, 0.25)'};
+        background: #{'alpha(@selected_bg_color, 0.4)'};
+        border-color: #{'@selected_bg_color'};
         border-radius: rem(3px);
+        color: #{'@selected_fg_color'};
 
         &:backdrop {
             background: rgba($fg-color, 0.05);
             border-color: rgba($fg-color, 0.25);
+            color: inherit;
         }
     }
 }
@@ -83,7 +85,7 @@ radiobutton.image-button {
     padding: rem(6px);
 
     &:checked:not(:backdrop) image {
-        color: #{'@accent_color'};
+        color: #{'@selected_fg_color'};
     }
 }
 
