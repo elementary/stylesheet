@@ -271,4 +271,18 @@ messagedialog {
             color: transparent;
         }
     }
+
+    .dialog-vbox {
+        // Remove the 2px border_width from Gtk.Dialog. Intentionally not in ems
+        margin: -2px;
+    }
+
+    // These should should in 12px borders around buttons
+    .dialog-action-area {
+        // Compensate for off-by-one
+        margin: rem(7px);
+        margin-bottom: rem(8px);
+        // Double space between content and actions
+        margin-top: rem(16px);
+    }
 }
