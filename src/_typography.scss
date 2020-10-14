@@ -30,7 +30,11 @@ label.h4,
 .accent,
 .link,
 :link {
-    color: #{'@accent_color'};
+    @if $color-scheme == "light" {
+        color: #{'shade(@accent_color, 0.6)'};
+    } @else if $color-scheme == "dark" {
+        color: #{'mix(@accent_color, white, 0.33)'};
+    }
 }
 
 .dim-label,
@@ -39,7 +43,7 @@ label.h4,
 }
 
 label:disabled {
-    opacity: 0.5;
+    color: $insensitive-fg-color;
 }
 
 .keycap {
