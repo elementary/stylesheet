@@ -16,12 +16,14 @@ button {
 
     .linked &.flat,
     .linked &.image-button,
+    .linked &.image-button:not(.text-button),
     &.circular.image-button,
     &.model.image-button,
     &.raised.image-button,
     & {
         @extend %outset-background;
 
+        background-clip: padding-box;
         background-color: bg-color(0);
         border: 1px solid $border-color;
         box-shadow:
@@ -103,7 +105,7 @@ button {
     }
 
     &:disabled {
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
     }
 
     &.color,
