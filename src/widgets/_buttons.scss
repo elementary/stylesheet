@@ -104,6 +104,39 @@ button {
         }
     }
 
+    &.back-button {
+        background-repeat: no-repeat no-repeat;
+        background-size: 16px, cover;
+
+        &:dir(ltr) {
+            background-image:
+                -gtk-icontheme('go-previous-symbolic'),
+                linear-gradient(
+                    to bottom,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(white, 0)
+                );
+            padding-left: calc(#{rem(9px)} + 16px);
+            background-position:
+                #{rem(6px)} 50%,
+                center, center;
+        }
+
+        &:dir(rtl) {
+            background-image:
+                -gtk-icontheme('go-next-symbolic'),
+                linear-gradient(
+                    to bottom,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(white, 0)
+                );
+            padding-right: calc(#{rem(9px)} + 16px);
+            background-position:
+                calc(100% - #{rem(6px)}) 50%,
+                center, center;
+        }
+    }
+
     &:disabled {
         color: $insensitive-fg-color;
     }
