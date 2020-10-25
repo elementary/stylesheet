@@ -3,13 +3,14 @@ paned {
         background-image:
             linear-gradient(
                 to right,
-                #{'@menu_separator'} 1px,
+                #{'@menu_separator'} 9px,
                 #{'@menu_separator_shadow'} 1px,
                 #{'@menu_separator_shadow'} 2px,
                 transparent 2px
             );
         // This creates the invisible resize handle
-        margin-right: -8px;
+        margin-left: -4px;
+        margin-right: -4px;
         min-width: 9px;
     }
 
@@ -17,13 +18,14 @@ paned {
         background-image:
             linear-gradient(
                 to bottom,
-                #{'@menu_separator'} 1px,
+                #{'@menu_separator'} 9px,
                 #{'@menu_separator_shadow'} 1px,
                 #{'@menu_separator_shadow'} 2px,
                 transparent 2px
             );
         // This creates the invisible resize handle
-        margin-bottom: -8px;
+        margin-top: -4px;
+        margin-bottom: -4px;
         min-height: 9px;
     }
 }
