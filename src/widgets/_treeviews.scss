@@ -1,18 +1,30 @@
-treeview header button {
-    border-left-width: 0;
-    border-radius: 0;
-    border-top-width: 0;
+treeview {
+    &.view.cell {
+        &:selected {
+            background: rgba($fg-color, 0.15);
+        }
 
-    &:last-child {
-        border-right-width: 0;
+        &:focus:selected {
+            @extend selection;
+        }
     }
 
-    label {
-        font-weight: 600;
-        opacity: 0.8;
-    }
+    header button {
+        border-left-width: 0;
+        border-radius: 0;
+        border-top-width: 0;
 
-    &:backdrop label {
-        opacity: 0.6;
+        &:last-child {
+            border-right-width: 0;
+        }
+
+        label {
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        &:backdrop label {
+            opacity: 0.6;
+        }
     }
 }
