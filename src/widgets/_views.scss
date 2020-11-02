@@ -7,6 +7,31 @@ frame,
     }
 }
 
+iconview.view.cell {
+    border-radius: rem(3px);
+
+    &:selected {
+        background: rgba($fg-color, 0.15);
+    }
+
+    &:focus:selected {
+        @extend selection;
+    }
+}
+
+flowboxchild {
+    border-radius: rem(3px);
+
+    &:focus,
+    &:selected {
+        background: rgba($fg-color, 0.15);
+    }
+
+    &:focus:selected {
+        @extend selection;
+    }
+}
+
 scrolledwindow {
     // avoid double borders when viewport inside scrolled window
     > viewport.frame {

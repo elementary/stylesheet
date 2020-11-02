@@ -31,9 +31,9 @@ label.h4,
 .link,
 :link {
     @if $color-scheme == "light" {
-        color: #{'shade(@accent_color, 0.6)'};
+        color: #{'shade(@accent_color, 0.75)'};
     } @else if $color-scheme == "dark" {
-        color: #{'mix(@accent_color, white, 0.33)'};
+        color: #{'mix(@accent_color, white, 0.1)'};
     }
 
     &.red {
