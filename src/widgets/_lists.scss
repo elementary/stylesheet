@@ -6,13 +6,13 @@ list {
     }
 
     row {
+        &:focus,
         &:selected {
-            background-color: rgba($fg-color, 0.1);
+            background: rgba($fg-color, 0.15);
+        }
 
-            &:focus {
-                background-color: #{'@selected_bg_color'};
-                color: #{'@selected_fg_color'};
-            }
+        &:focus:selected {
+            @extend selection;
         }
     }
 
