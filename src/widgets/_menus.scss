@@ -60,6 +60,11 @@
             -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
         }
     }
+
+    switch slider {
+        min-height: rem(20px);
+        min-width: rem(20px);
+    }
 }
 
 menu,
