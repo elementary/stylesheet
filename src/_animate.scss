@@ -29,3 +29,15 @@ entry.spin:dir(rtl) image:first-child {
         -gtk-icon-transform: rotate(1turn);
     }
 }
+
+@keyframes press {
+    0% {
+        -gtk-icon-transform: scale(1);
+    }
+    50% {
+        -gtk-icon-transform: scale(0.9);
+    }
+    0% {
+        -gtk-icon-transform: scale(1);
+    }
+}

@@ -12,6 +12,10 @@ button {
         background: none;
         border: none;
         box-shadow: none;
+
+        &:active image {
+            animation: press duration("open") $easing;
+        }
     }
 
     .linked &.flat,
