@@ -2,16 +2,12 @@
     background-color: bg_color(2);
     border-radius: rem(6px);
     color: $fg-color;
-
-    image,
-    label {
-        // Make sure we don't inherit changes from parent widgets
-        color: $fg-color;
-        font-weight: initial;
-    }
 }
 
 %menuitem {
+    // Make sure we don't inherit changes from parent widgets
+    color: $fg-color;
+    font-weight: initial;
     min-width: rem(150px);
     padding: rem(6px) rem(12px);
 
@@ -25,7 +21,15 @@
 
     &:hover {
         box-shadow: none;
-        background-color: #{'alpha(@fg_color, 0.15)'};
+        background-color: rgba($fg_color, 0.15);
+    }
+
+    &.destructive-action {
+        color: $error-color;
+
+        &:hover {
+            background-color: rgba($error-color, 0.2);
+        }
     }
 
     .keycap {
