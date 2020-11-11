@@ -53,4 +53,23 @@ progressbar {
             margin: -1px 0;
         }
     }
+
+    &.flat {
+        progress,
+        trough {
+            box-shadow: none;
+            border: none;
+            border-radius: rem(6px);
+            margin: 0;
+        }
+
+        progress,
+        progress:backdrop {
+            background: #{'alpha(@fg_color, 0.78)'};
+        }
+
+        trough {
+            background: #{'alpha(@fg_color, 0.15)'};
+        }
+    }
 }
