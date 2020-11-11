@@ -26,7 +26,7 @@
 @define-color accent_color_700 @BANANA_700;
 @define-color accent_color_900 @BANANA_900;
 
-@define-color accent_color #{'mix(@accent_color_700, @accent_color_900, 0.5)'};
+@define-color accent_color mix(@BANANA_500, @BANANA_700, 0.3);
 
 $color-scheme: "light";
 

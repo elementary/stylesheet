@@ -24,15 +24,15 @@
 @define-color menu_separator #{rgba(black, 0.15)};
 @define-color menu_separator_shadow #{rgba(white, 0.8)};
 
-@define-color selected_bg_color #{'alpha(@accent_color_100, 0.3)'};
-@define-color selected_fg_color #{'@accent_color_900'};
+@define-color selected_bg_color #{'alpha(@accent_color, 0.25)'};
+@define-color selected_fg_color #{'shade(@accent_color, 0.5)'};
 
 @if $color-scheme == "dark" {
     @define-color menu_separator #{rgba(black, 0.25)};
     @define-color menu_separator_shadow #{rgba(white, 0.05)};
 
-    @define-color selected_bg_color #{'alpha(@accent_color_700, 0.3)'};
-    @define-color selected_fg_color #{'@accent_color_100'};
+    @define-color selected_bg_color #{'alpha(shade(@accent_color, 0.85), 0.5)'};
+    @define-color selected_fg_color #{'mix(shade(@accent_color, 1.1), white, 0.75)'};
 }
 
 @define-color base_color #{"" + bg_color(1)};
@@ -47,6 +47,7 @@
 // Text, images, and other foreground elements
 @define-color fg_color #{"" + $fg-color};
 @define-color theme_fg_color #{"" + $fg-color};
+@define-color insensitive_fg_color #{"" + $insensitive-fg-color};
 @define-color text_color #{"" + $fg-color};
 @define-color theme_text_color #{"" + $fg-color};
 

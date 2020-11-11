@@ -7,6 +7,9 @@ $fg-color: $BLACK_500;
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 $toplevel-border-color: rgba(black, 0.2);
 
+// Outset box shadow or border color on inputs like buttons, entries, checkboxes
+$border-color: rgba(black, 0.2);
+
 // Semantic colors
 $error_color: $STRAWBERRY_500;
 $success_color: $LIME_700;
@@ -16,6 +19,7 @@ $warning_color: $BANANA_900;
     $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
     $fg-color: white;
     $toplevel-border-color: rgba(black, 0.75);
+    $border-color: rgba(black, 0.3);
 
     $error-color: $STRAWBERRY_300;
     $success-color: $LIME_300;
@@ -24,8 +28,11 @@ $warning_color: $BANANA_900;
 
 @function bg-color($level) {
     @if $color-scheme == "light" {
-        // Views and inputs
-        @if $level == 1 {
+        // Inputs
+        @if $level == 0 {
+            @return $SILVER_100;
+        // Views
+        } @else if $level == 1 {
             @return white;
         // Background
         } @else if $level == 2 {
@@ -38,8 +45,10 @@ $warning_color: $BANANA_900;
             @return $titlebar-color;
         }
     } @else if $color-scheme == "dark" {
-        @if $level == 1 {
-            @return $BLACK_300;
+        @if $level == 0 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 50%);
+        } @else if $level == 1 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 25%);
         } @else if $level == 2 {
             @return $BLACK_500;
         } @else if $level == 3 {
@@ -49,6 +58,9 @@ $warning_color: $BANANA_900;
         }
     }
 }
+
+// Disabled text, images, other foreground elements
+$insensitive-fg-color: mix($fg-color, bg_color(2), $weight: 50%);
 
 @function shadow($level) {
     @if $color-scheme == "light" {
@@ -150,8 +162,13 @@ $warning_color: $BANANA_900;
         $text-size: $text-size * 1px;
     }
 
-    // Workaround GTK clamping instead of rounding up
-    @return ($pixels / $text-size * 1rem) + 0.000000001rem;
+    @if ($pixels > 0) {
+        // Workaround GTK clamping instead of rounding up
+        @return ($pixels / $text-size * 1rem) + 0.000000001rem;
+    } @else {
+        // Workaround GTK clamping instead of rounding up
+        @return ($pixels / $text-size * 1rem) - 0.000000001rem;
+    }
 }
 
 // Background for elements with outset style like headerbars, buttons, checkboxes, etc

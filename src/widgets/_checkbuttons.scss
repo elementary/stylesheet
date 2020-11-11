@@ -1,12 +1,7 @@
 check,
 radio {
-    $border-color: rgba(black, 0.2);
-    @if $color-scheme == "dark" {
-        $border-color: rgba(black, 0.5);
-    }
-
     @extend %outset-background;
-    background-color: bg-color(1);
+    background-color: bg-color(0);
     border: 1px solid $border-color;
     box-shadow:
         outset-highlight(),
@@ -17,10 +12,14 @@ radio {
     -gtk-icon-source: none;
 
     &:checked {
-        background-color: #{'@accent_color_300'};
+        background-color: #{'@accent_color'};
         color: white;
         -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
-        -gtk-icon-shadow: 0 1px 1px #{'@accent_color_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'shade(@accent_color, 0.7)'};
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
 
         &:backdrop:not(:disabled):not(.colorbutton) {
             background-image: none;
@@ -32,7 +31,7 @@ radio {
     &:disabled {
         background: rgba(black, 0.03);
         box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
-        color: #{'@placeholder_text_color'};
+        color: $insensitive-fg-color;
         -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
     }
 
@@ -69,13 +68,15 @@ checkbutton {
     }
 
     &.image-button:checked {
-        background: #{'alpha(@accent_color, 0.1)'};
-        border: 1px solid #{'alpha(@accent_color, 0.25)'};
+        background: #{'alpha(@selected_bg_color, 0.4)'};
+        border-color: #{'@selected_bg_color'};
         border-radius: rem(3px);
+        color: #{'@selected_fg_color'};
 
         &:backdrop {
             background: rgba($fg-color, 0.05);
             border-color: rgba($fg-color, 0.25);
+            color: inherit;
         }
     }
 }
@@ -84,7 +85,7 @@ radiobutton.image-button {
     padding: rem(6px);
 
     &:checked:not(:backdrop) image {
-        color: #{'@accent_color_700'};
+        color: #{'@selected_fg_color'};
     }
 }
 

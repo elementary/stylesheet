@@ -19,17 +19,17 @@
 .source-list,
 .source-list .view {
     background-color: bg_color(3);
+
+    popover & {
+        background: transparent;
+    }
 }
 
 .sidebar {
-    list {
-        padding-top: rem(6px);
+    list row {
+        padding: rem(6px) rem(12px);
 
-        row {
-            padding: rem(6px) rem(12px);
-
-            @extend %sidebar-row;
-        }
+        @extend %sidebar-row;
     }
 }
 

@@ -30,12 +30,105 @@ label.h4,
 .accent,
 .link,
 :link {
-    color: #{'@accent_color'};
+    @if $color-scheme == "light" {
+        color: #{'shade(@accent_color, 0.75)'};
+    } @else if $color-scheme == "dark" {
+        color: #{'mix(@accent_color, white, 0.1)'};
+    }
+
+    &.red {
+        @if $color-scheme == "light" {
+            color: $STRAWBERRY_500;
+        } @else if $color-scheme == "dark" {
+            color: mix($STRAWBERRY_100, $STRAWBERRY_300, $weight: 50%);
+        }
+    }
+
+    &.orange {
+        @if $color-scheme == "light" {
+            color: $ORANGE_700;
+        } @else if $color-scheme == "dark" {
+            color: mix($ORANGE_300, $ORANGE_500, $weight: 25%);
+        }
+    }
+
+    &.yellow {
+        @if $color-scheme == "light" {
+            color: mix($BANANA_700, $BANANA_900, $weight: 50%);
+        } @else if $color-scheme == "dark" {
+            color: $BANANA_500;
+        }
+    }
+
+    &.green {
+        @if $color-scheme == "light" {
+            color: mix($LIME_700, $LIME_900, $weight: 50%);
+        } @else if $color-scheme == "dark" {
+            color: $LIME_500;
+        }
+    }
+
+    &.blue {
+        @if $color-scheme == "light" {
+            color: mix($BLUEBERRY_500, $BLUEBERRY_700, $weight: 50%);
+        } @else if $color-scheme == "dark" {
+            color: mix($BLUEBERRY_300, $BLUEBERRY_500, $weight: 50%);
+        }
+    }
+
+    &.purple {
+        @if $color-scheme == "light" {
+            color: mix($GRAPE_500, $GRAPE_700, $weight: 50%);
+        } @else if $color-scheme == "dark" {
+            color: mix($GRAPE_300, $GRAPE_500, $weight: 50%);
+        }
+    }
+
+    &.brown {
+        @if $color-scheme == "light" {
+            color: mix($COCOA_300, $COCOA_300, $weight: 75%);
+        } @else if $color-scheme == "dark" {
+            color: mix($COCOA_100, white, $weight: 90%);
+        }
+    }
+
+    &.mint {
+        @if $color-scheme == "light" {
+            color: $MINT_700;
+        } @else if $color-scheme == "dark" {
+            color: mix($MINT_500, $MINT_700, $weight: 75%);
+        }
+    }
+
+    &.pink {
+        @if $color-scheme == "light" {
+            color: mix($BUBBLEGUM_500, $BUBBLEGUM_700, $weight: 50%);
+        } @else if $color-scheme == "dark" {
+            color: mix($BUBBLEGUM_300, $BUBBLEGUM_100, $weight: 75%);
+        }
+    }
+
+    &.slate {
+        @if $color-scheme == "light" {
+            color: mix($SLATE_300, $SLATE_500, $weight: 75%);
+        } @else if $color-scheme == "dark" {
+            color: $SLATE_100;
+        }
+    }
+
+    // &:backdrop {
+    //     color: $fg-color;
+    //     opacity: 0.6;
+    // }
 }
 
 .dim-label,
 :visited {
     opacity: 0.75;
+}
+
+label:disabled {
+    color: $insensitive-fg-color;
 }
 
 .keycap {

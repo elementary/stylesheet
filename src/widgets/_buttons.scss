@@ -16,13 +16,16 @@ button {
 
     .linked &.flat,
     .linked &.image-button,
+    .linked &.image-button:not(.text-button),
     &.circular.image-button,
     &.model.image-button,
     &.raised.image-button,
     & {
         @extend %outset-background;
-        background-color: bg-color(2);
-        border: 1px solid rgba(black, 0.2);
+
+        background-clip: padding-box;
+        background-color: bg-color(0);
+        border: 1px solid $border-color;
         box-shadow:
             outset-highlight("full"),
             outset-shadow(2);
@@ -87,6 +90,10 @@ button {
         &:checked {
             background: rgba(black, 0.05);
             box-shadow: inset-shadow();
+
+            @if $color-scheme == "dark" {
+                background: rgba(black, 0.15);
+            }
         }
 
         &:disabled {
@@ -97,14 +104,59 @@ button {
         }
     }
 
-    &:disabled {
-        color: #{'@placeholder_text_color'};
+    // Stopgap since we can't do angled buttons in GtkCSS, and generating all
+    // the necessary SVGs for light/dark and accent color combinations is
+    // untenable. Ideally we'd deprecate this in favor of something like a
+    // Granite.BackButton with custom drawing; until then, stick an icon in it.
+    &.back-button {
+        background-repeat: no-repeat no-repeat;
+        background-size: 16px, cover;
+
+        &:dir(ltr) {
+            background-image:
+                -gtk-icontheme('go-previous-symbolic'),
+                linear-gradient(
+                    to bottom,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(white, 0)
+                );
+            padding-left: calc(#{rem(9px)} + 16px);
+            background-position:
+                #{rem(6px)} 50%,
+                center, center;
+        }
+
+        &:dir(rtl) {
+            background-image:
+                -gtk-icontheme('go-next-symbolic'),
+                linear-gradient(
+                    to bottom,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(white, 0)
+                );
+            padding-right: calc(#{rem(9px)} + 16px);
+            background-position:
+                calc(100% - #{rem(6px)}) 50%,
+                center, center;
+        }
     }
 
+    &:disabled {
+        color: $insensitive-fg-color;
+    }
+
+    &.color,
     &.combo,
     &.image-button,
     &.titlebutton {
         padding: rem(4px);
+    }
+
+    &.color {
+        colorswatch,
+        overlay {
+            border-radius: rem(2px);
+        }
     }
 
     arrow {

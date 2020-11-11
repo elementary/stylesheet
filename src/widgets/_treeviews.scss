@@ -1,0 +1,30 @@
+treeview {
+    &.view.cell {
+        &:selected {
+            background: rgba($fg-color, 0.15);
+        }
+
+        &:focus:selected {
+            @extend selection;
+        }
+    }
+
+    header button {
+        border-left-width: 0;
+        border-radius: 0;
+        border-top-width: 0;
+
+        &:last-child {
+            border-right-width: 0;
+        }
+
+        label {
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        &:backdrop label {
+            opacity: 0.6;
+        }
+    }
+}
