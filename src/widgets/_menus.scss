@@ -8,6 +8,7 @@
     // Make sure we don't inherit changes from parent widgets
     color: $fg-color;
     font-weight: initial;
+    letter-spacing: initial;
     min-width: rem(150px);
     padding: rem(6px) rem(12px);
 
