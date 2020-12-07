@@ -115,6 +115,11 @@ window:not(.popup):not(.menu) {
                     outset-highlight("top");
             }
         }
+
+        // Fixes double shadow in HdyTitleBar
+        stack.titlebar > .titlebar {
+            box-shadow: none;
+        }
     }
 
     &.rounded {
