@@ -20,6 +20,7 @@
     border-bottom-right-radius: 0;
 }
 
+viewswitcher > box > button.horizontal.radio,
 .linked:not(.vertical) > button,
 .linked:not(.vertical) > entry {
     &:not(:first-child) {
