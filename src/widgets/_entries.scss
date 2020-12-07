@@ -26,6 +26,8 @@
 
 entry {
     @extend %entry;
+    // Prevent size change when setting primary or secondary icons
+    min-height: 16px;
     // Off-by-one to account for padding-box clip
     padding: rem(4px);
 
