@@ -15,7 +15,7 @@ button {
     }
 
     .linked &.flat,
-    .linked:not(.navigation-box) &.image-button,
+    .linked &.image-button,
     .linked &.image-button:not(.text-button),
     &.circular.image-button,
     &.model.image-button,
