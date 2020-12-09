@@ -145,6 +145,10 @@ button {
         color: $insensitive-fg-color;
     }
 
+    :backdrop & {
+        opacity: 0.75;
+    }
+
     &.color,
     &.combo,
     &.image-button,
