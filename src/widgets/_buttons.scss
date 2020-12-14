@@ -1,6 +1,7 @@
 button {
     background-clip: padding-box;
     border-radius: rem(3px);
+    -gtk-outline-radius: rem(5px);
     // Explicitly set in case containers override default color
     color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
@@ -31,12 +32,17 @@ button {
             outset-shadow(2);
 
         &.destructive-action:not(:disabled) {
-            @if $color-scheme == "light" {
-                background-clip: border-box;
-            } @else if $color-scheme == "dark" {
-                &:active,
-                &:checked {
-                    border-color: rgba(black, 0.7);
+
+            &,
+            &:focus {
+                @if $color-scheme == "light" {
+                    background-clip: border-box;
+                    border: 1px solid $border-color;
+                } @else if $color-scheme == "dark" {
+                    &:active,
+                    &:checked {
+                        border-color: rgba(black, 0.7);
+                    }
                 }
             }
 
@@ -44,6 +50,10 @@ button {
             color: white;
             text-shadow: 0 1px 1px $STRAWBERRY_500;
             -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
+
+            &:focus {
+                outline-color: rgba($STRAWBERRY_500, 0.3);
+            }
         }
 
         &.suggested-action:not(:disabled) {
@@ -101,6 +111,15 @@ button {
             box-shadow:
                 outset-highlight("full"),
                 outset-shadow(1);
+        }
+
+        &:focus {
+            @if $color-scheme == "light" {
+                border-color: #{'@accent_color'};
+            }
+            outline-color: #{'alpha(@accent_color, 0.3)'};
+            outline-width: rem(2px);
+            outline-style: solid;
         }
     }
 
