@@ -34,6 +34,7 @@ selection {
 .circular {
     // Not  50% because that creates a squished elipse for non-squares widgets
     border-radius: 9999px;
+    -gtk-outline-radius: 9999px;
 }
 
 .error {

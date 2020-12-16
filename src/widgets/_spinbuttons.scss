@@ -4,7 +4,8 @@ spinbutton {
     button,
     button:disabled,
     entry,
-    entry:disabled {
+    entry:disabled,
+    entry:focus {
         background: none;
         border: none;
         box-shadow: none;
