@@ -40,4 +40,9 @@ treeview.sidebar {
     .view {
         @extend %sidebar-row;
     }
+
+    entry.flat {
+        // to match row selection
+        background-color: bg_color(4);
+    }
 }
