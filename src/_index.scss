@@ -14,6 +14,7 @@ $border-color: rgba(black, 0.2);
 $error_color: $STRAWBERRY_500;
 $success_color: $LIME_700;
 $warning_color: $BANANA_900;
+$warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
 
 @if $color-scheme == "dark" {
     $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
@@ -24,6 +25,7 @@ $warning_color: $BANANA_900;
     $error-color: $STRAWBERRY_300;
     $success-color: $LIME_300;
     $warning-color: $BANANA_100;
+    $warning-icon-color: $BANANA_500;
 }
 
 @function bg-color($level) {

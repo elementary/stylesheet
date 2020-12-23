@@ -43,10 +43,6 @@ entry {
     image {
         color: #{'@placeholder_text_color'};
         transition: all duration("element") $easing;
-        -gtk-icon-palette:
-            error #{'@error_color'},
-            success #{'@success_color'},
-            warning #{'@warning_color'};
     }
 
     image.left {
