@@ -33,6 +33,11 @@
     }
 }
 
+placessidebar.frame,
+placessidebar viewport.frame {
+    border: none;
+}
+
 treeview.sidebar {
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
