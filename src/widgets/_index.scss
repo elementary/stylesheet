@@ -1,12 +1,3 @@
-dialog,
-messagedialog,
-.titlebar,
-.background,
-.csd {
-    background-color: bg_color(2);
-    color: $fg-color;
-}
-
 selection {
     background-color: #{'@selected_bg_color'};
     color: #{'@selected_fg_color'};
@@ -38,14 +29,7 @@ selection {
 .circular {
     // Not  50% because that creates a squished elipse for non-squares widgets
     border-radius: 9999px;
-}
-
-.avatar {
-    border: 1px solid rgba(black, 0.35);
-    border-radius: 50%;
-    box-shadow:
-        outset-highlight(),
-        outset-shadow(3);
+    -gtk-outline-radius: 9999px;
 }
 
 .error {
@@ -60,11 +44,17 @@ selection {
     color: #{'@warning_color'};
 }
 
+@import '_avatars.scss';
+@import '_badges.scss';
 @import '_buttons.scss';
+@import '_calendars.scss';
 @import '_cards.scss';
 @import '_checkbuttons.scss';
+@import '_colorchoosers.scss';
 @import '_emojipicker.scss';
 @import '_entries.scss';
+@import '_expanders.scss';
+@import '_images.scss';
 @import '_infobars.scss';
 @import '_levelbars.scss';
 @import '_linked.scss';
@@ -78,6 +68,7 @@ selection {
 @import '_progressbars.scss';
 @import '_scales.scss';
 @import '_scrollbars.scss';
+@import '_separators.scss';
 @import '_sidebars.scss';
 @import '_spinbuttons.scss';
 @import '_spinners.scss';
@@ -87,5 +78,6 @@ selection {
 @import '_toasts.scss';
 @import '_toolbars.scss';
 @import '_tooltips.scss';
+@import '_treeviews.scss';
 @import '_views.scss';
 @import '_windows.scss';

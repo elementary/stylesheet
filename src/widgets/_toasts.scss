@@ -11,6 +11,7 @@
         background-color: rgba(bg-color(1), 0.9);
         color: $fg-color;
 
+        &.flat.image-button,
         &.close-button {
             background-color: $fg-color;
             border-radius: 50%;
@@ -22,6 +23,11 @@
                 box-shadow: none;
                 color: rgba(bg-color(1), 0.7);
             }
+        }
+
+        // Selects the close button in GNOME apps
+        &.flat.image-button {
+            padding: rem(4px);
         }
 
         &.text-button {

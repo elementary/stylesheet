@@ -6,18 +6,97 @@ list {
     }
 
     row {
+        &:focus,
         &:selected {
-            background-color: rgba($fg-color, 0.1);
+            background: rgba($fg-color, 0.15);
+        }
 
-            &:focus {
-                background-color: #{'@selected_bg_color'};
-                color: #{'@selected_fg_color'};
-            }
+        &:focus:selected {
+            @extend selection;
         }
     }
 
     .h4 {
         padding-left: rem(6px);
         padding-right: rem(6px);
+    }
+
+    // Hdy.List
+    &.content {
+        &,
+        list {
+            background-color: transparent;
+        }
+
+        // Nested rows background
+        list.nested > row:not(:active) {
+            &:not(:hover):not(:selected),
+            &:hover:not(.activatable):not(:selected) {
+                background-color: mix(bg-color(1), bg-color(2), $weight: 50%);
+            }
+        }
+
+        > row {
+            // Regular rows and expander header rows background
+            &:not(.expander):not(:active):not(:hover):not(:selected),
+            &:not(.expander):not(:active):hover:not(.activatable):not(:selected),
+            &.expander row.header:not(:active):not(:hover):not(:selected),
+            &.expander row.header:not(:active):hover:not(.activatable):not(:selected) {
+                background-color: bg-color(1);
+            }
+
+            &:not(.expander):not(:active):hover.activatable:not(:selected),
+            &.expander row.header:not(:active):hover.activatable:not(:selected) {
+                background-color: mix(bg-color(1), bg-color(2), $weight: 50%);
+            }
+
+            &,
+            list > row {
+                border-color: $border-color;
+                border-style: solid;
+                transition: duration("open") $easing;
+            }
+
+            // Top border
+            &:not(:last-child) {
+                border-width: 1px 1px 0 1px;
+            }
+
+            // Rounded top
+            &:first-child,
+            &.expander:first-child row.header,
+            &.expander:checked,
+            &.expander:checked row.header,
+            &.expander:checked + row,
+            &.expander:checked + row.expander row.header {
+                border-top-right-radius: rem(3px);
+                border-top-left-radius: rem(3px);
+            }
+
+            // Bottom border
+            &:last-child,
+            &.checked-expander-row-previous-sibling,
+            &.expander:checked {
+                border-width: 1px;
+            }
+
+            // Rounded bottom
+            &:last-child,
+            &.checked-expander-row-previous-sibling,
+            &.expander:checked,
+            &.expander:not(:checked):last-child row.header,
+            &.expander:not(:checked).checked-expander-row-previous-sibling row.header,
+            &.expander.empty:checked row.header,
+            &.expander list.nested > row:last-child {
+                border-bottom-right-radius: rem(3px);
+                border-bottom-left-radius: rem(3px);
+            }
+
+            // Add space around expanded rows
+            &.expander:checked:not(:first-child),
+            &.expander:checked + row {
+                margin-top: rem(12px);
+            }
+        }
     }
 }
