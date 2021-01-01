@@ -1,0 +1,103 @@
+viewswitcher {
+    & button {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        border-top: 0;
+        border-bottom: 0;
+        box-shadow: none;
+        font-size: rem(16px);
+
+        &:not(:checked):not(:hover) {
+            background: transparent;
+        }
+
+        &:not(:only-child):not(:last-child) {
+            border-right-width: 0;
+        }
+
+        &:not(only-child):first-child:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):not(:hover) {
+            border-left-color: transparent;
+        }
+
+        &:not(only-child):last-child:not(:checked):not(:hover) {
+            border-right-color: transparent;
+        }
+
+        &:not(:checked):hover:not(:backdrop) {
+            background-image: #{'image(lighter(@color_primary))'};
+        }
+
+        &:not(only-child):first-child:not(:checked):hover,
+        &:not(:checked):hover + &:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):hover {
+            border-left-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(only-child):last-child:not(:checked):hover {
+            border-right-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(:checked):hover:backdrop {
+            background-image: #{'image(@color_primary)'};
+        }
+
+        stack > box {
+
+            & label.active {
+                font-weight: bold;
+            }
+
+            &.narrow {
+                font-size: rem(12px);
+                padding-top: rem(7px);
+                padding-bottom: rem(5px);
+
+                & image,
+                & label {
+                    padding-left: rem(8px);
+                    padding-right: rem(8px);
+                }
+            }
+
+            &.wide {
+                padding: rem(8px) rem(12px);
+
+                & image,
+                & label {
+                    padding-left: rem(7px);
+                    padding-right: rem(7px);
+                }
+            }
+        }
+    }
+}
+
+headerbar {
+    viewswitcher {
+        button {
+            &:not(:checked):hover:not(:backdrop) {
+                background-image: linear-gradient(
+                    to top,
+                    #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
+                    #{'alpha(@color_primary, 0.7))'}
+                );
+            }
+
+            &:not(:checked):not(only-child):first-child:hover,
+            &:not(:checked):hover + &:not(:checked):not(:hover),
+            &:not(:checked):not(:hover) + &:not(:checked):hover {
+                border-left-color: #{'@color_primary'};
+            }
+
+            &:not(:checked):not(only-child):last-child:hover {
+                border-right-color: #{'@color_primary'};
+            }
+
+            &:not(:checked):hover:backdrop {
+                background-image: #{'image(@color_primary)'};
+            }
+        }
+    }
+} 
