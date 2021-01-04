@@ -172,7 +172,28 @@ button {
     }
 
     &.text-button.link {
+        background-image: -gtk-icontheme('go-next-symbolic');
+        background-repeat: no-repeat;
+        background-size: 16px;
         padding: 0;
+
+        &:dir(ltr) {
+            padding-right: calc(#{rem(9px)} + 16px);
+            background-position: calc(100% - #{rem(6px)}) 50%;
+
+            &:hover {
+                background-position: calc(100% - #{rem(4px)}) 50%;
+            }
+        }
+
+        &:dir(rtl) {
+            padding-left: calc(#{rem(9px)} + 16px);
+            background-position: #{rem(6px)} 50%;
+
+            &:hover {
+                background-position: #{rem(4px)} 50%;
+            }
+        }
     }
 
     &.color {
