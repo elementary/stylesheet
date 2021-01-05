@@ -6,7 +6,7 @@ viewswitcher button {
     border-bottom: 0;
     box-shadow: none;
     font-size: rem(13px);
-    -gtk-icon-palette: error @text_color, success @text_color, warning @text_color;
+    -gtk-icon-palette: error #{'@text_color'};, success #{'@text_color'};, warning #{'@text_color'};;
 
     &:not(:checked):not(:hover) {
         background: transparent;
@@ -65,28 +65,28 @@ viewswitcher button {
             padding: 0 9px;
         }
     }
+
+    headerbar & {
+        &:not(:checked):hover:not(:backdrop) {
+            background-image: linear-gradient(
+                to top,
+                #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
+                #{'alpha(@color_primary, 0.7)'}
+            );
+        }
+
+        &:not(:checked):not(only-child):first-child:hover,
+        &:not(:checked):hover + &:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):hover {
+            border-left-color: #{'@color_primary'};
+        }
+
+        &:not(:checked):not(only-child):last-child:hover {
+            border-right-color: #{'@color_primary'};
+        }
+
+        &:not(:checked):hover:backdrop {
+            background-image: #{'image(@color_primary)'};
+        }
+    }
 }
-
-headerbar viewswitcher button {
-    &:not(:checked):hover:not(:backdrop) {
-        background-image: linear-gradient(
-            to top,
-            #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
-            #{'alpha(@color_primary, 0.7)'}
-        );
-    }
-
-    &:not(:checked):not(only-child):first-child:hover,
-    &:not(:checked):hover + &:not(:checked):not(:hover),
-    &:not(:checked):not(:hover) + &:not(:checked):hover {
-        border-left-color: #{'@color_primary'};
-    }
-
-    &:not(:checked):not(only-child):last-child:hover {
-        border-right-color: #{'@color_primary'};
-    }
-
-    &:not(:checked):hover:backdrop {
-        background-image: #{'image(@color_primary)'};
-    }
-} 
