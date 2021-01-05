@@ -71,7 +71,7 @@ headerbar viewswitcher button {
         background-image: linear-gradient(
             to top,
             #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
-            #{'alpha(@color_primary, 0.7))'}
+            #{'alpha(@color_primary, 0.7)'}
         );
     }
 
