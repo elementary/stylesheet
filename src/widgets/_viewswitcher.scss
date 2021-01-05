@@ -5,7 +5,7 @@ viewswitcher button {
         border-top: 0;
         border-bottom: 0;
         box-shadow: none;
-        font-size: rem(16px);
+        font-size: rem(10px);
 
         &:not(:checked):not(:hover) {
             background: transparent;
@@ -50,7 +50,7 @@ viewswitcher button {
 
             &.narrow {
                 @extend .small-label
-                padding-top: rem(7px);
+                padding-top: rem(5px);
                 padding-bottom: rem(5px);
 
                 & image,
@@ -61,7 +61,7 @@ viewswitcher button {
             }
 
             &.wide {
-                padding: rem(8px) rem(12px);
+                padding: rem(3px) rem(3px);
 
                 & image,
                 & label {
