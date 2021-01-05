@@ -61,13 +61,7 @@ viewswitcher button {
         }
 
         &.wide {
-            padding: rem(3px) rem(3px);
-
-            & image,
-            & label {
-                padding-left: rem(7px);
-                padding-right: rem(7px);
-            }
+            padding: 0 9px;
         }
     }
 }
