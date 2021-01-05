@@ -49,7 +49,7 @@ viewswitcher button {
         }
 
         &.narrow {
-            @extend .small-label
+            @extend .small-label;
             padding-top: rem(5px);
             padding-bottom: rem(5px);
 
