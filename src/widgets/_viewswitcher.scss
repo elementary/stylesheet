@@ -74,9 +74,7 @@ viewswitcher {
     }
 }
 
-headerbar {
-    viewswitcher {
-        button {
+headerbar viewswitcher button {
             &:not(:checked):hover:not(:backdrop) {
                 background-image: linear-gradient(
                     to top,
