@@ -5,7 +5,6 @@ viewswitcher button {
     border-top: 0;
     border-bottom: 0;
     box-shadow: none;
-    font-size: rem(13px);
     -gtk-icon-palette: error #{'@text_color'}, success #{'@text_color'}, warning #{'@text_color'};
 
     &:not(:checked):not(:hover) {
