@@ -42,17 +42,17 @@ scrolledwindow {
 .view {
     background-color: bg-color(1);
     color: $fg-color;
+}
 
-    &.terminal {
-        background-color: #252e32;
-        border-radius: rem(3px);
-        color: #94a3a5;
-        font-family: monospace;
+.terminal {
+    background-color: #252e32;
+    border-radius: rem(3px);
+    color: #94a3a5;
+    font-family: monospace;
 
-        text selection {
-            background-color: #93a1a1;
-            color: #252e32;
-        }
+    text selection {
+        background-color: #93a1a1;
+        color: #252e32;
     }
 }
 
