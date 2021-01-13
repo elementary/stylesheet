@@ -35,9 +35,9 @@ selection {
 .icon-dropshadow {
     // Used for adding shadow to icons programmatically and not manually,
     // mimics the most used shadow type in icons.
-    -gtk-icon-shadow: 0 4px 3px rgba(black, 0.0),
-                      0 4px 2px rgba(black, 0.12),
-                      0 4px 1px rgba(black, 0.0);
+    -gtk-icon-shadow: 0 1px 1px transparent,
+                      0 2px 2px rgba(black, 0.2),
+                      0 3px 3px transparent;
 }
 
 .error {
