@@ -23,15 +23,31 @@
         border-color: $toplevel-border-color;
     }
 
+    &.flat,
     .sidebar &,
     treeview.sidebar & {
-        background-color: #{'alpha(@text_color, 0.1)'};
         background-image: none;
         border-width: 0;
         box-shadow: none;
-        color: #{'alpha(@text_color, 0.7)'};
         margin: 0 3px;
-        padding: 0 6px;
+        padding: 0 rem(6px);
         text-shadow: none;
+    }
+
+    .sidebar &,
+    treeview.sidebar & {
+        background-color: #{'alpha(@text_color, 0.1)'};
+        color: #{'alpha(@text_color, 0.7)'};
+    }
+
+    &.flat {
+        @extend selection;
+        min-height: 0;
+        min-width: rem(16px);
+
+        row:selected:not(:focus) & {
+            color: inherit;
+            background: rgba($fg-color, 0.15);
+        }
     }
 }
