@@ -39,6 +39,18 @@ radio {
         -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
     }
 
+    &:focus {
+        &:not(:checked) {
+            @if $color-scheme == "light" {
+                border-color: #{'@accent_color'};
+            }
+        }
+
+        box-shadow:
+            0 0 0 2px #{'alpha(@accent_color, 0.3)'},
+            outset-highlight(),
+            outset-shadow(1);
+    }
 }
 
 check {

@@ -33,11 +33,21 @@
     }
 }
 
+placessidebar.frame,
+placessidebar viewport.frame {
+    border: none;
+}
+
 treeview.sidebar {
     -GtkTreeView-horizontal-separator: 1px;
     -GtkTreeView-vertical-separator: 6px;
 
     .view {
         @extend %sidebar-row;
+    }
+
+    entry.flat {
+        // to match row selection
+        background-color: bg_color(4);
     }
 }

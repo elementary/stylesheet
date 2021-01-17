@@ -5,7 +5,7 @@ spinner {
 
     &:checked {
         opacity: 0.8;
-        animation: spin 600ms linear infinite;
+        animation: spin 600ms steps(12) infinite;
 
         &:disabled {
             opacity: 0.4;
