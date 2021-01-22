@@ -277,7 +277,10 @@ messagedialog {
         // Compensate for off-by-one
         margin: rem(7px);
         margin-bottom: rem(8px);
-        // Double space between content and actions
-        margin-top: rem(16px);
     }
+}
+
+messagedialog .dialog-action-area {
+    // Double space between content and actions
+    margin-top: rem(16px);
 }
