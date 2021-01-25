@@ -38,8 +38,13 @@ progressbar {
         }
 
         progress {
+            animation: progress 2s ease infinite;
             margin-left: -1px;
             margin-right: -1px;
+
+            &:backdrop {
+                animation: none;
+            }
         }
     }
 
@@ -71,5 +76,27 @@ progressbar {
         trough {
             background: #{'alpha(@fg_color, 0.15)'};
         }
+    }
+}
+
+@keyframes progress {
+    from {
+        background-image: linear-gradient(to right, #{'@accent_color'}, #{'@accent_color'}, #{'@accent_color'});
+    }
+
+    33% {
+        background-image: linear-gradient(to right, #{'@accent_color'}, #{'alpha(@accent_color_100, 0.5)'}, #{'@accent_color'});
+    }
+
+    50% {
+        background-image: linear-gradient(to right, #{'@accent_color'}, #{'alpha(@accent_color_100, 0.5)'}, #{'alpha(@accent_color_100, 0.5)'});
+    }
+
+    67% {
+        background-image: linear-gradient(to right, #{'@accent_color'}, #{'@accent_color'}, #{'alpha(@accent_color_100, 0.5)'});
+    }
+
+    to {
+        background-image: linear-gradient(to right, #{'@accent_color'}, #{'@accent_color'}, #{'@accent_color'});
     }
 }
