@@ -41,7 +41,7 @@ progressbar {
             margin-right: -1px;
 
             &:not(.pulse) {
-                animation: progress 2s ease infinite;
+                animation: progress 1.5s $easing infinite;
                 background-size: cover, 48px 100%;
                 background-repeat: no-repeat;
                 background-image:
