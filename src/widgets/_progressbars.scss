@@ -57,7 +57,7 @@ progressbar {
                         rgba(white, 0)
                     );
 
-                &:dir(rtl) {
+                &.right {
                     animation-direction: reverse;
                 }
             }
