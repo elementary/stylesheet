@@ -41,6 +41,7 @@ progressbar {
             margin-right: -1px;
 
             &:not(.pulse) {
+                 animation: progress 2s ease infinite;
                 background-size: cover, 48px 100%;
                 background-repeat: no-repeat;
                 background-image:
@@ -56,12 +57,8 @@ progressbar {
                         rgba(white, 0)
                     );
 
-                &:dir(ltr) {
-                    animation: progress 2s ease infinite;
-                }
-
                 &:dir(rtl) {
-                    animation: progress-rtl 2s ease infinite;
+                    animation-direction: reverse;
                 }
             }
 
@@ -110,15 +107,5 @@ progressbar {
 
     to {
         background-position: 0, calc(100% + 48px), 0%;
-    }
-}
-
-@keyframes progress-rtl {
-    from {
-        background-position: 0, calc(100% + 48px), 0%;
-    }
-
-    to {
-        background-position: 0, calc(0% - 48px), 0%;
     }
 }
