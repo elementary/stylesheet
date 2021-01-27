@@ -1,7 +1,3 @@
-image:disabled {
-    -gtk-icon-effect: dim;
-}
-
 selection {
     background-color: #{'@selected_bg_color'};
     color: #{'@selected_fg_color'};
@@ -58,6 +54,7 @@ selection {
 @import '_emojipicker.scss';
 @import '_entries.scss';
 @import '_expanders.scss';
+@import '_images.scss';
 @import '_infobars.scss';
 @import '_levelbars.scss';
 @import '_linked.scss';

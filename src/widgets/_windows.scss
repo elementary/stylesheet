@@ -7,6 +7,7 @@
 assistant,
 dialog,
 messagedialog,
+message-dialog,
 printdialog,
 window.csd:not(.popup):not(.menu) {
     > decoration {
@@ -84,7 +85,7 @@ window:not(.popup):not(.menu) {
                 outset-highlight("full"),
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-                0 rem(1px) rem(2px) rgba(black, 0.2);
+                0 1px rem(2px) rgba(black, 0.2);
             padding: rem(6px);
 
             @if $color-scheme == "dark" {
@@ -92,14 +93,14 @@ window:not(.popup):not(.menu) {
                     outset-highlight("full"),
                     // Intentionally not in ems since it's used as a stroke
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                    0 rem(1px) rem(2px) rgba(black, 0.2);
+                    0 1px rem(2px) rgba(black, 0.2);
             }
 
             &:backdrop {
                 box-shadow:
                     outset-highlight("full"),
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                    0 rem(1px) rem(2px) rgba(black, 0.15);
+                    0 1px rem(2px) rgba(black, 0.15);
             }
 
             &.default-decoration {
@@ -186,21 +187,21 @@ window:not(.popup):not(.menu) {
                 outset-highlight("bottom"),
                 // Intentionally not in ems since it's used as a stroke
                 0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-                0 rem(1px) rem(2px) rgba(black, 0.2);
+                0 1px rem(2px) rgba(black, 0.2);
 
             @if $color-scheme == "dark" {
                 box-shadow:
                     outset-highlight("bottom"),
                     // Intentionally not in ems since it's used as a stroke
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                    0 rem(1px) rem(2px) rgba(black, 0.2);
+                    0 1px rem(2px) rgba(black, 0.2);
             }
 
             &:backdrop:not(.flat) {
                 box-shadow:
                     outset-highlight("bottom"),
                     0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                    0 rem(1px) rem(2px) rgba(black, 0.15);
+                    0 1px rem(2px) rgba(black, 0.15);
             }
         }
     }
@@ -242,7 +243,8 @@ window:not(.popup):not(.menu) {
 }
 
 dialog,
-messagedialog {
+messagedialog,
+message-dialog {
     border-radius: 0 0 rem(6px) rem(6px);
     box-shadow: outset-highlight("bottom");
 
@@ -277,17 +279,16 @@ messagedialog {
         }
     }
 
-    .dialog-vbox {
-        // Remove the 2px border_width from Gtk.Dialog. Intentionally not in ems
-        margin: -2px;
-    }
-
     // These should should in 12px borders around buttons
     .dialog-action-area {
         // Compensate for off-by-one
         margin: rem(7px);
         margin-bottom: rem(8px);
-        // Double space between content and actions
-        margin-top: rem(16px);
     }
+}
+
+messagedialog .dialog-action-area,
+message-dialog .dialog-action-area {
+    // Double space between content and actions
+    margin-top: rem(16px);
 }
