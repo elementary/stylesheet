@@ -265,7 +265,6 @@ window:not(.popup):not(.menu) {
 dialog,
 messagedialog,
 message-dialog {
-    border-radius: 0 0 rem(6px) rem(6px);
     box-shadow: outset-highlight("bottom");
 
     > decoration {
@@ -287,16 +286,20 @@ message-dialog {
         }
     }
 
-    > .titlebar {
-        background-color: bg_color(2);
-        box-shadow: outset-highlight("top");
+    &.csd {
+        border-radius: 0 0 rem(6px) rem(6px);
 
-        label.title {
-            text-shadow: none;
-            -gtk-icon-shadow: none;
-            font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
-            color: transparent;
-        }
+       > .titlebar {
+           background-color: bg_color(2);
+           box-shadow: outset-highlight("top");
+
+           label.title {
+               text-shadow: none;
+               -gtk-icon-shadow: none;
+               font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
+               color: transparent;
+           }
+       }
     }
 
     // These should should in 12px borders around buttons
