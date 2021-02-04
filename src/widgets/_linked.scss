@@ -30,7 +30,8 @@
 
 viewswitcher > box > button.horizontal.radio,
 .linked:not(.vertical) > button,
-.linked:not(.vertical) > entry {
+.linked:not(.vertical) > entry,
+.linked:not(.vertical) > spinbutton {
     &:not(:first-child) {
         @extend %linked_not_left;
     }
@@ -41,7 +42,8 @@ viewswitcher > box > button.horizontal.radio,
 }
 
 .linked.vertical > button,
-.linked.vertical > entry {
+.linked.vertical > entry,
+.linked.vertical > spinbutton {
     &:not(:first-child) {
         @extend %linked_not_top;
     }
