@@ -22,20 +22,27 @@
             border-bottom-color: #{'@accent_color'};
         }
     }
+
+    &:focus {
+        @if $color-scheme == "light" {
+            border-color: #{'@accent_color'};
+        }
+        box-shadow:
+            0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
+            inset-shadow();
+    }
 }
 
 entry {
     @extend %entry;
+    // Prevent size change when setting primary or secondary icons
+    min-height: 16px;
     // Off-by-one to account for padding-box clip
     padding: rem(4px);
 
     image {
         color: #{'@placeholder_text_color'};
         transition: all duration("element") $easing;
-        -gtk-icon-palette:
-            error #{'@error_color'},
-            success #{'@success_color'},
-            warning #{'@warning_color'};
     }
 
     image.left {
@@ -50,5 +57,10 @@ entry {
     &:dir(ltr) image.right:hover,
     &:dir(rtl) image.left:hover {
         color: $fg-color;
+    }
+
+    // Fixes an issue in Epiphany
+    headerbar & {
+        margin: 1px;
     }
 }

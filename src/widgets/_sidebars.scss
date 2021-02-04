@@ -7,7 +7,9 @@
         }
     }
 
-    &:selected {
+    &:selected,
+    // GtkAssistant
+    &.highlight {
         background-color: bg_color(4);
         color: $fg-color;
     }
@@ -26,15 +28,29 @@
 }
 
 .sidebar {
-    list {
-        padding-top: rem(6px);
+    list row,
+    // GtkAssistant
+    > label {
+        padding: rem(6px) rem(12px);
 
-        row {
-            padding: rem(6px) rem(12px);
-
-            @extend %sidebar-row;
-        }
+        @extend %sidebar-row;
     }
+}
+
+assistant .sidebar {
+    &:dir(ltr) {
+        border-right: 1px solid #{'@menu_separator'};
+        box-shadow: inset -1px 0 0 #{'@menu_separator_shadow'};
+    }
+    &:dir(rtl) {
+        border-left: 1px solid #{'@menu_separator'};
+        box-shadow: inset 1px 0 0 #{'@menu_separator_shadow'};
+    }
+}
+
+placessidebar.frame,
+placessidebar viewport.frame {
+    border: none;
 }
 
 treeview.sidebar {
@@ -43,5 +59,10 @@ treeview.sidebar {
 
     .view {
         @extend %sidebar-row;
+    }
+
+    entry.flat {
+        // to match row selection
+        background-color: bg_color(4);
     }
 }
