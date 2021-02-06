@@ -32,7 +32,6 @@ progressbar {
     }
 
     &.horizontal {
-        progress,
         trough {
             @extend %outset-background;
         }
@@ -40,6 +39,33 @@ progressbar {
         progress {
             margin-left: -1px;
             margin-right: -1px;
+
+            &:not(.pulse) {
+                animation: progress 1.5s $easing infinite;
+                background-size: cover, 48px 100%;
+                background-repeat: no-repeat;
+                background-image:
+                    linear-gradient(
+                        to bottom,
+                        #{'alpha(@highlight_color, 0.2)'},
+                        rgba(white, 0)
+                    ),
+                    linear-gradient(
+                        to right,
+                        rgba(white, 0),
+                        rgba(white, 0.25) 60%,
+                        rgba(white, 0)
+                    );
+
+                &.right {
+                    animation-direction: reverse;
+                }
+            }
+
+            &:backdrop {
+                animation: none;
+                @extend %outset-background;
+            }
         }
     }
 
@@ -71,5 +97,15 @@ progressbar {
         trough {
             background: #{'alpha(@fg_color, 0.15)'};
         }
+    }
+}
+
+@keyframes progress {
+    from {
+        background-position: 0, calc(0% - 48px), 0%;
+    }
+
+    to {
+        background-position: 0, calc(100% + 48px), 0%;
     }
 }
