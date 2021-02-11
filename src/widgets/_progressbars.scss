@@ -90,7 +90,10 @@ progressbar {
         }
 
         progress,
-        progress:backdrop {
+        progress:backdrop,
+        // We have to be specific to override animation
+        .horizontal progress {
+            animation: none;
             background: #{'alpha(@fg_color, 0.78)'};
         }
 
