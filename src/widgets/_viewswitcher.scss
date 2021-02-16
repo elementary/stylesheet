@@ -53,13 +53,13 @@ viewswitcher button {
 
         &.narrow {
             @extend .small-label;
-            padding-top: rem(5px);
-            padding-bottom: rem(5px);
+            padding-top: rem(3px);
+            padding-bottom: rem(3px);
 
             & image,
             & label {
-                padding-left: rem(8px);
-                padding-right: rem(8px);
+                padding-left: rem(6px);
+                padding-right: rem(6px);
             }
         }
 
