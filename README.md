@@ -1,6 +1,6 @@
-# Greenfield
+# Stylesheet
 
-A stylesheet for elementary OS
+The GTK Stylesheet for elementary OS
 
 ## Installation
 
