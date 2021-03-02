@@ -1,0 +1,10 @@
+image {
+    -gtk-icon-palette:
+        error #{'@error_color'},
+        success #{'@success_color'},
+        warning $warning-icon-color;
+
+    &:disabled {
+        -gtk-icon-effect: dim;
+    }
+}

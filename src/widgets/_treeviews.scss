@@ -9,6 +9,12 @@ treeview {
         }
     }
 
+    entry.flat {
+        // Account for some off-by-one funkiness
+        padding: rem(4px) rem(1px);
+        background: inherit;
+    }
+
     header button {
         border-left-width: 0;
         border-radius: 0;

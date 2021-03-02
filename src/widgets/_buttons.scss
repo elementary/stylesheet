@@ -6,7 +6,7 @@ button {
     color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
     padding: rem(4px) rem(7px);
-    transition: all duration("element") $easing;
+    transition: background duration("element") $easing;
 
     &.flat,
     &.image-button:not(.text-button) {
@@ -169,6 +169,10 @@ button {
     &.image-button,
     &.titlebutton {
         padding: rem(4px);
+    }
+
+    &.text-button.link {
+        padding: 0;
     }
 
     &.color {

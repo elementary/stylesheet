@@ -41,8 +41,10 @@
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 @define-color borders #{"" + $toplevel-border-color};
 
+@define-color bg_color #{"" + bg_color(2)};
 @define-color theme_bg_color #{""+ bg_color(2)};
 @define-color content_view_bg #{""+ bg_color(2)};
+@define-color insensitive_bg_color #{""+ bg_color(3)};
 
 // Text, images, and other foreground elements
 @define-color fg_color #{"" + $fg-color};

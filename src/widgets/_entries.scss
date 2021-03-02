@@ -43,10 +43,6 @@ entry {
     image {
         color: #{'@placeholder_text_color'};
         transition: all duration("element") $easing;
-        -gtk-icon-palette:
-            error #{'@error_color'},
-            success #{'@success_color'},
-            warning #{'@warning_color'};
     }
 
     image.left {
@@ -61,5 +57,10 @@ entry {
     &:dir(ltr) image.right:hover,
     &:dir(rtl) image.left:hover {
         color: $fg-color;
+    }
+
+    // Fixes an issue in Epiphany
+    headerbar & {
+        margin: 1px;
     }
 }
