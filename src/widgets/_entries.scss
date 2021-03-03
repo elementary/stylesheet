@@ -58,4 +58,9 @@ entry {
     &:dir(rtl) image.left:hover {
         color: $fg-color;
     }
+
+    // Fixes an issue in Epiphany
+    headerbar & {
+        margin: 1px;
+    }
 }

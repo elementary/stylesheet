@@ -1,3 +1,8 @@
+image:backdrop,
+image:disabled {
+    -gtk-icon-effect: dim;
+}
+
 selection {
     background-color: #{'@selected_bg_color'};
     color: #{'@selected_fg_color'};
@@ -80,4 +85,5 @@ selection {
 @import '_tooltips.scss';
 @import '_treeviews.scss';
 @import '_views.scss';
+@import '_viewswitcher.scss';
 @import '_windows.scss';
