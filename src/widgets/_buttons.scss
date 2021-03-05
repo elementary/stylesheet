@@ -118,6 +118,7 @@ button {
                 border-color: #{'@accent_color'};
             }
             outline-color: #{'alpha(@accent_color, 0.3)'};
+            outline-offset: rem(-2px);
             outline-width: rem(2px);
             outline-style: solid;
         }

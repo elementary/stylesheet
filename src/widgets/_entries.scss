@@ -28,7 +28,7 @@
             border-color: #{'@accent_color'};
         }
         box-shadow:
-            0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
+            inset 0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
             inset-shadow();
     }
 }
