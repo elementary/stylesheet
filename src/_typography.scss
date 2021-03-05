@@ -121,10 +121,10 @@ label.h4,
         }
     }
 
-    // &:backdrop {
-    //     color: $fg-color;
-    //     opacity: 0.6;
-    // }
+    &:backdrop {
+        color: $fg-color;
+        opacity: 0.6;
+    }
 }
 
 .dim-label,
