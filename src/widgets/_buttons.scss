@@ -164,6 +164,10 @@ button {
         color: $insensitive-fg-color;
     }
 
+    &:backdrop {
+        -gtk-icon-effect: dim;
+    }
+
     &.color,
     &.combo,
     &.image-button,
