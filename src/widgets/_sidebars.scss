@@ -12,6 +12,9 @@
     &.highlight {
         background-color: bg_color(4);
         color: $fg-color;
+        @if $color-scheme == "dark" {
+            background-color: bg_color(2);
+        }
     }
 }
 
