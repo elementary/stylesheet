@@ -40,6 +40,7 @@
 
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 @define-color borders #{"" + $toplevel-border-color};
+@define-color unfocused_borders #{"" + $toplevel-border-color};
 
 @define-color bg_color #{"" + bg_color(2)};
 @define-color theme_bg_color #{""+ bg_color(2)};
