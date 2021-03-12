@@ -7,7 +7,7 @@
     color: #{'@fg_color'};
 
     &:disabled {
-        background: rgba(black, 0.03);
+        background: $insensitive-base-color;
         box-shadow: inset-shadow("disabled");
         color: $insensitive-fg-color;
     }

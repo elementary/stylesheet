@@ -61,6 +61,9 @@ $warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
     }
 }
 
+// Disabled entries, views, checkbuttons, spinbuttons
+$insensitive-base-color: mix(bg_color(2), bg_color(3), $weight: 10%);
+
 // Disabled text, images, other foreground elements
 $insensitive-fg-color: mix($fg-color, bg_color(2), $weight: 50%);
 
