@@ -17,7 +17,7 @@ $warning_color: $BANANA_900;
 $warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
 
 @if $color-scheme == "dark" {
-    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 70%);
+    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 65%);
     $fg-color: white;
     $toplevel-border-color: rgba(black, 0.75);
     $border-color: rgba(black, 0.3);
@@ -54,9 +54,9 @@ $warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
         } @else if $level == 2 {
             @return $BLACK_500;
         } @else if $level == 3 {
-            @return mix($BLACK_500, $BLACK_700, $weight: 75%);
+            @return mix($BLACK_500, $BLACK_700, $weight: 90%);
         } @else if $level == 4 {
-            @return $titlebar-color;
+            @return mix($BLACK_500, $BLACK_700, $weight: 45%);
         }
     }
 }
