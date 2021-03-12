@@ -44,7 +44,7 @@ scrolledwindow {
     color: $fg-color;
 
     &:disabled {
-        background-color: #{'@insensitive_base_color'};
+        background-color: $insensitive-base-color;
         color: $insensitive-fg-color;
     }
 }
