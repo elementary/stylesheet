@@ -24,8 +24,8 @@
 @define-color menu_separator #{rgba(black, 0.15)};
 @define-color menu_separator_shadow #{rgba(white, 0.8)};
 
-@define-color selected_bg_color #{'alpha(@accent_color, 0.25)'};
-@define-color selected_fg_color #{'shade(@accent_color, 0.5)'};
+@define-color selected_bg_color #{'mix(@accent_color, white, 0.5)'};
+@define-color selected_fg_color #{'shade(@accent_color, 0.4)'};
 @define-color theme_unfocused_selected_bg_color #{'alpha(@text_color, 0.10)'};
 @define-color theme_unfocused_selected_fg_color #{"" + $fg-color};
 
