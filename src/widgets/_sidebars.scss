@@ -17,13 +17,16 @@
 
 .sidebar,
 .sidebar.view,
-.sidebar list,
-.source-list,
-.source-list .view {
-    background-color: bg_color(3);
-
+.source-list {
     popover & {
         background: transparent;
+    }
+
+    &,
+    list,
+    window.unified.csd & headerbar.titlebar.flat,
+    .view {
+        background-color: bg_color(3);
     }
 }
 
