@@ -40,8 +40,13 @@ scrolledwindow {
 }
 
 .view {
-    background-color: bg-color(1);
+    background-color: #{'@base_color'};
     color: $fg-color;
+
+    &:disabled {
+        background-color: $insensitive-base-color;
+        color: $insensitive-fg-color;
+    }
 }
 
 .terminal {

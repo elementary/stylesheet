@@ -26,6 +26,8 @@
 
 @define-color selected_bg_color #{'alpha(@accent_color, 0.25)'};
 @define-color selected_fg_color #{'shade(@accent_color, 0.5)'};
+@define-color theme_unfocused_selected_bg_color #{'alpha(@text_color, 0.10)'};
+@define-color theme_unfocused_selected_fg_color #{"" + $fg-color};
 
 @if $color-scheme == "dark" {
     @define-color menu_separator #{rgba(black, 0.25)};
@@ -35,23 +37,31 @@
     @define-color selected_fg_color #{'mix(shade(@accent_color, 1.1), white, 0.75)'};
 }
 
+// Used primarily for views and entries
 @define-color base_color #{"" + bg_color(1)};
 @define-color theme_base_color #{"" + bg_color(1)};
+@define-color theme_unfocused_base_color #{"" + bg_color(1)};
+@define-color insensitive_base_color #{"" + $insensitive-base-color};
 
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 @define-color borders #{"" + $toplevel-border-color};
+@define-color unfocused_borders #{"" + $toplevel-border-color};
 
 @define-color bg_color #{"" + bg_color(2)};
 @define-color theme_bg_color #{""+ bg_color(2)};
 @define-color content_view_bg #{""+ bg_color(2)};
 @define-color insensitive_bg_color #{""+ bg_color(3)};
+@define-color theme_unfocused_bg_color #{""+ bg_color(2)};
 
 // Text, images, and other foreground elements
 @define-color fg_color #{"" + $fg-color};
 @define-color theme_fg_color #{"" + $fg-color};
 @define-color insensitive_fg_color #{"" + $insensitive-fg-color};
+@define-color unfocused_insensitive_color #{"" + $insensitive-fg-color};
 @define-color text_color #{"" + $fg-color};
 @define-color theme_text_color #{"" + $fg-color};
+@define-color theme_unfocused_fg_color #{"" + $fg-color};
+@define-color theme_unfocused_text_color #{"" + $fg-color};
 
 @define-color theme_selected_bg_color #{'@selected_bg_color'};
 @define-color theme_selected_fg_color #{'@selected_fg_color'};
