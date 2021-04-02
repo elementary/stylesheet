@@ -5,6 +5,15 @@ popover {
     box-shadow: shadow(2);
     margin: 6px;
 
+    label.h4 {
+        margin: 0 rem(12px);
+    }
+
+    // Fixes extra padding in switch modelbuttons
+    menuitem.h4 label {
+        padding: 0;
+    }
+
     menuitem,
     modelbutton,
     .menuitem {
