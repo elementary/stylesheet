@@ -1,3 +1,5 @@
+
+
 notebook {
     header {
         background-color: bg-color(3);
@@ -41,23 +43,33 @@ notebook {
 }
 
 tab {
-    border-radius: rem(3px);
-    // Slow to match the close button revealer transition
-    transition: all 300ms ease-in;
+    $border-radius: rem(3px);
+    $margin: rem(6px);
 
-    .bottom &,
     .top & {
-        margin: rem(3px) 0;
+        border-radius: $border-radius $border-radius 0 0;
+        margin-top: $margin;
+        margin-bottom: 1px;
     }
 
-    .left &,
+    .bottom & {
+        border-radius: 0 0 $border-radius $border-radius;
+        margin-bottom: $margin;
+    }
+
+    .left & {
+        border-radius: $border-radius 0 0 $border-radius;
+        margin-left: $margin;
+    }
+
     .right & {
-        margin: 0 rem(3px);
+        border-radius: 0 $border-radius $border-radius 0;
+        margin-right: $margin;
     }
 
     // Not scaled because it's based on icon size
     min-width: 24px;
-    padding: rem(3px);
+    padding: rem(4px);
 
     &:hover:not(:checked) {
         background-color: bg-color(4);
@@ -65,10 +77,19 @@ tab {
 
     &:checked {
         background-color: bg-color(1);
-        box-shadow:
-            outset-highlight(),
-            0 0 0 1px rgba(black, 0.1),
-            outset-shadow(2);
+
+        .top & {
+            box-shadow: 0 rem(-1px) 0 0 #{"@accent_color"};
+        }
+        .bottom & {
+            border-bottom: rem(2px) solid #{"@accent_color"};
+        }
+        .left & {
+            border-left: rem(2px) solid #{"@accent_color"};
+        }
+        .right & {
+            border-right: rem(2px) solid #{"@accent_color"};
+        }
 
         &:backdrop {
             background-color: bg-color(2);
