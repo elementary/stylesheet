@@ -3,25 +3,30 @@ notebook {
         background-color: bg-color(3);
 
         $gradient: 
-            rgba(black, 0),
-            rgba(black, 0) calc(100% - #{rem(2px)}),
-            rgba(black, 0.05) calc(100% - #{rem(1px)}),
-            rgba(black, 0.15);
+            rgba(black, 0.07) 0%,
+            rgba(black, 0.03) 20%,
+            rgba(black, 0.03) 80%,
+            rgba(black, 0.07) 100%;
+        $border: 1px solid rgba(black, 0.3);
 
         &.top {
             background-image: linear-gradient(to bottom, $gradient);
+            border-bottom: $border;
         }
 
         &.bottom {
             background-image: linear-gradient(to top, $gradient);
+            border-top: $border;
         }
 
         &.right {
             background-image: linear-gradient(to left, $gradient);
+            border-left: $border;
         }
 
         &.left {
             background-image: linear-gradient(to right, $gradient);
+            border-right: $border;
         }
 
         &:backdrop {
@@ -41,52 +46,78 @@ notebook {
 }
 
 tab {
-    $border-radius: rem(3px);
-    $margin: rem(6px);
+    // Not scaled because it's based on icon size
+    min-width: 24px;
+    padding: rem(4px);
 
+    // Set transparent borders for all tabs, since
+    // active tabs have borders and we don't want
+    // any shifts as a result of changing the border.
+    $border-radius: rem(4px);
+    $margin: rem(4px);
+    $border: 1px solid transparent;
     .top & {
         border-radius: $border-radius $border-radius 0 0;
         margin-top: $margin;
-        margin-bottom: 1px;
+        border-top: $border;
+        border-left: $border;
+        border-right: $border;
     }
 
     .bottom & {
         border-radius: 0 0 $border-radius $border-radius;
         margin-bottom: $margin;
+        border-bottom: $border;
+        border-left: $border;
+        border-right: $border;
     }
 
     .left & {
         border-radius: $border-radius 0 0 $border-radius;
         margin-left: $margin;
+        border-left: $border;
+        border-top: $border;
+        border-bottom: $border;
     }
 
     .right & {
         border-radius: 0 $border-radius $border-radius 0;
         margin-right: $margin;
+        border-right: $border;
+        border-top: $border;
+        border-bottom: $border;
     }
 
-    // Not scaled because it's based on icon size
-    min-width: 24px;
-    padding: rem(4px);
-
-    &:hover:not(:checked) {
-        background-color: bg-color(4);
-    }
-
+    // The box-shadow masks the bottom border of
+    // the notebook so the active tab doesn't have
+    // a border underneath it.
     &:checked {
         background-color: bg-color(1);
 
+        $border-color: rgba(black, 0.3);
         .top & {
-            box-shadow: 0 rem(-1px) 0 0 #{"@accent_color"};
+            border-top-color: $border-color;
+            border-left-color: $border-color;
+            border-right-color: $border-color;
+            box-shadow: 0 rem(1px) 0 0 bg-color(1);
         }
         .bottom & {
-            border-bottom: rem(2px) solid #{"@accent_color"};
+            border-bottom-color: $border-color;
+            border-left-color: $border-color;
+            border-right-color: $border-color;
+            box-shadow: 0 rem(-1px) 0 0 bg-color(1);
         }
         .left & {
-            border-left: rem(2px) solid #{"@accent_color"};
+            border-left-color: $border-color;
+            border-top-color: $border-color;
+            border-bottom-color: $border-color;
+            box-shadow: rem(1px) 0 0 0 bg-color(1);
         }
         .right & {
-            border-right: rem(2px) solid #{"@accent_color"};
+            border-right-color: $border-color;
+            border-top-color: $border-color;
+            border-bottom-color: $border-color;
+            box-shadow: rem(-1px) 0 0 0 bg-color(1);
         }
 
         &:backdrop {
