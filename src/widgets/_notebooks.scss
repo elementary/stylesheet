@@ -1,32 +1,34 @@
+tabbox {
+    background-color: bg-color(3);
+
+    $gradient: 
+        rgba(black, 0),
+        rgba(black, 0) calc(100% - #{rem(2px)}),
+        rgba(black, 0.05) calc(100% - #{rem(1px)}),
+        rgba(black, 0.15);
+
+    background-image: linear-gradient(to bottom, $gradient);
+
+    &.bottom {
+        background-image: linear-gradient(to top, $gradient);
+    }
+
+    &.right {
+        background-image: linear-gradient(to left, $gradient);
+    }
+
+    &.left {
+        background-image: linear-gradient(to right, $gradient);
+    }
+
+    &:backdrop {
+        background-color: bg-color(2);
+    }
+}
+
 notebook {
     header {
-        background-color: bg-color(3);
-
-        $gradient: 
-            rgba(black, 0),
-            rgba(black, 0) calc(100% - #{rem(2px)}),
-            rgba(black, 0.05) calc(100% - #{rem(1px)}),
-            rgba(black, 0.15);
-
-        &.top {
-            background-image: linear-gradient(to bottom, $gradient);
-        }
-
-        &.bottom {
-            background-image: linear-gradient(to top, $gradient);
-        }
-
-        &.right {
-            background-image: linear-gradient(to left, $gradient);
-        }
-
-        &.left {
-            background-image: linear-gradient(to right, $gradient);
-        }
-
-        &:backdrop {
-            background-color: bg-color(2);
-        }
+        @extend tabbox;
 
         // Matches the new tab and history buttons
         > box > button.image-button,
@@ -45,6 +47,7 @@ tab {
     // Slow to match the close button revealer transition
     transition: all 300ms ease-in;
 
+    tabbox &,
     .bottom &,
     .top & {
         margin: rem(3px) 0;
@@ -58,6 +61,10 @@ tab {
     // Not scaled because it's based on icon size
     min-width: 24px;
     padding: rem(3px);
+
+    .tab-close-button {
+        @extend .flat;
+    }
 
     &:hover:not(:checked) {
         background-color: bg-color(4);
