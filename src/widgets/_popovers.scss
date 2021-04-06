@@ -20,12 +20,6 @@ popover {
         @extend %menuitem;
     }
 
-    // Almost certainly means you are using ModelMenu
-    &.menu > stack {
-        // These are hardcoded values in Gtk, we don't want rems here
-        margin: -4px -10px;
-    }
-
     separator {
         &.horizontal {
             border-top: 1px solid #{'@menu_separator'};
