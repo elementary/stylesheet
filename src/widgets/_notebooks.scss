@@ -47,6 +47,12 @@ tab {
     // Slow to match the close button revealer transition
     transition: all 300ms ease-in;
 
+    tabbox & {
+        background-clip: padding-box;
+        border: 1px solid transparent;
+        transition: all 150ms ease-in;
+    }
+
     tabbox &,
     .bottom &,
     .top & {
@@ -76,6 +82,11 @@ tab {
             outset-highlight(),
             0 0 0 1px rgba(black, 0.1),
             outset-shadow(2);
+
+        tabbox & {
+            border-color: rgba(black, 0.1);
+            box-shadow: outset-highlight();
+        }
 
         &:backdrop {
             background-color: bg-color(2);
