@@ -10,6 +10,9 @@ $toplevel-border-color: rgba(black, 0.2);
 // Outset box shadow or border color on inputs like buttons, entries, checkboxes
 $border-color: rgba(black, 0.2);
 
+// Disabled entries, views, checkbuttons, spinbuttons
+$insensitive-base-color: rgba(0, 0, 0, 0.03);
+
 // Semantic colors
 $error_color: $STRAWBERRY_500;
 $success_color: $LIME_700;
@@ -21,6 +24,7 @@ $warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
     $fg-color: white;
     $toplevel-border-color: rgba(black, 0.75);
     $border-color: rgba(black, 0.3);
+    $insensitive-base-color: rgba(0, 0, 0, 0.075);
 
     $error-color: $STRAWBERRY_300;
     $success-color: $LIME_300;
@@ -60,9 +64,6 @@ $warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
         }
     }
 }
-
-// Disabled entries, views, checkbuttons, spinbuttons
-$insensitive-base-color: mix(bg_color(2), bg_color(3), $weight: 10%);
 
 // Disabled text, images, other foreground elements
 $insensitive-fg-color: mix($fg-color, bg_color(2), $weight: 50%);
