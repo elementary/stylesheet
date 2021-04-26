@@ -12,3 +12,8 @@ spinner {
         }
     }
 }
+
+entry.spin:dir(ltr) image:last-child,
+entry.spin:dir(rtl) image:first-child {
+    animation: spin 600ms steps(12) infinite;
+}
