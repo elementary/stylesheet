@@ -18,9 +18,7 @@
 
 $easing: cubic-bezier(0.4, 0, 0.2, 1);
 
-.spin,
-entry.spin:dir(ltr) image:last-child,
-entry.spin:dir(rtl) image:first-child {
+.spin {
     animation: spin 600ms linear infinite;
 }
 
