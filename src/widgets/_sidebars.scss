@@ -54,6 +54,15 @@ assistant .sidebar {
 placessidebar.frame,
 placessidebar viewport.frame {
     border: none;
+
+    .sidebar-icon {
+        -gtk-icon-style: regular;
+    }
+
+    .sidebar-icon + .sidebar-label:dir(ltr),
+    .sidebar-label + .sidebar-icon:dir(rtl) {
+        margin-left: rem(6px);
+    }
 }
 
 treeview.sidebar {
