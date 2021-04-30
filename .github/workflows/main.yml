@@ -18,7 +18,7 @@ jobs:
         apt install -y meson sassc
     - name: Build
       env:
-        DESTDIR: out
+        DESTDIR: $PWD/out
       run: |
         meson build
         ninja -C build
