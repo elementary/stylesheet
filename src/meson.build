@@ -53,4 +53,8 @@ foreach variant : variants
         install_dir: dest_theme_dir,
         rename: ['plank' / 'dock.theme', 'plank-dark' / 'dock.theme']
     )
+
+    install_subdir([
+        'assets',
+    ], install_dir: dest_theme_dir / 'gtk-3.0' )
 endforeach

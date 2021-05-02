@@ -197,4 +197,11 @@ radiobutton.image-button {
         -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
 
     }
+
+    &.auto radio {
+        background-image: url("assets/color-button-auto.png");
+        background-position: -1px -1px;
+        background-repeat: no-repeat;
+        background-size: calc(100% + 2px);
+    }
 }
