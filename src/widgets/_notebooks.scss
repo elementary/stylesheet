@@ -35,6 +35,20 @@ notebook {
         > button.image-button {
             min-width: rem(24px);
         }
+
+        arrow {
+            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+            min-height: 16px;
+            min-width: 16px;
+
+            &.down {
+                -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+            }
+
+            &:disabled {
+                color: $insensitive-fg-color;
+            }
+        }
     }
 
     viewport {
