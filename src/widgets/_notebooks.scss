@@ -68,7 +68,8 @@ tab {
     min-width: 24px;
     padding: rem(3px);
 
-    .tab-close-button, .tab-indicator{
+    .tab-close-button,
+    .tab-indicator {
         @extend .flat;
     }
 
