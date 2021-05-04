@@ -272,6 +272,11 @@ message-dialog {
        > .titlebar {
            background-color: bg_color(2);
            box-shadow: outset-highlight("top");
+           padding: rem(6px);
+
+           &.default-decoration {
+               padding: 0;
+           }
 
            label.title {
                text-shadow: none;
