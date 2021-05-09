@@ -13,6 +13,15 @@ button {
         background: none;
         border: none;
         box-shadow: none;
+
+        &:focus {
+            @extend selection;
+            outline-style: none;
+        }
+
+        headerbar & {
+            border-radius: 99px;
+        }
     }
 
     .linked &.flat,
