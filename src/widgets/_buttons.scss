@@ -14,6 +14,10 @@ button {
         border: none;
         box-shadow: none;
 
+        &:checked {
+            background: rgba($fg-color, 0.15);
+        }
+
         &:focus {
             @extend selection;
             outline-style: none;
@@ -118,6 +122,7 @@ button {
             @if $color-scheme == "light" {
                 border-color: #{'@accent_color'};
             }
+            color: #{'@selected_fg_color'};
             outline-color: #{'alpha(@accent_color, 0.3)'};
             outline-width: rem(2px);
             outline-style: solid;
