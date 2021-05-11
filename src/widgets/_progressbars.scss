@@ -64,6 +64,7 @@ progressbar {
 
             &:backdrop {
                 animation: none;
+                background-image: none;
                 @extend %outset-background;
             }
         }
