@@ -44,6 +44,10 @@ button {
             outset-highlight("full"),
             outset-shadow(2);
 
+        headerbar & {
+            border-radius: rem(3px);
+        }
+
         &.destructive-action:not(:disabled) {
 
             &,
