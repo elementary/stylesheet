@@ -13,10 +13,6 @@ window.csd:not(.popup):not(.menu) {
     > decoration {
         margin: rem(12px);
     }
-
-    > .titlebar {
-        border-radius: rem(6px) rem(6px) 0 0;
-    }
 }
 
 assistant,
@@ -79,48 +75,6 @@ window:not(.popup):not(.menu) {
                 }
             }
         }
-
-        .titlebar {
-            box-shadow:
-                outset-highlight("full"),
-                // Intentionally not in ems since it's used as a stroke
-                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-                0 1px rem(2px) rgba(black, 0.2);
-            padding: rem(6px);
-
-            @if $color-scheme == "dark" {
-                box-shadow:
-                    outset-highlight("full"),
-                    // Intentionally not in ems since it's used as a stroke
-                    0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                    0 1px rem(2px) rgba(black, 0.2);
-            }
-
-            &:backdrop {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                    0 1px rem(2px) rgba(black, 0.15);
-            }
-
-            &.default-decoration {
-                padding: rem(3px);
-            }
-
-            &.flat {
-                background: bg_color(2);
-                box-shadow:
-                    1px 0 0 0 $toplevel-border-color,
-                    -1px 0 0 0 $toplevel-border-color,
-                    0 -1px 0 0 $toplevel-border-color,
-                    outset-highlight("top");
-            }
-        }
-
-        // Fixes double shadow in HdyTitleBar
-        stack.titlebar > .titlebar {
-            box-shadow: none;
-        }
     }
 
     &.rounded {
@@ -132,26 +86,11 @@ window:not(.popup):not(.menu) {
     }
 
     // SSD doesn't calculate rems correctly
-    &.ssd {
-        decoration {
-            border-radius: 6px 6px 0 0;
-            // Can't be applied directly to the window
-            box-shadow: 0 0 0 1px $toplevel-border-color;
-            margin: 12px;
-        }
-
-        .titlebar {
-            // Box shadow can't overlay content
-            border-bottom: 1px solid $toplevel-border-color;
-            border-radius: 6px 6px 0 0;
-            box-shadow: outset-highlight("full");
-            padding: 3px;
-
-            button {
-                border-radius: 3px;
-                padding: 3px;
-            }
-        }
+    &.ssd decoration {
+        border-radius: 6px 6px 0 0;
+        // Can't be applied directly to the window
+        box-shadow: 0 0 0 1px $toplevel-border-color;
+        margin: 12px;
     }
 
     // Hdy.Window
@@ -180,64 +119,6 @@ window:not(.popup):not(.menu) {
 
         decoration-overlay {
             box-shadow: outset-highlight();
-        }
-
-        .titlebar {
-            box-shadow:
-                outset-highlight("bottom"),
-                // Intentionally not in ems since it's used as a stroke
-                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.4)'},
-                0 1px rem(2px) rgba(black, 0.2);
-
-            @if $color-scheme == "dark" {
-                box-shadow:
-                    outset-highlight("bottom"),
-                    // Intentionally not in ems since it's used as a stroke
-                    0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                    0 1px rem(2px) rgba(black, 0.2);
-            }
-
-            &:backdrop:not(.flat) {
-                box-shadow:
-                    outset-highlight("bottom"),
-                    0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                    0 1px rem(2px) rgba(black, 0.15);
-            }
-        }
-    }
-
-    .titlebar {
-        // Etched in the light style, shadow in the dark style
-        $shadow: 0 1px rgba(white, 0.5);
-        @if $color-scheme == "dark" {
-            $shadow: 0 1px rgba(black, 0.67);
-        }
-
-        @extend %outset-background;
-        background-color: #{"@color_primary"};
-        color: $fg-color;
-
-        .title {
-            font-weight: 600;
-            text-shadow: $shadow
-        }
-
-        .subtitle {
-            opacity: 0.75;
-            font-size: 80%;
-        }
-
-        .titlebutton,
-        .image-button,
-        .mode-switch {
-            -gtk-icon-shadow: $shadow;
-        }
-
-        // Reset so we don't affect things inside of child popovers/menus
-        popover,
-        menu {
-            text-shadow: none;
-            -gtk-icon-shadow: none;
         }
     }
 }
@@ -268,23 +149,6 @@ message-dialog {
 
     &.csd {
         border-radius: 0 0 rem(6px) rem(6px);
-
-       > .titlebar {
-           background-color: bg_color(2);
-           box-shadow: outset-highlight("top");
-           padding: rem(6px);
-
-           &.default-decoration {
-               padding: 0;
-           }
-
-           label.title {
-               text-shadow: none;
-               -gtk-icon-shadow: none;
-               font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
-               color: transparent;
-           }
-       }
     }
 
     // These should should in 12px borders around buttons
