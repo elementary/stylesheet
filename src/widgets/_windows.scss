@@ -51,6 +51,7 @@ window:not(.popup):not(.menu) {
                 background-color: black;
                 border-radius: 0;
                 box-shadow:
+                    0 0 0 1px $toplevel-border-color,
                     0 13px 16px 4px transparent,
                     shadow(1);
             }
