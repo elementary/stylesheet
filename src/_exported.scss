@@ -29,12 +29,16 @@
 @define-color theme_unfocused_selected_bg_color #{'alpha(@text_color, 0.10)'};
 @define-color theme_unfocused_selected_fg_color #{"" + $fg-color};
 
+@define-color tab_base_color #{"" + bg_color(1)};
+
 @if $color-scheme == "dark" {
     @define-color menu_separator #{rgba(black, 0.25)};
     @define-color menu_separator_shadow #{rgba(white, 0.05)};
 
     @define-color selected_bg_color #{'alpha(shade(@accent_color, 0.85), 0.5)'};
     @define-color selected_fg_color #{'mix(shade(@accent_color, 1.1), white, 0.75)'};
+
+    @define-color tab_base_color #{"" + bg_color(2)};
 }
 
 // Used primarily for views and entries
