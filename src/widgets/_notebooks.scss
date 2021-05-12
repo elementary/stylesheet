@@ -1,6 +1,11 @@
 %tabheader {
     background-color: #{'shade (@tab_base_color, 0.95)'};
 
+    @if $color-scheme == "dark" {
+        background-color: #{'shade (@tab_base_color, 0.87)'};
+    }
+
+
     $gradient: 
         rgba(black, 0),
         rgba(black, 0) calc(100% - #{rem(2px)}),
