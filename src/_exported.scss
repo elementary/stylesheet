@@ -42,6 +42,7 @@
 @define-color theme_base_color #{"" + bg_color(1)};
 @define-color theme_unfocused_base_color #{"" + bg_color(1)};
 @define-color insensitive_base_color #{"" + $insensitive-base-color};
+@define-color tab_base_color #{'@base_color'};
 
 // Outset box shadow or border color on toplevel elements like windows, menus, popovers
 @define-color borders #{"" + $toplevel-border-color};

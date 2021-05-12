@@ -1,5 +1,5 @@
-tabbox {
-    background-color: bg-color(3);
+%tabheader {
+    background-color: #{'shade (@tab_base_color, 0.95)'};
 
     $gradient: 
         rgba(black, 0),
@@ -22,13 +22,13 @@ tabbox {
     }
 
     &:backdrop {
-        background-color: bg-color(2);
+        background-color: #{'shade (@tab_base_color, 0.98)'};
     }
 }
 
 notebook {
     header {
-        @extend tabbox;
+        @extend %tabheader;
 
         // Matches the new tab and history buttons
         > box > button.image-button,
@@ -61,13 +61,6 @@ tab {
     // Slow to match the close button revealer transition
     transition: all 300ms ease-in;
 
-    tabbox & {
-        background-clip: padding-box;
-        border: 1px solid transparent;
-        transition: all 150ms ease-in;
-    }
-
-    tabbox &,
     .bottom &,
     .top & {
         margin: rem(3px) 0;
@@ -88,23 +81,34 @@ tab {
     }
 
     &:hover:not(:checked) {
-        background-color: bg-color(4);
+        background-color: #{'shade (@tab_base_color, 0.9)'};
     }
 
     &:checked {
-        background-color: bg-color(1);
+        background-color: #{'@tab_base_color'};
         box-shadow:
             outset-highlight(),
             0 0 0 1px rgba(black, 0.1),
             outset-shadow(2);
 
-        tabbox & {
+        &:backdrop {
+            background-color: #{'shade (@tab_base_color, 0.97)'};
+        }
+    }
+}
+
+tabbox {
+    @extend %tabheader;
+
+    tab {
+        background-clip: padding-box;
+        border: 1px solid transparent;
+        margin: rem(3px) 0;
+        transition: all 150ms ease-in;
+
+        &:checked {
             border-color: rgba(black, 0.1);
             box-shadow: outset-highlight();
-        }
-
-        &:backdrop {
-            background-color: bg-color(2);
         }
     }
 }
