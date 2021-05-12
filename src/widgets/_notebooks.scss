@@ -63,8 +63,7 @@ notebook {
 
 tab {
     border-radius: rem(3px);
-    // Slow to match the close button revealer transition
-    transition: all 300ms ease-in;
+    transition: all duration("in-place") $easing;
 
     .bottom &,
     .top & {

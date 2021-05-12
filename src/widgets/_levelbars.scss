@@ -6,7 +6,7 @@ levelbar {
         box-shadow:
             outset-highlight(),
             outset-shadow(1);
-        transition: all duration("element") $easing;
+        transition: all duration("in-place") $easing;
 
         @if $color-scheme == "dark" {
             background-clip: padding-box;

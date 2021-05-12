@@ -42,7 +42,7 @@ entry {
 
     image {
         color: #{'@placeholder_text_color'};
-        transition: all duration("element") $easing;
+        transition: all duration("in-place") $easing;
     }
 
     image.left {

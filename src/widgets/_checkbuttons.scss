@@ -8,7 +8,7 @@ radio {
         outset-shadow(1);
     min-height: rem(12px);
     min-width: rem(12px);
-    transition: all duration("element") $easing;
+    transition: all duration("in-place") $easing;
     -gtk-icon-source: none;
 
     &:checked {

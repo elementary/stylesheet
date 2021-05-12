@@ -11,7 +11,7 @@
         @return 250ms;
     }
 
-    @if $transition == "element" {
+    @if $transition == "in-place" {
         @return 100ms;
     }
 }
