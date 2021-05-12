@@ -18,6 +18,12 @@ infobar {
             background-position: calc(100% - #{rem(9px)}) center;
             padding-right: rem(24px);
         }
+
+        button.text-button {
+            @if $color-scheme == "dark" {
+                background-clip: border-box;
+            }
+        }
     }
 
     &.error revealer > box {
