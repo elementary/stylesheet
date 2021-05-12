@@ -3,7 +3,7 @@ switch {
     border: 1px solid $border-color;
     box-shadow: inset-shadow();
     border-radius: rem(16px);
-    transition: all duration("element") $easing;
+    transition: all duration("in-place") $easing;
 
     &:checked:not(.mode-switch):not(:backdrop) {
         @extend %outset-background;

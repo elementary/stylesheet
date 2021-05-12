@@ -3,7 +3,7 @@ expander arrow,
 .category-expander {
     min-height: 16px;
     min-width: 16px;
-    transition: all duration("element") $easing;
+    transition: all duration("in-place") $easing;
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 
     &:dir(rtl) {
