@@ -83,7 +83,8 @@ window {
         }
 
         // Fixes double shadow in HdyTitleBar and Epiphany
-        stack.titlebar headerbar {
+        stack.titlebar headerbar,
+        stack.titlebar headerbar:backdrop {
             box-shadow: none;
             padding: 0;
         }
