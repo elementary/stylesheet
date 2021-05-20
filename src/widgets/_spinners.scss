@@ -4,8 +4,12 @@ spinner {
     -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 
     &:checked {
-        opacity: 0.8;
+        opacity: 1;
         animation: spin 600ms steps(12) infinite;
+
+        &:backdrop {
+            opacity: 0.8;
+        }
 
         &:disabled {
             opacity: 0.4;
