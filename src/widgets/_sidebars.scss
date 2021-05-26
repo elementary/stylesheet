@@ -17,13 +17,16 @@
 
 .sidebar,
 .sidebar.view,
-.sidebar list,
-.source-list,
-.source-list .view {
-    background-color: bg_color(3);
-
+.source-list {
     popover & {
         background: transparent;
+    }
+
+    &,
+    list,
+    window.unified.csd & headerbar.titlebar.flat,
+    .view {
+        background-color: bg_color(3);
     }
 }
 
@@ -51,6 +54,15 @@ assistant .sidebar {
 placessidebar.frame,
 placessidebar viewport.frame {
     border: none;
+
+    .sidebar-icon {
+        -gtk-icon-style: regular;
+    }
+
+    .sidebar-icon + .sidebar-label:dir(ltr),
+    .sidebar-label + .sidebar-icon:dir(rtl) {
+        margin-left: rem(6px);
+    }
 }
 
 treeview.sidebar {

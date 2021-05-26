@@ -3,7 +3,11 @@ switch {
     border: 1px solid $border-color;
     box-shadow: inset-shadow();
     border-radius: rem(16px);
-    transition: all duration("element") $easing;
+    transition: all duration("in-place") $easing;
+
+    @if $color-scheme == "dark" {
+        background-color: rgba(black, 0.10);
+    }
 
     &:checked:not(.mode-switch):not(:backdrop) {
         @extend %outset-background;
@@ -57,6 +61,7 @@ switch {
     }
 
     &:disabled {
+        background-color: $insensitive-base-color;
         box-shadow: inset-shadow("disabled");
 
         slider {

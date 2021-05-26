@@ -25,7 +25,7 @@
 
     &.flat,
     .sidebar &,
-    treeview.sidebar & {
+    &.sidebar.view.cell {
         background-image: none;
         border-width: 0;
         box-shadow: none;
@@ -35,7 +35,7 @@
     }
 
     .sidebar &,
-    treeview.sidebar & {
+    &.sidebar.view.cell {
         background-color: #{'alpha(@text_color, 0.1)'};
         color: #{'alpha(@text_color, 0.7)'};
     }

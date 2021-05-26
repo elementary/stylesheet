@@ -67,6 +67,11 @@ scale {
         }
     }
 
+    &.color.horizontal trough,
+    &.color.vertical trough {
+        padding: 0;
+    }
+
     &.accent {
         fill {
             background-color: #{'alpha(@accent_color_500, 0.33)'};

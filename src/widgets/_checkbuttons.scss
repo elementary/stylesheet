@@ -8,7 +8,7 @@ radio {
         outset-shadow(1);
     min-height: rem(12px);
     min-width: rem(12px);
-    transition: all duration("element") $easing;
+    transition: all duration("in-place") $easing;
     -gtk-icon-source: none;
 
     &:checked {
@@ -29,7 +29,7 @@ radio {
     }
 
     &:disabled {
-        background: rgba(black, 0.03);
+        background: $insensitive-base-color;
         box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
         color: $insensitive-fg-color;
         -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
@@ -196,5 +196,12 @@ radiobutton.image-button {
         background-color: #{'@SLATE_300'};
         -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
 
+    }
+
+    &.auto radio {
+        background-image: url("assets/color-button-auto.png");
+        background-position: -1px -1px;
+        background-repeat: no-repeat;
+        background-size: calc(100% + 2px);
     }
 }
