@@ -1,0 +1,85 @@
+overshoot.left,
+overshoot.right,
+overshoot.top,
+overshoot.bottom,
+undershoot.left,
+undershoot.right,
+undershoot.top,
+undershoot.bottom {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+overshoot.top {
+    background:
+        linear-gradient(
+            to top,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.25)'} 100%
+        );
+}
+
+overshoot.right {
+    background:
+        linear-gradient(
+            to right,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.25)'} 100%
+        );
+}
+
+overshoot.bottom {
+    background:
+        linear-gradient(
+            to bottom,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.25)'} 100%
+        );
+}
+
+overshoot.left {
+    background:
+        linear-gradient(
+            to left,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.25)'} 100%
+        );
+}
+
+:backdrop overshoot.top {
+    background:
+        linear-gradient(
+            to top,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.075)'} 100%
+        );
+}
+
+:backdrop overshoot.right {
+    background:
+        linear-gradient(
+            to right,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.075)'} 100%
+        );
+}
+
+:backdrop overshoot.bottom {
+    background:
+        linear-gradient(
+            to bottom,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.075)'} 100%
+        );
+}
+
+:backdrop overshoot.left {
+    background:
+        linear-gradient(
+            to left,
+            #{'alpha(@accent_color, 0)'} 80%,
+            #{'alpha(@accent_color, 0.075)'} 100%
+        );
+}
