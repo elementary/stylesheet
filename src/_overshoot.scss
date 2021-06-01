@@ -1,3 +1,19 @@
+@function overshoot-gradient ($direction) {
+    @return linear-gradient(
+        $direction,
+        #{'alpha(@accent_color, 0)'} 80%,
+        #{'alpha(@accent_color, 0.25)'} 100%
+    );
+}
+
+@function overshoot-gradient-backdrop ($direction) {
+    @return linear-gradient(
+        $direction,
+        rgba($fg-color, 0) 80%,
+        rgba($fg-color, 0.15) 100%
+    );
+}
+
 overshoot.left,
 overshoot.right,
 overshoot.top,
@@ -12,74 +28,14 @@ undershoot.bottom {
     box-shadow: none;
 }
 
-overshoot.top {
-    background:
-        linear-gradient(
-            to top,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.25)'} 100%
-        );
-}
+overshoot {
+    &.top { background: overshoot-gradient(to top); }
+    &.right { background: overshoot-gradient(to right); }
+    &.bottom { background: overshoot-gradient(to bottom); }
+    &.left { background: overshoot-gradient(to left); }
 
-overshoot.right {
-    background:
-        linear-gradient(
-            to right,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.25)'} 100%
-        );
-}
-
-overshoot.bottom {
-    background:
-        linear-gradient(
-            to bottom,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.25)'} 100%
-        );
-}
-
-overshoot.left {
-    background:
-        linear-gradient(
-            to left,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.25)'} 100%
-        );
-}
-
-:backdrop overshoot.top {
-    background:
-        linear-gradient(
-            to top,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.075)'} 100%
-        );
-}
-
-:backdrop overshoot.right {
-    background:
-        linear-gradient(
-            to right,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.075)'} 100%
-        );
-}
-
-:backdrop overshoot.bottom {
-    background:
-        linear-gradient(
-            to bottom,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.075)'} 100%
-        );
-}
-
-:backdrop overshoot.left {
-    background:
-        linear-gradient(
-            to left,
-            #{'alpha(@accent_color, 0)'} 80%,
-            #{'alpha(@accent_color, 0.075)'} 100%
-        );
+    :backdrop &.top { background: overshoot-gradient-backdrop(to top); }
+    :backdrop &.right { background: overshoot-gradient-backdrop(to right); }
+    :backdrop &.bottom { background: overshoot-gradient-backdrop(to bottom); }
+    :backdrop &.left { background: overshoot-gradient-backdrop(to left); }
 }
