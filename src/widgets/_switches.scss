@@ -46,13 +46,28 @@ switch {
         @extend %outset-background;
         background-color: bg-color(0);
         background-clip: padding-box;
-        border-radius: 50%;
+        border-radius: 99px;
         box-shadow:
             outset-highlight("full"),
             0 0 0 1px $border-color,
             outset-shadow(3);
         min-height: rem(24px);
         min-width: rem(24px);
+
+        &:focus {
+            @if $color-scheme == "light" {
+                box-shadow:
+                    outset-highlight("full"),
+                    0 0 0 1px #{'@accent_color'},
+                    outset-shadow(3);
+            }
+            color: #{'@selected_fg_color'};
+            outline-color: #{'alpha(@accent_color, 0.3)'};
+            // Off-by-one to account for padding-box clip
+            outline-width: rem(3px);
+            outline-style: solid;
+            -gtk-outline-radius: 99px;
+        }
     }
 
     &.mode-switch slider {
