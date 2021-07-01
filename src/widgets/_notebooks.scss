@@ -1,37 +1,58 @@
+%tabheader {
+    background-color: #{'shade (@tab_base_color, 0.95)'};
+
+    @if $color-scheme == "dark" {
+        background-color: #{'shade (@tab_base_color, 0.87)'};
+    }
+
+
+    $gradient: 
+        rgba(black, 0),
+        rgba(black, 0) calc(100% - #{rem(2px)}),
+        rgba(black, 0.05) calc(100% - #{rem(1px)}),
+        rgba(black, 0.15);
+
+    background-image: linear-gradient(to bottom, $gradient);
+
+    &.bottom {
+        background-image: linear-gradient(to top, $gradient);
+    }
+
+    &.right {
+        background-image: linear-gradient(to left, $gradient);
+    }
+
+    &.left {
+        background-image: linear-gradient(to right, $gradient);
+    }
+
+    &:backdrop {
+        background-color: #{'shade (@tab_base_color, 0.98)'};
+    }
+}
+
 notebook {
     header {
-        background-color: bg-color(3);
-
-        $gradient: 
-            rgba(black, 0),
-            rgba(black, 0) calc(100% - #{rem(2px)}),
-            rgba(black, 0.05) calc(100% - #{rem(1px)}),
-            rgba(black, 0.15);
-
-        &.top {
-            background-image: linear-gradient(to bottom, $gradient);
-        }
-
-        &.bottom {
-            background-image: linear-gradient(to top, $gradient);
-        }
-
-        &.right {
-            background-image: linear-gradient(to left, $gradient);
-        }
-
-        &.left {
-            background-image: linear-gradient(to right, $gradient);
-        }
-
-        &:backdrop {
-            background-color: bg-color(2);
-        }
+        @extend %tabheader;
 
         // Matches the new tab and history buttons
         > box > button.image-button,
         > button.image-button {
             min-width: rem(24px);
+        }
+
+        arrow {
+            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+            min-height: 16px;
+            min-width: 16px;
+
+            &.down {
+                -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+            }
+
+            &:disabled {
+                color: $insensitive-fg-color;
+            }
         }
     }
 
@@ -42,8 +63,7 @@ notebook {
 
 tab {
     border-radius: rem(3px);
-    // Slow to match the close button revealer transition
-    transition: all 300ms ease-in;
+    transition: all duration("in-place") $easing;
 
     .bottom &,
     .top & {
@@ -59,19 +79,40 @@ tab {
     min-width: 24px;
     padding: rem(3px);
 
+    .tab-close-button,
+    .tab-indicator {
+        @extend .flat;
+    }
+
     &:hover:not(:checked) {
-        background-color: bg-color(4);
+        background-color: #{'shade (@tab_base_color, 0.9)'};
     }
 
     &:checked {
-        background-color: bg-color(1);
+        background-color: #{'@tab_base_color'};
         box-shadow:
             outset-highlight(),
             0 0 0 1px rgba(black, 0.1),
             outset-shadow(2);
 
         &:backdrop {
-            background-color: bg-color(2);
+            background-color: #{'shade (@tab_base_color, 0.97)'};
+        }
+    }
+}
+
+tabbox {
+    @extend %tabheader;
+
+    tab {
+        background-clip: padding-box;
+        border: 1px solid transparent;
+        margin: rem(3px) 0;
+        transition: all 150ms ease-in;
+
+        &:checked {
+            border-color: rgba(black, 0.1);
+            box-shadow: outset-highlight();
         }
     }
 }

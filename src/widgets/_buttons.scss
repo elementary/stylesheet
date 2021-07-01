@@ -1,40 +1,65 @@
 button {
     background-clip: padding-box;
     border-radius: rem(3px);
+    -gtk-outline-radius: rem(5px);
     // Explicitly set in case containers override default color
     color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
     padding: rem(4px) rem(7px);
-    transition: all duration("element") $easing;
+    transition: background duration("in-place") $easing;
 
     &.flat,
     &.image-button:not(.text-button) {
         background: none;
         border: none;
         box-shadow: none;
+
+        &:checked {
+            background: rgba($fg-color, 0.15);
+        }
+
+        &:focus {
+            @extend selection;
+            outline-style: none;
+        }
+
+        headerbar & {
+            border-radius: 99px;
+        }
     }
 
     .linked &.flat,
     .linked &.image-button,
+    .linked &.image-button:not(.text-button),
     &.circular.image-button,
     &.model.image-button,
     &.raised.image-button,
     & {
         @extend %outset-background;
 
+        background-clip: padding-box;
         background-color: bg-color(0);
         border: 1px solid $border-color;
         box-shadow:
             outset-highlight("full"),
             outset-shadow(2);
 
+        headerbar & {
+            border-radius: rem(3px);
+        }
+
         &.destructive-action:not(:disabled) {
-            @if $color-scheme == "light" {
-                background-clip: border-box;
-            } @else if $color-scheme == "dark" {
-                &:active,
-                &:checked {
-                    border-color: rgba(black, 0.7);
+
+            &,
+            &:focus {
+                @if $color-scheme == "light" {
+                    background-clip: border-box;
+                    border: 1px solid $border-color;
+                } @else if $color-scheme == "dark" {
+                    &:active,
+                    &:checked {
+                        border-color: rgba(black, 0.7);
+                    }
                 }
             }
 
@@ -42,39 +67,35 @@ button {
             color: white;
             text-shadow: 0 1px 1px $STRAWBERRY_500;
             -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
+
+            &:focus {
+                outline-color: rgba($STRAWBERRY_300, 0.5);
+            }
         }
 
         &.suggested-action:not(:disabled) {
-            $accent-fg-color: #{'mix (black, @accent_color_900, 0.8)'};
-            $bg-color: #{'@accent_color_100'};
-            $border-color: #{'alpha (mix (black, @accent_color_300, 0.8), 0.4)'};
-            $checked-border-color: alpha #{'(@accent_color_500, 0.45)'};
+            @extend selection;
 
             @if $color-scheme == "light" {
-                background-clip: border-box;
-                box-shadow:
-                    outset-highlight("full"),
-                    0 1px 1px rgba(black, 0.07),
-                    0 1px 2px rgba(black, 0.2);
-            } @else if $color-scheme == "dark" {
-                $accent-fg-color: white;
-                $bg-color: #{'mix (black, @accent_color_300, 0.5)'};
-                $border-color: #{'alpha (@accent_color_900, 0.5)'};
-                $checked-border-color: rgba(black, 0.5);
-            }
+                border-color: #{'alpha (mix (black, @accent_color, 0.9), 0.5)'};
 
-            background-color: $bg-color;
-            border-color: $border-color;
+                &:backdrop {
+                    border-color: $border-color;
+                }
+            }
 
             image,
             label {
-                color: $accent-fg-color;
+                color: inherit;
             }
 
             &:active,
             &:checked {
-                background-color: $bg-color;
-                border-color: $checked-border-color;
+                @if $color-scheme == "light" {
+                    border-color: #{'alpha (mix (black, @accent_color, 0.7), 0.4)'};
+                } @else if $color-scheme == "dark" {
+                    border-color: rgba(black, 0.5);
+                }
             }
         }
 
@@ -100,10 +121,61 @@ button {
                 outset-highlight("full"),
                 outset-shadow(1);
         }
+
+        &:focus {
+            @if $color-scheme == "light" {
+                border-color: #{'@accent_color'};
+            }
+            color: #{'@selected_fg_color'};
+            outline-color: #{'alpha(@accent_color, 0.3)'};
+            outline-width: rem(2px);
+            outline-style: solid;
+        }
+    }
+
+    // Stopgap since we can't do angled buttons in GtkCSS, and generating all
+    // the necessary SVGs for light/dark and accent color combinations is
+    // untenable. Ideally we'd deprecate this in favor of something like a
+    // Granite.BackButton with custom drawing; until then, stick an icon in it.
+    &.back-button {
+        background-repeat: no-repeat no-repeat;
+        background-size: 16px, cover;
+
+        &:dir(ltr) {
+            background-image:
+                -gtk-icontheme('go-previous-symbolic'),
+                linear-gradient(
+                    to bottom,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(white, 0)
+                );
+            padding-left: calc(#{rem(9px)} + 16px);
+            background-position:
+                #{rem(6px)} 50%,
+                center, center;
+        }
+
+        &:dir(rtl) {
+            background-image:
+                -gtk-icontheme('go-next-symbolic'),
+                linear-gradient(
+                    to bottom,
+                    #{'alpha(@highlight_color, 0.2)'},
+                    rgba(white, 0)
+                );
+            padding-right: calc(#{rem(9px)} + 16px);
+            background-position:
+                calc(100% - #{rem(6px)}) 50%,
+                center, center;
+        }
     }
 
     &:disabled {
         color: $insensitive-fg-color;
+    }
+
+    &:backdrop {
+        -gtk-icon-effect: dim;
     }
 
     &.color,
@@ -111,6 +183,10 @@ button {
     &.image-button,
     &.titlebutton {
         padding: rem(4px);
+    }
+
+    &.text-button.link {
+        padding: 0;
     }
 
     &.color {

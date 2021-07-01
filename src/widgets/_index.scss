@@ -5,6 +5,11 @@ image:disabled {
 selection {
     background-color: #{'@selected_bg_color'};
     color: #{'@selected_fg_color'};
+
+    &:backdrop {
+        background-color: #{'@theme_unfocused_selected_bg_color'};
+        color: #{'@theme_unfocused_selected_fg_color'};
+    }
 }
 
 .checkerboard {
@@ -33,6 +38,7 @@ selection {
 .circular {
     // Not  50% because that creates a squished elipse for non-squares widgets
     border-radius: 9999px;
+    -gtk-outline-radius: 9999px;
 }
 
 .error {
@@ -50,12 +56,15 @@ selection {
 @import '_avatars.scss';
 @import '_badges.scss';
 @import '_buttons.scss';
+@import '_calendars.scss';
 @import '_cards.scss';
 @import '_checkbuttons.scss';
 @import '_colorchoosers.scss';
 @import '_emojipicker.scss';
 @import '_entries.scss';
 @import '_expanders.scss';
+@import '_headerbars.scss';
+@import '_images.scss';
 @import '_infobars.scss';
 @import '_levelbars.scss';
 @import '_linked.scss';
@@ -81,4 +90,5 @@ selection {
 @import '_tooltips.scss';
 @import '_treeviews.scss';
 @import '_views.scss';
+@import '_viewswitcher.scss';
 @import '_windows.scss';

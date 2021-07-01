@@ -3,15 +3,46 @@
     border-radius: rem(6px);
     color: $fg-color;
 
-    image,
-    label {
-        // Make sure we don't inherit changes from parent widgets
-        color: $fg-color;
-        font-weight: initial;
+    arrow {
+        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+        min-height: 16px;
+        min-width: 16px;
+
+        &:dir(rtl) {
+            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+        }
+
+        &.top {
+            border-bottom: 1px solid #{"@menu_separator"};
+            margin-top: -6px;
+            -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+        }
+
+        &.bottom {
+            border-top: 1px solid #{"@menu_separator"};
+            margin-bottom: -18px;
+            margin-top: 16px;
+            -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+        }
+
+        &.left {
+            -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+        }
+
+        &:disabled {
+            border: none;
+            margin: 0;
+            min-height: 0;
+            min-width: 0;
+        }
     }
 }
 
 %menuitem {
+    // Make sure we don't inherit changes from parent widgets
+    color: $fg-color;
+    font-weight: initial;
+    letter-spacing: initial;
     min-width: rem(150px);
     padding: rem(6px) rem(12px);
 
@@ -25,7 +56,15 @@
 
     &:hover {
         box-shadow: none;
-        background-color: #{'alpha(@fg_color, 0.15)'};
+        background-color: rgba($fg_color, 0.15);
+    }
+
+    &.destructive-action {
+        color: $error-color;
+
+        &:hover {
+            background-color: rgba($error-color, 0.2);
+        }
     }
 
     .keycap {
@@ -39,26 +78,9 @@
         padding: rem(3px) rem(6px) calc(#{rem(3px)} - 1px);
     }
 
-    arrow {
-        -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
-        min-height: 16px;
-        min-width: 16px;
-
-        &:dir(rtl) {
-            -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
-        }
-
-        &.top {
-            -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
-        }
-
-        &.bottom {
-            -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-        }
-
-        &.left {
-            -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
-        }
+    switch slider {
+        min-height: rem(20px);
+        min-width: rem(20px);
     }
 }
 

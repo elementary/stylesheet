@@ -5,16 +5,19 @@ popover {
     box-shadow: shadow(2);
     margin: 6px;
 
+    label.h4 {
+        margin: 0 rem(12px);
+    }
+
+    // Fixes extra padding in switch modelbuttons
+    menuitem.h4 label {
+        padding: 0;
+    }
+
     menuitem,
     modelbutton,
     .menuitem {
         @extend %menuitem;
-    }
-
-    // Almost certainly means you are using ModelMenu
-    &.menu > stack {
-        // These are hardcoded values in Gtk, we don't want rems here
-        margin: -4px -10px;
     }
 
     separator {

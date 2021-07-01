@@ -10,7 +10,7 @@
         0 0 0 1px rgba(black, 0.1),
         shadow(2);
     transition:
-        background duration("element") $easing,
+        background duration("in-place") $easing,
         box-shadow duration("expand") $easing;
 
     &.collapsed {
@@ -21,7 +21,7 @@
             0 0 0 1px rgba(black, 0.1),
             shadow(1);
         transition:
-            background duration("element") $easing,
+            background duration("in-place") $easing,
             box-shadow duration("collapse") $easing;
     }
 

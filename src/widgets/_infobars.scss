@@ -18,6 +18,12 @@ infobar {
             background-position: calc(100% - #{rem(9px)}) center;
             padding-right: rem(24px);
         }
+
+        button.text-button {
+            @if $color-scheme == "dark" {
+                background-clip: border-box;
+            }
+        }
     }
 
     &.error revealer > box {
@@ -43,5 +49,23 @@ infobar {
         background-image: -gtk-icontheme("dialog-question-symbolic");
         border-color: $BLUEBERRY_500;
         color: #002B82;
+    }
+
+    &.frame {
+        border: none;
+
+        revealer > box {
+            border-width: 1px;
+            border-radius: rem(3px);
+            box-shadow:
+                outset-highlight(),
+                outset-shadow(2);
+            margin: rem(3px);
+
+            @if $color-scheme == "dark" {
+                background-clip: padding-box;
+                border-color: $border-color;
+            }
+        }
     }
 }

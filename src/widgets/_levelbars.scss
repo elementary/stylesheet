@@ -6,7 +6,7 @@ levelbar {
         box-shadow:
             outset-highlight(),
             outset-shadow(1);
-        transition: all duration("element") $easing;
+        transition: all duration("in-place") $easing;
 
         @if $color-scheme == "dark" {
             background-clip: padding-box;
@@ -89,5 +89,82 @@ levelbar {
 
         min-height: rem(3px);
         min-width: rem(6px);
+    }
+
+    &.flat {
+        block {
+            border: none;
+            box-shadow: none;
+
+            &.empty {
+                background: rgba($fg-color, 0.2);
+            }
+
+            &.filled {
+                &.low:not(:backdrop) {
+                    background: $error-color;
+
+                    & + .empty:not(:backdrop) {
+                        background: rgba($error-color, 0.2);
+                    }
+                }
+
+                &.middle:not(:backdrop) {
+                    background: $warning-color;
+
+                    & + .empty:not(:backdrop) {
+                        background: rgba($warning-color, 0.2);
+                    }
+                }
+
+                &.high:not(:backdrop) {
+                    background: rgba($fg-color, 0.6);
+                }
+
+                &.full:not(:backdrop) {
+                    background: $success-color;
+
+                    & + .empty:not(:backdrop) {
+                        background: rgba($success-color, 0.2);
+                    }
+                }
+
+                &:backdrop {
+                    background: rgba($fg-color, 0.2);
+                }
+            }
+        }
+
+        &.inverted {
+            block.filled {
+                &.low:not(:backdrop) {
+                    background: $success-color;
+
+                    & + .empty:not(:backdrop) {
+                        background: rgba($success-color, 0.2);
+                    }
+                }
+
+                &.middle:not(:backdrop) {
+                    background: rgba($fg-color, 0.6);
+                }
+
+                &.high:not(:backdrop) {
+                    background: $warning-color;
+
+                    & + .empty:not(:backdrop) {
+                        background: rgba($warning-color, 0.2);
+                    }
+                }
+
+                &.full:not(:backdrop) {
+                    background: $error-color;
+
+                    & + .empty:not(:backdrop) {
+                        background: rgba($error-color, 0.2);
+                    }
+                }
+            }
+        }
     }
 }
