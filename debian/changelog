@@ -1,3 +1,9 @@
+io.elementary.stylesheet (6.0.0) focal; urgency=medium
+
+  * New upstream release
+
+ -- Daniel Foré <daniel@elementary.io>  Thu, 15 Jul 2021 15:21:04 -0700
+
 io.elementary.stylesheet (5.9.9) focal; urgency=medium
 
   * Initial release
