@@ -89,11 +89,11 @@ scale {
 
     &.accent {
         fill {
-            background-color: #{'alpha(@accent_color_500, 0.33)'};
+            background-color: #{'alpha(@accent_color, 0.33)'};
         }
 
         highlight {
-            background-color: #{'alpha (@accent_color_500, 0.67)'};
+            background-color: #{'@accent_color'};
         }
     }
 
