@@ -77,7 +77,6 @@ tab {
 
     // Not scaled because it's based on icon size
     min-width: 24px;
-    padding: rem(3px);
 
     .tab-close-button,
     .tab-indicator {
@@ -114,5 +113,9 @@ tabbox {
             border-color: rgba(black, 0.1);
             box-shadow: outset-highlight();
         }
+    }
+
+    > widget > grid {
+        padding: rem(3px);
     }
 }
