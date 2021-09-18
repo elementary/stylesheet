@@ -6,7 +6,7 @@
     }
 
 
-    $gradient: 
+    $gradient:
         rgba(black, 0),
         rgba(black, 0) calc(100% - #{rem(2px)}),
         rgba(black, 0.05) calc(100% - #{rem(1px)}),
@@ -101,10 +101,12 @@ tab {
     }
 }
 
-tabbox {
-    @extend %tabheader;
+tabbar {
+    .box, .start-action, .end-action {
+        @extend %tabheader;
+    }
 
-    tab {
+    .box tab {
         background-clip: padding-box;
         border: 1px solid transparent;
         margin: rem(3px) 0;
