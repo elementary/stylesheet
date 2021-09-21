@@ -116,5 +116,14 @@ tabbar {
             border-color: rgba(black, 0.1);
             box-shadow: outset-highlight();
         }
+
+        /* Workaround for the outermost border of the first and last tab being clipped.
+         * The pinned and non-pinned tabs are in two separate boxes, so this creates non-ideal
+         * double padding between the two sections. There also seems to be an issue where
+         * :first-child/:last-child aren't updated when tabs are pinned/unpinned or re-ordered,
+         * so we can't even apply it to only the relevant tabs either.
+        */
+        margin-left: 1px;
+        margin-right: 1px;
     }
 }
