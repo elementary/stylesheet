@@ -173,13 +173,11 @@ tabbar {
     }
 }
 
-.tab-drag-icon {
-    tab {
-        box-shadow:
-            outset-highlight(),
-            // Intentionally not in ems since it's used as a stroke
-            0 0 0 1px rgba(black, 0.1),
-            shadow(1);
-        margin: 12px;
-    }
+.tab-drag-icon tab {
+    box-shadow:
+        outset-highlight(),
+        // Intentionally not in ems since it's used as a stroke
+        0 0 0 1px rgba(black, 0.1),
+        shadow(1);
+    margin: 12px;
 }
