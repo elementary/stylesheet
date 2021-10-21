@@ -77,7 +77,8 @@ window {
             }
 
             &.flat {
-                background: bg_color(2);
+                background: inherit;
+                color: inherit;
                 box-shadow: outset-highlight("top");
             }
         }
