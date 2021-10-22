@@ -14,7 +14,7 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="6.1.0" date="2021-10-21" urgency="medium">
+    <release version="6.1.0" date="2021-10-22" urgency="medium">
       <ul>
         <li>Support for Hdy.Tabbar</li>
         <li>Fix accent class for Gtk.Scale</li>
