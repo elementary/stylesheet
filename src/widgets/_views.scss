@@ -42,6 +42,7 @@ scrolledwindow {
 .view {
     background: #{'@base_color'};
     color: $fg-color;
+    -gtk-secondary-caret-color: #{'@accent_color_100'};
 
     &:disabled {
         background: $insensitive-base-color;
