@@ -14,6 +14,11 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
+    <release version="6.2.0" date="2021-11-16" urgency="medium">
+      <ul>
+        <li>Use the accent color for highlighting in IBus candidate window</li>
+      </ul>
+    </release>
     <release version="6.1.0" date="2021-10-22" urgency="medium">
       <ul>
         <li>Support for Hdy.Tabbar</li>
