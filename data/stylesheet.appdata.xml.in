@@ -17,6 +17,7 @@
     <release version="6.2.0" date="2021-11-16" urgency="medium">
       <ul>
         <li>Use the accent color for highlighting in IBus candidate window</li>
+        <li>Fix font style for title labels in headerbars</li>
       </ul>
     </release>
     <release version="6.1.0" date="2021-10-22" urgency="medium">
