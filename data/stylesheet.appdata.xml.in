@@ -14,7 +14,7 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="6.2.0" date="2021-11-16" urgency="medium">
+    <release version="6.1.1" date="2021-11-18" urgency="medium">
       <ul>
         <li>Use the accent color for highlighting in IBus candidate window</li>
         <li>Fix font style for title labels in headerbars</li>
