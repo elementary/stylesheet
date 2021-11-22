@@ -7,30 +7,58 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 11:10-0700\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2021-11-22 15:36-0800\n"
+"PO-Revision-Date: 2021-11-22 23:36+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
+"Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
+"stylesheet-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "Greenfield"
-msgstr ""
+msgstr "Greenfield"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The Gtk Stylesheet for elementary OS"
-msgstr ""
+msgstr "elementary OS の Gtk スタイルシート"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"elementary OS とそのデスクトップ環境 (Pantheon) 用にデザインされた、オリジナ"
+"ルの Gtk.CSS スタイルシートです。"
 
-#: data/stylesheet.appdata.xml.in:54
-msgid "elementary, Inc."
+#: data/stylesheet.appdata.xml.in:20
+msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
+
+#: data/stylesheet.appdata.xml.in:21
+msgid "Fix font style for title labels in headerbars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:28
+msgid "Support for Hdy.Tabbar"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:29
+msgid "Fix accent class for Gtk.Scale"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:30
+msgid "Flat titlebars inherit background color for views and sidebars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:37
+msgid "Complete redesign"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:45
+msgid "elementary, Inc."
+msgstr "elementary, Inc."

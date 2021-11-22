@@ -14,23 +14,29 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="6.1.1" date="2021-11-18" urgency="medium">
-      <ul>
-        <li>Use the accent color for highlighting in IBus candidate window</li>
-        <li>Fix font style for title labels in headerbars</li>
-      </ul>
+    <release version="6.2.0" date="2021-11-22" urgency="medium">
+      <description>
+        <ul>
+          <li>Use the accent color for highlighting in IBus candidate window</li>
+          <li>Fix font style for title labels in headerbars</li>
+        </ul>
+      </description>
     </release>
     <release version="6.1.0" date="2021-10-22" urgency="medium">
-      <ul>
-        <li>Support for Hdy.Tabbar</li>
-        <li>Fix accent class for Gtk.Scale</li>
-        <li>Flat titlebars inherit background color for views and sidebars</li>
-      </ul>
+      <description>
+        <ul>
+          <li>Support for Hdy.Tabbar</li>
+          <li>Fix accent class for Gtk.Scale</li>
+          <li>Flat titlebars inherit background color for views and sidebars</li>
+        </ul>
+      </description>
     </release>
     <release version="6.0.0" date="2021-07-15" urgency="medium">
-      <ul>
-        <li>Complete redesign</li>
-      </ul>
+      <description>
+        <ul>
+          <li>Complete redesign</li>
+        </ul>
+      </description>
     </release>
   </releases>
   <content_rating type="oars-1.1" />
@@ -39,4 +45,4 @@
   <developer_name>elementary, Inc.</developer_name>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
-​</component>
+</component>
