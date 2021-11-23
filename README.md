@@ -1,4 +1,5 @@
 # Stylesheet
+[![Translation status](https://l10n.elementary.io/widgets/desktop/-/stylesheet-extra/svg-badge.svg)](https://l10n.elementary.io/engage/desktop/)
 
 The GTK Stylesheet for elementary OS
 

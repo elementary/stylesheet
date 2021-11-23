@@ -8,52 +8,62 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-22 15:36-0800\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-11-23 10:43+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/desktop/"
+"stylesheet-extra/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "Greenfield"
-msgstr ""
+msgstr "Campverd"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The Gtk Stylesheet for elementary OS"
-msgstr ""
+msgstr "L'estil de Gtk per a l'elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"Un estil de Gtk.CSS original dissenyat específicament per a l'elementary OS "
+"i el seu entorn d'escriptori: Pantheon."
 
 #: data/stylesheet.appdata.xml.in:20
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
+"Ús del color d'accentuació per ressaltar a la finestra del candidat IBus"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Fix font style for title labels in headerbars"
 msgstr ""
+"Correcció de l'estil de lletra per a les etiquetes de títol a les barres de "
+"capçalera"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Support for Hdy.Tabbar"
-msgstr ""
+msgstr "Suport per a Hdy.Tabbar"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Fix accent class for Gtk.Scale"
-msgstr ""
+msgstr "Correcció de la classe d'accentuació per a Gtk.Scale"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
+"Les barres de títol planes hereten el color de fons per a les vistes i les "
+"barres laterals."
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Complete redesign"
-msgstr ""
+msgstr "Redisseny complet"
 
 #: data/stylesheet.appdata.xml.in:45
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."

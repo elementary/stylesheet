@@ -32,7 +32,7 @@
 @define-color tab_base_color #{"" + bg_color(1)};
 
 @if $color-scheme == "dark" {
-    @define-color menu_separator #{rgba(black, 0.25)};
+    @define-color menu_separator #{rgba(black, 0.35)};
     @define-color menu_separator_shadow #{rgba(white, 0.05)};
 
     @define-color selected_bg_color #{'alpha(shade(@accent_color, 0.85), 0.5)'};
