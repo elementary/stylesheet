@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-22 15:36-0800\n"
-"PO-Revision-Date: 2021-11-23 10:43+0000\n"
+"PO-Revision-Date: 2021-11-23 17:47+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pl/>\n"
@@ -22,41 +22,44 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "Greenfield"
-msgstr ""
+msgstr "Greenfield"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The Gtk Stylesheet for elementary OS"
-msgstr ""
+msgstr "Style GTK dla elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"Oryginalny styl Gtk.CSS zaprojektowany specjalnie dla elementary OS i jego "
+"środowiska pulpitu: Pantheon."
 
 #: data/stylesheet.appdata.xml.in:20
 msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr ""
+msgstr "Użyto koloru akcentu do podświetlenia w oknie kandydującym IBus"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Fix font style for title labels in headerbars"
-msgstr ""
+msgstr "Naprawiono styl fontu dla etykiet tytułowych w paskach nagłówka"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Support for Hdy.Tabbar"
-msgstr ""
+msgstr "Wsparcie dla Hdy.Tabbar"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Fix accent class for Gtk.Scale"
-msgstr ""
+msgstr "Naprawiono klasę akcentu dla Gtk.Scale"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
+"Płaskie paski tytułów dziedziczą kolor tła w widokach i w panelach bocznych"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Complete redesign"
-msgstr ""
+msgstr "Kompletne przeprojektowanie"
 
 #: data/stylesheet.appdata.xml.in:45
 msgid "elementary, Inc."
