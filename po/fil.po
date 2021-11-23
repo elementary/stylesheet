@@ -1,68 +1,59 @@
-# French translations for extra package.
-# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Automatically generated, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-22 15:36-0800\n"
-"PO-Revision-Date: 2021-11-23 10:43+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/desktop/"
-"stylesheet-extra/fr/>\n"
-"Language: fr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fil\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "Greenfield"
-msgstr "Greenfield"
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The Gtk Stylesheet for elementary OS"
-msgstr "La feuille de style de Gtk pour elementary OS"
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
-"Une feuille de style Gtk.CSS originale conçue spécifiquement pour elementary "
-"OS et sont environnement de bureau : Pantheon."
 
 #: data/stylesheet.appdata.xml.in:20
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
-"Utilisation de la couleur d'accentuation pour la mise en surbrillance dans "
-"la fenêtre iBus"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Fix font style for title labels in headerbars"
-msgstr "Correction du style de police pour les titres des barres de titre"
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Support for Hdy.Tabbar"
-msgstr "Prise en charge de Hdy.Tabbar"
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Fix accent class for Gtk.Scale"
-msgstr "Correction de la classe d'accentuation pour Gtk.Scale"
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
-"Aplatissement de la couleur d'arrière-plan héritée pour les vues et les "
-"barres latérales"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Complete redesign"
-msgstr "Refonte complète"
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:45
 msgid "elementary, Inc."
-msgstr "elementary, Inc."
+msgstr ""
