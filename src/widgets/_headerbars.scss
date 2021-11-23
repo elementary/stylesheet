@@ -25,7 +25,8 @@ window {
         color: $fg-color;
 
         .title {
-            font-weight: 600;
+            // Cannot be a number or fonts break in Flatpak
+            font-weight: bold;
             text-shadow: $shadow
         }
 
@@ -77,7 +78,8 @@ window {
             }
 
             &.flat {
-                background: bg_color(2);
+                background: inherit;
+                color: inherit;
                 box-shadow: outset-highlight("top");
             }
         }
