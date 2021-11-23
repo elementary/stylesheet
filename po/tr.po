@@ -8,53 +8,57 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-22 15:36-0800\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-11-23 22:56+0000\n"
+"Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
+"Language-Team: Turkish <https://l10n.elementary.io/projects/desktop/"
+"stylesheet-extra/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "Greenfield"
-msgstr ""
+msgstr "Greenfield"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The Gtk Stylesheet for elementary OS"
-msgstr ""
+msgstr "elementary OS için Gtk Stil Sayfası"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"elementary OS ve masaüstü ortamı için özel olarak tasarlanmış orijinal bir "
+"Gtk.CSS stil sayfası: Pantheon."
 
 #: data/stylesheet.appdata.xml.in:20
 msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr ""
+msgstr " "
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Fix font style for title labels in headerbars"
-msgstr ""
+msgstr " "
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Support for Hdy.Tabbar"
-msgstr ""
+msgstr " "
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Fix accent class for Gtk.Scale"
-msgstr ""
+msgstr " "
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Flat titlebars inherit background color for views and sidebars"
-msgstr ""
+msgstr " "
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Complete redesign"
-msgstr ""
+msgstr " "
 
 #: data/stylesheet.appdata.xml.in:45
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
