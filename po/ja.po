@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-22 15:36-0800\n"
-"PO-Revision-Date: 2021-11-22 23:36+0000\n"
+"PO-Revision-Date: 2021-11-23 02:39+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -37,27 +37,27 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:20
 msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr ""
+msgstr "IBus 変換候補ウィンドウのハイライトにアクセントカラーを使うように修正"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Fix font style for title labels in headerbars"
-msgstr ""
+msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Support for Hdy.Tabbar"
-msgstr ""
+msgstr "Hdy.Tabbar への対応"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Fix accent class for Gtk.Scale"
-msgstr ""
+msgstr "Gtk.Scale のアクセントクラスを修正"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Flat titlebars inherit background color for views and sidebars"
-msgstr ""
+msgstr "フラットなタイトルバーがビューとサイドバーの背景色を継承するように修正"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Complete redesign"
-msgstr ""
+msgstr "抜本的なデザイン変更"
 
 #: data/stylesheet.appdata.xml.in:45
 msgid "elementary, Inc."
