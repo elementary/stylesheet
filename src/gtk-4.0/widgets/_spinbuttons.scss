@@ -1,0 +1,58 @@
+spinbutton {
+    @extend %entry;
+
+    button,
+    button:disabled,
+    entry,
+    entry:disabled,
+    entry:focus {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+
+    button:active {
+        box-shadow: none;
+    }
+
+    &.horizontal {
+        button {
+            padding: rem(4px);
+
+            &:dir(ltr) {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+
+            &:dir(rtl) {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            &.down {
+                border-color: rgba(black, 0.1);
+                border-radius: 0;
+                border-style: solid;
+                border-width: 0 1px;
+            }
+        }
+
+        entry {
+            margin: 0 rem(3px);
+        }
+    }
+
+    &.vertical button {
+        &.down {
+            border-top: 1px solid rgba(black, 0.1);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        &.up {
+            border-bottom: 1px solid rgba(black, 0.1);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}

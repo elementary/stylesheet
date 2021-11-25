@@ -1,0 +1,23 @@
+spinner {
+    background-image: none;
+    opacity: 0;
+    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+
+    &:checked {
+        opacity: 1;
+        animation: spin 600ms steps(12) infinite;
+
+        &:backdrop {
+            opacity: 0.8;
+        }
+
+        &:disabled {
+            opacity: 0.4;
+        }
+    }
+}
+
+entry.spin:dir(ltr) image:last-child,
+entry.spin:dir(rtl) image:first-child {
+    animation: spin 600ms steps(12) infinite;
+}

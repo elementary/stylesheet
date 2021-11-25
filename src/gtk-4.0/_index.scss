@@ -1,0 +1,222 @@
+// The default titlebar color
+$titlebar-color: mix($SILVER_100, $SILVER_300, $weight: 30%);
+
+// Text, images, and other foreground elements
+$fg-color: $BLACK_500;
+
+// Outset box shadow or border color on toplevel elements like windows, menus, popovers
+$toplevel-border-color: rgba(black, 0.2);
+
+// Outset box shadow or border color on inputs like buttons, entries, checkboxes
+$border-color: rgba(black, 0.2);
+
+// Disabled entries, views, checkbuttons, spinbuttons
+$insensitive-base-color: rgba(0, 0, 0, 0.03);
+
+// Semantic colors
+$error_color: $STRAWBERRY_500;
+$success_color: $LIME_700;
+$warning_color: $BANANA_900;
+$warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
+
+@if $color-scheme == "dark" {
+    $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 65%);
+    $fg-color: white;
+    $toplevel-border-color: rgba(black, 0.75);
+    $border-color: rgba(black, 0.3);
+    $insensitive-base-color: rgba(0, 0, 0, 0.075);
+
+    $error-color: $STRAWBERRY_300;
+    $success-color: $LIME_300;
+    $warning-color: $BANANA_100;
+    $warning-icon-color: $BANANA_500;
+}
+
+@function bg-color($level) {
+    @if $color-scheme == "light" {
+        // Inputs
+        @if $level == 0 {
+            @return $SILVER_100;
+        // Views
+        } @else if $level == 1 {
+            @return white;
+        // Background
+        } @else if $level == 2 {
+            @return $SILVER_100;
+        // Sidebars and inline toolbars
+        } @else if $level == 3 {
+            @return mix($SILVER_100, $SILVER_300, $weight: 75%);
+        // Titlebars and toolbars
+        } @else if $level == 4 {
+            @return $titlebar-color;
+        }
+    } @else if $color-scheme == "dark" {
+        @if $level == 0 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 50%);
+        } @else if $level == 1 {
+            @return mix($BLACK_300, $BLACK_500, $weight: 25%);
+        } @else if $level == 2 {
+            @return $BLACK_500;
+        } @else if $level == 3 {
+            @return mix($BLACK_500, $BLACK_700, $weight: 90%);
+        } @else if $level == 4 {
+            @return mix($BLACK_500, $BLACK_700, $weight: 45%);
+        }
+    }
+}
+
+// Disabled text, images, other foreground elements
+$insensitive-fg-color: mix($fg-color, bg_color(2), $weight: 50%);
+
+@function shadow($level) {
+    @if $color-scheme == "light" {
+        @if $level == 1 {
+            @return
+                0 1px 3px rgba(black, 0.12),
+                0 1px 2px rgba(black, 0.24);
+        } @else if $level == 2 {
+            @return
+                0 3px 4px rgba(black, 0.15),
+                0 3px 3px -3px rgba(black, 0.35);
+        } @else if $level == 3 {
+            @return
+                0 3px 8px 2px rgba(black, 0.1),
+                0 5px 5px -3px rgba(black, 0.4),
+                0 8px 5px 1px rgba(black, 0.1);
+        } @else if $level == 4 {
+            @return
+                0 2px 4px 2px rgba(black, 0.1),
+                0 15px 12px -10px rgba(black, 0.4),
+                0 8px 14px 4px rgba(black, 0.15);
+        }
+    } @else if $color-scheme == "dark" {
+        @if $level == 1 {
+            @return
+                0 1px 3px rgba(black, 0.42),
+                0 1px 2px rgba(black, 0.44);
+        } @else if $level == 2 {
+            @return
+                0 3px 4px rgba(black, 0.25),
+                0 3px 3px -3px rgba(black, 0.45);
+        } @else if $level == 3 {
+            @return
+                0 3px 8px 2px rgba(black, 0.2),
+                0 5px 5px -3px rgba(black, 0.5),
+                0 8px 5px 1px rgba(black, 0.2);
+        } @else if $level == 4 {
+            @return
+                0 2px 4px 2px rgba(black, 0.2),
+                0 15px 12px -10px rgba(black, 0.5),
+                0 8px 14px 4px rgba(black, 0.25);
+        }
+    }
+}
+
+@function inset-shadow($state: "") {
+    @if $state == "disabled" {
+        @return
+            0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
+            inset 0 1px 1px rgba(black, 0.05);
+    }
+
+    @return
+        0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
+        inset 0 1px 1px rgba(black, 0.05),
+        inset 0 0 1px 1px rgba(black, 0.05);
+}
+
+@function outset-highlight($sides: "full") {
+    $highlight:
+        inset 1px 0 0 0 #{'alpha(@highlight_color, 0.07)'},
+        inset -1px 0 0 0 #{'alpha(@highlight_color, 0.07)'};
+
+    @if $sides == "top" or $sides == "full" {
+        $highlight:
+            inset 0 1px 0 0 #{'alpha(@highlight_color, 0.3)'},
+            $highlight;
+    }
+
+    @if $sides == "bottom" or $sides == "full" {
+        $highlight:
+            inset 0 -1px 0 0 #{'alpha(@highlight_color, 0.2)'},
+            $highlight;
+    }
+
+    @return $highlight;
+}
+
+@function outset-shadow($level) {
+    @if $level == 1 {
+        @return 0 1px 1px rgba(black, 0.05);
+    } @else if $level == 2 {
+        @return
+            0 1px 1px rgba(black, 0.07),
+            0 1px 2px rgba(black, 0.08);
+    } @else if $level == 3 {
+        @return
+            0 1px 3px rgba(black, 0.12),
+            0 1px 2px rgba(black, 0.24);
+    }
+}
+
+@function rem($pixels, $text-size: 9pt) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($text-size)) {
+        $text-size: $text-size * 1px;
+    }
+
+    @if ($pixels > 0) {
+        // Workaround GTK clamping instead of rounding up
+        @return ($pixels / $text-size * 1rem) + 0.000000001rem;
+    } @else {
+        // Workaround GTK clamping instead of rounding up
+        @return ($pixels / $text-size * 1rem) - 0.000000001rem;
+    }
+}
+
+// Background for elements with outset style like headerbars, buttons, checkboxes, etc
+%outset-background {
+    background-image:
+        linear-gradient(
+            to bottom,
+            #{'alpha(@highlight_color, 0.2)'},
+            rgba(white, 0)
+        );
+
+    &:backdrop {
+        background-image:
+            linear-gradient(
+                to bottom,
+                #{'alpha(@highlight_color, 0.35)'},
+                #{'alpha(@highlight_color, 0.3)'}
+            );
+    }
+}
+
+%outset-background-vertical {
+    background-image:
+        linear-gradient(
+            to right,
+            #{'alpha(@highlight_color, 0.2)'},
+            rgba(white, 0)
+        );
+
+    &:backdrop {
+        background-image:
+            linear-gradient(
+                to right,
+                #{'alpha(@highlight_color, 0.35)'},
+                #{'alpha(@highlight_color, 0.3)'}
+            );
+    }
+}
+
+@import '_animate.scss';
+@import '_exported.scss';
+@import '_overshoot.scss';
+@import '_typography.scss';
+// Can't just use `@import 'widgets';` because of sass version in repos
+@import 'widgets/_index.scss';

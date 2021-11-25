@@ -1,0 +1,115 @@
+progressbar {
+    border-radius: rem(2px);
+
+    progress,
+    trough {
+        border: 1px solid $border-color;
+        border-radius: rem(2px);
+    }
+
+    progress {
+        background-color: #{'@accent_color'};
+        box-shadow: outset-highlight();
+
+        &:backdrop {
+            background-color: bg-color(4);
+        }
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
+    }
+
+    trough {
+        background-color: bg-color(0);
+        box-shadow:
+            outset-highlight(),
+            outset-shadow(1);
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
+    }
+
+    &.horizontal {
+        trough {
+            @extend %outset-background;
+        }
+
+        progress {
+            margin-left: -1px;
+            margin-right: -1px;
+
+            &:not(.pulse) {
+                animation: progress 1.5s $easing infinite;
+                background-size: cover, 48px 100%;
+                background-repeat: no-repeat;
+                background-image:
+                    linear-gradient(
+                        to bottom,
+                        #{'alpha(@highlight_color, 0.2)'},
+                        rgba(white, 0)
+                    ),
+                    linear-gradient(
+                        to right,
+                        rgba(white, 0),
+                        rgba(white, 0.25) 60%,
+                        rgba(white, 0)
+                    );
+
+                &.right {
+                    animation-direction: reverse;
+                }
+            }
+
+            &:backdrop {
+                animation: none;
+                background-image: none;
+                @extend %outset-background;
+            }
+        }
+    }
+
+    &.vertical {
+        progress,
+        trough {
+            @extend %outset-background-vertical;
+        }
+
+        progress {
+            margin: -1px 0;
+        }
+    }
+
+    &.flat {
+        progress,
+        trough {
+            box-shadow: none;
+            border: none;
+            border-radius: rem(6px);
+            margin: 0;
+        }
+
+        progress,
+        progress:backdrop,
+        // We have to be specific to override animation
+        .horizontal progress {
+            animation: none;
+            background: #{'alpha(@fg_color, 0.78)'};
+        }
+
+        trough {
+            background: #{'alpha(@fg_color, 0.15)'};
+        }
+    }
+}
+
+@keyframes progress {
+    from {
+        background-position: 0, calc(0% - 48px), 0%;
+    }
+
+    to {
+        background-position: 0, calc(100% + 48px), 0%;
+    }
+}

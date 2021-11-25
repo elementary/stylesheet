@@ -1,0 +1,69 @@
+frame,
+.frame {
+  border: 1px solid $toplevel-border-color;
+
+    &.flat {
+        border-style: none;
+    }
+}
+
+iconview.view.cell {
+    border-radius: rem(3px);
+
+    &:selected {
+        background: rgba($fg-color, 0.15);
+    }
+
+    &:focus:selected {
+        @extend selection;
+    }
+}
+
+flowboxchild {
+    border-radius: rem(3px);
+
+    &:focus,
+    &:selected {
+        background: rgba($fg-color, 0.15);
+    }
+
+    &:focus:selected {
+        @extend selection;
+    }
+}
+
+scrolledwindow {
+    // avoid double borders when viewport inside scrolled window
+    > viewport.frame {
+        border-style: none;
+    }
+}
+
+.view {
+    background: #{'@base_color'};
+    color: $fg-color;
+    -gtk-secondary-caret-color: #{'@selected_bg_color'};
+
+    &:disabled {
+        background: $insensitive-base-color;
+        color: $insensitive-fg-color;
+    }
+}
+
+.terminal {
+    background-color: #252e32;
+    border-radius: rem(3px);
+    color: #94a3a5;
+    font-family: monospace;
+
+    text selection {
+        background-color: #93a1a1;
+        color: #252e32;
+    }
+}
+
+rubberband {
+    background-color: #{'alpha (@accent_color, 0.15)'};
+    border: 1px solid #{'alpha (@accent_color, 0.5)'};
+    border-radius: rem(3px);
+}
