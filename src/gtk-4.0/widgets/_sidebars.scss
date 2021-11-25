@@ -1,0 +1,79 @@
+%sidebar-row {
+    &:hover {
+        background-color: rgba(white, 0.75);
+
+        @if $color-scheme == "dark" {
+            background-color: rgba(white, 0.05);
+        }
+    }
+
+    &:selected,
+    // GtkAssistant
+    &.highlight {
+        background-color: bg_color(4);
+        color: $fg-color;
+    }
+}
+
+.sidebar,
+.sidebar.view,
+.source-list {
+    popover & {
+        background: transparent;
+    }
+
+    &,
+    list,
+    .view {
+        background-color: bg_color(3);
+    }
+}
+
+.sidebar {
+    list row,
+    // GtkAssistant
+    > label {
+        padding: rem(6px) rem(12px);
+
+        @extend %sidebar-row;
+    }
+}
+
+assistant .sidebar {
+    &:dir(ltr) {
+        border-right: 1px solid #{'@menu_separator'};
+        box-shadow: inset -1px 0 0 #{'@menu_separator_shadow'};
+    }
+    &:dir(rtl) {
+        border-left: 1px solid #{'@menu_separator'};
+        box-shadow: inset 1px 0 0 #{'@menu_separator_shadow'};
+    }
+}
+
+placessidebar.frame,
+placessidebar viewport.frame {
+    border: none;
+
+    .sidebar-icon {
+        -gtk-icon-style: regular;
+    }
+
+    .sidebar-icon + .sidebar-label:dir(ltr),
+    .sidebar-label + .sidebar-icon:dir(rtl) {
+        margin-left: rem(6px);
+    }
+}
+
+treeview.sidebar {
+    -GtkTreeView-horizontal-separator: 1px;
+    -GtkTreeView-vertical-separator: 6px;
+
+    .view {
+        @extend %sidebar-row;
+    }
+
+    entry.flat {
+        // to match row selection
+        background-color: bg_color(4);
+    }
+}

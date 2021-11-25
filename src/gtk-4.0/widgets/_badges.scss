@@ -1,0 +1,53 @@
+.badge {
+    background-image:
+        linear-gradient(
+            to bottom,
+            $STRAWBERRY_300,
+            $STRAWBERRY_500
+        );
+    border: 1px solid $STRAWBERRY_700;
+    border-radius: 99px;
+    box-shadow:
+        inset 0 0 0 1px rgba(white, 0.05),
+        inset 0 1px 0 0 rgba(white, 0.25),
+        inset 0 -1px 0 0 rgba(white, 0.1),
+        0 1px 2px rgba(black, 0.3);
+    color: white;
+    font-weight: 700;
+    min-height: rem(22px);
+    min-width: rem(22px);
+    text-shadow: 0 1px 1px $STRAWBERRY_900;
+
+    @if $color-scheme == "dark" {
+        background-clip: padding-box;
+        border-color: $toplevel-border-color;
+    }
+
+    &.flat,
+    .sidebar &,
+    &.sidebar.view.cell {
+        background-image: none;
+        border-width: 0;
+        box-shadow: none;
+        margin: 0 3px;
+        padding: 0 rem(6px);
+        text-shadow: none;
+    }
+
+    .sidebar &,
+    &.sidebar.view.cell {
+        background-color: #{'alpha(@text_color, 0.1)'};
+        color: #{'alpha(@text_color, 0.7)'};
+    }
+
+    &.flat {
+        @extend selection;
+        min-height: 0;
+        min-width: rem(16px);
+
+        row:selected:not(:focus) & {
+            color: inherit;
+            background: rgba($fg-color, 0.15);
+        }
+    }
+}

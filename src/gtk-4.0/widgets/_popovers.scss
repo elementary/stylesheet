@@ -1,0 +1,54 @@
+popover {
+    @extend %menu;
+    background-clip: padding-box;
+    border: 1px solid $toplevel-border-color;
+    box-shadow: shadow(2);
+    margin: 6px;
+
+    label.h4 {
+        margin: 0 rem(12px);
+    }
+
+    // Fixes extra padding in switch modelbuttons
+    menuitem.h4 label {
+        padding: 0;
+    }
+
+    menuitem,
+    modelbutton,
+    .menuitem {
+        @extend %menuitem;
+    }
+
+    separator {
+        &.horizontal {
+            border-top: 1px solid #{'@menu_separator'};
+            border-bottom: 1px solid #{'@menu_separator_shadow'};
+            margin-bottom: -1px;
+        }
+
+        &.vertical {
+            border-left: 1px solid #{'@menu_separator'};
+            border-right: 1px solid #{'@menu_separator_shadow'};
+            margin-right: -1px;
+        }
+    }
+
+    undershoot {
+        &.top {
+            background:
+                linear-gradient(
+                    bg_color(2) 0%,
+                    rgba(bg_color(2), 0) 50%
+                );
+        }
+
+        &.bottom {
+            background:
+                linear-gradient(
+                    rgba(bg_color(2), 0) 50%,
+                    bg_color(2) 100%
+                );
+        }
+    }
+}

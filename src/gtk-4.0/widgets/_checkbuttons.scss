@@ -1,0 +1,207 @@
+check,
+radio {
+    @extend %outset-background;
+    background-color: bg-color(0);
+    border: 1px solid $border-color;
+    box-shadow:
+        outset-highlight(),
+        outset-shadow(1);
+    min-height: rem(12px);
+    min-width: rem(12px);
+    transition: all duration("in-place") $easing;
+    -gtk-icon-source: none;
+
+    &:checked {
+        background-color: #{'@accent_color'};
+        color: white;
+        -gtk-icon-source: -gtk-icontheme("check-active-symbolic");
+        -gtk-icon-shadow: 0 1px 1px #{'shade(@accent_color, 0.7)'};
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
+
+        &:backdrop:not(:disabled):not(.colorbutton) {
+            background-image: none;
+            background-color: bg-color(4);
+            -gtk-icon-shadow: 0 1px 1px $border-color;
+        }
+    }
+
+    &:disabled {
+        background: $insensitive-base-color;
+        box-shadow: 0 1px 0 0 #{'alpha (@bg_highlight_color, 0.3)'};
+        color: $insensitive-fg-color;
+        -gtk-icon-shadow: 0 1px 1px #{'alpha (@bg_highlight_color, 0.3)'};
+    }
+
+    &:indeterminate {
+        -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
+    }
+
+    &:focus {
+        &:not(:checked) {
+            @if $color-scheme == "light" {
+                border-color: #{'@accent_color'};
+            }
+        }
+
+        box-shadow:
+            0 0 0 2px #{'alpha(@accent_color, 0.3)'},
+            outset-highlight(),
+            outset-shadow(1);
+    }
+}
+
+check {
+    border-radius: rem(3px);
+}
+
+radio {
+    border-radius: 50%;
+}
+
+radiobutton,
+checkbutton {
+    image,
+    label {
+        &:dir(ltr) {
+            margin-left: rem(6px);
+        }
+
+        &:dir(rtl) {
+            margin-right: rem(6px);
+        }
+    }
+
+    &.image-button {
+        // Invisible stroke to prevent things from moving when :checked
+        border: 1px solid transparent;
+    }
+
+    &.image-button:checked {
+        background: #{'alpha(@selected_bg_color, 0.4)'};
+        border-color: #{'@selected_bg_color'};
+        border-radius: rem(3px);
+        color: #{'@selected_fg_color'};
+
+        &:backdrop {
+            background: rgba($fg-color, 0.05);
+            border-color: rgba($fg-color, 0.25);
+            color: inherit;
+        }
+    }
+}
+
+radiobutton.image-button {
+    padding: rem(6px);
+
+    &:checked:not(:backdrop) image {
+        color: #{'@selected_fg_color'};
+    }
+}
+
+.color-button {
+    check,
+    check:checked,
+    radio,
+    radio:checked, {
+        background-image: none;
+        border: 1px solid rgba(black, 0.2);
+        border-radius: 50%;
+        box-shadow: inset-shadow();
+        min-height: rem(12px);
+        min-width: rem(12px);
+        padding: rem(3px);
+
+        @if $color-scheme == "dark" {
+            @extend %outset-background;
+            background-clip: padding-box;
+            box-shadow:
+                outset-highlight("full"),
+                outset-shadow(2);
+        }
+    }
+
+    &.red check,
+    &.red radio,
+    &.strawberry check,
+    &.strawberry radio {
+        background-color: #{'@STRAWBERRY_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@STRAWBERRY_500'};
+    }
+
+    &.orange check,
+    &.orange radio {
+        background-color: #{'@ORANGE_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@ORANGE_500'};
+    }
+
+    &.yellow check,
+    &.yellow radio,
+    &.banana check,
+    &.banana radio {
+        background-color: #{'@BANANA_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@BANANA_700'};
+    }
+
+    &.green check,
+    &.green radio,
+    &.lime check,
+    &.lime radio {
+        background-color: #{'@LIME_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@LIME_700'};
+    }
+
+    &.blue check,
+    &.blue radio,
+    &.blueberry check,
+    &.blueberry radio {
+        background-color: #{'@BLUEBERRY_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@BLUEBERRY_700'};
+    }
+
+    &.purple check,
+    &.purple radio,
+    &.grape check,
+    &.grape radio {
+        background-color: #{'@GRAPE_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@GRAPE_700'};
+    }
+
+    &.brown check,
+    &.brown radio,
+    &.cocoa check,
+    &.cocoa radio {
+        background-color: #{'@COCOA_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@COCOA_500'};
+    }
+
+    &.mint check,
+    &.mint radio  {
+        background-color: #{'@MINT_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@MINT_700'};
+    }
+
+    &.pink check,
+    &.pink radio,
+    &.bubblegum check,
+    &.bubblegum radio  {
+        background-color: #{'@BUBBLEGUM_500'};
+        -gtk-icon-shadow: 0 1px 1px #{'@BUBBLEGUM_700'};
+    }
+
+    &.slate check,
+    &.slate radio  {
+        background-color: #{'@SLATE_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
+
+    }
+
+    &.auto radio {
+        background-image: url("assets/color-button-auto.png");
+        background-position: -1px -1px;
+        background-repeat: no-repeat;
+        background-size: calc(100% + 2px);
+    }
+}
