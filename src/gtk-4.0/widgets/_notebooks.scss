@@ -1,8 +1,8 @@
 %tabheader {
-    background-color: #{'shade (@tab_base_color, 0.95)'};
+    background-color: #{'shade(@tab_base_color, 0.95)'};
 
     @if $color-scheme == "dark" {
-        background-color: #{'shade (@tab_base_color, 0.87)'};
+        background-color: #{'shade(@tab_base_color, 0.87)'};
     }
 
 
@@ -27,7 +27,7 @@
     }
 
     &:backdrop {
-        background-color: #{'shade (@tab_base_color, 0.98)'};
+        background-color: #{'shade(@tab_base_color, 0.98)'};
     }
 }
 
@@ -85,7 +85,7 @@ tab {
     }
 
     &:hover:not(:checked) {
-        background-color: #{'shade (@tab_base_color, 0.9)'};
+        background-color: #{'shade(@tab_base_color, 0.9)'};
     }
 
     &:checked {
@@ -96,7 +96,7 @@ tab {
             outset-shadow(2);
 
         &:backdrop {
-            background-color: #{'shade (@tab_base_color, 0.97)'};
+            background-color: #{'shade(@tab_base_color, 0.97)'};
         }
     }
 }
@@ -132,16 +132,16 @@ tabbar {
         &.left {
             background-image: linear-gradient(
                 to left,
-                #{'alpha (@tab_base_color, 0)'},
-                #{'shade (@tab_base_color, 0.95)'}
+                #{'alpha(@tab_base_color, 0)'},
+                #{'shade(@tab_base_color, 0.95)'}
             );
         }
 
         &.right {
             background-image: linear-gradient(
                 to right,
-                #{'alpha (@tab_base_color, 0)'},
-                #{'shade (@tab_base_color, 0.95)'}
+                #{'alpha(@tab_base_color, 0)'},
+                #{'shade(@tab_base_color, 0.95)'}
             );
         }
 
@@ -149,16 +149,16 @@ tabbar {
             &.left {
                 background-image: linear-gradient(
                     to left,
-                    #{'alpha (@tab_base_color, 0)'},
-                    #{'shade (@tab_base_color, 0.97)'}
+                    #{'alpha(@tab_base_color, 0)'},
+                    #{'shade(@tab_base_color, 0.97)'}
                 );
             }
 
             &.right {
                 background-image: linear-gradient(
                     to right,
-                    #{'alpha (@tab_base_color, 0)'},
-                    #{'shade (@tab_base_color, 0.97)'}
+                    #{'alpha(@tab_base_color, 0)'},
+                    #{'shade(@tab_base_color, 0.97)'}
                 );
             }
         }

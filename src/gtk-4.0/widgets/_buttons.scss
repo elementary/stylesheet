@@ -77,7 +77,7 @@ button {
             @extend selection;
 
             @if $color-scheme == "light" {
-                border-color: #{'alpha (mix (black, @accent_color, 0.9), 0.5)'};
+                border-color: #{'alpha(mix(black, @accent_color, 0.9), 0.5)'};
 
                 &:backdrop {
                     border-color: $border-color;
@@ -92,7 +92,7 @@ button {
             &:active,
             &:checked {
                 @if $color-scheme == "light" {
-                    border-color: #{'alpha (mix (black, @accent_color, 0.7), 0.4)'};
+                    border-color: #{'alpha(mix(black, @accent_color, 0.7), 0.4)'};
                 } @else if $color-scheme == "dark" {
                     border-color: rgba(black, 0.5);
                 }

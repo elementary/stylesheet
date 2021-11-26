@@ -63,7 +63,7 @@ scrolledwindow {
 }
 
 rubberband {
-    background-color: #{'alpha (@accent_color, 0.15)'};
-    border: 1px solid #{'alpha (@accent_color, 0.5)'};
+    background-color: #{'alpha(@accent_color, 0.15)'};
+    border: 1px solid #{'alpha(@accent_color, 0.5)'};
     border-radius: rem(3px);
 }
