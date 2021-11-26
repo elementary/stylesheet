@@ -16,10 +16,11 @@ window.csd:not(.popup):not(.menu) {
 assistant,
 printdialog,
 window:not(.popup):not(.menu) {
-    border-radius: rem(6px);
+    border-radius: 6px 6px 0 0;
 
     // We only draw shadows for client-side decorations
     &.csd {
+        border-radius: rem(6px);
         box-shadow:
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
@@ -35,8 +36,7 @@ window:not(.popup):not(.menu) {
         }
 
         &.maximized {
-            background-color: black;
-            border-radius: 0;
+            margin: 0;
             box-shadow: none;
         }
 
@@ -70,23 +70,8 @@ window:not(.popup):not(.menu) {
         }
     }
 
-    // SSD doesn't calculate rems correctly
-    &.ssd decoration {
-        border-radius: 6px 6px 0 0;
-        // Can't be applied directly to the window
-        box-shadow: 0 0 0 1px $toplevel-border-color;
-        margin: 12px;
-    }
-
     // Hdy.Window
     &.unified {
-        border-radius: rem(6px);
-
-        decoration,
-        decoration-overlay {
-            border-radius: rem(6px);
-        }
-
         decoration-overlay {
             box-shadow: outset-highlight();
         }
