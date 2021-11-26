@@ -10,51 +10,43 @@ messagedialog,
 message-dialog,
 printdialog,
 window.csd:not(.popup):not(.menu) {
-    > decoration {
-        margin: rem(12px);
-    }
+    margin: rem(12px);
 }
 
 assistant,
 printdialog,
 window:not(.popup):not(.menu) {
-    > decoration {
-        border-radius: rem(6px) rem(6px) 0 0;
-    }
+    border-radius: 6px 6px 0 0;
 
     // We only draw shadows for client-side decorations
     &.csd {
-        > decoration {
-            box-shadow:
-                // Intentionally not in ems since it's used as a stroke
-                0 0 0 1px $toplevel-border-color,
-                // Force shadows to be the same size to prevent jumpy resize transition
-                0 13px 16px 4px transparent,
-                shadow(4);
+        border-radius: rem(6px);
+        box-shadow:
+            // Intentionally not in ems since it's used as a stroke
+            0 0 0 1px $toplevel-border-color,
+            // Force shadows to be the same size to prevent jumpy resize transition
+            0 13px 16px 4px transparent,
+            shadow(4);
 
-            &:backdrop {
-                box-shadow:
-                    0 0 0 1px $toplevel-border-color,
-                    0 13px 16px 4px transparent,
-                    shadow(2);
-            }
+        &:backdrop {
+            box-shadow:
+                0 0 0 1px $toplevel-border-color,
+                0 13px 16px 4px transparent,
+                shadow(2);
         }
 
-        &.maximized > decoration {
-            background-color: black;
-            border-radius: 0;
+        &.maximized {
+            margin: 0;
             box-shadow: none;
         }
 
         &.tiled:not(.maximized) {
-            > decoration {
-                background-color: black;
-                border-radius: 0;
-                box-shadow:
-                    0 0 0 1px $toplevel-border-color,
-                    0 13px 16px 4px transparent,
-                    shadow(1);
-            }
+            background-color: black;
+            border-radius: 0;
+            box-shadow:
+                0 0 0 1px $toplevel-border-color,
+                0 13px 16px 4px transparent,
+                shadow(1);
 
             &.tiled-left {
                 &.tiled-top .titlebar {
@@ -78,31 +70,8 @@ window:not(.popup):not(.menu) {
         }
     }
 
-    &.rounded {
-        border-radius: 0 0 rem(6px) rem(6px);
-
-        > decoration {
-            border-radius: rem(6px);
-        }
-    }
-
-    // SSD doesn't calculate rems correctly
-    &.ssd decoration {
-        border-radius: 6px 6px 0 0;
-        // Can't be applied directly to the window
-        box-shadow: 0 0 0 1px $toplevel-border-color;
-        margin: 12px;
-    }
-
     // Hdy.Window
     &.unified {
-        border-radius: rem(6px);
-
-        decoration,
-        decoration-overlay {
-            border-radius: rem(6px);
-        }
-
         decoration-overlay {
             box-shadow: outset-highlight();
         }
@@ -114,23 +83,21 @@ messagedialog,
 message-dialog {
     box-shadow: outset-highlight("bottom");
 
-    > decoration {
-        border-radius: rem(6px);
+    border-radius: rem(6px);
+    box-shadow:
+        // Intentionally not in ems since it's used as a stroke
+        0 0 0 1px $toplevel-border-color,
+        // Force shadows to be the same size to prevent jumpy resize transition
+        0 13px 16px 4px transparent,
+        shadow(3);
+
+    &:backdrop {
         box-shadow:
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
             // Force shadows to be the same size to prevent jumpy resize transition
             0 13px 16px 4px transparent,
-            shadow(3);
-
-        &:backdrop {
-            box-shadow:
-                // Intentionally not in ems since it's used as a stroke
-                0 0 0 1px $toplevel-border-color,
-                // Force shadows to be the same size to prevent jumpy resize transition
-                0 13px 16px 4px transparent,
-                shadow(2);
-        }
+            shadow(2);
     }
 
     &.csd {
