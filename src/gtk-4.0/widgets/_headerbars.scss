@@ -40,25 +40,8 @@ window {
             -gtk-icon-shadow: $shadow;
         }
 
-        windowcontrols {
-            &.end {
-                margin-left: rem(12px);
-            }
-
-            &.start {
-                margin-right: rem(12px);
-            }
-
-            button {
-                padding: rem(4px);
-                -gtk-icon-shadow: $shadow;
-
-                &:not(:active) {
-                    background: none;
-                    border-color: transparent;
-                    box-shadow: none;
-                }
-            }
+        windowcontrols button {
+            -gtk-icon-shadow: $shadow;
         }
 
         // Reset so we don't affect things inside of child popovers/menus
