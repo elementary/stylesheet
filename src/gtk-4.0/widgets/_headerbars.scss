@@ -35,12 +35,9 @@ window {
             font-size: 80%;
         }
 
+        windowcontrols button,
         .image-button,
         .mode-switch {
-            -gtk-icon-shadow: $shadow;
-        }
-
-        windowcontrols button {
             -gtk-icon-shadow: $shadow;
         }
 
