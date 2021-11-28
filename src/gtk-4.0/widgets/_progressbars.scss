@@ -32,17 +32,18 @@ progressbar {
     }
 
     &.horizontal {
+        progress,
         trough {
-            @extend %outset-background;
-
             min-height: rem(6px);
             min-width: rem(3px);
         }
 
+        trough {
+            @extend %outset-background;
+        }
+
         progress {
             margin: 0 -1px;
-            min-height: rem(6px);
-            min-width: rem(3px);
 
             &:not(.pulse) {
                 animation: progress 1.5s $easing infinite;
