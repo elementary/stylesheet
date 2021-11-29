@@ -1,0 +1,47 @@
+columnview {
+    header button {
+        border-radius: 0;
+        border-left-width: 0;
+        border-top-width: 0;
+
+        &:last-child {
+            border-right-width: 0;
+        }
+
+        label {
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        &:backdrop label {
+            opacity: 0.6;
+        }
+
+        sort-indicator {
+            min-height: 16px;
+            min-width: 16px;
+
+            &.ascending {
+                -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+            }
+
+            &.descending {
+                -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+            }
+        }
+    }
+
+    listview {
+        row {
+            padding: rem(3px) rem(6px);
+
+            &:selected {
+                background: rgba($fg-color, 0.15);
+            }
+
+            &:focus:selected {
+                @extend selection;
+            }
+        }
+    }
+}
