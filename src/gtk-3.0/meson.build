@@ -58,3 +58,9 @@ foreach variant : variants
         'assets',
     ], install_dir: dest_theme_dir / 'gtk-3.0' )
 endforeach
+
+meson.add_install_script(
+    symlink,
+    '--src', get_option('datadir') / 'themes' / 'io.elementary.stylesheet.blueberry',
+    '--dest', get_option('datadir') / 'themes' / 'elementary'
+)

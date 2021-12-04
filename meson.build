@@ -7,6 +7,7 @@ i18n = import('i18n')
 sass = find_program('sassc')
 
 install_exec = meson.current_source_dir() / 'meson' / 'install-to-dir.py'
+symlink = meson.current_source_dir() / 'meson' / 'symlink.py'
 
 outfiles = [
     'gtk.css',
