@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-22 15:36-0800\n"
-"PO-Revision-Date: 2021-11-23 22:56+0000\n"
+"PO-Revision-Date: 2021-12-22 23:10+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/tr/>\n"
@@ -37,27 +37,27 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:20
 msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr " "
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Fix font style for title labels in headerbars"
-msgstr " "
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Support for Hdy.Tabbar"
-msgstr " "
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Fix accent class for Gtk.Scale"
-msgstr " "
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Flat titlebars inherit background color for views and sidebars"
-msgstr " "
+msgstr ""
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Complete redesign"
-msgstr " "
+msgstr "Tamamen yeniden tasarlandı"
 
 #: data/stylesheet.appdata.xml.in:45
 msgid "elementary, Inc."
