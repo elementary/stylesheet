@@ -78,6 +78,17 @@
         padding: rem(3px) rem(6px) calc(#{rem(3px)} - 1px);
     }
 
+    check,
+    radio {
+        &.left {
+            margin-right: rem(6px);
+        }
+
+        &.right {
+            margin-left: rem(6px);
+        }
+    }
+
     switch slider {
         min-height: rem(20px);
         min-width: rem(20px);
