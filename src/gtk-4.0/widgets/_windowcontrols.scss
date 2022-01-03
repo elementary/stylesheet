@@ -1,0 +1,19 @@
+windowcontrols {
+    &.end {
+        margin-left: rem(12px);
+    }
+
+    &.start {
+        margin-right: rem(12px);
+    }
+
+    button {
+        padding: rem(4px);
+
+        &:not(:active) {
+            background: none;
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+}
