@@ -25,7 +25,8 @@ treeview {
         }
 
         label {
-            font-weight: 600;
+            // Cannot be a number or fonts break in Flatpak
+            font-weight: bold;
             opacity: 0.8;
         }
 
