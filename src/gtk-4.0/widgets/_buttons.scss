@@ -175,7 +175,7 @@ button {
     }
 
     &:backdrop {
-        -gtk-icon-effect: dim;
+        filter: opacity($disabled_opacity);
     }
 
     &.color,
