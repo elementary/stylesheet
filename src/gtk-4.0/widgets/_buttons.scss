@@ -175,7 +175,7 @@ button {
     }
 
     &:backdrop {
-        filter: opacity($disabled_opacity);
+        filter: opacity($disabled-opacity);
     }
 
     &.color,

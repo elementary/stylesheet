@@ -5,6 +5,6 @@ image {
         warning $warning-icon-color;
 
     &:disabled {
-        filter: opacity($disabled_opacity);
+        filter: opacity($disabled-opacity);
     }
 }
