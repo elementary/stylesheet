@@ -99,12 +99,6 @@ button {
             }
         }
 
-        &.titlebutton:not(:active) {
-            background: none;
-            border-color: transparent;
-            box-shadow: none;
-        }
-
         &:active,
         &:checked {
             background: rgba(black, 0.05);
@@ -180,8 +174,7 @@ button {
 
     &.color,
     &.combo,
-    &.image-button,
-    &.titlebutton {
+    &.image-button {
         padding: rem(4px);
     }
 
