@@ -139,18 +139,5 @@ window {
 }
 
 window.dialog.csd > .titlebar {
-   background: inherit;
-   box-shadow: outset-highlight("top");
-   padding: rem(6px);
-
-   &.default-decoration {
-       padding: 0;
-   }
-
-   label.title {
-       text-shadow: none;
-       -gtk-icon-shadow: none;
-       font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
-       color: transparent;
-   }
+    @extend .flat;
 }
