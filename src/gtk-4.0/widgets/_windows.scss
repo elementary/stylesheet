@@ -105,6 +105,14 @@ window.dialog {
         // Compensate for off-by-one
         margin: rem(7px);
         margin-bottom: rem(8px);
+
+        button:dir(ltr) + button {
+            margin-left: rem(6px);
+        }
+
+        button:dir(rtl) + button {
+            margin-right: rem(6px);
+        }
     }
 
     &.message .dialog-action-area {
