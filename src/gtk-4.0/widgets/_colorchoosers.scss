@@ -49,7 +49,6 @@ colorchooser {
             border: 1px solid rgba(black, 0.2);
             border-bottom-width: 0;
             border-top-width: 0;
-            margin: -1px 3px;
 
             @if $color-scheme == "dark" {
                 box-shadow:
