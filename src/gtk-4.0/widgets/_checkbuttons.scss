@@ -10,7 +10,7 @@ radio {
     min-width: rem(12px);
     transition: all duration("in-place") $easing;
     -gtk-icon-source: none;
-    -gtk-icon-size: 12px;
+    -gtk-icon-size: rem(12px);
 
     &:checked {
         background-color: #{'@accent_color'};
