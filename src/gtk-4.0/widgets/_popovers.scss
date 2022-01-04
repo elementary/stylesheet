@@ -9,6 +9,7 @@
     &:disabled {
         color: $insensitive-fg-color;
 
+        accelerator,
         .keycap {
             opacity: 0.7;
         }
@@ -27,6 +28,7 @@
         }
     }
 
+    accelerator,
     .keycap {
         background: rgba(black, 0.08);
         border: none;
