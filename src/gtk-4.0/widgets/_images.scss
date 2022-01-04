@@ -5,7 +5,7 @@ image {
         warning $warning-icon-color;
 
     &:disabled {
-        -gtk-icon-effect: dim;
+        filter: opacity($disabled-opacity);
     }
 
     &.normal-icons {

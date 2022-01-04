@@ -1,12 +1,6 @@
-scrolledwindow {
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-}
-
 scrollbar {
     background-color: transparent;
     transition: all duration("close") $easing;
-    -GtkScrollbar-has-backward-stepper: false;
-    -GtkScrollbar-has-forward-stepper: false;
 
     &:hover,
     &.hovering {
