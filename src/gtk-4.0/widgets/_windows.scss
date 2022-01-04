@@ -5,9 +5,6 @@
 }
 
 assistant,
-dialog,
-messagedialog,
-message-dialog,
 printdialog,
 window.csd:not(.popup):not(.menu) {
     margin: rem(12px);
@@ -15,7 +12,7 @@ window.csd:not(.popup):not(.menu) {
 
 assistant,
 printdialog,
-window:not(.popup):not(.menu) {
+window {
     border-radius: 6px 6px 0 0;
 
     // We only draw shadows for client-side decorations
@@ -78,42 +75,40 @@ window:not(.popup):not(.menu) {
     }
 }
 
-dialog,
-messagedialog,
-message-dialog {
+window.dialog {
+    border-radius: 0;
     box-shadow: outset-highlight("bottom");
 
-    border-radius: rem(6px);
-    box-shadow:
-        // Intentionally not in ems since it's used as a stroke
-        0 0 0 1px $toplevel-border-color,
-        // Force shadows to be the same size to prevent jumpy resize transition
-        0 13px 16px 4px transparent,
-        shadow(3);
-
-    &:backdrop {
+    &.csd {
+        border-radius: rem(6px);
         box-shadow:
+            outset-highlight(),
             // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
             // Force shadows to be the same size to prevent jumpy resize transition
             0 13px 16px 4px transparent,
-            shadow(2);
+            shadow(3);
+
+        &:backdrop {
+            box-shadow:
+                outset-highlight(),
+                // Intentionally not in ems since it's used as a stroke
+                0 0 0 1px $toplevel-border-color,
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
+                shadow(2);
+        }
     }
 
-    &.csd {
-        border-radius: 0 0 rem(6px) rem(6px);
-    }
-
-    // These should should in 12px borders around buttons
+    // These should be 12px borders around buttons
     .dialog-action-area {
         // Compensate for off-by-one
         margin: rem(7px);
         margin-bottom: rem(8px);
     }
-}
 
-messagedialog .dialog-action-area,
-message-dialog .dialog-action-area {
-    // Double space between content and actions
-    margin-top: rem(16px);
+    &.message .dialog-action-area {
+        // Double space between content and actions
+        margin-top: rem(16px);
+    }
 }
