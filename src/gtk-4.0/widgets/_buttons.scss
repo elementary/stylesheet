@@ -1,7 +1,6 @@
 button {
     background-clip: padding-box;
     border-radius: rem(3px);
-    -gtk-outline-radius: rem(5px);
     // Explicitly set in case containers override default color
     color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
