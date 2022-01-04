@@ -1,25 +1,24 @@
-calendar {
-    // Days don't stay centered in the selection with larger padding
-    padding: rem(1px);
+calendar.view {
+    background: transparent;
 
-    .view {
-        background-color: transparent;
-        background-image: none;
+    .day-name {
+        @extend .h4;
     }
 
-    // Month headers
-    .highlight {
-        color: mix($fg-color, bg-color(1), $weight: 80%);
-    }
+    .day-number {
+        &.today {
+            @extend .accent;
+            font-weight: bold;
+        }
 
-    &:selected{
-        @extend selection;
-        border-radius: 99px;
-    }
+        &.other-month {
+            color: $insensitive-fg-color;
+        }
 
-    // Other month days
-    &:indeterminate {
-        color: mix($fg-color, bg-color(1), $weight: 50%);
+        &:selected{
+            @extend selection;
+            border-radius: 99px;
+        }
     }
 }
 
