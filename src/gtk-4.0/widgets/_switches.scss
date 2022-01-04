@@ -53,21 +53,6 @@ switch {
             outset-shadow(3);
         min-height: rem(24px);
         min-width: rem(24px);
-
-        &:focus {
-            @if $color-scheme == "light" {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 1px #{'@accent_color'},
-                    outset-shadow(3);
-            }
-            color: #{'@selected_fg_color'};
-            outline-color: #{'alpha(@accent_color, 0.3)'};
-            // Off-by-one to account for padding-box clip
-            outline-width: rem(3px);
-            outline-style: solid;
-            -gtk-outline-radius: 99px;
-        }
     }
 
     &.mode-switch slider {
@@ -85,6 +70,30 @@ switch {
                 outset-highlight("full"),
                 0 0 0 1px rgba(black, 0.15),
                 outset-shadow(2);
+        }
+    }
+
+    &:focus {
+        @if $color-scheme == "light" {
+            border-color: #{'@accent_color'};
+        }
+        color: #{'@selected_fg_color'};
+        outline-color: #{'alpha(@accent_color, 0.3)'};
+        outline-width: rem(2px);
+        outline-style: solid;
+
+        slider {
+            @if $color-scheme == "light" {
+                box-shadow:
+                    outset-highlight("full"),
+                    0 0 0 1px #{'@accent_color'},
+                    outset-shadow(3);
+            }
+            color: #{'@selected_fg_color'};
+            outline-color: #{'alpha(@accent_color, 0.3)'};
+            // Off-by-one to account for padding-box clip
+            outline-width: rem(3px);
+            outline-style: solid;
         }
     }
 }
