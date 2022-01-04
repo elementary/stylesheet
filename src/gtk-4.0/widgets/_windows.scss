@@ -100,6 +100,10 @@ window.dialog {
         }
     }
 
+    .dialog-content-area {
+        margin: rem(12px);
+    }
+
     // These should be 12px borders around buttons
     .dialog-action-area {
         // Compensate for off-by-one
