@@ -3,7 +3,24 @@ placeholder {
 
     > grid > .large-icons {
         -gtk-icon-size: 48px;
-        margin-right: rem(12px);
+
+        &:dir(ltr) {
+            margin-right: rem(3px);
+        }
+
+        &:dir(rtl) {
+            margin-left: rem(3px);
+        }
+    }
+
+    .title-1:dir(ltr),
+    .title-2:dir(ltr) {
+        margin-left: rem(9px);
+    }
+
+    .title-1:dir(rtl),
+    .title-2:dir(rtl) {
+        margin-right: rem(9px);
     }
 
     .title-1 + .title-2 {
@@ -18,27 +35,37 @@ placeholder {
     }
 
     box {
-        margin-top: 1.5em;
-    }
+        margin-top: rem(12px);
 
-    button {
-        @extend .flat;
+        button {
+            @extend .flat;
 
-        .large-icons {
-            -gtk-icon-size: 32px;
-            margin-right: rem(6px);
-        }
+            .large-icons {
+                -gtk-icon-size: 32px;
 
-        .title-3 {
-            font-weight: initial;
-        }
+                &:dir(ltr) {
+                    margin-right: rem(6px);
+                }
 
-        label:not(.title-3) {
-            @extend .dim-label;
-        }
+                &:dir(rtl) {
+                    margin-left: rem(6px);
+                }
+            }
 
-        + button {
-            margin-top: rem(12px);
+
+            label {
+                &.title-3 {
+                    font-weight: initial;
+                }
+
+                &:not(.title-3) {
+                    @extend .dim-label;
+                }
+            }
+
+            + button {
+                margin-top: rem(12px);
+            }
         }
     }
 }
