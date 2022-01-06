@@ -12,7 +12,7 @@ spinner {
         }
 
         &:disabled {
-            opacity: 0.4;
+            opacity: $disabled-opacity;
         }
     }
 }

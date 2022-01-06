@@ -1,7 +1,4 @@
 assistant,
-dialog,
-messagedialog,
-message-dialog,
 printdialog,
 window.csd {
     > .titlebar {
@@ -35,7 +32,7 @@ window {
             font-size: 80%;
         }
 
-        .titlebutton,
+        windowcontrols button,
         .image-button,
         .mode-switch {
             -gtk-icon-shadow: $shadow;
@@ -141,23 +138,6 @@ window {
     }
 }
 
-dialog.csd,
-messagedialog.csd,
-message-dialog.csd {
-    > .titlebar {
-       background-color: bg_color(2);
-       box-shadow: outset-highlight("top");
-       padding: rem(6px);
-
-       &.default-decoration {
-           padding: 0;
-       }
-
-       label.title {
-           text-shadow: none;
-           -gtk-icon-shadow: none;
-           font-size: 0.1px; // Workaround for an issue in Gtk when setting 0px
-           color: transparent;
-       }
-   }
+window.dialog.csd > .titlebar {
+    @extend .flat;
 }

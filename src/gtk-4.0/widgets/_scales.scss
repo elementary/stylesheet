@@ -50,21 +50,6 @@ scale {
             border: none;
             box-shadow: none;
         }
-
-        &:focus {
-            @if $color-scheme == "light" {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
-                    0 0 0 1px $border-color,
-                    0 0 0 1px #{'@accent_color'};
-            } @else {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
-                    0 0 0 1px $border-color;
-            }
-        }
     }
 
     trough {
@@ -161,14 +146,14 @@ scale {
         fill.top {
             border-radius: rem(12px) 0 0 rem(12px);
             // Account for border width
-            margin: -1px 0 -1px calc(#{rem(-6px)} - 1px);
+            margin: -1px 0 -1px -1px;
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 rem(12px) rem(12px) 0;
             // Account for border width
-            margin: -1px calc(#{rem(-6px)} - 1px) -1px 0;
+            margin: -1px -1px -1px 0;
         }
 
         mark indicator {
@@ -178,12 +163,11 @@ scale {
         }
 
         slider {
-            margin: rem(-6px) 0;
+            margin: rem(-6px) -1px;
         }
 
         trough {
             margin: rem(6px) 0;
-            padding: 0 rem(6px);
         }
     }
 
@@ -192,14 +176,14 @@ scale {
         fill.top {
             border-radius: rem(12px) rem(12px) 0 0;
             // Account for border width
-            margin: calc(#{rem(-6px)} - 1px) -1px 0 -1px;
+            margin: -1px -1px 0 -1px;
         }
 
         highlight.bottom,
         fill.bottom {
             border-radius: 0 0 rem(12px) rem(12px);
             // Account for border width
-            margin: 0 -1px calc(#{rem(-6px)} - 1px) -1px;
+            margin: 0 -1px -1px -1px;
         }
 
         mark indicator {
@@ -209,12 +193,26 @@ scale {
         }
 
         slider {
-            margin: 0 rem(-6px);
+            margin: -1px rem(-6px);
         }
 
         trough {
             margin: 0 rem(6px);
-            padding: rem(6px) 0;
+        }
+    }
+
+    &:focus slider {
+        @if $color-scheme == "light" {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
+                0 0 0 1px $border-color,
+                0 0 0 1px #{'@accent_color'};
+        } @else {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
+                0 0 0 1px $border-color;
         }
     }
 }

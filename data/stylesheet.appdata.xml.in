@@ -14,6 +14,14 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
+    <release version="6.1.2" date="2021-12-01" urgency="medium">
+      <description>
+        <p>Fixes:</p>
+        <ul>
+          <li>ModelButtons: add margin between checks, radios, and labels</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.1.1" date="2021-11-23" urgency="medium">
       <description>
         <p>Improvements:</p>

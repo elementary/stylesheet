@@ -23,13 +23,18 @@
         }
     }
 
-    &:focus {
+    &:focus-within {
         @if $color-scheme == "light" {
             border-color: #{'@accent_color'};
         }
+
         box-shadow:
             0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
             inset-shadow();
+    }
+
+    placeholder {
+        color: #{'@placeholder_text_color'};
     }
 }
 
@@ -37,20 +42,18 @@ entry {
     @extend %entry;
     // Prevent size change when setting primary or secondary icons
     min-height: 16px;
-    // Off-by-one to account for padding-box clip
-    padding: rem(4px);
+
+    image,
+    text {
+        // Margin top and bottom for size, padding left and right for overflow
+        // Off-by-one to account for padding-box clip
+        margin: rem(4px) 0;
+        padding: 0 rem(4px);
+    }
 
     image {
         color: #{'@placeholder_text_color'};
         transition: all duration("in-place") $easing;
-    }
-
-    image.left {
-        margin-right: rem(6px);
-    }
-
-    image.right {
-        margin-left: rem(6px);
     }
 
     // We only want the action side icon to react on hover
@@ -62,5 +65,17 @@ entry {
     // Fixes an issue in Epiphany
     headerbar & {
         margin: 1px;
+    }
+
+    progress > trough {
+        // Off-by-one to account for padding-box clip
+        margin: rem(4px);
+
+        > progress {
+            background: #{'@accent_color'};
+            border-radius: rem(2px);
+            min-height: rem(2px);
+            min-width: rem(2px);
+        }
     }
 }

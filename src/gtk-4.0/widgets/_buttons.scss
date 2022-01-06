@@ -1,7 +1,6 @@
 button {
     background-clip: padding-box;
     border-radius: rem(3px);
-    -gtk-outline-radius: rem(5px);
     // Explicitly set in case containers override default color
     color: #{'@fg_color'};
     // Off-by-one to account for padding-box clip
@@ -99,12 +98,6 @@ button {
             }
         }
 
-        &.titlebutton:not(:active) {
-            background: none;
-            border-color: transparent;
-            box-shadow: none;
-        }
-
         &:active,
         &:checked {
             background: rgba(black, 0.05);
@@ -175,13 +168,12 @@ button {
     }
 
     &:backdrop {
-        -gtk-icon-effect: dim;
+        filter: opacity($disabled-opacity);
     }
 
     &.color,
     &.combo,
-    &.image-button,
-    &.titlebutton {
+    &.image-button {
         padding: rem(4px);
     }
 
@@ -210,4 +202,8 @@ button {
     &:dir(rtl) label + image {
         margin-left: rem(3px);
     }
+}
+
+fontbutton separator.vertical {
+    margin: 0 rem(6px);
 }
