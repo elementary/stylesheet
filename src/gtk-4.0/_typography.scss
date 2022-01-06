@@ -27,7 +27,8 @@ label.h4,
     padding-top: 0.5em;
 }
 
-.dialog .dialog-vbox .title, // Not for titles in the headerbar
+// For dialog primary text, but not titles in the headerbar
+.dialog .dialog-vbox .title,
 .primary {
     font-weight: 500;
     font-size: 1.22em
