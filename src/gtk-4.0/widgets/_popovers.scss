@@ -1,9 +1,14 @@
 %menuitem {
     // Make sure we don't inherit changes from parent widgets
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     color: $fg-color;
-    font-weight: initial;
+    font: initial;
     letter-spacing: initial;
     min-width: rem(150px);
+    outline-style: none;
     padding: rem(6px) rem(12px);
 
     &:disabled {
@@ -78,17 +83,6 @@ popover.background {
 
         label.h4 {
             margin: 0 rem(12px);
-        }
-
-        // Fixes extra padding in switch modelbuttons
-        menuitem.h4 label {
-            padding: 0;
-        }
-
-        menuitem,
-        modelbutton,
-        .menuitem {
-            @extend %menuitem;
         }
 
         separator {
@@ -170,10 +164,7 @@ popover.background {
                 shadow(3);
         }
 
-        menuitem,
         .menuitem {
-            @extend %menuitem;
-
             &:dir(ltr) {
                 image:first-child {
                     // Off-by-one for some reason. Maybe optical illusion?
@@ -206,9 +197,17 @@ popover.background {
         }
 
         separator {
-            border-top: 1px solid #{'@menu_separator'};
-            border-bottom: 1px solid #{'@menu_separator_shadow'};
             margin: rem(3px) 0;
+        }
+    }
+
+    modelbutton,
+    .menuitem {
+        @extend %menuitem;
+
+        // Fixes extra padding in switch modelbuttons
+        &.h4 label {
+            padding: 0;
         }
     }
 }
