@@ -1,20 +1,22 @@
 tooltip.background,
 .overlay-bar {
     background-color: rgba($BLACK_700, 0.9);
-    border-radius: rem(3px);
-    padding: rem(3px) rem(6px);
+    color: white;
+
 
     label,
     spinner {
-        color: white;
         text-shadow: 0 rem(1px) rem(2px) rgba(black, 0.6);
         -gtk-icon-shadow: 0 rem(1px) rem(2px) rgba(black, 0.6);
     }
 }
 
-tooltip.csd decoration,
+tooltip,
 .overlay-bar {
+    padding: rem(3px) rem(6px);
     border-radius: rem(3px);
     box-shadow: shadow(1);
     margin: rem(3px);
+
+
 }
