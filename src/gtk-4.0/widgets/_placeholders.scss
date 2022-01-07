@@ -38,8 +38,6 @@ placeholder {
         margin-top: rem(12px);
 
         button {
-            @extend .flat;
-
             .large-icons {
                 -gtk-icon-size: 32px;
 
