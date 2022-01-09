@@ -1,28 +1,34 @@
-.h1 {
+.h1,
+.title-1 {
     font-size: 24pt;
     font-weight: 700;
     letter-spacing: -0.04em;
 }
 
-.h2 {
+.h2,
+.title-2 {
     font-weight: 300;
     font-size: 18pt;
     letter-spacing: -0.05em;
 }
 
-.h3 {
+.h3,
+.title-3 {
     font-size: 11pt;
 }
 
 label.h4,
-.h4 label {
+.h4 label,
+.heading,
+.title-4 {
     font-weight: 700;
     opacity: 0.8;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
 }
 
-.dialog .title,
+// For dialog primary text, but not titles in the headerbar
+.dialog .dialog-vbox .title,
 .primary {
     font-weight: 500;
     font-size: 1.22em
