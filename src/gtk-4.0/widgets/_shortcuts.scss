@@ -6,11 +6,6 @@ shortcuts-group > label {
     @extend .h4;
 }
 
-// Remove plus signs in Gtk.ShortcutLabel
-shortcut .dim-label {
-    color: transparent;
-}
-
 accelerator,
 .keycap {
     background-color: bg-color(2);
