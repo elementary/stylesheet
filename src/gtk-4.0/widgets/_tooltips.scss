@@ -1,5 +1,5 @@
 tooltip.background,
-.overlay-bar {
+overlaybar {
     background-color: rgba($BLACK_700, 0.9);
     color: white;
 
@@ -11,9 +11,22 @@ tooltip.background,
 }
 
 tooltip,
-.overlay-bar {
+overlaybar {
     padding: rem(3px) rem(6px);
     border-radius: rem(3px);
     box-shadow: shadow(1);
     margin: rem(3px);
+}
+
+overlaybar {
+    margin: rem(6px);
+    padding: rem(6px) rem(12px);
+
+    revealer:dir(ltr) > spinner {
+        margin-left: rem(6px);
+    }
+
+    revealer:dir(rtl) > spinner {
+        margin-right: rem(6px);
+    }
 }
