@@ -1,11 +1,11 @@
-.emoji-picker {
+popover.emoji-picker {
     entry {
         margin: rem(12px);
         margin-bottom: rem(3px);
     }
 
     // Emoji are labels too, so we have to be specific
-    box.vertical > label {
+    scrolledwindow.view box.vertical > label {
         @extend .h4;
 
         // Intentionally off-by-one
@@ -19,18 +19,19 @@
         font-size: 16px;
     }
 
-    stack box > box.horizontal {
+    .emoji-toolbar {
         @extend .inline-toolbar;
-
-        border-radius: 0 0 rem(6px) rem(6px);
     }
 
-    .emoji-section {
+    button.emoji-section.image-button {
+        background: none;
+        border-width: 0;
         border-radius: 0;
         box-shadow: none;
         min-height: 24px;
         min-width: 24px;
         opacity: 0.6;
+        outline-style: none;
 
         &:checked {
             opacity: 1;
@@ -40,12 +41,8 @@
             opacity: 0.8;
         }
 
-        &:first-child {
-            border-bottom-left-radius: rem(6px);
-        }
-
-        &:last-child {
-            border-bottom-right-radius: rem(6px);
+        image {
+            color: inherit;
         }
     }
 }
