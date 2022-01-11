@@ -102,13 +102,11 @@ window.dialog {
 
     .dialog-content-area {
         margin: rem(12px);
+        margin-top: rem(18px);
     }
 
-    // These should be 12px borders around buttons
     .dialog-action-area {
-        // Compensate for off-by-one
-        margin: rem(7px);
-        margin-bottom: rem(8px);
+        margin: rem(12px);
 
         button:dir(ltr) + button {
             margin-left: rem(6px);
@@ -119,8 +117,14 @@ window.dialog {
         }
     }
 
-    &.message .dialog-action-area {
-        // Double space between content and actions
-        margin-top: rem(16px);
+    &.message {
+        .dialog-content-area box + expander-widget {
+            margin-bottom: 6px;
+        }
+
+        .dialog-action-area {
+            // Double space between content and actions
+            margin-top: rem(16px);
+        }
     }
 }
