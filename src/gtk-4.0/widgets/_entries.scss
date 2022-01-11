@@ -78,4 +78,12 @@ entry {
             min-width: rem(2px);
         }
     }
+
+    &.date-picker popover > contents {
+        padding: rem(6px);
+    }
+
+    &.time-picker popover > contents {
+        padding: rem(12px);
+    }
 }
