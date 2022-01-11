@@ -1,0 +1,43 @@
+shortcuts-section {
+    margin: rem(12px);
+}
+
+shortcuts-group > label {
+    @extend .h4;
+}
+
+// Characters between keys in Gtk.ShortcutLabel, like + or /
+ shortcut .dim-label {
+     margin-left: rem(3px);
+     margin-right: rem(3px);
+ }
+ 
+accelerator,
+.keycap {
+    background-color: bg-color(2);
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(white, 0),
+            #{'alpha(@highlight_color, 0.2)'}
+        );
+    border: 1px solid $toplevel-border-color;
+    border-radius: rem(3px);
+    box-shadow:
+        outset-highlight(),
+        inset 0 -1px 0 0 bg-color(4),
+        0 1px 2px rgba(black, 0.05);
+    font-size: 85%;
+    min-width: rem(12px);
+    // We add 1px on the bottom to account for box-shadow
+    padding: rem(3px) rem(6px) calc(#{rem(3px)} + 1px);
+
+    &:backdrop {
+        background-image:
+            linear-gradient(
+                to bottom,
+                #{'alpha(@highlight_color, 0.3)'},
+                #{'alpha(@highlight_color, 0.35)'}
+            );
+    }
+}
