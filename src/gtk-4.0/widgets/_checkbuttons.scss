@@ -62,7 +62,6 @@ radio {
     border-radius: 50%;
 }
 
-radiobutton,
 checkbutton {
     image,
     label {
@@ -78,27 +77,20 @@ checkbutton {
     &.image-button {
         // Invisible stroke to prevent things from moving when :checked
         border: 1px solid transparent;
-    }
+        padding: rem(6px);
 
-    &.image-button:checked {
-        background: #{'alpha(@selected_bg_color, 0.4)'};
-        border-color: #{'@selected_bg_color'};
-        border-radius: rem(3px);
-        color: #{'@selected_fg_color'};
+        &:checked {
+            background: #{'alpha(@selected_bg_color, 0.4)'};
+            border-color: #{'@selected_bg_color'};
+            border-radius: rem(3px);
+            color: #{'@selected_fg_color'};
 
-        &:backdrop {
-            background: rgba($fg-color, 0.05);
-            border-color: rgba($fg-color, 0.25);
-            color: inherit;
+            &:backdrop {
+                background: rgba($fg-color, 0.05);
+                border-color: rgba($fg-color, 0.25);
+                color: inherit;
+            }
         }
-    }
-}
-
-radiobutton.image-button {
-    padding: rem(6px);
-
-    &:checked:not(:backdrop) image {
-        color: #{'@selected_fg_color'};
     }
 }
 
