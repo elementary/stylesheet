@@ -6,6 +6,12 @@ shortcuts-group > label {
     @extend .h4;
 }
 
+// Characters between keys in Gtk.ShortcutLabel, like + or /
+ shortcut .dim-label {
+     margin-left: rem(3px);
+     margin-right: rem(3px);
+ }
+ 
 accelerator,
 .keycap {
     background-color: bg-color(2);
