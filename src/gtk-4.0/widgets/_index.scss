@@ -13,18 +13,18 @@ selection {
     background-image:
         linear-gradient(
             45deg,
-            rgba(black, 0.1) 25%,
-            transparent 25%,
-            transparent 75%,
-            rgba(black, 0.1) 75%,
+            rgba(black, 0.1) rem(9px),
+            transparent rem(9px),
+            transparent rem(26px),
+            rgba(black, 0.1) rem(26px),
             rgba(black, 0.1)
         ),
         linear-gradient(
             45deg,
-            rgba(black, 0.1) 25%,
-            transparent 25%,
-            transparent 75%,
-            rgba(black, 0.1) 75%,
+            rgba(black, 0.1) rem(9px),
+            transparent rem(9px),
+            transparent rem(26px),
+            rgba(black, 0.1) rem(26px),
             rgba(black, 0.1)
         );
     background-size: rem(24px) rem(24px);
