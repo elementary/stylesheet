@@ -199,6 +199,43 @@ popover.background {
         separator {
             margin: rem(3px) 0;
         }
+
+        // ModelMenu
+        box.circular-buttons,
+        box.horizontal-buttons,
+        widget > scale {
+            margin: rem(6px) rem(12px);
+        }
+
+        widget:dir(ltr) > scale {
+            margin: rem(6px) rem(12px) rem(6px) rem(32px);
+        }
+
+        box.circular-buttons button.circular.image-button {
+            padding: rem(9px);
+        }
+
+        box.inline-buttons {
+            margin: rem(3px) rem(12px);
+
+            &:dir(ltr) button + button {
+                margin-left: rem(6px);
+            }
+        }
+
+        &:dir(ltr) box.inline-buttons label + box,
+        &:dir(ltr) modelbutton label + accelerator {
+            margin-left: rem(12px);
+        }
+
+        .title {
+            font-weight: 700;
+
+            &.separator {
+                margin: rem(6px) rem(32px);
+                opacity: 0.8;
+            }
+        }
     }
 
     modelbutton,
