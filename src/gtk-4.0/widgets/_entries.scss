@@ -43,16 +43,17 @@ entry {
     // Prevent size change when setting primary or secondary icons
     min-height: 16px;
 
-    image,
     text {
-        // Margin top and bottom for size, padding left and right for overflow
+        // padding, not margin for overflow
         // Off-by-one to account for padding-box clip
-        margin: rem(4px) 0;
-        padding: 0 rem(4px);
+        padding: rem(4px);
     }
 
     image {
+        -gtk-icon-size: 16px;
         color: #{'@placeholder_text_color'};
+        // Off-by-one to account for padding-box clip
+        padding: 0 rem(4px);
         transition: all duration("in-place") $easing;
     }
 
