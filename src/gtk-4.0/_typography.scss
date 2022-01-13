@@ -39,9 +39,7 @@ label.h4,
     font-size: 0.85em;
 }
 
-.accent,
-button.link,
-link {
+.accent {
     @if $color-scheme == "light" {
         color: #{'shade(@accent_color, 0.75)'};
     } @else if $color-scheme == "dark" {
@@ -136,6 +134,7 @@ link {
 
 button.link,
 link {
+    @extend .accent;
     text-decoration: underline;
 }
 
