@@ -50,13 +50,17 @@ scrolledwindow {
     }
 }
 
+scrolledwindow.terminal viewport {
+    padding: rem(12px);
+}
+
 .terminal {
     background-color: #252e32;
     border-radius: rem(3px);
     color: #94a3a5;
     font-family: monospace;
 
-    text selection {
+    selection {
         background-color: #93a1a1;
         color: #252e32;
     }
