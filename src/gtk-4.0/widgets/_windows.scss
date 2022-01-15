@@ -6,14 +6,9 @@
 
 assistant,
 printdialog,
-window.csd:not(.popup):not(.menu) {
-    margin: rem(12px);
-}
-
-assistant,
-printdialog,
 window {
     border-radius: 6px 6px 0 0;
+    margin: rem(12px);
 
     // We only draw shadows for client-side decorations
     &.csd {
@@ -32,38 +27,21 @@ window {
                 shadow(2);
         }
 
-        &.maximized {
+        &.maximized,
+        &.tiled-top,
+        &.tiled-right,
+        &.tiled-bottom,
+        &.tiled-left {
             margin: 0;
-            box-shadow: none;
+            box-shadow: 0 0 0 6px black;
         }
 
-        &.tiled:not(.maximized) {
-            background-color: black;
-            border-radius: 0;
-            box-shadow:
-                0 0 0 1px $toplevel-border-color,
-                0 13px 16px 4px transparent,
-                shadow(1);
+        &.tiled-left:not(.maximized) {
+            margin-right: 3px;
+        }
 
-            &.tiled-left {
-                &.tiled-top .titlebar {
-                    border-top-right-radius: 0;
-                }
-
-                &.tiled-bottom actionbar {
-                    border-bottom-right-radius: 0;
-                }
-            }
-
-            &.tiled-right {
-                &.tiled-top .titlebar {
-                    border-top-left-radius: 0;
-                }
-
-                &.tiled-bottom actionbar {
-                    border-bottom-left-radius: 0;
-                }
-            }
+        &.tiled-right:not(.maximized) {
+            margin-left: 3px;
         }
     }
 
