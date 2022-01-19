@@ -50,11 +50,27 @@ window {
         }
 
         &.tiled-right:not(.maximized) {
+            &.tiled-top {
+                border-top-left-radius: 0;
+            }
+
+            &.tiled-bottom {
+                border-bottom-left-radius: 0;
+            }
+
             margin-left: 1px;
         }
 
         &.tiled-left:not(.maximized) {
             margin-right: 1px;
+
+            &.tiled-top {
+                border-top-right-radius: 0;
+            }
+
+            &.tiled-bottom {
+                border-bottom-right-radius: 0;
+            }
         }
     }
 
