@@ -33,15 +33,28 @@ window {
         &.tiled-bottom,
         &.tiled-left {
             margin: 0;
-            box-shadow: 0 0 0 6px black;
+
         }
 
+        // black behind corners
+        &.maximized {
+            box-shadow: 0 0 0 rem(3px) black;
+        }
+
+        &.tiled-right:not(.maximized),
         &.tiled-left:not(.maximized) {
-            margin-right: 3px;
+            box-shadow:
+                0 0 0 1px $toplevel-border-color,
+                0 13px 16px 4px transparent,
+                shadow(2);
         }
 
         &.tiled-right:not(.maximized) {
-            margin-left: 3px;
+            margin-left: 1px;
+        }
+
+        &.tiled-left:not(.maximized) {
+            margin-right: 1px;
         }
     }
 
