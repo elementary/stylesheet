@@ -40,26 +40,32 @@
 
 entry {
     @extend %entry;
+    color: #{'@placeholder_text_color'};
     // Prevent size change when setting primary or secondary icons
     min-height: 16px;
 
-    image,
     text {
-        // Margin top and bottom for size, padding left and right for overflow
+        color: #{'@text_color'};
+        // padding, not margin for overflow
         // Off-by-one to account for padding-box clip
-        margin: rem(4px) 0;
-        padding: 0 rem(4px);
+        padding: rem(4px);
+
+        &:disabled {
+            color: $insensitive-fg-color;
+        }
     }
 
     image {
-        color: #{'@placeholder_text_color'};
+        -gtk-icon-size: 16px;
+        // Off-by-one to account for padding-box clip
+        padding: 0 rem(4px);
         transition: all duration("in-place") $easing;
     }
 
     // We only want the action side icon to react on hover
     &:dir(ltr) image.right:hover,
     &:dir(rtl) image.left:hover {
-        color: $fg-color;
+        color: #{'@text_color'};
     }
 
     // Fixes an issue in Epiphany
@@ -85,5 +91,21 @@ entry {
 
     &.time-picker popover > contents {
         padding: rem(12px);
+    }
+
+    &.password {
+        background-image: -gtk-icontheme("dialog-password-symbolic");
+        background-size: 16px;
+        background-repeat: no-repeat;
+
+        &:dir(ltr) {
+            background-position: rem(6px) rem(4px);
+            padding-left: rem(24px);
+        }
+
+        &:dir(rtl) {
+            background-position: calc(100% - #{rem(6px)}) rem(4px);
+            padding-right: rem(24px);
+        }
     }
 }
