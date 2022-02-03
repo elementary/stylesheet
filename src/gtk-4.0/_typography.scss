@@ -39,9 +39,7 @@ label.h4,
     font-size: 0.85em;
 }
 
-.accent,
-.link,
-:link {
+.accent {
     @if $color-scheme == "light" {
         color: #{'shade(@accent_color, 0.75)'};
     } @else if $color-scheme == "dark" {
@@ -134,6 +132,12 @@ label.h4,
     }
 }
 
+button.link,
+link {
+    @extend .accent;
+    text-decoration: underline;
+}
+
 .dim-label,
 :visited {
     opacity: 0.75;
@@ -141,36 +145,6 @@ label.h4,
 
 label:disabled {
     color: $insensitive-fg-color;
-}
-
-accelerator,
-.keycap {
-    background-color: bg-color(2);
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(white, 0),
-            #{'alpha(@highlight_color, 0.2)'}
-        );
-    border: 1px solid $toplevel-border-color;
-    border-radius: rem(3px);
-    box-shadow:
-        outset-highlight(),
-        inset 0 -1px 0 0 bg-color(4),
-        0 1px 2px rgba(black, 0.05);
-    font-size: 85%;
-    min-width: rem(12px);
-    // We add 1px on the bottom to account for box-shadow
-    padding: rem(3px) rem(6px) calc(#{rem(3px)} + 1px);
-
-    &:backdrop {
-        background-image:
-            linear-gradient(
-                to bottom,
-                #{'alpha(@highlight_color, 0.3)'},
-                #{'alpha(@highlight_color, 0.35)'}
-            );
-    }
 }
 
 :link:hover label {

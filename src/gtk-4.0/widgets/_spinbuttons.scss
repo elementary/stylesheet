@@ -1,18 +1,13 @@
 spinbutton {
     @extend %entry;
 
-    button,
-    button:disabled,
-    entry,
-    entry:disabled,
-    entry:focus {
-        background: none;
-        border: none;
-        box-shadow: none;
-    }
+    button.image-button:active {
+        background: rgba(black, 0.05);
+        color: #{'@selected_fg_color'};
 
-    button:active {
-        box-shadow: none;
+        @if $color-scheme == "dark" {
+            background: rgba(black, 0.15);
+        }
     }
 
     &.horizontal {
@@ -37,22 +32,28 @@ spinbutton {
             }
         }
 
-        entry {
-            margin: 0 rem(3px);
+        text {
+            margin: 0 rem(6px);
         }
     }
 
-    &.vertical button {
-        &.down {
-            border-top: 1px solid rgba(black, 0.1);
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+    &.vertical {
+        button {
+            &.down {
+                border-top: 1px solid rgba(black, 0.1);
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            &.up {
+                border-bottom: 1px solid rgba(black, 0.1);
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
         }
 
-        &.up {
-            border-bottom: 1px solid rgba(black, 0.1);
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+        text {
+            margin: rem(6px) 0;
         }
     }
 }

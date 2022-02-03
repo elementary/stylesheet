@@ -198,8 +198,8 @@ button {
         font-weight: 500;
     }
 
-    &:dir(ltr) image + label,
-    &:dir(rtl) label + image {
+    &:dir(ltr) box image + label,
+    &:dir(rtl) box label + image {
         margin-left: rem(3px);
     }
 }
