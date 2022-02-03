@@ -1,57 +1,22 @@
-// GTK4 Widget Factory
-.app-notification,
-// Granite.Toast
-toast > revealer > box {
-    background-color: rgba($fg-color, 0.85);
-    border: none;
-    border-radius: rem(6px);
-    box-shadow: shadow(1);
-    margin: rem(6px);
-    padding: rem(6px);
-
-    button.flat.image-button,
-    button.circular.image-button {
-        background: $fg-color;
-        box-shadow: none;
-        color: rgba(bg-color(1), 0.9);
-
-        &:active {
-            background: rgba($fg-color, 0.7);
-            box-shadow: none;
-            color: rgba(bg-color(1), 0.7);
-        }
-    }
-
-    button.text-button {
-        background-color: rgba(bg-color(1), 0.9);
-        color: $fg-color;
-        border-width: 0;
-        box-shadow: none;
-
-        &:active {
-            background-color: rgba(bg-color(1), 0.7);
-            box-shadow: none;
-            color: rgba($fg-color, 0.7);
-        }
-    }
-
-    box > label,
-    > label {
-        color: bg-color(1);
-        margin: 0 rem(12px);
-        text-shadow: 0 1px 2px rgba($fg-color, 0.6);
-    }
+toast .osd > label {
+    margin: 0 rem(12px);
+    text-shadow: 0 1px 2px rgba($fg-color, 0.6);
 }
 
+// GTK4 Widget Factory
 .app-notification {
+    @extend .osd;
+
     padding: 0;
 
     button.flat.image-button {
+        background: $fg-color;
         border-radius: 50%;
         padding: rem(4px);
     }
 
     box > label {
         margin: 0;
+        text-shadow: 0 1px 2px rgba($fg-color, 0.6);
     }
 }
