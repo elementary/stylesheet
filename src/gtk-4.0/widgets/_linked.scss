@@ -27,11 +27,13 @@ viewswitcher > box > button.horizontal.radio,
 .linked:not(.vertical) > button.image-button,
 .linked:not(.vertical) > entry,
 .linked:not(.vertical) > spinbutton {
-    &:not(:first-child) {
+    &:dir(ltr):not(:first-child),
+    &:dir(rtl):not(:last-child) {
         @extend %linked_not_left;
     }
 
-    &:not(:last-child) {
+    &:dir(ltr):not(:last-child),
+    &:dir(rtl):not(:first-child) {
         @extend %linked_not_right;
     }
 }
@@ -40,11 +42,13 @@ viewswitcher > box > button.horizontal.radio,
 .linked.vertical > button.image-button,
 .linked.vertical > entry,
 .linked.vertical > spinbutton {
-    &:not(:first-child) {
+    &:dir(ltr):not(:first-child),
+    &:dir(rtl):not(:last-child) {
         @extend %linked_not_top;
     }
 
-    &:not(:last-child) {
+    &:dir(ltr):not(:last-child),
+    &:dir(rtl):not(:first-child) {
         @extend %linked_not_bottom;
     }
 }
@@ -55,21 +59,25 @@ combobox.linked button:nth-child(2) {
 
 
 .linked:not(.vertical) > combobox {
-    &:not(:first-child) > box > button.combo {
+    &:dir(ltr):not(:first-child) > box > button.combo,
+    &:dir(rtl):not(:last-child) > box > button.combo {
         @extend %linked_not_left;
     }
 
-    &:not(:last-child) > box > button.combo {
+    &:dir(ltr):not(:last-child) > box > button.combo,
+    &:dir(rtl):not(:first-child) > box > button.combo {
         @extend %linked_not_right;
     }
 }
 
 .linked.vertical > combobox {
-    &:not(:first-child) > box > button.combo {
+    &:dir(ltr):not(:first-child) > box > button.combo,
+    &:dir(rtl):not(:last-child) > box > button.combo {
         @extend %linked_not_top;
     }
 
-    &:not(:last-child) > box > button.combo {
+    &:dir(ltr):not(:last-child) > box > button.combo,
+    &:dir(rtl):not(:first-child) > box > button.combo {
         @extend %linked_not_bottom;
     }
 }
