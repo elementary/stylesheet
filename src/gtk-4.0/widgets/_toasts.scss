@@ -1,54 +1,22 @@
-.app-notification,
-.app-notification.frame {
-    background-color: rgba($fg-color, 0.85);
-    border: none;
-    border-radius: rem(6px);
-    box-shadow: shadow(1);
-    margin: rem(6px);
-    padding: rem(6px);
+toast .osd > label {
+    margin: 0 rem(12px);
+    text-shadow: 0 1px 2px rgba($fg-color, 0.6);
+}
 
-    button {
-        background-color: rgba(bg-color(1), 0.9);
-        color: $fg-color;
+// GTK4 Widget Factory
+.app-notification {
+    @extend .osd;
 
-        &.flat.image-button,
-        &.close-button {
-            background-color: $fg-color;
-            border-radius: 50%;
-            color: rgba(bg-color(1), 0.9);
-            padding: rem(6px);
+    padding: 0;
 
-            &:active {
-                background-color: rgba($fg-color, 0.7);
-                box-shadow: none;
-                color: rgba(bg-color(1), 0.7);
-            }
-        }
-
-        // Selects the close button in GNOME apps
-        &.flat.image-button {
-            padding: rem(4px);
-        }
-
-        &.text-button {
-            border-width: 0;
-            box-shadow: none;
-
-            &:active {
-                background-color: rgba(bg-color(1), 0.7);
-                box-shadow: none;
-                color: rgba($fg-color, 0.7);
-            }
-        }
-
-        label {
-            color: $fg-color;
-            text-shadow: none;
-        }
+    button.flat.image-button {
+        background: $fg-color;
+        border-radius: 50%;
+        padding: rem(4px);
     }
 
-    label {
-        color: bg-color(1);
+    box > label {
+        margin: 0;
         text-shadow: 0 1px 2px rgba($fg-color, 0.6);
     }
 }
