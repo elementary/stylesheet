@@ -1,6 +1,4 @@
-expander,
-.expander,
-.category-expander {
+expander {
     min-height: 16px;
     min-width: 16px;
     transition: all duration("in-place") $easing;
@@ -16,15 +14,5 @@ expander,
         &:dir(rtl) {
             -gtk-icon-transform: rotate(-90deg);
         }
-    }
-}
-
-.sidebar.category-expander,
-.source-list.category-expander {
-    color: transparent;
-    border: none;
-
-    &:hover {
-        color: inherit;
     }
 }
