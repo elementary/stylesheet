@@ -113,14 +113,6 @@ window.dialog {
 
     .dialog-action-area {
         margin: rem(12px);
-
-        button:dir(ltr) + button {
-            margin-left: rem(6px);
-        }
-
-        button:dir(rtl) + button {
-            margin-right: rem(6px);
-        }
     }
 
     &.message {
