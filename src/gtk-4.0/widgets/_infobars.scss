@@ -1,71 +1,80 @@
 infobar {
     revealer > box {
-        background-color: bg-color(3);
+        background-color: bg-color(1);
         background-image: -gtk-icontheme("dialog-information-symbolic");
         background-size: 16px;
         background-repeat: no-repeat;
-        border-color: bg-color(4);
-        border-style: solid;
-        border-width: 0 0 1px;
-        box-shadow: outset-highlight("bottom");
+        border: 1px solid $border-color;
+        border-radius: rem(6px);
+        box-shadow:
+            outset-highlight(),
+            outset-shadow(2);
+        margin: rem(3px);
+        padding: rem(12px);
 
         &:dir(ltr) {
-            background-position: rem(9px) center;
-            padding-left: rem(24px);
+            // Minus half pixel to avoid blurry icons
+            background-position: rem(12px) calc(50% + 0.5px);
+            // Icon size + 2x padding
+            padding-left: calc(16px + #{rem(24px)});
         }
 
         &:dir(rtl) {
-            background-position: calc(100% - #{rem(9px)}) center;
-            padding-right: rem(24px);
+            // Minus half pixel to avoid blurry icons
+            background-position: calc(100% - #{rem(12px)}) calc(50% + 0.5px);
+            // Icon size + 2x padding
+            padding-right: calc(16px + #{rem(24px)});
+        }
+
+        button.close.image-button {
+            background: #{'alpha(white, 0.8)'};
+            border-radius: 50%;
+            color: inherit;
+            padding: rem(3px);
         }
 
         button.text-button {
+            margin: 0 rem(12px);
+
             @if $color-scheme == "dark" {
                 background-clip: border-box;
             }
         }
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
     }
 
     &.error revealer > box {
-        background-color: $STRAWBERRY_300;
+        background-color: #{'mix(@STRAWBERRY_300, white, 0.75)'};
         background-image: -gtk-icontheme("process-error-symbolic");
-        border-color: $STRAWBERRY_500;
-        // Strawberry 900 isn't dark enough for WCAG AA
-        color: black;
-        -gtk-icon-palette: error #4D0000;
+        color: $STRAWBERRY_700;
+        -gtk-icon-palette: error $STRAWBERRY_700;
+
+        @if $color-scheme == "light" {
+            border-color: #{'mix(@STRAWBERRY_300, white, 0.6)'};
+        }
     }
 
     &.warning revealer > box {
-        background-color: $BANANA_300;
+        background-color: #{'mix(@BANANA_300, white, 0.6)'};
         background-image: -gtk-icontheme("dialog-warning-symbolic");
-        border-color: $BANANA_500;
-        // BANANA 900 isn't dark enough for WCAG AA
-        color: #963000;
-        -gtk-icon-palette: warning #963000;
+        color: #{'shade(@BANANA_900, 0.8)'};
+        -gtk-icon-palette: warning #{'shade(@BANANA_900, 0.8)'};
+
+        @if $color-scheme == "light" {
+            border-color: #{'@BANANA_300'};
+        }
     }
 
     &.question revealer > box {
-        background-color: $BLUEBERRY_300;
+        background-color: #{'mix(@BLUEBERRY_300, white, 0.75)'};
         background-image: -gtk-icontheme("dialog-question-symbolic");
-        border-color: $BLUEBERRY_500;
-        color: #002B82;
-    }
+        color: #{'shade(@BLUEBERRY_300, 0.5)'};
 
-    &.frame {
-        border: none;
-
-        revealer > box {
-            border-width: 1px;
-            border-radius: rem(3px);
-            box-shadow:
-                outset-highlight(),
-                outset-shadow(2);
-            margin: rem(3px);
-
-            @if $color-scheme == "dark" {
-                background-clip: padding-box;
-                border-color: $border-color;
-            }
+        @if $color-scheme == "light" {
+            border-color: #{'mix(@BLUEBERRY_300, white, 0.4)'};
         }
     }
 }
