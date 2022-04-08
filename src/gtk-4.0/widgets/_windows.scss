@@ -4,79 +4,65 @@
     color: $fg-color;
 }
 
-assistant,
-printdialog,
-window {
-    border-radius: 6px 6px 0 0;
+window.csd {
     margin: rem(12px);
+    border-radius: rem(6px);
+    box-shadow:
+        // Intentionally not in ems since it's used as a stroke
+        0 0 0 1px $toplevel-border-color,
+        // Force shadows to be the same size to prevent jumpy resize transition
+        0 13px 16px 4px transparent,
+        shadow(4);
 
-    // We only draw shadows for client-side decorations
-    &.csd {
-        border-radius: rem(6px);
+    &:backdrop {
         box-shadow:
-            // Intentionally not in ems since it's used as a stroke
             0 0 0 1px $toplevel-border-color,
-            // Force shadows to be the same size to prevent jumpy resize transition
             0 13px 16px 4px transparent,
-            shadow(4);
-
-        &:backdrop {
-            box-shadow:
-                0 0 0 1px $toplevel-border-color,
-                0 13px 16px 4px transparent,
-                shadow(2);
-        }
-
-        &.maximized,
-        &.tiled-top,
-        &.tiled-right,
-        &.tiled-bottom,
-        &.tiled-left {
-            margin: 0;
-        }
-
-        // black behind corners
-        &.maximized {
-            box-shadow: 0 0 0 rem(3px) black;
-        }
-
-        &.tiled-right:not(.maximized),
-        &.tiled-left:not(.maximized) {
-            box-shadow:
-                0 0 0 1px $toplevel-border-color,
-                0 13px 16px 4px transparent,
-                shadow(2);
-        }
-
-        &.tiled-right:not(.maximized) {
-            &.tiled-top {
-                border-top-left-radius: 0;
-            }
-
-            &.tiled-bottom {
-                border-bottom-left-radius: 0;
-            }
-
-            margin-left: 1px;
-        }
-
-        &.tiled-left:not(.maximized) {
-            margin-right: 1px;
-
-            &.tiled-top {
-                border-top-right-radius: 0;
-            }
-
-            &.tiled-bottom {
-                border-bottom-right-radius: 0;
-            }
-        }
+            shadow(2);
     }
 
-    // Hdy.Window
-    &.unified {
-        decoration-overlay {
-            box-shadow: outset-highlight();
+    &.maximized,
+    &.tiled-top,
+    &.tiled-right,
+    &.tiled-bottom,
+    &.tiled-left {
+        margin: 0;
+    }
+
+    // black behind corners
+    &.maximized {
+        box-shadow: 0 0 0 rem(3px) black;
+    }
+
+    &.tiled-right:not(.maximized),
+    &.tiled-left:not(.maximized) {
+        box-shadow:
+            0 0 0 1px $toplevel-border-color,
+            0 13px 16px 4px transparent,
+            shadow(2);
+    }
+
+    &.tiled-right:not(.maximized) {
+        &.tiled-top {
+            border-top-left-radius: 0;
+        }
+
+        &.tiled-bottom {
+            border-bottom-left-radius: 0;
+        }
+
+        margin-left: 1px;
+    }
+
+    &.tiled-left:not(.maximized) {
+        margin-right: 1px;
+
+        &.tiled-top {
+            border-top-right-radius: 0;
+        }
+
+        &.tiled-bottom {
+            border-bottom-right-radius: 0;
         }
     }
 }
