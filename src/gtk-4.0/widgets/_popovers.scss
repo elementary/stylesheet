@@ -243,7 +243,8 @@ popover.background {
         @extend %menuitem;
 
         // Fixes extra padding in switch modelbuttons
-        &.h4 label {
+        &.h4 label,
+        &.title-4 label {
             padding: 0;
         }
     }
