@@ -1,0 +1,24 @@
+dropdown popover {
+    listview,
+    listview.view {
+        background: transparent;
+
+        row {
+            @extend %menuitem;
+
+            &.activatable image:last-child {
+                @extend selection;
+
+                border-radius: rem(8px);
+                -gtk-icon-size: rem(12px);
+                margin: 0 rem(6px);
+                min-height: rem(16px);
+                min-width: rem(16px);
+            }
+        }
+    }
+
+    .dropdown-searchbar {
+        padding: rem(6px) rem(12px);
+    }
+}
