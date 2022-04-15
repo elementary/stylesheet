@@ -1,0 +1,39 @@
+simplesettingspage {
+    > scrolledwindow > viewport > box {
+        padding: rem(12px);
+    }
+
+    .header-area {
+        margin-bottom: rem(24px);
+
+        > image {
+            -gtk-icon-size: 48px;
+
+            &:dir(ltr) {
+                margin-right: rem(12px);
+            }
+
+            &:dir(rtl) {
+                margin-left: rem(12px);
+            }
+        }
+
+        label:not(.title-2) {
+            margin-top: rem(3px);
+        }
+
+        switch {
+            &:dir(ltr) {
+                margin-left: rem(12px);
+            }
+
+            &:dir(rtl) {
+                margin-right: rem(12px);
+            }
+        }
+    }
+
+    .buttonbox {
+        margin-top: rem(24px);
+    }
+}
