@@ -14,10 +14,15 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="6.1.2" date="2021-12-01" urgency="medium">
+    <release version="7.0.0" date="2022-04-20" urgency="medium">
       <description>
+        <p>New Features:</p>
+        <ul>
+          <li>Support for Gtk4</li>
+        </ul>
         <p>Fixes:</p>
         <ul>
+          <li>Fix font style for bold labels in some languages</li>
           <li>ModelButtons: add margin between checks, radios, and labels</li>
         </ul>
       </description>
