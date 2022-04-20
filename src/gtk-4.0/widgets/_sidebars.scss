@@ -30,23 +30,29 @@
 }
 
 .sidebar {
-    list row,
+    &:dir(ltr) {
+        border-right: 1px solid #{'@menu_separator'};
+    }
+
+    &:dir(rtl) {
+        border-left: 1px solid #{'@menu_separator'};
+    }
+
+    paned.horizontal & {
+        &:dir(ltr) {
+            border-right: none;
+        }
+        &:dir(rtl) {
+            border-left: none;
+        }
+    }
+
+    row,
     // GtkAssistant
     > label {
         padding: rem(6px) rem(12px);
 
         @extend %sidebar-row;
-    }
-}
-
-assistant .sidebar {
-    &:dir(ltr) {
-        border-right: 1px solid #{'@menu_separator'};
-        box-shadow: inset -1px 0 0 #{'@menu_separator_shadow'};
-    }
-    &:dir(rtl) {
-        border-left: 1px solid #{'@menu_separator'};
-        box-shadow: inset 1px 0 0 #{'@menu_separator_shadow'};
     }
 }
 
@@ -89,9 +95,6 @@ settingssidebar list {
 }
 
 treeview.sidebar {
-    -GtkTreeView-horizontal-separator: 1px;
-    -GtkTreeView-vertical-separator: 6px;
-
     .view {
         @extend %sidebar-row;
     }
