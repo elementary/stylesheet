@@ -22,6 +22,7 @@
         </ul>
         <p>Fixes:</p>
         <ul>
+          <li>Fix titlebar in GNOME Web 42</li>
           <li>Fix font style for bold labels in some languages</li>
           <li>ModelButtons: add margin between checks, radios, and labels</li>
         </ul>
