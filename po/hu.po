@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 15:36-0800\n"
+"POT-Creation-Date: 2022-05-18 09:40-0700\n"
 "PO-Revision-Date: 2021-11-24 22:11+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/desktop/"
@@ -33,30 +33,62 @@ msgid ""
 "its desktop environment: Pantheon."
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:20
-msgid "Use the accent color for highlighting in IBus candidate window"
+#: data/stylesheet.appdata.xml.in:19
+msgid "New Features:"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:21
+msgid "Support for Gtk4"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
+msgid "Fixes:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:25
+msgid "Fix titlebar in GNOME Web 42"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:26
+msgid "Fix font style for bold labels in some languages"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:27
+msgid "ModelButtons: add margin between checks, radios, and labels"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:33
+msgid "Improvements:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:35
+msgid "Improve contrast of horizontal separators in dark style"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:39
+msgid "Use the accent color for highlighting in IBus candidate window"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:40
 msgid "Fix font style for title labels in headerbars"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:28
+#: data/stylesheet.appdata.xml.in:47
 msgid "Support for Hdy.Tabbar"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:48
 msgid "Fix accent class for Gtk.Scale"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:49
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:37
+#: data/stylesheet.appdata.xml.in:56
 msgid "Complete redesign"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:45
+#: data/stylesheet.appdata.xml.in:64
 msgid "elementary, Inc."
 msgstr "elementary, Inc."

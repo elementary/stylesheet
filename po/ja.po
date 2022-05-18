@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 15:36-0800\n"
+"POT-Creation-Date: 2022-05-18 09:40-0700\n"
 "PO-Revision-Date: 2021-11-23 02:39+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
@@ -35,30 +35,66 @@ msgstr ""
 "elementary OS とそのデスクトップ環境 (Pantheon) 用にデザインされた、オリジナ"
 "ルの Gtk.CSS スタイルシートです。"
 
-#: data/stylesheet.appdata.xml.in:20
+#: data/stylesheet.appdata.xml.in:19
+msgid "New Features:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:21
+#, fuzzy
+#| msgid "Support for Hdy.Tabbar"
+msgid "Support for Gtk4"
+msgstr "Hdy.Tabbar への対応"
+
+#: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
+msgid "Fixes:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:25
+msgid "Fix titlebar in GNOME Web 42"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:26
+#, fuzzy
+#| msgid "Fix font style for title labels in headerbars"
+msgid "Fix font style for bold labels in some languages"
+msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
+
+#: data/stylesheet.appdata.xml.in:27
+msgid "ModelButtons: add margin between checks, radios, and labels"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:33
+msgid "Improvements:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:35
+msgid "Improve contrast of horizontal separators in dark style"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:39
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr "IBus 変換候補ウィンドウのハイライトにアクセントカラーを使うように修正"
 
-#: data/stylesheet.appdata.xml.in:21
+#: data/stylesheet.appdata.xml.in:40
 msgid "Fix font style for title labels in headerbars"
 msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
 
-#: data/stylesheet.appdata.xml.in:28
+#: data/stylesheet.appdata.xml.in:47
 msgid "Support for Hdy.Tabbar"
 msgstr "Hdy.Tabbar への対応"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:48
 msgid "Fix accent class for Gtk.Scale"
 msgstr "Gtk.Scale のアクセントクラスを修正"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:49
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr "フラットなタイトルバーがビューとサイドバーの背景色を継承するように修正"
 
-#: data/stylesheet.appdata.xml.in:37
+#: data/stylesheet.appdata.xml.in:56
 msgid "Complete redesign"
 msgstr "抜本的なデザイン変更"
 
-#: data/stylesheet.appdata.xml.in:45
+#: data/stylesheet.appdata.xml.in:64
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
