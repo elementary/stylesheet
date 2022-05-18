@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2021-11-23 02:39+0000\n"
+"PO-Revision-Date: 2022-05-18 22:50+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/uk/>\n"
@@ -38,39 +38,36 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:19
 msgid "New Features:"
-msgstr ""
+msgstr "Нові функції:"
 
 #: data/stylesheet.appdata.xml.in:21
-#, fuzzy
-#| msgid "Support for Hdy.Tabbar"
 msgid "Support for Gtk4"
-msgstr "Підтримка Hdy.Tabbar"
+msgstr "Підтримка Gtk4"
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
-msgstr ""
+msgstr "Виправлення:"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Fix titlebar in GNOME Web 42"
-msgstr ""
+msgstr "Виправлено панель заголовка у GNOME Web 42"
 
 #: data/stylesheet.appdata.xml.in:26
-#, fuzzy
-#| msgid "Fix font style for title labels in headerbars"
 msgid "Fix font style for bold labels in some languages"
-msgstr "Виправлено стиль шрифту для міток заголовків у панелях заголовків"
+msgstr "Виправлено стиль жирного шрифту міток для деяких мов"
 
 #: data/stylesheet.appdata.xml.in:27
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr ""
+"ModelButtons: додано відступи між прапорцями, радіокнопками та підписами"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Improvements:"
-msgstr ""
+msgstr "Удосконалення:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Improve contrast of horizontal separators in dark style"
-msgstr ""
+msgstr "Покращено контраст горизонтальних розділювачів у темному стилі"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Use the accent color for highlighting in IBus candidate window"
