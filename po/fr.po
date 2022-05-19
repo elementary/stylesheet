@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2021-11-23 10:43+0000\n"
+"PO-Revision-Date: 2022-05-19 11:49+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
@@ -37,39 +37,36 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:19
 msgid "New Features:"
-msgstr ""
+msgstr "Nouvelles fonctionnalités :"
 
 #: data/stylesheet.appdata.xml.in:21
-#, fuzzy
-#| msgid "Support for Hdy.Tabbar"
 msgid "Support for Gtk4"
-msgstr "Prise en charge de Hdy.Tabbar"
+msgstr "Prise en charge de Gtk4"
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
-msgstr ""
+msgstr "Corrections :"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Fix titlebar in GNOME Web 42"
-msgstr ""
+msgstr "Correction de la barre de titre dans GNOME Web 42"
 
 #: data/stylesheet.appdata.xml.in:26
-#, fuzzy
-#| msgid "Fix font style for title labels in headerbars"
 msgid "Fix font style for bold labels in some languages"
-msgstr "Correction du style de police pour les titres des barres de titre"
+msgstr "Correction du style de police gras pour certaines langues"
 
 #: data/stylesheet.appdata.xml.in:27
 msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr ""
+msgstr "ModelButtons : Ajout de marges entres les coches, radios et labels"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Improvements:"
-msgstr ""
+msgstr "Améliorations :"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr ""
+"Amélioration du contraste des séparateurs horizontaux dans le thème sombre"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Use the accent color for highlighting in IBus candidate window"
