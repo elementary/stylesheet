@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2021-11-23 02:39+0000\n"
+"PO-Revision-Date: 2022-05-20 21:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -37,39 +37,35 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:19
 msgid "New Features:"
-msgstr ""
+msgstr "新機能:"
 
 #: data/stylesheet.appdata.xml.in:21
-#, fuzzy
-#| msgid "Support for Hdy.Tabbar"
 msgid "Support for Gtk4"
-msgstr "Hdy.Tabbar への対応"
+msgstr "Gtk4 への対応"
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
-msgstr ""
+msgstr "修正点:"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Fix titlebar in GNOME Web 42"
-msgstr ""
+msgstr "GNOME Web 42 のタイトルバーの表示を修正"
 
 #: data/stylesheet.appdata.xml.in:26
-#, fuzzy
-#| msgid "Fix font style for title labels in headerbars"
 msgid "Fix font style for bold labels in some languages"
-msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
+msgstr "一部の言語における、太字ラベルのフォントスタイルを修正"
 
 #: data/stylesheet.appdata.xml.in:27
 msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr ""
+msgstr "ModelButton: チェックマーク・ラジオボタン・ラベル間にマージンを追加"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Improvements:"
-msgstr ""
+msgstr "改善点:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Improve contrast of horizontal separators in dark style"
-msgstr ""
+msgstr "ダークスタイルでの水平線のコントラストを改善"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Use the accent color for highlighting in IBus candidate window"
