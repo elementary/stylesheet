@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2022-05-18 22:50+0000\n"
+"PO-Revision-Date: 2022-05-22 10:40+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/tr/>\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
-msgstr ""
+msgstr "Düzeltmeler:"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Fix titlebar in GNOME Web 42"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Improvements:"
-msgstr ""
+msgstr "İyileştirmeler:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Improve contrast of horizontal separators in dark style"
