@@ -136,6 +136,16 @@ window {
             padding: 3px;
         }
     }
+
+    box.start:dir(ltr),
+    box.end:dir(rtl) {
+        margin-right: rem(12px);
+    }
+
+    box.end:dir(ltr),
+    box.start:dir(rtl) {
+        margin-left: rem(12px);
+    }
 }
 
 window.dialog.csd > .titlebar {
