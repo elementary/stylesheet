@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2022-06-04 02:03+0000\n"
+"PO-Revision-Date: 2022-06-11 23:34+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pt/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:19
 msgid "New Features:"
-msgstr ""
+msgstr "Novas funcionalidades:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Support for Gtk4"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
-msgstr ""
+msgstr "Correções:"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Fix titlebar in GNOME Web 42"
