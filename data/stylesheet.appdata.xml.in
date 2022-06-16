@@ -20,6 +20,7 @@
         <ul>
           <li>Correct .title-4 padding in Lists</li>
           <li>Headerbars: correct window control spacing in RTL, and separator width</li>
+          <li>Infobars: set correct button margins</li>
         </ul>
       </description>
     </release>
