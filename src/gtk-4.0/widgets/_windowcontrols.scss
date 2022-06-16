@@ -1,9 +1,11 @@
 windowcontrols {
-    &.end {
+    &.end:dir(ltr),
+    &.start:dir(rtl) {
         margin-left: rem(12px);
     }
 
-    &.start {
+    &.start:dir(ltr),
+    &.end:dir(rtl) {
         margin-right: rem(12px);
     }
 

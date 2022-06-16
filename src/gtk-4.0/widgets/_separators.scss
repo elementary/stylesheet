@@ -12,10 +12,12 @@ separator {
     }
 
     actionbar > &,
-    toolbar > &,
-    .titlebar > & {
+    headerbar > windowhandle > box > box &.horizontal,
+    headerbar > windowhandle > box > box &.vertical { // Very specific to avoid affecting popovers
         border: none;
-        margin: 0 rem(18px);
+        margin: 0;
+        min-height: 1px;
+        min-width: rem(36px);
     }
 
     stacksidebar &.horizontal {
