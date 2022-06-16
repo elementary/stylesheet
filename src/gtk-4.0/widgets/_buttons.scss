@@ -84,8 +84,6 @@ button {
                 }
             }
 
-            color: inherit;
-
             &:active,
             &:checked {
                 @if $color-scheme == "light" {
