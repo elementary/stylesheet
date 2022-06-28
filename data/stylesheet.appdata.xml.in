@@ -19,6 +19,7 @@
         <p>Fixes:</p>
         <ul>
           <li>Correct .title-4 padding in Lists</li>
+          <li>Buttons: don't set font weight for children like popovers</li>
           <li>Headerbars: correct window control spacing in RTL, and separator width</li>
           <li>Infobars: set correct button margins</li>
         </ul>
