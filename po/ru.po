@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
 "PO-Revision-Date: 2022-07-22 20:59+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ru/>\n"
 "Language: ru\n"
@@ -59,6 +59,7 @@ msgstr "Исправлен стиль шрифта для жирных надп�
 #: data/stylesheet.appdata.xml.in:27
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr ""
+"ModelButtons: добавлен отступ между флажками, переключателями и подписями"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Improvements:"
