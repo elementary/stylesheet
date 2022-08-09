@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2022-04-04 21:19+0000\n"
+"PO-Revision-Date: 2022-07-31 13:30+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "desktop/stylesheet-extra/ckb/>\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
-msgstr ""
+msgstr "چاککردنەکان:"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Fix titlebar in GNOME Web 42"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Improvements:"
-msgstr ""
+msgstr "پێشکەوتنەکان:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Improve contrast of horizontal separators in dark style"
