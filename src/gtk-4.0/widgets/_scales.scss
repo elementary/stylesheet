@@ -156,8 +156,17 @@ scale {
             margin: -1px -1px -1px 0;
         }
 
+        marks {
+            &.bottom {
+                margin-top: rem(6px);
+            }
+
+            &.top {
+                margin-top: rem(6px);
+            }
+        }
+
         mark {
-            margin-top: rem(6px);
             min-height: rem(6px);
             // Intentionally not in ems since it's a stroke
             min-width: 1px;
@@ -187,8 +196,17 @@ scale {
             margin: 0 -1px -1px -1px;
         }
 
+        marks {
+            &.bottom {
+                margin-left: rem(6px);
+            }
+
+            &.top {
+                margin-right: rem(6px);
+            }
+        }
+
         mark {
-            margin-left: rem(6px);
             // Intentionally not in ems since it's a stroke
             min-height: 1px;
             min-width: rem(6px);
