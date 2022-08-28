@@ -7,12 +7,12 @@ image {
     &:disabled {
         filter: opacity($disabled-opacity);
     }
+}
 
-    &.normal-icons {
-        -gtk-icon-size: 16px;
-    }
+.normal-icons {
+    -gtk-icon-size: 16px;
+}
 
-    &.large-icons {
-        -gtk-icon-size: 32px;
-    }
+.large-icons {
+    -gtk-icon-size: 32px;
 }

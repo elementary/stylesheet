@@ -44,6 +44,11 @@ window {
             text-shadow: none;
             -gtk-icon-shadow: none;
         }
+
+        &.large-icons,
+        .large-icons {
+            -gtk-icon-size: 24px;
+        }
     }
 
     &.csd {
