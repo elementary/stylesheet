@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2022-05-22 10:40+0000\n"
+"PO-Revision-Date: 2022-09-04 00:07+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/tr/>\n"
@@ -41,7 +41,7 @@ msgstr "Yeni Özellikler:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Support for Gtk4"
-msgstr ""
+msgstr "Gtk4 Desteği"
 
 #: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
 msgid "Fixes:"
