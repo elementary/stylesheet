@@ -14,16 +14,26 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="7.0.1" date="2022-05-26" urgency="medium">
+    <release version="7.0.1" date="2022-09-26" urgency="medium">
       <description>
+        <p>Improvements:</p>
+        <ul>
+          <li>Checkerboard styles are more subtle</li>
+          <li>Set `large-icons` size on headerbars to 24px</li>
+          <li>Adjust header layout and typography in Granite.SimpleSettingsPage</li>
+          <li>Infobars: set correct button margins</li>
+        </ul>
         <p>Fixes:</p>
         <ul>
           <li>Correct .title-4 padding in Lists</li>
           <li>Buttons: don't set font weight for children like popovers</li>
-          <li>Headerbars: correct window control spacing in RTL, and separator width</li>
-          <li>Infobars: set correct button margins</li>
         </ul>
       </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1209">Headerbars: correct window control spacing in RTL, and separator width</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1216">Fix arrow size in disabled comboboxes in popovers</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1219">Show scale marks</issue>
+      </issues>
     </release>
     <release version="7.0.0" date="2022-04-20" urgency="medium">
       <description>
