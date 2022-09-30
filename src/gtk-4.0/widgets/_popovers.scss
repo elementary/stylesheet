@@ -149,6 +149,14 @@ popover.background {
         }
     }
 
+    &.entry-completion > contents treeview {
+        margin: rem(6px) 0;
+
+        &.view.cell {
+            padding: rem(6px) rem(12px);
+        }
+    }
+
     &.menu > contents {
         box-shadow:
             outset-highlight(),
