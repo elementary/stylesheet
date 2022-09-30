@@ -22,6 +22,7 @@
           <li>Set `large-icons` size on headerbars to 24px</li>
           <li>Adjust header layout and typography in Granite.SimpleSettingsPage</li>
           <li>Infobars: set correct button margins</li>
+          <li>Add padding to Gtk.Entry's completion popover</li>
         </ul>
         <p>Fixes:</p>
         <ul>
