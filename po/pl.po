@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-05-20 06:56+0000\n"
+"PO-Revision-Date: 2022-10-02 07:23+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pl/>\n"
@@ -22,13 +22,11 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Systemowy arkusz stylu"
 
 #: data/stylesheet.appdata.xml.in:9
-#, fuzzy
-#| msgid "The Gtk Stylesheet for elementary OS"
 msgid "The look and feel for elementary OS"
-msgstr "Style GTK dla elementary OS"
+msgstr "Wygląd elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -44,23 +42,23 @@ msgstr "Ulepszenia:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Checkerboard styles are more subtle"
-msgstr ""
+msgstr "Style w szachownicę są bardziej subtelne"
 
 #: data/stylesheet.appdata.xml.in:22
 msgid "Set `large-icons` size on headerbars to 24px"
-msgstr ""
+msgstr "Ustaw wielkość `duże-ikony` na paskach nagłówkowych na 24px"
 
 #: data/stylesheet.appdata.xml.in:23
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
-msgstr ""
+msgstr "Dostosuj układ nagłówków i typografię w Granite.SimpleSettingsPage"
 
 #: data/stylesheet.appdata.xml.in:24
 msgid "Infobars: set correct button margins"
-msgstr ""
+msgstr "Paski informacyjne: poprawnie ustawiono marginesy przycisków"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Add padding to Gtk.Entry's completion popover"
-msgstr ""
+msgstr "Dodano padding do podpowiedzi Gtk.Entry"
 
 #: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
 #: data/stylesheet.appdata.xml.in:59
@@ -69,11 +67,13 @@ msgstr "Poprawki:"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Correct .title-4 padding in Lists"
-msgstr ""
+msgstr "Poprawiono padding .title-4 w listach"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
+"Przyciski: nie ustawiają już grubości fontu dla elementów potomnych takich "
+"jak popovery"
 
 #: data/stylesheet.appdata.xml.in:41
 msgid "New Features:"
