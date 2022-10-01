@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-09-30 10:37+0000\n"
+"PO-Revision-Date: 2022-10-01 04:47+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ru/>\n"
@@ -22,13 +22,11 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Системная таблица стилей"
 
 #: data/stylesheet.appdata.xml.in:9
-#, fuzzy
-#| msgid "The Gtk Stylesheet for elementary OS"
 msgid "The look and feel for elementary OS"
-msgstr "Таблица стилей Gtk для elementary OS"
+msgstr "Внешний вид elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -44,23 +42,24 @@ msgstr "Улучшения:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Checkerboard styles are more subtle"
-msgstr ""
+msgstr "Стиль шахматной доски теперь более тонкий"
 
 #: data/stylesheet.appdata.xml.in:22
 msgid "Set `large-icons` size on headerbars to 24px"
-msgstr ""
+msgstr "Размер «large-icons» в заголовках теперь равен 24px"
 
 #: data/stylesheet.appdata.xml.in:23
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr ""
+"Скорректирован макет заголовка и типография в Granite.SimpleSettingsPage"
 
 #: data/stylesheet.appdata.xml.in:24
 msgid "Infobars: set correct button margins"
-msgstr ""
+msgstr "Infobars: правильные отступы у кнопок"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Add padding to Gtk.Entry's completion popover"
-msgstr ""
+msgstr "Добавлен отступ к всплывающему окну предложений Gtk.Entry"
 
 #: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
 #: data/stylesheet.appdata.xml.in:59
@@ -69,11 +68,12 @@ msgstr "Исправления:"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Correct .title-4 padding in Lists"
-msgstr ""
+msgstr "Скорректирован отступ .title-4 в списках"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
+"Кнопки: не устанавливать стиль шрифта для детей, таких как всплывающие окна"
 
 #: data/stylesheet.appdata.xml.in:41
 msgid "New Features:"
