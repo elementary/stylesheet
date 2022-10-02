@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-10-01 04:47+0000\n"
+"PO-Revision-Date: 2022-10-02 08:21+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ru/>\n"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:24
 msgid "Infobars: set correct button margins"
-msgstr "Infobars: правильные отступы у кнопок"
+msgstr "Infobars: исправлены отступы у кнопок"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Add padding to Gtk.Entry's completion popover"
@@ -85,7 +85,7 @@ msgstr "Поддержка Gtk4"
 
 #: data/stylesheet.appdata.xml.in:47
 msgid "Fix titlebar in GNOME Web 42"
-msgstr "Исправление заголовка окна для GNOME Web 42"
+msgstr "Исправлен заголовок окна в GNOME Web 42"
 
 #: data/stylesheet.appdata.xml.in:48
 msgid "Fix font style for bold labels in some languages"
@@ -102,7 +102,7 @@ msgstr "Улучшен контраст горизонтальных разде�
 
 #: data/stylesheet.appdata.xml.in:61
 msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr "Использовать цветовой акцент для подсветки окна-кандидата в IBus"
+msgstr "Цветовой акцент теперь использован для подсветки окна-кандидата в IBus"
 
 #: data/stylesheet.appdata.xml.in:62
 msgid "Fix font style for title labels in headerbars"
