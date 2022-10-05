@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-10-03 13:31+0000\n"
+"PO-Revision-Date: 2022-10-06 01:37+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/he/>\n"
@@ -70,7 +70,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Buttons: don't set font weight for children like popovers"
-msgstr ""
+msgstr "כפתורים: לא להגדיר את משקל הגופן לצאצאים כגון חלוניות קופצות"
 
 #: data/stylesheet.appdata.xml.in:41
 msgid "New Features:"
