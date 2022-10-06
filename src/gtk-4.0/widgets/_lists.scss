@@ -17,11 +17,10 @@ listview {
         }
     }
 
-    .heading,
+    header,
     .title-4,
     .h4 {
-        padding-left: rem(6px);
-        padding-right: rem(6px);
+        margin: 0.5em;
     }
 
     // Primary used in Gtk.Inspector
