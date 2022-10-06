@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-05-18 22:50+0000\n"
+"PO-Revision-Date: 2022-09-30 23:18+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/uk/>\n"
@@ -22,13 +22,11 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Системна таблиця стилів"
 
 #: data/stylesheet.appdata.xml.in:9
-#, fuzzy
-#| msgid "The Gtk Stylesheet for elementary OS"
 msgid "The look and feel for elementary OS"
-msgstr "Таблиця стилів Gtk для elementary OS"
+msgstr "Вигляд elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -44,23 +42,24 @@ msgstr "Удосконалення:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Checkerboard styles are more subtle"
-msgstr ""
+msgstr "Шаховий стиль став витонченішим"
 
 #: data/stylesheet.appdata.xml.in:22
 msgid "Set `large-icons` size on headerbars to 24px"
-msgstr ""
+msgstr "Налаштовано розмір `large-icons` панелей заголовків на 24px"
 
 #: data/stylesheet.appdata.xml.in:23
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr ""
+"Налаштовано верстку та типографіку заголовків у Granite.SimpleSettingsPage"
 
 #: data/stylesheet.appdata.xml.in:24
 msgid "Infobars: set correct button margins"
-msgstr ""
+msgstr "Інфопанелі: налаштовано правильні відступи для кнопок"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Add padding to Gtk.Entry's completion popover"
-msgstr ""
+msgstr "Додано відступ у спливному вікні виконання Gtk.Entry"
 
 #: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
 #: data/stylesheet.appdata.xml.in:59
@@ -69,11 +68,11 @@ msgstr "Виправлення:"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Correct .title-4 padding in Lists"
-msgstr ""
+msgstr "Виправлення відступів .title-4 у списках"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Buttons: don't set font weight for children like popovers"
-msgstr ""
+msgstr "Кнопки: не встановлюйте товщину шрифту для дітей, таких як popovers"
 
 #: data/stylesheet.appdata.xml.in:41
 msgid "New Features:"
