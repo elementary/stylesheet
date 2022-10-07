@@ -23,7 +23,13 @@ scale {
     }
 
     mark {
-        background: mix(bg-color(4), $fg-color, $weight: 75%);
+        indicator {
+            background: mix(bg-color(4), $fg-color, $weight: 75%);
+        }
+
+        label {
+            @extend .dim-label, .small-label;
+        }
     }
 
     slider {
@@ -164,12 +170,12 @@ scale {
             &.top {
                 margin-top: rem(6px);
             }
-        }
 
-        mark {
-            min-height: rem(6px);
-            // Intentionally not in ems since it's a stroke
-            min-width: 1px;
+            mark indicator {
+                min-height: rem(6px);
+                // Intentionally not in ems since it's a stroke
+                min-width: 1px;
+            }
         }
 
         slider {
@@ -204,12 +210,12 @@ scale {
             &.top {
                 margin-right: rem(6px);
             }
-        }
 
-        mark {
-            // Intentionally not in ems since it's a stroke
-            min-height: 1px;
-            min-width: rem(6px);
+            mark indicator {
+                // Intentionally not in ems since it's a stroke
+                min-height: 1px;
+                min-width: rem(6px);
+            }
         }
 
         slider {

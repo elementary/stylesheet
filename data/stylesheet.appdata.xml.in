@@ -23,6 +23,7 @@
           <li>Adjust header layout and typography in Granite.SimpleSettingsPage</li>
           <li>Infobars: set correct button margins</li>
           <li>Add padding to Gtk.Entry's completion popover</li>
+          <li>Fix labels for scale marks</li>
         </ul>
         <p>Fixes:</p>
         <ul>
