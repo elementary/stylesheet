@@ -14,7 +14,7 @@
     <id>io.elementary.stylesheet</id>
   </provides>
   <releases>
-    <release version="7.0.1" date="2022-09-26" urgency="medium">
+    <release version="7.0.1" date="2022-10-10" urgency="medium">
       <description>
         <p>Improvements:</p>
         <ul>
