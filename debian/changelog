@@ -1,3 +1,9 @@
+io.elementary.stylesheet (7.0.1) jammy; urgency=medium
+
+  * new upstream release
+
+ -- Danielle Foré <danielle@elementary.io>  Mon, 10 Oct 2022 16:54:17 -0700
+
 io.elementary.stylesheet (7.0.0) focal; urgency=medium
 
   * new upstream release
