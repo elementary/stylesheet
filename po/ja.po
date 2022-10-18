@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-10-09 02:57+0000\n"
+"PO-Revision-Date: 2022-10-19 01:15+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -41,23 +41,23 @@ msgstr "改善点:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Checkerboard styles are more subtle"
-msgstr ""
+msgstr "チェッカーボードを薄い色に修正"
 
 #: data/stylesheet.appdata.xml.in:22
 msgid "Set `large-icons` size on headerbars to 24px"
-msgstr ""
+msgstr "ヘッダーバーにおける `large-icons` の大きさを 24px に変更"
 
 #: data/stylesheet.appdata.xml.in:23
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
-msgstr ""
+msgstr "Granite.SimpleSettingsPage: ヘッダーの配置とテキストの大きさを調整"
 
 #: data/stylesheet.appdata.xml.in:24
 msgid "Infobars: set correct button margins"
-msgstr ""
+msgstr "Infobar: 適切なボタンマージンを設定"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Add padding to Gtk.Entry's completion popover"
-msgstr ""
+msgstr "Gtk.Entry の補完ポップオーバーにパディングを追加"
 
 #: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
 #: data/stylesheet.appdata.xml.in:59
@@ -66,11 +66,11 @@ msgstr "修正点:"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Correct .title-4 padding in Lists"
-msgstr ""
+msgstr "List: \".title-4\" クラスのパディングを修正"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Buttons: don't set font weight for children like popovers"
-msgstr ""
+msgstr "Button: ポップオーバーなどの子ウィジェットに対してフォントサイズを設定しないように修正"
 
 #: data/stylesheet.appdata.xml.in:41
 msgid "New Features:"
