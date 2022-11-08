@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-05-19 11:49+0000\n"
+"PO-Revision-Date: 2022-11-09 23:29+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
@@ -17,17 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Feuille de style du système"
 
 #: data/stylesheet.appdata.xml.in:9
-#, fuzzy
-#| msgid "The Gtk Stylesheet for elementary OS"
 msgid "The look and feel for elementary OS"
-msgstr "La feuille de style de Gtk pour elementary OS"
+msgstr "Le thème d'elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -43,19 +41,22 @@ msgstr "Améliorations :"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Checkerboard styles are more subtle"
-msgstr ""
+msgstr "Les styles en damier sont plus subtils"
 
 #: data/stylesheet.appdata.xml.in:22
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr ""
+"La taille des icônes « large-icons » sur les entêtes a été définie à 24px"
 
 #: data/stylesheet.appdata.xml.in:23
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr ""
+"Ajustement de la disposition et de la typographie de l'entête dans Granite."
+"SimpleSettingsPage"
 
 #: data/stylesheet.appdata.xml.in:24
 msgid "Infobars: set correct button margins"
-msgstr ""
+msgstr "Barres d'information : Marge correcte pour les boutons"
 
 #: data/stylesheet.appdata.xml.in:25
 msgid "Add padding to Gtk.Entry's completion popover"
