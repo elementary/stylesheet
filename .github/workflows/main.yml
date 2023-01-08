@@ -4,20 +4,19 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     container:
       image: elementary/docker:unstable
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Dependencies
-      run: |
-        apt update
-        apt install -y meson sassc
-    - name: Build
-      run: |
-        meson build
-        ninja -C build
-        ninja -C build install
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+          apt update
+          apt install -y meson sassc
+      - name: Build
+        run: |
+          meson build
+          ninja -C build
+          ninja -C build install
