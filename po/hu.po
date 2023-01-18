@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-05-19 12:02+0000\n"
+"PO-Revision-Date: 2023-01-20 00:25+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/hu/>\n"
@@ -17,21 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Rendszerstílusok"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The look and feel for elementary OS"
-msgstr ""
+msgstr "Az elementary OS kinézete"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"Egy eredeti Gtk.CSS stíluslap kifejezetten az elementary OS-re és annak "
+"asztali környezetére, a Pantheonra tervezve."
 
 #: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
 msgid "Improvements:"
