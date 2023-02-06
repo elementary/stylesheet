@@ -8,22 +8,24 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-07 16:25+0000\n"
+"Last-Translator: Martin Myrvold <myrvold.martin@gmail.com>\n"
+"Language-Team: Norwegian Nynorsk <https://l10n.elementary.io/projects/"
+"desktop/stylesheet-extra/nn/>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Stilark for systemet"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The look and feel for elementary OS"
-msgstr ""
+msgstr "Utsjånaden og oppførselen til elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -33,7 +35,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
 msgid "Improvements:"
-msgstr ""
+msgstr "Forbetringar:"
 
 #: data/stylesheet.appdata.xml.in:21
 msgid "Checkerboard styles are more subtle"
@@ -58,7 +60,7 @@ msgstr ""
 #: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
 #: data/stylesheet.appdata.xml.in:59
 msgid "Fixes:"
-msgstr ""
+msgstr "Løyste feil:"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Correct .title-4 padding in Lists"
@@ -70,7 +72,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:41
 msgid "New Features:"
-msgstr ""
+msgstr "Nye funksjonar:"
 
 #: data/stylesheet.appdata.xml.in:43
 msgid "Support for Gtk4"
@@ -118,4 +120,4 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:86
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
