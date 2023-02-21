@@ -1,6 +1,7 @@
 assistant,
 printdialog,
 window.csd {
+    > headerbar,
     > .titlebar {
         border-radius: rem(6px) rem(6px) 0 0;
     }
@@ -51,6 +52,7 @@ window {
     }
 
     &.csd {
+        headerbar,
         .titlebar {
             box-shadow:
                 outset-highlight("full"),
@@ -152,6 +154,7 @@ window {
     }
 }
 
+window.dialog.csd > headerbar,
 window.dialog.csd > .titlebar {
     @extend .flat;
 }
