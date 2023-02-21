@@ -79,16 +79,12 @@ tab {
     min-width: 24px;
     padding: rem(3px);
 
-    .tab-close-button,
-    .tab-indicator {
-        @extend .flat;
-    }
-
-    &:hover:not(:checked) {
+    &:hover:not(:checked):not(:selected) {
         background-color: #{'shade(@tab_base_color, 0.9)'};
     }
 
-    &:checked {
+    &:checked,
+    &:selected {
         background-color: #{'@tab_base_color'};
         box-shadow:
             outset-highlight(),
@@ -117,51 +113,18 @@ tabbar {
 
     tab {
         background-clip: padding-box;
-        border: 1px solid transparent;
-        margin: 0 1px;
+        margin: 1px;
         min-height: 24px;
-        transition: all 150ms ease-in;
-
-        &:checked {
-            border-color: rgba(black, 0.15);
-            box-shadow: outset-highlight();
-        }
     }
 
-    undershoot {
-        &.left {
-            background-image: linear-gradient(
-                to left,
-                #{'alpha(@tab_base_color, 0)'},
-                #{'shade(@tab_base_color, 0.95)'}
-            );
-        }
+    tabbox > separator.vertical {
+      margin: 6px 0;
+      border-right: none;
+      transition: opacity 150ms ease-in;
 
-        &.right {
-            background-image: linear-gradient(
-                to right,
-                #{'alpha(@tab_base_color, 0)'},
-                #{'shade(@tab_base_color, 0.95)'}
-            );
-        }
-
-        @if $color-scheme == "dark" {
-            &.left {
-                background-image: linear-gradient(
-                    to left,
-                    #{'alpha(@tab_base_color, 0)'},
-                    #{'shade(@tab_base_color, 0.97)'}
-                );
-            }
-
-            &.right {
-                background-image: linear-gradient(
-                    to right,
-                    #{'alpha(@tab_base_color, 0)'},
-                    #{'shade(@tab_base_color, 0.97)'}
-                );
-            }
-        }
+      &.hidden {
+        opacity: 0;
+      }
     }
 
     .start-action,
