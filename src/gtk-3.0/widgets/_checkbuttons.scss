@@ -1,6 +1,7 @@
 check,
 radio {
     @extend %outset-background;
+    padding: rem(3px);
     background-color: bg-color(0);
     border: 1px solid $border-color;
     box-shadow:
