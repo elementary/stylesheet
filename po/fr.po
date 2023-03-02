@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2022-05-19 11:49+0000\n"
+"POT-Creation-Date: 2022-09-30 12:14-0700\n"
+"PO-Revision-Date: 2023-02-02 10:25+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
-msgid "Greenfield"
-msgstr "Greenfield"
+msgid "System Stylesheet"
+msgstr "Feuille de style du système"
 
 #: data/stylesheet.appdata.xml.in:9
-msgid "The Gtk Stylesheet for elementary OS"
-msgstr "La feuille de style de Gtk pour elementary OS"
+msgid "The look and feel for elementary OS"
+msgstr "Le thème d'elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -35,67 +35,104 @@ msgstr ""
 "Une feuille de style Gtk.CSS originale conçue spécifiquement pour elementary "
 "OS et sont environnement de bureau : Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19
-msgid "New Features:"
-msgstr "Nouvelles fonctionnalités :"
-
-#: data/stylesheet.appdata.xml.in:21
-msgid "Support for Gtk4"
-msgstr "Prise en charge de Gtk4"
-
-#: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
-msgid "Fixes:"
-msgstr "Corrections :"
-
-#: data/stylesheet.appdata.xml.in:25
-msgid "Fix titlebar in GNOME Web 42"
-msgstr "Correction de la barre de titre dans GNOME Web 42"
-
-#: data/stylesheet.appdata.xml.in:26
-msgid "Fix font style for bold labels in some languages"
-msgstr "Correction du style de police gras pour certaines langues"
-
-#: data/stylesheet.appdata.xml.in:27
-msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr "ModelButtons : Ajout de marges entres les coches, radios et labels"
-
-#: data/stylesheet.appdata.xml.in:33
+#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
 msgid "Improvements:"
 msgstr "Améliorations :"
 
-#: data/stylesheet.appdata.xml.in:35
+#: data/stylesheet.appdata.xml.in:21
+msgid "Checkerboard styles are more subtle"
+msgstr "Les styles en damier sont plus subtils"
+
+#: data/stylesheet.appdata.xml.in:22
+msgid "Set `large-icons` size on headerbars to 24px"
+msgstr ""
+"La taille des icônes « large-icons » sur les entêtes a été définie à 24px"
+
+#: data/stylesheet.appdata.xml.in:23
+msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
+msgstr ""
+"Ajustement de la disposition et de la typographie de l'entête dans Granite."
+"SimpleSettingsPage"
+
+#: data/stylesheet.appdata.xml.in:24
+msgid "Infobars: set correct button margins"
+msgstr "Barres d'information : Marge correcte pour les boutons"
+
+#: data/stylesheet.appdata.xml.in:25
+msgid "Add padding to Gtk.Entry's completion popover"
+msgstr "Ajout d'une marge interne à l'infobulle de complétion de Gtk.Entry"
+
+#: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
+#: data/stylesheet.appdata.xml.in:59
+msgid "Fixes:"
+msgstr "Corrections :"
+
+#: data/stylesheet.appdata.xml.in:29
+msgid "Correct .title-4 padding in Lists"
+msgstr "Correction de la marge interne de .title-4 dans List"
+
+#: data/stylesheet.appdata.xml.in:30
+msgid "Buttons: don't set font weight for children like popovers"
+msgstr ""
+"Boutons : La graisse de police n'est désormais plus définie pour les enfants "
+"comme les infobulles"
+
+#: data/stylesheet.appdata.xml.in:41
+msgid "New Features:"
+msgstr "Nouvelles fonctionnalités :"
+
+#: data/stylesheet.appdata.xml.in:43
+msgid "Support for Gtk4"
+msgstr "Prise en charge de Gtk4"
+
+#: data/stylesheet.appdata.xml.in:47
+msgid "Fix titlebar in GNOME Web 42"
+msgstr "Correction de la barre de titre dans GNOME Web 42"
+
+#: data/stylesheet.appdata.xml.in:48
+msgid "Fix font style for bold labels in some languages"
+msgstr "Correction du style de police gras pour certaines langues"
+
+#: data/stylesheet.appdata.xml.in:49
+msgid "ModelButtons: add margin between checks, radios, and labels"
+msgstr "ModelButtons : Ajout de marges entres les coches, radios et labels"
+
+#: data/stylesheet.appdata.xml.in:57
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr ""
 "Amélioration du contraste des séparateurs horizontaux dans le thème sombre"
 
-#: data/stylesheet.appdata.xml.in:39
+#: data/stylesheet.appdata.xml.in:61
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
 "Utilisation de la couleur d'accentuation pour la mise en surbrillance dans "
 "la fenêtre iBus"
 
-#: data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:62
 msgid "Fix font style for title labels in headerbars"
 msgstr "Correction du style de police pour les titres des barres de titre"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:69
 msgid "Support for Hdy.Tabbar"
 msgstr "Prise en charge de Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:70
 msgid "Fix accent class for Gtk.Scale"
 msgstr "Correction de la classe d'accentuation pour Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:71
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
 "Aplatissement de la couleur d'arrière-plan héritée pour les vues et les "
 "barres latérales"
 
-#: data/stylesheet.appdata.xml.in:56
+#: data/stylesheet.appdata.xml.in:78
 msgid "Complete redesign"
 msgstr "Refonte complète"
 
-#: data/stylesheet.appdata.xml.in:64
+#: data/stylesheet.appdata.xml.in:86
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
+
+#~ msgid "Greenfield"
+#~ msgstr "Greenfield"

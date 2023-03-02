@@ -3,6 +3,7 @@ button {
     border-radius: rem(3px);
     // Explicitly set in case containers override default color
     color: #{'@fg_color'};
+    font-weight: 500;
     // Off-by-one to account for padding-box clip
     padding: rem(4px) rem(7px);
     transition: background duration("in-place") $easing;
@@ -81,11 +82,6 @@ button {
                 &:backdrop {
                     border-color: $border-color;
                 }
-            }
-
-            image,
-            label {
-                color: inherit;
             }
 
             &:active,
@@ -192,10 +188,6 @@ button {
         min-width: rem(16px);
         min-height: rem(16px);
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-    }
-
-    label {
-        font-weight: 500;
     }
 
     &:dir(ltr) box image + label,

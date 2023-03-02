@@ -24,18 +24,26 @@ infobar {
             padding-right: calc(16px + #{rem(24px)});
         }
 
-        button.close.image-button {
-            background: #{'alpha(white, 0.8)'};
-            border-radius: 50%;
-            color: inherit;
-            padding: rem(3px);
-        }
+        button {
+            &:dir(ltr) {
+                margin-left: rem(12px);
+            }
 
-        button.text-button {
-            margin: 0 rem(12px);
+            &:dir(rtl) {
+                margin-right: rem(12px);
+            }
 
-            @if $color-scheme == "dark" {
-                background-clip: border-box;
+            &.close.image-button {
+                background: #{'alpha(white, 0.8)'};
+                border-radius: 50%;
+                color: inherit;
+                padding: rem(3px);
+            }
+
+            &.text-button {
+                @if $color-scheme == "dark" {
+                    background-clip: border-box;
+                }
             }
         }
 

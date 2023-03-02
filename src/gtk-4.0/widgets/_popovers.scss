@@ -81,6 +81,7 @@ popover.background {
     > contents {
         border-radius: rem(6px);
 
+        label.heading,
         label.h4 {
             margin: 0 rem(12px);
         }
@@ -144,11 +145,16 @@ popover.background {
             }
 
             &:disabled {
-                border: none;
-                margin: 0;
-                min-height: 0;
-                min-width: 0;
+                color: $insensitive-fg-color;
             }
+        }
+    }
+
+    &.entry-completion > contents treeview {
+        margin: rem(6px) 0;
+
+        &.view.cell {
+            padding: rem(6px) rem(12px);
         }
     }
 
@@ -243,6 +249,7 @@ popover.background {
         @extend %menuitem;
 
         // Fixes extra padding in switch modelbuttons
+        &.heading label,
         &.h4 label,
         &.title-4 label {
             padding: 0;
