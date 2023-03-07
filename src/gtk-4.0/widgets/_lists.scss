@@ -50,7 +50,8 @@ listview {
     }
 
     &.boxed-list {
-        @extend .card .rounded;
+        @extend .card;
+        @extend .rounded;
 
         & > row {
             padding: rem(6px);
