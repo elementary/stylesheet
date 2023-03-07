@@ -127,16 +127,16 @@ window.aboutdialog {
     }
 }
 
-//Adw.PreferencesWindow
+// Adw.PreferencesWindow
 window.preferences {
     @extend .dialog;
 
     headerbar + scrolledwindow undershoot.top {
         background:
             linear-gradient(
-                @borders,
-                alpha(black, 0.05) 1px,
-                alpha(black, 0.0) 0.444rem
+                $toplevel-border-color,
+                rgba(black, 0.05) 1px,
+                rgba(black, 0.0) 0.444rem
             );
     }
 
