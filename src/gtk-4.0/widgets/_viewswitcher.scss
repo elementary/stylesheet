@@ -31,7 +31,7 @@ headerbar viewswitcher button {
     }
 }
 
-viewswitcherbar actionbar {
+viewswitcherbar revealer > box {
     border-top: 1px solid $toplevel-border-color;
 
     viewswitcher button {
@@ -70,14 +70,6 @@ viewswitcherbar actionbar {
 
         &:not(only-child):last-child:not(:checked):hover {
             border-right-color: #{'shade(@color_primary, 1.15)'};
-        }
-
-        &:not(:checked):hover:not(:backdrop) {
-            background-image: linear-gradient(
-                to top,
-                #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
-                #{'alpha(@color_primary, 0.7)'}
-            );
         }
 
         &:not(:checked):not(only-child):first-child:hover,
