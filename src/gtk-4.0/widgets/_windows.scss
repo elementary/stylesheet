@@ -128,20 +128,27 @@ window.aboutdialog {
 }
 
 // Adw.PreferencesWindow
-window.preferences {
+window.preferences.csd {
     @extend .dialog;
 
     headerbar {
         @extend .flat;
     }
 
-    preferencespage > scrolledwindow undershoot.top {
-        background:
-            linear-gradient(
-                $toplevel-border-color,
-                rgba(black, 0.05) 1px,
-                rgba(black, 0.0) 0.444rem
-            );
+    preferencespage > scrolledwindow {
+        undershoot.top {
+            background:
+                linear-gradient(
+                    $toplevel-border-color,
+                    rgba(black, 0.05) 1px,
+                    rgba(black, 0.0) 0.444rem
+                );
+        }
+
+        > viewport > clamp > box {
+            padding-left: rem(12px);
+            padding-right: rem(12px);
+        }
     }
 
     preferencesgroup {
