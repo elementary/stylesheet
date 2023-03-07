@@ -126,3 +126,21 @@ window.aboutdialog {
         -gtk-icon-size: 128px;
     }
 }
+
+//Adw.PreferencesWindow
+window.preferences {
+    @extend .dialog;
+
+    headerbar + scrolledwindow undershoot.top {
+        background:
+            linear-gradient(
+                @borders,
+                alpha(black, 0.05) 1px,
+                alpha(black, 0.0) 0.444rem
+            );
+    }
+
+    preferencesgroup {
+        margin-bottom: rem(12px);
+    }
+}
