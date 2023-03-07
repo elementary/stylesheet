@@ -3,41 +3,6 @@ viewswitcher button {
         -gtk-icon-palette: error #{'@text_color'}, success #{'@text_color'}, warning #{'@text_color'};
     }
 
-    &:not(:checked):not(:hover) {
-        background: transparent;
-    }
-
-    &:not(:only-child):not(:last-child) {
-        border-right-width: 0;
-    }
-
-    &:not(only-child):first-child:not(:checked):not(:hover),
-    &:not(:checked):not(:hover) + &:not(:checked):not(:hover) {
-        border-left-color: transparent;
-    }
-
-    &:not(only-child):last-child:not(:checked):not(:hover) {
-        border-right-color: transparent;
-    }
-
-    &:not(:checked):hover:not(:backdrop) {
-        background-image: #{'image(lighter(@color_primary))'};
-    }
-
-    &:not(only-child):first-child:not(:checked):hover,
-    &:not(:checked):hover + &:not(:checked):not(:hover),
-    &:not(:checked):not(:hover) + &:not(:checked):hover {
-        border-left-color: #{'shade(@color_primary, 1.15)'};
-    }
-
-    &:not(only-child):last-child:not(:checked):hover {
-        border-right-color: #{'shade(@color_primary, 1.15)'};
-    }
-
-    &:not(:checked):hover:backdrop {
-        background-image: #{'image(@color_primary)'};
-    }
-
     stack > box {
 
         & label.active {
@@ -95,7 +60,6 @@ headerbar viewswitcher button.toggle {
 
 viewswitcherbar actionbar viewswitcher {
     border-top: 1px solid $toplevel-border-color;
-    padding: rem(3px) rem(6px);
 
     button {
         margin: 0;
@@ -103,5 +67,40 @@ viewswitcherbar actionbar viewswitcher {
         border-top: 0;
         border-bottom: 0;
         box-shadow: none;
+
+        &:not(:checked):not(:hover) {
+            background: transparent;
+        }
+
+        &:not(:only-child):not(:last-child) {
+            border-right-width: 0;
+        }
+
+        &:not(only-child):first-child:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):not(:hover) {
+            border-left-color: transparent;
+        }
+
+        &:not(only-child):last-child:not(:checked):not(:hover) {
+            border-right-color: transparent;
+        }
+
+        &:not(:checked):hover:not(:backdrop) {
+            background-image: #{'image(lighter(@color_primary))'};
+        }
+
+        &:not(only-child):first-child:not(:checked):hover,
+        &:not(:checked):hover + &:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):hover {
+            border-left-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(only-child):last-child:not(:checked):hover {
+            border-right-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(:checked):hover:backdrop {
+            background-image: #{'image(@color_primary)'};
+        }
     }
 }
