@@ -58,10 +58,6 @@ viewswitcherbar revealer > box {
             border-right-color: transparent;
         }
 
-        &:not(:checked):hover:not(:backdrop) {
-            background-image: #{'image(lighter(@color_primary))'};
-        }
-
         &:not(only-child):first-child:not(:checked):hover,
         &:not(:checked):hover + &:not(:checked):not(:hover),
         &:not(:checked):not(:hover) + &:not(:checked):hover {
@@ -70,6 +66,14 @@ viewswitcherbar revealer > box {
 
         &:not(only-child):last-child:not(:checked):hover {
             border-right-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(:checked):hover:not(:backdrop) {
+            background-image: linear-gradient(
+                to top,
+                #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
+                #{'alpha(@color_primary, 0.7)'}
+            );
         }
 
         &:not(:checked):not(only-child):first-child:hover,
