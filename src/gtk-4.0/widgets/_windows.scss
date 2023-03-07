@@ -131,7 +131,11 @@ window.aboutdialog {
 window.preferences {
     @extend .dialog;
 
-    headerbar + scrolledwindow undershoot.top {
+    headerbar {
+        @extend .flat;
+    }
+
+    preferencespage > scrolledwindow undershoot.top {
         background:
             linear-gradient(
                 $toplevel-border-color,
