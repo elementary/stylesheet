@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1 # Avoid an error when pushing
+        uses: actions/checkout@v3 # Avoid an error when pushing
 
       - name: Gettext
         uses: elementary/actions/gettext-template@master
