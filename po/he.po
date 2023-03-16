@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 12:14-0700\n"
+"POT-Creation-Date: 2023-03-16 18:42+0000\n"
 "PO-Revision-Date: 2022-10-09 20:32+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
@@ -35,7 +35,7 @@ msgstr ""
 "גיליון סגנון Gtk.CSS מקורי שעוצב במיוחד ל־elementary OS ולסביבת שולחן העבודה "
 "שלה: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:56
 msgid "Improvements:"
 msgstr "שיפורים:"
 
@@ -59,68 +59,74 @@ msgstr "סרגלי מידע: מיקומי הכפתורים הוגדרו כראו
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "נוסף ריפוד לחלונית ההשלמה הקופצת של Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
-#: data/stylesheet.appdata.xml.in:59
+#: data/stylesheet.appdata.xml.in:26
+#, fuzzy
+#| msgid "Fix accent class for Gtk.Scale"
+msgid "Fix labels for scale marks"
+msgstr "תוקנה מחלקת הצבע המשני ל־Gtk.Scale"
+
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:60
 msgid "Fixes:"
 msgstr "תיקונים:"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:30
 msgid "Correct .title-4 padding in Lists"
 msgstr "תיקון של ‎.title-4 padding ברשימות"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:31
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr "כפתורים: לא להגדיר את משקל הגופן לצאצאים כגון חלוניות קופצות"
 
-#: data/stylesheet.appdata.xml.in:41
+#: data/stylesheet.appdata.xml.in:42
 msgid "New Features:"
 msgstr "יכולות חדשות:"
 
-#: data/stylesheet.appdata.xml.in:43
+#: data/stylesheet.appdata.xml.in:44
 msgid "Support for Gtk4"
 msgstr "תמיכה ב־Gtk4"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:48
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "תוקנה שורת הכותרת בדפדפן GNOME 42"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:49
 msgid "Fix font style for bold labels in some languages"
 msgstr "תוקן סגנון הגופן לתוויות מודגשות בחלק מהשפות"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:50
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons: הוספת גבולות בין תיבות סימון, תיבות בחירה ותוויות"
 
-#: data/stylesheet.appdata.xml.in:57
+#: data/stylesheet.appdata.xml.in:58
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "ניגודיות של מפרידים אופקיים בסגנון כהה השתפרה"
 
-#: data/stylesheet.appdata.xml.in:61
+#: data/stylesheet.appdata.xml.in:62
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr "להשתמש בצבע המשני להדגשת החלון המועמד של IBus"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:63
 msgid "Fix font style for title labels in headerbars"
 msgstr "תוקן סגנון הגופן לתוויות כותרת בסרגלי כותרת"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:70
 msgid "Support for Hdy.Tabbar"
 msgstr "תמיכה ב־Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:71
 msgid "Fix accent class for Gtk.Scale"
 msgstr "תוקנה מחלקת הצבע המשני ל־Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:71
+#: data/stylesheet.appdata.xml.in:72
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr "סרגלי כותרת שטוחים יורשים את צבע הרקע לתצוגות ולסרגלי צד"
 
-#: data/stylesheet.appdata.xml.in:78
+#: data/stylesheet.appdata.xml.in:79
 msgid "Complete redesign"
 msgstr "עיצוב מחדש מאפס"
 
-#: data/stylesheet.appdata.xml.in:86
+#: data/stylesheet.appdata.xml.in:87
 msgid "elementary, Inc."
 msgstr "elementary בע״מ."
 
