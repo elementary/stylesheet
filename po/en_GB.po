@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-16 18:42+0000\n"
-"PO-Revision-Date: 2023-02-18 09:25+0000\n"
+"PO-Revision-Date: 2023-03-18 22:59+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "desktop/stylesheet-extra/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -60,10 +60,8 @@ msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Add padding to Gtk.Entry's completion popover"
 
 #: data/stylesheet.appdata.xml.in:26
-#, fuzzy
-#| msgid "Fix accent class for Gtk.Scale"
 msgid "Fix labels for scale marks"
-msgstr "Fix accent class for Gtk.Scale"
+msgstr "Fix labels for scale marks"
 
 #: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:46
 #: data/stylesheet.appdata.xml.in:60
