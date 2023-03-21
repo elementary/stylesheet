@@ -48,20 +48,4 @@ listview {
     &.separators:not(.horizontal) > row:not(.separator) + row:not(.separator) {
         border-top: 1px solid #{'@menu_separator'};
     }
-
-    &.boxed-list {
-        @extend .frame;
-
-        border-radius: rem(6px);
-        box-shadow: 0 1px 3px rgba(black, 0.1);
-
-        > row {
-            padding: rem(6px);
-            min-height: rem(32px); //Try to force homogeneous row height
-        }
-
-        > row:not(.separator) + row:not(.separator) {
-            border-top: 1px solid #{'@menu_separator'};
-        }
-    }
 }

@@ -1,0 +1,47 @@
+list.boxed-list {
+    @extend .frame;
+
+    border-radius: rem(6px);
+    box-shadow: 0 1px 3px rgba(black, 0.1);
+
+    > row {
+        padding: rem(6px);
+        min-height: rem(32px); //Try to force homogeneous row height
+    }
+
+    > row:not(.separator) + row:not(.separator) {
+        border-top: 1px solid #{'@menu_separator'};
+    }
+
+    row {
+        > .icon,
+        > .prefixes {
+            &:dir(ltr) { margin-right: rem(6px); }
+            &:dir(rtl) { margin-left: rem(6px); }
+        }
+    }
+
+    row.expander {
+        image.expander-row-arrow {
+            transition: all duration("in-place") $easing;
+
+            &:dir(ltr) {
+              -gtk-icon-transform: rotate(0.25turn);
+            }
+
+            &:dir(rtl) {
+              -gtk-icon-transform: rotate(-0.25turn);
+            }
+        }
+
+        &:checked image.expander-row-arrow {
+            &:dir(ltr) {
+              -gtk-icon-transform: rotate(0.5turn);
+            }
+
+            &:dir(rtl) {
+              -gtk-icon-transform: rotate(-0.5turn);
+            }
+        }
+    }
+}
