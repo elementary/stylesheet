@@ -33,24 +33,17 @@ window.preferences.csd {
     preferencesgroup {
         margin-bottom: rem(12px);
     }
+
+    actionbar {
+        background: none;
+        box-shadow: none;
+        padding-top: rem(16px);
+        padding-right: rem(7px);
+        padding-left: rem(7px);
+        padding-bottom: rem(8px);
+
+        button.text-button {
+            min-width: rem(60px);
+        }
+    }
 }
-
-
-// preferencespage > scrolledwindow > viewport > clamp > box {
-//   margin: 24px 12px;
-//   border-spacing: 24px;
-// }
-
-// preferencesgroup > box {
-//   &, .labels {
-//     border-spacing: 6px;
-//   }
-
-//   > box.header:not(.single-line) {
-//     margin-bottom: 6px;
-//   }
-
-//   > box.single-line {
-//     min-height: 34px;
-//   }
-// }

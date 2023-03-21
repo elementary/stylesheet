@@ -32,8 +32,12 @@ list.boxed-list {
             &:dir(rtl) { margin-left: rem(3px); }
         }
 
-        > box.header {
-            padding: rem(6px);
+        .title + .subtitle {
+            margin-top: 0.25em;
+        }
+
+        box.header {
+            padding: rem(6px) rem(9px);
             min-height: rem(32px); //Try to force homogeneous row height
         }
     }
@@ -67,6 +71,10 @@ list.boxed-list {
             &:dir(rtl) {
               -gtk-icon-transform: rotate(-0.5turn);
             }
+        }
+
+        list {
+            background: transparent;
         }
     }
 }
