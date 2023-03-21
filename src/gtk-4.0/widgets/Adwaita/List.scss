@@ -7,18 +7,20 @@ list.boxed-list {
     > row {
         padding: rem(6px);
         min-height: rem(32px); //Try to force homogeneous row height
+
+        .icon,
+        .prefixes {
+            &:dir(ltr) { margin-right: rem(3px); }
+            &:dir(rtl) { margin-left: rem(3px); }
+        }
+
+        text {
+            @extend entry;
+        }
     }
 
     > row:not(.separator) + row:not(.separator) {
         border-top: 1px solid #{'@menu_separator'};
-    }
-
-    row {
-        > .icon,
-        > .prefixes {
-            &:dir(ltr) { margin-right: rem(6px); }
-            &:dir(rtl) { margin-left: rem(6px); }
-        }
     }
 
     row.expander {
