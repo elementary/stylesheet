@@ -32,7 +32,7 @@ list.boxed-list {
             &:dir(rtl) { margin-left: rem(3px); }
         }
 
-        > box {
+        > box.header {
             padding: rem(6px);
             min-height: rem(32px); //Try to force homogeneous row height
         }
