@@ -5,8 +5,26 @@ list.boxed-list {
     box-shadow: 0 1px 3px rgba(black, 0.1);
 
     > row {
-        padding: rem(6px);
-        min-height: rem(32px); //Try to force homogeneous row height
+        // Rounded top
+        &:first-child {
+            &, &.expander row.header {
+                border-top-left-radius: rem(6px);
+                border-top-right-radius: rem(6px);
+            }
+        }
+
+        // Rounded bottom
+        &:last-child {
+            &,
+            &.expander:not(:checked),
+            &.expander:not(:checked) row.header,
+            &.expander:checked list.nested,
+            &.expander:checked list.nested > row:last-child {
+                border-bottom-left-radius: rem(6px);
+                border-bottom-right-radius: rem(6px);
+                border-bottom-width: 0;
+            }
+        }
 
         .icon,
         .prefixes {
@@ -14,13 +32,18 @@ list.boxed-list {
             &:dir(rtl) { margin-left: rem(3px); }
         }
 
-        text {
-            @extend entry;
+        > box {
+            padding: rem(6px);
+            min-height: rem(32px); //Try to force homogeneous row height
         }
     }
 
     > row:not(.separator) + row:not(.separator) {
         border-top: 1px solid #{'@menu_separator'};
+    }
+
+    row.entry {
+
     }
 
     row.expander {
