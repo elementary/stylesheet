@@ -32,6 +32,11 @@ list.boxed-list {
             &:dir(rtl) { margin-left: rem(3px); }
         }
 
+        .prefixes,
+        .suffixes {
+            border-spacing: rem(6px);
+        }
+
         .title + .subtitle {
             margin-top: 0.25em;
         }
@@ -47,7 +52,18 @@ list.boxed-list {
     }
 
     row.entry {
+        .edit-icon,
+        .indicator {
+            min-width: rem(24px);
+        }
 
+        .edit-icon {
+            opacity: 0;
+        }
+
+        &:hover:not(:focus-within) .edit-icon {
+            opacity: 1;
+        }
     }
 
     row.expander {

@@ -31,18 +31,19 @@ window.preferences.csd {
     }
 
     preferencesgroup {
-        margin-bottom: rem(12px);
+        margin-bottom: 2rem;
     }
 
-    actionbar {
-        background: none;
-        box-shadow: none;
-        padding-top: rem(16px);
-        padding-right: rem(7px);
-        padding-left: rem(7px);
-        padding-bottom: rem(8px);
+    leaflet stack + actionbar {
+        background: #{'@theme_bg_color'};
+        box-shadow:
+            outset-highlight(),
+            // Intentionally not in ems since it's used as a stroke
+            0 0 0 1px #{'@menu_separator'},
+            0 rem(-1px) rem(3px) rgba(black, 0.1);
+        padding: rem(6px);
 
-        button.text-button {
+        button {
             min-width: rem(60px);
         }
     }
