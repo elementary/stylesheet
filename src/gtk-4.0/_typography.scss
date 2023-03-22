@@ -155,8 +155,3 @@ label:disabled {
 .monospace {
     font-family: monospace;
 }
-
-.subtitle {
-    @extend .small-label;
-    @extend .dim-label;
-}

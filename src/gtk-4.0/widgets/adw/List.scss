@@ -38,6 +38,9 @@ list.boxed-list {
         }
 
         .title + .subtitle {
+            @extend .small-label;
+            @extend .dim-label;
+
             margin-top: 0.25em;
         }
 
