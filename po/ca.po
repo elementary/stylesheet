@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-10-03 13:31+0000\n"
+"POT-Creation-Date: 2023-03-16 18:42+0000\n"
+"PO-Revision-Date: 2023-03-18 22:59+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -35,7 +35,7 @@ msgstr ""
 "Un estil de Gtk.CSS original dissenyat específicament per a l'elementary OS "
 "i el seu entorn d'escriptori: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:56
 msgid "Improvements:"
 msgstr "Millores:"
 
@@ -63,77 +63,81 @@ msgstr "Barres d'informació: establiu els marges dels botons correctes"
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Addició de farciment a la finestra emergent d'acabament de Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
-#: data/stylesheet.appdata.xml.in:59
+#: data/stylesheet.appdata.xml.in:26
+msgid "Fix labels for scale marks"
+msgstr "Correcció de les etiquetes per a les marques d'escala"
+
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:60
 msgid "Fixes:"
 msgstr "Correccions:"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:30
 msgid "Correct .title-4 padding in Lists"
 msgstr "Correcció del farciment .title-4 a les llistes"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:31
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
 "Botons: no configura el pes de la lletra per als fills com les informacions "
 "emergents"
 
-#: data/stylesheet.appdata.xml.in:41
+#: data/stylesheet.appdata.xml.in:42
 msgid "New Features:"
 msgstr "Característiques noves:"
 
-#: data/stylesheet.appdata.xml.in:43
+#: data/stylesheet.appdata.xml.in:44
 msgid "Support for Gtk4"
 msgstr "Suport per a Gtk4"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:48
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Correcció de la barra de títol al GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:49
 msgid "Fix font style for bold labels in some languages"
 msgstr ""
 "Correcció de l'estil de lletra per a les etiquetes en negreta en algunes "
 "llengües"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:50
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons: addició de marge entre comprovacions, ràdios i etiquetes"
 
-#: data/stylesheet.appdata.xml.in:57
+#: data/stylesheet.appdata.xml.in:58
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "Millora del contrast dels separadors horitzontals en estil fosc"
 
-#: data/stylesheet.appdata.xml.in:61
+#: data/stylesheet.appdata.xml.in:62
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
 "Ús del color d'accentuació per ressaltar a la finestra del candidat IBus"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:63
 msgid "Fix font style for title labels in headerbars"
 msgstr ""
 "Correcció de l'estil de lletra per a les etiquetes de títol a les barres de "
 "capçalera"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:70
 msgid "Support for Hdy.Tabbar"
 msgstr "Suport per a Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:71
 msgid "Fix accent class for Gtk.Scale"
 msgstr "Correcció de la classe d'accentuació per a Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:71
+#: data/stylesheet.appdata.xml.in:72
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
 "Les barres de títol planes hereten el color de fons per a les vistes i les "
 "barres laterals."
 
-#: data/stylesheet.appdata.xml.in:78
+#: data/stylesheet.appdata.xml.in:79
 msgid "Complete redesign"
 msgstr "Redisseny complet"
 
-#: data/stylesheet.appdata.xml.in:86
+#: data/stylesheet.appdata.xml.in:87
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 

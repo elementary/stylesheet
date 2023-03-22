@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 12:14-0700\n"
+"POT-Creation-Date: 2023-03-16 18:42+0000\n"
 "PO-Revision-Date: 2023-02-02 10:25+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
@@ -35,7 +35,7 @@ msgstr ""
 "Une feuille de style Gtk.CSS originale conçue spécifiquement pour elementary "
 "OS et sont environnement de bureau : Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:56
 msgid "Improvements:"
 msgstr "Améliorations :"
 
@@ -62,75 +62,81 @@ msgstr "Barres d'information : Marge correcte pour les boutons"
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Ajout d'une marge interne à l'infobulle de complétion de Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
-#: data/stylesheet.appdata.xml.in:59
+#: data/stylesheet.appdata.xml.in:26
+#, fuzzy
+#| msgid "Fix accent class for Gtk.Scale"
+msgid "Fix labels for scale marks"
+msgstr "Correction de la classe d'accentuation pour Gtk.Scale"
+
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:60
 msgid "Fixes:"
 msgstr "Corrections :"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:30
 msgid "Correct .title-4 padding in Lists"
 msgstr "Correction de la marge interne de .title-4 dans List"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:31
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
 "Boutons : La graisse de police n'est désormais plus définie pour les enfants "
 "comme les infobulles"
 
-#: data/stylesheet.appdata.xml.in:41
+#: data/stylesheet.appdata.xml.in:42
 msgid "New Features:"
 msgstr "Nouvelles fonctionnalités :"
 
-#: data/stylesheet.appdata.xml.in:43
+#: data/stylesheet.appdata.xml.in:44
 msgid "Support for Gtk4"
 msgstr "Prise en charge de Gtk4"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:48
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Correction de la barre de titre dans GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:49
 msgid "Fix font style for bold labels in some languages"
 msgstr "Correction du style de police gras pour certaines langues"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:50
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons : Ajout de marges entres les coches, radios et labels"
 
-#: data/stylesheet.appdata.xml.in:57
+#: data/stylesheet.appdata.xml.in:58
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr ""
 "Amélioration du contraste des séparateurs horizontaux dans le thème sombre"
 
-#: data/stylesheet.appdata.xml.in:61
+#: data/stylesheet.appdata.xml.in:62
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
 "Utilisation de la couleur d'accentuation pour la mise en surbrillance dans "
 "la fenêtre iBus"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:63
 msgid "Fix font style for title labels in headerbars"
 msgstr "Correction du style de police pour les titres des barres de titre"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:70
 msgid "Support for Hdy.Tabbar"
 msgstr "Prise en charge de Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:71
 msgid "Fix accent class for Gtk.Scale"
 msgstr "Correction de la classe d'accentuation pour Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:71
+#: data/stylesheet.appdata.xml.in:72
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
 "Aplatissement de la couleur d'arrière-plan héritée pour les vues et les "
 "barres latérales"
 
-#: data/stylesheet.appdata.xml.in:78
+#: data/stylesheet.appdata.xml.in:79
 msgid "Complete redesign"
 msgstr "Refonte complète"
 
-#: data/stylesheet.appdata.xml.in:86
+#: data/stylesheet.appdata.xml.in:87
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
