@@ -46,6 +46,11 @@ window {
             -gtk-icon-shadow: none;
         }
 
+        box.start,
+        box.end {
+            border-spacing: rem(6px);
+        }
+
         .large-icons {
             -gtk-icon-size: 24px;
         }
@@ -85,13 +90,6 @@ window {
                 color: inherit;
                 box-shadow: outset-highlight("top");
             }
-        }
-
-        // Fixes double shadow in HdyTitleBar and Epiphany
-        stack.titlebar headerbar,
-        stack.titlebar headerbar:backdrop {
-            box-shadow: none;
-            padding: 0;
         }
 
         revealer headerbar {
