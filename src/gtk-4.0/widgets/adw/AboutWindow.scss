@@ -1,0 +1,8 @@
+window.aboutdialog {
+    @extend .dialog;
+
+    .icon-dropshadow.large-icons {
+        -gtk-icon-shadow: outset-shadow(3);
+        -gtk-icon-size: 128px;
+    }
+}
