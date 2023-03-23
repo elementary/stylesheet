@@ -248,7 +248,7 @@ popover.background {
         }
     }
 
-    &.menu > contents listview row,
+    &.menu > contents row,
     modelbutton,
     .menuitem {
         @extend %menuitem;
