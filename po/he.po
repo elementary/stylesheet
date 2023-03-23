@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-16 18:42+0000\n"
-"PO-Revision-Date: 2022-10-09 20:32+0000\n"
+"POT-Creation-Date: 2023-03-23 19:49+0000\n"
+"PO-Revision-Date: 2023-03-23 19:49+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -35,100 +35,130 @@ msgstr ""
 "גיליון סגנון Gtk.CSS מקורי שעוצב במיוחד ל־elementary OS ולסביבת שולחן העבודה "
 "שלה: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:56
-msgid "Improvements:"
-msgstr "שיפורים:"
-
-#: data/stylesheet.appdata.xml.in:21
-msgid "Checkerboard styles are more subtle"
-msgstr "סגנונות לוחות שח מט הם עדינים יותר"
-
-#: data/stylesheet.appdata.xml.in:22
-msgid "Set `large-icons` size on headerbars to 24px"
-msgstr "גודל `large-icons` בסרגלי הכותרת הוגדר ל־24 פיקסלים"
-
-#: data/stylesheet.appdata.xml.in:23
-msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
-msgstr "פריסת הכותרת והטיפוגרפיה ב־Granite.SimpleSettingsPage הותאמו"
-
-#: data/stylesheet.appdata.xml.in:24
-msgid "Infobars: set correct button margins"
-msgstr "סרגלי מידע: מיקומי הכפתורים הוגדרו כראוי"
-
-#: data/stylesheet.appdata.xml.in:25
-msgid "Add padding to Gtk.Entry's completion popover"
-msgstr "נוסף ריפוד לחלונית ההשלמה הקופצת של Gtk.Entry"
+#: data/stylesheet.appdata.xml.in:19
+msgid "elementary, Inc."
+msgstr "elementary בע״מ."
 
 #: data/stylesheet.appdata.xml.in:26
-#, fuzzy
-#| msgid "Fix accent class for Gtk.Scale"
-msgid "Fix labels for scale marks"
-msgstr "תוקנה מחלקת הצבע המשני ל־Gtk.Scale"
+msgid "Improve support for LibAdwaita widgets:"
+msgstr ""
 
-#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:46
-#: data/stylesheet.appdata.xml.in:60
+#: data/stylesheet.appdata.xml.in:28
+msgid "Adw.AboutWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:29
+msgid "Adw.PreferencesWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:30
+msgid "Adw.StatusPage"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:31
+msgid "Adw.TabBar"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:33 data/stylesheet.appdata.xml.in:53
+#: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:87
 msgid "Fixes:"
 msgstr "תיקונים:"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:35
+msgid "Correctly style list rows in popover menus"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:36
+msgid "Style headerbars without \".titlebar\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:37
+msgid "Style fullscreen windows in GTK 4"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:44 data/stylesheet.appdata.xml.in:83
+msgid "Improvements:"
+msgstr "שיפורים:"
+
+#: data/stylesheet.appdata.xml.in:46
+msgid "Checkerboard styles are more subtle"
+msgstr "סגנונות לוחות שח מט הם עדינים יותר"
+
+#: data/stylesheet.appdata.xml.in:47
+msgid "Set `large-icons` size on headerbars to 24px"
+msgstr "גודל `large-icons` בסרגלי הכותרת הוגדר ל־24 פיקסלים"
+
+#: data/stylesheet.appdata.xml.in:48
+msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
+msgstr "פריסת הכותרת והטיפוגרפיה ב־Granite.SimpleSettingsPage הותאמו"
+
+#: data/stylesheet.appdata.xml.in:49
+msgid "Infobars: set correct button margins"
+msgstr "סרגלי מידע: מיקומי הכפתורים הוגדרו כראוי"
+
+#: data/stylesheet.appdata.xml.in:50
+msgid "Add padding to Gtk.Entry's completion popover"
+msgstr "נוסף ריפוד לחלונית ההשלמה הקופצת של Gtk.Entry"
+
+#: data/stylesheet.appdata.xml.in:51
+msgid "Fix labels for scale marks"
+msgstr "תוקנו תוויות לסמני קנה מידה"
+
+#: data/stylesheet.appdata.xml.in:55
 msgid "Correct .title-4 padding in Lists"
 msgstr "תיקון של ‎.title-4 padding ברשימות"
 
-#: data/stylesheet.appdata.xml.in:31
+#: data/stylesheet.appdata.xml.in:56
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr "כפתורים: לא להגדיר את משקל הגופן לצאצאים כגון חלוניות קופצות"
 
-#: data/stylesheet.appdata.xml.in:42
+#: data/stylesheet.appdata.xml.in:68
 msgid "New Features:"
 msgstr "יכולות חדשות:"
 
-#: data/stylesheet.appdata.xml.in:44
+#: data/stylesheet.appdata.xml.in:70
 msgid "Support for Gtk4"
 msgstr "תמיכה ב־Gtk4"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:74
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "תוקנה שורת הכותרת בדפדפן GNOME 42"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:75
 msgid "Fix font style for bold labels in some languages"
 msgstr "תוקן סגנון הגופן לתוויות מודגשות בחלק מהשפות"
 
-#: data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:76
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons: הוספת גבולות בין תיבות סימון, תיבות בחירה ותוויות"
 
-#: data/stylesheet.appdata.xml.in:58
+#: data/stylesheet.appdata.xml.in:85
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "ניגודיות של מפרידים אופקיים בסגנון כהה השתפרה"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:89
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr "להשתמש בצבע המשני להדגשת החלון המועמד של IBus"
 
-#: data/stylesheet.appdata.xml.in:63
+#: data/stylesheet.appdata.xml.in:90
 msgid "Fix font style for title labels in headerbars"
 msgstr "תוקן סגנון הגופן לתוויות כותרת בסרגלי כותרת"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:98
 msgid "Support for Hdy.Tabbar"
 msgstr "תמיכה ב־Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:71
+#: data/stylesheet.appdata.xml.in:99
 msgid "Fix accent class for Gtk.Scale"
 msgstr "תוקנה מחלקת הצבע המשני ל־Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:72
+#: data/stylesheet.appdata.xml.in:100
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr "סרגלי כותרת שטוחים יורשים את צבע הרקע לתצוגות ולסרגלי צד"
 
-#: data/stylesheet.appdata.xml.in:79
+#: data/stylesheet.appdata.xml.in:107
 msgid "Complete redesign"
 msgstr "עיצוב מחדש מאפס"
-
-#: data/stylesheet.appdata.xml.in:87
-msgid "elementary, Inc."
-msgstr "elementary בע״מ."
 
 #~ msgid "Greenfield"
 #~ msgstr "גרינפילד"
