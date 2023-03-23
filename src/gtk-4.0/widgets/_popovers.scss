@@ -170,6 +170,10 @@ popover.background {
                 shadow(3);
         }
 
+        listview {
+            background: none;
+        }
+
         .menuitem {
             &:dir(ltr) {
                 image:first-child {
@@ -244,6 +248,7 @@ popover.background {
         }
     }
 
+    &.menu > contents listview row,
     modelbutton,
     .menuitem {
         @extend %menuitem;

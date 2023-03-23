@@ -1,0 +1,97 @@
+viewswitcher button {
+    stack > box {
+        label.active {
+            font-weight: bold;
+        }
+
+        &.narrow {
+            @extend .small-label;
+            padding-top: rem(3px);
+            padding-bottom: rem(3px);
+
+            & image,
+            & label {
+                padding-left: rem(6px);
+                padding-right: rem(6px);
+            }
+        }
+
+        &.wide {
+            padding: 0 9px;
+        }
+    }
+}
+
+headerbar viewswitcher button {
+    border-radius: rem(3px);
+
+    image {
+        opacity: 0;
+        -gtk-icon-size: 0;
+    }
+}
+
+viewswitcherbar revealer > box {
+    border-top: 1px solid $toplevel-border-color;
+
+    viewswitcher button {
+        margin: 0;
+        border-radius: 0;
+        border-top: 0;
+        border-bottom: 0;
+        box-shadow: none;
+
+        &:not(:checked):not(:hover) {
+            background: transparent;
+        }
+
+        &:not(:only-child):not(:last-child) {
+            border-right-width: 0;
+        }
+
+        &:not(only-child):first-child:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):not(:hover) {
+            border-left-color: transparent;
+        }
+
+        &:not(only-child):last-child:not(:checked):not(:hover) {
+            border-right-color: transparent;
+        }
+
+        &:not(only-child):first-child:not(:checked):hover,
+        &:not(:checked):hover + &:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):hover {
+            border-left-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(only-child):last-child:not(:checked):hover {
+            border-right-color: #{'shade(@color_primary, 1.15)'};
+        }
+
+        &:not(:checked):hover:not(:backdrop) {
+            background-image: linear-gradient(
+                to top,
+                #{'shade(alpha(@color_primary, 0.7), 0.96)'} rem(2px),
+                #{'alpha(@color_primary, 0.7)'}
+            );
+        }
+
+        &:not(:checked):not(only-child):first-child:hover,
+        &:not(:checked):hover + &:not(:checked):not(:hover),
+        &:not(:checked):not(:hover) + &:not(:checked):hover {
+            border-left-color: #{'@color_primary'};
+        }
+
+        &:not(:checked):not(only-child):last-child:hover {
+            border-right-color: #{'@color_primary'};
+        }
+
+        &:not(:checked):hover:backdrop {
+            background-image: #{'image(@color_primary)'};
+        }
+
+        image {
+            -gtk-icon-palette: error #{'@text_color'}, success #{'@text_color'}, warning #{'@text_color'};
+        }
+    }
+}

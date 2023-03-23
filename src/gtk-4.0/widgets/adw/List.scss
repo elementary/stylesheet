@@ -1,0 +1,99 @@
+list.boxed-list {
+    @extend .frame;
+
+    border-radius: rem(6px);
+    box-shadow: 0 1px 3px rgba(black, 0.1);
+
+    > row {
+        // Rounded top
+        &:first-child {
+            &, &.expander row.header {
+                border-top-left-radius: rem(6px);
+                border-top-right-radius: rem(6px);
+            }
+        }
+
+        // Rounded bottom
+        &:last-child {
+            &,
+            &.expander:not(:checked),
+            &.expander:not(:checked) row.header,
+            &.expander:checked list.nested,
+            &.expander:checked list.nested > row:last-child {
+                border-bottom-left-radius: rem(6px);
+                border-bottom-right-radius: rem(6px);
+                border-bottom-width: 0;
+            }
+        }
+
+        .icon,
+        .prefixes {
+            &:dir(ltr) { margin-right: rem(3px); }
+            &:dir(rtl) { margin-left: rem(3px); }
+        }
+
+        .prefixes,
+        .suffixes {
+            border-spacing: rem(6px);
+        }
+
+        .title + .subtitle {
+            @extend .small-label;
+            @extend .dim-label;
+
+            margin-top: 0.25em;
+        }
+
+        box.header {
+            padding: rem(6px) rem(9px);
+            min-height: rem(32px); //Try to force homogeneous row height
+        }
+    }
+
+    > row:not(.separator) + row:not(.separator) {
+        border-top: 1px solid #{'@menu_separator'};
+    }
+
+    row.entry {
+        .edit-icon,
+        .indicator {
+            min-width: rem(24px);
+        }
+
+        .edit-icon {
+            opacity: 0;
+        }
+
+        &:hover:not(:focus-within) .edit-icon {
+            opacity: 1;
+        }
+    }
+
+    row.expander {
+        image.expander-row-arrow {
+            transition: all duration("in-place") $easing;
+
+            &:dir(ltr) {
+              -gtk-icon-transform: rotate(0.25turn);
+            }
+
+            &:dir(rtl) {
+              -gtk-icon-transform: rotate(-0.25turn);
+            }
+        }
+
+        &:checked image.expander-row-arrow {
+            &:dir(ltr) {
+              -gtk-icon-transform: rotate(0.5turn);
+            }
+
+            &:dir(rtl) {
+              -gtk-icon-transform: rotate(-0.5turn);
+            }
+        }
+
+        list {
+            background: transparent;
+        }
+    }
+}

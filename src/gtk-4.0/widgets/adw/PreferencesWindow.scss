@@ -1,0 +1,36 @@
+window.preferences.csd {
+    @extend .dialog;
+
+    headerbar {
+        @extend .flat;
+
+        viewswitcher button.toggle {
+            border-radius: rem(3px);
+
+            image {
+                opacity: 0;
+                -gtk-icon-size: 0;
+            }
+        }
+    }
+
+    preferencespage > scrolledwindow {
+        undershoot.top {
+            background:
+                linear-gradient(
+                    $toplevel-border-color,
+                    rgba(black, 0.05) 1px,
+                    rgba(black, 0.0) 0.444rem
+                );
+        }
+
+        > viewport > clamp > box {
+            padding-left: rem(12px);
+            padding-right: rem(12px);
+        }
+    }
+
+    preferencesgroup {
+        margin-bottom: 2rem;
+    }
+}
