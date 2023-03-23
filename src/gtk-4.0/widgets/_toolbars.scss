@@ -71,15 +71,4 @@ actionbar,
     &.flat {
         @extend .inline-toolbar;
     }
-
-    //Epiphany prefs window
-    viewswitcherbar & {
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-    }
-}
-
-.search-bar {
-    background-color: bg-color(3);
 }
