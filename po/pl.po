@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-23 19:49+0000\n"
-"PO-Revision-Date: 2023-03-18 22:59+0000\n"
+"PO-Revision-Date: 2023-03-24 00:28+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pl/>\n"
@@ -42,23 +42,23 @@ msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Lepsze wsparcie dla widżetów LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.AboutWindow"
-msgstr ""
+msgstr "Adw.AboutWindow"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Adw.PreferencesWindow"
-msgstr ""
+msgstr "Adw.PreferencesWindow"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Adw.StatusPage"
-msgstr ""
+msgstr "Adw.StatusPage"
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "Adw.TabBar"
-msgstr ""
+msgstr "Adw.TabBar"
 
 #: data/stylesheet.appdata.xml.in:33 data/stylesheet.appdata.xml.in:53
 #: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:87
@@ -67,7 +67,7 @@ msgstr "Poprawki:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "Poprawiono styl wierszy list w wyskakujących menu"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Style headerbars without \".titlebar\""
