@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-24 00:28+0000\n"
-"PO-Revision-Date: 2023-03-18 22:59+0000\n"
+"PO-Revision-Date: 2023-03-26 06:59+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ca/>\n"
@@ -41,49 +41,47 @@ msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Millora del suport per als ginys de LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.AboutWindow"
-msgstr ""
+msgstr "Adw.AboutWindow"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Adw.PreferencesWindow"
-msgstr ""
+msgstr "Adw.PreferencesWindow"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Adw.StatusPage"
-msgstr ""
+msgstr "Adw.StatusPage"
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "Adw.TabBar"
-msgstr ""
+msgstr "Adw.TabBar"
 
 #: data/stylesheet.appdata.xml.in:33
-#, fuzzy
-#| msgid "Fixes:"
 msgid "GTK 4 Fixes:"
-msgstr "Correccions:"
+msgstr "Correccions de GTK 4:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "Estil correcte de les files de la llista als menús emergents"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "Estil les barres de capçalera sense \".titlebar\""
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Style fullscreen windows"
-msgstr ""
+msgstr "Estil a les finestres de pantalla completa"
 
 #: data/stylesheet.appdata.xml.in:38
 msgid "Style SearchBars"
-msgstr ""
+msgstr "Estil a les barres de cerca"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Add spacing between HeaderBar buttons"
-msgstr ""
+msgstr "Addició d'espai entre els botons de la barra de capçalera"
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
 msgid "Improvements:"
