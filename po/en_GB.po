@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-24 00:28+0000\n"
-"PO-Revision-Date: 2023-03-18 22:59+0000\n"
+"PO-Revision-Date: 2023-03-26 06:59+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "desktop/stylesheet-extra/en_GB/>\n"
@@ -41,49 +41,47 @@ msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Improve support for LibAdwaita widgets:"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.AboutWindow"
-msgstr ""
+msgstr "Adw.AboutWindow"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Adw.PreferencesWindow"
-msgstr ""
+msgstr "Adw.PreferencesWindow"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Adw.StatusPage"
-msgstr ""
+msgstr "Adw.StatusPage"
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "Adw.TabBar"
-msgstr ""
+msgstr "Adw.TabBar"
 
 #: data/stylesheet.appdata.xml.in:33
-#, fuzzy
-#| msgid "Fixes:"
 msgid "GTK 4 Fixes:"
-msgstr "Fixes:"
+msgstr "GTK 4 Fixes:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "Correctly style list rows in popover menus"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "Style headerbars without \".titlebar\""
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Style fullscreen windows"
-msgstr ""
+msgstr "Style fullscreen windows"
 
 #: data/stylesheet.appdata.xml.in:38
 msgid "Style SearchBars"
-msgstr ""
+msgstr "Style SearchBars"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Add spacing between HeaderBar buttons"
-msgstr ""
+msgstr "Add spacing between HeaderBar buttons"
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
 msgid "Improvements:"
