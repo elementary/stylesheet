@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 19:49+0000\n"
+"POT-Creation-Date: 2023-03-24 00:28+0000\n"
 "PO-Revision-Date: 2023-03-18 22:59+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -59,9 +59,10 @@ msgstr ""
 msgid "Adw.TabBar"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:33 data/stylesheet.appdata.xml.in:53
-#: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:87
-msgid "Fixes:"
+#: data/stylesheet.appdata.xml.in:33
+#, fuzzy
+#| msgid "Fixes:"
+msgid "GTK 4 Fixes:"
 msgstr "Fixes:"
 
 #: data/stylesheet.appdata.xml.in:35
@@ -73,90 +74,103 @@ msgid "Style headerbars without \".titlebar\""
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:37
-msgid "Style fullscreen windows in GTK 4"
+msgid "Style fullscreen windows"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:44 data/stylesheet.appdata.xml.in:83
+#: data/stylesheet.appdata.xml.in:38
+msgid "Style SearchBars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:39
+msgid "Add spacing between HeaderBar buttons"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
 msgid "Improvements:"
 msgstr "Improvements:"
 
-#: data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:48
 msgid "Checkerboard styles are more subtle"
 msgstr "Checkerboard styles are more subtle"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:49
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr "Set `large-icons` size on headerbars to 24px"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:50
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr "Adjust header layout and typography in Granite.SimpleSettingsPage"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:51
 msgid "Infobars: set correct button margins"
 msgstr "Infobars: set correct button margins"
 
-#: data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:52
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Add padding to Gtk.Entry's completion popover"
 
-#: data/stylesheet.appdata.xml.in:51
+#: data/stylesheet.appdata.xml.in:53
 msgid "Fix labels for scale marks"
 msgstr "Fix labels for scale marks"
 
-#: data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:55 data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:89
+msgid "Fixes:"
+msgstr "Fixes:"
+
+#: data/stylesheet.appdata.xml.in:57
 msgid "Correct .title-4 padding in Lists"
 msgstr "Correct .title-4 padding in Lists"
 
-#: data/stylesheet.appdata.xml.in:56
+#: data/stylesheet.appdata.xml.in:58
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr "Buttons: don't set font weight for children like popovers"
 
-#: data/stylesheet.appdata.xml.in:68
+#: data/stylesheet.appdata.xml.in:70
 msgid "New Features:"
 msgstr "New Features:"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:72
 msgid "Support for Gtk4"
 msgstr "Support for Gtk4"
 
-#: data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:76
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Fix titlebar in GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:75
+#: data/stylesheet.appdata.xml.in:77
 msgid "Fix font style for bold labels in some languages"
 msgstr "Fix font style for bold labels in some languages"
 
-#: data/stylesheet.appdata.xml.in:76
+#: data/stylesheet.appdata.xml.in:78
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons: add margin between checks, radios, and labels"
 
-#: data/stylesheet.appdata.xml.in:85
+#: data/stylesheet.appdata.xml.in:87
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "Improve contrast of horizontal separators in dark style"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:91
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr "Use the accent colour for highlighting in IBus candidate window"
 
-#: data/stylesheet.appdata.xml.in:90
+#: data/stylesheet.appdata.xml.in:92
 msgid "Fix font style for title labels in headerbars"
 msgstr "Fix font style for title labels in headerbars"
 
-#: data/stylesheet.appdata.xml.in:98
+#: data/stylesheet.appdata.xml.in:100
 msgid "Support for Hdy.Tabbar"
 msgstr "Support for Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:99
+#: data/stylesheet.appdata.xml.in:101
 msgid "Fix accent class for Gtk.Scale"
 msgstr "Fix accent class for Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:100
+#: data/stylesheet.appdata.xml.in:102
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr "Flat titlebars inherit background colour for views and sidebars"
 
-#: data/stylesheet.appdata.xml.in:107
+#: data/stylesheet.appdata.xml.in:109
 msgid "Complete redesign"
 msgstr "Complete redesign"
 

@@ -30,11 +30,13 @@
           <li>Adw.StatusPage</li>
           <li>Adw.TabBar</li>
         </ul>
-        <p>Fixes:</p>
+        <p>GTK 4 Fixes:</p>
         <ul>
           <li>Correctly style list rows in popover menus</li>
           <li>Style headerbars without ".titlebar"</li>
-          <li>Style fullscreen windows in GTK 4</li>
+          <li>Style fullscreen windows</li>
+          <li>Style SearchBars</li>
+          <li>Add spacing between HeaderBar buttons</li>
         </ul>
       </description>
     </release>
