@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-24 00:28+0000\n"
-"PO-Revision-Date: 2023-03-18 22:59+0000\n"
+"PO-Revision-Date: 2023-03-26 06:59+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -41,7 +41,7 @@ msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.AboutWindow"
@@ -60,30 +60,29 @@ msgid "Adw.TabBar"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:33
-#, fuzzy
-#| msgid "Fixes:"
 msgid "GTK 4 Fixes:"
-msgstr "修正点:"
+msgstr "GTK 4 に関する修正点:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "ポップオーバーメニュー内のリストの各行に適切なスタイルが適用されるように修正"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "\".titlebar\" "
+"クラスの指定がないヘッダーバーにもスタイルが適用されるように修正"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Style fullscreen windows"
-msgstr ""
+msgstr "全画面表示のウィンドウ用のスタイルを追加"
 
 #: data/stylesheet.appdata.xml.in:38
 msgid "Style SearchBars"
-msgstr ""
+msgstr "SearchBar 用のスタイルを追加"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Add spacing between HeaderBar buttons"
-msgstr ""
+msgstr "HeaderBar に配置されたボタンに間隔を追加"
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
 msgid "Improvements:"
