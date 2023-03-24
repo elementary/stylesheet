@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 19:49+0000\n"
+"POT-Creation-Date: 2023-03-24 00:28+0000\n"
 "PO-Revision-Date: 2023-03-24 00:28+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/desktop/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.16.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
@@ -60,9 +60,10 @@ msgstr "Adw.StatusPage"
 msgid "Adw.TabBar"
 msgstr "Adw.TabBar"
 
-#: data/stylesheet.appdata.xml.in:33 data/stylesheet.appdata.xml.in:53
-#: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:87
-msgid "Fixes:"
+#: data/stylesheet.appdata.xml.in:33
+#, fuzzy
+#| msgid "Fixes:"
+msgid "GTK 4 Fixes:"
 msgstr "Виправлення:"
 
 #: data/stylesheet.appdata.xml.in:35
@@ -74,94 +75,109 @@ msgid "Style headerbars without \".titlebar\""
 msgstr "Стилізувати панелі заголовків без \".titlebar\""
 
 #: data/stylesheet.appdata.xml.in:37
-msgid "Style fullscreen windows in GTK 4"
+#, fuzzy
+#| msgid "Style fullscreen windows in GTK 4"
+msgid "Style fullscreen windows"
 msgstr "Стиль повноекранних вікон у GTK 4"
 
-#: data/stylesheet.appdata.xml.in:44 data/stylesheet.appdata.xml.in:83
+#: data/stylesheet.appdata.xml.in:38
+msgid "Style SearchBars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:39
+msgid "Add spacing between HeaderBar buttons"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
 msgid "Improvements:"
 msgstr "Удосконалення:"
 
-#: data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:48
 msgid "Checkerboard styles are more subtle"
 msgstr "Шаховий стиль став витонченішим"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:49
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr "Налаштовано розмір `large-icons` панелей заголовків на 24px"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:50
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr ""
 "Налаштовано верстку та типографіку заголовків у Granite.SimpleSettingsPage"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:51
 msgid "Infobars: set correct button margins"
 msgstr "Інфопанелі: налаштовано правильні відступи для кнопок"
 
-#: data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:52
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Додано відступ у спливному вікні виконання Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:51
+#: data/stylesheet.appdata.xml.in:53
 msgid "Fix labels for scale marks"
 msgstr "Виправлено мітки для міток шкали"
 
-#: data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:55 data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:89
+msgid "Fixes:"
+msgstr "Виправлення:"
+
+#: data/stylesheet.appdata.xml.in:57
 msgid "Correct .title-4 padding in Lists"
 msgstr "Виправлення відступів .title-4 у списках"
 
-#: data/stylesheet.appdata.xml.in:56
+#: data/stylesheet.appdata.xml.in:58
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr "Кнопки: не встановлюйте товщину шрифту для дітей, таких як popovers"
 
-#: data/stylesheet.appdata.xml.in:68
+#: data/stylesheet.appdata.xml.in:70
 msgid "New Features:"
 msgstr "Нові функції:"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:72
 msgid "Support for Gtk4"
 msgstr "Підтримка Gtk4"
 
-#: data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:76
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Виправлено панель заголовка у GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:75
+#: data/stylesheet.appdata.xml.in:77
 msgid "Fix font style for bold labels in some languages"
 msgstr "Виправлено стиль жирного шрифту міток для деяких мов"
 
-#: data/stylesheet.appdata.xml.in:76
+#: data/stylesheet.appdata.xml.in:78
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr ""
 "ModelButtons: додано відступи між прапорцями, радіокнопками та підписами"
 
-#: data/stylesheet.appdata.xml.in:85
+#: data/stylesheet.appdata.xml.in:87
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "Покращено контраст горизонтальних розділювачів у темному стилі"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:91
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr ""
 "Використання основного кольору для підсвічування вікна-кандидата в IBus"
 
-#: data/stylesheet.appdata.xml.in:90
+#: data/stylesheet.appdata.xml.in:92
 msgid "Fix font style for title labels in headerbars"
 msgstr "Виправлено стиль шрифту для міток заголовків у панелях заголовків"
 
-#: data/stylesheet.appdata.xml.in:98
+#: data/stylesheet.appdata.xml.in:100
 msgid "Support for Hdy.Tabbar"
 msgstr "Підтримка Hdy.Tabbar"
 
-#: data/stylesheet.appdata.xml.in:99
+#: data/stylesheet.appdata.xml.in:101
 msgid "Fix accent class for Gtk.Scale"
 msgstr "Виправлено акцентний клас Gtk.Scale"
 
-#: data/stylesheet.appdata.xml.in:100
+#: data/stylesheet.appdata.xml.in:102
 msgid "Flat titlebars inherit background color for views and sidebars"
 msgstr ""
 "Плоскі заголовки успадковують колір тла для переглядів і бічних панелей"
 
-#: data/stylesheet.appdata.xml.in:107
+#: data/stylesheet.appdata.xml.in:109
 msgid "Complete redesign"
 msgstr "Повністю перероблено вигляд"
 
