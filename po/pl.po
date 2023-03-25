@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-24 00:28+0000\n"
-"PO-Revision-Date: 2023-03-24 00:28+0000\n"
+"PO-Revision-Date: 2023-03-26 06:59+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pl/>\n"
@@ -61,10 +61,8 @@ msgid "Adw.TabBar"
 msgstr "Adw.TabBar"
 
 #: data/stylesheet.appdata.xml.in:33
-#, fuzzy
-#| msgid "Fixes:"
 msgid "GTK 4 Fixes:"
-msgstr "Poprawki:"
+msgstr "Poprawki dla GTK 4:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Correctly style list rows in popover menus"
@@ -72,19 +70,19 @@ msgstr "Poprawiono styl wierszy list w wyskakujących menu"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "Paski główne są teraz stylowane bez „.titlebar”"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Style fullscreen windows"
-msgstr ""
+msgstr "Stylowanie okien pełnoekranowych"
 
 #: data/stylesheet.appdata.xml.in:38
 msgid "Style SearchBars"
-msgstr ""
+msgstr "Stylowanie pasków wyszukiwania"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Add spacing between HeaderBar buttons"
-msgstr ""
+msgstr "Dodano odstęp pomiędzy ikonami w pasku głównym"
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
 msgid "Improvements:"
