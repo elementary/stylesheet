@@ -3,37 +3,42 @@
  ******************/
 
 window.about {
-   @extend .dialog;
+    @extend .dialog;
 
-  .main-page {
-    > viewport > clamp > box {
-      margin: rem(12px);
-      border-spacing: rem(6px);
+    .main-page {
+        > viewport > clamp > box {
+            margin: rem(12px);
+            border-spacing: rem(6px);
 
-      > box {
-        margin-top: rem(18px);
-        border-spacing: rem(18px);
-        margin-bottom: rem(6px);
-      }
+            > box {
+                margin-top: rem(18px);
+                border-spacing: rem(18px);
+                margin-bottom: rem(6px);
+            }
+        }
+
+        .app-version {
+            @extend selection;
+
+            padding: rem(3px) rem(18px);
+            border-radius: 999px;
+            margin-top: rem(3px);
+        }
     }
 
-    .app-version {
-      padding: rem(3px) rem(18px);
-      color: #{'@accent_color'};
-      border-radius: 999px;
-      margin-top: rem(3px);
-    }
-  }
+    .subpage {
+        headerbar {
+            @extend .flat;
+        }
 
-  .subpage {
-    > viewport > clamp > box {
-      margin: rem(18px) rem(12px);
-      border-spacing: rem(18px);
-    }
+        > viewport > clamp > box {
+            margin: rem(18px) rem(12px);
+            border-spacing: rem(18px);
+        }
 
-    > clamp > textview {
-      background: none;
-      color: inherit;
+        > clamp > textview {
+            background: none;
+            color: inherit;
+        }
     }
-  }
 }
