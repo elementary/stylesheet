@@ -5,6 +5,10 @@
 window.about {
     @extend .dialog;
 
+    headerbar {
+        @extend .flat;
+    }
+
     .main-page {
         > viewport > clamp > box {
             margin: rem(12px);
@@ -12,13 +16,12 @@ window.about {
 
             > box {
                 margin-top: rem(18px);
-                border-spacing: rem(18px);
-                margin-bottom: rem(6px);
+                border-spacing: rem(24px);
             }
         }
 
         .app-version {
-            @extend selection;
+            @extend selection, .flat;
 
             padding: rem(3px) rem(18px);
             border-radius: 999px;
@@ -27,9 +30,6 @@ window.about {
     }
 
     .subpage {
-        headerbar {
-            @extend .flat;
-        }
 
         > viewport > clamp > box {
             margin: rem(18px) rem(12px);
