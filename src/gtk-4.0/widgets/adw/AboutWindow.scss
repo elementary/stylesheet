@@ -5,26 +5,23 @@
 window.about {
     @extend .dialog;
 
-    headerbar {
-        @extend .flat;
-    }
-
     .main-page {
         > viewport > clamp > box {
-            margin: rem(12px);
             border-spacing: rem(6px);
+            margin: rem(12px);
 
             > box {
+                border-spacing: rem(18px);
                 margin-top: rem(18px);
-                border-spacing: rem(24px);
             }
         }
 
         .app-version {
-            @extend selection, .flat;
+            @extend selection;
 
-            padding: rem(3px) rem(18px);
+            border: none;
             border-radius: 999px;
+            box-shadow: none;
             margin-top: rem(3px);
         }
     }
@@ -32,8 +29,8 @@ window.about {
     .subpage {
 
         > viewport > clamp > box {
-            margin: rem(18px) rem(12px);
             border-spacing: rem(18px);
+            margin: rem(18px) rem(12px);
         }
 
         > clamp > textview {
