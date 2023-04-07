@@ -1,8 +1,39 @@
-window.aboutdialog {
-    @extend .dialog;
+/******************
+ * AdwAboutWindow *
+ ******************/
 
-    .icon-dropshadow.large-icons {
-        -gtk-icon-shadow: outset-shadow(3);
-        -gtk-icon-size: 128px;
+window.about {
+   @extend .dialog;
+
+  .main-page {
+    > viewport > clamp > box {
+      margin: rem(12px);
+      border-spacing: rem(6px);
+
+      > box {
+        margin-top: rem(18px);
+        border-spacing: rem(18px);
+        margin-bottom: rem(6px);
+      }
     }
+
+    .app-version {
+      padding: rem(3px) rem(18px);
+      color: #{'@accent_color'};
+      border-radius: 999px;
+      margin-top: rem(3px);
+    }
+  }
+
+  .subpage {
+    > viewport > clamp > box {
+      margin: rem(18px) rem(12px);
+      border-spacing: rem(18px);
+    }
+
+    > clamp > textview {
+      background: none;
+      color: inherit;
+    }
+  }
 }
