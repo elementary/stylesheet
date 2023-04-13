@@ -5,8 +5,6 @@
 }
 
 window {
-    // Stolen from Adwaita, "lamefun trick to get rounded borders regardless of CSD use"
-    border-width: 0;
 
     &.csd {
         border-radius: rem(6px);
@@ -64,6 +62,7 @@ window {
     }
 
     &.ssd {
+        border-radius: 6px 6px 0 0;
         box-shadow: 0 0 0 1px $toplevel-border-color;
     }
 }
