@@ -33,6 +33,13 @@ window {
             font-size: 80%;
         }
 
+        // Don't style headerbar inside a .titlebar
+        headerbar {
+            background: transparent;
+            box-shadow: none;
+            padding: 0;
+        }
+
         windowcontrols button,
         .image-button,
         .mode-switch {
