@@ -1,38 +1,12 @@
-headerbar,
-.titlebar {
-    // Etched in the light style, shadow in the dark style
-    $shadow: 0 1px rgba(white, 0.5);
-    @if $color-scheme == "dark" {
-        $shadow: 0 1px rgba(black, 0.67);
-    }
-
-    @extend %outset-background;
-    background-color: #{"@color_primary"};
-    border-radius: rem(6px) rem(6px) 0 0;
-    color: $fg-color;
-
+headerbar {
     .title {
         // Cannot be a number or fonts break in Flatpak
         font-weight: bold;
-        text-shadow: $shadow
     }
 
     .subtitle {
         opacity: 0.75;
         font-size: 80%;
-    }
-
-    windowcontrols button,
-    .image-button,
-    .mode-switch {
-        -gtk-icon-shadow: $shadow;
-    }
-
-    // Reset so we don't affect things inside of child popovers/menus
-    popover,
-    menu {
-        text-shadow: none;
-        -gtk-icon-shadow: none;
     }
 
     box.start,
@@ -49,16 +23,39 @@ headerbar,
     box.start:dir(rtl) {
         margin-left: rem(12px);
     }
+}
+
+.titlebar {
+    // Etched in the light style, shadow in the dark style
+    $shadow: 0 1px rgba(white, 0.5);
+    @if $color-scheme == "dark" {
+        $shadow: 0 1px rgba(black, 0.67);
+    }
+
+    @extend %outset-background;
+    background-color: #{"@color_primary"};
+    border-radius: rem(6px) rem(6px) 0 0;
+    color: $fg-color;
+
+    windowcontrols button,
+    .image-button,
+    .mode-switch {
+        -gtk-icon-shadow: $shadow;
+    }
+
+    .title {
+        text-shadow: $shadow
+    }
+
+    // Reset so we don't affect things inside of child popovers/menus
+    popover,
+    menu {
+        text-shadow: none;
+        -gtk-icon-shadow: none;
+    }
 
     .large-icons {
         -gtk-icon-size: 24px;
-    }
-
-    // Don't style headerbar inside a .titlebar
-    headerbar {
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
     }
 
     revealer headerbar {
