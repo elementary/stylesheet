@@ -1,115 +1,110 @@
-assistant,
-printdialog,
-window.csd {
-    > headerbar,
-    > .titlebar {
+headerbar,
+.titlebar {
+    // Etched in the light style, shadow in the dark style
+    $shadow: 0 1px rgba(white, 0.5);
+    @if $color-scheme == "dark" {
+        $shadow: 0 1px rgba(black, 0.67);
+    }
+
+    @extend %outset-background;
+    background-color: #{"@color_primary"};
+    border-radius: rem(6px) rem(6px) 0 0;
+    color: $fg-color;
+
+    .title {
+        // Cannot be a number or fonts break in Flatpak
+        font-weight: bold;
+        text-shadow: $shadow
+    }
+
+    .subtitle {
+        opacity: 0.75;
+        font-size: 80%;
+    }
+
+    windowcontrols button,
+    .image-button,
+    .mode-switch {
+        -gtk-icon-shadow: $shadow;
+    }
+
+    // Reset so we don't affect things inside of child popovers/menus
+    popover,
+    menu {
+        text-shadow: none;
+        -gtk-icon-shadow: none;
+    }
+
+    box.start,
+    box.end {
+        border-spacing: rem(6px);
+    }
+
+    box.start:dir(ltr),
+    box.end:dir(rtl) {
+        margin-right: rem(12px);
+    }
+
+    box.end:dir(ltr),
+    box.start:dir(rtl) {
+        margin-left: rem(12px);
+    }
+
+    .large-icons {
+        -gtk-icon-size: 24px;
+    }
+
+    // Don't style headerbar inside a .titlebar
+    headerbar {
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    revealer headerbar {
+        // Box shadow can't overlay content
+        border-bottom: 1px solid $toplevel-border-color;
         border-radius: rem(6px) rem(6px) 0 0;
+        box-shadow: outset-highlight("full");
+        padding: rem(6px);
     }
-}
 
-assistant,
-printdialog,
-window {
-    headerbar,
-    .titlebar {
-        // Etched in the light style, shadow in the dark style
-        $shadow: 0 1px rgba(white, 0.5);
+    .csd & {
+        box-shadow:
+            outset-highlight("full"),
+            // Intentionally not in ems since it's used as a stroke
+            0 1px 0 0 #{'alpha(shade(@color_primary, 0.7), 0.4)'},
+            0 1px rem(2px) rgba(black, 0.2);
+        padding: rem(6px);
+
         @if $color-scheme == "dark" {
-            $shadow: 0 1px rgba(black, 0.67);
-        }
-
-        @extend %outset-background;
-        background-color: #{"@color_primary"};
-        color: $fg-color;
-
-        .title {
-            // Cannot be a number or fonts break in Flatpak
-            font-weight: bold;
-            text-shadow: $shadow
-        }
-
-        .subtitle {
-            opacity: 0.75;
-            font-size: 80%;
-        }
-
-        // Don't style headerbar inside a .titlebar
-        headerbar {
-            background: transparent;
-            box-shadow: none;
-            padding: 0;
-        }
-
-        windowcontrols button,
-        .image-button,
-        .mode-switch {
-            -gtk-icon-shadow: $shadow;
-        }
-
-        // Reset so we don't affect things inside of child popovers/menus
-        popover,
-        menu {
-            text-shadow: none;
-            -gtk-icon-shadow: none;
-        }
-
-        box.start,
-        box.end {
-            border-spacing: rem(6px);
-        }
-
-        .large-icons {
-            -gtk-icon-size: 24px;
-        }
-    }
-
-    &.csd {
-        headerbar,
-        .titlebar {
             box-shadow:
                 outset-highlight("full"),
                 // Intentionally not in ems since it's used as a stroke
-                0 1px 0 0 #{'alpha(shade(@color_primary, 0.7), 0.4)'},
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
                 0 1px rem(2px) rgba(black, 0.2);
-            padding: rem(6px);
-
-            @if $color-scheme == "dark" {
-                box-shadow:
-                    outset-highlight("full"),
-                    // Intentionally not in ems since it's used as a stroke
-                    0 0 0 1px #{'alpha(shade(@color_primary, 0.5), 0.5)'},
-                    0 1px rem(2px) rgba(black, 0.2);
-            }
-
-            &:backdrop {
-                box-shadow:
-                    outset-highlight("full"),
-                    0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
-                    0 1px rem(2px) rgba(black, 0.15);
-            }
-
-            &.default-decoration {
-                padding: rem(3px);
-            }
-
-            &.flat {
-                background: inherit;
-                color: inherit;
-                box-shadow: outset-highlight("top");
-            }
         }
 
-        revealer headerbar {
-            // Box shadow can't overlay content
-            border-bottom: 1px solid $toplevel-border-color;
-            border-radius: rem(6px) rem(6px) 0 0;
-            box-shadow: outset-highlight("full");
-            padding: rem(6px);
+        &:backdrop {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 1px #{'alpha(shade(@color_primary, 0.7), 0.3)'},
+                0 1px rem(2px) rgba(black, 0.15);
+        }
+
+        &.default-decoration {
+            padding: rem(3px);
+        }
+
+        &.flat {
+            background: inherit;
+            color: inherit;
+            box-shadow: outset-highlight("top");
         }
     }
 
     // SSD doesn't calculate rems correctly
-    &.ssd .titlebar {
+    .ssd & {
         // Box shadow can't overlay content
         border-bottom: 1px solid $toplevel-border-color;
         border-radius: 6px 6px 0 0;
@@ -122,18 +117,7 @@ window {
         }
     }
 
-    box.start:dir(ltr),
-    box.end:dir(rtl) {
-        margin-right: rem(12px);
+    .dialog.csd > & {
+        @extend .flat;
     }
-
-    box.end:dir(ltr),
-    box.start:dir(rtl) {
-        margin-left: rem(12px);
-    }
-}
-
-window.dialog.csd > headerbar,
-window.dialog.csd > .titlebar {
-    @extend .flat;
 }
