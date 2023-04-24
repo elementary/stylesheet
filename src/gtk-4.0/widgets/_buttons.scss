@@ -185,6 +185,10 @@ button {
         @extend .destructive-action;
     }
 
+    &.suggested {
+        @extend .suggested-action;
+    }
+
     &.color {
         colorswatch,
         overlay {
