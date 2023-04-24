@@ -21,11 +21,22 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
   
   <releases>
-    <release version="7.1.0" date="2023-03-24" urgency="medium">
+      <release version="7.1.1" date="2023-04-23" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
         <ul>
           <li>Adw.AboutWindow</li>
+        </ul>
+      </description>
+      <issues>
+          <issue url="https://github.com/elementary/stylesheet/issues/1253">Window margins cause titlebar issues in Mutter 44</issue>
+      </issues>
+    </release>
+
+    <release version="7.1.0" date="2023-03-24" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
           <li>Adw.PreferencesWindow</li>
           <li>Adw.StatusPage</li>
           <li>Adw.TabBar</li>
@@ -94,21 +105,7 @@
       </description>
     </release>
 
-    <release version="6.1.0" date="2021-10-22" urgency="medium">
-      <description>
-        <ul>
-          <li>Support for Hdy.Tabbar</li>
-          <li>Fix accent class for Gtk.Scale</li>
-          <li>Flat titlebars inherit background color for views and sidebars</li>
-        </ul>
-      </description>
-    </release>
-    <release version="6.0.0" date="2021-07-15" urgency="medium">
-      <description>
-        <ul>
-          <li>Complete redesign</li>
-        </ul>
-      </description>
-    </release>
+    <release version="6.1.0" date="2021-10-22" urgency="medium" />
+    <release version="6.0.0" date="2021-07-15" urgency="medium" />
   </releases>
 </component>
