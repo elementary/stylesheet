@@ -30,7 +30,7 @@
         </ul>
         <p>GTK 4 Fixes:</p>
         <ul>
-          <li>Support ".destructive" in addition to ".destructive-action"</li>
+          <li>Support ".destructive" and ".suggested" in addition to ".destructive-action" and ".suggested-action"</li>
           <li>".raised" overrides ".flat" in Buttons</li>
         </ul>
       </description>
