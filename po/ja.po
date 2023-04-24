@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-24 00:28+0000\n"
+"POT-Creation-Date: 2023-04-24 19:31+0000\n"
 "PO-Revision-Date: 2023-03-26 06:59+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
@@ -39,7 +39,7 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/stylesheet.appdata.xml.in:26
+#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:38
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
@@ -47,133 +47,132 @@ msgstr "LibAdwaita ウィジェットへの対応を改善:"
 msgid "Adw.AboutWindow"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:40
 msgid "Adw.PreferencesWindow"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:41
 msgid "Adw.StatusPage"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:31
+#: data/stylesheet.appdata.xml.in:42
 msgid "Adw.TabBar"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:33
+#: data/stylesheet.appdata.xml.in:44
 msgid "GTK 4 Fixes:"
 msgstr "GTK 4 に関する修正点:"
 
-#: data/stylesheet.appdata.xml.in:35
+#: data/stylesheet.appdata.xml.in:46
 msgid "Correctly style list rows in popover menus"
-msgstr "ポップオーバーメニュー内のリストの各行に適切なスタイルが適用されるように修正"
+msgstr ""
+"ポップオーバーメニュー内のリストの各行に適切なスタイルが適用されるように修正"
 
-#: data/stylesheet.appdata.xml.in:36
+#: data/stylesheet.appdata.xml.in:47
 msgid "Style headerbars without \".titlebar\""
-msgstr "\".titlebar\" "
-"クラスの指定がないヘッダーバーにもスタイルが適用されるように修正"
+msgstr ""
+"\".titlebar\" クラスの指定がないヘッダーバーにもスタイルが適用されるように修"
+"正"
 
-#: data/stylesheet.appdata.xml.in:37
+#: data/stylesheet.appdata.xml.in:48
 msgid "Style fullscreen windows"
 msgstr "全画面表示のウィンドウ用のスタイルを追加"
 
-#: data/stylesheet.appdata.xml.in:38
+#: data/stylesheet.appdata.xml.in:49
 msgid "Style SearchBars"
 msgstr "SearchBar 用のスタイルを追加"
 
-#: data/stylesheet.appdata.xml.in:39
+#: data/stylesheet.appdata.xml.in:50
 msgid "Add spacing between HeaderBar buttons"
 msgstr "HeaderBar に配置されたボタンに間隔を追加"
 
-#: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:85
+#: data/stylesheet.appdata.xml.in:57 data/stylesheet.appdata.xml.in:96
 msgid "Improvements:"
 msgstr "改善点:"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:59
 msgid "Checkerboard styles are more subtle"
 msgstr "チェッカーボードを薄い色に修正"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:60
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr "ヘッダーバーにおける `large-icons` の大きさを 24px に変更"
 
-#: data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:61
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr "Granite.SimpleSettingsPage: ヘッダーの配置とテキストの大きさを調整"
 
-#: data/stylesheet.appdata.xml.in:51
+#: data/stylesheet.appdata.xml.in:62
 msgid "Infobars: set correct button margins"
 msgstr "Infobar: 適切なボタンマージンを設定"
 
-#: data/stylesheet.appdata.xml.in:52
+#: data/stylesheet.appdata.xml.in:63
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Gtk.Entry の補完ポップオーバーにパディングを追加"
 
-#: data/stylesheet.appdata.xml.in:53
+#: data/stylesheet.appdata.xml.in:64
 msgid "Fix labels for scale marks"
 msgstr "スケール: スナップ値のラベルスタイルを修正"
 
-#: data/stylesheet.appdata.xml.in:55 data/stylesheet.appdata.xml.in:74
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:66 data/stylesheet.appdata.xml.in:85
+#: data/stylesheet.appdata.xml.in:100
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/stylesheet.appdata.xml.in:57
+#: data/stylesheet.appdata.xml.in:68
 msgid "Correct .title-4 padding in Lists"
 msgstr "List: \".title-4\" クラスのパディングを修正"
 
-#: data/stylesheet.appdata.xml.in:58
+#: data/stylesheet.appdata.xml.in:69
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
 "Button: ポップオーバーなどの子ウィジェットに対してフォントサイズを設定しない"
 "ように修正"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:81
 msgid "New Features:"
 msgstr "新機能:"
 
-#: data/stylesheet.appdata.xml.in:72
+#: data/stylesheet.appdata.xml.in:83
 msgid "Support for Gtk4"
 msgstr "Gtk4 への対応"
 
-#: data/stylesheet.appdata.xml.in:76
+#: data/stylesheet.appdata.xml.in:87
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "GNOME Web 42 のタイトルバーの表示を修正"
 
-#: data/stylesheet.appdata.xml.in:77
+#: data/stylesheet.appdata.xml.in:88
 msgid "Fix font style for bold labels in some languages"
 msgstr "一部の言語における、太字ラベルのフォントスタイルを修正"
 
-#: data/stylesheet.appdata.xml.in:78
+#: data/stylesheet.appdata.xml.in:89
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButton: チェックマーク・ラジオボタン・ラベル間にマージンを追加"
 
-#: data/stylesheet.appdata.xml.in:87
+#: data/stylesheet.appdata.xml.in:98
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "ダークスタイルでの水平線のコントラストを改善"
 
-#: data/stylesheet.appdata.xml.in:91
+#: data/stylesheet.appdata.xml.in:102
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr "IBus 変換候補ウィンドウのハイライトにアクセントカラーを使うように修正"
 
-#: data/stylesheet.appdata.xml.in:92
+#: data/stylesheet.appdata.xml.in:103
 msgid "Fix font style for title labels in headerbars"
 msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
 
-#: data/stylesheet.appdata.xml.in:100
-msgid "Support for Hdy.Tabbar"
-msgstr "Hdy.Tabbar への対応"
+#~ msgid "Support for Hdy.Tabbar"
+#~ msgstr "Hdy.Tabbar への対応"
 
-#: data/stylesheet.appdata.xml.in:101
-msgid "Fix accent class for Gtk.Scale"
-msgstr "Gtk.Scale のアクセントクラスを修正"
+#~ msgid "Fix accent class for Gtk.Scale"
+#~ msgstr "Gtk.Scale のアクセントクラスを修正"
 
-#: data/stylesheet.appdata.xml.in:102
-msgid "Flat titlebars inherit background color for views and sidebars"
-msgstr "フラットなタイトルバーがビューとサイドバーの背景色を継承するように修正"
+#~ msgid "Flat titlebars inherit background color for views and sidebars"
+#~ msgstr ""
+#~ "フラットなタイトルバーがビューとサイドバーの背景色を継承するように修正"
 
-#: data/stylesheet.appdata.xml.in:109
-msgid "Complete redesign"
-msgstr "抜本的なデザイン変更"
+#~ msgid "Complete redesign"
+#~ msgstr "抜本的なデザイン変更"
 
 #~ msgid "Greenfield"
 #~ msgstr "Greenfield"
