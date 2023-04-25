@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-03-26 06:59+0000\n"
+"PO-Revision-Date: 2023-04-28 15:06+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "desktop/stylesheet-extra/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -49,7 +49,7 @@ msgstr "Adw.AboutWindow"
 
 #: data/stylesheet.appdata.xml.in:29
 msgid "Adw.MessageDialog"
-msgstr ""
+msgstr "Adw.MessageDialog"
 
 #: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:50
 msgid "GTK 4 Fixes:"
@@ -60,10 +60,12 @@ msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
 msgstr ""
+"Support \".destructive\" and \".suggested\" in addition to \".destructive-"
+"action\" and \".suggested-action\""
 
 #: data/stylesheet.appdata.xml.in:34
 msgid "\".raised\" overrides \".flat\" in Buttons"
-msgstr ""
+msgstr "\".raised\" overrides \".flat\" in Buttons"
 
 #: data/stylesheet.appdata.xml.in:46
 msgid "Adw.PreferencesWindow"
