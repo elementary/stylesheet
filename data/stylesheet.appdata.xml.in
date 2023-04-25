@@ -21,11 +21,17 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
   
   <releases>
-    <release version="7.1.1" date="2023-04-23" urgency="medium">
+    <release version="7.2.0" date="2023-04-23" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
         <ul>
           <li>Adw.AboutWindow</li>
+          <li>Adw.MessageDialog</li>
+        </ul>
+        <p>GTK 4 Fixes:</p>
+        <ul>
+          <li>Support ".destructive" and ".suggested" in addition to ".destructive-action" and ".suggested-action"</li>
+          <li>".raised" overrides ".flat" in Buttons</li>
         </ul>
       </description>
       <issues>
