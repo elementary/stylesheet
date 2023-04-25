@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-24 19:31+0000\n"
+"POT-Creation-Date: 2023-04-25 16:37+0000\n"
 "PO-Revision-Date: 2023-03-26 06:59+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -39,7 +39,7 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:38
+#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:44
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "Improve support for LibAdwaita widgets:"
 
@@ -47,112 +47,126 @@ msgstr "Improve support for LibAdwaita widgets:"
 msgid "Adw.AboutWindow"
 msgstr "Adw.AboutWindow"
 
-#: data/stylesheet.appdata.xml.in:40
-msgid "Adw.PreferencesWindow"
-msgstr "Adw.PreferencesWindow"
+#: data/stylesheet.appdata.xml.in:29
+msgid "Adw.MessageDialog"
+msgstr ""
 
-#: data/stylesheet.appdata.xml.in:41
-msgid "Adw.StatusPage"
-msgstr "Adw.StatusPage"
-
-#: data/stylesheet.appdata.xml.in:42
-msgid "Adw.TabBar"
-msgstr "Adw.TabBar"
-
-#: data/stylesheet.appdata.xml.in:44
+#: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:50
 msgid "GTK 4 Fixes:"
 msgstr "GTK 4 Fixes:"
 
+#: data/stylesheet.appdata.xml.in:33
+msgid ""
+"Support \".destructive\" and \".suggested\" in addition to \".destructive-"
+"action\" and \".suggested-action\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:34
+msgid "\".raised\" overrides \".flat\" in Buttons"
+msgstr ""
+
 #: data/stylesheet.appdata.xml.in:46
+msgid "Adw.PreferencesWindow"
+msgstr "Adw.PreferencesWindow"
+
+#: data/stylesheet.appdata.xml.in:47
+msgid "Adw.StatusPage"
+msgstr "Adw.StatusPage"
+
+#: data/stylesheet.appdata.xml.in:48
+msgid "Adw.TabBar"
+msgstr "Adw.TabBar"
+
+#: data/stylesheet.appdata.xml.in:52
 msgid "Correctly style list rows in popover menus"
 msgstr "Correctly style list rows in popover menus"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:53
 msgid "Style headerbars without \".titlebar\""
 msgstr "Style headerbars without \".titlebar\""
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:54
 msgid "Style fullscreen windows"
 msgstr "Style fullscreen windows"
 
-#: data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:55
 msgid "Style SearchBars"
 msgstr "Style SearchBars"
 
-#: data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:56
 msgid "Add spacing between HeaderBar buttons"
 msgstr "Add spacing between HeaderBar buttons"
 
-#: data/stylesheet.appdata.xml.in:57 data/stylesheet.appdata.xml.in:96
+#: data/stylesheet.appdata.xml.in:63 data/stylesheet.appdata.xml.in:102
 msgid "Improvements:"
 msgstr "Improvements:"
 
-#: data/stylesheet.appdata.xml.in:59
+#: data/stylesheet.appdata.xml.in:65
 msgid "Checkerboard styles are more subtle"
 msgstr "Checkerboard styles are more subtle"
 
-#: data/stylesheet.appdata.xml.in:60
+#: data/stylesheet.appdata.xml.in:66
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr "Set `large-icons` size on headerbars to 24px"
 
-#: data/stylesheet.appdata.xml.in:61
+#: data/stylesheet.appdata.xml.in:67
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr "Adjust header layout and typography in Granite.SimpleSettingsPage"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:68
 msgid "Infobars: set correct button margins"
 msgstr "Infobars: set correct button margins"
 
-#: data/stylesheet.appdata.xml.in:63
+#: data/stylesheet.appdata.xml.in:69
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Add padding to Gtk.Entry's completion popover"
 
-#: data/stylesheet.appdata.xml.in:64
+#: data/stylesheet.appdata.xml.in:70
 msgid "Fix labels for scale marks"
 msgstr "Fix labels for scale marks"
 
-#: data/stylesheet.appdata.xml.in:66 data/stylesheet.appdata.xml.in:85
-#: data/stylesheet.appdata.xml.in:100
+#: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:91
+#: data/stylesheet.appdata.xml.in:106
 msgid "Fixes:"
 msgstr "Fixes:"
 
-#: data/stylesheet.appdata.xml.in:68
+#: data/stylesheet.appdata.xml.in:74
 msgid "Correct .title-4 padding in Lists"
 msgstr "Correct .title-4 padding in Lists"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:75
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr "Buttons: don't set font weight for children like popovers"
 
-#: data/stylesheet.appdata.xml.in:81
+#: data/stylesheet.appdata.xml.in:87
 msgid "New Features:"
 msgstr "New Features:"
 
-#: data/stylesheet.appdata.xml.in:83
+#: data/stylesheet.appdata.xml.in:89
 msgid "Support for Gtk4"
 msgstr "Support for Gtk4"
 
-#: data/stylesheet.appdata.xml.in:87
+#: data/stylesheet.appdata.xml.in:93
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Fix titlebar in GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:88
+#: data/stylesheet.appdata.xml.in:94
 msgid "Fix font style for bold labels in some languages"
 msgstr "Fix font style for bold labels in some languages"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:95
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons: add margin between checks, radios, and labels"
 
-#: data/stylesheet.appdata.xml.in:98
+#: data/stylesheet.appdata.xml.in:104
 msgid "Improve contrast of horizontal separators in dark style"
 msgstr "Improve contrast of horizontal separators in dark style"
 
-#: data/stylesheet.appdata.xml.in:102
+#: data/stylesheet.appdata.xml.in:108
 msgid "Use the accent color for highlighting in IBus candidate window"
 msgstr "Use the accent colour for highlighting in IBus candidate window"
 
-#: data/stylesheet.appdata.xml.in:103
+#: data/stylesheet.appdata.xml.in:109
 msgid "Fix font style for title labels in headerbars"
 msgstr "Fix font style for title labels in headerbars"
 
