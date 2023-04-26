@@ -84,6 +84,10 @@ headerbar {
                 0 1px rem(2px) rgba(black, 0.15);
         }
 
+        &.default-decoration {
+            padding: rem(3px);
+        }
+
         &.flat {
             background: inherit;
             color: inherit;
