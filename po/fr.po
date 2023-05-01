@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-02-02 10:25+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"PO-Revision-Date: 2023-05-03 01:06+0000\n"
+"Last-Translator: Benjamin <morantbenjamin@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -41,7 +41,7 @@ msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:44
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Améliorer la prise en charge pour les widgets LibAdwaita :"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.AboutWindow"
