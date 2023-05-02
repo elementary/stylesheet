@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-04-28 15:06+0000\n"
+"PO-Revision-Date: 2023-05-03 01:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -81,8 +81,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:52
 msgid "Correctly style list rows in popover menus"
-msgstr ""
-"ポップオーバーメニュー内のリストの各行に適切なスタイルが適用されるように修正"
+msgstr "ポップオーバーメニュー内のリストの各行にスタイルが適切に適用されるように修正"
 
 #: data/stylesheet.appdata.xml.in:53
 msgid "Style headerbars without \".titlebar\""
