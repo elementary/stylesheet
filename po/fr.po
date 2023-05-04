@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-05-04 08:38+0000\n"
-"Last-Translator: Corentin Noël <tintou@noel.tf>\n"
+"PO-Revision-Date: 2023-05-04 08:39+0000\n"
+"Last-Translator: Benjamin <morantbenjamin@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
 "Language: fr\n"
@@ -85,7 +85,7 @@ msgstr "Styliser correctement les lignes des listes dans les menus contextuels"
 
 #: data/stylesheet.appdata.xml.in:53
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "Styliser les barres d'en-tête sans \".titlebar\""
 
 #: data/stylesheet.appdata.xml.in:54
 msgid "Style fullscreen windows"
