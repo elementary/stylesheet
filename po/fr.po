@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-05-03 01:06+0000\n"
+"PO-Revision-Date: 2023-05-04 08:37+0000\n"
 "Last-Translator: Benjamin <morantbenjamin@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
@@ -52,16 +52,16 @@ msgid "Adw.MessageDialog"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:50
-#, fuzzy
-#| msgid "Fixes:"
 msgid "GTK 4 Fixes:"
-msgstr "Corrections :"
+msgstr "Corrections GTK4 :"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
 msgstr ""
+"Prendre en charge \".destructive\" et \".suggested\" en plus de \"."
+"destructive-action\" et \".suggested-action\""
 
 #: data/stylesheet.appdata.xml.in:34
 msgid "\".raised\" overrides \".flat\" in Buttons"
