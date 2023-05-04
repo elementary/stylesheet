@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-05-04 08:37+0000\n"
+"PO-Revision-Date: 2023-05-04 08:38+0000\n"
 "Last-Translator: Benjamin <morantbenjamin@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
@@ -81,7 +81,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:52
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "Styliser correctement les lignes des listes dans les menus contextuels"
 
 #: data/stylesheet.appdata.xml.in:53
 msgid "Style headerbars without \".titlebar\""
