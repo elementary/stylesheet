@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-04-15 09:59+0000\n"
+"PO-Revision-Date: 2023-05-29 10:06+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/desktop/stylesheet-"
-"extra/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/desktop/"
+"stylesheet-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Systeem stylesheet"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The look and feel for elementary OS"
@@ -32,6 +32,8 @@ msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"Een origineel Gtk.CSS stylesheet speciaal ontworpen voor elementary OS en "
+"haar desktopomgeving: Pantheon."
 
 #: data/stylesheet.appdata.xml.in:19
 msgid "elementary, Inc."
@@ -39,7 +41,7 @@ msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:44
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Verbeter ondersteuning voor LibAdwaita widgets:"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.AboutWindow"
@@ -50,10 +52,8 @@ msgid "Adw.MessageDialog"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:50
-#, fuzzy
-#| msgid "Fixes:"
 msgid "GTK 4 Fixes:"
-msgstr "Fixes:"
+msgstr "GTK 4 foutoplossingen:"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid ""
