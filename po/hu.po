@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-01-20 00:25+0000\n"
+"PO-Revision-Date: 2023-06-15 00:07+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:63 data/stylesheet.appdata.xml.in:102
 msgid "Improvements:"
-msgstr "Újdonságok:"
+msgstr "Fejlesztések:"
 
 #: data/stylesheet.appdata.xml.in:65
 msgid "Checkerboard styles are more subtle"
