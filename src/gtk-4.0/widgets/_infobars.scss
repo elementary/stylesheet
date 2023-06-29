@@ -1,0 +1,99 @@
+infobar {
+    revealer > box {
+        background-color: bg-color(1);
+        background-image: -gtk-icontheme("dialog-information-symbolic");
+        background-repeat: no-repeat;
+        background-size: 16px;
+        border-color: $border-color;
+        border-style: solid;
+        border-width: 0 0 1px;
+        box-shadow: outset-highlight("bottom");
+        padding: rem(12px);
+
+        &:dir(ltr) {
+            // Minus half pixel to avoid blurry icons
+            background-position: rem(12px) calc(50% + 0.5px);
+            // Icon size + 2x padding
+            padding-left: calc(16px + #{rem(24px)});
+        }
+
+        &:dir(rtl) {
+            // Minus half pixel to avoid blurry icons
+            background-position: calc(100% - #{rem(12px)}) calc(50% + 0.5px);
+            // Icon size + 2x padding
+            padding-right: calc(16px + #{rem(24px)});
+        }
+
+        button {
+            &:dir(ltr) {
+                margin-left: rem(12px);
+            }
+
+            &:dir(rtl) {
+                margin-right: rem(12px);
+            }
+
+            &.close.image-button {
+                background: #{'alpha(white, 0.8)'};
+                border-radius: 50%;
+                color: inherit;
+                padding: rem(3px);
+            }
+
+            &.text-button {
+                @if $color-scheme == "dark" {
+                    background-clip: border-box;
+                }
+            }
+        }
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
+    }
+
+    &.error revealer > box {
+        background-color: #{'mix(@STRAWBERRY_300, white, 0.75)'};
+        background-image: -gtk-icontheme("process-error-symbolic");
+        color: $STRAWBERRY_700;
+        -gtk-icon-palette: error $STRAWBERRY_700;
+
+        @if $color-scheme == "light" {
+            border-color: #{'mix(@STRAWBERRY_300, white, 0.6)'};
+        }
+    }
+
+    &.warning revealer > box {
+        background-color: #{'mix(@BANANA_300, white, 0.6)'};
+        background-image: -gtk-icontheme("dialog-warning-symbolic");
+        color: #{'shade(@BANANA_900, 0.8)'};
+        -gtk-icon-palette: warning #{'shade(@BANANA_900, 0.8)'};
+
+        @if $color-scheme == "light" {
+            border-color: #{'@BANANA_300'};
+        }
+    }
+
+    &.question revealer > box {
+        background-color: #{'mix(@BLUEBERRY_300, white, 0.75)'};
+        background-image: -gtk-icontheme("dialog-question-symbolic");
+        color: #{'shade(@BLUEBERRY_300, 0.5)'};
+
+        @if $color-scheme == "light" {
+            border-color: #{'mix(@BLUEBERRY_300, white, 0.4)'};
+        }
+    }
+
+    &.frame {
+        border: none;
+
+        revealer > box {
+            border-width: 1px;
+            border-radius: rem(6px);
+            box-shadow:
+                outset-highlight(),
+                outset-shadow(2);
+            margin: rem(3px);
+        }
+    }
+}

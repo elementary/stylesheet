@@ -1,0 +1,29 @@
+paned {
+    &.horizontal > separator {
+        background-image:
+            linear-gradient(
+                to right,
+                #{'@menu_separator'} 1px,
+                #{'@menu_separator_shadow'} 1px,
+                #{'@menu_separator_shadow'} 2px,
+                transparent 2px
+            );
+        // This creates the invisible resize handle
+        margin-right: -8px;
+        min-width: 9px;
+    }
+
+    &.vertical > separator {
+        background-image:
+            linear-gradient(
+                to bottom,
+                #{'@menu_separator'} 1px,
+                #{'@menu_separator_shadow'} 1px,
+                #{'@menu_separator_shadow'} 2px,
+                transparent 2px
+            );
+        // This creates the invisible resize handle
+        margin-bottom: -8px;
+        min-height: 9px;
+    }
+}

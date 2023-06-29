@@ -1,0 +1,112 @@
+%entry {
+    background-color: bg-color(1);
+    background-clip: padding-box;
+    border: 1px solid $border-color;
+    border-radius: rem(3px);
+    box-shadow: inset-shadow("");
+    color: #{'@fg_color'};
+
+    &:disabled {
+        background: $insensitive-base-color;
+        box-shadow: inset-shadow("disabled");
+        color: $insensitive-fg-color;
+    }
+
+    &.flat {
+        background: transparent;
+        border-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+
+        &:focus {
+            border-bottom-color: #{'@accent_color'};
+        }
+    }
+
+    &:focus-within {
+        @if $color-scheme == "light" {
+            border-color: #{'@accent_color'};
+        }
+
+        box-shadow:
+            0 0 0 rem(2px) #{'alpha(@accent_color, 0.3)'},
+            inset-shadow();
+    }
+
+    placeholder {
+        color: #{'@placeholder_text_color'};
+        margin: 0;
+    }
+}
+
+entry {
+    @extend %entry;
+    color: #{'@placeholder_text_color'};
+    // Prevent size change when setting primary or secondary icons
+    min-height: 16px;
+
+    text {
+        color: #{'@text_color'};
+        // padding, not margin for overflow
+        // Off-by-one to account for padding-box clip
+        padding: rem(4px);
+
+        &:disabled {
+            color: $insensitive-fg-color;
+        }
+    }
+
+    image {
+        -gtk-icon-size: 16px;
+        // Off-by-one to account for padding-box clip
+        padding: 0 rem(4px);
+        transition: all duration("in-place") $easing;
+    }
+
+    // We only want the action side icon to react on hover
+    &:dir(ltr) image.right:hover,
+    &:dir(rtl) image.left:hover {
+        color: #{'@text_color'};
+    }
+
+    // Fixes an issue in Epiphany
+    headerbar & {
+        margin: 1px;
+    }
+
+    progress > trough {
+        // Off-by-one to account for padding-box clip
+        margin: rem(4px);
+
+        > progress {
+            background: #{'@accent_color'};
+            border-radius: rem(2px);
+            min-height: rem(2px);
+            min-width: rem(2px);
+        }
+    }
+
+    &.date-picker popover > contents {
+        padding: rem(6px);
+    }
+
+    &.time-picker popover > contents {
+        padding: rem(12px);
+    }
+
+    &.password {
+        background-image: -gtk-icontheme("dialog-password-symbolic");
+        background-size: 16px;
+        background-repeat: no-repeat;
+
+        &:dir(ltr) {
+            background-position: rem(6px) rem(4px);
+            padding-left: rem(24px);
+        }
+
+        &:dir(rtl) {
+            background-position: calc(100% - #{rem(6px)}) rem(4px);
+            padding-right: rem(24px);
+        }
+    }
+}

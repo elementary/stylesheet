@@ -1,0 +1,90 @@
+colorchooser {
+    /* This is 1px larger in the dark style because it's outside the swatch
+     * instead of on top */
+    $overlay-radius: rem(3px);
+    @if $color-scheme == "dark" {
+        $overlay-radius: rem(4px);
+    }
+
+    colorswatch {
+        margin: -1px 3px;
+
+        &.top {
+            border-top-width: 1px;
+            border-top-left-radius: rem(3px);
+            border-top-right-radius: rem(3px);
+
+            overlay {
+                border-top-width: 1px;
+                border-top-left-radius: $overlay-radius;
+                border-top-right-radius: $overlay-radius;
+
+                @if $color-scheme == "dark" {
+                    box-shadow: outset-highlight("top");
+                }
+            }
+        }
+
+        &.bottom {
+            border-bottom-width: 1px;
+            border-bottom-left-radius: rem(3px);
+            border-bottom-right-radius: rem(3px);
+
+            @if $color-scheme == "dark" {
+                box-shadow: outset-shadow(3);
+            }
+
+            overlay {
+                border-bottom-width: 1px;
+                border-bottom-left-radius: $overlay-radius;
+                border-bottom-right-radius: $overlay-radius;
+
+                @if $color-scheme == "dark" {
+                    box-shadow: outset-highlight("bottom");
+                }
+            }
+        }
+
+        overlay {
+            border: 1px solid rgba(black, 0.2);
+            border-bottom-width: 0;
+            border-top-width: 0;
+
+            @if $color-scheme == "dark" {
+                box-shadow:
+                    inset 1px 0 0 0 #{'alpha(@highlight_color, 0.07)'},
+                    inset -1px 0 0 0 #{'alpha(@highlight_color, 0.07)'};
+                margin: -2px 2px;
+            }
+        }
+
+        &.dark overlay {
+            color: white;
+            -gtk-icon-shadow: 0 rem(1px) rem(2px) rgba(black, 0.3);
+        }
+
+        &.light overlay {
+            color: rgba(black, 0.6);
+            -gtk-icon-shadow: 0 rem(1px) rem(1px) rgba(white, 0.2);
+        }
+    }
+
+    /*Value and Custom shades*/
+    grid:nth-child(2) colorswatch,
+    box box colorswatch {
+        border-radius: rem(3px);
+
+        @if $color-scheme == "dark" {
+            box-shadow: outset-shadow(3);
+        }
+
+        overlay {
+            border-radius: $overlay-radius;
+            border-width: 1px;
+
+            @if $color-scheme == "dark" {
+                box-shadow: outset-highlight();
+            }
+        }
+    }
+}

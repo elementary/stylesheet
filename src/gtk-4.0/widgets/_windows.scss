@@ -1,0 +1,113 @@
+.background,
+.gtkstyle-fallback {
+    background-color: bg_color(2);
+    color: $fg-color;
+}
+
+window {
+    &.csd {
+        border-radius: rem(6px);
+        box-shadow:
+            // Intentionally not in ems since it's used as a stroke
+            0 0 0 1px $toplevel-border-color,
+            // Force shadows to be the same size to prevent jumpy resize transition
+            0 13px 16px 4px transparent,
+            shadow(4);
+
+        &:backdrop {
+            box-shadow:
+                0 0 0 1px $toplevel-border-color,
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
+                shadow(2);
+        }
+
+        // black behind corners
+        &.maximized {
+            box-shadow: 0 0 0 rem(3px) black;
+        }
+
+        &.tiled-right:not(.maximized),
+        &.tiled-left:not(.maximized) {
+            box-shadow:
+                0 0 0 1px $toplevel-border-color,
+                0 13px 16px 4px transparent,
+                shadow(2);
+        }
+
+        &.tiled-right:not(.maximized) {
+            &.tiled-top {
+                border-top-left-radius: 0;
+            }
+
+            &.tiled-bottom {
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        &.tiled-left:not(.maximized) {
+            &.tiled-top {
+                border-top-right-radius: 0;
+            }
+
+            &.tiled-bottom {
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        &.fullscreen {
+            border-radius: 0;
+        }
+    }
+
+    &.ssd {
+        border-radius: 6px 6px 0 0;
+        box-shadow: 0 0 0 1px $toplevel-border-color;
+    }
+}
+
+window.dialog {
+    border-radius: 0;
+    box-shadow: outset-highlight("bottom");
+
+    &.csd {
+        border-radius: rem(6px);
+        box-shadow:
+            outset-highlight(),
+            // Intentionally not in ems since it's used as a stroke
+            0 0 0 1px $toplevel-border-color,
+            // Force shadows to be the same size to prevent jumpy resize transition
+            0 13px 16px 4px transparent,
+            shadow(3);
+
+        &:backdrop {
+            box-shadow:
+                outset-highlight(),
+                // Intentionally not in ems since it's used as a stroke
+                0 0 0 1px $toplevel-border-color,
+                // Force shadows to be the same size to prevent jumpy resize transition
+                0 13px 16px 4px transparent,
+                shadow(2);
+        }
+    }
+
+    .dialog-content-area {
+        margin: rem(12px);
+        margin-top: rem(18px);
+    }
+
+    .dialog-action-area {
+        margin: rem(12px);
+    }
+
+    &.message {
+        .dialog-content-area box + expander-widget {
+            margin-bottom: 6px;
+        }
+
+        .dialog-action-area {
+            // Double space between content and actions
+            margin-top: rem(16px);
+        }
+    }
+}

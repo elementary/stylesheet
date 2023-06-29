@@ -1,0 +1,21 @@
+windowcontrols {
+    &.end:dir(ltr),
+    &.start:dir(rtl) {
+        margin-left: rem(12px);
+    }
+
+    &.start:dir(ltr),
+    &.end:dir(rtl) {
+        margin-right: rem(12px);
+    }
+
+    button {
+        padding: rem(4px);
+
+        &:not(:active) {
+            background: none;
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+}

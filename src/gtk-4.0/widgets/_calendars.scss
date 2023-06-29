@@ -1,0 +1,27 @@
+calendar.view {
+    background: transparent;
+
+    .day-name {
+        font-weight: 700;
+        opacity: 0.8;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+
+    .day-number {
+        &.today {
+            @extend .accent;
+            font-weight: bold;
+        }
+
+        &.other-month {
+            color: $insensitive-fg-color;
+        }
+
+        &:selected{
+            @extend selection;
+            border-radius: 99px;
+        }
+    }
+}
+

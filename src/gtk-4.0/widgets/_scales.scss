@@ -1,0 +1,252 @@
+scale {
+    fill {
+        background-color: rgba(black, 0.25);
+    }
+
+    highlight {
+        background-color: rgba($fg-color, 0.7);
+        border: 1px solid rgba(black, 0.3);
+
+        box-shadow: inset 0 0 0 2px rgba(black, 0.03);
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+            border-color: transparent;
+            box-shadow: outset-highlight();
+        }
+
+        &:disabled {
+            background-color: rgba($fg-color, 0.25);
+            border-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    mark {
+        indicator {
+            background: mix(bg-color(4), $fg-color, $weight: 75%);
+        }
+
+        label {
+            @extend .dim-label, .small-label;
+        }
+    }
+
+    slider {
+        @extend %outset-background;
+        background-color: bg-color(0);
+        border-radius: rem(12px);
+        box-shadow:
+            outset-highlight(),
+            0 0 0 1px $border-color,
+            0 1px 1px 1px rgba(black, 0.1);
+        min-height: rem(14px);
+        min-width: rem(14px);
+
+        &:backdrop {
+            box-shadow:
+                outset-highlight(),
+                0 0 0 1px rgba(black, 0.2),
+                0 1px 1px 1px rgba(black, 0.08);
+        }
+
+        &:disabled {
+            background-color: transparent;
+            background-image: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    trough {
+        border: 1px solid $border-color;
+        border-radius: rem(12px);
+        background-color: rgba(black, 0.05);
+        box-shadow:
+            inset 0 0 0 1px rgba(black, 0.03),
+            0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
+        min-height: rem(3px);
+        min-width: rem(3px);
+
+        &:disabled {
+            background-image: none;
+        }
+    }
+
+    &.color.horizontal trough,
+    &.color.vertical trough {
+        padding: 0;
+    }
+
+    &.accent {
+        fill {
+            background-color: #{'alpha(@accent_color, 0.33)'};
+        }
+
+        highlight {
+            background-color: #{'@accent_color'};
+        }
+    }
+
+    &.warmth trough,
+    &.temperature trough {
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+            box-shadow:
+                outset-highlight(),
+                0 1px 0 0 #{'alpha(@highlight_color, 0.3)'};
+        }
+    }
+
+    &.temperature {
+        trough {
+            background-image:
+                linear-gradient(
+                    to right,
+                    $BLUEBERRY_500,
+                    $BANANA_500
+                );
+        }
+
+        &:dir(rtl) trough {
+            background-image:
+                linear-gradient(
+                    to left,
+                    $BLUEBERRY_500,
+                    $BANANA_500
+                );
+        }
+    }
+
+
+    &.warmth {
+        trough {
+            background-image:
+                linear-gradient(
+                    to right,
+                    mix(
+                        $SILVER_100,
+                        $ORANGE_100,
+                        50%
+                    ),
+                    $ORANGE_500
+                );
+        }
+
+        &:dir(rtl) trough {
+            background-image:
+                linear-gradient(
+                    to left,
+                    mix(
+                        $SILVER_100,
+                        $ORANGE_100,
+                        50%
+                    ),
+                    $ORANGE_500
+                );
+        }
+    }
+
+    &.horizontal {
+        highlight.top,
+        fill.top {
+            border-radius: rem(12px) 0 0 rem(12px);
+            // Account for border width
+            margin: -1px 0 -1px -1px;
+        }
+
+        highlight.bottom,
+        fill.bottom {
+            border-radius: 0 rem(12px) rem(12px) 0;
+            // Account for border width
+            margin: -1px -1px -1px 0;
+        }
+
+        marks {
+            &.bottom {
+                margin-top: rem(6px);
+            }
+
+            &.top {
+                margin-top: rem(6px);
+            }
+
+            mark indicator {
+                min-height: rem(6px);
+                // Intentionally not in ems since it's a stroke
+                min-width: 1px;
+            }
+        }
+
+        slider {
+            margin: rem(-6px) -1px;
+        }
+
+        trough {
+            margin: rem(6px) 0;
+        }
+    }
+
+    &.vertical {
+        highlight.top,
+        fill.top {
+            border-radius: rem(12px) rem(12px) 0 0;
+            // Account for border width
+            margin: -1px -1px 0 -1px;
+        }
+
+        highlight.bottom,
+        fill.bottom {
+            border-radius: 0 0 rem(12px) rem(12px);
+            // Account for border width
+            margin: 0 -1px -1px -1px;
+        }
+
+        marks {
+            &.bottom {
+                margin-left: rem(6px);
+            }
+
+            &.top {
+                margin-right: rem(6px);
+            }
+
+            mark indicator {
+                // Intentionally not in ems since it's a stroke
+                min-height: 1px;
+                min-width: rem(6px);
+            }
+        }
+
+        slider {
+            margin: -1px rem(-6px);
+        }
+
+        trough {
+            margin: 0 rem(6px);
+        }
+    }
+
+    &:focus slider {
+        @if $color-scheme == "light" {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
+                0 0 0 1px $border-color,
+                0 0 0 1px #{'@accent_color'};
+        } @else {
+            box-shadow:
+                outset-highlight("full"),
+                0 0 0 rem(3px) #{'alpha(@accent_color, 0.3)'},
+                0 0 0 1px $border-color;
+        }
+    }
+}
+
+.seek-bar scale slider {
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    min-width: 0;
+    min-height: 0;
+}

@@ -1,0 +1,18 @@
+image {
+    -gtk-icon-palette:
+        error #{'@error_color'},
+        success #{'@success_color'},
+        warning $warning-icon-color;
+
+    &:disabled {
+        filter: opacity($disabled-opacity);
+    }
+}
+
+.normal-icons {
+    -gtk-icon-size: 16px;
+}
+
+.large-icons {
+    -gtk-icon-size: 32px;
+}

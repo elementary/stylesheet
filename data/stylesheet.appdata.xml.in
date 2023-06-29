@@ -1,57 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2020 elementary, Inc. <contact@elementary.io> -->
+<!-- Copyright 2020-2023 elementary, Inc. <contact@elementary.io> -->
 <component type="runtime">
   <!-- NOTE: this ID format is required for automatic Flatpak theme matching -->
   <id>org.gtk.Gtk3theme.elementary</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <name>Greenfield</name>
-  <summary>The Gtk Stylesheet for elementary OS</summary>
+  <name>System Stylesheet</name>
+  <summary>The look and feel for elementary OS</summary>
   <description>
     <p>An original Gtk.CSS stylesheet designed specifically for elementary OS and its desktop environment: Pantheon.</p>
   </description>
   <provides>
     <id>io.elementary.stylesheet</id>
   </provides>
-  <releases>
-    <release version="6.0.0" date="2020-07-30" urgency="medium">
-      <ul>
-        <li>Complete redesign</li>
-      </ul>
-    </release>
-  </releases>
-  <content_rating type="oars-1.1">
-    <content_attribute id="violence-cartoon">none</content_attribute>
-    <content_attribute id="violence-fantasy">none</content_attribute>
-    <content_attribute id="violence-realistic">none</content_attribute>
-    <content_attribute id="violence-bloodshed">none</content_attribute>
-    <content_attribute id="violence-sexual">none</content_attribute>
-    <content_attribute id="violence-desecration">none</content_attribute>
-    <content_attribute id="violence-slavery">none</content_attribute>
-    <content_attribute id="violence-worship">none</content_attribute>
-    <content_attribute id="drugs-alcohol">none</content_attribute>
-    <content_attribute id="drugs-narcotics">none</content_attribute>
-    <content_attribute id="drugs-tobacco">none</content_attribute>
-    <content_attribute id="sex-nudity">none</content_attribute>
-    <content_attribute id="sex-themes">none</content_attribute>
-    <content_attribute id="sex-homosexuality">none</content_attribute>
-    <content_attribute id="sex-prostitution">none</content_attribute>
-    <content_attribute id="sex-adultery">none</content_attribute>
-    <content_attribute id="sex-appearance">none</content_attribute>
-    <content_attribute id="language-profanity">none</content_attribute>
-    <content_attribute id="language-humor">none</content_attribute>
-    <content_attribute id="language-discrimination">none</content_attribute>
-    <content_attribute id="social-chat">none</content_attribute>
-    <content_attribute id="social-info">none</content_attribute>
-    <content_attribute id="social-audio">none</content_attribute>
-    <content_attribute id="social-location">none</content_attribute>
-    <content_attribute id="social-contacts">none</content_attribute>
-    <content_attribute id="money-purchasing">none</content_attribute>
-    <content_attribute id="money-gambling">none</content_attribute>
-  </content_rating>
+  <content_rating type="oars-1.1" />
   <translation type="gettext">io.elementary.stylesheet</translation>
   <compulsory_for_desktop>Pantheon</compulsory_for_desktop>
   <developer_name>elementary, Inc.</developer_name>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
-​</component>
+  
+  <releases>
+    <release version="7.2.0" date="2023-04-25" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.AboutWindow</li>
+          <li>Adw.MessageDialog</li>
+        </ul>
+        <p>GTK 4 Fixes:</p>
+        <ul>
+          <li>Support ".destructive" and ".suggested" in addition to ".destructive-action" and ".suggested-action"</li>
+          <li>".raised" overrides ".flat" in Buttons</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1253">Window margins cause titlebar issues in Mutter 44</issue>
+      </issues>
+    </release>
+
+    <release version="7.1.0" date="2023-03-24" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.PreferencesWindow</li>
+          <li>Adw.StatusPage</li>
+          <li>Adw.TabBar</li>
+        </ul>
+        <p>GTK 4 Fixes:</p>
+        <ul>
+          <li>Correctly style list rows in popover menus</li>
+          <li>Style headerbars without ".titlebar"</li>
+          <li>Style fullscreen windows</li>
+          <li>Style SearchBars</li>
+          <li>Add spacing between HeaderBar buttons</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="7.0.1" date="2022-10-10" urgency="medium">
+      <description>
+        <p>Improvements:</p>
+        <ul>
+          <li>Checkerboard styles are more subtle</li>
+          <li>Set `large-icons` size on headerbars to 24px</li>
+          <li>Adjust header layout and typography in Granite.SimpleSettingsPage</li>
+          <li>Infobars: set correct button margins</li>
+          <li>Add padding to Gtk.Entry's completion popover</li>
+          <li>Fix labels for scale marks</li>
+        </ul>
+        <p>Fixes:</p>
+        <ul>
+          <li>Correct .title-4 padding in Lists</li>
+          <li>Buttons: don't set font weight for children like popovers</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1209">Headerbars: correct window control spacing in RTL, and separator width</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1216">Fix arrow size in disabled comboboxes in popovers</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1219">Show scale marks</issue>
+      </issues>
+    </release>
+
+    <release version="7.0.0" date="2022-04-20" urgency="medium">
+      <description>
+        <p>New Features:</p>
+        <ul>
+          <li>Support for Gtk4</li>
+        </ul>
+        <p>Fixes:</p>
+        <ul>
+          <li>Fix titlebar in GNOME Web 42</li>
+          <li>Fix font style for bold labels in some languages</li>
+          <li>ModelButtons: add margin between checks, radios, and labels</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="6.1.1" date="2021-11-23" urgency="medium">
+      <description>
+        <p>Improvements:</p>
+        <ul>
+          <li>Improve contrast of horizontal separators in dark style</li>
+        </ul>
+        <p>Fixes:</p>
+        <ul>
+          <li>Use the accent color for highlighting in IBus candidate window</li>
+          <li>Fix font style for title labels in headerbars</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="6.1.0" date="2021-10-22" urgency="medium" />
+    <release version="6.0.0" date="2021-07-15" urgency="medium" />
+  </releases>
+</component>

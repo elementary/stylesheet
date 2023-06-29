@@ -1,0 +1,20 @@
+window.notification .draw-area {
+    background-color: bg-color(2);
+    border-radius: rem(6px);
+    box-shadow:
+        outset-highlight(),
+        0 0 0 1px $toplevel-border-color,
+        shadow(3);
+
+    image {
+        color: rgba($fg-color, 0.78);
+    }
+
+    label.title {
+        font-weight: 700;
+    }
+
+    .urgent label.title {
+        color: #{'@error_color'};
+    }
+}

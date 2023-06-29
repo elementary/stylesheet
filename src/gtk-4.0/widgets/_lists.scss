@@ -1,0 +1,51 @@
+list,
+listview {
+    background-color: bg-color(1);
+
+    popover & {
+        background-color: transparent;
+    }
+
+    row {
+        &:focus,
+        &:selected {
+            background: rgba($fg-color, 0.15);
+        }
+
+        &:focus:selected {
+            @extend selection;
+        }
+    }
+
+    header,
+    .title-4,
+    .h4 {
+        margin: 0.5em;
+    }
+
+    // Primary used in Gtk.Inspector
+    &.rich-list > row {
+        padding: rem(6px);
+        min-height: rem(32px); //Try to force homogeneous row height
+
+        // more row-height magic
+        > box {
+            button.toggle,
+            > fontbutton,
+            > entry,
+            > spinbutton {
+                margin: rem(3px) 0;
+            }
+        }
+    }
+
+    &.horizontal row.separator,
+    &.separators.horizontal > row:not(.separator) + row:not(.separator) {
+        border-right: 1px solid #{'@menu_separator'};
+    }
+
+    &:not(.horizontal) row.separator,
+    &.separators:not(.horizontal) > row:not(.separator) + row:not(.separator) {
+        border-top: 1px solid #{'@menu_separator'};
+    }
+}

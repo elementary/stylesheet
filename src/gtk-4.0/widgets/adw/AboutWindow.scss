@@ -1,0 +1,41 @@
+/******************
+ * AdwAboutWindow *
+ ******************/
+
+window.about {
+    @extend .dialog;
+
+    .main-page {
+        > viewport > clamp > box {
+            border-spacing: rem(6px);
+            margin: rem(12px);
+
+            > box {
+                border-spacing: rem(18px);
+                margin-top: rem(18px);
+            }
+        }
+
+        .app-version {
+            @extend selection;
+
+            border: none;
+            border-radius: 999px;
+            box-shadow: none;
+            margin-top: rem(3px);
+        }
+    }
+
+    .subpage {
+
+        > viewport > clamp > box {
+            border-spacing: rem(18px);
+            margin: rem(18px) rem(12px);
+        }
+
+        > clamp > textview {
+            background: none;
+            color: inherit;
+        }
+    }
+}
