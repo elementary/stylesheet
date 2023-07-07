@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-06-15 00:07+0000\n"
+"PO-Revision-Date: 2023-07-08 01:10+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/nb/>\n"
@@ -34,8 +34,9 @@ msgid ""
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:19
+#, fuzzy
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:44
 msgid "Improve support for LibAdwaita widgets:"
