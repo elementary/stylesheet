@@ -150,6 +150,10 @@ window.popup {
                 margin-right: rem(-6px);
             }
         }
+
+        > label {
+            padding: 0;
+        }
     }
 
     separator {
