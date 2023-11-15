@@ -1,4 +1,4 @@
-tabgrid {
+taboverview {
     tabthumbnail {
         .card {
             border-radius: rem(6px);
@@ -11,17 +11,17 @@ tabgrid {
                 box-shadow: shadow(1);
                 margin: rem(3px);
             }
+        }
 
-            .pinned & {
-                padding: rem(12px);
+        &.pinned .card {
+            padding: rem(12px);
 
-                .tab-unpin-icon.left {
-                    margin-right: rem(6px);
-                }
+            .tab-unpin-icon.left {
+                margin-right: rem(6px);
+            }
 
-                .tab-unpin-icon.right {
-                    margin-left: rem(6px);
-                }
+            .tab-unpin-icon.right {
+                margin-left: rem(6px);
             }
         }
     }
