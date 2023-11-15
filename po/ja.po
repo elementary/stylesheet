@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-15 18:48+0000\n"
-"PO-Revision-Date: 2023-05-03 01:06+0000\n"
+"PO-Revision-Date: 2023-11-17 08:43+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -46,21 +46,20 @@ msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
 #: data/stylesheet.appdata.xml.in:28
 msgid "Adw.TabOverview"
-msgstr ""
+msgstr "Adw.TabOverview"
 
 #: data/stylesheet.appdata.xml.in:30
-#, fuzzy
-#| msgid "Improvements:"
 msgid "GTK 4 Improvements:"
-msgstr "改善点:"
+msgstr "GTK 4 対応改善点:"
 
 #: data/stylesheet.appdata.xml.in:32
 msgid "Add missing \".default-decoration\" style for compact headerbars"
-msgstr ""
+msgstr "コンパクトなヘッダーバー用の \".default-decoration\" "
+"スタイルが存在していなかった不具合を修正"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Add Latte palette"
-msgstr ""
+msgstr "ラテ色のパレットを追加"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.AboutWindow"
