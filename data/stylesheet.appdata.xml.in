@@ -25,7 +25,7 @@
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
         <ul>
-          <li>Adw.TabOverView</li>
+          <li>Adw.TabOverview</li>
         </ul>
         <p>GTK 4 Improvements:</p>
         <ul>
