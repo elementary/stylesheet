@@ -1,0 +1,32 @@
+taboverview {
+    tabthumbnail {
+        .card {
+            border-radius: rem(6px);
+            margin: rem(12px);
+
+            button.circular {
+                background: rgba($fg-color, 0.9);
+                border: none;
+                color: bg-color(1);
+                box-shadow: shadow(1);
+                margin: rem(3px);
+            }
+        }
+
+        &.pinned .card {
+            padding: rem(12px);
+
+            .tab-unpin-icon.left {
+                margin-right: rem(6px);
+            }
+
+            .tab-unpin-icon.right {
+                margin-left: rem(6px);
+            }
+        }
+    }
+
+    .new-tab-button {
+        margin: rem(12px);
+    }
+}

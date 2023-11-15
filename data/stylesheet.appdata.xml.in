@@ -21,6 +21,20 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
   
   <releases>
+    <release version="7.3.0" date="2023-11-15" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.TabOverview</li>
+        </ul>
+        <p>GTK 4 Improvements:</p>
+        <ul>
+          <li>Add missing ".default-decoration" style for compact headerbars</li>
+          <li>Add Latte palette</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="7.2.0" date="2023-04-25" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
@@ -97,20 +111,7 @@
       </description>
     </release>
 
-    <release version="6.1.1" date="2021-11-23" urgency="medium">
-      <description>
-        <p>Improvements:</p>
-        <ul>
-          <li>Improve contrast of horizontal separators in dark style</li>
-        </ul>
-        <p>Fixes:</p>
-        <ul>
-          <li>Use the accent color for highlighting in IBus candidate window</li>
-          <li>Fix font style for title labels in headerbars</li>
-        </ul>
-      </description>
-    </release>
-
+    <release version="6.1.1" date="2021-11-23" urgency="medium" />
     <release version="6.1.0" date="2021-10-22" urgency="medium" />
     <release version="6.0.0" date="2021-07-15" urgency="medium" />
   </releases>
