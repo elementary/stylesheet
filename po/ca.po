@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-25 16:37+0000\n"
+"POT-Creation-Date: 2023-11-15 18:48+0000\n"
 "PO-Revision-Date: 2023-04-28 15:06+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/desktop/"
@@ -39,149 +39,166 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:44
+#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:58
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "Millora del suport per als ginys de LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:28
+#, fuzzy
+#| msgid "Adw.TabBar"
+msgid "Adw.TabOverview"
+msgstr "Adw.TabBar"
+
+#: data/stylesheet.appdata.xml.in:30
+#, fuzzy
+#| msgid "Improvements:"
+msgid "GTK 4 Improvements:"
+msgstr "Millores:"
+
+#: data/stylesheet.appdata.xml.in:32
+msgid "Add missing \".default-decoration\" style for compact headerbars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:33
+msgid "Add Latte palette"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:42
 msgid "Adw.AboutWindow"
 msgstr "Adw.AboutWindow"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:43
 msgid "Adw.MessageDialog"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:45 data/stylesheet.appdata.xml.in:64
 msgid "GTK 4 Fixes:"
 msgstr "Correccions de GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:33
+#: data/stylesheet.appdata.xml.in:47
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
 msgstr ""
-"Admet \".destructive\" i \".suggested\" a més de \".destructive-action\" i \""
-".suggested-action\""
+"Admet \".destructive\" i \".suggested\" a més de \".destructive-action\" i "
+"\".suggested-action\""
 
-#: data/stylesheet.appdata.xml.in:34
+#: data/stylesheet.appdata.xml.in:48
 msgid "\".raised\" overrides \".flat\" in Buttons"
 msgstr "\".raised\" substitueix \".flat\" als botons"
 
-#: data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:60
 msgid "Adw.PreferencesWindow"
 msgstr "Adw.PreferencesWindow"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:61
 msgid "Adw.StatusPage"
 msgstr "Adw.StatusPage"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:62
 msgid "Adw.TabBar"
 msgstr "Adw.TabBar"
 
-#: data/stylesheet.appdata.xml.in:52
+#: data/stylesheet.appdata.xml.in:66
 msgid "Correctly style list rows in popover menus"
 msgstr "Estil correcte de les files de la llista als menús emergents"
 
-#: data/stylesheet.appdata.xml.in:53
+#: data/stylesheet.appdata.xml.in:67
 msgid "Style headerbars without \".titlebar\""
 msgstr "Estil les barres de capçalera sense \".titlebar\""
 
-#: data/stylesheet.appdata.xml.in:54
+#: data/stylesheet.appdata.xml.in:68
 msgid "Style fullscreen windows"
 msgstr "Estil a les finestres de pantalla completa"
 
-#: data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:69
 msgid "Style SearchBars"
 msgstr "Estil a les barres de cerca"
 
-#: data/stylesheet.appdata.xml.in:56
+#: data/stylesheet.appdata.xml.in:70
 msgid "Add spacing between HeaderBar buttons"
 msgstr "Addició d'espai entre els botons de la barra de capçalera"
 
-#: data/stylesheet.appdata.xml.in:63 data/stylesheet.appdata.xml.in:102
+#: data/stylesheet.appdata.xml.in:77
 msgid "Improvements:"
 msgstr "Millores:"
 
-#: data/stylesheet.appdata.xml.in:65
+#: data/stylesheet.appdata.xml.in:79
 msgid "Checkerboard styles are more subtle"
 msgstr "Els estils d'escacs són més subtils."
 
-#: data/stylesheet.appdata.xml.in:66
+#: data/stylesheet.appdata.xml.in:80
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr ""
 "Estableix la mida de les \"icones grans\" a les barres de capçalera a 24 "
 "píxels."
 
-#: data/stylesheet.appdata.xml.in:67
+#: data/stylesheet.appdata.xml.in:81
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr ""
 "Ajust del disseny de la capçalera i la tipografia a Granite."
 "SimpleSettingsPage"
 
-#: data/stylesheet.appdata.xml.in:68
+#: data/stylesheet.appdata.xml.in:82
 msgid "Infobars: set correct button margins"
 msgstr "Barres d'informació: establiu els marges dels botons correctes"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:83
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Addició de farciment a la finestra emergent d'acabament de Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:84
 msgid "Fix labels for scale marks"
 msgstr "Correcció de les etiquetes per a les marques d'escala"
 
-#: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:91
-#: data/stylesheet.appdata.xml.in:106
+#: data/stylesheet.appdata.xml.in:86 data/stylesheet.appdata.xml.in:105
 msgid "Fixes:"
 msgstr "Correccions:"
 
-#: data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:88
 msgid "Correct .title-4 padding in Lists"
 msgstr "Correcció del farciment .title-4 a les llistes"
 
-#: data/stylesheet.appdata.xml.in:75
+#: data/stylesheet.appdata.xml.in:89
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
 "Botons: no configura el pes de la lletra per als fills com les informacions "
 "emergents"
 
-#: data/stylesheet.appdata.xml.in:87
+#: data/stylesheet.appdata.xml.in:101
 msgid "New Features:"
 msgstr "Característiques noves:"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:103
 msgid "Support for Gtk4"
 msgstr "Suport per a Gtk4"
 
-#: data/stylesheet.appdata.xml.in:93
+#: data/stylesheet.appdata.xml.in:107
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Correcció de la barra de títol al GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:94
+#: data/stylesheet.appdata.xml.in:108
 msgid "Fix font style for bold labels in some languages"
 msgstr ""
 "Correcció de l'estil de lletra per a les etiquetes en negreta en algunes "
 "llengües"
 
-#: data/stylesheet.appdata.xml.in:95
+#: data/stylesheet.appdata.xml.in:109
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr "ModelButtons: addició de marge entre comprovacions, ràdios i etiquetes"
 
-#: data/stylesheet.appdata.xml.in:104
-msgid "Improve contrast of horizontal separators in dark style"
-msgstr "Millora del contrast dels separadors horitzontals en estil fosc"
+#~ msgid "Improve contrast of horizontal separators in dark style"
+#~ msgstr "Millora del contrast dels separadors horitzontals en estil fosc"
 
-#: data/stylesheet.appdata.xml.in:108
-msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr ""
-"Ús del color d'accentuació per ressaltar a la finestra del candidat IBus"
+#~ msgid "Use the accent color for highlighting in IBus candidate window"
+#~ msgstr ""
+#~ "Ús del color d'accentuació per ressaltar a la finestra del candidat IBus"
 
-#: data/stylesheet.appdata.xml.in:109
-msgid "Fix font style for title labels in headerbars"
-msgstr ""
-"Correcció de l'estil de lletra per a les etiquetes de títol a les barres de "
-"capçalera"
+#~ msgid "Fix font style for title labels in headerbars"
+#~ msgstr ""
+#~ "Correcció de l'estil de lletra per a les etiquetes de títol a les barres "
+#~ "de capçalera"
 
 #~ msgid "Support for Hdy.Tabbar"
 #~ msgstr "Suport per a Hdy.Tabbar"
