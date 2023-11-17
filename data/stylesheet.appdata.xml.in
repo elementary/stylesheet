@@ -21,7 +21,7 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
   
   <releases>
-    <release version="7.3.0" date="2023-11-15" urgency="medium">
+    <release version="7.3.0" date="2023-11-16" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
         <ul>
