@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-25 16:37+0000\n"
-"PO-Revision-Date: 2023-04-28 15:06+0000\n"
-"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
+"POT-Creation-Date: 2023-11-15 18:48+0000\n"
+"PO-Revision-Date: 2023-12-01 18:07+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ru/>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -40,23 +40,42 @@ msgstr ""
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:44
+#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:58
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "Улучшена поддержка виджетов LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:28
+msgid "Adw.TabOverview"
+msgstr "Adw.TabOverview"
+
+#: data/stylesheet.appdata.xml.in:30
+msgid "GTK 4 Improvements:"
+msgstr "Улучшения для GTK 4:"
+
+#: data/stylesheet.appdata.xml.in:32
+msgid "Add missing \".default-decoration\" style for compact headerbars"
+msgstr ""
+"Добавлены отсутствовавшие стили «.default-decoration» для компактных "
+"заголовков"
+
+#: data/stylesheet.appdata.xml.in:33
+msgid "Add Latte palette"
+msgstr "Добавлена палитра «Латте»"
+
+#: data/stylesheet.appdata.xml.in:42
 msgid "Adw.AboutWindow"
 msgstr "Adw.AboutWindow"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:43
 msgid "Adw.MessageDialog"
 msgstr "Adw.MessageDialog"
 
-#: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:50
+#: data/stylesheet.appdata.xml.in:45 data/stylesheet.appdata.xml.in:64
 msgid "GTK 4 Fixes:"
 msgstr "Исправления для GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:33
+#: data/stylesheet.appdata.xml.in:47
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
@@ -64,117 +83,114 @@ msgstr ""
 "Поддержка «.destructive» и «.suggested» в дополнение к «.destructive-action» "
 "и «.suggested-action»"
 
-#: data/stylesheet.appdata.xml.in:34
+#: data/stylesheet.appdata.xml.in:48
 msgid "\".raised\" overrides \".flat\" in Buttons"
 msgstr "«.raised» переопределяет «.flat» в кнопках"
 
-#: data/stylesheet.appdata.xml.in:46
+#: data/stylesheet.appdata.xml.in:60
 msgid "Adw.PreferencesWindow"
 msgstr "Adw.PreferencesWindow"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:61
 msgid "Adw.StatusPage"
 msgstr "Adw.StatusPage"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:62
 msgid "Adw.TabBar"
 msgstr "Adw.TabBar"
 
-#: data/stylesheet.appdata.xml.in:52
+#: data/stylesheet.appdata.xml.in:66
 msgid "Correctly style list rows in popover menus"
 msgstr "Исправлены стили строк во всплывающих меню"
 
-#: data/stylesheet.appdata.xml.in:53
+#: data/stylesheet.appdata.xml.in:67
 msgid "Style headerbars without \".titlebar\""
 msgstr "Стили для заголовков без «.titlebar»"
 
-#: data/stylesheet.appdata.xml.in:54
+#: data/stylesheet.appdata.xml.in:68
 msgid "Style fullscreen windows"
 msgstr "Стили для полноэкранных окон"
 
-#: data/stylesheet.appdata.xml.in:55
+#: data/stylesheet.appdata.xml.in:69
 msgid "Style SearchBars"
 msgstr "Стили для строк поиска"
 
-#: data/stylesheet.appdata.xml.in:56
+#: data/stylesheet.appdata.xml.in:70
 msgid "Add spacing between HeaderBar buttons"
 msgstr "Добавлен отступ между кнопками в заголовке"
 
-#: data/stylesheet.appdata.xml.in:63 data/stylesheet.appdata.xml.in:102
+#: data/stylesheet.appdata.xml.in:77
 msgid "Improvements:"
 msgstr "Улучшения:"
 
-#: data/stylesheet.appdata.xml.in:65
+#: data/stylesheet.appdata.xml.in:79
 msgid "Checkerboard styles are more subtle"
 msgstr "Стиль шахматной доски теперь более тонкий"
 
-#: data/stylesheet.appdata.xml.in:66
+#: data/stylesheet.appdata.xml.in:80
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr "Размер «large-icons» в заголовках теперь равен 24px"
 
-#: data/stylesheet.appdata.xml.in:67
+#: data/stylesheet.appdata.xml.in:81
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr ""
 "Скорректирован макет заголовка и типография в Granite.SimpleSettingsPage"
 
-#: data/stylesheet.appdata.xml.in:68
+#: data/stylesheet.appdata.xml.in:82
 msgid "Infobars: set correct button margins"
 msgstr "Infobars: исправлены отступы у кнопок"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:83
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Добавлен отступ к всплывающему окну предложений Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:84
 msgid "Fix labels for scale marks"
 msgstr "Исправлены обозначения меток масштабирования"
 
-#: data/stylesheet.appdata.xml.in:72 data/stylesheet.appdata.xml.in:91
-#: data/stylesheet.appdata.xml.in:106
+#: data/stylesheet.appdata.xml.in:86 data/stylesheet.appdata.xml.in:105
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:88
 msgid "Correct .title-4 padding in Lists"
 msgstr "Скорректирован отступ .title-4 в списках"
 
-#: data/stylesheet.appdata.xml.in:75
+#: data/stylesheet.appdata.xml.in:89
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
 "Кнопки: не устанавливать стиль шрифта для детей, таких как всплывающие окна"
 
-#: data/stylesheet.appdata.xml.in:87
+#: data/stylesheet.appdata.xml.in:101
 msgid "New Features:"
 msgstr "Новые возможности:"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:103
 msgid "Support for Gtk4"
 msgstr "Поддержка Gtk4"
 
-#: data/stylesheet.appdata.xml.in:93
+#: data/stylesheet.appdata.xml.in:107
 msgid "Fix titlebar in GNOME Web 42"
 msgstr "Исправлен заголовок окна в GNOME Web 42"
 
-#: data/stylesheet.appdata.xml.in:94
+#: data/stylesheet.appdata.xml.in:108
 msgid "Fix font style for bold labels in some languages"
 msgstr "Исправлен стиль шрифта жирных надписей на некоторых языках"
 
-#: data/stylesheet.appdata.xml.in:95
+#: data/stylesheet.appdata.xml.in:109
 msgid "ModelButtons: add margin between checks, radios, and labels"
 msgstr ""
 "ModelButtons: добавлен отступ между флажками, переключателями и подписями"
 
-#: data/stylesheet.appdata.xml.in:104
-msgid "Improve contrast of horizontal separators in dark style"
-msgstr "Улучшен контраст горизонтальных разделителей в тёмном стиле"
+#~ msgid "Improve contrast of horizontal separators in dark style"
+#~ msgstr "Улучшен контраст горизонтальных разделителей в тёмном стиле"
 
-#: data/stylesheet.appdata.xml.in:108
-msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr "Цветовой акцент теперь использован для подсветки окна-кандидата в IBus"
+#~ msgid "Use the accent color for highlighting in IBus candidate window"
+#~ msgstr ""
+#~ "Цветовой акцент теперь использован для подсветки окна-кандидата в IBus"
 
-#: data/stylesheet.appdata.xml.in:109
-msgid "Fix font style for title labels in headerbars"
-msgstr "Исправлен стиль шрифта для названий окон в заголовках"
+#~ msgid "Fix font style for title labels in headerbars"
+#~ msgstr "Исправлен стиль шрифта для названий окон в заголовках"
 
 #~ msgid "Support for Hdy.Tabbar"
 #~ msgstr "Поддержка Hdy.Tabbar"
