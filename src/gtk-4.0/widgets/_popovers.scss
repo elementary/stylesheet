@@ -27,6 +27,7 @@
 
     &.destructive-action {
         color: $error-color;
+        text-shadow: none;
 
         &:hover {
             background-color: rgba($error-color, 0.2);

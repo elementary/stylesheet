@@ -55,7 +55,7 @@ button {
             &:focus {
                 @if $color-scheme == "light" {
                     background-clip: border-box;
-                    border: 1px solid $border-color;
+                    border-color: $border-color;
                 } @else if $color-scheme == "dark" {
                     &.keyboard-activating,
                     &:active,
