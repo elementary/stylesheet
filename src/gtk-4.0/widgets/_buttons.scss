@@ -75,7 +75,7 @@ button {
             }
         }
 
-        &.suggested-action:not(:disabled) {
+        &.default:not(:disabled) {
             @extend selection;
 
             @if $color-scheme == "light" {
@@ -149,7 +149,11 @@ button {
     }
 
     &.suggested {
-        @extend .suggested-action;
+        @extend .default;
+    }
+
+    &.suggested-action {
+        @extend .default;
     }
 
     &.color {
