@@ -7,32 +7,30 @@ infobar {
         border-color: $border-color;
         border-style: solid;
         border-width: 0 0 1px;
+        border-spacing: rem(12px);
         box-shadow: outset-highlight("bottom");
-        padding: rem(12px);
+        padding: rem(6px);
 
         &:dir(ltr) {
             // Minus half pixel to avoid blurry icons
-            background-position: rem(12px) calc(50% + 0.5px);
-            // Icon size + 2x padding
-            padding-left: calc(16px + #{rem(24px)});
+            background-position: rem(9px) calc(50% + 0.5px);
+            // Icon size + 12x padding
+            padding-left: calc(16px + #{rem(12px)});
         }
 
         &:dir(rtl) {
             // Minus half pixel to avoid blurry icons
-            background-position: calc(100% - #{rem(12px)}) calc(50% + 0.5px);
-            // Icon size + 2x padding
-            padding-right: calc(16px + #{rem(24px)});
+            background-position: calc(100% - #{rem(9px)}) calc(50% + 0.5px);
+            // Icon size + 12x padding
+            padding-right: calc(16px + #{rem(12px)});
+        }
+
+        // Extra padding for labels but not buttons
+        & > box:first-child {
+            padding: 6px;
         }
 
         button {
-            &:dir(ltr) {
-                margin-left: rem(12px);
-            }
-
-            &:dir(rtl) {
-                margin-right: rem(12px);
-            }
-
             &.close.image-button {
                 background: #{'alpha(white, 0.8)'};
                 border-radius: 50%;
