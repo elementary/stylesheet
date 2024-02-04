@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-15 18:48+0000\n"
-"PO-Revision-Date: 2023-07-15 16:09+0000\n"
+"PO-Revision-Date: 2024-02-05 16:11+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -47,10 +47,8 @@ msgid "Adw.TabOverview"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:30
-#, fuzzy
-#| msgid "Improvements:"
 msgid "GTK 4 Improvements:"
-msgstr "გაუმჯობესებები:"
+msgstr "GTK 4 გაუმჯობესებები:"
 
 #: data/stylesheet.appdata.xml.in:32
 msgid "Add missing \".default-decoration\" style for compact headerbars"
