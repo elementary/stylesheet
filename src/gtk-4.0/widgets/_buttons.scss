@@ -1,41 +1,7 @@
 button {
-    background-clip: padding-box;
-    border-radius: rem(3px);
-    // Explicitly set in case containers override default color
-    color: #{'@fg_color'};
-    font-weight: 500;
-    // Off-by-one to account for padding-box clip
-    padding: rem(4px) rem(7px);
     transition: background duration("in-place") $easing;
 
-    &.flat,
-    &.image-button:not(.text-button) {
-        background: none;
-        border: none;
-        box-shadow: none;
-
-        &:checked {
-            background: rgba($fg-color, 0.15);
-        }
-
-        &:focus {
-            @extend selection;
-            outline-style: none;
-        }
-
-        headerbar & {
-            border-radius: 99px;
-        }
-    }
-
-    .linked &.flat,
-    .linked &.image-button,
-    .linked &.image-button:not(.text-button),
-    &.circular.image-button,
-    &.model.image-button,
-    &.raised.image-button,
-    &.raised,
-    & {
+    &.raised {
         @extend %outset-background;
 
         background-clip: padding-box;
@@ -47,54 +13,6 @@ button {
 
         headerbar & {
             border-radius: rem(3px);
-        }
-
-        &.destructive-action:not(:disabled) {
-
-            &,
-            &:focus {
-                @if $color-scheme == "light" {
-                    background-clip: border-box;
-                    border-color: $border-color;
-                } @else if $color-scheme == "dark" {
-                    &.keyboard-activating,
-                    &:active,
-                    &:checked {
-                        border-color: rgba(black, 0.7);
-                    }
-                }
-            }
-
-            background-color: $STRAWBERRY_500;
-            color: white;
-            text-shadow: 0 1px 1px $STRAWBERRY_500;
-            -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
-
-            &:focus {
-                outline-color: rgba($STRAWBERRY_300, 0.5);
-            }
-        }
-
-        &.suggested-action:not(:disabled) {
-            @extend selection;
-
-            @if $color-scheme == "light" {
-                border-color: #{'alpha(mix(black, @accent_color, 0.9), 0.5)'};
-
-                &:backdrop {
-                    border-color: $border-color;
-                }
-            }
-
-            &.keyboard-activating,
-            &:active,
-            &:checked {
-                @if $color-scheme == "light" {
-                    border-color: #{'alpha(mix(black, @accent_color, 0.7), 0.4)'};
-                } @else if $color-scheme == "dark" {
-                    border-color: rgba(black, 0.5);
-                }
-            }
         }
 
         &.keyboard-activating,
@@ -126,6 +44,59 @@ button {
         }
     }
 
+    &.flat {
+        background: none;
+        border: none;
+        box-shadow: none;
+
+        &:checked {
+            background: rgba($fg-color, 0.15);
+        }
+
+        &:focus {
+            @extend selection;
+            outline-style: none;
+        }
+
+        headerbar & {
+            border-radius: 99px;
+        }
+    }
+
+    &.color,
+    &.combo,
+    &.lock,
+    &.text-button {
+        @extend .raised;
+
+        border-radius: rem(3px);
+        // Explicitly set in case containers override default color
+        color: #{'@fg_color'};
+        font-weight: 500;
+        // Off-by-one to account for padding-box clip
+        padding: rem(4px) rem(7px);
+
+        &:dir(ltr) box image + label,
+        &:dir(rtl) box label + image {
+            margin-left: rem(3px);
+        }
+
+        &.link {
+            padding: 0;
+        }
+    }
+
+    &.image-button:not(.text-button) {
+        @extend .circular;
+        @extend .flat;
+
+        .linked & {
+            @extend .raised;
+
+            border-radius: rem(3px);
+        }
+    }
+
     &:disabled {
         color: $insensitive-fg-color;
     }
@@ -134,14 +105,57 @@ button {
         filter: opacity($disabled-opacity);
     }
 
-    &.color,
-    &.combo,
-    &.image-button {
-        padding: rem(4px);
+    arrow {
+        min-width: rem(16px);
+        min-height: rem(16px);
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
     }
 
-    &.text-button.link {
-        padding: 0;
+    &.destructive-action:not(:disabled) {
+        background-color: $STRAWBERRY_500;
+        color: white;
+        text-shadow: 0 1px 1px $STRAWBERRY_500;
+        -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
+
+        &,
+        &:focus {
+            @if $color-scheme == "light" {
+                background-clip: border-box;
+                border-color: $border-color;
+            } @else if $color-scheme == "dark" {
+                &.keyboard-activating,
+                &:active,
+                &:checked {
+                    border-color: rgba(black, 0.7);
+                }
+            }
+        }
+
+        &:focus {
+            outline-color: rgba($STRAWBERRY_300, 0.5);
+        }
+    }
+
+    &.suggested-action:not(:disabled) {
+        @extend selection;
+
+        @if $color-scheme == "light" {
+            border-color: #{'alpha(mix(black, @accent_color, 0.9), 0.5)'};
+
+            &:backdrop {
+                border-color: $border-color;
+            }
+        }
+
+        &.keyboard-activating,
+        &:active,
+        &:checked {
+            @if $color-scheme == "light" {
+                border-color: #{'alpha(mix(black, @accent_color, 0.7), 0.4)'};
+            } @else if $color-scheme == "dark" {
+                border-color: rgba(black, 0.5);
+            }
+        }
     }
 
     &.destructive {
@@ -159,15 +173,10 @@ button {
         }
     }
 
-    arrow {
-        min-width: rem(16px);
-        min-height: rem(16px);
-        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
-    }
-
-    &:dir(ltr) box image + label,
-    &:dir(rtl) box label + image {
-        margin-left: rem(3px);
+    &.color,
+    &.combo,
+    &.image-button {
+        padding: rem(4px);
     }
 }
 
