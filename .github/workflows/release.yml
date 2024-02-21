@@ -3,7 +3,7 @@ name: Release
 
 on:
   pull_request:
-    branches: [master]
+    branches: [main]
     types: [closed]
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Release
         uses: elementary/actions/release@master
