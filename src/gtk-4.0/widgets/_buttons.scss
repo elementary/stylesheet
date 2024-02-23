@@ -206,6 +206,12 @@ button {
     &:dir(rtl) box label + image {
         margin-left: rem(3px);
     }
+
+    windowcontrols & {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+    }
 }
 
 fontbutton separator.vertical {
