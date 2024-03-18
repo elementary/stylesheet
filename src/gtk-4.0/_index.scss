@@ -18,7 +18,7 @@ $disabled-opacity: 0.5;
 $error_color: $STRAWBERRY_500;
 $success_color: $LIME_700;
 $warning_color: $BANANA_900;
-$warning-icon-color: mix($BANANA_500, $BANANA_700, $weight: 50%);
+$warning-icon-color: mix($BANANA_700, $BANANA_900, $weight: 50%);
 
 @if $color-scheme == "dark" {
     $titlebar-color: mix($BLACK_500, $BLACK_700, $weight: 65%);
