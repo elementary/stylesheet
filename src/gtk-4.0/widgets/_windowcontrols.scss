@@ -10,12 +10,14 @@ windowcontrols {
     }
 
     button {
+        background: none;
+        border-color: transparent;
+        border-radius: rem(6px);
+        box-shadow: none;
         padding: rem(4px);
 
-        &:not(:active) {
-            background: none;
-            border-color: transparent;
-            box-shadow: none;
+        &:active {
+            background: rgba($fg-color, 0.15);
         }
     }
 }
