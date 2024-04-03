@@ -1,0 +1,79 @@
+@function undershoot-gradient ($direction) {
+    @return linear-gradient(
+        $direction,
+        #{'@borders'},
+        rgba(black, 0.05) 1px,
+        rgba(black, 0.0) rem(3px)
+    );
+}
+
+toolbarview {
+    &.undershoot-top scrolledwindow {
+        overshoot.top {
+            background:
+                overshoot-gradient(to top),
+                undershoot-gradient(to bottom);
+
+            &:backdrop {
+                background:
+                    overshoot-gradient-backdrop(to top),
+                    undershoot-gradient(to bottom);
+            }
+        }
+
+        undershoot.top {
+            background: undershoot-gradient(to bottom);
+        }
+    }
+
+    &.undershoot-bottom scrolledwindow {
+        overshoot.bottom {
+            background:
+                overshoot-gradient(to bottom),
+                undershoot-gradient(to top);
+
+            &:backdrop {
+                background:
+                    overshoot-gradient-backdrop(to bottom),
+                    undershoot-gradient(to bottom);
+            }
+        }
+
+        undershoot.bottom {
+            background: undershoot-gradient(to top);
+        }
+    }
+
+    revealer.top-bar headerbar,
+    revealer.top-bar headerbar:backdrop,
+    revealer.bottom-bar actionbar,
+    revealer.bottom-bar actionbar:backdrop {
+        background: inherit;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    revealer.top-bar {
+        &.raised {
+            box-shadow:
+                outset-highlight(),
+                // Intentionally not in ems since it's used as a stroke
+                0 1px 0 0 #{'alpha(@borders, 0.4)'},
+                0 1px rem(2px) rgba(black, 0.2);
+
+            &:backdrop {
+                box-shadow:
+                    outset-highlight(),
+                    0 0 0 1px #{'alpha(@borders, 0.3)'},
+                    0 1px rem(2px) rgba(black, 0.15);
+            }
+        }
+
+        &.raised.border {
+            box-shadow:
+                outset-highlight(),
+                // Intentionally not in ems since it's used as a stroke
+                0 1px 0 0 #{'alpha(@borders, 0.8)'};
+        }
+    }
+}
