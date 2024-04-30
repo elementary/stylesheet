@@ -18,6 +18,8 @@ windowcontrols {
 
         &:active {
             background: rgba($fg-color, 0.15);
+            border-color: transparent;
+            box-shadow: none;
         }
     }
 }
