@@ -19,8 +19,27 @@
   <developer_name>elementary, Inc.</developer_name>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
-  
+
   <releases>
+    <release version="8.0.0" date="2024-04-30" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.ToolbarView</li>
+          <li>Adw.Toast</li>
+        </ul>
+        <p>GTK 4 Improvements:</p>
+        <ul>
+          <li>Remove styles shipped in Granite</li>
+          <li>Fix destructive menuitem</li>
+          <li>Fix size of menubars that contain buttons</li>
+          <li>Adjust warning icon color</li>
+          <li>Fix popovermenu height when it contains a single item</li>
+          <li>Flatter window control styles</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="7.3.0" date="2023-11-16" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
@@ -96,21 +115,7 @@
       </issues>
     </release>
 
-    <release version="7.0.0" date="2022-04-20" urgency="medium">
-      <description>
-        <p>New Features:</p>
-        <ul>
-          <li>Support for Gtk4</li>
-        </ul>
-        <p>Fixes:</p>
-        <ul>
-          <li>Fix titlebar in GNOME Web 42</li>
-          <li>Fix font style for bold labels in some languages</li>
-          <li>ModelButtons: add margin between checks, radios, and labels</li>
-        </ul>
-      </description>
-    </release>
-
+    <release version="7.0.0" date="2022-04-20" urgency="medium" />
     <release version="6.1.1" date="2021-11-23" urgency="medium" />
     <release version="6.1.0" date="2021-10-22" urgency="medium" />
     <release version="6.0.0" date="2021-07-15" urgency="medium" />
