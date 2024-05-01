@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-30 18:42+0000\n"
-"PO-Revision-Date: 2023-12-01 18:07+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"PO-Revision-Date: 2024-05-02 03:13+0000\n"
+"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ru/>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -63,27 +63,27 @@ msgstr "Улучшения для GTK 4:"
 
 #: data/stylesheet.appdata.xml.in:33
 msgid "Remove styles shipped in Granite"
-msgstr ""
+msgstr "Удалены стили, поставляемые в Granite"
 
 #: data/stylesheet.appdata.xml.in:34
 msgid "Fix destructive menuitem"
-msgstr ""
+msgstr "Исправлены деструктивные элементы меню"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Fix size of menubars that contain buttons"
-msgstr ""
+msgstr "Исправлен размен панелей меню, содержащих кнопки"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Adjust warning icon color"
-msgstr ""
+msgstr "Скорректирован цвет значка предупреждения"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Fix popovermenu height when it contains a single item"
-msgstr ""
+msgstr "Исправлена высота всплывающих меню, содержащих один элемент"
 
 #: data/stylesheet.appdata.xml.in:38
 msgid "Flatter window control styles"
-msgstr ""
+msgstr "Более плоские элементы управления окнами"
 
 #: data/stylesheet.appdata.xml.in:47
 msgid "Adw.TabOverview"
