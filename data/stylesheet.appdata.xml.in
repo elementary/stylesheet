@@ -16,7 +16,9 @@
   <content_rating type="oars-1.1" />
   <translation type="gettext">io.elementary.stylesheet</translation>
   <compulsory_for_desktop>Pantheon</compulsory_for_desktop>
-  <developer_name>elementary, Inc.</developer_name>
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
+  </developer>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
 
