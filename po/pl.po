@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-30 18:42+0000\n"
-"PO-Revision-Date: 2023-11-18 06:25+0000\n"
+"POT-Creation-Date: 2024-05-02 03:13+0000\n"
+"PO-Revision-Date: 2024-05-02 03:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -36,82 +36,79 @@ msgstr ""
 "Oryginalny styl Gtk.CSS zaprojektowany specjalnie dla elementary OS i jego "
 "środowiska pulpitu: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19
-msgid "elementary, Inc."
-msgstr "elementary, Inc."
-
-#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:45
-#: data/stylesheet.appdata.xml.in:59 data/stylesheet.appdata.xml.in:77
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:61 data/stylesheet.appdata.xml.in:79
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "Lepsze wsparcie dla widżetów LibAdwaita:"
 
-#: data/stylesheet.appdata.xml.in:28
+#: data/stylesheet.appdata.xml.in:30
 #, fuzzy
 #| msgid "Adw.TabOverview"
 msgid "Adw.ToolbarView"
 msgstr "Adw.TabOverview"
 
-#: data/stylesheet.appdata.xml.in:29
+#: data/stylesheet.appdata.xml.in:31
 #, fuzzy
 #| msgid "Adw.TabBar"
 msgid "Adw.Toast"
 msgstr "Adw.TabBar"
 
-#: data/stylesheet.appdata.xml.in:31 data/stylesheet.appdata.xml.in:49
+#: data/stylesheet.appdata.xml.in:33 data/stylesheet.appdata.xml.in:51
 msgid "GTK 4 Improvements:"
 msgstr "Ulepszenia GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:33
-msgid "Remove styles shipped in Granite"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:34
-msgid "Fix destructive menuitem"
-msgstr ""
-
 #: data/stylesheet.appdata.xml.in:35
-msgid "Fix size of menubars that contain buttons"
-msgstr ""
+msgid "Remove styles shipped in Granite"
+msgstr "Usunięto style dostarczane w Granite"
 
 #: data/stylesheet.appdata.xml.in:36
-msgid "Adjust warning icon color"
-msgstr ""
+msgid "Fix destructive menuitem"
+msgstr "Naprawiono niszczący menuitem"
 
 #: data/stylesheet.appdata.xml.in:37
-msgid "Fix popovermenu height when it contains a single item"
-msgstr ""
+msgid "Fix size of menubars that contain buttons"
+msgstr "Naprawiono rozmiar pasków menu zawierających przyciski"
 
 #: data/stylesheet.appdata.xml.in:38
-msgid "Flatter window control styles"
-msgstr ""
+msgid "Adjust warning icon color"
+msgstr "Poprawiono kolor ikony ostrzeżenia"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:39
+msgid "Fix popovermenu height when it contains a single item"
+msgstr ""
+"Naprawiono wysokość wyskakującego menu zawierającego pojedynczy element"
+
+#: data/stylesheet.appdata.xml.in:40
+msgid "Flatter window control styles"
+msgstr "Płaskie style kontroli okien"
+
+#: data/stylesheet.appdata.xml.in:49
 msgid "Adw.TabOverview"
 msgstr "Adw.TabOverview"
 
-#: data/stylesheet.appdata.xml.in:51
+#: data/stylesheet.appdata.xml.in:53
 msgid "Add missing \".default-decoration\" style for compact headerbars"
 msgstr ""
 "Dodano brakujący styl „.default-decoration” dla kompaktowych pasków "
 "tytułowych"
 
-#: data/stylesheet.appdata.xml.in:52
+#: data/stylesheet.appdata.xml.in:54
 msgid "Add Latte palette"
 msgstr "Dodano paletę Latte"
 
-#: data/stylesheet.appdata.xml.in:61
+#: data/stylesheet.appdata.xml.in:63
 msgid "Adw.AboutWindow"
 msgstr "Adw.AboutWindow"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:64
 msgid "Adw.MessageDialog"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:64 data/stylesheet.appdata.xml.in:83
+#: data/stylesheet.appdata.xml.in:66 data/stylesheet.appdata.xml.in:85
 msgid "GTK 4 Fixes:"
 msgstr "Poprawki dla GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:66
+#: data/stylesheet.appdata.xml.in:68
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
@@ -119,83 +116,86 @@ msgstr ""
 "Wsparcie dla „.destructive” oraz „.suggested” w dodatku do „.destructive-"
 "action” i „.suggested-action”"
 
-#: data/stylesheet.appdata.xml.in:67
+#: data/stylesheet.appdata.xml.in:69
 msgid "\".raised\" overrides \".flat\" in Buttons"
 msgstr "„.raised” nadpisuje „.flat” w przyciskach"
 
-#: data/stylesheet.appdata.xml.in:79
+#: data/stylesheet.appdata.xml.in:81
 msgid "Adw.PreferencesWindow"
 msgstr "Adw.PreferencesWindow"
 
-#: data/stylesheet.appdata.xml.in:80
+#: data/stylesheet.appdata.xml.in:82
 msgid "Adw.StatusPage"
 msgstr "Adw.StatusPage"
 
-#: data/stylesheet.appdata.xml.in:81
+#: data/stylesheet.appdata.xml.in:83
 msgid "Adw.TabBar"
 msgstr "Adw.TabBar"
 
-#: data/stylesheet.appdata.xml.in:85
+#: data/stylesheet.appdata.xml.in:87
 msgid "Correctly style list rows in popover menus"
 msgstr "Poprawiono styl wierszy list w wyskakujących menu"
 
-#: data/stylesheet.appdata.xml.in:86
+#: data/stylesheet.appdata.xml.in:88
 msgid "Style headerbars without \".titlebar\""
 msgstr "Paski główne są teraz stylowane bez „.titlebar”"
 
-#: data/stylesheet.appdata.xml.in:87
+#: data/stylesheet.appdata.xml.in:89
 msgid "Style fullscreen windows"
 msgstr "Stylowanie okien pełnoekranowych"
 
-#: data/stylesheet.appdata.xml.in:88
+#: data/stylesheet.appdata.xml.in:90
 msgid "Style SearchBars"
 msgstr "Stylowanie pasków wyszukiwania"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:91
 msgid "Add spacing between HeaderBar buttons"
 msgstr "Dodano odstęp pomiędzy ikonami w pasku głównym"
 
-#: data/stylesheet.appdata.xml.in:96
+#: data/stylesheet.appdata.xml.in:98
 msgid "Improvements:"
 msgstr "Ulepszenia:"
 
-#: data/stylesheet.appdata.xml.in:98
+#: data/stylesheet.appdata.xml.in:100
 msgid "Checkerboard styles are more subtle"
 msgstr "Style w szachownicę są bardziej subtelne"
 
-#: data/stylesheet.appdata.xml.in:99
+#: data/stylesheet.appdata.xml.in:101
 msgid "Set `large-icons` size on headerbars to 24px"
 msgstr "Ustaw wielkość `duże-ikony` na paskach nagłówkowych na 24px"
 
-#: data/stylesheet.appdata.xml.in:100
+#: data/stylesheet.appdata.xml.in:102
 msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
 msgstr "Dostosuj układ nagłówków i typografię w Granite.SimpleSettingsPage"
 
-#: data/stylesheet.appdata.xml.in:101
+#: data/stylesheet.appdata.xml.in:103
 msgid "Infobars: set correct button margins"
 msgstr "Paski informacyjne: poprawnie ustawiono marginesy przycisków"
 
-#: data/stylesheet.appdata.xml.in:102
+#: data/stylesheet.appdata.xml.in:104
 msgid "Add padding to Gtk.Entry's completion popover"
 msgstr "Dodano padding do podpowiedzi Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:103
+#: data/stylesheet.appdata.xml.in:105
 msgid "Fix labels for scale marks"
 msgstr "Naprawiono etykiety dla oznaczeń skali"
 
-#: data/stylesheet.appdata.xml.in:105
+#: data/stylesheet.appdata.xml.in:107
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/stylesheet.appdata.xml.in:107
+#: data/stylesheet.appdata.xml.in:109
 msgid "Correct .title-4 padding in Lists"
 msgstr "Poprawiono padding .title-4 w listach"
 
-#: data/stylesheet.appdata.xml.in:108
+#: data/stylesheet.appdata.xml.in:110
 msgid "Buttons: don't set font weight for children like popovers"
 msgstr ""
 "Przyciski: nie ustawiają już grubości fontu dla elementów potomnych takich "
 "jak popovery"
+
+#~ msgid "elementary, Inc."
+#~ msgstr "elementary, Inc."
 
 #~ msgid "New Features:"
 #~ msgstr "Nowe funkcje:"
