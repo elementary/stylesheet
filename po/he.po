@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-02 03:13+0000\n"
-"PO-Revision-Date: 2023-11-17 08:43+0000\n"
+"PO-Revision-Date: 2024-05-08 15:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -58,27 +58,27 @@ msgstr "שיפורי GTK4:"
 
 #: data/stylesheet.appdata.xml.in:35
 msgid "Remove styles shipped in Granite"
-msgstr ""
+msgstr "הוסרו סגנונות שכלולים ב־Granite"
 
 #: data/stylesheet.appdata.xml.in:36
 msgid "Fix destructive menuitem"
-msgstr ""
+msgstr "תוקן פריט תפריט הרסני"
 
 #: data/stylesheet.appdata.xml.in:37
 msgid "Fix size of menubars that contain buttons"
-msgstr ""
+msgstr "תוקן גודל סרגלי התפריטים שמכילים כפתורים"
 
 #: data/stylesheet.appdata.xml.in:38
 msgid "Adjust warning icon color"
-msgstr ""
+msgstr "צבע סמל האזהרה הותאם"
 
 #: data/stylesheet.appdata.xml.in:39
 msgid "Fix popovermenu height when it contains a single item"
-msgstr ""
+msgstr "תוקן גובה תפריט צץ כשהוא מכיל פריט בודד"
 
 #: data/stylesheet.appdata.xml.in:40
 msgid "Flatter window control styles"
-msgstr ""
+msgstr "סגנונות פקדי חלון שטוחים יותר"
 
 #: data/stylesheet.appdata.xml.in:49
 msgid "Adw.TabOverview"
