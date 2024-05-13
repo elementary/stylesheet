@@ -63,3 +63,14 @@ tabbar {
         shadow(1);
     margin: 12px;
 }
+
+toolbarview revealer.top-bar {
+    tabbar {
+        box-shadow: 0 -1px #{'alpha(@highlight_color, 0.2)'};
+        background-image: linear-gradient(to bottom,
+                #{'@borders'},
+                #{'alpha(@borders, 0.5)'} 1px,
+                transparent rem(2px)
+        );
+    }
+}
