@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-14 22:43+0000\n"
-"PO-Revision-Date: 2024-05-01 02:23+0000\n"
+"PO-Revision-Date: 2024-05-15 23:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -44,7 +44,8 @@ msgstr "LibAdwaita ウィジェットへの対応を改善:"
 #: data/stylesheet.appdata.xml.in:30
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
-msgstr ""
+msgstr "Adw.ToolbarView: \"raised\" と \"border\" を設定する \"bottom-bar\" "
+"スタイルを追加"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ToolbarView"
