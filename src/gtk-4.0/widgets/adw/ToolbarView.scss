@@ -76,4 +76,40 @@ toolbarview {
                 0 1px 0 0 #{'alpha(@borders, 0.8)'};
         }
     }
+
+    revealer.bottom-bar {
+        &.raised {
+            background-color: rgba(black, 0.01);
+            background-image:
+                linear-gradient(
+                    to bottom,
+                    $border-color 1px,
+                    rgba(black, 0.07) 1px,
+                    transparent rem(3px)
+                );
+            box-shadow: 0 -1px #{'alpha(@highlight_color, 0.2)'};
+
+            &:backdrop {
+                background-image:
+                    linear-gradient(
+                        to bottom,
+                        $border-color 1px,
+                        rgba(black, 0.04) 1px,
+                        transparent rem(3px)
+                    );
+                box-shadow: none;
+            }
+        }
+
+        &.raised.border {
+            background: rgba(black, 0.03);
+            box-shadow:
+                0 -1px #{'@borders'},
+                inset 0 1px #{'alpha(@highlight_color, 0.3)'};
+        }
+
+        actionbar {
+            padding: rem(6px);
+        }
+    }
 }
