@@ -59,7 +59,27 @@ tabbar {
     box-shadow:
         outset-highlight(),
         // Intentionally not in ems since it's used as a stroke
-        0 0 0 1px rgba(black, 0.1),
+        0 0 0 1px scale-color($border-color, $alpha: -20%),
         shadow(1);
     margin: 12px;
+}
+
+toolbarview revealer.top-bar {
+    tabbar {
+        box-shadow: 0 -1px #{'alpha(@highlight_color, 0.2)'};
+        background-image: linear-gradient(to bottom,
+                #{'@borders'},
+                #{'alpha(@borders, 0.5)'} 1px,
+                transparent rem(2px)
+        );
+
+        .box {
+            background-image: linear-gradient(to bottom,
+                rgba(black, 0),
+                rgba(black, 0) calc(100% - 2px),
+                #{'alpha(@borders, 0.05)'} calc(100% - 1px),
+                #{'alpha(@borders, 0.25)'}
+            );
+        }
+    }
 }

@@ -88,7 +88,7 @@ tab {
         background-color: #{'@tab_base_color'};
         box-shadow:
             outset-highlight(),
-            0 0 0 1px rgba(black, 0.1),
+            0 0 0 1px scale-color($border-color, $alpha: -20%),
             outset-shadow(2);
 
         &:backdrop {
