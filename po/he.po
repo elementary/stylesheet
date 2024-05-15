@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-14 22:43+0000\n"
-"PO-Revision-Date: 2024-05-08 15:13+0000\n"
+"PO-Revision-Date: 2024-05-15 23:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/he/>\n"
@@ -45,6 +45,8 @@ msgstr "שופרה התמיכה בווידג׳טים של LibAdwaita:"
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 msgstr ""
+"Adw.ToolbarView: נוספו הסגנונות „bottom-bar” (פס תחתון) למקרים „raised” "
+"(מוגבה) ו־„border” (מסגרת)"
 
 #: data/stylesheet.appdata.xml.in:42
 #, fuzzy
