@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-14 22:43+0000\n"
-"PO-Revision-Date: 2024-05-02 03:13+0000\n"
+"PO-Revision-Date: 2024-05-20 08:13+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "desktop/stylesheet-extra/en_GB/>\n"
@@ -45,6 +45,7 @@ msgstr "Improve support for LibAdwaita widgets:"
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 msgstr ""
+"Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 
 #: data/stylesheet.appdata.xml.in:42
 #, fuzzy
