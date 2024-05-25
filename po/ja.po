@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-14 22:43+0000\n"
-"PO-Revision-Date: 2024-05-15 23:13+0000\n"
+"PO-Revision-Date: 2024-05-25 11:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -77,7 +77,7 @@ msgstr "警告アイコンの色を調整"
 
 #: data/stylesheet.appdata.xml.in:51
 msgid "Fix popovermenu height when it contains a single item"
-msgstr "ポップオーバーメニューに1つしか項目がない場合の高さを修正"
+msgstr "ポップオーバーメニューに 1 つしか項目がない場合の高さを修正"
 
 #: data/stylesheet.appdata.xml.in:52
 msgid "Flatter window control styles"
