@@ -7,7 +7,7 @@
 }
 
 // Hdy.Deck and Hdy.Leaflet
-deck,
+navigation-view,
 leaflet,
 webkitwebview {
     > dimming {
@@ -24,9 +24,9 @@ webkitwebview {
     }
 
     > shadow {
-        &.left  { background: background-shadow(to right); }
-        &.right { background: background-shadow(to left); }
-        &.up    { background: background-shadow(to bottom); }
-        &.down  { background: background-shadow(to top); }
+        &.left  { background: background-shadow(to right); min-width: rem(6px); }
+        &.right { background: background-shadow(to left);  min-width: rem(6px);}
+        &.up    { background: background-shadow(to bottom); min-height: rem(6px); }
+        &.down  { background: background-shadow(to top); min-height: rem(6px);}
     }
 }
