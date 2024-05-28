@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2024-05-25 11:13+0000\n"
+"PO-Revision-Date: 2024-05-29 06:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "NavigationView: Fix missing shadows and dimming"
-msgstr ""
+msgstr "NavigationView: 影と調光がなかった不具合を修正"
 
 #: data/stylesheet.appdata.xml.in:43
 msgid "Adw.ToolbarView"
