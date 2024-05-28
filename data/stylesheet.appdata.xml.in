@@ -28,6 +28,7 @@
         <p>Improve support for LibAdwaita widgets:</p>
         <ul>
           <li>Adw.ToolbarView: add "bottom-bar" styles for "raised" and "border"</li>
+          <li>NavigationView: Fix missing shadows and dimming</li>
         </ul>
       </description>
       <issues>
