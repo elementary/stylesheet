@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2024-05-17 14:13+0000\n"
+"PO-Revision-Date: 2024-05-29 06:13+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ca/>\n"
@@ -48,7 +48,7 @@ msgstr "Adw.ToolbarView: afegeix estils de barra inferior per a aixecat i vora"
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "NavigationView: Fix missing shadows and dimming"
-msgstr ""
+msgstr "NavigationView: correcció de les ombres i l'enfosquiment que falten"
 
 #: data/stylesheet.appdata.xml.in:43
 #, fuzzy
