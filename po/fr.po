@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2024-05-15 23:13+0000\n"
+"PO-Revision-Date: 2024-06-06 10:13+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/fr/>\n"
@@ -50,7 +50,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "NavigationView: Fix missing shadows and dimming"
-msgstr ""
+msgstr "NavigationView : Correction des ombres et des gradations manquantes"
 
 #: data/stylesheet.appdata.xml.in:43
 #, fuzzy
