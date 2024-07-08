@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2022-06-11 23:34+0000\n"
+"PO-Revision-Date: 2024-07-09 14:02+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pt/>\n"
@@ -17,29 +17,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Folha de estilo do sistema"
 
 #: data/stylesheet.appdata.xml.in:9
-#, fuzzy
-#| msgid "The Gtk Stylesheet for elementary OS"
 msgid "The look and feel for elementary OS"
-msgstr "A folha de estilos Gtk para o elementary OS"
+msgstr "O aspeto para elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"Uma folha de estilo Gtk.CSS original concebida especificamente para o "
+"elementary OS e o seu ambiente de trabalho: Pantheon."
 
 #: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:41
 #: data/stylesheet.appdata.xml.in:60 data/stylesheet.appdata.xml.in:74
 #: data/stylesheet.appdata.xml.in:92
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Melhora o suporte para widgets LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid ""
