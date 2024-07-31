@@ -1,3 +1,9 @@
+io.elementary.stylesheet (8.1.0) noble; urgency=medium
+
+  * Release 8.1.0
+
+ -- Danielle Foré <danielle@elementary.io>  Wed, 31 Jul 2024 11:07:01 -0700
+
 io.elementary.stylesheet (8.0.0) noble; urgency=medium
 
   * New upstream release
