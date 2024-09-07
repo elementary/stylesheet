@@ -8,33 +8,36 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-09-07 17:04+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
+"desktop/stylesheet-extra/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "系統樣式表"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The look and feel for elementary OS"
-msgstr ""
+msgstr "elementary OS 的外觀與感覺"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
-msgstr ""
+msgstr "專門設計給 elementary OS 與其桌面環境 Pantheon 使用 Gtk.CSS 樣式表。"
 
 #: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:41
 #: data/stylesheet.appdata.xml.in:60 data/stylesheet.appdata.xml.in:74
 #: data/stylesheet.appdata.xml.in:92
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "改善 LibAdwaita 元件的支援："
 
 #: data/stylesheet.appdata.xml.in:30
 msgid ""
@@ -55,11 +58,11 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:64
 msgid "GTK 4 Improvements:"
-msgstr ""
+msgstr "GTK 4 改善項目："
 
 #: data/stylesheet.appdata.xml.in:48
 msgid "Remove styles shipped in Granite"
-msgstr ""
+msgstr "移除已由 Granite 提供的樣式"
 
 #: data/stylesheet.appdata.xml.in:49
 msgid "Fix destructive menuitem"
@@ -67,19 +70,19 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:50
 msgid "Fix size of menubars that contain buttons"
-msgstr ""
+msgstr "修正包含按鈕的 menubar 的大小"
 
 #: data/stylesheet.appdata.xml.in:51
 msgid "Adjust warning icon color"
-msgstr ""
+msgstr "調整警告圖示色彩"
 
 #: data/stylesheet.appdata.xml.in:52
 msgid "Fix popovermenu height when it contains a single item"
-msgstr ""
+msgstr "修正 popovermenu 在只有包含一個項目時的高度"
 
 #: data/stylesheet.appdata.xml.in:53
 msgid "Flatter window control styles"
-msgstr ""
+msgstr "使用更扁平化的視窗控制樣式"
 
 #: data/stylesheet.appdata.xml.in:62
 msgid "Adw.TabOverview"
@@ -87,7 +90,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:66
 msgid "Add missing \".default-decoration\" style for compact headerbars"
-msgstr ""
+msgstr "為簡潔 headerbar 新增缺乏的 \".default-decoration\" 樣式"
 
 #: data/stylesheet.appdata.xml.in:67
 msgid "Add Latte palette"
@@ -103,17 +106,19 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:79 data/stylesheet.appdata.xml.in:98
 msgid "GTK 4 Fixes:"
-msgstr ""
+msgstr "GTK 4 修正："
 
 #: data/stylesheet.appdata.xml.in:81
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
 msgstr ""
+"在 \".destructive-action\" 和 \".suggested-action\" 以外也支援 \"."
+"destructive\" 和 \".suggested\""
 
 #: data/stylesheet.appdata.xml.in:82
 msgid "\".raised\" overrides \".flat\" in Buttons"
-msgstr ""
+msgstr "按鈕的 \".raised\" 狀態會覆寫 \".flat\""
 
 #: data/stylesheet.appdata.xml.in:94
 msgid "Adw.PreferencesWindow"
@@ -133,15 +138,15 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:101
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "新增沒有 \".titlebar\" 的 headerbar 的樣式"
 
 #: data/stylesheet.appdata.xml.in:102
 msgid "Style fullscreen windows"
-msgstr ""
+msgstr "新增全螢幕視窗的樣式"
 
 #: data/stylesheet.appdata.xml.in:103
 msgid "Style SearchBars"
-msgstr ""
+msgstr "新增 SearchBars 的樣式"
 
 #: data/stylesheet.appdata.xml.in:104
 msgid "Add spacing between HeaderBar buttons"
