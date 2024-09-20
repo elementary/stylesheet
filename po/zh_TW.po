@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2024-09-07 17:04+0000\n"
+"PO-Revision-Date: 2024-09-20 09:43+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "desktop/stylesheet-extra/zh_Hant/>\n"
@@ -42,11 +42,11 @@ msgstr "改善 LibAdwaita 元件的支援："
 #: data/stylesheet.appdata.xml.in:30
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
-msgstr ""
+msgstr "Adw.ToolbarView：為 \"bottom-bar\" 新增 \"raised\" 和 \"border\" 的樣式"
 
 #: data/stylesheet.appdata.xml.in:31
 msgid "NavigationView: Fix missing shadows and dimming"
-msgstr ""
+msgstr "NavigationView：修正缺乏陰影和暗化"
 
 #: data/stylesheet.appdata.xml.in:43
 msgid "Adw.ToolbarView"
@@ -66,7 +66,7 @@ msgstr "移除已由 Granite 提供的樣式"
 
 #: data/stylesheet.appdata.xml.in:49
 msgid "Fix destructive menuitem"
-msgstr ""
+msgstr "修正破壞性的選單項目"
 
 #: data/stylesheet.appdata.xml.in:50
 msgid "Fix size of menubars that contain buttons"
@@ -94,7 +94,7 @@ msgstr "為簡潔 headerbar 新增缺乏的 \".default-decoration\" 樣式"
 
 #: data/stylesheet.appdata.xml.in:67
 msgid "Add Latte palette"
-msgstr ""
+msgstr "新增「拿鐵」配色方案"
 
 #: data/stylesheet.appdata.xml.in:76
 msgid "Adw.AboutWindow"
@@ -134,7 +134,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:100
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "在 popover 選單中為清單各列套用正確樣式"
 
 #: data/stylesheet.appdata.xml.in:101
 msgid "Style headerbars without \".titlebar\""
@@ -150,4 +150,4 @@ msgstr "新增 SearchBars 的樣式"
 
 #: data/stylesheet.appdata.xml.in:104
 msgid "Add spacing between HeaderBar buttons"
-msgstr ""
+msgstr "在 HeaderBar（標頭列）按鈕之間加入間隔"
