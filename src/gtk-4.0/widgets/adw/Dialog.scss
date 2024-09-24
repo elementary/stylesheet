@@ -1,0 +1,23 @@
+bottom-sheet,
+floating-sheet {
+    > dimming {
+        background: rgba(black, 0.4);
+    }
+
+    sheet {
+        @extend window, .dialog, .csd;
+    }
+}
+
+bottom-sheet sheet {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    > stack > widget > drag-handle {
+        background: rgba($fg-color, 0.5);
+        min-width: 3em;
+        min-height: 0.5em;
+        margin: 1em;
+        border-radius: 1em;
+    }
+}
