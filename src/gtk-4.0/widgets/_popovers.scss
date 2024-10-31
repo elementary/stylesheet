@@ -3,6 +3,7 @@
     background: transparent;
     border: none;
     border-radius: 0;
+    border-spacing: rem(6px);
     box-shadow: none;
     color: $fg-color;
     font: initial;
@@ -48,13 +49,7 @@
 
     check,
     radio {
-        &.left {
-            margin-right: rem(6px);
-        }
-
-        &.right {
-            margin-left: rem(6px);
-        }
+        margin: 0;
     }
 
     switch slider {
@@ -179,14 +174,12 @@ popover.background {
             &:dir(ltr) {
                 image:first-child {
                     // Off-by-one for some reason. Maybe optical illusion?
-                    margin-left: rem(-23px);
+                    margin-left: rem(-7px);
                     padding-left: 0;
-                    padding-right: rem(5px);
                 }
 
                 > check,
                 > radio {
-                    margin-right: rem(6px);
                     margin-left: rem(-6px);
                 }
             }
@@ -195,13 +188,11 @@ popover.background {
                 image:first-child {
                     // Off-by-one for some reason. Maybe optical illusion?
                     margin-right: rem(-23px);
-                    padding-left: rem(5px);
                     padding-right: 0;
                 }
 
                 > check,
                 > radio {
-                    margin-left: rem(6px);
                     margin-right: rem(-6px);
                 }
             }
@@ -229,14 +220,9 @@ popover.background {
         box.inline-buttons {
             margin: rem(3px) rem(12px);
 
-            &:dir(ltr) button + button {
-                margin-left: rem(6px);
+            > box {
+                border-spacing: rem(6px);
             }
-        }
-
-        &:dir(ltr) box.inline-buttons label + box,
-        &:dir(ltr) modelbutton label + accelerator {
-            margin-left: rem(12px);
         }
 
         .title {
