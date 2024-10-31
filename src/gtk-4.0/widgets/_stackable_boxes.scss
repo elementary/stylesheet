@@ -9,7 +9,8 @@
 // Hdy.Deck and Hdy.Leaflet
 navigation-view,
 leaflet,
-webkitwebview {
+webkitwebview,
+overlay-split-view {
     > dimming {
         background: rgba(black, 0.15);
         @if $color-scheme == "dark" {
