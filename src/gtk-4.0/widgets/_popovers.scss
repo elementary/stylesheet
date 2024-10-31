@@ -174,12 +174,8 @@ popover.background {
             &:dir(ltr) {
                 image:first-child {
                     // Off-by-one for some reason. Maybe optical illusion?
-                    margin-left: rem(-23px);
+                    margin-left: rem(-7px);
                     padding-left: 0;
-
-                    &.large-icons {
-                        margin-left: rem(-7px);
-                    }
                 }
 
                 > check,
