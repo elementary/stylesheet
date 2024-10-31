@@ -176,6 +176,10 @@ popover.background {
                     // Off-by-one for some reason. Maybe optical illusion?
                     margin-left: rem(-23px);
                     padding-left: 0;
+
+                    &.large-icons {
+                        margin-left: rem(-7px);
+                    }
                 }
 
                 > check,
