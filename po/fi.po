@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-02 15:16+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://l10n.elementary.io/projects/desktop/"
+"stylesheet-extra/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -56,7 +58,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:64
 msgid "GTK 4 Improvements:"
-msgstr ""
+msgstr "GTK 4 -parannukset:"
 
 #: data/stylesheet.appdata.xml.in:48
 msgid "Remove styles shipped in Granite"
@@ -104,7 +106,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:79 data/stylesheet.appdata.xml.in:98
 msgid "GTK 4 Fixes:"
-msgstr ""
+msgstr "GTK 4 -korjaukset:"
 
 #: data/stylesheet.appdata.xml.in:81
 msgid ""
