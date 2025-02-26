@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-30 12:14-0700\n"
-"PO-Revision-Date: 2022-10-02 07:23+0000\n"
+"POT-Creation-Date: 2024-05-28 01:02+0000\n"
+"PO-Revision-Date: 2024-06-12 15:29+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -36,97 +36,206 @@ msgstr ""
 "Oryginalny styl Gtk.CSS zaprojektowany specjalnie dla elementary OS i jego "
 "środowiska pulpitu: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19 data/stylesheet.appdata.xml.in:55
-msgid "Improvements:"
-msgstr "Ulepszenia:"
-
-#: data/stylesheet.appdata.xml.in:21
-msgid "Checkerboard styles are more subtle"
-msgstr "Style w szachownicę są bardziej subtelne"
-
-#: data/stylesheet.appdata.xml.in:22
-msgid "Set `large-icons` size on headerbars to 24px"
-msgstr "Ustaw wielkość `duże-ikony` na paskach nagłówkowych na 24px"
-
-#: data/stylesheet.appdata.xml.in:23
-msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
-msgstr "Dostosuj układ nagłówków i typografię w Granite.SimpleSettingsPage"
-
-#: data/stylesheet.appdata.xml.in:24
-msgid "Infobars: set correct button margins"
-msgstr "Paski informacyjne: poprawnie ustawiono marginesy przycisków"
-
-#: data/stylesheet.appdata.xml.in:25
-msgid "Add padding to Gtk.Entry's completion popover"
-msgstr "Dodano padding do podpowiedzi Gtk.Entry"
-
-#: data/stylesheet.appdata.xml.in:27 data/stylesheet.appdata.xml.in:45
-#: data/stylesheet.appdata.xml.in:59
-msgid "Fixes:"
-msgstr "Poprawki:"
-
-#: data/stylesheet.appdata.xml.in:29
-msgid "Correct .title-4 padding in Lists"
-msgstr "Poprawiono padding .title-4 w listach"
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:41
+#: data/stylesheet.appdata.xml.in:60 data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:92
+msgid "Improve support for LibAdwaita widgets:"
+msgstr "Lepsze wsparcie dla widżetów LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:30
-msgid "Buttons: don't set font weight for children like popovers"
+msgid ""
+"Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 msgstr ""
-"Przyciski: nie ustawiają już grubości fontu dla elementów potomnych takich "
-"jak popovery"
+"Adw.ToolbarView: Dodano style „bottom-bar” dla \"raised\" oraz „border”"
 
-#: data/stylesheet.appdata.xml.in:41
-msgid "New Features:"
-msgstr "Nowe funkcje:"
+#: data/stylesheet.appdata.xml.in:31
+msgid "NavigationView: Fix missing shadows and dimming"
+msgstr "NavigationView: Naprawiono brakujące cienie i przygaszanie"
 
 #: data/stylesheet.appdata.xml.in:43
-msgid "Support for Gtk4"
-msgstr "Wsparcie dla Gtk4"
+#, fuzzy
+#| msgid "Adw.TabOverview"
+msgid "Adw.ToolbarView"
+msgstr "Adw.TabOverview"
 
-#: data/stylesheet.appdata.xml.in:47
-msgid "Fix titlebar in GNOME Web 42"
-msgstr "Naprawiono pasek tytułu w GNOME Web 42"
+#: data/stylesheet.appdata.xml.in:44
+#, fuzzy
+#| msgid "Adw.TabBar"
+msgid "Adw.Toast"
+msgstr "Adw.TabBar"
+
+#: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:64
+msgid "GTK 4 Improvements:"
+msgstr "Ulepszenia GTK 4:"
 
 #: data/stylesheet.appdata.xml.in:48
-msgid "Fix font style for bold labels in some languages"
-msgstr "Naprawiono styl fontu dla pogrubionych etykiet w niektórych językach"
+msgid "Remove styles shipped in Granite"
+msgstr "Usunięto style dostarczane w Granite"
 
 #: data/stylesheet.appdata.xml.in:49
-msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr "ModelButtons: dodano odstęp pomiędzy polami wyboru a ich opisem"
+msgid "Fix destructive menuitem"
+msgstr "Naprawiono niszczący menuitem"
 
-#: data/stylesheet.appdata.xml.in:57
-msgid "Improve contrast of horizontal separators in dark style"
-msgstr "Zwiększono kontrast pomiędzy poziomymi granicami w stylu ciemnym"
+#: data/stylesheet.appdata.xml.in:50
+msgid "Fix size of menubars that contain buttons"
+msgstr "Naprawiono rozmiar pasków menu zawierających przyciski"
 
-#: data/stylesheet.appdata.xml.in:61
-msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr "Użyto koloru akcentu do podświetlenia w oknie kandydującym IBus"
+#: data/stylesheet.appdata.xml.in:51
+msgid "Adjust warning icon color"
+msgstr "Poprawiono kolor ikony ostrzeżenia"
+
+#: data/stylesheet.appdata.xml.in:52
+msgid "Fix popovermenu height when it contains a single item"
+msgstr ""
+"Naprawiono wysokość wyskakującego menu zawierającego pojedynczy element"
+
+#: data/stylesheet.appdata.xml.in:53
+msgid "Flatter window control styles"
+msgstr "Płaskie style kontroli okien"
 
 #: data/stylesheet.appdata.xml.in:62
-msgid "Fix font style for title labels in headerbars"
-msgstr "Naprawiono styl fontu dla etykiet tytułowych w paskach nagłówka"
+msgid "Adw.TabOverview"
+msgstr "Adw.TabOverview"
 
-#: data/stylesheet.appdata.xml.in:69
-msgid "Support for Hdy.Tabbar"
-msgstr "Wsparcie dla Hdy.Tabbar"
-
-#: data/stylesheet.appdata.xml.in:70
-msgid "Fix accent class for Gtk.Scale"
-msgstr "Naprawiono klasę akcentu dla Gtk.Scale"
-
-#: data/stylesheet.appdata.xml.in:71
-msgid "Flat titlebars inherit background color for views and sidebars"
+#: data/stylesheet.appdata.xml.in:66
+msgid "Add missing \".default-decoration\" style for compact headerbars"
 msgstr ""
-"Płaskie paski tytułów dziedziczą kolor tła w widokach i w panelach bocznych"
+"Dodano brakujący styl „.default-decoration” dla kompaktowych pasków "
+"tytułowych"
 
-#: data/stylesheet.appdata.xml.in:78
-msgid "Complete redesign"
-msgstr "Kompletne przeprojektowanie"
+#: data/stylesheet.appdata.xml.in:67
+msgid "Add Latte palette"
+msgstr "Dodano paletę Latte"
 
-#: data/stylesheet.appdata.xml.in:86
-msgid "elementary, Inc."
-msgstr "elementary, Inc."
+#: data/stylesheet.appdata.xml.in:76
+msgid "Adw.AboutWindow"
+msgstr "Adw.AboutWindow"
+
+#: data/stylesheet.appdata.xml.in:77
+msgid "Adw.MessageDialog"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:79 data/stylesheet.appdata.xml.in:98
+msgid "GTK 4 Fixes:"
+msgstr "Poprawki dla GTK 4:"
+
+#: data/stylesheet.appdata.xml.in:81
+msgid ""
+"Support \".destructive\" and \".suggested\" in addition to \".destructive-"
+"action\" and \".suggested-action\""
+msgstr ""
+"Wsparcie dla „.destructive” oraz „.suggested” w dodatku do „.destructive-"
+"action” i „.suggested-action”"
+
+#: data/stylesheet.appdata.xml.in:82
+msgid "\".raised\" overrides \".flat\" in Buttons"
+msgstr "„.raised” nadpisuje „.flat” w przyciskach"
+
+#: data/stylesheet.appdata.xml.in:94
+msgid "Adw.PreferencesWindow"
+msgstr "Adw.PreferencesWindow"
+
+#: data/stylesheet.appdata.xml.in:95
+msgid "Adw.StatusPage"
+msgstr "Adw.StatusPage"
+
+#: data/stylesheet.appdata.xml.in:96
+msgid "Adw.TabBar"
+msgstr "Adw.TabBar"
+
+#: data/stylesheet.appdata.xml.in:100
+msgid "Correctly style list rows in popover menus"
+msgstr "Poprawiono styl wierszy list w wyskakujących menu"
+
+#: data/stylesheet.appdata.xml.in:101
+msgid "Style headerbars without \".titlebar\""
+msgstr "Paski główne są teraz stylowane bez „.titlebar”"
+
+#: data/stylesheet.appdata.xml.in:102
+msgid "Style fullscreen windows"
+msgstr "Stylowanie okien pełnoekranowych"
+
+#: data/stylesheet.appdata.xml.in:103
+msgid "Style SearchBars"
+msgstr "Stylowanie pasków wyszukiwania"
+
+#: data/stylesheet.appdata.xml.in:104
+msgid "Add spacing between HeaderBar buttons"
+msgstr "Dodano odstęp pomiędzy ikonami w pasku głównym"
+
+#~ msgid "Improvements:"
+#~ msgstr "Ulepszenia:"
+
+#~ msgid "Checkerboard styles are more subtle"
+#~ msgstr "Style w szachownicę są bardziej subtelne"
+
+#~ msgid "Set `large-icons` size on headerbars to 24px"
+#~ msgstr "Ustaw wielkość `duże-ikony` na paskach nagłówkowych na 24px"
+
+#~ msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
+#~ msgstr "Dostosuj układ nagłówków i typografię w Granite.SimpleSettingsPage"
+
+#~ msgid "Infobars: set correct button margins"
+#~ msgstr "Paski informacyjne: poprawnie ustawiono marginesy przycisków"
+
+#~ msgid "Add padding to Gtk.Entry's completion popover"
+#~ msgstr "Dodano padding do podpowiedzi Gtk.Entry"
+
+#~ msgid "Fix labels for scale marks"
+#~ msgstr "Naprawiono etykiety dla oznaczeń skali"
+
+#~ msgid "Fixes:"
+#~ msgstr "Poprawki:"
+
+#~ msgid "Correct .title-4 padding in Lists"
+#~ msgstr "Poprawiono padding .title-4 w listach"
+
+#~ msgid "Buttons: don't set font weight for children like popovers"
+#~ msgstr ""
+#~ "Przyciski: nie ustawiają już grubości fontu dla elementów potomnych "
+#~ "takich jak popovery"
+
+#~ msgid "elementary, Inc."
+#~ msgstr "elementary, Inc."
+
+#~ msgid "New Features:"
+#~ msgstr "Nowe funkcje:"
+
+#~ msgid "Support for Gtk4"
+#~ msgstr "Wsparcie dla Gtk4"
+
+#~ msgid "Fix titlebar in GNOME Web 42"
+#~ msgstr "Naprawiono pasek tytułu w GNOME Web 42"
+
+#~ msgid "Fix font style for bold labels in some languages"
+#~ msgstr ""
+#~ "Naprawiono styl fontu dla pogrubionych etykiet w niektórych językach"
+
+#~ msgid "ModelButtons: add margin between checks, radios, and labels"
+#~ msgstr "ModelButtons: dodano odstęp pomiędzy polami wyboru a ich opisem"
+
+#~ msgid "Improve contrast of horizontal separators in dark style"
+#~ msgstr "Zwiększono kontrast pomiędzy poziomymi granicami w stylu ciemnym"
+
+#~ msgid "Use the accent color for highlighting in IBus candidate window"
+#~ msgstr "Użyto koloru akcentu do podświetlenia w oknie kandydującym IBus"
+
+#~ msgid "Fix font style for title labels in headerbars"
+#~ msgstr "Naprawiono styl fontu dla etykiet tytułowych w paskach nagłówka"
+
+#~ msgid "Support for Hdy.Tabbar"
+#~ msgstr "Wsparcie dla Hdy.Tabbar"
+
+#~ msgid "Fix accent class for Gtk.Scale"
+#~ msgstr "Naprawiono klasę akcentu dla Gtk.Scale"
+
+#~ msgid "Flat titlebars inherit background color for views and sidebars"
+#~ msgstr ""
+#~ "Płaskie paski tytułów dziedziczą kolor tła w widokach i w panelach "
+#~ "bocznych"
+
+#~ msgid "Complete redesign"
+#~ msgstr "Kompletne przeprojektowanie"
 
 #~ msgid "Greenfield"
 #~ msgstr "Greenfield"

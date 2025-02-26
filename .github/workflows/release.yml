@@ -3,8 +3,8 @@ name: Release
 
 on:
   pull_request:
-    branches: master
-    types: closed
+    branches: [main]
+    types: [closed]
 
 jobs:
   release_deb:
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Release
         uses: elementary/actions/release@master
@@ -24,4 +24,4 @@ jobs:
           GIT_USER_NAME: "elementaryBot"
           GIT_USER_EMAIL: "builds@elementary.io"
         with:
-          release_branch: "horus"
+          release_branch: "noble"

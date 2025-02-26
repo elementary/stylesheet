@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-28 01:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/stylesheet.appdata.xml.in:8
+msgid "System Stylesheet"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:9
+msgid "The look and feel for elementary OS"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:11
+msgid ""
+"An original Gtk.CSS stylesheet designed specifically for elementary OS and "
+"its desktop environment: Pantheon."
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:41
+#: data/stylesheet.appdata.xml.in:60 data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:92
+msgid "Improve support for LibAdwaita widgets:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:30
+msgid ""
+"Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:31
+msgid "NavigationView: Fix missing shadows and dimming"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:43
+msgid "Adw.ToolbarView"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:44
+msgid "Adw.Toast"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:64
+msgid "GTK 4 Improvements:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:48
+msgid "Remove styles shipped in Granite"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:49
+msgid "Fix destructive menuitem"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:50
+msgid "Fix size of menubars that contain buttons"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:51
+msgid "Adjust warning icon color"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:52
+msgid "Fix popovermenu height when it contains a single item"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:53
+msgid "Flatter window control styles"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:62
+msgid "Adw.TabOverview"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:66
+msgid "Add missing \".default-decoration\" style for compact headerbars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:67
+msgid "Add Latte palette"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:76
+msgid "Adw.AboutWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:77
+msgid "Adw.MessageDialog"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:79 data/stylesheet.appdata.xml.in:98
+msgid "GTK 4 Fixes:"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:81
+msgid ""
+"Support \".destructive\" and \".suggested\" in addition to \".destructive-"
+"action\" and \".suggested-action\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:82
+msgid "\".raised\" overrides \".flat\" in Buttons"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:94
+msgid "Adw.PreferencesWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:95
+msgid "Adw.StatusPage"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:96
+msgid "Adw.TabBar"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:100
+msgid "Correctly style list rows in popover menus"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:101
+msgid "Style headerbars without \".titlebar\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:102
+msgid "Style fullscreen windows"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:103
+msgid "Style SearchBars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:104
+msgid "Add spacing between HeaderBar buttons"
+msgstr ""

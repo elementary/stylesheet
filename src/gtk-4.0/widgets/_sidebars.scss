@@ -70,30 +70,6 @@ placessidebar viewport.frame {
     }
 }
 
-settingssidebar list {
-    min-width: rem(200px);
-
-    row,
-    > .title-4 {
-        padding: rem(6px);
-    }
-
-    row {
-        overlay {
-            // IconSize.LARGE + padding
-            min-width: calc(32px + #{rem(6px)});
-        }
-
-        overlay:dir(ltr) {
-            margin-right: rem(6px);
-        }
-
-        overlay:dir(rtl) {
-            margin-left: rem(6px);
-        }
-    }
-}
-
 treeview.sidebar {
     .view {
         @extend %sidebar-row;

@@ -1,0 +1,10 @@
+toastoverlay toast {
+    @extend .osd;
+
+    border-spacing: rem(6px);
+    margin: rem(12px);
+
+    > widget {
+        margin: 0 rem(6px);
+    }
+}
