@@ -4,6 +4,7 @@ variants = [
     'bubblegum',
     'cocoa',
     'grape',
+    'latte',
     'lime',
     'mint',
     'orange',
