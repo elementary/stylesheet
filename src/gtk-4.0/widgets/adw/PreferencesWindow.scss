@@ -22,14 +22,30 @@ window.preferences.csd {
                     rgba(black, 0.0) 0.444rem
                 );
         }
-
-        > viewport > clamp > box {
-            padding-left: rem(12px);
-            padding-right: rem(12px);
-        }
-    }
-
-    preferencesgroup {
-        margin-bottom: 2rem;
     }
 }
+
+preferencespage > scrolledwindow > viewport > clamp > box {
+    margin: rem(24px) rem(12px);
+    border-spacing: 2em;
+}
+
+preferencesgroup > box {
+    &, box.labels {
+        border-spacing: rem(6px);
+    }
+
+    > box.header:not(.single-line) {
+        margin-bottom: rem(6px);
+    }
+
+    row.button,
+    > box.single-line {
+        min-height: 34px;
+    }
+
+    label.h4 {
+        font-weight: 700;
+    }
+}
+
