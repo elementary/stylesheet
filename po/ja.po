@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-28 01:02+0000\n"
-"PO-Revision-Date: 2024-05-29 06:13+0000\n"
+"PO-Revision-Date: 2024-12-12 05:36+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -62,7 +62,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:46 data/stylesheet.appdata.xml.in:64
 msgid "GTK 4 Improvements:"
-msgstr "GTK 4 対応改善点:"
+msgstr "GTK 4 対応改善:"
 
 #: data/stylesheet.appdata.xml.in:48
 msgid "Remove styles shipped in Granite"
