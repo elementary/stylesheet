@@ -25,9 +25,8 @@ viewswitcher button {
 headerbar viewswitcher button {
     border-radius: rem(3px);
 
-    image {
-        opacity: 0;
-        -gtk-icon-size: 0;
+    box.horizontal {
+        border-spacing: 0.5em;
     }
 }
 

@@ -3,14 +3,6 @@ window.preferences.csd {
 
     headerbar {
         @extend .flat;
-
-        viewswitcher button.toggle {
-            border-radius: rem(3px);
-
-            box.horizontal {
-                border-spacing: 0.5em;
-            }
-        }
     }
 
     preferencespage > scrolledwindow {
