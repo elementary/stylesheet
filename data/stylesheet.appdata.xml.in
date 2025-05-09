@@ -23,6 +23,19 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
 
   <releases>
+    <release version="8.2.1" date="2025-05-09" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.ViewSwitcher: Fix crash with icon size</li>
+          <li>Add Latte stylesheet</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/fileroller/issues/49">Padding in prompts has gone</issue>
+      </issues>
+    </release>
+
     <release version="8.2.0" date="2024-11-20" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
