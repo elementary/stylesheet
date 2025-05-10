@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-05-09 19:04+0000\n"
-"PO-Revision-Date: 2024-12-12 05:36+0000\n"
+"PO-Revision-Date: 2025-05-10 13:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -44,13 +44,11 @@ msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
-msgstr ""
+msgstr "Adw.ViewSwitcher: アイコンサイズの指定が原因のクラッシュを修正"
 
 #: data/stylesheet.appdata.xml.in:31
-#, fuzzy
-#| msgid "Add Latte palette"
 msgid "Add Latte stylesheet"
-msgstr "ラテ色のパレットを追加"
+msgstr "ラテ色のスタイルシートを追加"
 
 #: data/stylesheet.appdata.xml.in:52
 msgid ""
