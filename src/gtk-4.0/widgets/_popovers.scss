@@ -77,7 +77,7 @@ popover.background {
     > contents {
         border-radius: rem(6px);
 
-        label.heading,
+        header,
         label.h4 {
             margin: 0 rem(12px);
         }
@@ -159,6 +159,15 @@ popover.background {
             outset-highlight(),
             shadow(2);
         padding: rem(6px) 0;
+
+        label.heading {
+            margin: 0 rem(12px);
+        }
+
+        // Don't double indent labels in Granite.HeaderLabel
+        header label.heading {
+            margin: 0;
+        }
 
         popover {
             box-shadow:
