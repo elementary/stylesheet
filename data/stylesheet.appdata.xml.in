@@ -24,12 +24,9 @@
 
   <releases>
     <release version="8.2.2" date="2025-07-07" urgency="medium">
-      <description>
-        <p>Granite Improvements:</p>
-        <ul>
-          <li>Avoid extra indentation for Granite.HeaderLabel in a Popover</li>
-        </ul>
-      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1244">The primary text in Granite.HeaderLabel misaligned when placed in Gtk.Popover</issue>
+      </issues>
     </release>
 
     <release version="8.2.1" date="2025-05-13" urgency="medium">
