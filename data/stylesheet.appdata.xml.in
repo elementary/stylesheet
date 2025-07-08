@@ -23,6 +23,15 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
 
   <releases>
+    <release version="8.2.2" date="2025-07-07" urgency="medium">
+      <description>
+        <p>Granite Improvements:</p>
+        <ul>
+          <li>Avoid extra indentation for Granite.HeaderLabel in a Popover</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="8.2.1" date="2025-05-13" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
