@@ -23,6 +23,12 @@
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
 
   <releases>
+    <release version="8.2.2" date="2025-07-07" urgency="medium">
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1244">The primary text in Granite.HeaderLabel misaligned when placed in Gtk.Popover</issue>
+      </issues>
+    </release>
+
     <release version="8.2.1" date="2025-05-13" urgency="medium">
       <description>
         <p>Improve support for LibAdwaita widgets:</p>
