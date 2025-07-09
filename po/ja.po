@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
-"PO-Revision-Date: 2025-05-10 13:24+0000\n"
+"PO-Revision-Date: 2025-07-10 07:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -44,7 +44,7 @@ msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Add Adw.NavigationSplitView styles"
-msgstr ""
+msgstr "Adw.NavigationSplitView のスタイルを追加"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
