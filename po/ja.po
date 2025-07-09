@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 19:04+0000\n"
+"POT-Creation-Date: 2025-07-09 02:37+0000\n"
 "PO-Revision-Date: 2025-05-10 13:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementaryos.org/projects/desktop/"
@@ -35,95 +35,99 @@ msgstr ""
 "elementary OS とそのデスクトップ環境 (Pantheon) 用にデザインされた、オリジナ"
 "ルの Gtk.CSS スタイルシートです。"
 
-#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:41
-#: data/stylesheet.appdata.xml.in:50 data/stylesheet.appdata.xml.in:63
-#: data/stylesheet.appdata.xml.in:82 data/stylesheet.appdata.xml.in:96
-#: data/stylesheet.appdata.xml.in:114
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:53 data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:75 data/stylesheet.appdata.xml.in:94
+#: data/stylesheet.appdata.xml.in:108 data/stylesheet.appdata.xml.in:126
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
 #: data/stylesheet.appdata.xml.in:30
+msgid "Add Adw.NavigationSplitView styles"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
 msgstr "Adw.ViewSwitcher: アイコンサイズの指定が原因のクラッシュを修正"
 
-#: data/stylesheet.appdata.xml.in:31
+#: data/stylesheet.appdata.xml.in:43
 msgid "Add Latte stylesheet"
 msgstr "ラテ色のスタイルシートを追加"
 
-#: data/stylesheet.appdata.xml.in:52
+#: data/stylesheet.appdata.xml.in:64
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 msgstr ""
 "Adw.ToolbarView: \"raised\" と \"border\" を設定する \"bottom-bar\" スタイル"
 "を追加"
 
-#: data/stylesheet.appdata.xml.in:53
+#: data/stylesheet.appdata.xml.in:65
 msgid "NavigationView: Fix missing shadows and dimming"
 msgstr "NavigationView: 影と調光がなかった不具合を修正"
 
-#: data/stylesheet.appdata.xml.in:65
+#: data/stylesheet.appdata.xml.in:77
 msgid "Adw.ToolbarView"
 msgstr "Adw.ToolbarView"
 
-#: data/stylesheet.appdata.xml.in:66
+#: data/stylesheet.appdata.xml.in:78
 msgid "Adw.Toast"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:68 data/stylesheet.appdata.xml.in:86
+#: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
 msgid "GTK 4 Improvements:"
 msgstr "GTK 4 対応改善:"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:82
 msgid "Remove styles shipped in Granite"
 msgstr "Granite にて提供されるスタイルを削除"
 
-#: data/stylesheet.appdata.xml.in:71
+#: data/stylesheet.appdata.xml.in:83
 msgid "Fix destructive menuitem"
 msgstr "破壊的アクションのメニュー項目のスタイルを修正"
 
-#: data/stylesheet.appdata.xml.in:72
+#: data/stylesheet.appdata.xml.in:84
 msgid "Fix size of menubars that contain buttons"
 msgstr "ボタンを含むメニューバーのサイズを修正"
 
-#: data/stylesheet.appdata.xml.in:73
+#: data/stylesheet.appdata.xml.in:85
 msgid "Adjust warning icon color"
 msgstr "警告アイコンの色を調整"
 
-#: data/stylesheet.appdata.xml.in:74
+#: data/stylesheet.appdata.xml.in:86
 msgid "Fix popovermenu height when it contains a single item"
 msgstr "ポップオーバーメニューに 1 つしか項目がない場合の高さを修正"
 
-#: data/stylesheet.appdata.xml.in:75
+#: data/stylesheet.appdata.xml.in:87
 msgid "Flatter window control styles"
 msgstr "ウィンドウコントロールをよりフラットなスタイルに修正"
 
-#: data/stylesheet.appdata.xml.in:84
+#: data/stylesheet.appdata.xml.in:96
 msgid "Adw.TabOverview"
 msgstr "Adw.TabOverview"
 
-#: data/stylesheet.appdata.xml.in:88
+#: data/stylesheet.appdata.xml.in:100
 msgid "Add missing \".default-decoration\" style for compact headerbars"
 msgstr ""
 "コンパクトなヘッダーバー用の \".default-decoration\" スタイルが存在していな"
 "かった不具合を修正"
 
-#: data/stylesheet.appdata.xml.in:89
+#: data/stylesheet.appdata.xml.in:101
 msgid "Add Latte palette"
 msgstr "ラテ色のパレットを追加"
 
-#: data/stylesheet.appdata.xml.in:98
+#: data/stylesheet.appdata.xml.in:110
 msgid "Adw.AboutWindow"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:99
+#: data/stylesheet.appdata.xml.in:111
 msgid "Adw.MessageDialog"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:101 data/stylesheet.appdata.xml.in:120
+#: data/stylesheet.appdata.xml.in:113 data/stylesheet.appdata.xml.in:132
 msgid "GTK 4 Fixes:"
 msgstr "GTK 4 に関する修正点:"
 
-#: data/stylesheet.appdata.xml.in:103
+#: data/stylesheet.appdata.xml.in:115
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
@@ -131,42 +135,42 @@ msgstr ""
 "\".destructive-action\" と \".suggested-action\" に加えて、\".destructive\" "
 "と \".suggested\" に対応"
 
-#: data/stylesheet.appdata.xml.in:104
+#: data/stylesheet.appdata.xml.in:116
 msgid "\".raised\" overrides \".flat\" in Buttons"
 msgstr "ボタン: \".raised\" が \".flat\" を上書きするように修正"
 
-#: data/stylesheet.appdata.xml.in:116
+#: data/stylesheet.appdata.xml.in:128
 msgid "Adw.PreferencesWindow"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:117
+#: data/stylesheet.appdata.xml.in:129
 msgid "Adw.StatusPage"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:118
+#: data/stylesheet.appdata.xml.in:130
 msgid "Adw.TabBar"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:122
+#: data/stylesheet.appdata.xml.in:134
 msgid "Correctly style list rows in popover menus"
 msgstr ""
 "ポップオーバーメニュー内のリストの各行にスタイルが適切に適用されるように修正"
 
-#: data/stylesheet.appdata.xml.in:123
+#: data/stylesheet.appdata.xml.in:135
 msgid "Style headerbars without \".titlebar\""
 msgstr ""
 "\".titlebar\" クラスの指定がないヘッダーバーにもスタイルが適用されるように修"
 "正"
 
-#: data/stylesheet.appdata.xml.in:124
+#: data/stylesheet.appdata.xml.in:136
 msgid "Style fullscreen windows"
 msgstr "全画面表示のウィンドウ用のスタイルを追加"
 
-#: data/stylesheet.appdata.xml.in:125
+#: data/stylesheet.appdata.xml.in:137
 msgid "Style SearchBars"
 msgstr "SearchBar 用のスタイルを追加"
 
-#: data/stylesheet.appdata.xml.in:126
+#: data/stylesheet.appdata.xml.in:138
 msgid "Add spacing between HeaderBar buttons"
 msgstr "HeaderBar に配置されたボタンに間隔を追加"
 
