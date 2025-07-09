@@ -33,5 +33,18 @@ treeview {
         &:backdrop label {
             opacity: 0.6;
         }
+
+        sort-indicator {
+            min-height: 16px;
+            min-width: 16px;
+
+            &.ascending {
+                -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+            }
+
+            &.descending {
+                -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+            }
+        }
     }
 }
