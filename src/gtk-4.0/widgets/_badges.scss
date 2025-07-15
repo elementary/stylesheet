@@ -45,7 +45,7 @@
         min-height: 0;
         min-width: rem(16px);
 
-        row:selected:not(:focus) & {
+        row:selected:not(:focus-visible) & {
             color: inherit;
             background: rgba($fg-color, 0.15);
         }

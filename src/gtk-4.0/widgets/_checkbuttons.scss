@@ -48,7 +48,7 @@ radio {
         -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
     }
 
-    &:focus {
+    &:focus-visible {
         &:not(:checked) {
             @if $color-scheme == "light" {
                 border-color: #{'@accent_color'};

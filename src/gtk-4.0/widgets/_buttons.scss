@@ -18,7 +18,7 @@ button {
             background: rgba($fg-color, 0.15);
         }
 
-        &:focus {
+        &:focus-visible {
             @extend selection;
             outline-style: none;
         }
@@ -52,7 +52,7 @@ button {
         &.destructive-action:not(:disabled) {
 
             &,
-            &:focus {
+            &:focus-visible {
                 @if $color-scheme == "light" {
                     background-clip: border-box;
                     border-color: $border-color;
@@ -70,7 +70,7 @@ button {
             text-shadow: 0 1px 1px $STRAWBERRY_500;
             -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
 
-            &:focus {
+            &:focus-visible {
                 outline-color: rgba($STRAWBERRY_300, 0.5);
             }
         }
@@ -115,7 +115,7 @@ button {
                 outset-shadow(1);
         }
 
-        &:focus {
+        &:focus-visible {
             @if $color-scheme == "light" {
                 border-color: #{'@accent_color'};
             }
