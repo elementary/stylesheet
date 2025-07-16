@@ -73,7 +73,7 @@ switch {
         }
     }
 
-    &:focus {
+    &:focus-visible {
         @if $color-scheme == "light" {
             border-color: #{'@accent_color'};
         }
