@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
-"PO-Revision-Date: 2025-05-16 12:55+0000\n"
-"Last-Translator: Leonardo Lemos <leonardolemos@live.com>\n"
+"PO-Revision-Date: 2025-07-28 23:55+0000\n"
+"Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "desktop/stylesheet-extra/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -44,7 +44,7 @@ msgstr "Melhora o suporte para os widgets do LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Add Adw.NavigationSplitView styles"
-msgstr ""
+msgstr "Adicionar estilos Adw.NavigationSplitView"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
