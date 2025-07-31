@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
-"PO-Revision-Date: 2025-05-20 23:55+0000\n"
+"PO-Revision-Date: 2025-08-01 07:55+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/uk/>\n"
@@ -45,7 +45,7 @@ msgstr "Удосконалено підтримку віджетів LibAdwaita:
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Add Adw.NavigationSplitView styles"
-msgstr ""
+msgstr "Додано стилі Adw.NavigationSplitView"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
