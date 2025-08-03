@@ -1,0 +1,26 @@
+.messagedialog {
+    padding: rem(12px);
+
+    .message-area .title-2 {
+        font-size: 1.22em;
+        font-weight: 500;
+        margin-bottom: 0.25em;
+    }
+
+    separator {
+        opacity: 0;
+    }
+
+    .response-area {
+        margin-top: rem(18px);
+
+        button {
+            @extend .raised;
+        }
+
+        separator {
+            min-height: rem(9px);
+            min-width: rem(6px);
+        }
+    }
+}

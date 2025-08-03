@@ -1,0 +1,37 @@
+statuspage {
+    > scrolledwindow > viewport > box {
+        margin: rem(36px) rem(12px);
+        border-spacing: rem(36px);
+
+        > clamp > box {
+            border-spacing: rem(12px);
+
+            > .icon {
+                -gtk-icon-size: 128px;
+
+                &:not(:last-child) {
+                    margin-bottom: rem(24px);
+                }
+            }
+        }
+    }
+
+    &.compact > scrolledwindow > viewport > box {
+        margin: rem(24px) rem(12px);
+        border-spacing: rem(24px);
+
+        > clamp > box {
+            > .icon {
+                -gtk-icon-size: 96px;
+
+                &:not(:last-child) {
+                    margin-bottom: rem(12px);
+                }
+            }
+
+            > .title {
+                font-size: 18pt;
+            }
+        }
+    }
+}

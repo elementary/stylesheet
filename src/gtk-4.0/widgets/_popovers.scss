@@ -3,6 +3,7 @@
     background: transparent;
     border: none;
     border-radius: 0;
+    border-spacing: rem(6px);
     box-shadow: none;
     color: $fg-color;
     font: initial;
@@ -27,6 +28,7 @@
 
     &.destructive-action {
         color: $error-color;
+        text-shadow: none;
 
         &:hover {
             background-color: rgba($error-color, 0.2);
@@ -47,13 +49,7 @@
 
     check,
     radio {
-        &.left {
-            margin-right: rem(6px);
-        }
-
-        &.right {
-            margin-left: rem(6px);
-        }
+        margin: 0;
     }
 
     switch slider {
@@ -81,6 +77,7 @@ popover.background {
     > contents {
         border-radius: rem(6px);
 
+        header,
         label.h4 {
             margin: 0 rem(12px);
         }
@@ -149,11 +146,28 @@ popover.background {
         }
     }
 
+    &.entry-completion > contents treeview {
+        margin: rem(6px) 0;
+
+        &.view.cell {
+            padding: rem(6px) rem(12px);
+        }
+    }
+
     &.menu > contents {
         box-shadow:
             outset-highlight(),
             shadow(2);
         padding: rem(6px) 0;
+
+        label.heading {
+            margin: 0 rem(12px);
+        }
+
+        // Don't double indent labels in Granite.HeaderLabel
+        header label.heading {
+            margin: 0;
+        }
 
         popover {
             box-shadow:
@@ -161,18 +175,20 @@ popover.background {
                 shadow(3);
         }
 
+        listview {
+            background: none;
+        }
+
         .menuitem {
             &:dir(ltr) {
                 image:first-child {
                     // Off-by-one for some reason. Maybe optical illusion?
-                    margin-left: rem(-23px);
+                    margin-left: rem(-7px);
                     padding-left: 0;
-                    padding-right: rem(5px);
                 }
 
                 > check,
                 > radio {
-                    margin-right: rem(6px);
                     margin-left: rem(-6px);
                 }
             }
@@ -181,13 +197,11 @@ popover.background {
                 image:first-child {
                     // Off-by-one for some reason. Maybe optical illusion?
                     margin-right: rem(-23px);
-                    padding-left: rem(5px);
                     padding-right: 0;
                 }
 
                 > check,
                 > radio {
-                    margin-left: rem(6px);
                     margin-right: rem(-6px);
                 }
             }
@@ -215,14 +229,9 @@ popover.background {
         box.inline-buttons {
             margin: rem(3px) rem(12px);
 
-            &:dir(ltr) button + button {
-                margin-left: rem(6px);
+            > box {
+                border-spacing: rem(6px);
             }
-        }
-
-        &:dir(ltr) box.inline-buttons label + box,
-        &:dir(ltr) modelbutton label + accelerator {
-            margin-left: rem(12px);
         }
 
         .title {
@@ -235,11 +244,13 @@ popover.background {
         }
     }
 
+    &.menu > contents row,
     modelbutton,
     .menuitem {
         @extend %menuitem;
 
         // Fixes extra padding in switch modelbuttons
+        &.heading label,
         &.h4 label,
         &.title-4 label {
             padding: 0;

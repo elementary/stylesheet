@@ -12,6 +12,14 @@ radio {
     -gtk-icon-source: none;
     -gtk-icon-size: rem(12px);
 
+    &:dir(ltr) {
+        margin-right: rem(6px);
+    }
+
+    &:dir(rtl) {
+        margin-left: rem(6px);
+    }
+
     &:checked {
         background-color: #{'@accent_color'};
         color: white;
@@ -40,7 +48,7 @@ radio {
         -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
     }
 
-    &:focus {
+    &:focus-visible {
         &:not(:checked) {
             @if $color-scheme == "light" {
                 border-color: #{'@accent_color'};
@@ -63,17 +71,6 @@ radio {
 }
 
 checkbutton {
-    image,
-    label {
-        &:dir(ltr) {
-            margin-left: rem(6px);
-        }
-
-        &:dir(rtl) {
-            margin-right: rem(6px);
-        }
-    }
-
     &.image-button {
         // Invisible stroke to prevent things from moving when :checked
         border: 1px solid transparent;

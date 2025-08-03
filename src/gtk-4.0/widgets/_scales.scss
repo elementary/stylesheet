@@ -22,8 +22,14 @@ scale {
         }
     }
 
-    mark indicator {
-        color: mix(bg-color(4), $fg-color, $weight: 75%);
+    mark {
+        indicator {
+            background: mix(bg-color(4), $fg-color, $weight: 75%);
+        }
+
+        label {
+            @extend .dim-label, .small-label;
+        }
     }
 
     slider {
@@ -156,10 +162,20 @@ scale {
             margin: -1px -1px -1px 0;
         }
 
-        mark indicator {
-            min-height: rem(6px);
-            // Intentionally not in ems since it's a stroke
-            min-width: 1px;
+        marks {
+            &.bottom {
+                margin-top: rem(6px);
+            }
+
+            &.top {
+                margin-top: rem(6px);
+            }
+
+            mark indicator {
+                min-height: rem(6px);
+                // Intentionally not in ems since it's a stroke
+                min-width: 1px;
+            }
         }
 
         slider {
@@ -186,10 +202,20 @@ scale {
             margin: 0 -1px -1px -1px;
         }
 
-        mark indicator {
-            // Intentionally not in ems since it's a stroke
-            min-height: 1px;
-            min-width: rem(6px);
+        marks {
+            &.bottom {
+                margin-left: rem(6px);
+            }
+
+            &.top {
+                margin-right: rem(6px);
+            }
+
+            mark indicator {
+                // Intentionally not in ems since it's a stroke
+                min-height: 1px;
+                min-width: rem(6px);
+            }
         }
 
         slider {
@@ -201,7 +227,7 @@ scale {
         }
     }
 
-    &:focus slider {
+    &:focus-visible slider {
         @if $color-scheme == "light" {
             box-shadow:
                 outset-highlight("full"),

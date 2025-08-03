@@ -18,7 +18,7 @@ button {
             background: rgba($fg-color, 0.15);
         }
 
-        &:focus {
+        &:focus-visible {
             @extend selection;
             outline-style: none;
         }
@@ -34,6 +34,7 @@ button {
     &.circular.image-button,
     &.model.image-button,
     &.raised.image-button,
+    &.raised,
     & {
         @extend %outset-background;
 
@@ -51,11 +52,12 @@ button {
         &.destructive-action:not(:disabled) {
 
             &,
-            &:focus {
+            &:focus-visible {
                 @if $color-scheme == "light" {
                     background-clip: border-box;
-                    border: 1px solid $border-color;
+                    border-color: $border-color;
                 } @else if $color-scheme == "dark" {
+                    &.keyboard-activating,
                     &:active,
                     &:checked {
                         border-color: rgba(black, 0.7);
@@ -68,7 +70,7 @@ button {
             text-shadow: 0 1px 1px $STRAWBERRY_500;
             -gtk-icon-shadow: 0 1px 1px $STRAWBERRY_500;
 
-            &:focus {
+            &:focus-visible {
                 outline-color: rgba($STRAWBERRY_300, 0.5);
             }
         }
@@ -84,6 +86,7 @@ button {
                 }
             }
 
+            &.keyboard-activating,
             &:active,
             &:checked {
                 @if $color-scheme == "light" {
@@ -94,6 +97,7 @@ button {
             }
         }
 
+        &.keyboard-activating,
         &:active,
         &:checked {
             background: rgba(black, 0.05);
@@ -111,7 +115,7 @@ button {
                 outset-shadow(1);
         }
 
-        &:focus {
+        &:focus-visible {
             @if $color-scheme == "light" {
                 border-color: #{'@accent_color'};
             }
@@ -175,6 +179,14 @@ button {
 
     &.text-button.link {
         padding: 0;
+    }
+
+    &.destructive {
+        @extend .destructive-action;
+    }
+
+    &.suggested {
+        @extend .suggested-action;
     }
 
     &.color {

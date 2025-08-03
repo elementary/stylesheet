@@ -7,25 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 09:40-0700\n"
-"PO-Revision-Date: 2022-05-20 21:02+0000\n"
+"POT-Creation-Date: 2025-07-09 02:37+0000\n"
+"PO-Revision-Date: 2025-07-10 07:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/desktop/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
-msgid "Greenfield"
-msgstr "Greenfield"
+msgid "System Stylesheet"
+msgstr "システムのスタイルシート"
 
 #: data/stylesheet.appdata.xml.in:9
-msgid "The Gtk Stylesheet for elementary OS"
-msgstr "elementary OS の Gtk スタイルシート"
+msgid "The look and feel for elementary OS"
+msgstr "elementary OS の外観と操作性を定義"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
@@ -35,62 +35,217 @@ msgstr ""
 "elementary OS とそのデスクトップ環境 (Pantheon) 用にデザインされた、オリジナ"
 "ルの Gtk.CSS スタイルシートです。"
 
-#: data/stylesheet.appdata.xml.in:19
-msgid "New Features:"
-msgstr "新機能:"
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:53 data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:75 data/stylesheet.appdata.xml.in:94
+#: data/stylesheet.appdata.xml.in:108 data/stylesheet.appdata.xml.in:126
+msgid "Improve support for LibAdwaita widgets:"
+msgstr "LibAdwaita ウィジェットへの対応を改善:"
 
-#: data/stylesheet.appdata.xml.in:21
-msgid "Support for Gtk4"
-msgstr "Gtk4 への対応"
+#: data/stylesheet.appdata.xml.in:30
+msgid "Add Adw.NavigationSplitView styles"
+msgstr "Adw.NavigationSplitView のスタイルを追加"
 
-#: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
-msgid "Fixes:"
-msgstr "修正点:"
+#: data/stylesheet.appdata.xml.in:42
+msgid "Adw.ViewSwitcher: Fix crash with icon size"
+msgstr "Adw.ViewSwitcher: アイコンサイズの指定が原因のクラッシュを修正"
 
-#: data/stylesheet.appdata.xml.in:25
-msgid "Fix titlebar in GNOME Web 42"
-msgstr "GNOME Web 42 のタイトルバーの表示を修正"
-
-#: data/stylesheet.appdata.xml.in:26
-msgid "Fix font style for bold labels in some languages"
-msgstr "一部の言語における、太字ラベルのフォントスタイルを修正"
-
-#: data/stylesheet.appdata.xml.in:27
-msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr "ModelButton: チェックマーク・ラジオボタン・ラベル間にマージンを追加"
-
-#: data/stylesheet.appdata.xml.in:33
-msgid "Improvements:"
-msgstr "改善点:"
-
-#: data/stylesheet.appdata.xml.in:35
-msgid "Improve contrast of horizontal separators in dark style"
-msgstr "ダークスタイルでの水平線のコントラストを改善"
-
-#: data/stylesheet.appdata.xml.in:39
-msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr "IBus 変換候補ウィンドウのハイライトにアクセントカラーを使うように修正"
-
-#: data/stylesheet.appdata.xml.in:40
-msgid "Fix font style for title labels in headerbars"
-msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
-
-#: data/stylesheet.appdata.xml.in:47
-msgid "Support for Hdy.Tabbar"
-msgstr "Hdy.Tabbar への対応"
-
-#: data/stylesheet.appdata.xml.in:48
-msgid "Fix accent class for Gtk.Scale"
-msgstr "Gtk.Scale のアクセントクラスを修正"
-
-#: data/stylesheet.appdata.xml.in:49
-msgid "Flat titlebars inherit background color for views and sidebars"
-msgstr "フラットなタイトルバーがビューとサイドバーの背景色を継承するように修正"
-
-#: data/stylesheet.appdata.xml.in:56
-msgid "Complete redesign"
-msgstr "抜本的なデザイン変更"
+#: data/stylesheet.appdata.xml.in:43
+msgid "Add Latte stylesheet"
+msgstr "ラテ色のスタイルシートを追加"
 
 #: data/stylesheet.appdata.xml.in:64
-msgid "elementary, Inc."
-msgstr "elementary, Inc."
+msgid ""
+"Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
+msgstr ""
+"Adw.ToolbarView: \"raised\" と \"border\" を設定する \"bottom-bar\" スタイル"
+"を追加"
+
+#: data/stylesheet.appdata.xml.in:65
+msgid "NavigationView: Fix missing shadows and dimming"
+msgstr "NavigationView: 影と調光がなかった不具合を修正"
+
+#: data/stylesheet.appdata.xml.in:77
+msgid "Adw.ToolbarView"
+msgstr "Adw.ToolbarView"
+
+#: data/stylesheet.appdata.xml.in:78
+msgid "Adw.Toast"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
+msgid "GTK 4 Improvements:"
+msgstr "GTK 4 対応改善:"
+
+#: data/stylesheet.appdata.xml.in:82
+msgid "Remove styles shipped in Granite"
+msgstr "Granite にて提供されるスタイルを削除"
+
+#: data/stylesheet.appdata.xml.in:83
+msgid "Fix destructive menuitem"
+msgstr "破壊的アクションのメニュー項目のスタイルを修正"
+
+#: data/stylesheet.appdata.xml.in:84
+msgid "Fix size of menubars that contain buttons"
+msgstr "ボタンを含むメニューバーのサイズを修正"
+
+#: data/stylesheet.appdata.xml.in:85
+msgid "Adjust warning icon color"
+msgstr "警告アイコンの色を調整"
+
+#: data/stylesheet.appdata.xml.in:86
+msgid "Fix popovermenu height when it contains a single item"
+msgstr "ポップオーバーメニューに 1 つしか項目がない場合の高さを修正"
+
+#: data/stylesheet.appdata.xml.in:87
+msgid "Flatter window control styles"
+msgstr "ウィンドウコントロールをよりフラットなスタイルに修正"
+
+#: data/stylesheet.appdata.xml.in:96
+msgid "Adw.TabOverview"
+msgstr "Adw.TabOverview"
+
+#: data/stylesheet.appdata.xml.in:100
+msgid "Add missing \".default-decoration\" style for compact headerbars"
+msgstr ""
+"コンパクトなヘッダーバー用の \".default-decoration\" スタイルが存在していな"
+"かった不具合を修正"
+
+#: data/stylesheet.appdata.xml.in:101
+msgid "Add Latte palette"
+msgstr "ラテ色のパレットを追加"
+
+#: data/stylesheet.appdata.xml.in:110
+msgid "Adw.AboutWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:111
+msgid "Adw.MessageDialog"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:113 data/stylesheet.appdata.xml.in:132
+msgid "GTK 4 Fixes:"
+msgstr "GTK 4 に関する修正点:"
+
+#: data/stylesheet.appdata.xml.in:115
+msgid ""
+"Support \".destructive\" and \".suggested\" in addition to \".destructive-"
+"action\" and \".suggested-action\""
+msgstr ""
+"\".destructive-action\" と \".suggested-action\" に加えて、\".destructive\" "
+"と \".suggested\" に対応"
+
+#: data/stylesheet.appdata.xml.in:116
+msgid "\".raised\" overrides \".flat\" in Buttons"
+msgstr "ボタン: \".raised\" が \".flat\" を上書きするように修正"
+
+#: data/stylesheet.appdata.xml.in:128
+msgid "Adw.PreferencesWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:129
+msgid "Adw.StatusPage"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:130
+msgid "Adw.TabBar"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:134
+msgid "Correctly style list rows in popover menus"
+msgstr ""
+"ポップオーバーメニュー内のリストの各行にスタイルが適切に適用されるように修正"
+
+#: data/stylesheet.appdata.xml.in:135
+msgid "Style headerbars without \".titlebar\""
+msgstr ""
+"\".titlebar\" クラスの指定がないヘッダーバーにもスタイルが適用されるように修"
+"正"
+
+#: data/stylesheet.appdata.xml.in:136
+msgid "Style fullscreen windows"
+msgstr "全画面表示のウィンドウ用のスタイルを追加"
+
+#: data/stylesheet.appdata.xml.in:137
+msgid "Style SearchBars"
+msgstr "SearchBar 用のスタイルを追加"
+
+#: data/stylesheet.appdata.xml.in:138
+msgid "Add spacing between HeaderBar buttons"
+msgstr "HeaderBar に配置されたボタンに間隔を追加"
+
+#~ msgid "Improvements:"
+#~ msgstr "改善点:"
+
+#~ msgid "Checkerboard styles are more subtle"
+#~ msgstr "チェッカーボードを薄い色に修正"
+
+#~ msgid "Set `large-icons` size on headerbars to 24px"
+#~ msgstr "ヘッダーバーにおける `large-icons` の大きさを 24px に変更"
+
+#~ msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
+#~ msgstr "Granite.SimpleSettingsPage: ヘッダーの配置とテキストの大きさを調整"
+
+#~ msgid "Infobars: set correct button margins"
+#~ msgstr "Infobar: 適切なボタンマージンを設定"
+
+#~ msgid "Add padding to Gtk.Entry's completion popover"
+#~ msgstr "Gtk.Entry の補完ポップオーバーにパディングを追加"
+
+#~ msgid "Fix labels for scale marks"
+#~ msgstr "スケール: スナップ値のラベルスタイルを修正"
+
+#~ msgid "Fixes:"
+#~ msgstr "修正点:"
+
+#~ msgid "Correct .title-4 padding in Lists"
+#~ msgstr "List: \".title-4\" クラスのパディングを修正"
+
+#~ msgid "Buttons: don't set font weight for children like popovers"
+#~ msgstr ""
+#~ "Button: ポップオーバーなどの子ウィジェットに対してフォントサイズを設定しな"
+#~ "いように修正"
+
+#~ msgid "elementary, Inc."
+#~ msgstr "elementary, Inc."
+
+#~ msgid "New Features:"
+#~ msgstr "新機能:"
+
+#~ msgid "Support for Gtk4"
+#~ msgstr "Gtk4 への対応"
+
+#~ msgid "Fix titlebar in GNOME Web 42"
+#~ msgstr "GNOME Web 42 のタイトルバーの表示を修正"
+
+#~ msgid "Fix font style for bold labels in some languages"
+#~ msgstr "一部の言語における、太字ラベルのフォントスタイルを修正"
+
+#~ msgid "ModelButtons: add margin between checks, radios, and labels"
+#~ msgstr "ModelButton: チェックマーク・ラジオボタン・ラベル間にマージンを追加"
+
+#~ msgid "Improve contrast of horizontal separators in dark style"
+#~ msgstr "ダークスタイルでの水平線のコントラストを改善"
+
+#~ msgid "Use the accent color for highlighting in IBus candidate window"
+#~ msgstr ""
+#~ "IBus 変換候補ウィンドウのハイライトにアクセントカラーを使うように修正"
+
+#~ msgid "Fix font style for title labels in headerbars"
+#~ msgstr "ヘッダーバーのタイトルラベルのフォントスタイルを修正"
+
+#~ msgid "Support for Hdy.Tabbar"
+#~ msgstr "Hdy.Tabbar への対応"
+
+#~ msgid "Fix accent class for Gtk.Scale"
+#~ msgstr "Gtk.Scale のアクセントクラスを修正"
+
+#~ msgid "Flat titlebars inherit background color for views and sidebars"
+#~ msgstr ""
+#~ "フラットなタイトルバーがビューとサイドバーの背景色を継承するように修正"
+
+#~ msgid "Complete redesign"
+#~ msgstr "抜本的なデザイン変更"
+
+#~ msgid "Greenfield"
+#~ msgstr "Greenfield"

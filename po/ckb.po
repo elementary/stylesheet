@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 09:40-0700\n"
+"POT-Creation-Date: 2025-07-09 02:37+0000\n"
 "PO-Revision-Date: 2022-07-31 13:30+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 
 #: data/stylesheet.appdata.xml.in:8
-msgid "Greenfield"
+msgid "System Stylesheet"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:9
-msgid "The Gtk Stylesheet for elementary OS"
+msgid "The look and feel for elementary OS"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:11
@@ -33,62 +33,145 @@ msgid ""
 "its desktop environment: Pantheon."
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:19
-msgid "New Features:"
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:53 data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:75 data/stylesheet.appdata.xml.in:94
+#: data/stylesheet.appdata.xml.in:108 data/stylesheet.appdata.xml.in:126
+msgid "Improve support for LibAdwaita widgets:"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:21
-msgid "Support for Gtk4"
+#: data/stylesheet.appdata.xml.in:30
+msgid "Add Adw.NavigationSplitView styles"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:23 data/stylesheet.appdata.xml.in:37
-msgid "Fixes:"
-msgstr "چاککردنەکان:"
-
-#: data/stylesheet.appdata.xml.in:25
-msgid "Fix titlebar in GNOME Web 42"
+#: data/stylesheet.appdata.xml.in:42
+msgid "Adw.ViewSwitcher: Fix crash with icon size"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:26
-msgid "Fix font style for bold labels in some languages"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:27
-msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:33
-msgid "Improvements:"
-msgstr "پێشکەوتنەکان:"
-
-#: data/stylesheet.appdata.xml.in:35
-msgid "Improve contrast of horizontal separators in dark style"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:39
-msgid "Use the accent color for highlighting in IBus candidate window"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:40
-msgid "Fix font style for title labels in headerbars"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:47
-msgid "Support for Hdy.Tabbar"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:48
-msgid "Fix accent class for Gtk.Scale"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:49
-msgid "Flat titlebars inherit background color for views and sidebars"
-msgstr ""
-
-#: data/stylesheet.appdata.xml.in:56
-msgid "Complete redesign"
+#: data/stylesheet.appdata.xml.in:43
+msgid "Add Latte stylesheet"
 msgstr ""
 
 #: data/stylesheet.appdata.xml.in:64
-msgid "elementary, Inc."
-msgstr "کۆمپانیای ئێلەمێنتەری هاوپشک."
+msgid ""
+"Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:65
+msgid "NavigationView: Fix missing shadows and dimming"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:77
+msgid "Adw.ToolbarView"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:78
+msgid "Adw.Toast"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
+#, fuzzy
+#| msgid "Improvements:"
+msgid "GTK 4 Improvements:"
+msgstr "پێشکەوتنەکان:"
+
+#: data/stylesheet.appdata.xml.in:82
+msgid "Remove styles shipped in Granite"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:83
+msgid "Fix destructive menuitem"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:84
+msgid "Fix size of menubars that contain buttons"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:85
+msgid "Adjust warning icon color"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:86
+msgid "Fix popovermenu height when it contains a single item"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:87
+msgid "Flatter window control styles"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:96
+msgid "Adw.TabOverview"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:100
+msgid "Add missing \".default-decoration\" style for compact headerbars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:101
+msgid "Add Latte palette"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:110
+msgid "Adw.AboutWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:111
+msgid "Adw.MessageDialog"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:113 data/stylesheet.appdata.xml.in:132
+#, fuzzy
+#| msgid "Fixes:"
+msgid "GTK 4 Fixes:"
+msgstr "چاککردنەکان:"
+
+#: data/stylesheet.appdata.xml.in:115
+msgid ""
+"Support \".destructive\" and \".suggested\" in addition to \".destructive-"
+"action\" and \".suggested-action\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:116
+msgid "\".raised\" overrides \".flat\" in Buttons"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:128
+msgid "Adw.PreferencesWindow"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:129
+msgid "Adw.StatusPage"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:130
+msgid "Adw.TabBar"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:134
+msgid "Correctly style list rows in popover menus"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:135
+msgid "Style headerbars without \".titlebar\""
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:136
+msgid "Style fullscreen windows"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:137
+msgid "Style SearchBars"
+msgstr ""
+
+#: data/stylesheet.appdata.xml.in:138
+msgid "Add spacing between HeaderBar buttons"
+msgstr ""
+
+#~ msgid "Improvements:"
+#~ msgstr "پێشکەوتنەکان:"
+
+#~ msgid "Fixes:"
+#~ msgstr "چاککردنەکان:"
+
+#~ msgid "elementary, Inc."
+#~ msgstr "کۆمپانیای ئێلەمێنتەری هاوپشک."

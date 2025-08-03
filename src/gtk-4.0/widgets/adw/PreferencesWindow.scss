@@ -1,0 +1,43 @@
+window.preferences.csd {
+    @extend .dialog;
+
+    headerbar {
+        @extend .flat;
+    }
+
+    preferencespage > scrolledwindow {
+        undershoot.top {
+            background:
+                linear-gradient(
+                    $toplevel-border-color,
+                    rgba(black, 0.05) 1px,
+                    rgba(black, 0.0) 0.444rem
+                );
+        }
+    }
+}
+
+preferencespage > scrolledwindow > viewport > clamp > box {
+    margin: rem(24px) rem(12px);
+    border-spacing: 2em;
+}
+
+preferencesgroup > box {
+    &, box.labels {
+        border-spacing: rem(6px);
+    }
+
+    > box.header:not(.single-line) {
+        margin-bottom: rem(6px);
+    }
+
+    row.button,
+    > box.single-line {
+        min-height: 34px;
+    }
+
+    label.h4 {
+        font-weight: 700;
+    }
+}
+

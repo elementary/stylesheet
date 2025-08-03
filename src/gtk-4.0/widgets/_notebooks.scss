@@ -6,7 +6,7 @@
     }
 
 
-    $gradient: 
+    $gradient:
         rgba(black, 0),
         rgba(black, 0) calc(100% - #{rem(2px)}),
         rgba(black, 0.05) calc(100% - #{rem(1px)}),
@@ -79,105 +79,20 @@ tab {
     min-width: 24px;
     padding: rem(3px);
 
-    .tab-close-button,
-    .tab-indicator {
-        @extend .flat;
-    }
-
-    &:hover:not(:checked) {
+    &:hover:not(:checked):not(:selected) {
         background-color: #{'shade(@tab_base_color, 0.9)'};
     }
 
-    &:checked {
+    &:checked,
+    &:selected {
         background-color: #{'@tab_base_color'};
         box-shadow:
             outset-highlight(),
-            0 0 0 1px rgba(black, 0.1),
+            0 0 0 1px scale-color($border-color, $alpha: -20%),
             outset-shadow(2);
 
         &:backdrop {
             background-color: #{'shade(@tab_base_color, 0.97)'};
         }
     }
-}
-
-tabbar {
-    .box {
-        @extend %tabheader;
-
-        // Fix showing box shadow from the headerbar
-        margin-top: rem(2px);
-        // So undershoot doesn't cover the borders
-        padding-bottom: rem(2px);
-
-        tabbox {
-            background: transparent;
-        }
-    }
-
-    tab {
-        background-clip: padding-box;
-        border: 1px solid transparent;
-        margin: 0 1px;
-        min-height: 24px;
-        transition: all 150ms ease-in;
-
-        &:checked {
-            border-color: rgba(black, 0.15);
-            box-shadow: outset-highlight();
-        }
-    }
-
-    undershoot {
-        &.left {
-            background-image: linear-gradient(
-                to left,
-                #{'alpha(@tab_base_color, 0)'},
-                #{'shade(@tab_base_color, 0.95)'}
-            );
-        }
-
-        &.right {
-            background-image: linear-gradient(
-                to right,
-                #{'alpha(@tab_base_color, 0)'},
-                #{'shade(@tab_base_color, 0.95)'}
-            );
-        }
-
-        @if $color-scheme == "dark" {
-            &.left {
-                background-image: linear-gradient(
-                    to left,
-                    #{'alpha(@tab_base_color, 0)'},
-                    #{'shade(@tab_base_color, 0.97)'}
-                );
-            }
-
-            &.right {
-                background-image: linear-gradient(
-                    to right,
-                    #{'alpha(@tab_base_color, 0)'},
-                    #{'shade(@tab_base_color, 0.97)'}
-                );
-            }
-        }
-    }
-
-    .start-action,
-    .end-action {
-        button {
-            margin: rem(3px);
-            padding: rem(3px) rem(6px);
-        }
-    }
-}
-
-.tab-drag-icon tab {
-    box-shadow:
-        outset-highlight(),
-        // Intentionally not in ems since it's used as a stroke
-        0 0 0 1px rgba(black, 0.1),
-        shadow(1);
-    margin: 12px;
 }

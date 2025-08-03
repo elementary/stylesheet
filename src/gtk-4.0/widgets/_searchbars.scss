@@ -1,0 +1,23 @@
+.search-bar {
+    background-color: bg-color(3);
+}
+
+searchbar {
+    @extend .search-bar;
+
+    > revealer > box {
+        padding: rem(6px);
+    }
+
+    button.close {
+        background: $fg-color;
+        border-radius: 99px;
+        color: rgba(bg-color(1), 0.9);
+        padding: rem(3px);
+
+        &:active {
+            background: rgba($fg-color, 0.7);
+            color: rgba(bg-color(1), 0.7);
+        }
+    }
+}

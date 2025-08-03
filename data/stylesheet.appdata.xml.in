@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2020 elementary, Inc. <contact@elementary.io> -->
+<!-- Copyright 2020-2023 elementary, Inc. <contact@elementary.io> -->
 <component type="runtime">
   <!-- NOTE: this ID format is required for automatic Flatpak theme matching -->
   <id>org.gtk.Gtk3theme.elementary</id>
@@ -13,66 +13,144 @@
   <provides>
     <id>io.elementary.stylesheet</id>
   </provides>
-  <releases>
-    <release version="7.0.1" date="2022-05-26" urgency="medium">
-      <description>
-        <p>Fixes:</p>
-        <ul>
-          <li>Correct .title-4 padding in Lists</li>
-          <li>Buttons: don't set font weight for children like popovers</li>
-          <li>Headerbars: correct window control spacing in RTL, and separator width</li>
-          <li>Infobars: set correct button margins</li>
-        </ul>
-      </description>
-    </release>
-    <release version="7.0.0" date="2022-04-20" urgency="medium">
-      <description>
-        <p>New Features:</p>
-        <ul>
-          <li>Support for Gtk4</li>
-        </ul>
-        <p>Fixes:</p>
-        <ul>
-          <li>Fix titlebar in GNOME Web 42</li>
-          <li>Fix font style for bold labels in some languages</li>
-          <li>ModelButtons: add margin between checks, radios, and labels</li>
-        </ul>
-      </description>
-    </release>
-    <release version="6.1.1" date="2021-11-23" urgency="medium">
-      <description>
-        <p>Improvements:</p>
-        <ul>
-          <li>Improve contrast of horizontal separators in dark style</li>
-        </ul>
-        <p>Fixes:</p>
-        <ul>
-          <li>Use the accent color for highlighting in IBus candidate window</li>
-          <li>Fix font style for title labels in headerbars</li>
-        </ul>
-      </description>
-    </release>
-    <release version="6.1.0" date="2021-10-22" urgency="medium">
-      <description>
-        <ul>
-          <li>Support for Hdy.Tabbar</li>
-          <li>Fix accent class for Gtk.Scale</li>
-          <li>Flat titlebars inherit background color for views and sidebars</li>
-        </ul>
-      </description>
-    </release>
-    <release version="6.0.0" date="2021-07-15" urgency="medium">
-      <description>
-        <ul>
-          <li>Complete redesign</li>
-        </ul>
-      </description>
-    </release>
-  </releases>
   <content_rating type="oars-1.1" />
   <translation type="gettext">io.elementary.stylesheet</translation>
   <compulsory_for_desktop>Pantheon</compulsory_for_desktop>
-  <developer_name>elementary, Inc.</developer_name>
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
+  </developer>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/stylesheet/issues</url>
+
+  <releases>
+    <release version="8.2.2" date="2025-07-07" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Add Adw.NavigationSplitView styles</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1244">The primary text in Granite.HeaderLabel misaligned when placed in Gtk.Popover</issue>
+      </issues>
+    </release>
+
+    <release version="8.2.1" date="2025-05-13" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.ViewSwitcher: Fix crash with icon size</li>
+          <li>Add Latte stylesheet</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/fileroller/issues/49">Padding in prompts has gone</issue>
+      </issues>
+    </release>
+
+    <release version="8.2.0" date="2024-11-20" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1300">Add Support for new Adw.Dialog</issue>
+      </issues>
+    </release>
+
+    <release version="8.1.0" date="2024-07-30" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.ToolbarView: add "bottom-bar" styles for "raised" and "border"</li>
+          <li>NavigationView: Fix missing shadows and dimming</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1291">Tabs on Epiphany camouflague with the new flat header</issue>
+      </issues>
+    </release>
+
+    <release version="8.0.0" date="2024-05-06" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.ToolbarView</li>
+          <li>Adw.Toast</li>
+        </ul>
+        <p>GTK 4 Improvements:</p>
+        <ul>
+          <li>Remove styles shipped in Granite</li>
+          <li>Fix destructive menuitem</li>
+          <li>Fix size of menubars that contain buttons</li>
+          <li>Adjust warning icon color</li>
+          <li>Fix popovermenu height when it contains a single item</li>
+          <li>Flatter window control styles</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="7.3.0" date="2023-11-16" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.TabOverview</li>
+        </ul>
+        <p>GTK 4 Improvements:</p>
+        <ul>
+          <li>Add missing ".default-decoration" style for compact headerbars</li>
+          <li>Add Latte palette</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="7.2.0" date="2023-04-25" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.AboutWindow</li>
+          <li>Adw.MessageDialog</li>
+        </ul>
+        <p>GTK 4 Fixes:</p>
+        <ul>
+          <li>Support ".destructive" and ".suggested" in addition to ".destructive-action" and ".suggested-action"</li>
+          <li>".raised" overrides ".flat" in Buttons</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1253">Window margins cause titlebar issues in Mutter 44</issue>
+      </issues>
+    </release>
+
+    <release version="7.1.0" date="2023-03-24" urgency="medium">
+      <description>
+        <p>Improve support for LibAdwaita widgets:</p>
+        <ul>
+          <li>Adw.PreferencesWindow</li>
+          <li>Adw.StatusPage</li>
+          <li>Adw.TabBar</li>
+        </ul>
+        <p>GTK 4 Fixes:</p>
+        <ul>
+          <li>Correctly style list rows in popover menus</li>
+          <li>Style headerbars without ".titlebar"</li>
+          <li>Style fullscreen windows</li>
+          <li>Style SearchBars</li>
+          <li>Add spacing between HeaderBar buttons</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="7.0.1" date="2022-10-10" urgency="medium">
+      <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1209">Headerbars: correct window control spacing in RTL, and separator width</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1216">Fix arrow size in disabled comboboxes in popovers</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1219">Show scale marks</issue>
+      </issues>
+    </release>
+
+    <release version="7.0.0" date="2022-04-20" urgency="medium" />
+    <release version="6.1.1" date="2021-11-23" urgency="medium" />
+    <release version="6.1.0" date="2021-10-22" urgency="medium" />
+    <release version="6.0.0" date="2021-07-15" urgency="medium" />
+  </releases>
 </component>
