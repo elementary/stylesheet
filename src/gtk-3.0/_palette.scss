@@ -77,6 +77,12 @@ $BLACK_500: #333;
 $BLACK_700: #1a1a1a;
 $BLACK_900: #000;
 
+$LATTE_100: #efdfc4;
+$LATTE_300: #e7c591;
+$LATTE_500: #cfa25e;
+$LATTE_700: #b6802e;
+$LATTE_900: #804b00;
+
 // Exported
 @define-color STRAWBERRY_100 #{$STRAWBERRY_100};
 @define-color STRAWBERRY_300 #{$STRAWBERRY_300};
@@ -149,3 +155,9 @@ $BLACK_900: #000;
 @define-color BLACK_500 #{$BLACK_500};
 @define-color BLACK_700 #{$BLACK_700};
 @define-color BLACK_900 #{"" + $BLACK_900};
+
+@define-color LATTE_100 #{$LATTE_100};
+@define-color LATTE_300 #{$LATTE_300};
+@define-color LATTE_500 #{$LATTE_500};
+@define-color LATTE_700 #{$LATTE_700};
+@define-color LATTE_900 #{$LATTE_900};
