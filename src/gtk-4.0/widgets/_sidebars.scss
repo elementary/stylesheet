@@ -15,6 +15,7 @@
     }
 }
 
+.sidebar-pane,
 .sidebar,
 .sidebar.view,
 .source-list {
@@ -29,6 +30,7 @@
     }
 }
 
+.sidebar-pane,
 .sidebar {
     &:dir(ltr) {
         border-right: 1px solid #{'@menu_separator'};
@@ -54,6 +56,11 @@
 
         @extend %sidebar-row;
     }
+}
+
+// Nested Adw.NavigationSplitView
+.sidebar-pane .content-pane {
+    background: bg_color(1);
 }
 
 placessidebar.frame,

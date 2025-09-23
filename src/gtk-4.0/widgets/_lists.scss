@@ -7,12 +7,12 @@ listview {
     }
 
     row {
-        &:focus,
+        &:focus-visible,
         &:selected {
             background: rgba($fg-color, 0.15);
         }
 
-        &:focus:selected {
+        &:focus-visible:selected {
             @extend selection;
         }
     }
