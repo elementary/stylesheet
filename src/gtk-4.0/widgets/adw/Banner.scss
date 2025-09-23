@@ -1,0 +1,56 @@
+banner {
+    > revealer > widget {
+        background-color: bg-color(1);
+        background-image: -gtk-icontheme("dialog-information-symbolic");
+        background-repeat: no-repeat;
+        background-size: 16px;
+        border-color: $border-color;
+        border-style: solid;
+        border-width: 0 0 1px;
+        border-spacing: rem(12px);
+        box-shadow: outset-highlight("bottom");
+        padding: rem(6px);
+
+        &:dir(ltr) {
+            // Minus half pixel to avoid blurry icons
+            background-position: rem(9px) calc(50% + 0.5px);
+            // Icon size + 12x padding
+            padding-left: calc(16px + #{rem(12px)});
+        }
+
+        &:dir(rtl) {
+            // Minus half pixel to avoid blurry icons
+            background-position: calc(100% - #{rem(9px)}) calc(50% + 0.5px);
+            // Icon size + 12x padding
+            padding-right: calc(16px + #{rem(12px)});
+        }
+
+        // Extra padding for labels but not buttons
+        & > widget:first-child {
+            padding: 6px;
+        }
+
+        button {
+            @if $color-scheme == "dark" {
+                background-clip: border-box;
+            }
+        }
+
+        @if $color-scheme == "dark" {
+            background-clip: padding-box;
+        }
+    }
+
+    &.frame {
+        border: none;
+
+        > revealer > widget {
+            border-width: 1px;
+            border-radius: rem(6px);
+            box-shadow:
+                outset-highlight(),
+                outset-shadow(2);
+            margin: rem(3px);
+        }
+    }
+}
