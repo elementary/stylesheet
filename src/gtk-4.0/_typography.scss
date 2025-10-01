@@ -97,6 +97,14 @@
         }
     }
 
+    &.latte {
+        @if $color-scheme == "light" {
+            color: mix($LATTE_300, $LATTE_500, $weight: 75%);
+        } @else if $color-scheme == "dark" {
+            color: $LATTE_100;
+        }
+    }
+
     &:backdrop {
         color: $fg-color;
         opacity: 0.6;
