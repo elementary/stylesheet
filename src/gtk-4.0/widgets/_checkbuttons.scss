@@ -188,6 +188,12 @@ checkbutton {
 
     }
 
+    &.latte check,
+    &.latte radio {
+        background-color: #{'@LATTE_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@LATTE_500'};
+    }
+
     &.auto radio {
         background-image: url("assets/color-button-auto.png");
         background-position: -1px -1px;
