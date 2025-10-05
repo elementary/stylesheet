@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
-"PO-Revision-Date: 2024-06-01 07:13+0000\n"
+"PO-Revision-Date: 2025-10-06 12:55+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
+"Language-Team: Hebrew <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -44,17 +44,15 @@ msgstr "שופרה התמיכה בווידג׳טים של LibAdwaita:"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Add Adw.NavigationSplitView styles"
-msgstr ""
+msgstr "הוספת סגנונות Adw.NavigationSplitView"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
-msgstr ""
+msgstr "Adw.ViewSwitcher: תוקנה קריסה עם גודל הסמל"
 
 #: data/stylesheet.appdata.xml.in:43
-#, fuzzy
-#| msgid "Add Latte palette"
 msgid "Add Latte stylesheet"
-msgstr "נוספה ערכת הצבעים לאטה"
+msgstr "נוספה גיליון סגנון לאטה"
 
 #: data/stylesheet.appdata.xml.in:64
 msgid ""
