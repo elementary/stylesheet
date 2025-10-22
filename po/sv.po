@@ -8,56 +8,62 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
-"PO-Revision-Date: 2020-03-17 11:10-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-22 09:58+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://l10n.elementaryos.org/projects/desktop/"
+"stylesheet-extra/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Systemets stilmall"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The look and feel for elementary OS"
-msgstr ""
+msgstr "Utseendet och känslan för elementary OS"
 
 #: data/stylesheet.appdata.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
 msgstr ""
+"En original Gtk.CSS-stilmall som utformats speciellt för elementary OS och "
+"dess skrivbordsmiljö: Pantheon."
 
 #: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:40
 #: data/stylesheet.appdata.xml.in:53 data/stylesheet.appdata.xml.in:62
 #: data/stylesheet.appdata.xml.in:75 data/stylesheet.appdata.xml.in:94
 #: data/stylesheet.appdata.xml.in:108 data/stylesheet.appdata.xml.in:126
 msgid "Improve support for LibAdwaita widgets:"
-msgstr ""
+msgstr "Förbättrat stöd för LibAdwaita widgets:"
 
 #: data/stylesheet.appdata.xml.in:30
 msgid "Add Adw.NavigationSplitView styles"
-msgstr ""
+msgstr "Lägg till Adw.NavigationSplitView-stilar"
 
 #: data/stylesheet.appdata.xml.in:42
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
-msgstr ""
+msgstr "Adw.ViewSwitcher: Fixa krasch med ikonstorlek"
 
 #: data/stylesheet.appdata.xml.in:43
 msgid "Add Latte stylesheet"
-msgstr ""
+msgstr "Lägg till Latte-stilmall"
 
 #: data/stylesheet.appdata.xml.in:64
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 msgstr ""
+"Adw.ToolbarView: lägg till \"bottom-bar\"-stilar för \"raised\" och "
+"\"border\""
 
 #: data/stylesheet.appdata.xml.in:65
 msgid "NavigationView: Fix missing shadows and dimming"
-msgstr ""
+msgstr "Navigationsvy: Fixar saknade skuggor och dimning"
 
 #: data/stylesheet.appdata.xml.in:77
 msgid "Adw.ToolbarView"
@@ -69,31 +75,31 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
 msgid "GTK 4 Improvements:"
-msgstr ""
+msgstr "Förbättringar av GTK 4:"
 
 #: data/stylesheet.appdata.xml.in:82
 msgid "Remove styles shipped in Granite"
-msgstr ""
+msgstr "Ta bort stilar som levereras i Granite"
 
 #: data/stylesheet.appdata.xml.in:83
 msgid "Fix destructive menuitem"
-msgstr ""
+msgstr "Fixa destruktiva menyalternativ"
 
 #: data/stylesheet.appdata.xml.in:84
 msgid "Fix size of menubars that contain buttons"
-msgstr ""
+msgstr "Fixa storleken på menyrader som innehåller knappar"
 
 #: data/stylesheet.appdata.xml.in:85
 msgid "Adjust warning icon color"
-msgstr ""
+msgstr "Justera färgen på varningsikonen"
 
 #: data/stylesheet.appdata.xml.in:86
 msgid "Fix popovermenu height when it contains a single item"
-msgstr ""
+msgstr "Fixa popovermenyns höjd när den innehåller ett enda objekt"
 
 #: data/stylesheet.appdata.xml.in:87
 msgid "Flatter window control styles"
-msgstr ""
+msgstr "Plattare stilar för fönsterkontroll"
 
 #: data/stylesheet.appdata.xml.in:96
 msgid "Adw.TabOverview"
@@ -101,11 +107,11 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:100
 msgid "Add missing \".default-decoration\" style for compact headerbars"
-msgstr ""
+msgstr "Lägg till saknad \".default-decoration\"-stil för kompakta sidofält"
 
 #: data/stylesheet.appdata.xml.in:101
 msgid "Add Latte palette"
-msgstr ""
+msgstr "Lägg till Latte-palett"
 
 #: data/stylesheet.appdata.xml.in:110
 msgid "Adw.AboutWindow"
@@ -117,17 +123,19 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:113 data/stylesheet.appdata.xml.in:132
 msgid "GTK 4 Fixes:"
-msgstr ""
+msgstr "GTK 4-korrigeringar:"
 
 #: data/stylesheet.appdata.xml.in:115
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
 msgstr ""
+"Stöd för \".destructive\" och \".suggested\" utöver \".destructive-action\" "
+"och \".suggested-action\""
 
 #: data/stylesheet.appdata.xml.in:116
 msgid "\".raised\" overrides \".flat\" in Buttons"
-msgstr ""
+msgstr "\".raised\" ersätter \".flat\" i knappar"
 
 #: data/stylesheet.appdata.xml.in:128
 msgid "Adw.PreferencesWindow"
@@ -143,20 +151,20 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:134
 msgid "Correctly style list rows in popover menus"
-msgstr ""
+msgstr "Korrekt stil för listrader i popover-menyer"
 
 #: data/stylesheet.appdata.xml.in:135
 msgid "Style headerbars without \".titlebar\""
-msgstr ""
+msgstr "Utforma rubrikfält utan \".titlebar\""
 
 #: data/stylesheet.appdata.xml.in:136
 msgid "Style fullscreen windows"
-msgstr ""
+msgstr "Stil för helskärmsfönster"
 
 #: data/stylesheet.appdata.xml.in:137
 msgid "Style SearchBars"
-msgstr ""
+msgstr "Stil Sökfält"
 
 #: data/stylesheet.appdata.xml.in:138
 msgid "Add spacing between HeaderBar buttons"
-msgstr ""
+msgstr "Lägg till avstånd mellan HeaderBar-knapparna"
