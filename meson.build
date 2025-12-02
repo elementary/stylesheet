@@ -1,6 +1,6 @@
 project(
     'io.elementary.stylesheet',
-    version: '8.2.0'
+    version: '8.2.2'
 )
 
 i18n = import('i18n')
