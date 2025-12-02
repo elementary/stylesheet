@@ -31,7 +31,11 @@
         </ul>
       </description>
       <issues>
+        <issue url="https://github.com/elementary/stylesheet/issues/1055">Fade out focus rings after a timeout</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1069">Preferences tabs focus partially stays on 'General' no matter what</issue>
         <issue url="https://github.com/elementary/stylesheet/issues/1244">The primary text in Granite.HeaderLabel misaligned when placed in Gtk.Popover</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1273">No expanders and sort arrows in Gtk4 TreeView widget</issue>
+        <issue url="https://github.com/elementary/stylesheet/issues/1339">Missing Latte palette</issue>
       </issues>
     </release>
 
