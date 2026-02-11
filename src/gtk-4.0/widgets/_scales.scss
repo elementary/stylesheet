@@ -227,7 +227,7 @@ scale {
         }
     }
 
-    &:focus slider {
+    &:focus-visible slider {
         @if $color-scheme == "light" {
             box-shadow:
                 outset-highlight("full"),

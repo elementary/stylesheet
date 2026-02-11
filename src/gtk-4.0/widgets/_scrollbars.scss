@@ -41,7 +41,8 @@ scrollbar {
 
     &.vertical {
         slider {
-            min-height: rem(32px);
+            // Can't be taller than menuitem or popover is too big
+            min-height: rem(20px);
             min-width: rem(3px);
         }
 

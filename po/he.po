@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-15 18:48+0000\n"
-"PO-Revision-Date: 2023-11-17 08:43+0000\n"
+"POT-Creation-Date: 2025-07-09 02:37+0000\n"
+"PO-Revision-Date: 2025-10-06 12:55+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/desktop/"
+"Language-Team: Hebrew <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.11.4\n"
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
@@ -35,146 +35,191 @@ msgstr ""
 "גיליון סגנון Gtk.CSS מקורי שעוצב במיוחד ל־elementary OS ולסביבת שולחן העבודה "
 "שלה: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:19
-msgid "elementary, Inc."
-msgstr "elementary בע״מ."
-
-#: data/stylesheet.appdata.xml.in:26 data/stylesheet.appdata.xml.in:40
-#: data/stylesheet.appdata.xml.in:58
+#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:40
+#: data/stylesheet.appdata.xml.in:53 data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:75 data/stylesheet.appdata.xml.in:94
+#: data/stylesheet.appdata.xml.in:108 data/stylesheet.appdata.xml.in:126
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "שופרה התמיכה בווידג׳טים של LibAdwaita:"
 
-#: data/stylesheet.appdata.xml.in:28
-msgid "Adw.TabOverview"
+#: data/stylesheet.appdata.xml.in:30
+msgid "Add Adw.NavigationSplitView styles"
+msgstr "הוספת סגנונות Adw.NavigationSplitView"
+
+#: data/stylesheet.appdata.xml.in:42
+msgid "Adw.ViewSwitcher: Fix crash with icon size"
+msgstr "Adw.ViewSwitcher: תוקנה קריסה עם גודל הסמל"
+
+#: data/stylesheet.appdata.xml.in:43
+msgid "Add Latte stylesheet"
+msgstr "נוספה גיליון סגנון לאטה"
+
+#: data/stylesheet.appdata.xml.in:64
+msgid ""
+"Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
+msgstr ""
+"Adw.ToolbarView: נוספו הסגנונות „bottom-bar” (פס תחתון) למקרים „raised” "
+"(מוגבה) ו־„border” (מסגרת)"
+
+#: data/stylesheet.appdata.xml.in:65
+msgid "NavigationView: Fix missing shadows and dimming"
+msgstr "NavigationView: תיקון צלליות ועמעומים חסרים"
+
+#: data/stylesheet.appdata.xml.in:77
+#, fuzzy
+#| msgid "Adw.TabOverview"
+msgid "Adw.ToolbarView"
 msgstr "Adw.TabOverview"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.appdata.xml.in:78
+#, fuzzy
+#| msgid "Adw.TabBar"
+msgid "Adw.Toast"
+msgstr "Adw.TabBar"
+
+#: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
 msgid "GTK 4 Improvements:"
 msgstr "שיפורי GTK4:"
 
-#: data/stylesheet.appdata.xml.in:32
+#: data/stylesheet.appdata.xml.in:82
+msgid "Remove styles shipped in Granite"
+msgstr "הוסרו סגנונות שכלולים ב־Granite"
+
+#: data/stylesheet.appdata.xml.in:83
+msgid "Fix destructive menuitem"
+msgstr "תוקן פריט תפריט הרסני"
+
+#: data/stylesheet.appdata.xml.in:84
+msgid "Fix size of menubars that contain buttons"
+msgstr "תוקן גודל סרגלי התפריטים שמכילים כפתורים"
+
+#: data/stylesheet.appdata.xml.in:85
+msgid "Adjust warning icon color"
+msgstr "צבע סמל האזהרה הותאם"
+
+#: data/stylesheet.appdata.xml.in:86
+msgid "Fix popovermenu height when it contains a single item"
+msgstr "תוקן גובה תפריט צץ כשהוא מכיל פריט בודד"
+
+#: data/stylesheet.appdata.xml.in:87
+msgid "Flatter window control styles"
+msgstr "סגנונות פקדי חלון שטוחים יותר"
+
+#: data/stylesheet.appdata.xml.in:96
+msgid "Adw.TabOverview"
+msgstr "Adw.TabOverview"
+
+#: data/stylesheet.appdata.xml.in:100
 msgid "Add missing \".default-decoration\" style for compact headerbars"
 msgstr "הוספת סגנון „.default-decoration” לסרגלי הכותרת המצומצמים"
 
-#: data/stylesheet.appdata.xml.in:33
+#: data/stylesheet.appdata.xml.in:101
 msgid "Add Latte palette"
 msgstr "נוספה ערכת הצבעים לאטה"
 
-#: data/stylesheet.appdata.xml.in:42
+#: data/stylesheet.appdata.xml.in:110
 msgid "Adw.AboutWindow"
 msgstr "Adw.AboutWindow"
 
-#: data/stylesheet.appdata.xml.in:43
+#: data/stylesheet.appdata.xml.in:111
 msgid "Adw.MessageDialog"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:45 data/stylesheet.appdata.xml.in:64
+#: data/stylesheet.appdata.xml.in:113 data/stylesheet.appdata.xml.in:132
 msgid "GTK 4 Fixes:"
 msgstr "תיקוני GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:47
+#: data/stylesheet.appdata.xml.in:115
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
 msgstr ""
-"תמיכה ב־„‎.destructive” וב־„‎.suggested” בנוסף ל־„‎.destructive-action” ול־„‎."
-"suggested-action”"
+"תמיכה ב־„‎.destructive” וב־„‎.suggested” בנוסף ל־„‎.destructive-action” "
+"ול־„‎.suggested-action”"
 
-#: data/stylesheet.appdata.xml.in:48
+#: data/stylesheet.appdata.xml.in:116
 msgid "\".raised\" overrides \".flat\" in Buttons"
 msgstr "„‎.raised” דורס את „‎.flat” בכפתורים"
 
-#: data/stylesheet.appdata.xml.in:60
+#: data/stylesheet.appdata.xml.in:128
 msgid "Adw.PreferencesWindow"
 msgstr "Adw.PreferencesWindow"
 
-#: data/stylesheet.appdata.xml.in:61
+#: data/stylesheet.appdata.xml.in:129
 msgid "Adw.StatusPage"
 msgstr "Adw.StatusPage"
 
-#: data/stylesheet.appdata.xml.in:62
+#: data/stylesheet.appdata.xml.in:130
 msgid "Adw.TabBar"
 msgstr "Adw.TabBar"
 
-#: data/stylesheet.appdata.xml.in:66
+#: data/stylesheet.appdata.xml.in:134
 msgid "Correctly style list rows in popover menus"
 msgstr "עיצוב נכון לשורות ברשימה של תפריטים קופצים"
 
-#: data/stylesheet.appdata.xml.in:67
+#: data/stylesheet.appdata.xml.in:135
 msgid "Style headerbars without \".titlebar\""
 msgstr "עיצוב סרגלי כותרת בלי „‎.titlebar”"
 
-#: data/stylesheet.appdata.xml.in:68
+#: data/stylesheet.appdata.xml.in:136
 msgid "Style fullscreen windows"
 msgstr "עיצוב חלונות במסך מלא"
 
-#: data/stylesheet.appdata.xml.in:69
+#: data/stylesheet.appdata.xml.in:137
 msgid "Style SearchBars"
 msgstr "עיצוב סרגלי חיפוש"
 
-#: data/stylesheet.appdata.xml.in:70
+#: data/stylesheet.appdata.xml.in:138
 msgid "Add spacing between HeaderBar buttons"
 msgstr "נוסף ריווח בין כפתורי סרגל הכותרת"
 
-#: data/stylesheet.appdata.xml.in:77
-msgid "Improvements:"
-msgstr "שיפורים:"
+#~ msgid "Improvements:"
+#~ msgstr "שיפורים:"
 
-#: data/stylesheet.appdata.xml.in:79
-msgid "Checkerboard styles are more subtle"
-msgstr "סגנונות לוחות שח מט הם עדינים יותר"
+#~ msgid "Checkerboard styles are more subtle"
+#~ msgstr "סגנונות לוחות שח מט הם עדינים יותר"
 
-#: data/stylesheet.appdata.xml.in:80
-msgid "Set `large-icons` size on headerbars to 24px"
-msgstr "גודל `large-icons` בסרגלי הכותרת הוגדר ל־24 פיקסלים"
+#~ msgid "Set `large-icons` size on headerbars to 24px"
+#~ msgstr "גודל `large-icons` בסרגלי הכותרת הוגדר ל־24 פיקסלים"
 
-#: data/stylesheet.appdata.xml.in:81
-msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
-msgstr "פריסת הכותרת והטיפוגרפיה ב־Granite.SimpleSettingsPage הותאמו"
+#~ msgid "Adjust header layout and typography in Granite.SimpleSettingsPage"
+#~ msgstr "פריסת הכותרת והטיפוגרפיה ב־Granite.SimpleSettingsPage הותאמו"
 
-#: data/stylesheet.appdata.xml.in:82
-msgid "Infobars: set correct button margins"
-msgstr "סרגלי מידע: מיקומי הכפתורים הוגדרו כראוי"
+#~ msgid "Infobars: set correct button margins"
+#~ msgstr "סרגלי מידע: מיקומי הכפתורים הוגדרו כראוי"
 
-#: data/stylesheet.appdata.xml.in:83
-msgid "Add padding to Gtk.Entry's completion popover"
-msgstr "נוסף ריפוד לחלונית ההשלמה הקופצת של Gtk.Entry"
+#~ msgid "Add padding to Gtk.Entry's completion popover"
+#~ msgstr "נוסף ריפוד לחלונית ההשלמה הקופצת של Gtk.Entry"
 
-#: data/stylesheet.appdata.xml.in:84
-msgid "Fix labels for scale marks"
-msgstr "תוקנו תוויות לסמני קנה מידה"
+#~ msgid "Fix labels for scale marks"
+#~ msgstr "תוקנו תוויות לסמני קנה מידה"
 
-#: data/stylesheet.appdata.xml.in:86 data/stylesheet.appdata.xml.in:105
-msgid "Fixes:"
-msgstr "תיקונים:"
+#~ msgid "Fixes:"
+#~ msgstr "תיקונים:"
 
-#: data/stylesheet.appdata.xml.in:88
-msgid "Correct .title-4 padding in Lists"
-msgstr "תיקון של ‎.title-4 padding ברשימות"
+#~ msgid "Correct .title-4 padding in Lists"
+#~ msgstr "תיקון של ‎.title-4 padding ברשימות"
 
-#: data/stylesheet.appdata.xml.in:89
-msgid "Buttons: don't set font weight for children like popovers"
-msgstr "כפתורים: לא להגדיר את משקל הגופן לצאצאים כגון חלוניות קופצות"
+#~ msgid "Buttons: don't set font weight for children like popovers"
+#~ msgstr "כפתורים: לא להגדיר את משקל הגופן לצאצאים כגון חלוניות קופצות"
 
-#: data/stylesheet.appdata.xml.in:101
-msgid "New Features:"
-msgstr "יכולות חדשות:"
+#~ msgid "elementary, Inc."
+#~ msgstr "elementary בע״מ."
 
-#: data/stylesheet.appdata.xml.in:103
-msgid "Support for Gtk4"
-msgstr "תמיכה ב־Gtk4"
+#~ msgid "New Features:"
+#~ msgstr "יכולות חדשות:"
 
-#: data/stylesheet.appdata.xml.in:107
-msgid "Fix titlebar in GNOME Web 42"
-msgstr "תוקנה שורת הכותרת בדפדפן GNOME 42"
+#~ msgid "Support for Gtk4"
+#~ msgstr "תמיכה ב־Gtk4"
 
-#: data/stylesheet.appdata.xml.in:108
-msgid "Fix font style for bold labels in some languages"
-msgstr "תוקן סגנון הגופן לתוויות מודגשות בחלק מהשפות"
+#~ msgid "Fix titlebar in GNOME Web 42"
+#~ msgstr "תוקנה שורת הכותרת בדפדפן GNOME 42"
 
-#: data/stylesheet.appdata.xml.in:109
-msgid "ModelButtons: add margin between checks, radios, and labels"
-msgstr "ModelButtons: הוספת גבולות בין תיבות סימון, תיבות בחירה ותוויות"
+#~ msgid "Fix font style for bold labels in some languages"
+#~ msgstr "תוקן סגנון הגופן לתוויות מודגשות בחלק מהשפות"
+
+#~ msgid "ModelButtons: add margin between checks, radios, and labels"
+#~ msgstr "ModelButtons: הוספת גבולות בין תיבות סימון, תיבות בחירה ותוויות"
 
 #~ msgid "Improve contrast of horizontal separators in dark style"
 #~ msgstr "ניגודיות של מפרידים אופקיים בסגנון כהה השתפרה"

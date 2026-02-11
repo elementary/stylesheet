@@ -15,6 +15,7 @@
     }
 }
 
+.sidebar-pane,
 .sidebar,
 .sidebar.view,
 .source-list {
@@ -29,6 +30,7 @@
     }
 }
 
+.sidebar-pane,
 .sidebar {
     &:dir(ltr) {
         border-right: 1px solid #{'@menu_separator'};
@@ -56,6 +58,11 @@
     }
 }
 
+// Nested Adw.NavigationSplitView
+.sidebar-pane .content-pane {
+    background: bg_color(1);
+}
+
 placessidebar.frame,
 placessidebar viewport.frame {
     border: none;
@@ -67,30 +74,6 @@ placessidebar viewport.frame {
     .sidebar-icon + .sidebar-label:dir(ltr),
     .sidebar-label + .sidebar-icon:dir(rtl) {
         margin-left: rem(6px);
-    }
-}
-
-settingssidebar list {
-    min-width: rem(200px);
-
-    row,
-    > .title-4 {
-        padding: rem(6px);
-    }
-
-    row {
-        overlay {
-            // IconSize.LARGE + padding
-            min-width: calc(32px + #{rem(6px)});
-        }
-
-        overlay:dir(ltr) {
-            margin-right: rem(6px);
-        }
-
-        overlay:dir(rtl) {
-            margin-left: rem(6px);
-        }
     }
 }
 

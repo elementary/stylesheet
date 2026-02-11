@@ -14,20 +14,21 @@ iconview.view.cell {
         background: rgba($fg-color, 0.15);
     }
 
-    &:focus:selected {
+    &:focus-visible:selected {
         @extend selection;
     }
 }
 
+gridview child,
 flowboxchild {
     border-radius: rem(3px);
 
-    &:focus,
+    &:focus-visible,
     &:selected {
         background: rgba($fg-color, 0.15);
     }
 
-    &:focus:selected {
+    &:focus-visible:selected {
         @extend selection;
     }
 }

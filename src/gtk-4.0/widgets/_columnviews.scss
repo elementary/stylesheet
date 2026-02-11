@@ -39,7 +39,7 @@ columnview {
                 background: rgba($fg-color, 0.15);
             }
 
-            &:focus:selected {
+            &:focus-visible:selected {
                 @extend selection;
             }
         }

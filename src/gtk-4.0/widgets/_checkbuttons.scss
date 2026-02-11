@@ -48,7 +48,7 @@ radio {
         -gtk-icon-source: -gtk-icontheme("check-mixed-symbolic");
     }
 
-    &:focus {
+    &:focus-visible {
         &:not(:checked) {
             @if $color-scheme == "light" {
                 border-color: #{'@accent_color'};
@@ -186,6 +186,12 @@ checkbutton {
         background-color: #{'@SLATE_300'};
         -gtk-icon-shadow: 0 1px 1px #{'@SLATE_500'};
 
+    }
+
+    &.latte check,
+    &.latte radio {
+        background-color: #{'@LATTE_300'};
+        -gtk-icon-shadow: 0 1px 1px #{'@LATTE_500'};
     }
 
     &.auto radio {
