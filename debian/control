@@ -1,7 +1,7 @@
 Source: io.elementary.stylesheet
 Section: x11
 Priority: extra
-Maintainer: elementary, Inc. <builds@elementary.io>
+Maintainer: elementary <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                meson (>= 0.44.0),
                sassc
