@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
-"PO-Revision-Date: 2026-06-29 14:57+0000\n"
-"Last-Translator: kalligator <kalligator+github@gmail.com>\n"
+"PO-Revision-Date: 2026-07-25 21:01+0000\n"
+"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
 "Language-Team: Greek <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/el/>\n"
 "Language: el\n"
@@ -71,7 +71,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
 msgid "GTK 4 Improvements:"
-msgstr ""
+msgstr "Βελτιώσεις GTK 4:"
 
 #: data/stylesheet.appdata.xml.in:82
 msgid "Remove styles shipped in Granite"
