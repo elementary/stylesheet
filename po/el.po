@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-09 02:37+0000\n"
 "PO-Revision-Date: 2026-07-25 21:01+0000\n"
-"Last-Translator: Jim Spentzos <jimspentzos2000@gmail.com>\n"
+"Last-Translator: kalligator <kalligator+github@gmail.com>\n"
 "Language-Team: Greek <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/el/>\n"
 "Language: el\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/stylesheet.appdata.xml.in:8
 msgid "System Stylesheet"
-msgstr ""
+msgstr "Φύλλο στυλ συστήματος"
 
 #: data/stylesheet.appdata.xml.in:9
 msgid "The look and feel for elementary OS"
