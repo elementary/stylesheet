@@ -199,9 +199,7 @@ button {
     arrow {
         min-width: rem(16px);
         min-height: rem(16px);
-        // Use non-arrow icon when no direction specified, assuming use case as a
-        // main menu button
-        -gtk-icon-source: -gtk-icontheme("open-menu-symbolic");
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
     }
 
     &:dir(ltr) box image + label,
@@ -212,4 +210,12 @@ button {
 
 fontbutton separator.vertical {
     margin: 0 rem(6px);
+}
+
+menubutton {
+    arrow {
+        // Use non-arrow icon when no direction specified, assuming use case as a
+        // main menu button
+        -gtk-icon-source: -gtk-icontheme("open-menu-symbolic");
+    }
 }
