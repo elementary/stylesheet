@@ -211,11 +211,3 @@ button {
 fontbutton separator.vertical {
     margin: 0 rem(6px);
 }
-
-menubutton {
-    arrow {
-        // Use non-arrow icon when no direction specified, assuming use case as a
-        // main menu button
-        -gtk-icon-source: -gtk-icontheme("open-menu-symbolic");
-    }
-}
