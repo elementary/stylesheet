@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 02:37+0000\n"
+"POT-Creation-Date: 2026-09-22 01:20+0000\n"
 "PO-Revision-Date: 2026-09-07 14:01+0000\n"
 "Last-Translator: Chairul Akmal <chairulakmal@protonmail.com>\n"
 "Language-Team: Indonesian <https://l10n.elementaryos.org/projects/desktop/"
@@ -19,15 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2026.5\n"
 
-#: data/stylesheet.appdata.xml.in:8
+#: data/stylesheet.metainfo.xml.in:8
 msgid "System Stylesheet"
 msgstr "Lembar Gaya Sistem"
 
-#: data/stylesheet.appdata.xml.in:9
+#: data/stylesheet.metainfo.xml.in:9
 msgid "The look and feel for elementary OS"
 msgstr "Tampilan dan nuansa untuk elementary OS"
 
-#: data/stylesheet.appdata.xml.in:11
+#: data/stylesheet.metainfo.xml.in:11
 msgid ""
 "An original Gtk.CSS stylesheet designed specifically for elementary OS and "
 "its desktop environment: Pantheon."
@@ -35,97 +35,101 @@ msgstr ""
 "Lembar gaya Gtk.CSS asli yang dirancang khusus untuk elementary OS dan "
 "lingkungan desktopnya: Pantheon."
 
-#: data/stylesheet.appdata.xml.in:28 data/stylesheet.appdata.xml.in:40
-#: data/stylesheet.appdata.xml.in:53 data/stylesheet.appdata.xml.in:62
-#: data/stylesheet.appdata.xml.in:75 data/stylesheet.appdata.xml.in:94
-#: data/stylesheet.appdata.xml.in:108 data/stylesheet.appdata.xml.in:126
+#: data/stylesheet.metainfo.xml.in:20
+msgid "elementary, Inc."
+msgstr "elementary, Inc."
+
+#: data/stylesheet.metainfo.xml.in:28 data/stylesheet.metainfo.xml.in:44
+#: data/stylesheet.metainfo.xml.in:57 data/stylesheet.metainfo.xml.in:66
+#: data/stylesheet.metainfo.xml.in:79 data/stylesheet.metainfo.xml.in:98
+#: data/stylesheet.metainfo.xml.in:112 data/stylesheet.metainfo.xml.in:130
 msgid "Improve support for LibAdwaita widgets:"
 msgstr "Tingkatkan dukungan untuk widget LibAdwaita:"
 
-#: data/stylesheet.appdata.xml.in:30
+#: data/stylesheet.metainfo.xml.in:30
 msgid "Add Adw.NavigationSplitView styles"
 msgstr "Tambah gaya Adw.NavigationSplitView"
 
-#: data/stylesheet.appdata.xml.in:42
+#: data/stylesheet.metainfo.xml.in:46
 msgid "Adw.ViewSwitcher: Fix crash with icon size"
 msgstr "Adw.ViewSwitcher: Perbaiki mogok pada ukuran ikon"
 
-#: data/stylesheet.appdata.xml.in:43
+#: data/stylesheet.metainfo.xml.in:47
 msgid "Add Latte stylesheet"
 msgstr "Tambah lembar gaya Latte"
 
-#: data/stylesheet.appdata.xml.in:64
+#: data/stylesheet.metainfo.xml.in:68
 msgid ""
 "Adw.ToolbarView: add \"bottom-bar\" styles for \"raised\" and \"border\""
 msgstr ""
 "Adw.ToolbarView: tambah gaya \"bottom-bar\" untuk \"raised\" dan \"border\""
 
-#: data/stylesheet.appdata.xml.in:65
+#: data/stylesheet.metainfo.xml.in:69
 msgid "NavigationView: Fix missing shadows and dimming"
 msgstr "NavigationView: Perbaiki bayangan dan peredupan yang hilang"
 
-#: data/stylesheet.appdata.xml.in:77
+#: data/stylesheet.metainfo.xml.in:81
 msgid "Adw.ToolbarView"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:78
+#: data/stylesheet.metainfo.xml.in:82
 msgid "Adw.Toast"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:80 data/stylesheet.appdata.xml.in:98
+#: data/stylesheet.metainfo.xml.in:84 data/stylesheet.metainfo.xml.in:102
 msgid "GTK 4 Improvements:"
 msgstr "Peningkatan GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:82
+#: data/stylesheet.metainfo.xml.in:86
 msgid "Remove styles shipped in Granite"
 msgstr "Hapus gaya yang disertakan di Granite"
 
-#: data/stylesheet.appdata.xml.in:83
+#: data/stylesheet.metainfo.xml.in:87
 msgid "Fix destructive menuitem"
 msgstr "Perbaiki menuitem destruktif"
 
-#: data/stylesheet.appdata.xml.in:84
+#: data/stylesheet.metainfo.xml.in:88
 msgid "Fix size of menubars that contain buttons"
 msgstr "Perbaiki ukuran bilah menu yang berisi tombol"
 
-#: data/stylesheet.appdata.xml.in:85
+#: data/stylesheet.metainfo.xml.in:89
 msgid "Adjust warning icon color"
 msgstr "Sesuaikan warna ikon peringatan"
 
-#: data/stylesheet.appdata.xml.in:86
+#: data/stylesheet.metainfo.xml.in:90
 msgid "Fix popovermenu height when it contains a single item"
 msgstr "Perbaiki tinggi popovermenu saat hanya berisi satu item"
 
-#: data/stylesheet.appdata.xml.in:87
+#: data/stylesheet.metainfo.xml.in:91
 msgid "Flatter window control styles"
 msgstr "Gaya kontrol jendela yang lebih rata"
 
-#: data/stylesheet.appdata.xml.in:96
+#: data/stylesheet.metainfo.xml.in:100
 msgid "Adw.TabOverview"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:100
+#: data/stylesheet.metainfo.xml.in:104
 msgid "Add missing \".default-decoration\" style for compact headerbars"
 msgstr ""
 "Tambah gaya \".default-decoration\" yang hilang untuk bilah kepala ringkas"
 
-#: data/stylesheet.appdata.xml.in:101
+#: data/stylesheet.metainfo.xml.in:105
 msgid "Add Latte palette"
 msgstr "Tambah palet Latte"
 
-#: data/stylesheet.appdata.xml.in:110
+#: data/stylesheet.metainfo.xml.in:114
 msgid "Adw.AboutWindow"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:111
+#: data/stylesheet.metainfo.xml.in:115
 msgid "Adw.MessageDialog"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:113 data/stylesheet.appdata.xml.in:132
+#: data/stylesheet.metainfo.xml.in:117 data/stylesheet.metainfo.xml.in:136
 msgid "GTK 4 Fixes:"
 msgstr "Perbaikan GTK 4:"
 
-#: data/stylesheet.appdata.xml.in:115
+#: data/stylesheet.metainfo.xml.in:119
 msgid ""
 "Support \".destructive\" and \".suggested\" in addition to \".destructive-"
 "action\" and \".suggested-action\""
@@ -133,39 +137,39 @@ msgstr ""
 "Dukung \".destructive\" dan \".suggested\" selain \".destructive-action\" "
 "dan \".suggested-action\""
 
-#: data/stylesheet.appdata.xml.in:116
+#: data/stylesheet.metainfo.xml.in:120
 msgid "\".raised\" overrides \".flat\" in Buttons"
 msgstr "\".raised\" menimpa \".flat\" pada Tombol"
 
-#: data/stylesheet.appdata.xml.in:128
+#: data/stylesheet.metainfo.xml.in:132
 msgid "Adw.PreferencesWindow"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:129
+#: data/stylesheet.metainfo.xml.in:133
 msgid "Adw.StatusPage"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:130
+#: data/stylesheet.metainfo.xml.in:134
 msgid "Adw.TabBar"
 msgstr ""
 
-#: data/stylesheet.appdata.xml.in:134
+#: data/stylesheet.metainfo.xml.in:138
 msgid "Correctly style list rows in popover menus"
 msgstr "Beri gaya yang benar pada baris daftar di menu popover"
 
-#: data/stylesheet.appdata.xml.in:135
+#: data/stylesheet.metainfo.xml.in:139
 msgid "Style headerbars without \".titlebar\""
 msgstr "Beri gaya bilah kepala tanpa \".titlebar\""
 
-#: data/stylesheet.appdata.xml.in:136
+#: data/stylesheet.metainfo.xml.in:140
 msgid "Style fullscreen windows"
 msgstr "Beri gaya jendela layar penuh"
 
-#: data/stylesheet.appdata.xml.in:137
+#: data/stylesheet.metainfo.xml.in:141
 msgid "Style SearchBars"
 msgstr "Beri gaya SearchBars"
 
-#: data/stylesheet.appdata.xml.in:138
+#: data/stylesheet.metainfo.xml.in:142
 msgid "Add spacing between HeaderBar buttons"
 msgstr "Tambah jarak antara tombol HeaderBar"
 
@@ -174,9 +178,6 @@ msgstr "Tambah jarak antara tombol HeaderBar"
 
 #~ msgid "Fixes:"
 #~ msgstr "Perbaikan:"
-
-#~ msgid "elementary, Inc."
-#~ msgstr "elementary, Inc."
 
 #~ msgid "New Features:"
 #~ msgstr "Fitur Baru:"
