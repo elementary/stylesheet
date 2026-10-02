@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-22 01:20+0000\n"
-"PO-Revision-Date: 2026-09-15 13:03+0000\n"
+"PO-Revision-Date: 2026-10-03 18:03+0000\n"
 "Last-Translator: Flynn <flynn@users.noreply.l10n.elementaryos.org>\n"
 "Language-Team: Cornish <https://l10n.elementaryos.org/projects/desktop/"
 "stylesheet-extra/kw/>\n"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: data/stylesheet.metainfo.xml.in:20
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/stylesheet.metainfo.xml.in:28 data/stylesheet.metainfo.xml.in:44
 #: data/stylesheet.metainfo.xml.in:57 data/stylesheet.metainfo.xml.in:66
